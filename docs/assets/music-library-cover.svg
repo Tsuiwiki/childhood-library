@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+<title id="title">Childhood Library 儿童经典音乐图书馆</title><desc id="desc">原创水彩风格的湖畔童年音乐插画：小船、树木、山丘、音符与书本</desc>
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#f7efd9"/><stop offset="1" stop-color="#e8f1df"/></linearGradient>
+ <linearGradient id="lake" x2="0" y2="1"><stop stop-color="#a8c9bd"/><stop offset="1" stop-color="#d5e5d6"/></linearGradient>
+</defs>
+<rect width="1200" height="560" rx="28" fill="url(#sky)"/>
+<circle cx="980" cy="105" r="48" fill="#e8bd79" opacity=".8"/>
+<path d="M0 285 Q180 190 350 275 T710 250 T1200 260 V560 H0Z" fill="#a9bd91" opacity=".8"/>
+<path d="M0 330 Q220 275 430 330 T850 315 T1200 325 V560 H0Z" fill="#789b7d"/>
+<path d="M0 365 Q210 325 420 365 T820 350 T1200 365 V560 H0Z" fill="url(#lake)"/>
+<path d="M0 435 Q240 395 480 438 T960 425 T1200 435" fill="none" stroke="#f8f1df" stroke-width="7" opacity=".8"/>
+<path d="M0 490 Q220 455 460 492 T920 482 T1200 490" fill="none" stroke="#f8f1df" stroke-width="5" opacity=".65"/>
+<!-- trees -->
+<g fill="#557b5d"><path d="M100 340 Q45 260 100 190 Q155 255 100 340Z"/><path d="M175 345 Q125 270 178 210 Q230 280 175 345Z"/><path d="M1080 338 Q1015 245 1080 165 Q1145 250 1080 338Z"/></g>
+<g stroke="#765c43" stroke-width="12" stroke-linecap="round"><path d="M100 335V385"/><path d="M175 340V390"/><path d="M1080 330V380"/></g>
+<!-- boat -->
+<path d="M420 355 Q585 390 750 355 L700 415 Q580 450 470 415Z" fill="#9b7050"/>
+<path d="M585 352V220" stroke="#765c43" stroke-width="7" stroke-linecap="round"/>
+<path d="M592 230 Q690 270 710 340 L592 340Z" fill="#f5e8c8" stroke="#a88d68" stroke-width="4"/>
+<path d="M575 238 Q500 275 490 340 L575 340Z" fill="#d6e3d1" stroke="#a88d68" stroke-width="4"/>
+<circle cx="545" cy="330" r="13" fill="#d79b72"/><circle cx="635" cy="330" r="13" fill="#d79b72"/>
+<!-- music notes -->
+<g fill="#a97854" font-family="Georgia,serif" font-size="64" opacity=".85"><text x="290" y="190">♪</text><text x="790" y="220">♫</text><text x="900" y="300">♪</text></g>
+<!-- book -->
+<path d="M825 405 Q890 380 950 405 V485 Q890 460 825 485Z" fill="#f7edd7" stroke="#8b765d" stroke-width="5"/>
+<path d="M950 405 Q1015 380 1080 405 V485 Q1015 460 950 485Z" fill="#fff8e9" stroke="#8b765d" stroke-width="5"/>
+<path d="M950 405V485" stroke="#8b765d" stroke-width="4"/>
+<g fill="#6b8064"><path d="M850 430h75M850 448h60M975 430h75M975 448h60" stroke="#6b8064" stroke-width="5" stroke-linecap="round"/></g>
+<text x="55" y="92" fill="#465e4c" font-family="Georgia,serif" font-size="46" letter-spacing="2">CHILDHOOD LIBRARY</text>
+<text x="58" y="145" fill="#667c68" font-family="sans-serif" font-size="25">让童年重新拥有自己的声音</text>
+</svg>
