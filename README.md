@@ -65,6 +65,7 @@
 - [数据模型设计](docs/DATA_MODEL.md)
 - [采集系统设计](docs/INGESTION_DESIGN.md)
 - [信源清单与接入计划](docs/SOURCE_CATALOG.md)
+- [经典儿童歌曲候选目录（首批采集）](docs/CLASSIC_SONGS_CATALOG.md)
 - [版权与内容审核政策](docs/COPYRIGHT_POLICY.md)
 - [项目路线图](docs/ROADMAP.md)
 
