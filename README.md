@@ -66,6 +66,7 @@
 - [采集系统设计](docs/INGESTION_DESIGN.md)
 - [信源清单与接入计划](docs/SOURCE_CATALOG.md)
 - [经典儿童歌曲候选目录（首批采集）](docs/CLASSIC_SONGS_CATALOG.md)
+- [音乐馆设计：歌曲目录、版权与播放资源](docs/MUSIC_LIBRARY_DESIGN.md)
 - [版权与内容审核政策](docs/COPYRIGHT_POLICY.md)
 - [项目路线图](docs/ROADMAP.md)
 
