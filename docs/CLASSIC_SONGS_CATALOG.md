@@ -46,10 +46,10 @@
 | CN-T08 | 一二三（地方数数歌） | 数数歌 | 收录前需确定具体地区和文本 | [闽南童谣非遗项目](https://www.ihchina.cn/project_details/12316.html) | candidate |
 | CN-T09 | 唔唔嘤 | 摇篮曲 | 记录方言发音与吟唱方式 | [闽南童谣非遗项目](https://www.ihchina.cn/project_details/12316.html) | candidate |
 | CN-T10 | 铜钉钉铜板 | 绕口令 / 童谣 | 作为语言游戏资料，不预设歌曲旋律 | [闽南童谣非遗项目](https://www.ihchina.cn/project_details/12316.html) | candidate |
-| CN-T11 | 小小子儿坐门墩儿 | 北京童谣 | 典型城市生活叙事，需核对版本 | [北京童谣非遗项目](https://www.ihchina.cn/project_details/12315.html) | candidate |
+| CN-T11 | 北京童谣（分类与版本专题） | 地方童谣 | 先依据非遗项目整理分类，再逐首建立版本记录 | [北京童谣非遗项目](https://www.ihchina.cn/project_details/12315.html) | source_found |
 | CN-T12 | 一园青菜成了精 | 叙事童谣 | 画面感强，适合吟诵与节奏化演绎 | [北京童谣非遗项目](https://www.ihchina.cn/project_details/12315.html) | candidate |
-| CN-T13 | 东直门挂着匾 | 北京童谣 | 地域文化与城市记忆 | [北京童谣非遗项目](https://www.ihchina.cn/project_details/12315.html) | candidate |
-| CN-T14 | 大头儿 | 北京童谣 | 需确认具体版本及适龄性 | [北京童谣非遗项目](https://www.ihchina.cn/project_details/12315.html) | candidate |
+| CN-T13 | 过水面 | 北京童谣 | 地域生活题材，需寻找具体采录版本 | [北京童谣非遗项目](https://www.ihchina.cn/project_details/12315.html) | candidate |
+| CN-T14 | 大头儿大 | 北京童谣 | 需确认具体版本及适龄性 | [北京童谣非遗项目](https://www.ihchina.cn/project_details/12315.html) | candidate |
 | CN-T15 | 风婆婆 | 北京童谣 | 自然意象，优先寻找舒缓版本 | [北京童谣非遗项目](https://www.ihchina.cn/project_details/12315.html) | candidate |
 | CN-T16 | 金箍噜棒 | 北京童谣 | 传统语言游戏，版本待核 | [北京童谣非遗项目](https://www.ihchina.cn/project_details/12315.html) | candidate |
 | CN-T17 | 打麦歌 | 绍兴童谣 | 劳作与生活场景，方言版本有价值 | [绍兴童谣非遗项目](https://www.ihchina.cn/project_details/12317.html) | candidate |
@@ -63,11 +63,11 @@
 
 | # | 曲目 | 类型 / 主题 | 初筛备注 | 来源线索 | 状态 |
 |---:|---|---|---|---|---|
-| CN-C01 | 让我们荡起双桨 | 自然 / 校园 / 合唱 | 重点候选；画面开阔、旋律舒展 | [经典儿歌专题](https://www.thepaper.cn/newsDetail_forward_2916817) | rights_pending |
-| CN-C02 | 我们的田野 | 自然 / 田园 | 重点候选；自然意象鲜明 | [经典儿歌专题](https://www.thepaper.cn/newsDetail_forward_2916817) | rights_pending |
-| CN-C03 | 小燕子 | 动物 / 自然 | 旋律亲切；核实电影歌曲版本 | [经典儿歌回顾](https://ssw.gxrb.com.cn/json/interface/epaper/index.php?code=007&date=2025-03-21&name=gxrb&xuhao=1) | rights_pending |
-| CN-C04 | 春天在哪里 | 自然 / 季节 | 适合春季专题；核实原始词曲信息 | [经典儿歌回顾](https://ssw.gxrb.com.cn/json/interface/epaper/index.php?code=007&date=2025-03-21&name=gxrb&xuhao=1) | rights_pending |
-| CN-C05 | 采蘑菇的小姑娘 | 自然 / 生活 | 田野生活主题；核实词曲及录音 | [人民日报海外版专题](https://paper.people.com.cn/rmrbhwb/html/2019-06/15/content_1930614.htm) | rights_pending |
+| CN-C01 | 让我们荡起双桨 | 自然 / 校园 / 合唱 | 重点候选；乔羽词、刘炽曲；画面开阔、旋律舒展 | [中国作家网歌曲资料](https://wyb.chinawriter.com.cn/content/201906/21/content50152.html) | rights_pending |
+| CN-C02 | 我们的田野 | 自然 / 田园 | 重点候选；管桦词、张文纲曲；自然意象鲜明 | [中国作家网歌曲资料](https://wyb.chinawriter.com.cn/content/201906/21/content50152.html) | rights_pending |
+| CN-C03 | 小燕子 | 动物 / 自然 | 旋律亲切；需核实词曲作者及电影歌曲录音版本 | [中国作家网儿歌专题](https://www.chinawriter.com.cn/n1/2026/0525/c404072-40727000.html) | rights_pending |
+| CN-C04 | 春天在哪里 | 自然 / 季节 | 适合春季专题；需核实原始词曲与录音版本 | [中国作家网儿歌专题](https://www.chinawriter.com.cn/n1/2026/0525/c404072-40727000.html) | rights_pending |
+| CN-C05 | 采蘑菇的小姑娘 | 自然 / 生活 | 田野生活主题；需核实词曲及录音版本 | [中国作家网儿歌专题](https://www.chinawriter.com.cn/n1/2026/0525/c404072-40727000.html) | rights_pending |
 | CN-C06 | 一分钱 | 生活 / 品格 | 有时代背景，需审视当代语境 | [经典儿歌回顾](https://ssw.gxrb.com.cn/json/interface/epaper/index.php?code=007&date=2025-03-21&name=gxrb&xuhao=1) | rights_pending |
 | CN-C07 | 读书郎 | 学习 / 生活 | 需评估歌词语境和版本 | [儿歌历史回顾](https://news.sina.cn/sa/2007-03-21/detail-ikkntiam8844167.d.html?wm=3049_0015) | rights_pending |
 | CN-C08 | 外婆的澎湖湾 | 家庭 / 海边 | 温暖、抒情；属于现代创作 | 待补充权威词曲来源 | rights_pending |
@@ -123,13 +123,13 @@
 | EN-T21 | Polly Wolly Doodle | 美国民间歌曲 | 轻松合唱，注意历史歌词版本 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | candidate |
 | EN-T22 | Yankee Doodle | 历史民歌 / 童谣 | 需提供历史背景，避免单一化解读 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | candidate |
 | EN-T23 | She'll Be Coming 'Round the Mountain | 民间合唱歌 | 适合家庭合唱，版本节奏差异较大 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | candidate |
-| EN-T24 | I've Been Working on the Railroad | 民间歌曲 | 有劳动歌曲背景，需审查历史语境与歌词版本 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | candidate |
+| EN-T24 | I've Been Working on the Railroad | 民间歌曲 | Smithsonian 专辑列有 Ella Jenkins 演唱版本；需审查历史语境与歌词版本 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | source_found |
 | EN-T25 | Home on the Range | 美国民谣 | 自然与草原意象，适合舒展的原声版本 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | candidate |
 | EN-T26 | Shenandoah | 美国民谣 | 旋律抒情、舒展；并非专为儿童创作 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | candidate |
 | EN-T27 | Oh! Susanna | 美国民间歌曲 | 需审查历史歌词与现代改编版本 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | candidate |
 | EN-T28 | On Top of Old Smoky | 美国民谣 | 旋律舒展，适合民谣专题 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | candidate |
 | EN-T29 | Green Grass Grows All Around | 叠句 / 自然主题 | 可用于自然观察主题，节奏不宜过快 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | candidate |
-| EN-T30 | Crawdad Song | 游戏 / 民间歌曲 | LOC 介绍其 play-party 歌曲背景；歌词版本需审查 | [LOC Children's Songs](https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/traditional/childrens-songs/) | candidate |
+| EN-T30 | Crawdad Hole | 游戏 / 民间歌曲 | Smithsonian 专辑列有 Cisco Houston 演唱版本；歌词版本需审查 | [Smithsonian Folkways 专辑](https://folkways.si.edu/classic-folk-songs-for-kids-from-smithsonian-folkways/childrens/music/album/smithsonian) | source_found |
 
 ## 6. 英语摇篮曲、自然歌与多元文化曲目候选
 
@@ -162,7 +162,7 @@
 |---|---|---|
 | [中国非物质文化遗产网](https://www.ihchina.cn/) | 发现北京、绍兴、闽南等地区童谣项目、分类和传承背景 | 项目介绍不是歌词、录音或商业使用授权 |
 | [中国作家网](https://www.chinawriter.com.cn/) | 儿歌史、儿童文学作者、作品背景和书目线索 | 文章内容与引用作品需分别核权 |
-| [中国民俗学网](https://www.chinafolklore.org/) | 民间歌谣研究、地方歌谣集和田野采录研究 | 研究文章不等于原始材料可自由转载 |
+| [中国民俗学网](https://www.chinafolklore.org/) | 民间歌谣研究、地方歌谣集和田野采录研究；可追踪《中国歌谣集成》等资料线索 | 研究文章和汇编资料不等于原始材料可自由转载 |
 | [中国音网](https://www.china1901.com/) | 历史唱片、传统音乐和录音资料发现 | 录音、唱片数字化文件需核实权利和访问条件 |
 | [Library of Congress - Songs of America](https://www.loc.gov/collections/songs-of-america/) | 美国传统歌曲、儿童游戏歌、历史录音与背景文章 | 馆藏可访问不代表可再发布；逐条查看 Rights & Access |
 | [LOC - Children's Songs](https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/traditional/childrens-songs/) | 儿童歌曲、摇篮曲、游戏歌的历史分类和录音线索 | 适合发现与研究，不直接作为媒体转载许可 |
