@@ -193,3 +193,36 @@ CREATE TABLE review_records (
 - 正文可在合法保存范围内计算内容哈希。
 - 不同译本、改编本、朗读录音和插画版本应保留为不同版本或资产。
 - 模糊匹配结果进入人工确认队列。
+
+
+## 8. 音乐馆扩展模型（目录阶段预留）
+
+音乐馆采用“作品—版本—播放资源”分层，避免把某个视频或录音误当成歌曲作品本身。
+
+建议后续增加以下实体：
+
+| 实体 | 职责 |
+| --- | --- |
+| song_versions | 具体演唱、编曲、录音或 MV 版本；关联作品及表演者、发行信息 |
+| playback_resources | Bilibili、音乐平台、官方站点或授权站内音频等播放入口 |
+| media_rights_records | 对具体录音、视频、封面等媒体资产分别记录权利与授权范围 |
+
+建议字段：
+
+**song_versions**
+- id, work_id, version_label
+- performer, arranger, recording_label, recording_year
+- region, language, notes
+
+**playback_resources**
+- id, song_version_id, platform, resource_type
+- resource_url, platform_video_id, embed_url, fallback_url
+- embed_allowed, embed_enabled（默认 false）
+- platform_terms_checked_at, review_status, review_notes
+
+**权利记录补充**
+- 对歌词/词作、曲/旋律、译词/改编/编曲、表演、录音制品、MV/视频画面分别核验。
+- 记录目标地域、允许用途、期限、署名要求、权利人和证据。
+- 作品公版状态不能自动推导具体录音、编曲或视频也可使用。
+
+首期可以先用现有 works、work_contributors、sources 和 rights_records 管理歌曲元数据；在实现播放功能前，再通过数据库迁移增加版本与播放资源表。详细字段和阶段要求见 [音乐馆设计](MUSIC_LIBRARY_DESIGN.md)。
