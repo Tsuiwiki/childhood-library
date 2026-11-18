@@ -43,7 +43,7 @@
 
 ## 4. 研究状态、权利状态与访问方式
 
-研究库需要将研究进度、权利信息和访问方式分开保存，避免版权未知阻止内部登记，也避免研究完成被误认为已获播放许可。
+适用于音乐、故事文学、诗歌诗词等全部内容类型。遵循“先研究采集，再判断使用”：研究进度、权利信息、内容质量和访问方式分开保存，版权未知不阻止必要的研究登记，也不代表获得公开使用许可。完整原则见 [项目顶层设计原则](PROJECT_PRINCIPLES.md)。
 
 建议新增或扩展字段：
 
@@ -51,7 +51,8 @@
 | --- | --- | --- |
 | research_status | discovered / researching / reviewed / rejected | 研究进度 |
 | rights_status | unknown / pending / verified / restricted / revoked | 作品、版本或媒体的权利状态 |
-| access_method | source_link / official_embed / licensed_audio / own_original / none | 经审核允许的访问或播放方式 |
+| quality_status | unreviewed / suitable / needs_context / unsuitable | 内容质量与适宜性审核 |
+| access_method | source_link / official_embed / licensed_media / own_original / none | 经审核允许的访问或使用方式 |
 
 `sources` / `source_items` 应支持记录平台公开页面的来源线索，例如 source_title、publisher_or_channel、published_at、discovered_at、source_url、version_description 和 research_notes。研究库默认只保存必要元数据和原始页面链接，不把第三方音视频复制到本项目存储。
 
