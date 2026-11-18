@@ -65,7 +65,22 @@
 
 分类注意：校园歌曲、儿童歌曲、成人创作的怀旧歌曲不应混为一谈；可按创作视角与音乐定位归入不同专题（如《童年》归入「校园与童年」而非「传统童谣」）。
 
-## 4. 版权状态
+## 4. 研究状态、权利状态与访问方式
+
+适用于音乐、故事文学、诗歌诗词等全部内容类型。遵循“先研究采集，再判断使用”：研究进度、权利信息、内容质量和访问方式分开保存，版权未知不阻止必要的研究登记，也不代表获得公开使用许可。完整原则见 [项目顶层设计原则](PROJECT_PRINCIPLES.md)。
+
+建议新增或扩展字段：
+
+| 字段 | 建议值 | 含义 |
+| --- | --- | --- |
+| research_status | discovered / researching / reviewed / rejected | 研究进度 |
+| rights_status | unknown / pending / verified / restricted / revoked | 作品、版本或媒体的权利状态 |
+| quality_status | unreviewed / suitable / needs_context / unsuitable | 内容质量与适宜性审核 |
+| access_method | source_link / official_embed / licensed_media / own_original / none | 经审核允许的访问或使用方式 |
+
+`sources` / `source_items` 应支持记录平台公开页面的来源线索，例如 source_title、publisher_or_channel、published_at、discovered_at、source_url、version_description 和 research_notes。研究库默认只保存必要元数据和原始页面链接，不把第三方音视频复制到本项目存储。
+
+## 5. 版权状态
 
 建议枚举：
 - pending：待核实
@@ -87,7 +102,7 @@
 - reviewer / reviewed_at
 - notes
 
-## 5. 发布状态
+## 6. 发布状态
 
 - draft
 - pending_review
@@ -98,7 +113,7 @@
 
 发布校验必须检查内容状态和所有待公开资产的权利状态。版权待确认的正文或媒体不得被公开接口返回。
 
-## 6. 建议 PostgreSQL 表结构（概念级）
+## 7. 建议 PostgreSQL 表结构（概念级）
 
 ```sql
 CREATE TABLE works (
@@ -210,7 +225,7 @@ CREATE TABLE review_records (
 
 以上为概念起点。实际迁移需要补充外键、索引、检查约束、审计字段、角色权限，并解决媒体资产与版权记录的双向引用设计。
 
-## 7. 去重策略
+## 8. 去重策略
 
 - 首选来源外部 ID 和规范化 URL。
 - 标题 + 作者 + 类型作为候选匹配，不直接自动合并。
@@ -219,7 +234,7 @@ CREATE TABLE review_records (
 - 模糊匹配结果进入人工确认队列。
 
 
-## 8. 音乐馆扩展模型（目录阶段预留）
+## 9. 音乐馆扩展模型（目录阶段预留）
 
 音乐馆采用“作品—版本—播放资源”分层，避免把某个视频或录音误当成歌曲作品本身。
 
