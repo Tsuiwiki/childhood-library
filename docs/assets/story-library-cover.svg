@@ -1,41 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760" role="img" aria-labelledby="title desc">
-<title id="title">童年书房儿童故事馆</title>
-<desc id="desc">温暖的图书馆与故事世界插画，包含树木、打开的书、城堡、月亮和星星。</desc>
-<defs>
-  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7e9d3"/><stop offset="1" stop-color="#dce9df"/></linearGradient>
-  <linearGradient id="book" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf5"/><stop offset="1" stop-color="#ead9b9"/></linearGradient>
-  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#5b5747" flood-opacity=".16"/></filter>
-</defs>
-<rect width="1440" height="760" rx="30" fill="url(#sky)"/>
-<circle cx="1190" cy="145" r="66" fill="#f5d58b" opacity=".9"/>
-<g fill="#fffaf0" opacity=".9"><path d="M180 150c22-34 72-34 94 0 34-10 63 13 62 40H132c-2-24 20-44 48-40z"/><path d="M960 235c18-28 58-28 76 0 27-8 50 10 49 32H920c-2-19 16-35 40-32z"/></g>
-<g fill="#f1c878"><path d="M1070 92l7 18 19 2-15 12 5 18-16-10-16 10 5-18-15-12 19-2z"/><path d="M1300 270l5 13 14 2-11 9 4 14-12-8-12 8 4-14-11-9 14-2z"/><path d="M840 105l5 13 14 2-11 9 4 14-12-8-12 8 4-14-11-9 14-2z"/></g>
-<path d="M0 530Q210 400 430 520T850 500T1440 480V760H0Z" fill="#9eb99d"/>
-<path d="M0 600Q250 485 500 590T1000 570T1440 560V760H0Z" fill="#6f987e"/>
-<g transform="translate(1030 320)" fill="#e7c99d" stroke="#9a7957" stroke-width="5" stroke-linejoin="round">
- <path d="M0 185V80h62V25h55v55h50v105z"/><path d="M-18 80h35V35h35v45M145 80h35V35h35v45" fill="#d9b77f"/>
- <path d="M63 185v-60q28-48 56 0v60" fill="#7f9e8b"/><path d="M26 112h18v24H26zM135 112h18v24h-18z" fill="#8caeaa"/>
- <path d="M62 25V0h55v25M-18 35V8h35v27M180 35V8h35v27" fill="#c69d68"/>
-</g>
-<g transform="translate(220 335)">
- <path d="M75 250Q94 170 65 92h70q-25 100 2 158z" fill="#987453"/>
- <circle cx="103" cy="65" r="92" fill="#72977b"/><circle cx="45" cy="105" r="57" fill="#8eaf8b"/><circle cx="156" cy="116" r="60" fill="#638d73"/>
- <g fill="#e9c88e"><circle cx="65" cy="30" r="8"/><circle cx="138" cy="75" r="7"/><circle cx="35" cy="120" r="6"/></g>
-</g>
-<g transform="translate(450 355)" filter="url(#shadow)">
- <path d="M0 78Q105 20 220 78V270Q105 210 0 255Z" fill="url(#book)" stroke="#9b8060" stroke-width="5"/>
- <path d="M220 78Q335 20 440 78V255Q335 210 220 270Z" fill="#fffdf7" stroke="#9b8060" stroke-width="5"/>
- <path d="M220 78V270" stroke="#b69b76" stroke-width="5"/>
- <g stroke="#c4b39a" stroke-width="5" stroke-linecap="round"><path d="M35 112q70-25 145-2M35 145q70-25 145-2M35 178q70-25 145-2M255 110q70-25 145-2M255 143q70-25 145-2M255 176q70-25 145-2"/></g>
- <path d="M75 70q45-85 92-10q-50 12-92 10" fill="#d89c62"/><path d="M75 70q-25-65-70-40q26 38 70 40" fill="#7caa8b"/>
-</g>
-<g fill="#fff7cf"><circle cx="385" cy="270" r="5"/><circle cx="900" cy="350" r="5"/><circle cx="820" cy="520" r="4"/><circle cx="300" cy="250" r="4"/></g>
-<g font-family="Georgia, 'Noto Serif SC', serif" fill="#405b4d">
- <text x="720" y="115" text-anchor="middle" font-size="28" letter-spacing="7">CHILDHOOD LIBRARY</text>
- <text x="720" y="205" text-anchor="middle" font-size="76" font-weight="bold">儿童故事馆</text>
- <text x="720" y="260" text-anchor="middle" font-size="28">以中国经典为根 · 以世界文学为窗 · 以优秀原创为未来</text>
-</g>
-<g font-family="'Noto Sans SC', sans-serif" fill="#fffaf0" font-size="22">
- <text x="720" y="690" text-anchor="middle">让好故事陪伴童年，让文化在阅读中自然生长</text>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="t d">
+<title id="t">儿童故事馆：让好故事陪伴童年</title><desc id="d">打开的故事书连接中国古典亭台、世界城堡、森林与星空，孩子和小动物围坐阅读。</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8e8cc"/><stop offset=".55" stop-color="#e4efe5"/><stop offset="1" stop-color="#d8e8f2"/></linearGradient><linearGradient id="h" x2="0" y2="1"><stop stop-color="#fffdf6"/><stop offset="1" stop-color="#ead8b8"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#43544b" flood-opacity=".18"/></filter></defs>
+<rect width="1440" height="720" rx="28" fill="url(#bg)"/>
+<circle cx="1180" cy="112" r="54" fill="#f5d58a"/><g fill="#fff9e9"><path d="M160 125q22-38 65-18q40-26 65 16q37-4 42 28H125q0-27 35-26z"/><path d="M930 90q20-31 55-15q33-22 54 14q32-4 37 23H900q0-20 30-22z"/></g>
+<g fill="#e7bf76"><path d="M1060 70l8 20 22 2-17 14 5 21-18-12-18 12 6-21-17-14 22-2z"/><path d="M1320 205l5 13 14 2-11 9 4 14-12-8-12 8 4-14-11-9 14-2z"/></g>
+<path d="M0 490Q220 380 430 490T850 475T1440 450V720H0Z" fill="#a9c4a4"/><path d="M0 570Q280 450 520 560T1020 540T1440 530V720H0Z" fill="#71977e"/>
+<!-- distant castle -->
+<g transform="translate(1080 260)" fill="#e6c99b" stroke="#9b805e" stroke-width="5" stroke-linejoin="round"><path d="M0 210V95h70V35h55v60h70v115z"/><path d="M-15 95h35V50h35v45M175 95h35V50h35v45" fill="#d4b27e"/><path d="M80 210v-70q27-43 54 0v70" fill="#7b9c8a"/><path d="M18 125h22v28H18zM150 125h22v28h-22z" fill="#8faeb0"/></g>
+<!-- pagoda -->
+<g transform="translate(180 300)" fill="#b67d54" stroke="#815d49" stroke-width="4"><path d="M70 190V80h95v110z" fill="#e8c99c"/><path d="M45 85h145l-20-22H65zM55 60h125l-20-20H75zM82 38h72l-12-18H94z" fill="#b87952"/><path d="M112 20V0" stroke-width="5"/><path d="M90 190v-48h55v48" fill="#759583"/></g>
+<!-- tree -->
+<g transform="translate(90 390)"><path d="M70 170q15-75-2-125h42q-20 70 8 125" fill="#977451"/><circle cx="92" cy="45" r="72" fill="#6f9678"/><circle cx="40" cy="85" r="45" fill="#8caf8c"/><circle cx="145" cy="90" r="46" fill="#7ea685"/></g>
+<!-- open book -->
+<g filter="url(#s)" transform="translate(420 380)"><path d="M0 72Q125 12 260 72V250Q125 194 0 242Z" fill="url(#h)" stroke="#9c8061" stroke-width="6"/><path d="M260 72Q395 12 520 72V242Q395 194 260 250Z" fill="#fffdf7" stroke="#9c8061" stroke-width="6"/><path d="M260 72V250" stroke="#b69b78" stroke-width="5"/><g stroke="#c7b79d" stroke-width="5" stroke-linecap="round"><path d="M35 105q85-30 185-3M35 140q85-30 185-3M35 175q85-30 185-3M295 105q85-30 185-3M295 140q85-30 185-3M295 175q85-30 185-3"/></g><path d="M115 55q-35-62-75-35q26 38 75 35M115 55q38-76 78-25q-30 30-78 25" fill="#7da586"/></g>
+<!-- children silhouettes -->
+<g transform="translate(700 260)"><circle cx="60" cy="38" r="36" fill="#d69a6c"/><path d="M25 35q-3-45 38-45q37 0 37 42q-30-20-75 3" fill="#55453b"/><path d="M25 80q36-28 72 0l25 100H5z" fill="#7299b8"/><path d="M42 80l22 44 23-44" fill="#f5e8ce"/><circle cx="190" cy="35" r="35" fill="#d9a276"/><path d="M155 34q-4-47 39-48q42 4 37 49q-31-25-76-1" fill="#57443c"/><path d="M154 78q37-27 74 0l28 102h-130z" fill="#c77d69"/><path d="M170 79l22 42 20-42" fill="#f8e7d1"/></g>
+<g transform="translate(935 520)"><ellipse cx="0" cy="0" rx="44" ry="25" fill="#e7d6b7"/><circle cx="-18" cy="-24" r="17" fill="#e7d6b7"/><path d="M-31-36l-8-24 20 12M-8-38l9-22 9 25" fill="#e7d6b7"/><circle cx="-23" cy="-25" r="3" fill="#55483f"/><circle cx="15" cy="-3" r="3" fill="#55483f"/></g>
+<g font-family="Georgia,'Noto Serif SC',serif" fill="#405b4d"><text x="720" y="112" font-size="26" text-anchor="middle" letter-spacing="8">CHILDHOOD LIBRARY</text><text x="720" y="205" font-size="76" font-weight="bold" text-anchor="middle">儿童故事馆</text><text x="720" y="260" font-size="28" text-anchor="middle">以中国经典为根 · 以世界文学为窗 · 以优秀原创为未来</text></g>
+<text x="720" y="665" font-family="'Noto Sans SC',sans-serif" font-size="24" fill="#fffaf0" text-anchor="middle">让好故事陪伴童年，让文化在阅读中自然生长</text></svg>
