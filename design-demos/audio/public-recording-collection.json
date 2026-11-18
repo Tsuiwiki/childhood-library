@@ -1,0 +1,586 @@
+{
+  "collectedOn": "2026-11-18",
+  "usage": "内部研究与原型播放；公开再发布权利待核验",
+  "licenseUrl": "../docs/COPYRIGHT_POLICY.md",
+  "fileCount": 27,
+  "workMappingCount": 28,
+  "records": [
+    {
+      "ids": [
+        "CN-C03"
+      ],
+      "title": "小燕子",
+      "file": "CN-C03-xuexi-chorus.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1005/p/08b9400f776234fe10bec46e1394bc76-f1ea34cfc5c749678293100488d5fdfb-3.mp3",
+      "author": "广州市少年艺术中心合唱团",
+      "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
+      "kind": "专辑完整录音 · 192 kbps MP3",
+      "collectionMethod": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
+      "sourceTrackId": "13985296122571089948",
+      "bytes": 3722200,
+      "sha256": "252c84360cfe10a899bb6e2b045fa724e2f452b3cc591705edccbf7e8a9627f1",
+      "durationSeconds": 155.012,
+      "codec": "mp3float",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C14"
+      ],
+      "title": "丢手绢",
+      "file": "CN-C14-xuexi.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1005/p/b148fbd973481966d9d466a99567d783-1f5a5f6e3d1949fe9328b1ca4b1ed36c-3.mp3",
+      "author": "中国广播少年合唱团",
+      "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
+      "kind": "专辑完整录音 · 192 kbps MP3",
+      "collectionMethod": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
+      "sourceTrackId": "8769228391902820588",
+      "bytes": 700355,
+      "sha256": "e083a891c2d79c472c327d4ed502b8852e28d1e926f574a42706131430651289",
+      "durationSeconds": 29.101,
+      "codec": "mp3float",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C13"
+      ],
+      "title": "拔萝卜",
+      "file": "CN-C13-xuexi.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1005/p/8ab7f396d254b93deed653d050bfb2c4-48d743652ed44003b6467e4a2c65353b-3.mp3",
+      "author": "杨威、小甄妮、张苗苗",
+      "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
+      "kind": "专辑完整录音 · 192 kbps MP3",
+      "collectionMethod": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
+      "sourceTrackId": "18345332359034623644",
+      "bytes": 5142843,
+      "sha256": "578d5399f32249a691c8a22f1442f4b83337bb640c62a6407565998c9e24bd3e",
+      "durationSeconds": 214.205,
+      "codec": "mp3float",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C06"
+      ],
+      "title": "一分钱",
+      "file": "CN-C06-xuexi.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1005/p/816fe50d5f6d8ff6eb3a3b58cba0bcda-09c9634d1ed24e51bea1509556f93cec-3.mp3",
+      "author": "唐娜",
+      "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
+      "kind": "专辑完整录音 · 192 kbps MP3",
+      "collectionMethod": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
+      "sourceTrackId": "10869370363327164896",
+      "bytes": 2129149,
+      "sha256": "b71237e91c53854deb9e5acca8a3aede606de6c01c77bbdd0a8f9cf531fb044e",
+      "durationSeconds": 88.635,
+      "codec": "mp3float",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C07"
+      ],
+      "title": "读书郎",
+      "file": "CN-C07-xuexi.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1005/p/d2b2bc9c4e119f5dbf6ebf404e1ad235-edd152a42c0e4bd6b8fcbe91d40a2d50-3.mp3",
+      "author": "北京新月合唱团",
+      "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
+      "kind": "专辑完整录音 · 192 kbps MP3",
+      "collectionMethod": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
+      "sourceTrackId": "2765254747599334291",
+      "bytes": 2480861,
+      "sha256": "84cb3bf3b5dfb287d7ea1f910e96776401743e339078aa5142f4b58412ee3f25",
+      "durationSeconds": 103.289,
+      "codec": "mp3float",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C19"
+      ],
+      "title": "找朋友",
+      "file": "CN-C19-xuexi.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1005/p/9bb86a9c3dd789bd6d7adb4100ddc1cd-f11421efb2fe46009cfaa816445f8dad-3.mp3",
+      "author": "叶明珠",
+      "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
+      "kind": "专辑完整录音 · 192 kbps MP3",
+      "collectionMethod": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
+      "sourceTrackId": "13265832467873113825",
+      "bytes": 3204349,
+      "sha256": "bf679209d9e46767983a769cb553c5d40c3c1eec4c1d438b5c33f07aa54e710e",
+      "durationSeconds": 133.435,
+      "codec": "mp3float",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C15"
+      ],
+      "title": "小鸭子",
+      "file": "CN-C15-xuexi.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1005/p/01c2f5d779a7bdb668bb49799240cb88-c896ca0096124effbfd6bda5f36bb57c-3.mp3",
+      "author": "中央银河少年电视艺术团",
+      "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
+      "kind": "专辑完整录音 · 192 kbps MP3",
+      "collectionMethod": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
+      "sourceTrackId": "18076483931545408717",
+      "bytes": 1633240,
+      "sha256": "d7f7ae445780e393b0d879163ea9fc882294a95a58cd97248479226ef39414c3",
+      "durationSeconds": 67.972,
+      "codec": "mp3float",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C17"
+      ],
+      "title": "娃哈哈",
+      "file": "CN-C17-xuexi.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1005/p/b5411b76ddb166bb0fa34c87d52a0a4f-53897e2858dc4cd3ad906d94e27d3fbf-3.mp3",
+      "author": "新月合唱团",
+      "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
+      "kind": "专辑完整录音 · 192 kbps MP3",
+      "collectionMethod": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
+      "sourceTrackId": "2894234336581355715",
+      "bytes": 2605622,
+      "sha256": "401b5d2f1a1a7ed6c944eb0213a8be4a1ad8728b724dc16792d07a1c8dfd0db9",
+      "durationSeconds": 108.488,
+      "codec": "mp3float",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C04",
+        "CN-C16"
+      ],
+      "title": "嘀哩，嘀哩",
+      "file": "CN-C04-CN-C16-xuexi.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1005/p/d8b61bc5a7dfdf2aec00bf9386128951-0156c2c452894b2c8815b03a8aef9300-3.mp3",
+      "author": "中央人民广播电台少年儿童合唱团",
+      "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
+      "kind": "专辑完整录音 · 192 kbps MP3",
+      "collectionMethod": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
+      "sourceTrackId": "16142195201844952643",
+      "bytes": 3472052,
+      "sha256": "8b5c2f16ea82e199655cd1bd2fdfd6707eacf3c794268dc76950650acf94e6a1",
+      "durationSeconds": 144.589,
+      "codec": "mp3float",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C02"
+      ],
+      "title": "我们的田野",
+      "file": "CN-C02-gxzf.flac",
+      "sourcePage": "https://gdb.gxzf.gov.cn/ztjj_46964/lsztgd_46974/2021_99999/dsxxjy_97384/hsgqdjc_36974/t8911623.shtml",
+      "mediaUrl": "https://gdb.gxzf.gov.cn/ztjj_46964/lsztgd_46974/2021_99999/dsxxjy_97384/hsgqdjc_36974/W020210519351515425016.mp3",
+      "author": "中央乐团合唱团",
+      "sourceTitle": "广西壮族自治区国防动员办公室《我们的田野》",
+      "kind": "公开页面独立完整音频",
+      "collectionMethod": "保存来源页公开音频；来源扩展名为 MP3，实际编码按探测结果记录；本地未剪辑或转码",
+      "bytes": 16005871,
+      "sha256": "541db2ffc65ddd656d4f2bcbc7bb4e239def32f301dfecad4b4dd03beac91998",
+      "durationSeconds": 189.68,
+      "codec": "flac",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C02"
+      ],
+      "title": "我们的田野",
+      "file": "CN-C02-xuexi-chorus.m4a",
+      "sourcePage": "https://article.xuexi.cn/articles/index.html?art_id=571012350271693813",
+      "author": "上海菁英少年合唱团",
+      "sourceTitle": "学习强国《每日一曲｜我们的田野》",
+      "kind": "公开视频原声音轨 · 童声合唱",
+      "mediaUrl": "https://boot-video.xuexi.cn/video/1004/p/1a8e8a60e593fbc8f08517d335ef834e-c5cea7f043e34956a5ed063c23b25bd5-3.mp4",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "bytes": 2965673,
+      "sha256": "8ec9568caba8e243a793974c5c7845d7f955a5bba91dc2ca2c304c19339bebd8",
+      "durationSeconds": 187.072,
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C12"
+      ],
+      "title": "快乐的节日",
+      "file": "CN-C12-xuexi-galaxy.m4a",
+      "sourcePage": "https://article.xuexi.cn/articles/index.html?art_id=10967841520155694097",
+      "author": "中央电视台银河少年电视艺术团等",
+      "sourceTitle": "学习强国《每日一曲｜快乐的节日》",
+      "kind": "公开视频原声音轨 · 童声合唱",
+      "mediaUrl": "https://boot-video.xuexi.cn/video/1004/p/479e9788d5365320fd0d539f711a81cd-589b181c38c54c99a2705cc749fee22d-1.mp4",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "bytes": 1052493,
+      "sha256": "e943bfcd8c860804880fbc8ad0183f7d03fa18ec3cb4d4d17269fc118ed4a6f7",
+      "durationSeconds": 251.597,
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C11"
+      ],
+      "title": "听妈妈讲那过去的事情",
+      "file": "CN-C11-xuexi.m4a",
+      "sourcePage": "https://article.xuexi.cn/articles/index.html?art_id=12345317585299113386",
+      "author": "学习强国来源页所列演出版本",
+      "sourceTitle": "学习强国《每日一曲｜听妈妈讲那过去的事情》",
+      "kind": "公开视频原声音轨",
+      "mediaUrl": "https://boot-video.xuexi.cn/video/1005/p/5264b1f7e135fa5df52577d1910b4829-da3d4ba314d2412d83a2d6d877bc4d87-2.mp4",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "bytes": 2882544,
+      "sha256": "d07b03e3547ca7f6caf5be67faef655fe697aaa193e4529df9031957c11f0ece",
+      "durationSeconds": 283.195,
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C18"
+      ],
+      "title": "我爱北京天安门",
+      "file": "CN-C18-hbwy.m4a",
+      "sourcePage": "https://hbwy.org.cn/c/2021/10/20/45911.shtml",
+      "author": "北京铁路职工子弟第五小学等八校学生",
+      "sourceTitle": "湖北文艺网《我爱北京天安门》",
+      "kind": "公开视频原声音轨 · 历史童声合唱",
+      "mediaUrl": "https://hbwy.org.cn/upload/resources/video/2023/12/25/55336.mp4",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "bytes": 1440429,
+      "sha256": "32e2c86816982f35833bf9d0bcf15326490c99f67b89a6a0a2affa5c46e54d19",
+      "durationSeconds": 93.158,
+      "codec": "aac",
+      "sampleRate": 22050,
+      "channels": 1,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C05"
+      ],
+      "title": "采蘑菇的小姑娘",
+      "file": "CN-C05-cctv.m4a",
+      "sourcePage": "https://tv.cctv.com/2020/01/28/VIDEk2uuabNzEz4nRD1FVL4m200128.shtml",
+      "author": "唐蜜、王宸汐",
+      "sourceTitle": "央视网《童声唱》：采蘑菇的小姑娘",
+      "kind": "公开视频原声音轨 · 童声表演",
+      "mediaUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/1d6db5e85f8842a4b184f5d9a1cdbb78/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "bytes": 312337,
+      "sha256": "32aaca82a675d51ae5735f8769585167d19937f763fe0e81761c7ce4dfbe64b3",
+      "durationSeconds": 80.085,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C09"
+      ],
+      "title": "小螺号",
+      "file": "CN-C09-cctv.m4a",
+      "sourcePage": "https://tv.cctv.com/2022/08/26/VIDEHuad5HoEUXAvWoSD0IDD220826.shtml",
+      "author": "张伊蔓",
+      "sourceTitle": "央视网《童声唱》：小螺号",
+      "kind": "公开视频原声音轨 · 童声独唱",
+      "mediaUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/cd2e7c8287144e868e5ff4d2bfda740b/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "bytes": 333529,
+      "sha256": "a2c27f72bdde5aa80412e673256fa474946c734f4fa42e3f5a16444002cece09",
+      "durationSeconds": 85.995,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2,
+      "round": 1
+    },
+    {
+      "ids": [
+        "CN-C20"
+      ],
+      "title": "卖报歌",
+      "file": "CN-C20-cctv.m4a",
+      "sourcePage": "https://tv.cctv.com/v/v1/VIDExSfFIKK3Fmoyx84K4FHl220606.html",
+      "mediaUrl": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/0e52d5648057443a81fac2ef01886f18/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "总台央广少年广播70-80年代团员合唱团",
+      "sourceTitle": "央视网《大手牵小手》：卖报歌",
+      "kind": "公开视频原声音轨 · 童声合唱",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "primary",
+      "round": 2,
+      "bytes": 284161,
+      "sha256": "fbb51fce155822d69dd0fba8bbf4a2f8d79f2ca31be40214490bac862fa19974",
+      "durationSeconds": 73.259,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2
+    },
+    {
+      "ids": [
+        "CN-N03"
+      ],
+      "title": "小毛驴",
+      "file": "CN-N03-cctv.m4a",
+      "sourcePage": "https://tv.cntv.cn/video/C11356/f110df6245dc4bcca52c1205cd76c5a0",
+      "mediaUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/f110df6245dc4bcca52c1205cd76c5a0/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "老皮匠乐队",
+      "sourceTitle": "央视网《回声嘹亮》：儿歌《小毛驴》",
+      "kind": "公开视频原声音轨 · 乐队改编演唱",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "primary",
+      "round": 2,
+      "bytes": 277724,
+      "sha256": "77f9eae1a3431dc9adfaec08603aaec52281c6547c01a89116aab7d640c0a2c7",
+      "durationSeconds": 71.083,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2,
+      "versionNote": "来源页为乐队改编演唱版本，不是传统儿歌的历史原版录音。"
+    },
+    {
+      "ids": [
+        "CN-C21"
+      ],
+      "title": "小小螺丝帽",
+      "file": "CN-C21-cctv.m4a",
+      "sourcePage": "https://tv.cctv.com/v/v2/VIDEreA9pWmeIZ7Ehlx9Fa64210314.html",
+      "mediaUrl": "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/main/0303000a/3/default/09dfd319d5064fac9e9aefbe73ec868f/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "鲁彦皓",
+      "sourceTitle": "央视网《宝贝亮相吧》：歌曲《小小螺丝帽》",
+      "kind": "公开视频原声音轨 · 少儿演唱",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "primary",
+      "round": 2,
+      "bytes": 226972,
+      "sha256": "45031ca204f73dd53186f1ecf9529fee7f5af7c1e9147640bd12c45e85078e97",
+      "durationSeconds": 58.389,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2
+    },
+    {
+      "ids": [
+        "CN-C08"
+      ],
+      "title": "外婆的澎湖湾",
+      "file": "CN-C08-cctv-hsl.m4a",
+      "sourcePage": "https://tv.cctv.com/2014/06/28/VIDE1403959879035109.shtml",
+      "mediaUrl": "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/main/0303000a/3/default/050d5c2ce9094dedacd2978d785c0ef0/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "张楚怡",
+      "sourceTitle": "央视网《回声嘹亮》：歌曲《外婆的澎湖湾》",
+      "kind": "公开视频原声音轨 · 演唱版本",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "primary",
+      "round": 2,
+      "bytes": 353743,
+      "sha256": "e731e5ce906b5cbaff3488efcd0ad6fd89ddf2e981c907112dfb85e5c485c6be",
+      "durationSeconds": 91.093,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2
+    },
+    {
+      "ids": [
+        "CN-C08"
+      ],
+      "title": "外婆的澎湖湾",
+      "file": "CN-C08-cctv-mgzg.m4a",
+      "sourcePage": "https://tv.cctv.com/2018/11/28/VIDEleQytPNFhXoSzx7F1Ahl181128.shtml",
+      "mediaUrl": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/02be9178fb7749b48291d7a1b4eab91f/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "任贤齐",
+      "sourceTitle": "央视网《民歌·中国》：歌曲《外婆的澎湖湾》",
+      "kind": "公开视频原声音轨 · 演唱版本",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "variant",
+      "round": 2,
+      "bytes": 667861,
+      "sha256": "1d30a32b909177dfc07d70906db5f73589da60dd9cd88083ede432dfd8b2cfec",
+      "durationSeconds": 172.245,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2
+    },
+    {
+      "ids": [
+        "CN-N05"
+      ],
+      "title": "虫儿飞",
+      "file": "CN-N05-cctv-dqsx.m4a",
+      "sourcePage": "https://tv.cctv.cn/2019/10/16/VIDExGznIy4bpUu1j8wsX4pD191016.shtml",
+      "mediaUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/986f05b8affa4af09c2df82c47cbec17/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "赵蕾",
+      "sourceTitle": "央视网《大手牵小手》：歌曲《虫儿飞》",
+      "kind": "公开视频原声音轨 · 少儿演唱",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "primary",
+      "round": 2,
+      "bytes": 262516,
+      "sha256": "8de0a9547369b684d25d21a360c0bfeb621059293f7f5cf08adf79e69d87e97a",
+      "durationSeconds": 67.093,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2
+    },
+    {
+      "ids": [
+        "CN-N05"
+      ],
+      "title": "虫儿飞",
+      "file": "CN-N05-cctv-jcyyh.m4a",
+      "sourcePage": "https://tv.cctv.com/2019/03/18/VIDEBTQh3QtxHe0f4lUqVjBu190318.shtml",
+      "mediaUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/fe80f4ee68244325adc9cfa19b0f68b1/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "麦麦",
+      "sourceTitle": "央视网《精彩音乐汇》：歌曲《虫儿飞》",
+      "kind": "公开视频原声音轨 · 演唱版本",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "variant",
+      "round": 2,
+      "bytes": 685112,
+      "sha256": "eb0a7895115065a405b3e2c56b03dd6c7b205c17d99fb22d928fffe27c71aa75",
+      "durationSeconds": 176.619,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2
+    },
+    {
+      "ids": [
+        "CN-N02"
+      ],
+      "title": "童年",
+      "file": "CN-N02-cctv-kldb.m4a",
+      "sourcePage": "https://tv.cctv.cn/2018/09/22/VIDEgSZ1eNOUpujo720kdGFe180922.shtml",
+      "mediaUrl": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/78173ae4b086418aaf84397adcbfd8a5/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "刘昱星",
+      "sourceTitle": "央视网《快乐大巴》：歌曲《童年》",
+      "kind": "公开视频原声音轨 · 少儿演唱",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "primary",
+      "round": 2,
+      "bytes": 273515,
+      "sha256": "0b18730c9896a0bda783c3210aa63664d38a455a6e0d7d237d36d40cf4894e57",
+      "durationSeconds": 69.931,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2
+    },
+    {
+      "ids": [
+        "CN-N02"
+      ],
+      "title": "童年",
+      "file": "CN-N02-cctv-jcyyh.m4a",
+      "sourcePage": "https://tv.cctv.com/2023/07/19/VIDE4nJ9pjWogBYb7od9Ghd2230719.shtml",
+      "mediaUrl": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/0cfa28be874548849dea14aa7507b92b/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "周觅",
+      "sourceTitle": "央视网《精彩音乐汇》：歌曲《童年》",
+      "kind": "公开视频原声音轨 · 演唱版本",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "variant",
+      "round": 2,
+      "bytes": 860652,
+      "sha256": "636f94c7f9c6ae27053c106f0b19b8679742edd0e4376723f96874e6aea5ef37",
+      "durationSeconds": 222.421,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2
+    },
+    {
+      "ids": [
+        "CN-T12"
+      ],
+      "title": "一园青菜成了精",
+      "file": "CN-T12-cctv.m4a",
+      "sourcePage": "https://tv.cctv.com/v/v1/VIDEEUPGaW9KNkr8KvsAZNBn210626.html",
+      "mediaUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/55c52746433b45b19e55f9ad2791475e/main.m3u8?maxbr=2048&contentid=15120519184043",
+      "author": "刘瀚元家庭",
+      "sourceTitle": "央视网《七巧板》：《一园青菜成了精》",
+      "kind": "公开视频原声音轨 · 童谣表演与念诵",
+      "collectionMethod": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
+      "role": "primary",
+      "round": 2,
+      "bytes": 579288,
+      "sha256": "d075660852d2b54ac5659cd18b7790979446e3d81de6d45fea2b30f66b19ed4f",
+      "durationSeconds": 149.675,
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2,
+      "versionNote": "来源页是童谣表演 / 念诵，不是有固定曲谱的歌曲演唱录音；作为该童谣的真实口头演绎版本登记。"
+    },
+    {
+      "ids": [
+        "CN-N01"
+      ],
+      "title": "数鸭子",
+      "file": "CN-N01-xuexi.mp3",
+      "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=17735598666313749703&type=album",
+      "mediaUrl": "https://boot-video.xuexi.cn/audio/1006/p/6a01a59d5dec1730b0c5dab021ff8598-d117856df90c4b5cba3331380647ddfa-1.mp3",
+      "author": "刘雪姣",
+      "sourceTitle": "学习强国《陪你读童谣（一）》：数鸭子",
+      "kind": "公开专辑音频 · 童谣诵读（非歌曲演唱）",
+      "collectionMethod": "带来源页上下文保存公开专辑页内完整音频；本地未剪辑或转码",
+      "role": "primary",
+      "round": 2,
+      "bytes": 518334,
+      "sha256": "073546f6a4efdb163aec6b8dd25d9b0ad40966cc59a2f2c85c49f812407a61d8",
+      "durationSeconds": 64.683,
+      "codec": "mp3float",
+      "sampleRate": 22050,
+      "channels": 2,
+      "versionNote": "来源专辑为「陪你读童谣」诵读系列，此音频是童谣念读，不是《数鸭子》歌曲演唱版本；不得标作原唱。",
+      "sourceTrackId": "13891788958395814906"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "files": 16,
+      "usage": "学习强国专辑、政府/高校公开音频、公开视频原声音轨"
+    },
+    {
+      "round": 2,
+      "files": 11,
+      "usage": "央视网独立单曲页 + 学习强国陪你读童谣专辑"
+    }
+  ]
+}

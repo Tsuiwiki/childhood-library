@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="童年书房儿童音乐数据库：免费供大众及教育使用，检索作品线索、主题、来源与权利核验状态，支持内部本地试听。">
+  <title>作品列表｜童年书房</title>
+  <style>
+    :root {
+      --paper: #f4eddc;
+      --paper-light: #fffaf0;
+      --ink: #191917;
+      --red: #e64a38;
+      --yellow: #f1bd32;
+      --blue: #2858b8;
+      --green: #739348;
+      --line: 3px solid var(--ink);
+      --serif: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      --sans: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image: radial-gradient(circle, rgba(25,25,23,.18) .8px, transparent .9px);
+      background-size: 9px 9px;
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: clip;
+    }
+    body.dialog-open { overflow: hidden; }
+    body.audio-player-open { padding-bottom: 152px; }
+    button, input, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { color: inherit; }
+    button:not(:disabled), select, a { cursor: pointer; }
+    button:disabled { cursor: not-allowed; }
+    a { color: inherit; }
+    [hidden] { display: none !important; }
+    svg { display: block; max-width: 100%; }
+    h1, h2, h3, p { margin-top: 0; }
+    ::selection { color: var(--paper-light); background: var(--blue); }
+    :focus-visible { outline: 4px solid var(--blue); outline-offset: 4px; }
+    .shell { width: min(calc(100% - 48px), 1240px); margin-inline: auto; }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 12px;
+      left: 12px;
+      min-height: 44px;
+      padding: 8px 18px;
+      border: var(--line);
+      background: var(--yellow);
+      transform: translateY(-160%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      z-index: 30;
+      top: 0;
+      border-bottom: var(--line);
+      background-color: var(--paper);
+      background-image: radial-gradient(circle, rgba(25,25,23,.16) .8px, transparent .9px);
+      background-size: 9px 9px;
+    }
+    .header-inner { min-height: 82px; display: flex; align-items: center; gap: 24px; }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+      margin-right: auto;
+      text-decoration: none;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+    .brand small {
+      margin-left: 12px;
+      padding-left: 12px;
+      border-left: 2px solid var(--ink);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: .08em;
+    }
+    .desktop-nav { display: flex; align-items: center; gap: 4px; }
+    .desktop-nav a, .mobile-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 8px 13px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .desktop-nav a:hover { text-decoration: underline 3px var(--red); text-underline-offset: 6px; }
+    .desktop-nav a[aria-current="page"], .mobile-nav a[aria-current="page"] {
+      text-decoration: underline 3px var(--red);
+      text-underline-offset: 6px;
+    }
+    .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      padding: 11px;
+      border: var(--line);
+      background: var(--yellow);
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin: 4px 0;
+      background: var(--ink);
+      transition: transform .18s ease, opacity .18s ease;
+    }
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .mobile-nav { padding: 8px 0 18px; border-top: 2px solid var(--ink); }
+    .mobile-nav a { width: 100%; justify-content: flex-start; border-bottom: 2px dashed var(--ink); }
+
+    .catalogue-hero { padding-block: 42px 30px; }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 42px;
+    }
+    .hero-copy h1 {
+      margin-bottom: 16px;
+      font-family: var(--serif);
+      font-size: clamp(44px, 5vw, 64px);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -.045em;
+    }
+    .hero-description { max-width: 730px; margin-bottom: 0; font-size: 18px; line-height: 1.8; }
+    .catalogue-tag {
+      position: relative;
+      width: 246px;
+      min-height: 126px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 20px 20px 38px;
+      border: var(--line);
+      background: var(--yellow);
+      box-shadow: 6px 6px 0 var(--ink);
+      transform: rotate(2deg);
+    }
+    .catalogue-tag::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      left: 14px;
+      width: 11px;
+      height: 11px;
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+      background: var(--paper-light);
+    }
+    .catalogue-tag strong { font-family: var(--serif); font-size: 25px; line-height: 1.3; }
+    .catalogue-tag span { margin-top: 8px; font-size: 14px; font-weight: 800; }
+    .catalogue-tag::after {
+      content: "候选 · 核验";
+      position: absolute;
+      right: 12px;
+      bottom: 10px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .summary-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 32px;
+      border: var(--line);
+      background: var(--paper-light);
+      box-shadow: 5px 5px 0 var(--blue);
+    }
+    .summary-item {
+      min-width: 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 24px;
+    }
+    .summary-item + .summary-item { border-left: var(--line); }
+    .summary-label { font-size: 16px; font-weight: 800; }
+    .summary-value {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .catalogue { padding-block: 24px 72px; }
+    .filter-card {
+      position: relative;
+      margin-bottom: 38px;
+      padding: 24px;
+      border: var(--line);
+      background: var(--paper-light);
+      box-shadow: 6px 6px 0 var(--blue);
+    }
+    .filter-card::before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 44px;
+      width: 88px;
+      height: 22px;
+      border: 2px solid var(--ink);
+      background: var(--red);
+      transform: rotate(-3deg);
+    }
+    .filter-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 20px; }
+    .filter-heading h2 { margin-bottom: 0; font-family: var(--serif); font-size: 28px; line-height: 1.3; }
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 10px 18px;
+      border: var(--line);
+      border-radius: 0;
+      background: var(--paper-light);
+      box-shadow: 4px 4px 0 var(--ink);
+      font-weight: 800;
+      line-height: 1.35;
+      text-decoration: none;
+      transition: translate .16s ease, box-shadow .16s ease;
+    }
+    .button:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .button:active { translate: 3px 3px; box-shadow: 1px 1px 0 var(--ink); }
+    .button-primary { background: var(--yellow); }
+    .button:disabled { color: #555249; background: #ddd5c2; box-shadow: none; }
+    .reset-button { min-height: 44px; padding-block: 8px; }
+    .search-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: end; }
+    .field { min-width: 0; }
+    .field label { display: block; margin-bottom: 7px; font-size: 14px; font-weight: 800; }
+    .search-control { position: relative; }
+    .search-control svg {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      width: 22px;
+      height: 22px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .search-control input, .field select {
+      width: 100%;
+      min-width: 0;
+      min-height: 52px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-size: 16px;
+    }
+    .search-control input { padding: 12px 16px 12px 50px; }
+    .search-control input::placeholder { color: #59564d; opacity: 1; }
+    .field select { padding: 10px 38px 10px 12px; }
+    .clear-button { min-width: 88px; min-height: 52px; }
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .results-header { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
+    .results-header h2 { margin-bottom: 0; font-family: var(--serif); font-size: 32px; line-height: 1.25; }
+    .results-status { max-width: 760px; margin: 0; font-size: 16px; font-weight: 700; text-align: right; }
+    .works-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .work-card {
+      --spine: var(--red);
+      position: relative;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 18px 18px 16px 29px;
+      border: var(--line);
+      background: var(--paper-light);
+      box-shadow: 5px 5px 0 var(--ink);
+      transition: translate .16s ease, box-shadow .16s ease;
+    }
+    .work-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 11px;
+      border-right: 3px solid var(--ink);
+      background: var(--spine);
+    }
+    .work-card.is-english { --spine: var(--blue); }
+    .work-card:hover { translate: 0 -3px; box-shadow: 7px 8px 0 var(--ink); }
+    .card-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-bottom: 12px; }
+    .id-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 3px 9px;
+      border: 2px solid var(--ink);
+      background: var(--yellow);
+      font-size: 13px;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      overflow-wrap: anywhere;
+    }
+    .theme-tag { font-size: 13px; font-weight: 800; }
+    .work-card h3 {
+      margin-bottom: 7px;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 900;
+      line-height: 1.3;
+      overflow-wrap: anywhere;
+    }
+    .work-card.is-english h3 { overflow-wrap: anywhere; word-break: normal; }
+    .card-group { margin-bottom: 13px; font-size: 14px; font-weight: 800; line-height: 1.5; }
+    .card-meta { display: grid; gap: 7px; margin: 0 0 13px; }
+    .card-meta div { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 8px; }
+    .card-meta dt { font-size: 13px; font-weight: 800; }
+    .card-meta dd { margin: 0; font-size: 16px; line-height: 1.5; overflow-wrap: anywhere; }
+    .card-note {
+      margin-bottom: 14px;
+      padding-left: 11px;
+      border-left: 5px solid var(--yellow);
+      font-size: 16px;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+    }
+    .card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 13px;
+      border-top: 2px solid var(--ink);
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      max-width: 100%;
+      padding: 4px 9px;
+      border: 2px solid currentColor;
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+    .status-candidate { color: #594000; background: #fff0ba; }
+    .status-source_found { color: #173e8d; background: #dfe8fb; }
+    .status-metadata_verified { color: #294313; background: #e2edcf; }
+    .status-rights_pending { color: #7a2017; background: #f9ddd7; }
+    .status-link_only { color: var(--ink); background: #e7e1d4; }
+    .status-authorized { color: var(--paper-light); background: #315f32; }
+    .status-rejected { color: #791b14; background: #f4d4d0; border-style: dashed; }
+    .detail-button {
+      min-height: 44px;
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      background: var(--paper-light);
+      box-shadow: 3px 3px 0 var(--ink);
+      font-size: 14px;
+      font-weight: 900;
+      transition: translate .16s ease, box-shadow .16s ease;
+    }
+    .detail-button:hover { translate: -1px -1px; box-shadow: 4px 4px 0 var(--ink); }
+    .detail-button:active { translate: 2px 2px; box-shadow: 1px 1px 0 var(--ink); }
+
+    .audio-tools {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding: 16px;
+      border: 2px dashed var(--ink);
+      background: #f7edcf;
+    }
+    .audio-tools .button { flex: 0 0 auto; }
+    .audio-count {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 7px 12px;
+      border: 2px solid var(--ink);
+      background: var(--paper-light);
+      font-size: 16px;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+    .audio-privacy { flex: 1 1 300px; margin: 0; font-size: 16px; font-weight: 700; }
+    .audio-storage-notice { flex-basis: 100%; margin: 0; padding: 9px 12px; border-left: 5px solid var(--red); background: var(--paper-light); font-size: 16px; font-weight: 800; }
+    .audio-import-status { flex-basis: 100%; min-height: 26px; margin: 0; font-size: 16px; font-weight: 800; }
+    .sample-filter-button[aria-pressed="true"] { background: var(--blue); color: var(--paper-light); }
+    .sample-count { background: #dfe8fb; }
+    .sample-marker { background: #e2edcf; }
+    .sample-marker.is-internal { background: #f9ddd7; }
+    .sample-marker.is-generated { background: #dfe8fb; }
+    .official-marker { background: #f1bd32; }
+    .official-audio-panel {
+      margin-bottom: 22px;
+      padding: 18px;
+      border: var(--line);
+      background: #fff0ba;
+      box-shadow: 5px 5px 0 var(--red);
+    }
+    .official-audio-panel h3 { margin-bottom: 8px; font-family: var(--serif); font-size: 25px; line-height: 1.35; }
+    .official-audio-panel p { margin-bottom: 10px; font-size: 16px; }
+    .official-audio-meta { font-weight: 800; overflow-wrap: anywhere; }
+    .official-audio-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 14px 0; }
+    .official-audio-status { min-height: 26px; font-weight: 800; }
+    .official-inline-audio { display: block; width: 100%; min-height: 48px; margin: 12px 0; }
+    .sample-audio-panel.is-internal { background: #f9ddd7; }
+    .sample-audio-panel.is-generated { background: #dfe8fb; }
+    .sample-audio-panel {
+      margin-bottom: 22px;
+      padding: 18px;
+      border: var(--line);
+      background: #e2edcf;
+      box-shadow: 5px 5px 0 var(--green);
+    }
+    .sample-audio-panel h3 { margin-bottom: 8px; font-family: var(--serif); font-size: 25px; line-height: 1.35; }
+    .sample-audio-panel p { margin-bottom: 10px; font-size: 16px; }
+    .sample-version-field { margin: 16px 0; }
+    .sample-version-field select { width: 100%; min-height: 48px; padding: 10px 12px; border: 2px solid var(--ink); border-radius: 0; background: var(--paper-light); color: var(--ink); font: inherit; font-weight: 800; }
+    .sample-audio-meta { margin: 0 0 14px; font-size: 16px; font-weight: 800; overflow-wrap: anywhere; }
+    .sample-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 12px; }
+    .sample-links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 900; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+    dialog.dialog-with-materials { width: min(980px, calc(100% - 32px)); }
+    .sample-card-intro { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: start; gap: 14px; margin-bottom: 13px; }
+    .sample-card-copy { min-width: 0; }
+    .sample-card-cover { width: 104px; height: auto; aspect-ratio: 4 / 3; display: block; object-fit: cover; border: 2px solid var(--ink); background: var(--paper); transform: rotate(-1.5deg); }
+    .sample-card-intro .card-group { margin-bottom: 0; }
+    .song-materials { min-width: 0; margin: 0 0 22px; padding-top: 24px; border-top: var(--line); }
+    .song-materials > h3 { margin-bottom: 18px; font-family: var(--serif); font-size: 29px; line-height: 1.3; }
+    .song-material-grid { display: grid; grid-template-columns: minmax(220px, .85fr) minmax(0, 1.15fr); align-items: stretch; gap: 20px; }
+    .song-cover { min-width: 0; margin: 0; }
+    .song-cover img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--red); }
+    .song-cover figcaption { margin-top: 12px; font-size: 14px; font-weight: 800; }
+    .material-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 900; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+    .lyrics-sheet { min-width: 0; padding: 18px; border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--blue); }
+    .lyrics-sheet h4, .score-sheet h4 { margin: 0 0 10px; font-family: var(--serif); font-size: 22px; line-height: 1.35; }
+    .lyrics-lines { display: grid; gap: 7px; margin: 16px 0; }
+    .lyrics-lines p { margin: 0; font-family: var(--serif); font-size: 18px; font-weight: 700; line-height: 1.55; overflow-wrap: anywhere; }
+    .lyrics-note, .score-note { margin: 0; font-size: 14px; font-weight: 700; line-height: 1.65; }
+    .score-sheet { min-width: 0; margin-top: 22px; }
+    .score-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 18px; margin-bottom: 8px; }
+    .score-heading h4 { margin-bottom: 0; }
+    .score-downloads { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+    .score-note { margin-bottom: 12px; }
+    .score-scroll { max-width: 100%; overflow: auto; border: var(--line); background: var(--paper-light); overscroll-behavior: contain; }
+    .score-scroll:focus-visible { outline: 4px solid var(--red); outline-offset: 3px; }
+    .score-scroll img { display: block; width: 100%; min-width: 960px; height: auto; }
+    .material-sources { min-width: 0; margin-top: 22px; padding: 18px 20px; border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--green); }
+    .material-sources h4 { margin: 0 0 12px; font-family: var(--serif); font-size: 22px; }
+    .material-sources dl { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px 16px; margin: 0; }
+    .material-sources dt { font-size: 14px; font-weight: 900; }
+    .material-sources dd { min-width: 0; margin: 0; font-size: 14px; font-weight: 700; line-height: 1.7; overflow-wrap: anywhere; }
+    .material-sources a { font-weight: 900; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .audio-marker.pending-marker { background: #f6dfae; }
+    .card-audio-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 14px; }
+    .audio-marker {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 9px;
+      border: 2px solid var(--ink);
+      background: #dfe8fb;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .audio-action { background: var(--yellow); }
+    .internal-audio-panel {
+      margin-bottom: 22px;
+      padding: 18px;
+      border: var(--line);
+      background: var(--paper-light);
+      box-shadow: 5px 5px 0 var(--blue);
+    }
+    .internal-audio-panel h3 { margin-bottom: 8px; font-family: var(--serif); font-size: 25px; line-height: 1.35; }
+    .internal-audio-panel p { font-size: 16px; }
+    .internal-audio-panel .audio-privacy { margin-bottom: 14px; }
+    .detail-audio-file { margin-bottom: 8px; font-weight: 900; overflow-wrap: anywhere; }
+    .detail-audio-status { min-height: 26px; margin-bottom: 12px; font-weight: 800; }
+    .audio-dialog-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .audio-dialog-actions .button { min-height: 48px; }
+    .audio-remove-button { background: #f9ddd7; }
+
+    .audio-player {
+      position: fixed;
+      z-index: 40;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-top: var(--line);
+      background: var(--yellow);
+      box-shadow: 0 -5px 0 rgba(25,25,23,.18);
+    }
+    .player-inner {
+      width: min(calc(100% - 48px), 1240px);
+      min-width: 0;
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) minmax(300px, 2fr) 48px;
+      align-items: center;
+      gap: 16px;
+      margin-inline: auto;
+      padding-block: 12px;
+    }
+    .player-copy { min-width: 0; }
+    .player-kicker { display: block; margin-bottom: 2px; font-size: 12px; font-weight: 900; }
+    .player-title { display: block; font-family: var(--serif); font-size: 20px; font-weight: 900; line-height: 1.35; overflow-wrap: anywhere; }
+    .player-file { display: block; font-size: 12px; font-weight: 700; overflow-wrap: anywhere; }
+    .player-audio { display: block; width: 100%; min-width: 0; min-height: 48px; }
+    .player-close { align-self: center; }
+    .player-error { grid-column: 1 / -1; margin: -4px 0 0; color: #791b14; font-size: 16px; font-weight: 900; }
+
+    .no-results {
+      padding: 34px 24px;
+      border: var(--line);
+      background: var(--yellow);
+      box-shadow: 6px 6px 0 var(--ink);
+      text-align: center;
+    }
+    .no-results h3 { margin-bottom: 9px; font-family: var(--serif); font-size: 28px; }
+    .no-results p { margin-bottom: 20px; }
+    .pagination { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin-top: 30px; }
+    .page-button {
+      min-width: 44px;
+      min-height: 44px;
+      padding: 8px 12px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      background: var(--paper-light);
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .page-button:hover:not(:disabled) { background: var(--yellow); }
+    .page-button[aria-current="page"] { color: var(--paper-light); background: var(--blue); }
+    .page-button:disabled { color: #5b584f; background: #ddd5c2; border-style: dashed; }
+    .page-step { min-width: 92px; }
+    .page-ellipsis { min-width: 22px; align-self: center; text-align: center; font-weight: 900; }
+
+    .site-footer { border-top: var(--line); background: var(--ink); color: var(--paper-light); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding-block: 30px; }
+    .footer-brand { font-family: var(--serif); font-size: 22px; font-weight: 900; white-space: nowrap; }
+    .rights-note { max-width: 850px; margin: 0; font-size: 16px; text-align: right; }
+
+    dialog {
+      width: min(680px, calc(100% - 32px));
+      max-height: calc(100dvh - 40px);
+      padding: 0;
+      overflow: auto;
+      border: var(--line);
+      border-radius: 0;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image: radial-gradient(circle, rgba(25,25,23,.17) .8px, transparent .9px);
+      background-size: 9px 9px;
+      box-shadow: 9px 9px 0 var(--ink);
+    }
+    dialog::backdrop { background: rgba(25,25,23,.72); }
+    .dialog-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 20px;
+      border-bottom: var(--line);
+      background: var(--yellow);
+    }
+    .dialog-kicker { margin: 0; font-size: 14px; font-weight: 900; }
+    .dialog-close {
+      min-width: 48px;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      padding: 9px;
+      border: 2px solid var(--ink);
+      background: var(--paper-light);
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+    .dialog-close svg { width: 22px; height: 22px; }
+    .dialog-body { padding: 26px; }
+    .dialog-body h2 {
+      margin-bottom: 20px;
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.3;
+      overflow-wrap: anywhere;
+    }
+    .dialog-meta { display: grid; gap: 0; margin: 0 0 22px; border: 2px solid var(--ink); background: var(--paper-light); }
+    .dialog-meta div { display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 14px; padding: 10px 14px; }
+    .dialog-meta div + div { border-top: 2px dashed var(--ink); }
+    .dialog-meta dt { font-size: 14px; font-weight: 900; }
+    .dialog-meta dd { margin: 0; font-size: 16px; overflow-wrap: anywhere; }
+    .source-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 800; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+    .dialog-rights { margin-bottom: 0; padding: 15px; border: 2px dashed var(--ink); font-size: 16px; font-weight: 800; }
+
+    @media (max-width: 1100px) {
+      .desktop-nav a { padding-inline: 9px; }
+      .filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 800px) {
+      .shell { width: min(calc(100% - 36px), 680px); }
+      .header-inner { min-height: 74px; }
+      .desktop-nav { display: none; }
+      .menu-toggle { display: block; }
+      .brand small { display: none; }
+      .hero-layout { gap: 24px; }
+      .catalogue-tag { width: 220px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .rights-note { text-align: left; }
+    }
+    @media (max-width: 640px) {
+      .shell { width: calc(100% - 32px); }
+      .brand { font-size: 22px; }
+      .catalogue-hero { padding-block: 32px 24px; }
+      .hero-layout { grid-template-columns: 1fr; gap: 24px; }
+      .hero-copy h1 { font-size: 44px; }
+      .hero-description { font-size: 16px; }
+      .catalogue-tag { width: min(246px, calc(100% - 8px)); min-height: 116px; transform: rotate(-1deg); }
+      .summary-strip { margin-top: 28px; grid-template-columns: 1fr; }
+      .summary-item { align-items: flex-start; flex-direction: column; gap: 7px; padding: 14px 16px; }
+      .summary-item + .summary-item { border-left: 0; border-top: var(--line); }
+      .summary-value { font-size: 32px; }
+      .catalogue { padding-block: 20px 54px; }
+      .filter-card { margin-bottom: 34px; padding: 20px 16px 18px; }
+      .filter-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
+      .audio-tools { align-items: stretch; flex-direction: column; padding: 14px; }
+      .audio-tools .button, .audio-count { width: 100%; }
+      .audio-count { justify-content: center; }
+      .audio-privacy { flex-basis: auto; }
+      .reset-button { width: 100%; }
+      .search-row { grid-template-columns: 1fr; }
+      .clear-button { width: 100%; }
+      .filter-grid { grid-template-columns: 1fr; gap: 14px; }
+      .results-header { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .results-status { text-align: left; }
+      .works-grid { grid-template-columns: 1fr; gap: 20px; }
+      .work-card { padding-right: 16px; }
+      .dialog-body { padding: 22px 18px; }
+      .dialog-header { padding: 13px 14px; }
+      .dialog-meta div { grid-template-columns: 100px minmax(0, 1fr); gap: 10px; padding-inline: 12px; }
+      .song-material-grid { grid-template-columns: 1fr; }
+      .song-cover { max-width: 420px; }
+      .score-heading { align-items: flex-start; flex-direction: column; }
+      body.audio-player-open { padding-bottom: 292px; }
+      .player-inner { width: calc(100% - 32px); grid-template-columns: minmax(0, 1fr) 48px; gap: 10px 12px; padding-block: 10px; }
+      .player-copy { padding-right: 2px; }
+      .player-title { font-size: 18px; }
+      .player-audio { grid-column: 1 / -1; grid-row: 2; }
+      .player-close { grid-column: 2; grid-row: 1; }
+      .player-error { grid-row: 3; }
+      .audio-dialog-actions { flex-direction: column; }
+      .audio-dialog-actions .button { width: 100%; }
+    }
+    @media (max-width: 400px) {
+      .dialog-meta div { grid-template-columns: 1fr; gap: 3px; }
+      .card-footer { align-items: flex-start; }
+      .detail-button, .audio-action { width: 100%; }
+      .sample-card-intro { grid-template-columns: 88px minmax(0, 1fr); gap: 11px; }
+      .sample-card-cover { width: 88px; }
+      .lyrics-sheet { padding: 15px; }
+      .internal-audio-panel, .sample-audio-panel { padding: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .button:hover, .work-card:hover, .detail-button:hover { translate: none; }
+    }
+  
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    /* ===== LIBRARY_LINKS:CSS ===== */
+    .lib-map { padding-block: 26px 54px; }
+    .lib-map-box { border: var(--line); background: var(--paper-light); box-shadow: var(--shadow); padding: 26px 26px 22px; }
+    .lib-map-box h2 { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); font-weight: 900; margin-bottom: 6px; }
+    .lib-map-box > p { font-size: 14px; color: #4a4841; margin-bottom: 20px; }
+    .lib-halls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lib-hall { display: flex; flex-direction: column; gap: 4px; padding: 14px 14px 12px; border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); text-decoration: none; transition: translate .15s ease, box-shadow .15s ease; }
+    .lib-hall:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .lib-hall b { font-family: var(--serif); font-size: 20px; font-weight: 900; }
+    .lib-hall span { font-size: 12px; line-height: 1.5; color: #4a4841; }
+    .lib-hall.lib-story { background: #fbe3dd; }
+    .lib-hall.lib-music { background: #fdf1c9; }
+    .lib-hall.lib-poetry { background: #e2ebd7; }
+    .lib-hall.lib-research { background: #dde5f6; }
+    .lib-hall[aria-current="page"] { outline: 3px dashed var(--ink); outline-offset: 3px; }
+    .lib-specs { margin-top: 20px; padding-top: 16px; border-top: 2px dashed var(--ink); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .lib-specs > strong { font-size: 13px; margin-right: 4px; }
+    .lib-specs a { padding: 4px 10px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-specs a:hover { background: var(--yellow); }
+    .lib-specs a[aria-current="page"] { background: var(--yellow); }
+    .lib-more { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; font-weight: 800; }
+    .lib-more a { text-decoration: underline 2px var(--blue); text-underline-offset: 4px; }
+    .lib-peers { padding-block: 6px 26px; }
+    .lib-peers-inner { border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); padding: 16px 18px; }
+    .lib-peers-inner > strong { display: block; font-size: 13px; margin-bottom: 10px; }
+    .lib-peer-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lib-peer-list a { padding: 5px 10px; border: 2px solid var(--ink); background: var(--paper-light); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-peer-list a:hover { background: var(--yellow); }
+    .lib-peer-list a[aria-current="page"] { background: var(--yellow); box-shadow: 2px 2px 0 var(--ink); }
+    .lib-peer-ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 13px; font-weight: 800; }
+    .lib-peer-ends a { text-decoration: none; border-bottom: 2px solid var(--ink); }
+    .lib-peer-ends .spacer { flex: 1; }
+    @media (max-width: 1000px) { .lib-halls { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      .lib-halls { grid-template-columns: 1fr; }
+      .lib-map-box { padding: 20px 16px 18px; }
+      .shell { width: min(calc(100% - 32px), 1240px); }
+    }
+    .work-spec-links { margin-top: 18px; padding: 12px 14px; border: 2px dashed var(--ink); background: #dde5f6; font-size: 13px; }
+    .work-spec-links > strong { display: block; margin-bottom: 8px; }
+    .work-spec-links div { display: flex; flex-wrap: wrap; gap: 8px; }
+    .work-spec-links a { padding: 3px 9px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-weight: 800; text-decoration: none; }
+    .work-spec-links a:hover { background: var(--yellow); }
+    /* ===== /LIBRARY_LINKS:CSS ===== */
+</style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="dir-3.html" aria-label="返回童年书房首页">
+        童年书房
+        <small>CHILDHOOD<br>LIBRARY</small>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="dir-3.html">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html">音乐馆</a>
+        <a href="poetry.html">古诗词馆</a>
+        <a href="research.html">研究资源库</a>
+        <a href="works.html" aria-current="page">作品目录</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="展开导航">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="shell mobile-nav" id="mobile-nav" aria-label="移动端导航" hidden>
+      <a href="dir-3.html">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html">音乐馆</a>
+        <a href="poetry.html">古诗词馆</a>
+        <a href="research.html">研究资源库</a>
+        <a href="works.html" aria-current="page">作品目录</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="shell catalogue-hero" aria-labelledby="page-title">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <h1 id="page-title">作品列表</h1>
+          <p class="hero-description">这是免费供大众及教育使用的儿童音乐数据库原型。这里呈现作品线索、来源和权利状态；内部测试音频与公开发布范围分开管理，不向访问者收取内容访问费用。</p>
+        </div>
+        <div class="catalogue-tag" aria-label="目录馆藏签：候选作品，等待核验">
+          <strong>目录馆藏签</strong>
+          <span>儿歌候选 · 逐条登记</span>
+        </div>
+      </div>
+      <div class="summary-strip" aria-label="目录动态汇总">
+        <div class="summary-item">
+          <span class="summary-label">目录总条数</span>
+          <strong class="summary-value" id="total-count">0</strong>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">当前筛选结果</span>
+          <strong class="summary-value" id="filtered-count">0</strong>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">中国经典资料卡</span>
+          <strong class="summary-value" id="china-count">55</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell catalogue" aria-labelledby="filter-title">
+      <form class="filter-card" id="filter-form" role="search">
+        <div class="filter-heading">
+          <h2 id="filter-title">馆藏登记卡</h2>
+          <button class="button reset-button" id="reset-filters" type="button">重置全部筛选</button>
+        </div>
+        <div class="audio-tools" aria-labelledby="audio-tools-title">
+          <h3 class="visually-hidden" id="audio-tools-title">内部本地试听</h3>
+          <button class="button button-primary" id="import-audio" type="button" disabled>导入本地音频</button>
+          <input class="visually-hidden" id="audio-batch-input" type="file" multiple accept=".mp3,.wav,.wave,.ogg,.oga,.m4a,.flac,.aac,.opus,.webm,audio/*" tabindex="-1" aria-label="批量选择本地音频文件">
+          <button class="button sample-filter-button" id="show-samples" type="button" aria-pressed="false">只看歌曲示例</button>
+          <strong class="audio-count sample-count">本地音频 <span id="sample-audio-count">0</span></strong>
+          <strong class="audio-count official-count">官方录音 <span id="official-audio-count">0</span></strong>
+          <strong class="audio-count">内部音频 <span id="internal-audio-count">0</span></strong>
+          <p class="audio-privacy">已核验 5 首官方发行录音，点击后连接 Deezer、核对曲目并加载约 30 秒原录音，再由用户点击播放；完整歌曲限制见详情。其余经典原声、开放示例与“原创示范 · 非原曲”分别标识。本机导入音频仅保存在当前浏览器，不上传、不发布。</p>
+          <p class="audio-privacy">105 条作品已全部配置资料卡：中国 55 条、世界经典 47 条，另有 3 条英语条目随示例音频提供资料。世界经典逐曲核验了公版歌词与来源，但暂未取得可核验的真实录音，播放位统一标「真实录音待采集」，不硬配程序合成音冒充原曲；未刊全文的歌词与无证旋律同样留白并写明原因。</p>
+          <p class="audio-storage-notice" id="audio-storage-notice" role="status" hidden></p>
+          <p class="audio-import-status" id="audio-import-status" role="status" aria-live="polite">正在读取当前浏览器中的内部音频…</p>
+        </div>
+        <div class="search-row">
+          <div class="field">
+            <label for="catalogue-search">搜索标题、编号、类型、备注或创作者</label>
+            <div class="search-control">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+              <input id="catalogue-search" type="search" placeholder="输入作品线索" autocomplete="off" aria-describedby="results-status">
+            </div>
+          </div>
+          <button class="button clear-button" id="clear-search" type="button" disabled>清空</button>
+        </div>
+        <div class="filter-grid">
+          <div class="field">
+            <label for="group-filter">馆藏分组</label>
+            <select id="group-filter">
+              <option value="all">全部</option>
+              <option value="nursery">中文经典儿歌</option>
+              <option value="english">英文与多文化儿歌</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="theme-filter">主题</label>
+            <select id="theme-filter"><option value="all">全部主题</option></select>
+          </div>
+          <div class="field">
+            <label for="status-filter">核验状态</label>
+            <select id="status-filter"><option value="all">全部状态</option></select>
+          </div>
+          <div class="field">
+            <label for="sort-order">排序方式</label>
+            <select id="sort-order">
+              <option value="id">目录编号</option>
+              <option value="title">标题</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <section class="results" aria-labelledby="results-title">
+        <div class="results-header">
+          <h2 id="results-title">候选书目</h2>
+          <p class="results-status" id="results-status" role="status" aria-live="polite"></p>
+        </div>
+        <div class="works-grid" id="works-grid"></div>
+        <div class="no-results" id="no-results" hidden>
+          <h3>没有找到对应的书目</h3>
+          <p id="no-results-copy">换一个作品线索，或回到完整候选目录。</p>
+          <button class="button button-primary" id="empty-reset" type="button">一键重置，查看全部</button>
+        </div>
+        <nav class="pagination" id="pagination" aria-label="作品列表分页"></nav>
+      </section>
+    </section>
+  
+  
+  
+  
+  
+  
+  
+  <!-- LIBRARY_LINKS:MAP -->
+    <section class="shell lib-map" aria-labelledby="lib-map-title">
+      <div class="lib-map-box">
+        <h2 id="lib-map-title">全站地图 · 三馆与研究层</h2>
+        <p>童年书房分为研究资源库（Research）与儿童使用层（Library）。三馆目录可以互相跳转，音乐馆八个专题横向串联，作品目录可回链到专题与研究层。</p>
+        <div class="lib-halls">
+<a class="lib-hall lib-story" href="story.html"><b>故事馆</b><span>六个专题 · 100 条研究记录</span></a>
+<a class="lib-hall lib-music" href="music.html"><b>音乐馆</b><span>八专题 · 105 条发现目录</span></a>
+<a class="lib-hall lib-poetry" href="poetry.html"><b>古诗词馆</b><span>十个专题 · 60 条研究记录</span></a>
+<a class="lib-hall lib-research" href="research.html"><b>研究资源库</b><span>五维状态 · 来源与边界</span></a>
+        </div>
+        <div class="lib-specs">
+          <strong>音乐馆八专题：</strong>
+<a href="specialty-childhood.html">01 童年的歌</a>
+<a href="specialty-nature.html">02 大自然的歌</a>
+<a href="specialty-play.html">03 游戏与伙伴</a>
+<a href="specialty-lullaby.html">04 月亮与摇篮曲</a>
+<a href="specialty-classical.html">05 古典音乐的童年</a>
+<a href="specialty-world.html">06 世界的童谣</a>
+<a href="specialty-forgotten.html">07 被遗忘的童谣</a>
+<a href="specialty-original.html">08 新芽原创</a>
+        </div>
+        <div class="lib-more">
+          <a href="works.html">作品目录（音乐馆 105 条）</a>
+          <a href="../docs/PROJECT_PRINCIPLES.md">项目顶层原则</a>
+          <a href="../docs/DATA_MODEL.md">统一数据模型</a>
+          <a href="../docs/COPYRIGHT_POLICY.md">来源与权利说明</a>
+        </div>
+      </div>
+    </section>
+    <!-- /LIBRARY_LINKS:MAP -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">童年书房</div>
+      <p class="rights-note">免费公益教育数据库 · 候选目录不等于转载或播放授权，正式发布前逐条核验作品、歌词、旋律、编曲与录音权利。</p>
+    </div>
+  </footer>
+
+  <dialog id="work-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-rights">
+    <div class="dialog-header">
+      <p class="dialog-kicker">目录馆藏签 · 完整字段</p>
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="关闭作品详情" autofocus>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg>
+      </button>
+    </div>
+    <div class="dialog-body">
+      <h2 id="dialog-title"></h2>
+      <dl class="dialog-meta">
+        <div><dt>目录编号 id</dt><dd id="dialog-id"></dd></div>
+        <div><dt>分组标识 group</dt><dd id="dialog-group"></dd></div>
+        <div><dt>所属分组</dt><dd id="dialog-group-name"></dd></div>
+        <div><dt>地区或范围</dt><dd id="dialog-region"></dd></div>
+        <div><dt>主题</dt><dd id="dialog-theme"></dd></div>
+        <div><dt>作品类型</dt><dd id="dialog-type"></dd></div>
+        <div><dt>目录备注</dt><dd id="dialog-note"></dd></div>
+        <div><dt>创作者与版本</dt><dd id="dialog-creator"></dd></div>
+        <div><dt>状态标识 status</dt><dd id="dialog-status"></dd></div>
+        <div><dt>核验状态</dt><dd id="dialog-status-label"></dd></div>
+        <div><dt>来源名称</dt><dd id="dialog-source-title"></dd></div>
+        <div><dt>来源链接</dt><dd id="dialog-source"></dd></div>
+      </dl>
+      <section class="official-audio-panel" id="official-audio-panel" aria-labelledby="official-audio-title" hidden>
+        <h3 id="official-audio-title">官方发行录音 · 现代改编版</h3>
+        <p id="official-audio-description"></p>
+        <p class="official-audio-meta" id="official-audio-meta"></p>
+        <p id="official-audio-access"></p>
+        <div class="official-audio-actions">
+          <button class="button button-primary" id="official-audio-load" type="button">加载官方录音 · 30 秒</button>
+          <a class="button" id="official-source-link" href="" target="_blank" rel="noopener">在 Deezer 打开原曲 ↗</a>
+        </div>
+        <p class="official-audio-status" id="official-audio-status" role="status" aria-live="polite">尚未连接第三方平台。</p>
+        <audio class="official-inline-audio" id="official-audio-element" controls preload="none" aria-label="Deezer 官方 30 秒原录音试听" hidden></audio>
+        <div class="sample-links">
+          <a id="official-artist-link" href="" target="_blank" rel="noopener">发行方专辑说明 ↗</a>
+          <a id="official-terms-link" href="" target="_blank" rel="noopener">播放与账户限制 ↗</a>
+        </div>
+      </section>
+      <section class="sample-audio-panel" id="sample-audio-panel" aria-labelledby="sample-audio-title" hidden>
+        <h3 id="sample-audio-title">歌曲示例</h3>
+        <div class="field sample-version-field" id="sample-version-field" hidden>
+          <label for="sample-version">录音版本</label>
+          <select id="sample-version"></select>
+        </div>
+        <p id="sample-audio-description"></p>
+        <p class="sample-audio-meta" id="sample-audio-meta"></p>
+        <button class="button button-primary" id="sample-audio-play" type="button">试听歌曲示例</button>
+        <div class="sample-links">
+          <a id="sample-source-link" href="" target="_blank" rel="noopener">文本 / 资料来源 ↗</a>
+          <a id="sample-license-link" href="" target="_blank" rel="noopener">许可或使用说明 ↗</a>
+        </div>
+      </section>
+      <section class="song-materials" id="song-materials" aria-labelledby="song-materials-title" hidden>
+        <h3 id="song-materials-title">封面、歌词与五线谱</h3>
+        <div class="song-material-grid">
+          <figure class="song-cover">
+            <img id="song-cover" alt="" width="800" height="600">
+            <figcaption>童年书房原创剪贴簿封面 · <a class="material-link" id="cover-download" href="" download>下载封面 SVG</a></figcaption>
+          </figure>
+          <section class="lyrics-sheet" aria-labelledby="lyrics-title">
+            <h4 id="lyrics-title"></h4>
+            <div class="lyrics-lines" id="song-lyrics"></div>
+            <p class="lyrics-note" id="lyrics-note"></p>
+          </section>
+        </div>
+        <section class="material-sources" id="material-sources" aria-labelledby="material-sources-title" hidden>
+          <h4 id="material-sources-title">来源、权利与采集状态</h4>
+          <dl id="material-source-list"></dl>
+        </section>
+        <section class="score-sheet" id="score-sheet" aria-labelledby="score-title">
+          <div class="score-heading">
+            <h4 id="score-title"></h4>
+            <div class="score-downloads" aria-label="五线谱下载">
+              <a class="material-link" id="score-svg-download" href="" download>五线谱 SVG</a>
+              <a class="material-link" id="score-source-download" href="" download>MusicXML 源文件</a>
+            </div>
+          </div>
+          <p class="score-note" id="score-note"></p>
+          <div class="score-scroll" id="score-scroll" tabindex="0" role="region" aria-label="五线谱，窄屏可横向滚动">
+            <img id="song-score" alt="" width="1200" height="500">
+          </div>
+        </section>
+      </section>
+      <section class="internal-audio-panel" aria-labelledby="detail-audio-title">
+        <h3 id="detail-audio-title">内部本地试听</h3>
+        <p class="audio-privacy">音频仅保存在当前浏览器，不上传、不发布；添加或播放不会改变作品权利状态。</p>
+        <p class="detail-audio-file" id="detail-audio-file">尚未添加本地音频</p>
+        <p class="detail-audio-status" id="detail-audio-status" role="status" aria-live="polite"></p>
+        <input class="visually-hidden" id="detail-audio-input" type="file" accept=".mp3,.wav,.wave,.ogg,.oga,.m4a,.flac,.aac,.opus,.webm,audio/*" tabindex="-1" aria-label="为当前作品选择本地音频">
+        <div class="audio-dialog-actions">
+          <button class="button button-primary" id="detail-audio-choose" type="button">选择本地音频</button>
+          <button class="button" id="detail-audio-play" type="button" disabled>试听</button>
+          <button class="button audio-remove-button" id="detail-audio-remove" type="button" disabled>移除音频</button>
+        </div>
+      </section>
+      <p class="dialog-rights" id="dialog-rights">本条目用于候选目录、来源核验与内部原型试听。开放示例仅对应上述具体录音，不改变作品目录状态；公开发布前仍须按目标地域和用途复核。</p>
+    </div>
+  </dialog>
+
+  <aside class="audio-player" id="audio-player" aria-label="内部本地试听播放器" hidden>
+    <div class="player-inner">
+      <div class="player-copy">
+        <span class="player-kicker" id="player-kicker">内部本地试听 · 不上传、不发布</span>
+        <strong class="player-title" id="player-title"></strong>
+        <span class="player-file" id="player-file"></span>
+      </div>
+      <audio class="player-audio" id="audio-element" controls preload="metadata" aria-label="当前作品的本地音频"></audio>
+      <button class="dialog-close player-close" id="audio-player-close" type="button" aria-label="关闭内部本地试听播放器">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg>
+      </button>
+      <p class="player-error" id="player-error" role="status" aria-live="polite" hidden></p>
+    </div>
+  </aside>
+
+  <noscript><p class="shell">请启用 JavaScript，使用构建后的作品列表查看候选目录。</p></noscript>
+
+  <script>
+    (() => {
+      const works = __WORKS_DATA__;
+      const sampleAudios = __SAMPLES_DATA__;
+      const officialRecordings = __OFFICIAL_RECORDINGS_DATA__;
+      const materialRecords = __MATERIALS_DATA__;
+      const PAGE_SIZE = 9;
+      const AUDIO_DB_NAME = 'childhood-library-internal-audio';
+      const AUDIO_STORE_NAME = 'audio';
+      const AUDIO_MAX_BYTES = 100 * 1024 * 1024;
+      const AUDIO_EXTENSION = /\.(?:mp3|wav|wave|ogg|oga|m4a|flac|aac|opus|webm)$/i;
+      const state = { query: '', group: 'all', theme: 'all', status: 'all', sort: 'id', page: 1, sampleOnly: false };
+      const audioState = { db: null, ready: false, records: new Map(), detailId: null, currentId: null, currentKind: null, currentFile: null, objectUrl: null, returnFocus: null };
+      const officialState = { currentId: null, requestSerial: 0, cleanup: null };
+      const workById = new Map(works.map(work => [String(work.id), work]));
+      const sampleById = new Map(sampleAudios.map(sample => [String(sample.id), sample]));
+      const officialById = new Map(officialRecordings.map(recording => [String(recording.id), recording]));
+      const materialById = new Map(materialRecords.map(record => [String(record.id), record]));
+
+      const grid = document.getElementById('works-grid');
+      const searchInput = document.getElementById('catalogue-search');
+      const clearButton = document.getElementById('clear-search');
+      const groupFilter = document.getElementById('group-filter');
+      const themeFilter = document.getElementById('theme-filter');
+      const statusFilter = document.getElementById('status-filter');
+      const sortOrder = document.getElementById('sort-order');
+      const totalCount = document.getElementById('total-count');
+      const filteredCount = document.getElementById('filtered-count');
+      const resultsStatus = document.getElementById('results-status');
+      const noResults = document.getElementById('no-results');
+      const noResultsCopy = document.getElementById('no-results-copy');
+      const pagination = document.getElementById('pagination');
+      const dialog = document.getElementById('work-dialog');
+      const audioCount = document.getElementById('internal-audio-count');
+      const sampleAudioCount = document.getElementById('sample-audio-count');
+      const officialAudioCount = document.getElementById('official-audio-count');
+      const showSamplesButton = document.getElementById('show-samples');
+      const audioImportButton = document.getElementById('import-audio');
+      const audioBatchInput = document.getElementById('audio-batch-input');
+      const audioImportStatus = document.getElementById('audio-import-status');
+      const audioStorageNotice = document.getElementById('audio-storage-notice');
+      const detailAudioInput = document.getElementById('detail-audio-input');
+      const detailAudioChoose = document.getElementById('detail-audio-choose');
+      const detailAudioPlay = document.getElementById('detail-audio-play');
+      const detailAudioRemove = document.getElementById('detail-audio-remove');
+      const sampleAudioPlay = document.getElementById('sample-audio-play');
+      const audioPlayer = document.getElementById('audio-player');
+      const audioElement = document.getElementById('audio-element');
+      const playerError = document.getElementById('player-error');
+      const officialAudioElement = document.getElementById('official-audio-element');
+
+      function normalize(value) {
+        return String(value ?? '').normalize('NFKC').trim().toLocaleLowerCase();
+      }
+
+      function displayValue(value) {
+        const text = String(value ?? '').trim();
+        return text || '未填写';
+      }
+
+      function makeElement(tag, className, text) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined) node.textContent = displayValue(text);
+        return node;
+      }
+
+      function addOptions(select, entries) {
+        entries.forEach(({ value, label }) => {
+          const option = document.createElement('option');
+          option.value = value;
+          option.textContent = label;
+          select.append(option);
+        });
+      }
+
+      function populateFilters() {
+        const themes = new Map();
+        const statuses = new Map();
+        works.forEach(work => {
+          if (work.theme) themes.set(work.theme, work.theme);
+          if (work.status) statuses.set(work.status, work.statusLabel || work.status);
+        });
+        addOptions(themeFilter, Array.from(themes, ([value, label]) => ({ value, label }))
+          .sort((a, b) => a.label.localeCompare(b.label, 'zh-CN')));
+        addOptions(statusFilter, Array.from(statuses, ([value, label]) => ({ value, label }))
+          .sort((a, b) => a.label.localeCompare(b.label, 'zh-CN')));
+      }
+
+      function getVisibleWorks() {
+        const query = normalize(state.query);
+        return works.filter(work => {
+          const matchesGroup = state.group === 'all' || work.group === state.group;
+          const matchesTheme = state.theme === 'all' || work.theme === state.theme;
+          const matchesStatus = state.status === 'all' || work.status === state.status;
+          const matchesSample = !state.sampleOnly || sampleById.has(String(work.id)) || officialById.has(String(work.id));
+          const haystack = normalize([work.title, work.id, work.type, work.note, work.creator].join(' '));
+          return matchesGroup && matchesTheme && matchesStatus && matchesSample && (!query || haystack.includes(query));
+        }).sort((a, b) => {
+          const key = state.sort === 'title' ? 'title' : 'id';
+          return String(a[key] ?? '').localeCompare(String(b[key] ?? ''), 'zh-CN', { numeric: true, sensitivity: 'base' });
+        });
+      }
+
+      function addMetaRow(list, term, value) {
+        const row = document.createElement('div');
+        row.append(makeElement('dt', '', term), makeElement('dd', '', value));
+        list.append(row);
+      }
+
+      function formatBytes(bytes) {
+        if (!Number.isFinite(bytes) || bytes < 0) return '大小未知';
+        if (bytes < 1024) return `${bytes} B`;
+        if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+        return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+      }
+
+      function useMemoryStorage() {
+        if (audioState.db) audioState.db.close();
+        audioState.db = null;
+        document.body.dataset.audioStorage = 'memory';
+        audioStorageNotice.textContent = '浏览器本地数据库当前不可用，已降级为本次会话内存：音频不会上传，但刷新或关闭页面后会丢失。';
+        audioStorageNotice.hidden = false;
+      }
+
+      function openAudioDatabase() {
+        return new Promise((resolve, reject) => {
+          if (!window.indexedDB) {
+            reject(new Error('IndexedDB unavailable'));
+            return;
+          }
+          let request;
+          try {
+            request = window.indexedDB.open(AUDIO_DB_NAME, 1);
+          } catch (error) {
+            reject(error);
+            return;
+          }
+          request.onupgradeneeded = () => {
+            const database = request.result;
+            if (!database.objectStoreNames.contains(AUDIO_STORE_NAME)) {
+              database.createObjectStore(AUDIO_STORE_NAME, { keyPath: 'id' });
+            }
+          };
+          request.onsuccess = () => {
+            const database = request.result;
+            database.onversionchange = () => database.close();
+            resolve(database);
+          };
+          request.onerror = () => reject(request.error || new Error('Cannot open audio database'));
+          request.onblocked = () => reject(new Error('Audio database blocked'));
+        });
+      }
+
+      function readAudioRecords(database) {
+        return new Promise((resolve, reject) => {
+          try {
+            const transaction = database.transaction(AUDIO_STORE_NAME, 'readonly');
+            const request = transaction.objectStore(AUDIO_STORE_NAME).getAll();
+            request.onsuccess = () => resolve(request.result || []);
+            request.onerror = () => reject(request.error || new Error('Cannot read audio records'));
+            transaction.onabort = () => reject(transaction.error || new Error('Audio read aborted'));
+          } catch (error) {
+            reject(error);
+          }
+        });
+      }
+
+      function writeAudioRecord(database, record) {
+        return new Promise((resolve, reject) => {
+          try {
+            const transaction = database.transaction(AUDIO_STORE_NAME, 'readwrite');
+            transaction.objectStore(AUDIO_STORE_NAME).put(record);
+            transaction.oncomplete = () => resolve();
+            transaction.onerror = () => reject(transaction.error || new Error('Cannot save audio'));
+            transaction.onabort = () => reject(transaction.error || new Error('Audio save aborted'));
+          } catch (error) {
+            reject(error);
+          }
+        });
+      }
+
+      function deleteAudioRecord(database, id) {
+        return new Promise((resolve, reject) => {
+          try {
+            const transaction = database.transaction(AUDIO_STORE_NAME, 'readwrite');
+            transaction.objectStore(AUDIO_STORE_NAME).delete(id);
+            transaction.oncomplete = () => resolve();
+            transaction.onerror = () => reject(transaction.error || new Error('Cannot remove audio'));
+            transaction.onabort = () => reject(transaction.error || new Error('Audio removal aborted'));
+          } catch (error) {
+            reject(error);
+          }
+        });
+      }
+
+      async function storeAudioRecord(record) {
+        if (audioState.db) {
+          try {
+            await writeAudioRecord(audioState.db, record);
+          } catch (error) {
+            useMemoryStorage();
+          }
+        }
+        audioState.records.set(record.id, record);
+      }
+
+      async function removeAudioRecord(id) {
+        if (audioState.currentId === id && audioState.currentKind === 'local') closeAudioPlayer(false);
+        if (audioState.db) {
+          try {
+            await deleteAudioRecord(audioState.db, id);
+          } catch (error) {
+            useMemoryStorage();
+          }
+        }
+        audioState.records.delete(id);
+      }
+
+      function renderSongMaterials() {
+        const section = document.getElementById('song-materials');
+        const materials = materialById.get(audioState.detailId) || sampleById.get(audioState.detailId)?.materials;
+        const scoreSheet = document.getElementById('score-sheet');
+        const sourceSection = document.getElementById('material-sources');
+        const sourceList = document.getElementById('material-source-list');
+        section.hidden = !materials;
+        sourceSection.hidden = true;
+        sourceList.replaceChildren();
+        const cover = document.getElementById('song-cover');
+        const score = document.getElementById('song-score');
+        if (!materials) {
+          cover.removeAttribute('src');
+          score.removeAttribute('src');
+          scoreSheet.hidden = true;
+          document.getElementById('song-lyrics').replaceChildren();
+          return;
+        }
+        const workTitle = displayValue(workById.get(audioState.detailId)?.title);
+        document.getElementById('song-materials-title').textContent = materials.score ? '封面、歌词与五线谱' : '封面、歌词与资料卡';
+        cover.src = materials.cover;
+        cover.alt = materials.coverAlt;
+        document.getElementById('cover-download').href = materials.cover;
+        document.getElementById('lyrics-title').textContent = materials.lyricsTitle;
+        document.getElementById('lyrics-note').textContent = materials.lyricsNote;
+        const lyricLines = document.getElementById('song-lyrics');
+        const lines = materials.lyrics.length
+          ? materials.lyrics.map(line => makeElement('p', '', line))
+          : [makeElement('p', '', materials.availability || '内容待核验')];
+        lyricLines.replaceChildren(...lines);
+        scoreSheet.hidden = !materials.score;
+        if (materials.score) {
+          score.src = materials.score;
+          score.alt = `《${workTitle}》${materials.scoreTitle}五线谱`;
+          document.getElementById('score-svg-download').href = materials.score;
+          document.getElementById('score-source-download').href = materials.scoreSource;
+          document.getElementById('score-title').textContent = materials.scoreTitle;
+          document.getElementById('score-note').textContent = `${materials.scoreNote} 完整歌词已嵌入 MusicXML，并直接渲染在 SVG 谱面的音符下方；窄屏可横向滚动。`;
+          const scoreScroll = document.getElementById('score-scroll');
+          scoreScroll.scrollLeft = 0;
+          scoreScroll.setAttribute('aria-label', `《${workTitle}》五线谱，窄屏可横向滚动`);
+        } else {
+          score.removeAttribute('src');
+        }
+        // 世界经典资料卡：把来源、权利判定与「音频待采集」结论一并展示，
+        // 避免只补封面和歌词却看不出版本依据与采集状态。
+        const sourceRows = [];
+        if (materials.sourceTitle || materials.sourceUrl) {
+          sourceRows.push(['资料来源', '', materials.sourceTitle || materials.sourceUrl, materials.sourceUrl]);
+        }
+        if (materials.rightsStatus) sourceRows.push(['权利状态', materials.rightsStatus]);
+        if (materials.publicDomain !== undefined) {
+          sourceRows.push(['公版判定', materials.publicDomain === true
+            ? '传统文本公版；现代改编、译词与具体录音另行核验'
+            : materials.publicDomain === false ? '含现代版权作品，权利待核验' : '状态未知，按待核验处理']);
+        }
+        if (materials.audioStatus) sourceRows.push(['音频状态', `${materials.audioStatus} · 不硬配合成音冒充原曲`]);
+        if (materials.audioClue) sourceRows.push(['音频线索', materials.audioClue]);
+        if (materials.extraNotes) sourceRows.push(['研究线索', materials.extraNotes]);
+        if (sourceRows.length) {
+          sourceRows.forEach(([term, value, linkText, linkUrl]) => {
+            sourceList.append(makeElement('dt', '', term));
+            const dd = makeElement('dd');
+            if (linkUrl) {
+              const link = document.createElement('a');
+              link.textContent = linkText || linkUrl;
+              link.href = linkUrl;
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+              dd.append(link);
+            } else {
+              dd.textContent = value;
+            }
+            sourceList.append(dd);
+          });
+          sourceSection.hidden = false;
+        }
+      }
+
+      function unloadOfficialRecording() {
+        officialState.requestSerial += 1;
+        if (officialState.cleanup) officialState.cleanup();
+        officialState.currentId = null;
+        officialAudioElement.pause();
+        officialAudioElement.preload = 'none';
+        officialAudioElement.removeAttribute('src');
+        officialAudioElement.load();
+        officialAudioElement.hidden = true;
+        const loadButton = document.getElementById('official-audio-load');
+        loadButton.disabled = false;
+        loadButton.textContent = '加载官方录音 · 30 秒';
+        document.getElementById('official-audio-status').textContent = '尚未连接第三方平台。';
+      }
+
+      function renderOfficialRecording() {
+        const recording = audioState.detailId ? officialById.get(audioState.detailId) : null;
+        const panel = document.getElementById('official-audio-panel');
+        panel.hidden = !recording;
+        if (!recording) return;
+        document.getElementById('official-audio-description').textContent = `${recording.trackTitle} · ${recording.album} · ${recording.durationLabel}。${recording.versionNote}`;
+        document.getElementById('official-audio-meta').textContent = `${recording.artist} · ${recording.label} · ${recording.releaseDate}`;
+        document.getElementById('official-audio-access').textContent = recording.accessNote;
+        document.getElementById('official-source-link').href = recording.sourcePage;
+        document.getElementById('official-artist-link').href = recording.artistSourcePage;
+        document.getElementById('official-terms-link').href = recording.termsPage;
+        const sample = sampleById.get(audioState.detailId);
+        document.getElementById('dialog-rights').textContent = sample?.sampleType === 'internal'
+          ? `${recording.rightsNote} 本条目另存的内部经典录音仍属权利待核验，不得公开发布。`
+          : recording.rightsNote;
+      }
+
+      function requestOfficialPreview(recording) {
+        return new Promise((resolve, reject) => {
+          const callbackName = `__deezerPreview_${recording.providerTrackId}_${officialState.requestSerial}`;
+          const script = document.createElement('script');
+          let timeoutId;
+          const cleanup = () => {
+            window.clearTimeout(timeoutId);
+            delete window[callbackName];
+            script.remove();
+            if (officialState.cleanup === cleanup) officialState.cleanup = null;
+          };
+          officialState.cleanup = cleanup;
+          window[callbackName] = payload => {
+            cleanup();
+            resolve(payload);
+          };
+          script.async = true;
+          script.src = `${recording.apiUrl}?output=jsonp&callback=${callbackName}`;
+          script.onerror = () => {
+            cleanup();
+            reject(new Error('Deezer API unavailable'));
+          };
+          timeoutId = window.setTimeout(() => {
+            cleanup();
+            reject(new Error('Deezer API timeout'));
+          }, 20000);
+          document.head.append(script);
+        });
+      }
+
+      async function loadOfficialRecording() {
+        const id = audioState.detailId;
+        const recording = id ? officialById.get(id) : null;
+        if (!recording) return;
+        const loadButton = document.getElementById('official-audio-load');
+        const status = document.getElementById('official-audio-status');
+        if (officialState.currentId === id && officialAudioElement.src) {
+          try {
+            officialAudioElement.currentTime = 0;
+            await officialAudioElement.play();
+            status.textContent = '正在播放官方 30 秒原录音；完整歌曲请进入 Deezer 原曲页面。';
+            loadButton.textContent = '重新播放官方 30 秒';
+          } catch (error) {
+            status.textContent = '请使用音频控件上的播放按钮，或进入 Deezer 原曲页面。';
+          }
+          return;
+        }
+        unloadOfficialRecording();
+        const requestSerial = officialState.requestSerial;
+        officialState.currentId = id;
+        officialAudioElement.hidden = false;
+        officialAudioElement.setAttribute('aria-label', `《${displayValue(workById.get(id)?.title)}》Deezer 官方 30 秒原录音试听`);
+        closeAudioPlayer(false);
+        loadButton.disabled = true;
+        loadButton.textContent = '正在获取官方原曲…';
+        status.textContent = '正在按你的操作连接 Deezer，并核对曲目编号与名称…';
+        try {
+          const data = await requestOfficialPreview(recording);
+          if (officialState.currentId !== id || officialState.requestSerial !== requestSerial) return;
+          if (Number(data.id) !== Number(recording.providerTrackId) || data.title !== recording.trackTitle || data.readable !== true || !data.preview) {
+            throw new Error('Official track identity mismatch');
+          }
+          const previewUrl = new URL(data.preview);
+          if (previewUrl.protocol !== 'https:' || previewUrl.hostname !== 'cdnt-preview.dzcdn.net') {
+            throw new Error('Unexpected preview host');
+          }
+          officialAudioElement.preload = 'metadata';
+          officialAudioElement.src = previewUrl.href;
+          officialAudioElement.load();
+          status.textContent = '已核对官方曲目与 30 秒试听地址。再次点击“播放官方录音”或音频控件即可播放。';
+        } catch (error) {
+          if (officialState.currentId !== id || officialState.requestSerial !== requestSerial) return;
+          status.textContent = '官方试听暂时不可用，请检查网络或进入 Deezer 原曲页面。本站未下载或保存该录音。';
+        } finally {
+          if (officialState.currentId === id && officialState.requestSerial === requestSerial) {
+            loadButton.disabled = false;
+            loadButton.textContent = '播放官方录音 · 30 秒';
+          }
+        }
+      }
+
+      function detailSampleRecord() {
+        const sample = audioState.detailId ? sampleById.get(audioState.detailId) : null;
+        if (!sample) return null;
+        const versions = [sample, ...(sample.variants || [])];
+        const selector = document.getElementById('sample-version');
+        return versions[Number(selector.value)] || sample;
+      }
+
+      function renderSampleVersion() {
+        const sample = detailSampleRecord();
+        if (!sample) return;
+        const panel = document.getElementById('sample-audio-panel');
+        const internal = sample.sampleType === 'internal';
+        const generated = sample.sampleType === 'generated';
+        panel.dataset.selectedFile = sample.file;
+        panel.classList.toggle('is-internal', internal);
+        panel.classList.toggle('is-generated', generated);
+        document.getElementById('sample-audio-title').textContent = internal ? '内部经典录音 · 权利待核验' : generated ? '原创播放示范 · 非原曲' : '开放许可 / 原创示范';
+        document.getElementById('sample-audio-description').textContent = `${sample.kind} · ${sample.durationLabel} · ${sample.file}。${sample.deliveryNote}`;
+        document.getElementById('sample-audio-meta').textContent = `署名：${sample.attribution} · ${sample.license}`;
+        const sourceLink = document.getElementById('sample-source-link');
+        const licenseLink = document.getElementById('sample-license-link');
+        sourceLink.href = sample.sourcePage;
+        sourceLink.textContent = internal ? '录音来源页 ↗' : '文本 / 资料来源 ↗';
+        licenseLink.href = sample.licenseUrl;
+        licenseLink.textContent = internal ? '内部使用与权利说明 ↗' : `${sample.license} 许可证全文 ↗`;
+        sampleAudioPlay.textContent = internal ? '播放经典原声' : generated ? '播放原创示范' : '试听歌曲示例';
+        sampleAudioPlay.setAttribute('aria-label', `试听《${displayValue(workById.get(audioState.detailId)?.title)}》${internal ? '经典原声' : generated ? '原创非原曲示范' : '歌曲示例'}：${sample.kind}`);
+        document.getElementById('dialog-rights').textContent = internal
+          ? '本条目提供经典人声录音供内部研究与原型试听；歌词、谱面按资料卡实际状态展示。词曲、表演及具体录音 / 片段权利待核验，不属于开放许可素材，不得据此公开发布。'
+          : generated
+            ? '此音频是项目程序合成的原创播放示范，不是本曲旋律或歌曲录音；CC0 许可仅覆盖该新音频，不改变词曲、歌词和其他录音的权利状态。'
+            : '本示例仅覆盖上述具体音频和原创素材，不改变作品目录状态；传统歌词按所标地域版本与来源整理，公开发布前仍须复核。';
+      }
+
+      function renderSampleDetail() {
+        const sample = audioState.detailId ? sampleById.get(audioState.detailId) : null;
+        const panel = document.getElementById('sample-audio-panel');
+        panel.hidden = !sample;
+        dialog.classList.toggle('dialog-with-materials', materialById.has(audioState.detailId) || Boolean(sample?.materials));
+        renderSongMaterials();
+        const rights = document.getElementById('dialog-rights');
+        const versionField = document.getElementById('sample-version-field');
+        const selector = document.getElementById('sample-version');
+        if (!sample) {
+          versionField.hidden = true;
+          selector.replaceChildren();
+          delete panel.dataset.selectedFile;
+          const material = materialById.get(audioState.detailId);
+          rights.textContent = material
+            ? '本资料卡展示作品元数据、已核验歌词、来源与项目原创封面。真实录音待采集：不硬配程序合成音冒充原曲；未核验的歌词、旋律与录音一律不以虚构内容补齐，可在取得权利或明确版本后继续完善。'
+            : '本条目用于候选目录、来源核验与内部原型试听。歌曲示例不改变作品目录状态；公开发布前仍须按目标地域和用途复核。';
+          return;
+        }
+        const versions = [sample, ...(sample.variants || [])];
+        versionField.hidden = versions.length < 2;
+        selector.replaceChildren();
+        versions.forEach((version, index) => {
+          const option = document.createElement('option');
+          option.value = String(index);
+          option.textContent = version.versionLabel || version.kind;
+          selector.append(option);
+        });
+        selector.value = '0';
+        renderSampleVersion();
+      }
+
+      function renderDetailAudio() {
+        const record = audioState.detailId ? audioState.records.get(audioState.detailId) : null;
+        document.getElementById('detail-audio-file').textContent = record
+          ? `${record.name} · ${formatBytes(record.size)}`
+          : '尚未添加本地音频';
+        detailAudioChoose.textContent = record ? '替换本地音频' : '选择本地音频';
+        detailAudioChoose.disabled = !audioState.ready;
+        detailAudioPlay.disabled = !audioState.ready || !record;
+        detailAudioRemove.disabled = !audioState.ready || !record;
+      }
+
+      function refreshAudioUI() {
+        audioCount.textContent = String(audioState.records.size);
+        officialAudioCount.textContent = String(officialRecordings.length);
+        renderDetailAudio();
+        if (audioState.currentId && audioState.currentKind === 'local') {
+          const record = audioState.records.get(audioState.currentId);
+          if (record) document.getElementById('player-file').textContent = `${record.name} · ${formatBytes(record.size)}`;
+        }
+      }
+
+      function matchWorkId(fileName) {
+        const normalizedName = String(fileName).normalize('NFKC');
+        return works.find(work => {
+          const id = String(work.id).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          return new RegExp(`^${id}(?:\\.|[-_\\s])`, 'i').test(normalizedName);
+        })?.id || null;
+      }
+
+      function fileProblem(file) {
+        if (!AUDIO_EXTENSION.test(file.name)) return 'unsupported';
+        if (file.size <= 0 || file.size > AUDIO_MAX_BYTES) return 'failed';
+        return null;
+      }
+
+      function makeAudioRecord(file, id) {
+        return {
+          id,
+          blob: file,
+          name: file.name,
+          size: file.size,
+          type: file.type || 'application/octet-stream',
+          updatedAt: new Date().toISOString()
+        };
+      }
+
+      async function importBatch(files) {
+        if (!files.length) return;
+        audioImportButton.disabled = true;
+        audioImportButton.textContent = '正在导入…';
+        const counts = { success: 0, unmatched: 0, unsupported: 0, failed: 0 };
+        for (const file of files) {
+          const problem = fileProblem(file);
+          if (problem) {
+            counts[problem] += 1;
+            continue;
+          }
+          const id = matchWorkId(file.name);
+          if (!id) {
+            counts.unmatched += 1;
+            continue;
+          }
+          try {
+            await storeAudioRecord(makeAudioRecord(file, id));
+            counts.success += 1;
+          } catch (error) {
+            counts.failed += 1;
+          }
+        }
+        audioBatchInput.value = '';
+        audioImportButton.disabled = false;
+        audioImportButton.textContent = '导入本地音频';
+        audioImportStatus.textContent = `导入成功 ${counts.success}；无匹配 ${counts.unmatched}；格式不支持 ${counts.unsupported}；失败 ${counts.failed}。音频仅保存在当前浏览器。`;
+        refreshAudioUI();
+        render();
+      }
+
+      async function importDetailFile(file) {
+        const id = audioState.detailId;
+        const status = document.getElementById('detail-audio-status');
+        if (!id || !file) return;
+        const problem = fileProblem(file);
+        if (problem === 'unsupported') {
+          status.textContent = '格式不支持，请选择 mp3、wav、ogg、m4a、flac、aac 等音频文件。';
+        } else if (problem === 'failed') {
+          status.textContent = '导入失败：文件为空或超过 100MB 上限。';
+        } else {
+          try {
+            const replacing = audioState.records.has(id);
+            if (replacing && audioState.currentId === id && audioState.currentKind === 'local') closeAudioPlayer(false);
+            await storeAudioRecord(makeAudioRecord(file, id));
+            status.textContent = replacing ? '替换成功，文件名与本地音频已更新。' : '添加成功，可在当前浏览器内部本地试听。';
+            audioImportStatus.textContent = `已为 ${id} 保存本地音频；不会上传或发布。`;
+          } catch (error) {
+            status.textContent = '导入失败，请重试或改用其他本地音频文件。';
+          }
+        }
+        detailAudioInput.value = '';
+        refreshAudioUI();
+        render();
+      }
+
+      function clearAudioSource() {
+        audioElement.pause();
+        if (audioState.objectUrl) URL.revokeObjectURL(audioState.objectUrl);
+        audioState.objectUrl = null;
+        audioState.currentId = null;
+        audioState.currentKind = null;
+        audioState.currentFile = null;
+        audioElement.removeAttribute('src');
+        audioElement.load();
+      }
+
+      function closeAudioPlayer(restoreFocus = true) {
+        const previousId = audioState.currentId;
+        const returnFocus = audioState.returnFocus;
+        clearAudioSource();
+        audioPlayer.hidden = true;
+        document.body.classList.remove('audio-player-open');
+        playerError.hidden = true;
+        playerError.textContent = '';
+        audioState.returnFocus = null;
+        if (!restoreFocus) return;
+        if (returnFocus?.isConnected && returnFocus.getClientRects().length) {
+          returnFocus.focus();
+          return;
+        }
+        const cardButton = Array.from(grid.querySelectorAll('[data-audio-play]'))
+          .find(button => button.dataset.workId === previousId);
+        if (cardButton) cardButton.focus();
+      }
+
+      async function playAudio(id, trigger, kind = 'local', sampleFile = null) {
+        unloadOfficialRecording();
+        const work = workById.get(id);
+        const record = kind === 'local' ? audioState.records.get(id) : null;
+        const baseSample = kind === 'sample' ? sampleById.get(id) : null;
+        const sample = baseSample && sampleFile
+          ? [baseSample, ...(baseSample.variants || [])].find(version => version.file === sampleFile)
+          : baseSample;
+        if (!work || (kind === 'local' && !record) || (kind === 'sample' && !sample)) return;
+        const nextFile = kind === 'sample' ? sample.file : null;
+        if (audioState.currentId !== id || audioState.currentKind !== kind || audioState.currentFile !== nextFile || !audioElement.src) {
+          clearAudioSource();
+          audioState.currentId = id;
+          audioState.currentKind = kind;
+          audioState.currentFile = nextFile;
+          if (kind === 'local') {
+            audioState.objectUrl = URL.createObjectURL(record.blob);
+            audioElement.src = audioState.objectUrl;
+            document.getElementById('player-kicker').textContent = '内部本地试听 · 不上传、不发布';
+            document.getElementById('player-file').textContent = `${record.name} · ${formatBytes(record.size)}`;
+          } else {
+            audioElement.src = `audio/${sample.file}`;
+            document.getElementById('player-kicker').textContent = `${sample.sampleType === 'internal' ? '内部经典录音 · 权利待核验' : sample.sampleType === 'generated' ? '原创播放示范 · 非原曲' : '开放许可 / 原创示范'} · ${sample.license}`;
+            document.getElementById('player-file').textContent = `${sample.kind} · ${sample.attribution}`;
+          }
+          document.getElementById('player-title').textContent = displayValue(work.title);
+        }
+        audioState.returnFocus = trigger || audioState.returnFocus;
+        audioPlayer.hidden = false;
+        document.body.classList.add('audio-player-open');
+        playerError.hidden = true;
+        playerError.textContent = '';
+        try {
+          await audioElement.play();
+        } catch (error) {
+          playerError.textContent = kind === 'local'
+            ? '无法播放此本地文件。请确认浏览器支持其编码，或替换为其他音频文件。'
+            : '无法播放歌曲录音。请保持 audio 文件夹与 works.html 的相对位置，并确认浏览器支持 MP3、WAV、M4A、MP4 音轨或 FLAC。';
+          playerError.hidden = false;
+        }
+      }
+
+      async function initializeAudio() {
+        try {
+          const database = await openAudioDatabase();
+          audioState.db = database;
+          const records = await readAudioRecords(database);
+          records.forEach(record => {
+            if (record && workById.has(record.id) && record.blob instanceof Blob) {
+              audioState.records.set(record.id, record);
+            }
+          });
+          document.body.dataset.audioStorage = 'indexeddb';
+          audioImportStatus.textContent = '内部音频只保存在当前浏览器，不会上传或发布。';
+        } catch (error) {
+          useMemoryStorage();
+          audioImportStatus.textContent = '当前使用本次会话内存保存音频，刷新后会丢失。';
+        }
+        audioState.ready = true;
+        document.body.dataset.audioReady = 'true';
+        audioImportButton.disabled = false;
+        refreshAudioUI();
+        render();
+      }
+
+      function openDialog(work, focusAudio = false) {
+        audioState.detailId = String(work.id);
+        document.getElementById('detail-audio-status').textContent = '';
+        detailAudioInput.value = '';
+        document.getElementById('dialog-title').textContent = displayValue(work.title);
+        const fields = {
+          'dialog-id': work.id,
+          'dialog-group': work.group,
+          'dialog-group-name': work.groupName,
+          'dialog-region': work.region,
+          'dialog-theme': work.theme,
+          'dialog-type': work.type,
+          'dialog-note': work.note,
+          'dialog-creator': work.creator,
+          'dialog-status': work.status,
+          'dialog-status-label': work.statusLabel,
+          'dialog-source-title': work.sourceTitle
+        };
+        Object.entries(fields).forEach(([id, value]) => {
+          document.getElementById(id).textContent = displayValue(value);
+        });
+
+        const source = document.getElementById('dialog-source');
+        source.replaceChildren();
+        let sourceUrl = null;
+        try {
+          const parsed = new URL(String(work.sourceUrl ?? '').trim());
+          if (parsed.protocol === 'http:' || parsed.protocol === 'https:') sourceUrl = parsed.href;
+        } catch (error) {
+          sourceUrl = null;
+        }
+        if (sourceUrl) {
+          const link = document.createElement('a');
+          link.className = 'source-link';
+          link.href = sourceUrl;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.textContent = sourceUrl;
+          link.setAttribute('aria-label', `打开来源链接：${displayValue(work.sourceTitle)}（新窗口）`);
+          source.append(link);
+        } else {
+          source.textContent = '来源线索待补充';
+        }
+        setMenu(false);
+        unloadOfficialRecording();
+        renderSampleDetail();
+        renderOfficialRecording();
+        renderDetailAudio();
+        dialog.showModal();
+        history.replaceState(null, '', `#work-${work.id}`);
+        document.body.classList.add('dialog-open');
+        if (focusAudio) detailAudioChoose.focus();
+      }
+
+      function createCard(work) {
+        const card = makeElement('article', `work-card ${work.group === 'english' ? 'is-english' : 'is-nursery'}`);
+        card.dataset.workId = String(work.id);
+        const sample = sampleById.get(String(work.id));
+        const materials = materialById.get(String(work.id)) || sample?.materials;
+        const top = makeElement('div', 'card-top');
+        const idTag = makeElement('span', 'id-tag', work.id);
+        idTag.setAttribute('aria-label', `目录编号 ${displayValue(work.id)}`);
+        top.append(idTag, makeElement('span', 'theme-tag', work.theme));
+        const title = makeElement('h3', '', work.title);
+        const group = makeElement('p', 'card-group', work.groupName);
+        if (materials) {
+          const intro = makeElement('div', 'sample-card-intro');
+          const cover = document.createElement('img');
+          cover.className = 'sample-card-cover';
+          cover.src = materials.cover;
+          cover.alt = materials.coverAlt;
+          cover.width = 800;
+          cover.height = 600;
+          cover.loading = 'lazy';
+          const copy = makeElement('div', 'sample-card-copy');
+          copy.append(title, group);
+          intro.append(cover, copy);
+          card.append(top, intro);
+        } else {
+          card.append(top, title, group);
+        }
+
+        const meta = document.createElement('dl');
+        meta.className = 'card-meta';
+        addMetaRow(meta, '类型', work.type);
+        addMetaRow(meta, '创作', work.creator);
+        card.append(meta, makeElement('p', 'card-note', work.note));
+
+        const audioRow = makeElement('div', 'card-audio-row');
+        const record = audioState.records.get(String(work.id));
+        const official = officialById.get(String(work.id));
+        if (record) audioRow.append(makeElement('span', 'audio-marker', '内部本地音频'));
+        else if (official) {
+          audioRow.append(makeElement('span', 'audio-marker official-marker', '官方发行录音 · 2011 现代改编'));
+          if (sample?.sampleType === 'internal') audioRow.append(makeElement('span', 'audio-marker sample-marker is-internal', '另有内部经典原声'));
+        } else if (sample) {
+          const internal = sample.sampleType === 'internal';
+          const generated = sample.sampleType === 'generated';
+          const marker = makeElement('span', `audio-marker sample-marker${internal ? ' is-internal' : generated ? ' is-generated' : ''}`, `${internal ? '经典原声' : generated ? '原创示范 · 非原曲' : '开放示例'} · ${sample.license}`);
+          audioRow.append(marker);
+        } else if (materials) {
+          audioRow.append(makeElement('span', 'audio-marker', materials.availability));
+          if (materials.audioStatus === '待采集') {
+            audioRow.append(makeElement('span', 'audio-marker pending-marker', '真实录音待采集 · 不硬配'));
+          }
+        }
+        const audioButton = makeElement('button', 'detail-button audio-action', record ? '试听本地音频' : official ? '官方发行录音' : sample ? (sample.sampleType === 'internal' ? '播放经典原声' : sample.sampleType === 'generated' ? '播放原创示范' : '试听歌曲示例') : materials ? '查看资料卡' : '添加音频');
+        audioButton.type = 'button';
+        audioButton.disabled = !audioState.ready;
+        audioButton.dataset.workId = String(work.id);
+        if (record || sample) audioButton.dataset.audioPlay = 'true';
+        if (official && !record) audioButton.dataset.officialOpen = 'true';
+        audioButton.setAttribute('aria-label', record
+          ? `内部本地试听《${displayValue(work.title)}》：${record.name}`
+          : official
+            ? `查看《${displayValue(work.title)}》官方发行录音：${official.trackTitle}，${official.versionNote}`
+            : sample
+              ? `试听《${displayValue(work.title)}》${sample.sampleType === 'internal' ? '经典原声' : sample.sampleType === 'generated' ? '原创非原曲示范' : '歌曲示例'}：${sample.kind}，${sample.license}`
+              : materials
+                ? `查看《${displayValue(work.title)}》资料卡：真实录音待采集`
+                : `为《${displayValue(work.title)}》添加内部本地音频`);
+        if (!record && !sample && !official) audioButton.setAttribute('aria-haspopup', 'dialog');
+        if (official && !record) audioButton.setAttribute('aria-haspopup', 'dialog');
+        audioButton.addEventListener('click', () => {
+          if (record) playAudio(String(work.id), audioButton, 'local');
+          else if (official) {
+            openDialog(work);
+            document.getElementById('official-audio-load').focus();
+          } else if (sample) playAudio(String(work.id), audioButton, 'sample');
+          else openDialog(work, !materials);
+        });
+        audioRow.append(audioButton);
+        card.append(audioRow);
+
+        const footer = makeElement('div', 'card-footer');
+        const status = makeElement('span', `status-badge status-${work.status || 'candidate'}`, work.statusLabel);
+        const detail = makeElement('button', 'detail-button', '查看详情');
+        detail.type = 'button';
+        detail.setAttribute('aria-haspopup', 'dialog');
+        detail.setAttribute('aria-label', `查看《${displayValue(work.title)}》完整目录字段`);
+        detail.addEventListener('click', () => openDialog(work));
+        footer.append(status, detail);
+        card.append(footer);
+        return card;
+      }
+
+      function pageNumbers(current, total) {
+        if (total <= 7) return Array.from({ length: total }, (_, index) => index + 1);
+        const pages = new Set([1, total, current - 1, current, current + 1]);
+        return Array.from(pages).filter(page => page >= 1 && page <= total).sort((a, b) => a - b);
+      }
+
+      function changePage(page) {
+        state.page = page;
+        render();
+        const current = pagination.querySelector('[aria-current="page"]');
+        if (current) current.focus({ preventScroll: true });
+      }
+
+      function renderPagination(totalPages) {
+        pagination.replaceChildren();
+        if (totalPages === 0) return;
+
+        const previous = makeElement('button', 'page-button page-step', '上一页');
+        previous.type = 'button';
+        previous.disabled = state.page === 1;
+        previous.addEventListener('click', () => changePage(state.page - 1));
+        pagination.append(previous);
+
+        let lastPage = 0;
+        pageNumbers(state.page, totalPages).forEach(page => {
+          if (lastPage && page - lastPage > 1) pagination.append(makeElement('span', 'page-ellipsis', '…'));
+          const button = makeElement('button', 'page-button', String(page));
+          button.type = 'button';
+          button.setAttribute('aria-label', `第 ${page} 页`);
+          if (page === state.page) button.setAttribute('aria-current', 'page');
+          button.addEventListener('click', () => changePage(page));
+          pagination.append(button);
+          lastPage = page;
+        });
+
+        const next = makeElement('button', 'page-button page-step', '下一页');
+        next.type = 'button';
+        next.disabled = state.page === totalPages;
+        next.addEventListener('click', () => changePage(state.page + 1));
+        pagination.append(next);
+      }
+
+      function render() {
+        const visibleWorks = getVisibleWorks();
+        const totalPages = Math.ceil(visibleWorks.length / PAGE_SIZE);
+        state.page = totalPages ? Math.min(Math.max(1, state.page), totalPages) : 1;
+        const start = (state.page - 1) * PAGE_SIZE;
+        const pageWorks = visibleWorks.slice(start, start + PAGE_SIZE);
+
+        totalCount.textContent = String(works.length);
+        filteredCount.textContent = String(visibleWorks.length);
+        clearButton.disabled = !searchInput.value;
+        grid.replaceChildren(...pageWorks.map(createCard));
+        grid.hidden = visibleWorks.length === 0;
+        noResults.hidden = visibleWorks.length !== 0;
+        pagination.hidden = visibleWorks.length === 0;
+
+        if (visibleWorks.length === 0) {
+          resultsStatus.textContent = '没有找到匹配的候选作品';
+          noResultsCopy.textContent = state.query
+            ? `没有找到与“${searchInput.value.trim()}”匹配的作品，可清空关键词或一键重置。`
+            : '当前筛选组合没有候选作品，可一键重置后查看完整目录。';
+        } else {
+          resultsStatus.textContent = `${state.sampleOnly ? '歌曲示例 · ' : ''}第 ${state.page} / ${totalPages} 页，显示第 ${start + 1}–${start + pageWorks.length} 条，共 ${visibleWorks.length} 条匹配结果`;
+        }
+        renderPagination(totalPages);
+      }
+
+      function resetFilters() {
+        searchInput.value = '';
+        groupFilter.value = 'all';
+        themeFilter.value = 'all';
+        statusFilter.value = 'all';
+        sortOrder.value = 'id';
+        Object.assign(state, { query: '', group: 'all', theme: 'all', status: 'all', sort: 'id', page: 1, sampleOnly: false });
+        showSamplesButton.setAttribute('aria-pressed', 'false');
+        showSamplesButton.textContent = '只看歌曲示例';
+        render();
+      }
+
+      document.getElementById('filter-form').addEventListener('submit', event => event.preventDefault());
+      searchInput.addEventListener('input', () => {
+        state.query = searchInput.value;
+        state.page = 1;
+        render();
+      });
+      clearButton.addEventListener('click', () => {
+        searchInput.value = '';
+        state.query = '';
+        state.page = 1;
+        render();
+        searchInput.focus();
+      });
+      [[groupFilter, 'group'], [themeFilter, 'theme'], [statusFilter, 'status'], [sortOrder, 'sort']].forEach(([control, key]) => {
+        control.addEventListener('change', () => {
+          state[key] = control.value;
+          state.page = 1;
+          render();
+        });
+      });
+      document.getElementById('reset-filters').addEventListener('click', resetFilters);
+      document.getElementById('empty-reset').addEventListener('click', () => {
+        resetFilters();
+        searchInput.focus();
+      });
+
+      audioImportButton.addEventListener('click', () => audioBatchInput.click());
+      showSamplesButton.addEventListener('click', () => {
+        const enable = !state.sampleOnly;
+        resetFilters();
+        state.sampleOnly = enable;
+        showSamplesButton.setAttribute('aria-pressed', String(enable));
+        showSamplesButton.textContent = enable ? '显示全部作品' : '只看歌曲示例';
+        render();
+      });
+      audioBatchInput.addEventListener('change', () => importBatch(Array.from(audioBatchInput.files || [])));
+      detailAudioChoose.addEventListener('click', () => detailAudioInput.click());
+      detailAudioInput.addEventListener('change', () => {
+        const [file] = Array.from(detailAudioInput.files || []);
+        if (file) importDetailFile(file);
+      });
+      detailAudioPlay.addEventListener('click', () => {
+        if (audioState.detailId) playAudio(audioState.detailId, detailAudioPlay, 'local');
+      });
+      sampleAudioPlay.addEventListener('click', () => {
+        const sample = detailSampleRecord();
+        if (audioState.detailId && sample) playAudio(audioState.detailId, sampleAudioPlay, 'sample', sample.file);
+      });
+      document.getElementById('sample-version').addEventListener('change', event => {
+        const sample = detailSampleRecord();
+        if (audioState.currentId === audioState.detailId && audioState.currentKind === 'sample' && sample?.file !== audioState.currentFile) {
+          closeAudioPlayer(false);
+        }
+        renderSampleVersion();
+      });
+      document.getElementById('official-audio-load').addEventListener('click', loadOfficialRecording);
+      detailAudioRemove.addEventListener('click', async () => {
+        const id = audioState.detailId;
+        if (!id || !audioState.records.has(id)) return;
+        detailAudioRemove.disabled = true;
+        try {
+          await removeAudioRecord(id);
+          document.getElementById('detail-audio-status').textContent = '已从当前浏览器移除此作品的本地音频。';
+          audioImportStatus.textContent = `已移除 ${id} 的内部本地音频。`;
+        } catch (error) {
+          document.getElementById('detail-audio-status').textContent = '移除失败，请重试。';
+        }
+        refreshAudioUI();
+        render();
+      });
+      document.getElementById('audio-player-close').addEventListener('click', () => closeAudioPlayer());
+      audioElement.addEventListener('error', () => {
+        if (!audioElement.src || !audioState.currentId) return;
+        playerError.textContent = audioState.currentKind === 'sample'
+          ? '浏览器无法读取开放示例，请确认 audio 文件夹完整且与 works.html 放在一起。'
+          : '浏览器无法解码此本地文件，请替换为支持的音频格式或编码。';
+        playerError.hidden = false;
+      });
+      officialAudioElement.addEventListener('error', () => {
+        if (!officialAudioElement.src || !officialState.currentId) return;
+        document.getElementById('official-audio-status').textContent = '官方试听流读取失败，请检查网络或进入 Deezer 原曲页面；本站未保存该录音。';
+      });
+      window.addEventListener('pagehide', () => {
+        officialState.requestSerial += 1;
+        if (officialState.cleanup) officialState.cleanup();
+        if (audioState.objectUrl) URL.revokeObjectURL(audioState.objectUrl);
+        audioState.objectUrl = null;
+      });
+
+      document.getElementById('dialog-close').addEventListener('click', () => dialog.close());
+      dialog.addEventListener('close', () => {
+        document.body.classList.remove('dialog-open');
+        unloadOfficialRecording();
+        audioState.detailId = null;
+        detailAudioInput.value = '';
+        if (location.hash.startsWith('#work-')) history.replaceState(null, '', `${location.pathname}${location.search}`);
+      });
+      dialog.addEventListener('click', event => {
+        if (event.target !== dialog) return;
+        const rect = dialog.getBoundingClientRect();
+        const inside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+        if (!inside) dialog.close();
+      });
+
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      function setMenu(open) {
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? '收起导航' : '展开导航');
+        mobileNav.hidden = !open;
+      }
+      menuToggle.addEventListener('click', () => setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
+      mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !dialog.open && menuToggle.getAttribute('aria-expanded') === 'true') {
+          setMenu(false);
+          menuToggle.focus();
+        }
+        if (event.key === 'Escape' && !dialog.open && !audioPlayer.hidden) closeAudioPlayer();
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 800) setMenu(false);
+      });
+
+      function openLinkedWork() {
+        const match = location.hash.match(/^#work-([A-Z0-9-]+)$/i);
+        const work = match ? workById.get(match[1].toUpperCase()) : null;
+        if (work && !dialog.open) openDialog(work);
+      }
+
+      window.addEventListener('hashchange', openLinkedWork);
+      populateFilters();
+      sampleAudioCount.textContent = String(sampleAudios.length);
+      showSamplesButton.disabled = sampleAudios.length === 0;
+      render();
+      openLinkedWork();
+      initializeAudio();
+    })();
+  </script>
+</body>
+</html>

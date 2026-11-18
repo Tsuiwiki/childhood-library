@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="童年书房：故事馆、音乐馆与古诗词馆，一个家庭共读与聆听的入口。">
+  <title>童年书房｜把童年，读成一座书房</title>
+  <style>
+    :root {
+      --paper: #f4eddc;
+      --paper-light: #fffaf0;
+      --ink: #191917;
+      --red: #e64a38;
+      --yellow: #f1bd32;
+      --blue: #2858b8;
+      --green: #739348;
+      --line: 3px solid var(--ink);
+      --shadow: 7px 7px 0 var(--ink);
+      --serif: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      --sans: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image: radial-gradient(circle, rgba(25,25,23,.18) .8px, transparent .9px);
+      background-size: 9px 9px;
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: clip;
+    }
+    body.dialog-open { overflow: hidden; }
+    button, input { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { color: inherit; }
+    a { color: inherit; }
+    button:not(:disabled), a { cursor: pointer; }
+    button:disabled { cursor: not-allowed; opacity: 1; }
+    .search-clear:disabled { color: var(--ink); background: #d8d0bc; box-shadow: none; }
+    [hidden] { display: none !important; }
+    svg { display: block; max-width: 100%; }
+    h1, h2, h3, p { margin-top: 0; }
+    section { scroll-margin-top: 104px; }
+    ::selection { color: var(--paper-light); background: var(--blue); }
+    :focus-visible {
+      outline: 4px solid var(--blue);
+      outline-offset: 4px;
+    }
+    .shell {
+      width: min(calc(100% - 48px), 1280px);
+      margin-inline: auto;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 12px;
+      left: 12px;
+      padding: 10px 18px;
+      border: var(--line);
+      background: var(--yellow);
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      z-index: 30;
+      top: 0;
+      border-bottom: var(--line);
+      background-color: var(--paper);
+      background-image: radial-gradient(circle, rgba(25,25,23,.16) .8px, transparent .9px);
+      background-size: 9px 9px;
+    }
+    .header-inner {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+      margin-right: auto;
+      text-decoration: none;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+    .brand small {
+      margin-left: 12px;
+      padding-left: 12px;
+      border-left: 2px solid var(--ink);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: .08em;
+    }
+    .desktop-nav { display: flex; align-items: center; gap: 4px; }
+    .desktop-nav a, .mobile-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 8px 14px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .desktop-nav a:hover { text-decoration: underline 3px var(--red); text-underline-offset: 6px; }
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 11px 22px;
+      border: var(--line);
+      border-radius: 0;
+      background: var(--paper-light);
+      box-shadow: 4px 4px 0 var(--ink);
+      font-weight: 800;
+      line-height: 1.35;
+      text-decoration: none;
+      transition: translate .16s ease, box-shadow .16s ease;
+    }
+    .button:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .button:active { translate: 3px 3px; box-shadow: 1px 1px 0 var(--ink); }
+    .button-primary { background: var(--yellow); }
+    .button-dark { color: var(--paper-light); background: var(--ink); box-shadow: 4px 4px 0 var(--red); }
+    .button svg { width: 20px; height: 20px; flex: 0 0 auto; }
+    .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      padding: 11px;
+      border: var(--line);
+      background: var(--yellow);
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin: 4px 0;
+      background: var(--ink);
+      transition: transform .18s ease, opacity .18s ease;
+    }
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .mobile-nav {
+      padding: 8px 0 18px;
+      border-top: 2px solid var(--ink);
+    }
+    .mobile-nav a { width: 100%; justify-content: flex-start; border-bottom: 1px dashed var(--ink); }
+
+    .hero {
+      min-height: 650px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(440px, .98fr);
+      align-items: center;
+      gap: 40px;
+      padding-block: 58px 70px;
+    }
+    .hero-copy { position: relative; z-index: 2; animation: arrive .58s ease-out both; }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 24px;
+      padding: 5px 13px;
+      border: 2px solid var(--ink);
+      background: var(--paper-light);
+      box-shadow: 3px 3px 0 var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      transform: rotate(-2deg);
+    }
+    .hero h1 {
+      max-width: 720px;
+      margin-bottom: 26px;
+      font-family: var(--serif);
+      font-size: clamp(54px, 5.75vw, 84px);
+      font-weight: 900;
+      line-height: 1.13;
+      letter-spacing: -.055em;
+    }
+    .hero h1 span { display: block; }
+    .hero h1 span:last-child { color: var(--red); }
+    .hero-description {
+      max-width: 540px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.9;
+      font-weight: 500;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; }
+    .hero-wave { width: 220px; height: 28px; margin-top: 34px; color: var(--blue); }
+
+    .hero-collage {
+      position: relative;
+      min-width: 0;
+      height: 550px;
+      animation: arrive .65s .12s ease-out both;
+    }
+    .collage-shape { position: absolute; pointer-events: none; }
+    .shape-blue {
+      inset: 70px 45px 45px 75px;
+      border: var(--line);
+      background: var(--blue);
+      transform: rotate(-4deg);
+    }
+    .shape-yellow {
+      left: 18px;
+      bottom: 12px;
+      width: 235px;
+      height: 235px;
+      border: var(--line);
+      border-radius: 50%;
+      background: var(--yellow);
+    }
+    .collage-dots {
+      top: 18px;
+      left: 4px;
+      width: 84px;
+      height: 56px;
+      background-image: radial-gradient(circle, var(--ink) 3px, transparent 3.5px);
+      background-size: 20px 20px;
+    }
+    .mini-book {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 18px;
+      overflow: hidden;
+      border: var(--line);
+      border-radius: 0;
+      box-shadow: var(--shadow);
+      text-align: left;
+      transform: rotate(var(--tilt));
+      transition: translate .18s ease;
+    }
+    .mini-book:hover { translate: 0 -7px; }
+    .mini-book:active { translate: 3px 3px; }
+    .mini-book .book-topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid currentColor;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+    .mini-book .book-title {
+      position: relative;
+      z-index: 1;
+      margin-block: auto 12px;
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+    .mini-book .book-author { position: relative; z-index: 1; font-size: 13px; font-weight: 700; }
+    .mini-book .cover-art { position: absolute; inset: 52px 12px 46px; pointer-events: none; }
+    .mini-book .cover-art svg { width: 100%; height: 100%; }
+    .book-yellow { left: 26px; top: 45px; width: 190px; height: 250px; background: var(--yellow); --tilt: -7deg; z-index: 2; }
+    .book-blue { right: 18px; top: 24px; width: 190px; height: 258px; color: #fffaf0; background: var(--blue); --tilt: 5deg; z-index: 3; }
+    .book-blue .book-title { font-family: Georgia, serif; font-size: 23px; line-height: 1.12; }
+    .book-red { left: 170px; top: 194px; width: 215px; height: 288px; background: var(--red); --tilt: 4deg; z-index: 4; }
+    .book-green { left: 3px; bottom: 2px; width: 178px; height: 226px; background: var(--green); --tilt: -5deg; z-index: 5; }
+    .book-green .book-title { font-size: 32px; }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+    .section-heading h2 {
+      margin-bottom: 0;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.2;
+      letter-spacing: -.035em;
+    }
+    .section-heading p { max-width: 460px; margin-bottom: 3px; font-size: 16px; }
+    .collections { padding-block: 70px 78px; border-top: var(--line); }
+    .collection-tabs {
+      display: grid;
+      grid-template-columns: .68fr repeat(3, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+    .collection-tab {
+      position: relative;
+      min-width: 0;
+      min-height: 112px;
+      padding: 20px 16px;
+      border: var(--line);
+      border-radius: 0;
+      box-shadow: 5px 5px 0 var(--ink);
+      background: var(--tab-color);
+      text-align: left;
+      transform: rotate(var(--tab-tilt, 0deg));
+      transition: translate .16s ease, box-shadow .16s ease;
+    }
+    .collection-tab:hover { translate: 0 -4px; }
+    .collection-tab .tab-label { display: block; margin-bottom: 10px; font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+    .collection-tab .tab-name { display: block; font-family: var(--serif); font-size: 22px; font-weight: 900; line-height: 1.35; }
+    .collection-tab[aria-selected="true"] { box-shadow: 5px 5px 0 var(--ink), 9px 9px 0 var(--paper-light), 12px 12px 0 var(--ink); }
+    .collection-tab[aria-selected="true"]::after {
+      content: "当前";
+      position: absolute;
+      top: -14px;
+      right: 10px;
+      padding: 1px 8px;
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      background: var(--paper-light);
+      font-size: 12px;
+      font-weight: 800;
+      transform: rotate(2deg);
+    }
+    .tab-all { --tab-color: var(--paper-light); --tab-tilt: -1deg; }
+    .tab-story { --tab-color: var(--red); --tab-tilt: 1.5deg; }
+    .tab-music { --tab-color: var(--yellow); --tab-tilt: -1.5deg; }
+    .tab-poetry { --tab-color: var(--green); --tab-tilt: 1deg; }
+    .music-hall-entry {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 22px;
+      padding: 18px 22px;
+      border: var(--line);
+      background: var(--blue);
+      box-shadow: 6px 6px 0 var(--ink);
+      color: var(--paper-light);
+      text-decoration: none;
+      transition: translate .16s ease, box-shadow .16s ease;
+    }
+    .music-hall-entry:hover { translate: -2px -2px; box-shadow: 8px 8px 0 var(--ink); }
+    .music-hall-mark {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border: 2px solid var(--paper-light);
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--ink);
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .music-hall-copy { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .music-hall-copy strong { font-family: var(--serif); font-size: 20px; font-weight: 900; }
+    .music-hall-copy span { font-size: 13px; opacity: .9; }
+    .music-hall-go {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border: 2px solid var(--paper-light);
+      background: var(--yellow);
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .music-hall-go svg { width: 18px; height: 18px; }
+
+    .works {
+      padding-block: 74px 86px;
+      border-top: var(--line);
+      background: rgba(255,250,240,.56);
+    }
+    .works-heading { align-items: center; }
+    .works-heading h2 { position: relative; display: inline-block; }
+    .works-heading h2::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: -8px;
+      bottom: 3px;
+      left: -8px;
+      height: 13px;
+      background: var(--yellow);
+      transform: rotate(-1deg);
+    }
+    .search-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: end;
+      margin-bottom: 22px;
+      padding: 22px;
+      border: var(--line);
+      background: var(--paper-light);
+      box-shadow: 6px 6px 0 var(--blue);
+    }
+    .search-field label { display: block; margin-bottom: 7px; font-weight: 800; }
+    .search-control { position: relative; }
+    .search-control svg {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      width: 22px;
+      height: 22px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .search-control input {
+      width: 100%;
+      min-height: 54px;
+      padding: 12px 16px 12px 50px;
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-size: 16px;
+    }
+    .search-control input::placeholder { color: #58564e; opacity: 1; }
+    .search-clear { min-width: 82px; min-height: 54px; box-shadow: 4px 4px 0 var(--ink); }
+    .results-status { min-height: 28px; margin-bottom: 20px; font-size: 16px; font-weight: 700; }
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .work-card {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      overflow: hidden;
+      border: var(--line);
+      border-radius: 0;
+      background: var(--paper-light);
+      box-shadow: 6px 6px 0 var(--ink);
+      text-align: left;
+      transition: translate .18s ease, box-shadow .18s ease;
+    }
+    .work-card:hover { translate: -2px -5px; box-shadow: 9px 11px 0 var(--ink); }
+    .work-card:active { translate: 3px 3px; box-shadow: 2px 2px 0 var(--ink); }
+    .card-cover {
+      position: relative;
+      min-height: 258px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      overflow: hidden;
+      border-bottom: var(--line);
+      background: var(--cover-color);
+      color: var(--cover-ink, var(--ink));
+    }
+    .card-cover .cover-kicker {
+      position: relative;
+      z-index: 2;
+      align-self: flex-start;
+      padding: 2px 8px;
+      border: 2px solid currentColor;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+    .card-cover .cover-art { position: absolute; inset: 48px 14px 50px; }
+    .card-cover .cover-art svg { width: 100%; height: 100%; }
+    .card-cover .cover-title {
+      position: relative;
+      z-index: 2;
+      margin-top: auto;
+      font-family: var(--serif);
+      font-size: 31px;
+      font-weight: 900;
+      line-height: 1.15;
+      overflow-wrap: anywhere;
+    }
+    .card-cover .cover-title.english { font-family: Georgia, serif; font-size: 25px; }
+    .card-cover-literature { --cover-color: var(--red); }
+    .card-cover-night { --cover-color: var(--yellow); }
+    .card-cover-goose { --cover-color: var(--green); }
+    .card-cover-star { --cover-color: var(--blue); --cover-ink: #fffaf0; }
+    .card-cover-paddle { --cover-color: var(--blue); --cover-ink: #fffaf0; }
+    .card-cover-swallow { --cover-color: var(--red); }
+    .card-cover-handkerchief { --cover-color: var(--green); }
+    .card-cover-moonlight { --cover-color: var(--yellow); }
+    .card-body { display: flex; flex: 1; flex-direction: column; padding: 20px; }
+    .card-type { margin-bottom: 9px; font-size: 12px; font-weight: 800; letter-spacing: .1em; }
+    .card-title { display: block; margin-bottom: 8px; font-family: var(--serif); font-size: 24px; font-weight: 900; line-height: 1.35; overflow-wrap: anywhere; }
+    .card-author { display: block; margin-bottom: 20px; font-size: 16px; }
+    .card-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      min-height: 44px;
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 2px solid var(--ink);
+      font-weight: 800;
+    }
+    .card-action svg { width: 24px; height: 24px; }
+    .no-results {
+      padding: 40px 24px;
+      border: var(--line);
+      background: var(--yellow);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .no-results h3 { margin-bottom: 10px; font-family: var(--serif); font-size: 28px; }
+    .no-results p { margin-bottom: 22px; }
+
+    .about { padding-block: 82px; border-top: var(--line); }
+    .about-paper {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+      gap: 52px;
+      padding: 46px;
+      border: var(--line);
+      background: var(--blue);
+      box-shadow: 9px 9px 0 var(--ink);
+      color: #fffaf0;
+    }
+    .about h2 { margin-bottom: 18px; font-family: var(--serif); font-size: clamp(32px, 3.5vw, 48px); line-height: 1.25; }
+    .about p { margin-bottom: 0; font-size: 17px; }
+    .about-note {
+      align-self: center;
+      padding: 26px;
+      border: var(--line);
+      color: var(--ink);
+      background: var(--yellow);
+      box-shadow: 6px 6px 0 var(--ink);
+      transform: rotate(2deg);
+    }
+    .about-note strong { display: block; margin-bottom: 8px; font-family: var(--serif); font-size: 26px; }
+    .about-note span { display: block; font-size: 16px; font-weight: 700; }
+    .principles { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 24px; padding: 0; list-style: none; font-size: 16px; font-weight: 800; }
+    .principles li { display: flex; align-items: center; gap: 8px; }
+    .principles li::before { content: ""; width: 10px; height: 10px; border: 2px solid #fffaf0; background: var(--red); }
+
+    .site-footer { border-top: var(--line); background: var(--ink); color: var(--paper-light); }
+    .footer-inner { padding-block: 30px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .footer-brand { font-family: var(--serif); font-size: 22px; font-weight: 900; white-space: nowrap; }
+    .rights-note { max-width: 660px; margin: 0; font-size: 16px; text-align: right; }
+
+    dialog {
+      width: min(620px, calc(100% - 32px));
+      max-height: calc(100dvh - 40px);
+      padding: 0;
+      overflow: auto;
+      border: var(--line);
+      border-radius: 0;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image: radial-gradient(circle, rgba(25,25,23,.17) .8px, transparent .9px);
+      background-size: 9px 9px;
+      box-shadow: 10px 10px 0 var(--ink);
+    }
+    dialog::backdrop { background: rgba(25,25,23,.72); }
+    .dialog-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 22px;
+      border-bottom: var(--line);
+      background: var(--yellow);
+    }
+    .dialog-kicker { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; }
+    .dialog-close {
+      min-width: 48px;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px;
+      border: 2px solid var(--ink);
+      background: var(--paper-light);
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+    .dialog-close svg { width: 22px; height: 22px; }
+    .dialog-body { padding: 30px; }
+    .dialog-body h2 { margin-bottom: 8px; font-family: var(--serif); font-size: clamp(30px, 5vw, 42px); line-height: 1.3; overflow-wrap: anywhere; }
+    .dialog-author { margin-bottom: 24px; font-size: 17px; font-weight: 700; }
+    .dialog-meta { display: grid; grid-template-columns: 96px 1fr; gap: 10px 16px; margin: 0 0 24px; padding: 18px; border: 2px solid var(--ink); background: var(--paper-light); }
+    .dialog-meta dt { font-weight: 800; }
+    .dialog-meta dd { margin: 0; overflow-wrap: anywhere; }
+    .dialog-excerpt { margin-bottom: 24px; padding-left: 18px; border-left: 6px solid var(--red); font-family: var(--serif); font-size: 20px; line-height: 1.8; }
+    .dialog-description { margin-bottom: 24px; }
+    .dialog-rights { margin-bottom: 0; padding: 16px; border: 2px dashed var(--ink); font-size: 16px; font-weight: 700; }
+
+    @keyframes arrive {
+      from { opacity: 0; translate: 0 16px; }
+      to { opacity: 1; translate: 0 0; }
+    }
+
+    @media (max-width: 1100px) {
+      .desktop-nav { gap: 0; }
+      .desktop-nav a { padding-inline: 9px; }
+      .header-cta { display: none; }
+      .hero { grid-template-columns: minmax(0, 1fr) minmax(390px, .85fr); gap: 20px; }
+      .hero h1 { font-size: clamp(50px, 6vw, 68px); }
+      .book-yellow { left: 10px; }
+      .book-blue { right: 4px; }
+      .book-red { left: 140px; }
+      .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .collection-tabs { gap: 13px; }
+      .collection-tab { padding-inline: 12px; }
+      .collection-tab .tab-name { font-size: 19px; }
+    }
+
+    @media (max-width: 800px) {
+      .shell { width: min(calc(100% - 36px), 680px); }
+      .header-inner { min-height: 74px; }
+      .desktop-nav, .header-cta { display: none; }
+      .menu-toggle { display: block; }
+      .brand small { display: none; }
+      .hero { min-height: auto; grid-template-columns: 1fr; gap: 44px; padding-block: 46px 58px; }
+      .hero h1 { max-width: 620px; font-size: clamp(50px, 10vw, 72px); }
+      .hero-description { max-width: 620px; }
+      .hero-collage { width: min(100%, 540px); margin-inline: auto; }
+      .collection-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+      .tab-all { grid-column: 1 / -1; min-height: 64px; }
+      .collection-tab { min-height: 108px; padding: 18px; }
+      .collection-tab .tab-name { font-size: 21px; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 14px; }
+      .about-paper { grid-template-columns: 1fr; gap: 30px; padding: 34px; }
+      .about-note { transform: rotate(1deg); }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .rights-note { text-align: left; }
+    }
+
+    @media (max-width: 560px) {
+      .shell { width: calc(100% - 32px); }
+      section { scroll-margin-top: 90px; }
+      .brand { font-size: 22px; }
+      .hero { gap: 34px; padding-block: 36px 48px; }
+      .eyebrow { margin-bottom: 20px; font-size: 12px; transform: rotate(-1deg); }
+      .hero h1 { margin-bottom: 20px; font-size: clamp(43px, 12.8vw, 58px); letter-spacing: -.06em; }
+      .hero-description { margin-bottom: 24px; font-size: 16px; line-height: 1.85; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; gap: 14px; }
+      .hero-actions .button { width: 100%; }
+      .hero-wave { margin-top: 28px; }
+      .hero-collage {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .collage-shape { display: none; }
+      .mini-book {
+        position: relative;
+        inset: auto;
+        width: auto;
+        height: 224px;
+        padding: 13px;
+        box-shadow: 4px 4px 0 var(--ink);
+        transform: none;
+      }
+      .mini-book .book-title { font-size: 25px; }
+      .mini-book .book-author { font-size: 12px; }
+      .mini-book .book-topline { font-size: 12px; letter-spacing: 0; }
+      .book-blue .book-title { font-size: 20px; }
+      .book-green .book-title { font-size: 27px; }
+      .mini-book .cover-art { inset: 48px 8px 42px; }
+      .collections, .works, .about { padding-block: 52px; }
+      .section-heading h2 { font-size: 36px; }
+      .collection-tabs { gap: 16px 14px; }
+      .collection-tab { min-height: 104px; padding: 16px 12px; transform: none; box-shadow: 4px 4px 0 var(--ink); }
+      .collection-tab .tab-name { font-size: 19px; }
+      .collection-tab[aria-selected="true"] { box-shadow: 4px 4px 0 var(--ink), 7px 7px 0 var(--paper-light), 10px 10px 0 var(--ink); }
+      .collection-tab[aria-selected="true"]::after { top: -12px; right: 6px; transform: none; }
+      .music-hall-entry { flex-wrap: wrap; gap: 12px; padding: 16px; }
+      .music-hall-copy strong { font-size: 18px; }
+      .music-hall-go { margin-left: 0; width: 100%; justify-content: center; }
+      .search-panel { grid-template-columns: 1fr; padding: 16px; box-shadow: 5px 5px 0 var(--blue); }
+      .search-clear { width: 100%; }
+      .works-grid { grid-template-columns: 1fr; gap: 24px; }
+      .card-cover { min-height: 270px; }
+      .about-paper { padding: 26px 22px; box-shadow: 6px 6px 0 var(--ink); }
+      .about p { font-size: 16px; }
+      .about-note { padding: 20px; transform: none; }
+      .principles { flex-direction: column; gap: 8px; }
+      .dialog-body { padding: 24px 20px; }
+      .dialog-header { padding: 14px 16px; }
+      .dialog-meta { grid-template-columns: 82px 1fr; padding: 14px; }
+      .dialog-excerpt { font-size: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    /* ===== LIBRARY_LINKS:CSS ===== */
+    .lib-map { padding-block: 26px 54px; }
+    .lib-map-box { border: var(--line); background: var(--paper-light); box-shadow: var(--shadow); padding: 26px 26px 22px; }
+    .lib-map-box h2 { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); font-weight: 900; margin-bottom: 6px; }
+    .lib-map-box > p { font-size: 14px; color: #4a4841; margin-bottom: 20px; }
+    .lib-halls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lib-hall { display: flex; flex-direction: column; gap: 4px; padding: 14px 14px 12px; border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); text-decoration: none; transition: translate .15s ease, box-shadow .15s ease; }
+    .lib-hall:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .lib-hall b { font-family: var(--serif); font-size: 20px; font-weight: 900; }
+    .lib-hall span { font-size: 12px; line-height: 1.5; color: #4a4841; }
+    .lib-hall.lib-story { background: #fbe3dd; }
+    .lib-hall.lib-music { background: #fdf1c9; }
+    .lib-hall.lib-poetry { background: #e2ebd7; }
+    .lib-hall.lib-research { background: #dde5f6; }
+    .lib-hall[aria-current="page"] { outline: 3px dashed var(--ink); outline-offset: 3px; }
+    .lib-specs { margin-top: 20px; padding-top: 16px; border-top: 2px dashed var(--ink); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .lib-specs > strong { font-size: 13px; margin-right: 4px; }
+    .lib-specs a { padding: 4px 10px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-specs a:hover { background: var(--yellow); }
+    .lib-specs a[aria-current="page"] { background: var(--yellow); }
+    .lib-more { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; font-weight: 800; }
+    .lib-more a { text-decoration: underline 2px var(--blue); text-underline-offset: 4px; }
+    .lib-peers { padding-block: 6px 26px; }
+    .lib-peers-inner { border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); padding: 16px 18px; }
+    .lib-peers-inner > strong { display: block; font-size: 13px; margin-bottom: 10px; }
+    .lib-peer-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lib-peer-list a { padding: 5px 10px; border: 2px solid var(--ink); background: var(--paper-light); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-peer-list a:hover { background: var(--yellow); }
+    .lib-peer-list a[aria-current="page"] { background: var(--yellow); box-shadow: 2px 2px 0 var(--ink); }
+    .lib-peer-ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 13px; font-weight: 800; }
+    .lib-peer-ends a { text-decoration: none; border-bottom: 2px solid var(--ink); }
+    .lib-peer-ends .spacer { flex: 1; }
+    @media (max-width: 1000px) { .lib-halls { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      .lib-halls { grid-template-columns: 1fr; }
+      .lib-map-box { padding: 20px 16px 18px; }
+      .shell { width: min(calc(100% - 32px), 1240px); }
+    }
+    .work-spec-links { margin-top: 18px; padding: 12px 14px; border: 2px dashed var(--ink); background: #dde5f6; font-size: 13px; }
+    .work-spec-links > strong { display: block; margin-bottom: 8px; }
+    .work-spec-links div { display: flex; flex-wrap: wrap; gap: 8px; }
+    .work-spec-links a { padding: 3px 9px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-weight: 800; text-decoration: none; }
+    .work-spec-links a:hover { background: var(--yellow); }
+    /* ===== /LIBRARY_LINKS:CSS ===== */
+</style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="童年书房首页">
+        童年书房
+        <small>CHILDHOOD<br>LIBRARY</small>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="dir-3.html" aria-current="page">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html">音乐馆</a>
+        <a href="poetry.html">古诗词馆</a>
+        <a href="research.html">研究资源库</a>
+        <a href="works.html">作品目录</a>
+      </nav>
+      <a class="button button-primary header-cta" href="works.html">开始阅读</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="展开导航">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="shell mobile-nav" id="mobile-nav" aria-label="移动端导航" hidden>
+      <a href="dir-3.html" aria-current="page">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html">音乐馆</a>
+        <a href="poetry.html">古诗词馆</a>
+        <a href="research.html">研究资源库</a>
+        <a href="works.html">作品目录</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow">家庭共读 · 三馆同藏</span>
+        <h1 id="hero-title"><span>把童年，</span><span>读成一座书房</span></h1>
+        <p class="hero-description">故事、音乐与古诗词，在一处安静地相遇。</p>
+        <div class="hero-actions">
+          <button class="button button-primary" type="button" data-category-target="all">
+            开始阅读
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
+          </button>
+          <button class="button" type="button" data-category-target="nursery">逛逛儿歌馆</button>
+        </div>
+        <svg class="hero-wave" viewBox="0 0 220 28" fill="none" aria-hidden="true">
+          <path d="M3 16c14-22 27 22 41 0s27 22 41 0 27 22 41 0 27 22 41 0 27 22 50 0" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="hero-collage" aria-label="点击书封可查看作品详情">
+        <span class="collage-shape shape-blue" aria-hidden="true"></span>
+        <span class="collage-shape shape-yellow" aria-hidden="true"></span>
+        <span class="collage-shape collage-dots" aria-hidden="true"></span>
+
+        <button class="mini-book book-yellow" type="button" data-work="night" aria-label="打开《静夜思》详情">
+          <span class="book-topline"><span>古诗词</span><span>唐</span></span>
+          <span class="cover-art" aria-hidden="true">
+            <svg viewBox="0 0 160 140"><circle cx="111" cy="39" r="28" fill="#fffaf0" stroke="#191917" stroke-width="3"/><path d="M10 116V61h84v55M51 61v55M10 88h84" fill="none" stroke="#191917" stroke-width="4"/><path d="M16 120h130" stroke="#191917" stroke-width="4"/></svg>
+          </span>
+          <span class="book-title">静夜思</span>
+          <span class="book-author">李白 · 唐</span>
+        </button>
+
+        <button class="mini-book book-blue" type="button" data-work="star" aria-label="打开 Twinkle, Twinkle, Little Star 详情">
+          <span class="book-topline"><span>ENGLISH</span><span>SONG</span></span>
+          <span class="cover-art" aria-hidden="true">
+            <svg viewBox="0 0 160 150" fill="#f1bd32" stroke="#fffaf0" stroke-width="2"><path d="m36 20 6 14 15 1-12 9 4 15-13-8-13 8 4-15-12-9 15-1z"/><path d="m116 64 8 19 21 1-16 13 5 20-18-11-18 11 5-20-16-13 21-1z"/><circle cx="42" cy="111" r="5"/><circle cx="124" cy="20" r="4"/></svg>
+          </span>
+          <span class="book-title">Twinkle, Twinkle, Little Star</span>
+          <span class="book-author">英文儿歌</span>
+        </button>
+
+        <button class="mini-book book-red" type="button" data-work="redhood" aria-label="打开《小红帽》详情">
+          <span class="book-topline"><span>故事馆</span><span>民间故事</span></span>
+          <span class="cover-art" aria-hidden="true">
+            <svg viewBox="0 0 180 150"><path d="M8 133 37 48l29 85zm78 0 33-104 34 104z" fill="#739348" stroke="#191917" stroke-width="3"/><path d="M92 137c-8-35 4-56 30-75" fill="none" stroke="#fffaf0" stroke-width="14"/><path d="M87 78c0-25 13-42 31-42s30 17 30 42l-15 9-11-13-13 13z" fill="#f4eddc" stroke="#191917" stroke-width="3"/></svg>
+          </span>
+          <span class="book-title">小红帽</span>
+          <span class="book-author">民间故事</span>
+        </button>
+
+        <button class="mini-book book-green" type="button" data-work="swallow" aria-label="打开《小燕子》详情">
+          <span class="book-topline"><span>经典儿歌</span><span>自然</span></span>
+          <span class="cover-art" aria-hidden="true">
+            <svg viewBox="0 0 150 130"><circle cx="108" cy="31" r="19" fill="#f1bd32" stroke="#191917" stroke-width="3"/><path d="M18 108c31-9 45-34 55-72M48 79c-18-2-27-11-30-25 17-2 29 6 35 18M62 54c10-14 23-18 38-12-5 16-17 23-34 21" fill="#fffaf0" stroke="#191917" stroke-width="3" stroke-linejoin="round"/><path d="M8 113c24-12 37 12 60 0s38 12 74 0" fill="none" stroke="#2858b8" stroke-width="4"/></svg>
+          </span>
+          <span class="book-title">小燕子</span>
+          <span class="book-author">候选目录 · 权利待核验</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="collections" id="collections" aria-labelledby="collections-title">
+      <div class="shell">
+        <div class="section-heading">
+          <h2 id="collections-title">三座馆藏，各有一色</h2>
+          <p>像翻开剪贴簿里的馆藏签，选一种颜色，也选一种今天的心情。</p>
+        </div>
+        <div class="collection-tabs" id="collection-tabs" role="tablist" aria-label="按馆藏筛选作品">
+          <button class="collection-tab tab-all" id="tab-all" type="button" role="tab" aria-selected="true" aria-controls="works-grid" tabindex="0" data-category="all">
+            <span class="tab-label">全部馆藏签</span><span class="tab-name">全部书目</span>
+          </button>
+          <button class="collection-tab tab-story" id="tab-story" type="button" role="tab" aria-selected="false" aria-controls="works-grid" tabindex="-1" data-category="story">
+            <span class="tab-label">故事馆藏签</span><span class="tab-name">故事馆</span>
+          </button>
+          <button class="collection-tab tab-music" id="tab-music" type="button" role="tab" aria-selected="false" aria-controls="works-grid" tabindex="-1" data-category="music">
+            <span class="tab-label">音乐馆藏签</span><span class="tab-name">音乐馆</span>
+          </button>
+          <button class="collection-tab tab-poetry" id="tab-poetry" type="button" role="tab" aria-selected="false" aria-controls="works-grid" tabindex="-1" data-category="poetry">
+            <span class="tab-label">诗词馆藏签</span><span class="tab-name">古诗词馆</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="works" id="works" aria-labelledby="works-title">
+      <div class="shell">
+        <div class="section-heading works-heading">
+          <h2 id="works-title">今天，读什么？</h2>
+          <p>从一首诗、一个故事或一段熟悉的旋律开始。</p>
+        </div>
+
+        <form class="search-panel" id="search-form" role="search">
+          <div class="search-field">
+            <label for="library-search">搜索馆藏</label>
+            <div class="search-control">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+              <input id="library-search" type="search" placeholder="找故事、诗词、作者……" autocomplete="off" aria-describedby="results-status">
+            </div>
+          </div>
+          <button class="button search-clear" id="clear-search" type="button" disabled>清空</button>
+        </form>
+        <p class="results-status" id="results-status" role="status" aria-live="polite">显示全部 8 部示例作品</p>
+
+        <div class="works-grid" id="works-grid" role="tabpanel" aria-labelledby="tab-all">
+          <button class="work-card" type="button" data-work="redhood" data-category="story" data-search="小红帽 民间故事 儿童文学 故事馆 故事" aria-haspopup="dialog" aria-label="打开《小红帽》作品详情">
+            <span class="card-cover card-cover-literature">
+              <span class="cover-kicker">民间故事</span>
+              <span class="cover-art" aria-hidden="true">
+                <svg viewBox="0 0 220 180"><path d="M0 170 45 45l45 125zm107 0 42-145 48 145z" fill="#739348" stroke="#191917" stroke-width="4"/><path d="M104 177c-10-45 10-83 45-105" fill="none" stroke="#fffaf0" stroke-width="19"/><path d="M101 91c0-35 19-58 43-58s42 23 42 58l-22 12-16-19-18 19z" fill="#f4eddc" stroke="#191917" stroke-width="4"/><circle cx="145" cy="67" r="3" fill="#191917"/></svg>
+              </span>
+              <span class="cover-title">小红帽</span>
+            </span>
+            <span class="card-body">
+              <span class="card-type">儿童文学 / 民间故事</span>
+              <span class="card-title">小红帽</span>
+              <span class="card-author">民间故事</span>
+              <span class="card-action">翻开书封<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5c5-1 7 0 8 2 1-2 3-3 8-2v14c-5-1-7 0-8 2-1-2-3-3-8-2zM12 7v14"/></svg></span>
+            </span>
+          </button>
+
+          <button class="work-card" type="button" data-work="paddle" data-category="music" data-search="让我们荡起双桨 乔羽 刘炽 经典儿歌 自然 校园 合唱 CN-C01" aria-haspopup="dialog" aria-label="打开《让我们荡起双桨》目录详情">
+            <span class="card-cover card-cover-paddle">
+              <span class="cover-kicker">CN-C01 · 权利待核验</span>
+              <span class="cover-art" aria-hidden="true">
+                <svg viewBox="0 0 220 180"><path d="M27 103h150l-24 38H60z" fill="#e64a38" stroke="#fffaf0" stroke-width="4"/><path d="m70 34 88 114M61 27l20 4-9 20" fill="none" stroke="#f1bd32" stroke-width="7" stroke-linecap="round"/><path d="M8 155c28-17 48 17 77 0s49 17 78 0 35 4 49 0M21 85c25-15 42 10 66-3s41 9 70-4" fill="none" stroke="#fffaf0" stroke-width="4"/></svg>
+              </span>
+              <span class="cover-title">让我们荡起双桨</span>
+            </span>
+            <span class="card-body">
+              <span class="card-type">经典儿歌 / 自然与校园</span>
+              <span class="card-title">让我们荡起双桨</span>
+              <span class="card-author">乔羽词 · 刘炽曲</span>
+              <span class="card-action">查看目录<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5c5-1 7 0 8 2 1-2 3-3 8-2v14c-5-1-7 0-8 2-1-2-3-3-8-2zM12 7v14"/></svg></span>
+            </span>
+          </button>
+
+          <button class="work-card" type="button" data-work="swallow" data-category="music" data-search="小燕子 经典儿歌 动物 自然 春天 CN-C03" aria-haspopup="dialog" aria-label="打开《小燕子》目录详情">
+            <span class="card-cover card-cover-swallow">
+              <span class="cover-kicker">CN-C03 · 权利待核验</span>
+              <span class="cover-art" aria-hidden="true">
+                <svg viewBox="0 0 220 180"><circle cx="164" cy="43" r="29" fill="#f1bd32" stroke="#191917" stroke-width="4"/><path d="M38 160c43-18 65-58 79-121M79 112c-27-3-42-17-47-40 26-3 45 9 54 29M101 74c16-22 36-28 59-18-8 25-27 36-53 32" fill="#fffaf0" stroke="#191917" stroke-width="4" stroke-linejoin="round"/><path d="M24 160h177" stroke="#191917" stroke-width="5"/></svg>
+              </span>
+              <span class="cover-title">小燕子</span>
+            </span>
+            <span class="card-body">
+              <span class="card-type">经典儿歌 / 动物与自然</span>
+              <span class="card-title">小燕子</span>
+              <span class="card-author">词曲与录音版本待核验</span>
+              <span class="card-action">查看目录<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5c5-1 7 0 8 2 1-2 3-3 8-2v14c-5-1-7 0-8 2-1-2-3-3-8-2zM12 7v14"/></svg></span>
+            </span>
+          </button>
+
+          <button class="work-card" type="button" data-work="handkerchief" data-category="music" data-search="丢手绢 经典儿歌 游戏 互动 CN-C14" aria-haspopup="dialog" aria-label="打开《丢手绢》目录详情">
+            <span class="card-cover card-cover-handkerchief">
+              <span class="cover-kicker">CN-C14 · 权利待核验</span>
+              <span class="cover-art" aria-hidden="true">
+                <svg viewBox="0 0 220 180"><circle cx="110" cy="91" r="68" fill="none" stroke="#fffaf0" stroke-width="4" stroke-dasharray="9 10"/><rect x="69" y="49" width="83" height="83" rx="3" fill="#f4eddc" stroke="#191917" stroke-width="4" transform="rotate(12 110 91)"/><path d="m84 67 51 51M136 72l-47 47" stroke="#e64a38" stroke-width="5" transform="rotate(12 110 91)"/><circle cx="42" cy="41" r="8" fill="#f1bd32"/><circle cx="183" cy="139" r="8" fill="#2858b8"/></svg>
+              </span>
+              <span class="cover-title">丢手绢</span>
+            </span>
+            <span class="card-body">
+              <span class="card-type">经典儿歌 / 游戏与互动</span>
+              <span class="card-title">丢手绢</span>
+              <span class="card-author">传统游戏歌与创作版本待区分</span>
+              <span class="card-action">查看目录<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5c5-1 7 0 8 2 1-2 3-3 8-2v14c-5-1-7 0-8 2-1-2-3-3-8-2zM12 7v14"/></svg></span>
+            </span>
+          </button>
+
+          <button class="work-card" type="button" data-work="moonlight" data-category="music" data-search="月光光 闽南 南方地区 摇篮 民间童谣 CN-T01" aria-haspopup="dialog" aria-label="打开《月光光》目录详情">
+            <span class="card-cover card-cover-moonlight">
+              <span class="cover-kicker">CN-T01 · 版本待核验</span>
+              <span class="cover-art" aria-hidden="true">
+                <svg viewBox="0 0 220 180"><path d="M145 22c-34 5-47 52-14 72 12 8 27 7 38 0-10 22-33 35-56 28-34-10-48-48-28-77 17-25 42-30 60-23z" fill="#fffaf0" stroke="#191917" stroke-width="4"/><path d="M11 151c26-16 45 16 72 0s45 16 72 0 39 9 56 0M27 127c20-12 35 10 56 0" fill="none" stroke="#2858b8" stroke-width="5"/><circle cx="43" cy="42" r="5" fill="#e64a38"/><circle cx="181" cy="116" r="4" fill="#191917"/></svg>
+              </span>
+              <span class="cover-title">月光光</span>
+            </span>
+            <span class="card-body">
+              <span class="card-type">民间童谣 / 摇篮与方言</span>
+              <span class="card-title">月光光</span>
+              <span class="card-author">闽南及南方地区异文</span>
+              <span class="card-action">查看目录<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5c5-1 7 0 8 2 1-2 3-3 8-2v14c-5-1-7 0-8 2-1-2-3-3-8-2zM12 7v14"/></svg></span>
+            </span>
+          </button>
+
+          <button class="work-card" type="button" data-work="night" data-category="poetry" data-search="静夜思 李白 唐 古诗词 诗词 诗歌" aria-haspopup="dialog" aria-label="打开《静夜思》作品详情">
+            <span class="card-cover card-cover-night">
+              <span class="cover-kicker">李白 · 唐</span>
+              <span class="cover-art" aria-hidden="true">
+                <svg viewBox="0 0 220 180"><circle cx="158" cy="45" r="38" fill="#fffaf0" stroke="#191917" stroke-width="4"/><path d="M21 164V73h116v91M78 73v91M21 117h116" fill="none" stroke="#191917" stroke-width="5"/><path d="M15 172h186" stroke="#191917" stroke-width="5"/><path d="m146 53 9 4 8-6" fill="none" stroke="#f1bd32" stroke-width="3"/></svg>
+              </span>
+              <span class="cover-title">静夜思</span>
+            </span>
+            <span class="card-body">
+              <span class="card-type">古诗词 / 唐</span>
+              <span class="card-title">静夜思</span>
+              <span class="card-author">李白 · 唐</span>
+              <span class="card-action">翻开书封<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5c5-1 7 0 8 2 1-2 3-3 8-2v14c-5-1-7 0-8 2-1-2-3-3-8-2zM12 7v14"/></svg></span>
+            </span>
+          </button>
+
+          <button class="work-card" type="button" data-work="goose" data-category="poetry" data-search="咏鹅 骆宾王 唐 古诗词 诗词 诗歌" aria-haspopup="dialog" aria-label="打开《咏鹅》作品详情">
+            <span class="card-cover card-cover-goose">
+              <span class="cover-kicker">骆宾王 · 唐</span>
+              <span class="cover-art" aria-hidden="true">
+                <svg viewBox="0 0 220 180"><path d="M24 133c30-49 65-37 85-12 11-66 11-94 44-91 26 2 29 23 13 36-16 13-22 6-22 33 0 54-47 69-87 54" fill="#fffaf0" stroke="#191917" stroke-width="4"/><path d="m161 41 36 11-34 12" fill="#e64a38" stroke="#191917" stroke-width="4"/><circle cx="168" cy="42" r="3.5" fill="#191917"/><path d="M9 158c34-17 53 17 86 0s55 17 107 0" fill="none" stroke="#2858b8" stroke-width="5"/></svg>
+              </span>
+              <span class="cover-title">咏鹅</span>
+            </span>
+            <span class="card-body">
+              <span class="card-type">古诗词 / 唐</span>
+              <span class="card-title">咏鹅</span>
+              <span class="card-author">骆宾王 · 唐</span>
+              <span class="card-action">翻开书封<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5c5-1 7 0 8 2 1-2 3-3 8-2v14c-5-1-7 0-8 2-1-2-3-3-8-2zM12 7v14"/></svg></span>
+            </span>
+          </button>
+
+          <button class="work-card" type="button" data-work="star" data-category="music" data-search="twinkle twinkle little star 英文儿歌 英文 儿歌 english song" aria-haspopup="dialog" aria-label="打开 Twinkle, Twinkle, Little Star 作品详情">
+            <span class="card-cover card-cover-star">
+              <span class="cover-kicker">ENGLISH SONG</span>
+              <span class="cover-art" aria-hidden="true">
+                <svg viewBox="0 0 220 180" fill="#f1bd32" stroke="#fffaf0" stroke-width="3"><path d="m48 23 8 18 20 1-15 12 5 20-18-11-18 11 5-20-15-12 20-1z"/><path d="m155 70 11 26 28 1-22 17 7 28-24-15-24 15 7-28-22-17 28-1z"/><circle cx="59" cy="135" r="7"/><circle cx="174" cy="28" r="6"/></svg>
+              </span>
+              <span class="cover-title english">Twinkle, Twinkle, Little Star</span>
+            </span>
+            <span class="card-body">
+              <span class="card-type">英文儿歌 / ENGLISH SONG</span>
+              <span class="card-title">Twinkle, Twinkle, Little Star</span>
+              <span class="card-author">英文儿歌</span>
+              <span class="card-action">翻开书封<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5c5-1 7 0 8 2 1-2 3-3 8-2v14c-5-1-7 0-8 2-1-2-3-3-8-2zM12 7v14"/></svg></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="no-results" id="no-results" hidden>
+          <h3>这一页还没有找到</h3>
+          <p id="no-results-copy">换个标题、作者或类型试试，也可以回到全部书目。</p>
+          <button class="button" id="reset-filters" type="button">查看全部作品</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="about-paper">
+          <div>
+            <h2 id="about-title">书房可以玩味，<br>来路必须清楚。</h2>
+            <p>为家庭阅读保留亲切与好奇，也把内容来源和权利核验放在发布之前。</p>
+            <ul class="principles" aria-label="内容原则">
+              <li>内容质量优先</li><li>来源可追溯</li><li>人工审核后发布</li>
+            </ul>
+          </div>
+          <div class="about-note">
+            <strong>先核验，再发布</strong>
+            <span>每一本被打开的书，都应带着清楚的出处。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+  
+  
+  
+  
+  
+  <!-- LIBRARY_LINKS:MAP -->
+    <section class="shell lib-map" aria-labelledby="lib-map-title">
+      <div class="lib-map-box">
+        <h2 id="lib-map-title">全站地图 · 三馆与研究层</h2>
+        <p>童年书房分为研究资源库（Research）与儿童使用层（Library）。三馆目录可以互相跳转，音乐馆八个专题横向串联，作品目录可回链到专题与研究层。</p>
+        <div class="lib-halls">
+<a class="lib-hall lib-story" href="story.html"><b>故事馆</b><span>六个专题 · 100 条研究记录</span></a>
+<a class="lib-hall lib-music" href="music.html"><b>音乐馆</b><span>八专题 · 105 条发现目录</span></a>
+<a class="lib-hall lib-poetry" href="poetry.html"><b>古诗词馆</b><span>十个专题 · 60 条研究记录</span></a>
+<a class="lib-hall lib-research" href="research.html"><b>研究资源库</b><span>五维状态 · 来源与边界</span></a>
+        </div>
+        <div class="lib-specs">
+          <strong>音乐馆八专题：</strong>
+<a href="specialty-childhood.html">01 童年的歌</a>
+<a href="specialty-nature.html">02 大自然的歌</a>
+<a href="specialty-play.html">03 游戏与伙伴</a>
+<a href="specialty-lullaby.html">04 月亮与摇篮曲</a>
+<a href="specialty-classical.html">05 古典音乐的童年</a>
+<a href="specialty-world.html">06 世界的童谣</a>
+<a href="specialty-forgotten.html">07 被遗忘的童谣</a>
+<a href="specialty-original.html">08 新芽原创</a>
+        </div>
+        <div class="lib-more">
+          <a href="works.html">作品目录（音乐馆 105 条）</a>
+          <a href="../docs/PROJECT_PRINCIPLES.md">项目顶层原则</a>
+          <a href="../docs/DATA_MODEL.md">统一数据模型</a>
+          <a href="../docs/COPYRIGHT_POLICY.md">来源与权利说明</a>
+        </div>
+      </div>
+    </section>
+    <!-- /LIBRARY_LINKS:MAP -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">童年书房</div>
+      <p class="rights-note">原型示例内容，正式发布前逐条核验来源与权利。</p>
+    </div>
+  </footer>
+
+  <dialog id="work-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-rights">
+    <div class="dialog-header">
+      <p class="dialog-kicker">童年书房 · 作品详情</p>
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="关闭作品详情" autofocus>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg>
+      </button>
+    </div>
+    <div class="dialog-body">
+      <h2 id="dialog-title"></h2>
+      <p class="dialog-author" id="dialog-author"></p>
+      <dl class="dialog-meta">
+        <dt>所属馆藏</dt><dd id="dialog-category"></dd>
+        <dt>作品类型</dt><dd id="dialog-type"></dd>
+      </dl>
+      <p class="dialog-excerpt" id="dialog-excerpt"></p>
+      <p class="dialog-description" id="dialog-description"></p>
+      <p class="dialog-rights" id="dialog-rights">来源与版权：原型示例内容，正式发布前逐条核验来源与权利。</p>
+    </div>
+  </dialog>
+
+  <script>
+    (() => {
+      const tabs = Array.from(document.querySelectorAll('[role="tab"][data-category]'));
+      const cards = Array.from(document.querySelectorAll('.work-card'));
+      const searchInput = document.getElementById('library-search');
+      const clearButton = document.getElementById('clear-search');
+      const resultsStatus = document.getElementById('results-status');
+      const noResults = document.getElementById('no-results');
+      const noResultsCopy = document.getElementById('no-results-copy');
+      const worksGrid = document.getElementById('works-grid');
+      let activeCategory = 'all';
+
+      const works = {
+        redhood: {
+          title: '小红帽',
+          author: '民间故事',
+          category: '故事馆',
+          type: '儿童文学 / 民间故事',
+          excerpt: '',
+          description: '一则经典民间故事。本原型仅展示基础作品信息，正文与具体版本来源尚待核验。'
+        },
+        paddle: {
+          title: '让我们荡起双桨',
+          author: '乔羽词 · 刘炽曲',
+          category: '音乐馆',
+          type: '经典儿歌 / 自然与校园 / CN-C01',
+          excerpt: '',
+          description: '项目候选目录中的重点作品。当前只展示基础元数据；歌词、旋律、编曲与具体录音版本仍需分别核验，暂不提供站内播放。'
+        },
+        swallow: {
+          title: '小燕子',
+          author: '词曲与录音版本待核验',
+          category: '音乐馆',
+          type: '经典儿歌 / 动物与自然 / CN-C03',
+          excerpt: '',
+          description: '项目候选目录中的自然主题儿歌。需继续核实词曲作者、原始版本与具体录音来源，本原型不展示歌词和音频。'
+        },
+        handkerchief: {
+          title: '丢手绢',
+          author: '传统游戏歌与创作版本待区分',
+          category: '音乐馆',
+          type: '经典儿歌 / 游戏与互动 / CN-C14',
+          excerpt: '',
+          description: '游戏歌候选条目。传统游戏歌与现代创作版本需要分开记录，当前仅展示目录信息，权利状态为待核验。'
+        },
+        moonlight: {
+          title: '月光光',
+          author: '闽南及南方地区异文',
+          category: '音乐馆',
+          type: '民间童谣 / 摇篮与方言 / CN-T01',
+          excerpt: '',
+          description: '地方童谣候选条目。标题相同的作品可能存在不同地区、方言和文本版本，需确定具体采录版本后再审核发布。'
+        },
+        night: {
+          title: '静夜思',
+          author: '李白 · 唐',
+          category: '古诗词馆',
+          type: '古诗词 / 唐',
+          excerpt: '床前明月光，疑是地上霜。',
+          description: '以月光与乡愁为主题的唐代诗作，本原型选用公版古诗短句作为演示。'
+        },
+        goose: {
+          title: '咏鹅',
+          author: '骆宾王 · 唐',
+          category: '古诗词馆',
+          type: '古诗词 / 唐',
+          excerpt: '鹅，鹅，鹅，曲项向天歌。',
+          description: '以白鹅为描绘对象的唐代诗作，本原型选用公版古诗短句作为演示。'
+        },
+        star: {
+          title: 'Twinkle, Twinkle, Little Star',
+          author: '英文儿歌',
+          category: '音乐馆',
+          type: '英文儿歌 / English song',
+          excerpt: '',
+          description: '英文儿歌示例条目。本原型仅展示作品名称与类别，歌词版本及来源信息尚待核验。'
+        }
+      };
+
+      function normalize(value) {
+        return value.trim().toLocaleLowerCase();
+      }
+
+      function applyFilters() {
+        const query = normalize(searchInput.value);
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const categoryMatches = activeCategory === 'all' || card.dataset.category === activeCategory;
+          const searchMatches = !query || normalize(card.dataset.search).includes(query);
+          const visible = categoryMatches && searchMatches;
+          card.hidden = !visible;
+          if (visible) visibleCount += 1;
+        });
+
+        clearButton.disabled = !searchInput.value;
+        noResults.hidden = visibleCount !== 0;
+        worksGrid.hidden = visibleCount === 0;
+
+        const activeTab = tabs.find(tab => tab.dataset.category === activeCategory);
+        const categoryName = activeTab ? activeTab.querySelector('.tab-name').textContent : '全部书目';
+        if (visibleCount === 0) {
+          resultsStatus.textContent = '没有找到匹配的示例作品';
+          noResultsCopy.textContent = query
+            ? `没有找到与“${searchInput.value.trim()}”匹配的作品，换个标题、作者或类型试试。`
+            : '这个馆藏当前没有示例作品，可以回到全部书目继续浏览。';
+        } else {
+          resultsStatus.textContent = `${categoryName}：显示 ${visibleCount} 部示例作品${query ? `，关键词“${searchInput.value.trim()}”` : ''}`;
+        }
+      }
+
+      function selectCategory(category, moveFocus = false) {
+        activeCategory = category;
+        tabs.forEach(tab => {
+          const selected = tab.dataset.category === category;
+          tab.setAttribute('aria-selected', String(selected));
+          tab.tabIndex = selected ? 0 : -1;
+          if (selected) {
+            worksGrid.setAttribute('aria-labelledby', tab.id);
+            if (moveFocus) tab.focus();
+          }
+        });
+        applyFilters();
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectCategory(tab.dataset.category));
+        tab.addEventListener('keydown', event => {
+          let targetIndex;
+          if (event.key === 'ArrowRight') targetIndex = (index + 1) % tabs.length;
+          if (event.key === 'ArrowLeft') targetIndex = (index - 1 + tabs.length) % tabs.length;
+          if (event.key === 'Home') targetIndex = 0;
+          if (event.key === 'End') targetIndex = tabs.length - 1;
+          if (targetIndex !== undefined) {
+            event.preventDefault();
+            selectCategory(tabs[targetIndex].dataset.category, true);
+          }
+        });
+      });
+
+      searchInput.addEventListener('input', applyFilters);
+      document.getElementById('search-form').addEventListener('submit', event => event.preventDefault());
+      clearButton.addEventListener('click', () => {
+        searchInput.value = '';
+        applyFilters();
+        searchInput.focus();
+      });
+      document.getElementById('reset-filters').addEventListener('click', () => {
+        searchInput.value = '';
+        selectCategory('all', true);
+      });
+
+      document.querySelectorAll('[data-category-target]').forEach(button => {
+        button.addEventListener('click', () => {
+          selectCategory(button.dataset.categoryTarget);
+          document.getElementById('works').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      const dialog = document.getElementById('work-dialog');
+      const dialogExcerpt = document.getElementById('dialog-excerpt');
+
+      document.querySelectorAll('[data-work]').forEach(button => {
+        button.addEventListener('click', () => {
+          const work = works[button.dataset.work];
+          if (!work) return;
+          document.getElementById('dialog-title').textContent = work.title;
+          document.getElementById('dialog-author').textContent = work.author;
+          document.getElementById('dialog-category').textContent = work.category;
+          document.getElementById('dialog-type').textContent = work.type;
+          dialogExcerpt.textContent = work.excerpt;
+          dialogExcerpt.hidden = !work.excerpt;
+          document.getElementById('dialog-description').textContent = work.description;
+          dialog.showModal();
+          document.body.classList.add('dialog-open');
+        });
+      });
+
+      document.getElementById('dialog-close').addEventListener('click', () => dialog.close());
+      dialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+      dialog.addEventListener('click', event => {
+        if (event.target !== dialog) return;
+        const rect = dialog.getBoundingClientRect();
+        const inside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+        if (!inside) dialog.close();
+      });
+
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+
+      function setMenu(open) {
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? '收起导航' : '展开导航');
+        mobileNav.hidden = !open;
+      }
+
+      menuToggle.addEventListener('click', () => setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
+      mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+          setMenu(false);
+          menuToggle.focus();
+        }
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 800) setMenu(false);
+      });
+    })();
+  </script>
+</body>
+</html>

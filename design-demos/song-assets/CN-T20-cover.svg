@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">CN-T20 — 会稽童谣（历史文献条目）</title>
+  <desc id="desc">童年书房原创主题封面，历史童谣</desc>
+  <defs><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.8" fill="#191917" opacity=".22"/></pattern></defs>
+  <rect width="800" height="600" fill="#f4eddc"/><rect width="800" height="600" fill="url(#dots)"/>
+  <rect x="18" y="18" width="764" height="564" fill="none" stroke="#191917" stroke-width="8"/>
+  <rect x="42" y="42" width="14" height="116" fill="#e64a38" stroke="#191917" stroke-width="4"/>
+  <rect x="548" y="48" width="184" height="52" fill="#fffaf0" stroke="#191917" stroke-width="4" transform="rotate(3 640 74)"/>
+  <text x="640" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#191917">CN-T20</text>
+  <g fill="#191917" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', SimSun, serif" font-size="42" font-weight="900"><text x="54" y="96" class="cover-title">会稽童谣</text><text x="54" y="146" class="cover-title">（历史文献条目）</text></g>
+  <path d="M96 206 Q202 168 306 216 V450 Q202 402 96 442 Z M306 216 Q412 168 518 206 V442 Q412 402 306 450 Z" fill="#fffaf0" stroke="#191917" stroke-width="7" stroke-linejoin="round"/><path d="M306 216 V450 M126 254 Q204 232 274 258 M126 300 Q204 278 274 304 M340 258 Q410 232 488 254 M340 304 Q410 278 488 300" fill="none" stroke="#191917" stroke-width="7" stroke-linejoin="round"/><path d="M548 194 L694 172 L714 406 L568 428 Z" fill="#e64a38" stroke="#191917" stroke-width="7" stroke-linejoin="round"/><path d="M580 244 L672 228 M586 292 L678 276 M592 340 L684 324" stroke="#fffaf0" stroke-width="10"/>
+  <rect x="48" y="520" width="704" height="38" fill="#fffaf0" stroke="#191917" stroke-width="4"/>
+  <text x="64" y="546" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="19" font-weight="800" fill="#191917">童年书房 · 传统/地方童谣 · 版本核验 · 原创封面</text>
+</svg>

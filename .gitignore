@@ -33,3 +33,30 @@ media/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Public repo = docs + source only.
+# Local audio includes 27 third-party recordings collected for internal research
+# (rights pending). Keeping them out of the public repository is required by
+# docs/COPYRIGHT_POLICY.md; the local 8017 preview still uses them.
+design-demos/audio/*.mp3
+design-demos/audio/*.m4a
+design-demos/audio/*.mp4
+design-demos/audio/*.flac
+design-demos/audio/*.wav
+design-demos/audio/*.ogg
+design-demos/audio/*.oga
+design-demos/audio/*.opus
+design-demos/audio/*.webm
+design-demos/audio/*.aac
+
+# Reference images and Playwright validation screenshots are local artifacts.
+design-demos/refs/*.png
+design-demos/refs/*.jpg
+design-demos/refs/*.jpeg
+design-demos/refs/*.webp
+design-demos/refs/*.txt
+design-demos/*.png
+design-demos/*.jpg
+design-demos/shots-*/
+design-demos/_cover_check.*
+design-demos/probe-commons-run.log

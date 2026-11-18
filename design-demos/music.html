@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="童年书房 · 儿童音乐馆：免费供大众及教育使用的儿童音乐数据库，以中国经典为根，以世界经典为窗，以优秀原创为未来。">
+  <title>儿童音乐馆｜童年书房</title>
+  <style>
+    :root {
+      --paper: #f4eddc; --paper-light: #fffaf0; --ink: #191917;
+      --red: #e64a38; --yellow: #f1bd32; --blue: #2858b8; --green: #739348; --brown: #8b5e3c;
+      --line: 3px solid var(--ink); --shadow: 7px 7px 0 var(--ink);
+      --serif: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      --sans: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background-color: var(--paper);
+      background-image: radial-gradient(circle, rgba(25,25,23,.18) .8px, transparent .9px);
+      background-size: 9px 9px; font-family: var(--sans); font-size: 16px; line-height: 1.7; overflow-x: clip;
+    }
+    a { color: inherit; } a, button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
+    svg { display: block; max-width: 100%; }
+    h1, h2, h3, p { margin-top: 0; }
+    section { scroll-margin-top: 104px; }
+    ::selection { color: var(--paper-light); background: var(--blue); }
+    :focus-visible { outline: 4px solid var(--blue); outline-offset: 4px; }
+    .shell { width: min(calc(100% - 48px), 1280px); margin-inline: auto; }
+
+    .site-header { position: sticky; z-index: 30; top: 0; border-bottom: var(--line); background-color: var(--paper); background-image: radial-gradient(circle, rgba(25,25,23,.16) .8px, transparent .9px); background-size: 9px 9px; }
+    .header-inner { min-height: 84px; display: flex; align-items: center; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; min-height: 48px; margin-right: auto; text-decoration: none; font-family: var(--serif); font-size: 25px; font-weight: 900; letter-spacing: .08em; white-space: nowrap; }
+    .brand small { margin-left: 12px; padding-left: 12px; border-left: 2px solid var(--ink); font-family: var(--sans); font-size: 12px; font-weight: 700; line-height: 1.25; letter-spacing: .08em; }
+    .desktop-nav { display: flex; align-items: center; gap: 4px; }
+    .desktop-nav a, .mobile-nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 14px; text-decoration: none; font-weight: 700; }
+    .desktop-nav a:hover { text-decoration: underline 3px var(--red); text-underline-offset: 6px; }
+    .desktop-nav a[aria-current="page"] { text-decoration: underline 3px var(--red); text-underline-offset: 6px; }
+    .menu-toggle { display: none; width: 48px; height: 48px; padding: 11px; border: var(--line); background: var(--yellow); box-shadow: 3px 3px 0 var(--ink); }
+    .menu-toggle span { display: block; width: 100%; height: 2px; margin: 4px 0; background: var(--ink); }
+    .mobile-nav { padding: 8px 0 18px; border-top: 2px solid var(--ink); }
+    .mobile-nav a { width: 100%; justify-content: flex-start; border-bottom: 1px dashed var(--ink); }
+
+    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 11px 22px; border: var(--line); border-radius: 0; background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); font-weight: 800; line-height: 1.35; text-decoration: none; transition: translate .16s ease, box-shadow .16s ease; }
+    .button:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .button:active { translate: 3px 3px; box-shadow: 1px 1px 0 var(--ink); }
+    .button-primary { background: var(--yellow); }
+    .button svg { width: 20px; height: 20px; flex: 0 0 auto; }
+
+    .hero { padding-block: 60px 50px; }
+    .eyebrow { display: inline-block; margin-bottom: 22px; padding: 5px 13px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 3px 3px 0 var(--ink); font-size: 14px; font-weight: 800; letter-spacing: .12em; transform: rotate(-2deg); }
+    .hero h1 { margin-bottom: 18px; font-family: var(--serif); font-size: clamp(42px, 5vw, 64px); font-weight: 900; line-height: 1.14; letter-spacing: -.04em; }
+    .hero h1 .accent { color: var(--red); }
+    .hero-desc { max-width: 620px; margin-bottom: 26px; font-size: 18px; line-height: 1.9; font-weight: 500; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; }
+
+    .section-heading { margin-bottom: 30px; }
+    .section-heading h2 { font-family: var(--serif); font-size: clamp(28px, 3.4vw, 38px); font-weight: 900; letter-spacing: -.02em; margin-bottom: 8px; }
+    .section-heading p { font-size: 15px; color: #4a4841; max-width: 640px; margin-bottom: 0; }
+
+    .specialties { padding-block: 24px 36px; }
+    .spec-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .spec-card {
+      display: flex; flex-direction: column; gap: 8px; text-align: left;
+      border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--ink);
+      padding: 18px 16px; text-decoration: none; transition: translate .15s ease, box-shadow .15s ease;
+      position: relative;
+    }
+    .spec-card:hover { translate: -2px -2px; box-shadow: 7px 7px 0 var(--ink); }
+    .spec-card .no { font-size: 12px; font-weight: 900; letter-spacing: .1em; }
+    .spec-card h3 { margin: 0; font-family: var(--serif); font-size: 20px; font-weight: 900; }
+    .spec-card p { margin: 0; font-size: 13px; color: #4a4841; line-height: 1.55; }
+    .spec-card .go { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; }
+    .spec-card .go svg { width: 16px; height: 16px; }
+    .spec-card .count { position: absolute; top: -11px; right: 12px; padding: 1px 8px; border: 2px solid var(--ink); background: var(--yellow); font-size: 11px; font-weight: 800; transform: rotate(2deg); }
+    .s-childhood .no { color: var(--red); }
+    .s-nature .no { color: var(--green); }
+    .s-play .no { color: #b8860b; }
+    .s-lullaby .no { color: var(--blue); }
+    .s-classical .no { color: var(--brown); }
+    .s-world .no { color: var(--blue); }
+    .s-forgotten .no { color: var(--brown); }
+    .s-original .no { color: var(--green); }
+
+    .pillars { padding-block: 24px 36px; }
+    .pillar-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .pillar-card { border: var(--line); background: var(--paper-light); box-shadow: var(--shadow); padding: 22px 20px; }
+    .pillar-card .kicker { font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+    .pillar-card h3 { font-family: var(--serif); font-size: 22px; font-weight: 900; margin: 6px 0; }
+    .pillar-card .num { font-size: 26px; font-weight: 900; font-family: var(--serif); }
+    .pillar-card p { margin: 6px 0 0; font-size: 13px; color: #4a4841; }
+    .p-china .num { color: var(--red); }
+    .p-world .num { color: var(--blue); }
+    .p-original .num { color: var(--green); }
+
+    .catalogue { padding-block: 24px 56px; }
+    .catalogue-band { border: var(--line); background: var(--blue); box-shadow: var(--shadow); color: var(--paper-light); padding: 32px 32px; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+    .catalogue-band .copy { flex: 1 1 380px; }
+    .catalogue-band h2 { font-family: var(--serif); font-size: 26px; font-weight: 900; margin-bottom: 8px; }
+    .catalogue-band p { margin: 0; font-size: 15px; opacity: .92; }
+    .catalogue-band .button { background: var(--yellow); color: var(--ink); }
+
+    .footnote { padding-block: 8px 60px; }
+    .footnote p { max-width: 780px; font-size: 13px; color: #55534b; }
+
+    @media (max-width: 1000px) { .spec-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 900px) { .pillar-row { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) {
+      .desktop-nav { display: none; } .menu-toggle { display: block; } .header-inner { gap: 12px; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .hero { padding-block: 40px 36px; }
+      .catalogue-band { padding: 26px 22px; }
+    }
+  
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    /* ===== LIBRARY_LINKS:CSS ===== */
+    .lib-map { padding-block: 26px 54px; }
+    .lib-map-box { border: var(--line); background: var(--paper-light); box-shadow: var(--shadow); padding: 26px 26px 22px; }
+    .lib-map-box h2 { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); font-weight: 900; margin-bottom: 6px; }
+    .lib-map-box > p { font-size: 14px; color: #4a4841; margin-bottom: 20px; }
+    .lib-halls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lib-hall { display: flex; flex-direction: column; gap: 4px; padding: 14px 14px 12px; border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); text-decoration: none; transition: translate .15s ease, box-shadow .15s ease; }
+    .lib-hall:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .lib-hall b { font-family: var(--serif); font-size: 20px; font-weight: 900; }
+    .lib-hall span { font-size: 12px; line-height: 1.5; color: #4a4841; }
+    .lib-hall.lib-story { background: #fbe3dd; }
+    .lib-hall.lib-music { background: #fdf1c9; }
+    .lib-hall.lib-poetry { background: #e2ebd7; }
+    .lib-hall.lib-research { background: #dde5f6; }
+    .lib-hall[aria-current="page"] { outline: 3px dashed var(--ink); outline-offset: 3px; }
+    .lib-specs { margin-top: 20px; padding-top: 16px; border-top: 2px dashed var(--ink); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .lib-specs > strong { font-size: 13px; margin-right: 4px; }
+    .lib-specs a { padding: 4px 10px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-specs a:hover { background: var(--yellow); }
+    .lib-specs a[aria-current="page"] { background: var(--yellow); }
+    .lib-more { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; font-weight: 800; }
+    .lib-more a { text-decoration: underline 2px var(--blue); text-underline-offset: 4px; }
+    .lib-peers { padding-block: 6px 26px; }
+    .lib-peers-inner { border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); padding: 16px 18px; }
+    .lib-peers-inner > strong { display: block; font-size: 13px; margin-bottom: 10px; }
+    .lib-peer-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lib-peer-list a { padding: 5px 10px; border: 2px solid var(--ink); background: var(--paper-light); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-peer-list a:hover { background: var(--yellow); }
+    .lib-peer-list a[aria-current="page"] { background: var(--yellow); box-shadow: 2px 2px 0 var(--ink); }
+    .lib-peer-ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 13px; font-weight: 800; }
+    .lib-peer-ends a { text-decoration: none; border-bottom: 2px solid var(--ink); }
+    .lib-peer-ends .spacer { flex: 1; }
+    @media (max-width: 1000px) { .lib-halls { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      .lib-halls { grid-template-columns: 1fr; }
+      .lib-map-box { padding: 20px 16px 18px; }
+      .shell { width: min(calc(100% - 32px), 1240px); }
+    }
+    .work-spec-links { margin-top: 18px; padding: 12px 14px; border: 2px dashed var(--ink); background: #dde5f6; font-size: 13px; }
+    .work-spec-links > strong { display: block; margin-bottom: 8px; }
+    .work-spec-links div { display: flex; flex-wrap: wrap; gap: 8px; }
+    .work-spec-links a { padding: 3px 9px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-weight: 800; text-decoration: none; }
+    .work-spec-links a:hover { background: var(--yellow); }
+    /* ===== /LIBRARY_LINKS:CSS ===== */
+</style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="dir-3.html" aria-label="返回童年书房首页">童年书房<small>CHILDHOOD<br>LIBRARY</small></a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="dir-3.html">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html" aria-current="page">音乐馆</a>
+        <a href="poetry.html">古诗词馆</a>
+        <a href="research.html">研究资源库</a>
+        <a href="works.html">作品目录</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="展开导航">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="shell mobile-nav" id="mobile-nav" aria-label="移动端导航" hidden>
+      <a href="dir-3.html">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html" aria-current="page">音乐馆</a>
+        <a href="poetry.html">古诗词馆</a>
+        <a href="research.html">研究资源库</a>
+        <a href="works.html">作品目录</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="shell hero" aria-labelledby="page-title">
+      <span class="eyebrow">儿童音乐馆 · MUSIC HALL</span>
+      <h1 id="page-title">以中国经典为根，<br><span class="accent">以世界经典为窗</span>，以优秀原创为未来。</h1>
+      <p class="hero-desc">一座免费供大众及教育使用的儿童音乐数据库。以清楚的来源、版本与权利记录为基础，让孩子听见自然、优美、安静与想象。</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="works.html">浏览候选目录
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
+        </a>
+        <a class="button" href="#specialties">看八个专题</a>
+      </div>
+    </section>
+
+    <section class="shell specialties" id="specialties" aria-labelledby="spec-title">
+      <div class="section-heading">
+        <h2 id="spec-title">八个专题</h2>
+        <p>音乐馆按八个内容专题策展。专题可以多选，不替代作品类型、地区、语言与年代等基础字段。</p>
+      </div>
+      <div class="spec-grid">
+        <a class="spec-card s-childhood" href="specialty-childhood.html">
+          <span class="count">35 首</span>
+          <span class="no">01 · 童年的歌</span>
+          <h3>童年的歌</h3>
+          <p>中国经典儿童歌曲、校园歌曲与童年记忆。</p>
+          <span class="go">进入专题<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M14 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="spec-card s-nature" href="specialty-nature.html">
+          <span class="count">24 首</span>
+          <span class="no">02 · 大自然的歌</span>
+          <h3>大自然的歌</h3>
+          <p>春夏秋冬、花草树木、鸟兽、河流海洋。</p>
+          <span class="go">进入专题<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M14 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="spec-card s-play" href="specialty-play.html">
+          <span class="count">32 首</span>
+          <span class="no">03 · 游戏与伙伴</span>
+          <h3>游戏与伙伴</h3>
+          <p>游戏歌、拍手歌、数数歌、问答歌。</p>
+          <span class="go">进入专题<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M14 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="spec-card s-lullaby" href="specialty-lullaby.html">
+          <span class="count">13 首</span>
+          <span class="no">04 · 月亮与摇篮曲</span>
+          <h3>月亮与摇篮曲</h3>
+          <p>中国及世界各地的摇篮曲与安睡音乐。</p>
+          <span class="go">进入专题<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M14 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="spec-card s-classical" href="specialty-classical.html">
+          <span class="count">3 首</span>
+          <span class="no">05 · 古典音乐的童年</span>
+          <h3>古典音乐的童年</h3>
+          <p>儿童古典作品、适龄器乐小品、音乐故事。</p>
+          <span class="go">进入专题<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M14 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="spec-card s-world" href="specialty-world.html">
+          <span class="count">51 首</span>
+          <span class="no">06 · 世界的童谣</span>
+          <h3>世界的童谣</h3>
+          <p>多语言童谣、地方儿童歌曲、民族音乐。</p>
+          <span class="go">进入专题<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M14 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="spec-card s-forgotten" href="specialty-forgotten.html">
+          <span class="count">18 首</span>
+          <span class="no">07 · 被遗忘的童谣</span>
+          <h3>被遗忘的童谣</h3>
+          <p>地方方言、口传童谣、历史采录。</p>
+          <span class="go">进入专题<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M14 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="spec-card s-original" href="specialty-original.html">
+          <span class="count">待授权</span>
+          <span class="no">08 · 新芽原创</span>
+          <h3>新芽原创</h3>
+          <p>当代原创儿童音乐，尊重儿童视角与明确授权。</p>
+          <span class="go">进入专题<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M14 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="shell pillars" id="pillars" aria-labelledby="pillars-title">
+      <div class="section-heading">
+        <h2 id="pillars-title">三大支柱 · 首批 100 首种子库</h2>
+        <p>启动期资源分配：中国经典 55%、世界经典 30%、优秀原创 15%。候选数、资料完整数、授权可播放数分别统计。</p>
+      </div>
+      <div class="pillar-row">
+        <article class="pillar-card p-china">
+          <span class="kicker" style="color:var(--red)">中国经典 · ROOT</span>
+          <h3>中国经典</h3>
+          <span class="num">55 首</span>
+          <p>创作儿歌、传统童谣、地方歌谣、诗词音乐等。</p>
+        </article>
+        <article class="pillar-card p-world">
+          <span class="kicker" style="color:var(--blue)">世界经典 · WINDOW</span>
+          <h3>世界经典</h3>
+          <span class="num">30 首</span>
+          <p>多语言童谣、摇篮曲、儿童古典音乐等。</p>
+        </article>
+        <article class="pillar-card p-original">
+          <span class="kicker" style="color:var(--green)">优秀原创 · FUTURE</span>
+          <h3>优秀原创</h3>
+          <span class="num">15 首</span>
+          <p>通过编辑评审且授权路径清楚的原创作品。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell catalogue" aria-labelledby="catalogue-title">
+      <div class="catalogue-band">
+        <div class="copy">
+          <h2 id="catalogue-title">发现目录 · 105 条已登记</h2>
+          <p>中国经典 55 张资料卡均已配置原创封面和播放入口：累计 26 首已接入经典人声、历史录音或公开视频原声；两轮共采集 27 个公开来源媒体文件（28 条作品映射），已有 23 首由“非原曲”测试音切换为对应作品的真实录音。《小燕子》《我们的田野》《外婆的澎湖湾》《虫儿飞》《童年》保留多版本选择；《数鸭子》《一园青菜成了精》为童谣诵读 / 表演版本，均如实标注而非冒充歌曲原唱。其余 21 首仍明确标注“原创播放示范 · 非原曲”。全站共 58 个作品音频条目、63 个可播放录音版本，另保留 5 个官方发行录音入口。世界经典 47 条资料卡亦已补齐原创封面、逐曲核验的公版歌词与来源；按“真实录音优先”口径，暂未取得可核验真实录音的播放位统一标“待采集”，不硬配程序合成音冒充原曲，未刊全文的歌词与无证旋律同样留白。作品目录 105 条现全部配置资料卡。</p>
+        </div>
+        <a class="button" href="works.html">打开作品列表
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="shell footnote">
+      <p>本页面为「童年书房 · 儿童音乐馆」馆藏导览层，依据《儿童经典音乐图书馆建设方案》（docs/MUSIC_LIBRARY_PLAN_V1.md）§2.1 八个专题与 §11 信息架构整理。所有曲目均为候选发现层，不构成法律意见，也不授予任何第三方内容的使用权。</p>
+    </section>
+  
+  
+  
+  
+  
+  
+  
+  <!-- LIBRARY_LINKS:MAP -->
+    <section class="shell lib-map" aria-labelledby="lib-map-title">
+      <div class="lib-map-box">
+        <h2 id="lib-map-title">全站地图 · 三馆与研究层</h2>
+        <p>童年书房分为研究资源库（Research）与儿童使用层（Library）。三馆目录可以互相跳转，音乐馆八个专题横向串联，作品目录可回链到专题与研究层。</p>
+        <div class="lib-halls">
+<a class="lib-hall lib-story" href="story.html"><b>故事馆</b><span>六个专题 · 100 条研究记录</span></a>
+<a class="lib-hall lib-music" href="music.html" aria-current="page"><b>音乐馆</b><span>八专题 · 105 条发现目录</span></a>
+<a class="lib-hall lib-poetry" href="poetry.html"><b>古诗词馆</b><span>十个专题 · 60 条研究记录</span></a>
+<a class="lib-hall lib-research" href="research.html"><b>研究资源库</b><span>五维状态 · 来源与边界</span></a>
+        </div>
+        <div class="lib-specs">
+          <strong>音乐馆八专题：</strong>
+<a href="specialty-childhood.html">01 童年的歌</a>
+<a href="specialty-nature.html">02 大自然的歌</a>
+<a href="specialty-play.html">03 游戏与伙伴</a>
+<a href="specialty-lullaby.html">04 月亮与摇篮曲</a>
+<a href="specialty-classical.html">05 古典音乐的童年</a>
+<a href="specialty-world.html">06 世界的童谣</a>
+<a href="specialty-forgotten.html">07 被遗忘的童谣</a>
+<a href="specialty-original.html">08 新芽原创</a>
+        </div>
+        <div class="lib-more">
+          <a href="works.html">作品目录（音乐馆 105 条）</a>
+          <a href="../docs/PROJECT_PRINCIPLES.md">项目顶层原则</a>
+          <a href="../docs/DATA_MODEL.md">统一数据模型</a>
+          <a href="../docs/COPYRIGHT_POLICY.md">来源与权利说明</a>
+        </div>
+      </div>
+    </section>
+    <!-- /LIBRARY_LINKS:MAP -->
+  </main>
+
+  <script>
+    (() => {
+      const t = document.getElementById('menu-toggle');
+      const n = document.getElementById('mobile-nav');
+      if (t && n) t.addEventListener('click', () => {
+        const e = t.getAttribute('aria-expanded') === 'true';
+        t.setAttribute('aria-expanded', String(!e)); n.hidden = e;
+      });
+    })();
+  </script>
+</body>
+</html>

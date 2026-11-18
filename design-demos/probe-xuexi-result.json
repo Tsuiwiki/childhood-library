@@ -1,0 +1,3163 @@
+{
+  "中华儿歌珍藏集(一)": {
+    "url": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=7617192199319184014&type=album",
+    "pageTitle": "中华儿歌珍藏集（一）",
+    "apiResponses": 2,
+    "apiKeys": [
+      {
+        "api": "1001002672813127",
+        "topKeys": [
+          "data",
+          "message",
+          "status"
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "topKeys": [
+          "data",
+          "message",
+          "status"
+        ]
+      }
+    ],
+    "entries": [
+      {
+        "api": "1001002672813127",
+        "id": "7617192199319184014",
+        "title": "中华儿歌珍藏集（一）",
+        "performers": "群星",
+        "desc": "30首音乐",
+        "duration": "",
+        "audioChoices": [],
+        "audiosRaw": []
+      },
+      {
+        "api": "1001002672813127",
+        "id": "36:71944698125330867",
+        "title": "民歌",
+        "performers": "",
+        "desc": "",
+        "duration": "",
+        "audioChoices": [],
+        "audiosRaw": []
+      },
+      {
+        "api": "1001002672813127",
+        "id": "36:64007656275093577",
+        "title": "影视音乐",
+        "performers": "",
+        "desc": "",
+        "duration": "",
+        "audioChoices": [],
+        "audiosRaw": []
+      },
+      {
+        "api": "1001002672813127",
+        "id": "36:64008046297370287",
+        "title": "音乐慕课",
+        "performers": "",
+        "desc": "",
+        "duration": "",
+        "audioChoices": [],
+        "audiosRaw": []
+      },
+      {
+        "api": "1001002672813127",
+        "id": "13985296122571089948",
+        "title": "小燕子",
+        "performers": "广州市少年艺术中心合唱团",
+        "desc": "02:35",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/08b9400f776234fe10bec46e1394bc76-f1ea34cfc5c749678293100488d5fdfb-3.mp3",
+            "format": "MP3",
+            "bytes": 3722200
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/3a786c08b518fb162b673a1cf22277ce-f1ea34cfc5c749678293100488d5fdfb-2.mp3",
+            "format": "MP3",
+            "bytes": 2481488
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/540bebcb820af932062ea1a514c47350-f1ea34cfc5c749678293100488d5fdfb-1.mp3",
+            "format": "MP3",
+            "bytes": 1240985
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 3722200,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/08b9400f776234fe10bec46e1394bc76-f1ea34cfc5c749678293100488d5fdfb-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2481488,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/3a786c08b518fb162b673a1cf22277ce-f1ea34cfc5c749678293100488d5fdfb-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1240985,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/540bebcb820af932062ea1a514c47350-f1ea34cfc5c749678293100488d5fdfb-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861210700703744016081005",
+            "lyric": {
+              "content": "电影《护士日记》插曲\n作词：王路、王云阶\n作曲：王云阶\n领唱：杨宁\n演唱：广州市少年艺术中心合唱团  \n\n小燕子穿花衣\n年年春天到这里\n我问燕子为啥来\n燕子说 这里的春天最美丽\n小燕子告诉你\n今年这里更美丽\n我们盖起了大工厂\n装上了新机器\n欢迎你长期住在这里\n\n小燕子穿花衣\n年年春天到这里\n我问燕子为啥来\n燕子说 这里的春天最美丽\n小燕子告诉你\n今年这里更美丽\n我们盖起了大工厂\n装上了新机器\n欢迎你长期住在这里",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "电影《护士日记》插曲\n作词：王路、王云阶\n作曲：王云阶\n领唱：杨宁\n演唱：广州市少年艺术中心合唱团  \n\n小燕子穿花衣\n年年春天到这里\n我问燕子为啥来\n燕子说 这里的春天最美丽\n小燕子告诉你\n今年这里更美丽\n我们盖起了大工厂\n装上了新机器\n欢迎你长期住在这里\n\n小燕子穿花衣\n年年春天到这里\n我问燕子为啥来\n燕子说 这里的春天最美丽\n小燕子告诉你\n今年这里更美丽\n我们盖起了大工厂\n装上了新机器\n欢迎你长期住在这里",
+                "format": 0
+              }
+            ],
+            "play_length": 155,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "广州市少年艺术中心合唱团",
+                "type": 6
+              }
+            ],
+            "title": "小燕子"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "5023043848805477696",
+        "title": "小白兔乖乖",
+        "performers": "唐娜",
+        "desc": "01:25",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/fec2aee36fd781c568b47a89af3a6491-463a4a8add4a41b4b198bb5e738af2b3-3.mp3",
+            "format": "MP3",
+            "bytes": 2056424
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/cdc9c6f77ebf73c40438d822f9b4fc31-463a4a8add4a41b4b198bb5e738af2b3-2.mp3",
+            "format": "MP3",
+            "bytes": 1370971
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/20c7e2968b2a55a031fd92e2fda12528-463a4a8add4a41b4b198bb5e738af2b3-1.mp3",
+            "format": "MP3",
+            "bytes": 685727
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2056424,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/fec2aee36fd781c568b47a89af3a6491-463a4a8add4a41b4b198bb5e738af2b3-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1370971,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/cdc9c6f77ebf73c40438d822f9b4fc31-463a4a8add4a41b4b198bb5e738af2b3-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 685727,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/20c7e2968b2a55a031fd92e2fda12528-463a4a8add4a41b4b198bb5e738af2b3-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861211089094656003081005",
+            "lyric": {
+              "content": "童谣    \n演唱：唐娜\n\n小白兔乖乖\n把门开开\n快点开开\n我要进来\n不开不开不能开\n妈妈没回来\n不能把门开\n小白兔乖乖\n把门开开\n妈妈回来\n我要进来\n快开快开快快开\n妈妈回来了\n我来把门开\n\n小白兔乖乖\n把门开开\n快点开开\n我要进来\n不开不开不能开\n妈妈没回来\n不能把门开\n小白兔乖乖\n把门开开\n妈妈回来\n我要进来\n快开快开快快开\n妈妈回来了\n我来把门开",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "童谣    \n演唱：唐娜\n\n小白兔乖乖\n把门开开\n快点开开\n我要进来\n不开不开不能开\n妈妈没回来\n不能把门开\n小白兔乖乖\n把门开开\n妈妈回来\n我要进来\n快开快开快快开\n妈妈回来了\n我来把门开\n\n小白兔乖乖\n把门开开\n快点开开\n我要进来\n不开不开不能开\n妈妈没回来\n不能把门开\n小白兔乖乖\n把门开开\n妈妈回来\n我要进来\n快开快开快快开\n妈妈回来了\n我来把门开",
+                "format": 0
+              }
+            ],
+            "play_length": 85,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "唐娜",
+                "type": 6
+              }
+            ],
+            "title": "小白兔乖乖"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "8769228391902820588",
+        "title": "丢手绢",
+        "performers": "中国广播少年合唱团",
+        "desc": "00:29",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/b148fbd973481966d9d466a99567d783-1f5a5f6e3d1949fe9328b1ca4b1ed36c-3.mp3",
+            "format": "MP3",
+            "bytes": 700355
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/c888416a8a086180251ec4dbb70943ba-1f5a5f6e3d1949fe9328b1ca4b1ed36c-2.mp3",
+            "format": "MP3",
+            "bytes": 466925
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/95a9625bbff53ba620511c5375d8db7a-1f5a5f6e3d1949fe9328b1ca4b1ed36c-1.mp3",
+            "format": "MP3",
+            "bytes": 233704
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 700355,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/b148fbd973481966d9d466a99567d783-1f5a5f6e3d1949fe9328b1ca4b1ed36c-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 466925,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/c888416a8a086180251ec4dbb70943ba-1f5a5f6e3d1949fe9328b1ca4b1ed36c-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 233704,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/95a9625bbff53ba620511c5375d8db7a-1f5a5f6e3d1949fe9328b1ca4b1ed36c-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861211482938163205081005",
+            "lyric": {
+              "content": "作词：鲍侃\n作曲：关鹤岩\n演唱：中国广播少年合唱团\n\n丢丢丢手绢\n轻轻地放在小朋友的后边\n大家不要告诉他\n快点儿快点儿抓住他\n快点儿快点儿抓住他\n丢丢丢手绢\n轻轻地放在小朋友的后边\n大家不要告诉他\n快点儿快点儿抓住他\n快点儿快点儿抓住他",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：鲍侃\n作曲：关鹤岩\n演唱：中国广播少年合唱团\n\n丢丢丢手绢\n轻轻地放在小朋友的后边\n大家不要告诉他\n快点儿快点儿抓住他\n快点儿快点儿抓住他\n丢丢丢手绢\n轻轻地放在小朋友的后边\n大家不要告诉他\n快点儿快点儿抓住他\n快点儿快点儿抓住他",
+                "format": 0
+              }
+            ],
+            "play_length": 29,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "中国广播少年合唱团",
+                "type": 6
+              }
+            ],
+            "title": "丢手绢"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "9833697650281580394",
+        "title": "打电话",
+        "performers": "东四五条幼儿园",
+        "desc": "01:15",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/f0db10d8cfd70ee0d4f05f7135796b8f-962962a06c2840caad76bf3d8654613b-3.mp3",
+            "format": "MP3",
+            "bytes": 1820068
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/71fb719aaf2324027a3911ec180903d3-962962a06c2840caad76bf3d8654613b-2.mp3",
+            "format": "MP3",
+            "bytes": 1213400
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/80c208a4be8032ed2b66d0350b3bc464-962962a06c2840caad76bf3d8654613b-1.mp3",
+            "format": "MP3",
+            "bytes": 606941
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 1820068,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/f0db10d8cfd70ee0d4f05f7135796b8f-962962a06c2840caad76bf3d8654613b-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1213400,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/71fb719aaf2324027a3911ec180903d3-962962a06c2840caad76bf3d8654613b-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 606941,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/80c208a4be8032ed2b66d0350b3bc464-962962a06c2840caad76bf3d8654613b-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861211910345113615081005",
+            "lyric": {
+              "content": "作曲 ：汪玲\n演唱： 东四五条幼儿园\n\n两个小娃娃呀\n正在打电话呀\n喂喂喂\n你在哪儿呀\n哎哎哎\n我在幼儿园\n两个小娃娃呀\n正在打电话呀\n喂喂喂\n你在做什么\n哎哎哎\n我在学唱歌\n\n两个小娃娃呀\n正在打电话呀\n喂喂喂\n你在哪儿呀\n哎哎哎\n我在幼儿园\n两个小娃娃呀\n正在打电话呀\n喂喂喂\n你在做什么\n哎哎哎\n我在学唱歌",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作曲 ：汪玲\n演唱： 东四五条幼儿园\n\n两个小娃娃呀\n正在打电话呀\n喂喂喂\n你在哪儿呀\n哎哎哎\n我在幼儿园\n两个小娃娃呀\n正在打电话呀\n喂喂喂\n你在做什么\n哎哎哎\n我在学唱歌\n\n两个小娃娃呀\n正在打电话呀\n喂喂喂\n你在哪儿呀\n哎哎哎\n我在幼儿园\n两个小娃娃呀\n正在打电话呀\n喂喂喂\n你在做什么\n哎哎哎\n我在学唱歌",
+                "format": 0
+              }
+            ],
+            "play_length": 75,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "东四五条幼儿园",
+                "type": 6
+              }
+            ],
+            "title": "打电话"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "18345332359034623644",
+        "title": "拔萝卜",
+        "performers": "杨威、小甄妮、张苗苗",
+        "desc": "03:34",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/8ab7f396d254b93deed653d050bfb2c4-48d743652ed44003b6467e4a2c65353b-3.mp3",
+            "format": "MP3",
+            "bytes": 5142843
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/29f270f41120b1f718dd107e6d8927b0-48d743652ed44003b6467e4a2c65353b-2.mp3",
+            "format": "MP3",
+            "bytes": 3428584
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/45f8014f484aee3d0db4f644e105405e-48d743652ed44003b6467e4a2c65353b-1.mp3",
+            "format": "MP3",
+            "bytes": 1714533
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 5142843,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/8ab7f396d254b93deed653d050bfb2c4-48d743652ed44003b6467e4a2c65353b-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 3428584,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/29f270f41120b1f718dd107e6d8927b0-48d743652ed44003b6467e4a2c65353b-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1714533,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/45f8014f484aee3d0db4f644e105405e-48d743652ed44003b6467e4a2c65353b-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861212487061094402081005",
+            "lyric": {
+              "content": "演唱：杨威、小甄妮、张苗苗\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n老婆婆快快来 \n快点帮我们拔萝卜\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小姑娘快快来 \n快来帮我们拔萝卜\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小黄狗快快来 \n快来帮我们拔萝卜\n\n拔萝卜 拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小花猫快快来 \n快来帮我们拔萝卜\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小耗子快快来\n快来帮我们拔萝卜\n\n拔萝卜 拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小朋友快快来\n快来帮我们拔萝卜\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔出来\n你也来我也来\n大家一起拔出来",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "演唱：杨威、小甄妮、张苗苗\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n老婆婆快快来 \n快点帮我们拔萝卜\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小姑娘快快来 \n快来帮我们拔萝卜\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小黄狗快快来 \n快来帮我们拔萝卜\n\n拔萝卜 拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小花猫快快来 \n快来帮我们拔萝卜\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小耗子快快来\n快来帮我们拔萝卜\n\n拔萝卜 拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔不动\n小朋友快快来\n快来帮我们拔萝卜\n\n拔萝卜拔萝卜\n嘿哟嘿哟拔萝卜\n嘿哟嘿哟拔出来\n你也来我也来\n大家一起拔出来",
+                "format": 0
+              }
+            ],
+            "play_length": 214,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "杨威、小甄妮、张苗苗",
+                "type": 6
+              }
+            ],
+            "title": "拔萝卜"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "10869370363327164896",
+        "title": "一分钱",
+        "performers": "唐娜",
+        "desc": "01:28",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/816fe50d5f6d8ff6eb3a3b58cba0bcda-09c9634d1ed24e51bea1509556f93cec-3.mp3",
+            "format": "MP3",
+            "bytes": 2129149
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/b664c7ffd36d252f0b0bd462b001446d-09c9634d1ed24e51bea1509556f93cec-2.mp3",
+            "format": "MP3",
+            "bytes": 1419454
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/354fcd208da3e90c75d64b679c914925-09c9634d1ed24e51bea1509556f93cec-1.mp3",
+            "format": "MP3",
+            "bytes": 709968
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2129149,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/816fe50d5f6d8ff6eb3a3b58cba0bcda-09c9634d1ed24e51bea1509556f93cec-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1419454,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/b664c7ffd36d252f0b0bd462b001446d-09c9634d1ed24e51bea1509556f93cec-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 709968,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/354fcd208da3e90c75d64b679c914925-09c9634d1ed24e51bea1509556f93cec-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861212898097971203081005",
+            "lyric": {
+              "content": "作词：潘振声\n作曲：潘振声\n演唱：唐娜\n\n我在马路边捡到一分钱\n交到人民警察叔叔手里边\n叔叔拿着钱对我把头点\n我欢乐地说了声叔叔再见\n\n我在马路边捡到一分钱\n交到人民警察叔叔手里边\n叔叔拿着钱对我把头点\n我欢乐地说了声叔叔再见\n\n我在马路边捡到一分钱\n交到人民警察叔叔手里边\n叔叔拿着钱对我把头点\n我欢乐地说了声叔叔再见",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：潘振声\n作曲：潘振声\n演唱：唐娜\n\n我在马路边捡到一分钱\n交到人民警察叔叔手里边\n叔叔拿着钱对我把头点\n我欢乐地说了声叔叔再见\n\n我在马路边捡到一分钱\n交到人民警察叔叔手里边\n叔叔拿着钱对我把头点\n我欢乐地说了声叔叔再见\n\n我在马路边捡到一分钱\n交到人民警察叔叔手里边\n叔叔拿着钱对我把头点\n我欢乐地说了声叔叔再见",
+                "format": 0
+              }
+            ],
+            "play_length": 88,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "唐娜",
+                "type": 6
+              }
+            ],
+            "title": "一分钱"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "3751715474377810027",
+        "title": "劳动最光荣",
+        "performers": "中央人民广播电台少年儿童合唱团",
+        "desc": "01:27",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/76996a8bbe671405480517910d2e033c-4af2bb1317384c75bf6e27266e24e216-3.mp3",
+            "format": "MP3",
+            "bytes": 2092159
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/429e094e2bc30a2071585b0201ce53d5-4af2bb1317384c75bf6e27266e24e216-2.mp3",
+            "format": "MP3",
+            "bytes": 1394794
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/35c2b01372cfdbef07716a3f148638cf-4af2bb1317384c75bf6e27266e24e216-1.mp3",
+            "format": "MP3",
+            "bytes": 697638
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2092159,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/76996a8bbe671405480517910d2e033c-4af2bb1317384c75bf6e27266e24e216-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1394794,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/429e094e2bc30a2071585b0201ce53d5-4af2bb1317384c75bf6e27266e24e216-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 697638,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/35c2b01372cfdbef07716a3f148638cf-4af2bb1317384c75bf6e27266e24e216-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861213369536921617081005",
+            "lyric": {
+              "content": "动画片《小猫钓鱼》主题歌\n作词：金近、夏白   \n作曲：黄准   \n演唱：中央人民广播电台少年儿童合唱团\n\n太阳光金亮亮\n雄鸡唱三唱\n花儿醒来了\n鸟儿忙梳妆\n小喜鹊造新房\n小蜜蜂采蜜糖\n幸福的生活从哪里来\n要靠劳动来创造\n青青的叶儿红红的花\n小蝴蝶贪玩耍\n不爱劳动不学习\n我们大家不学它\n要学喜鹊造新房\n要学蜜蜂采蜜糖\n劳动的快乐说不尽\n劳动的创造最光荣\n\n太阳光金亮亮\n雄鸡唱三唱\n花儿醒来了\n鸟儿忙梳妆\n小喜鹊造新房\n小蜜蜂采蜜糖\n幸福的生活从哪里来\n要靠劳动来创造\n青青的叶儿红红的花\n小蝴蝶贪玩耍\n不爱劳动不学习\n我们大家不学它\n要学喜鹊造新房\n要学蜜蜂采蜜糖\n劳动的快乐说不尽\n劳动的创造最光荣",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "动画片《小猫钓鱼》主题歌\n作词：金近、夏白   \n作曲：黄准   \n演唱：中央人民广播电台少年儿童合唱团\n\n太阳光金亮亮\n雄鸡唱三唱\n花儿醒来了\n鸟儿忙梳妆\n小喜鹊造新房\n小蜜蜂采蜜糖\n幸福的生活从哪里来\n要靠劳动来创造\n青青的叶儿红红的花\n小蝴蝶贪玩耍\n不爱劳动不学习\n我们大家不学它\n要学喜鹊造新房\n要学蜜蜂采蜜糖\n劳动的快乐说不尽\n劳动的创造最光荣\n\n太阳光金亮亮\n雄鸡唱三唱\n花儿醒来了\n鸟儿忙梳妆\n小喜鹊造新房\n小蜜蜂采蜜糖\n幸福的生活从哪里来\n要靠劳动来创造\n青青的叶儿红红的花\n小蝴蝶贪玩耍\n不爱劳动不学习\n我们大家不学它\n要学喜鹊造新房\n要学蜜蜂采蜜糖\n劳动的快乐说不尽\n劳动的创造最光荣",
+                "format": 0
+              }
+            ],
+            "play_length": 87,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "中央人民广播电台少年儿童合唱团",
+                "type": 6
+              }
+            ],
+            "title": "劳动最光荣"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "2765254747599334291",
+        "title": "读书郎",
+        "performers": "北京新月合唱团",
+        "desc": "01:43",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/d2b2bc9c4e119f5dbf6ebf404e1ad235-edd152a42c0e4bd6b8fcbe91d40a2d50-3.mp3",
+            "format": "MP3",
+            "bytes": 2480861
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/657a47c2c1f66a297d9e145bda48395b-edd152a42c0e4bd6b8fcbe91d40a2d50-2.mp3",
+            "format": "MP3",
+            "bytes": 1653929
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/fe20d344c47c55e7c102766129b74694-edd152a42c0e4bd6b8fcbe91d40a2d50-1.mp3",
+            "format": "MP3",
+            "bytes": 827206
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2480861,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/d2b2bc9c4e119f5dbf6ebf404e1ad235-edd152a42c0e4bd6b8fcbe91d40a2d50-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1653929,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/657a47c2c1f66a297d9e145bda48395b-edd152a42c0e4bd6b8fcbe91d40a2d50-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 827206,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/fe20d344c47c55e7c102766129b74694-edd152a42c0e4bd6b8fcbe91d40a2d50-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861213841402675215081005",
+            "lyric": {
+              "content": "作词：宋扬  \n作曲：宋扬  \n演唱：北京新月合唱团\n\n（歌词大意）\n小嘛小二郎背着那书包上学堂\n不怕太阳晒也不怕那风雨狂\n只怕先生骂我懒呀\n没有学问啰无脸见爹娘\n叮叮啦切个隆咚啦呛\n没有学问啰无脸见爹娘\n\n小嘛小二郎背着那书包上学堂\n不是为做官也不是为面子光\n只为穷人要翻身哪\n不受欺辱不做牛和羊\n叮叮啦切个隆咚啦呛\n不受欺辱不做牛和羊\n\n叮叮啦切个隆咚啦呛\n叮叮啦切个隆咚啦呛\n叮叮啦切个隆咚啦呛\n\n小嘛小二郎背着那书包上学堂\n不怕太阳晒也不怕那风雨狂\n只怕先生骂我懒呀\n没有学问啰无脸见爹娘\n小嘛小二郎背着那书包上学堂\n不是为做官也不是为面子光\n只为穷人要翻身哪\n不受欺辱不做牛和羊\n叮叮啦切个隆咚啦呛\n啊不受欺辱不做牛和羊\n\n隆咚啦呛 隆咚啦呛\n隆咚啦呛 隆咚啦呛\n隆咚呛 隆咚啦呛",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：宋扬  \n作曲：宋扬  \n演唱：北京新月合唱团\n\n（歌词大意）\n小嘛小二郎背着那书包上学堂\n不怕太阳晒也不怕那风雨狂\n只怕先生骂我懒呀\n没有学问啰无脸见爹娘\n叮叮啦切个隆咚啦呛\n没有学问啰无脸见爹娘\n\n小嘛小二郎背着那书包上学堂\n不是为做官也不是为面子光\n只为穷人要翻身哪\n不受欺辱不做牛和羊\n叮叮啦切个隆咚啦呛\n不受欺辱不做牛和羊\n\n叮叮啦切个隆咚啦呛\n叮叮啦切个隆咚啦呛\n叮叮啦切个隆咚啦呛\n\n小嘛小二郎背着那书包上学堂\n不怕太阳晒也不怕那风雨狂\n只怕先生骂我懒呀\n没有学问啰无脸见爹娘\n小嘛小二郎背着那书包上学堂\n不是为做官也不是为面子光\n只为穷人要翻身哪\n不受欺辱不做牛和羊\n叮叮啦切个隆咚啦呛\n啊不受欺辱不做牛和羊\n\n隆咚啦呛 隆咚啦呛\n隆咚啦呛 隆咚啦呛\n隆咚呛 隆咚啦呛",
+                "format": 0
+              }
+            ],
+            "play_length": 103,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "北京新月合唱团",
+                "type": 6
+              }
+            ],
+            "title": "读书郎"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "1086875580912601113",
+        "title": "猪小弟",
+        "performers": "杨威、小甄妮、苗苗等",
+        "desc": "02:28",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/322aa12c82cb0d40e9de3e1c03e59674-ba1ae636763a4582afbcda11f2a50fa9-3.mp3",
+            "format": "MP3",
+            "bytes": 3572989
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/169a6bdbdd7953b257fea8ea50f05b6f-ba1ae636763a4582afbcda11f2a50fa9-2.mp3",
+            "format": "MP3",
+            "bytes": 2382014
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/25c497f3cc94c09672945baa27a9c807-ba1ae636763a4582afbcda11f2a50fa9-1.mp3",
+            "format": "MP3",
+            "bytes": 1191248
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 3572989,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/322aa12c82cb0d40e9de3e1c03e59674-ba1ae636763a4582afbcda11f2a50fa9-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2382014,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/169a6bdbdd7953b257fea8ea50f05b6f-ba1ae636763a4582afbcda11f2a50fa9-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1191248,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/25c497f3cc94c09672945baa27a9c807-ba1ae636763a4582afbcda11f2a50fa9-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861215101781196804081005",
+            "lyric": {
+              "content": "香港儿童歌曲    \n演唱：杨威、小甄妮、苗苗等\n\n猪小弟去找小羊玩游戏\n小羊说你的脸儿脏兮兮\n猪小弟去找兔子玩游戏\n兔子说你的身体都是泥\n\n猪小弟去找小羊玩游戏\n小羊说你的脸儿脏兮兮\n猪小弟去找兔子玩游戏\n兔子说你的身体都是泥\n\n猪小弟哭哭啼啼回家去\n妈妈说快快洗澡再出去\n猪小弟哭哭啼啼回家去\n妈妈说快快洗澡再出去\n猪小弟哭哭啼啼回家去\n妈妈说快快洗澡再出去",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "香港儿童歌曲    \n演唱：杨威、小甄妮、苗苗等\n\n猪小弟去找小羊玩游戏\n小羊说你的脸儿脏兮兮\n猪小弟去找兔子玩游戏\n兔子说你的身体都是泥\n\n猪小弟去找小羊玩游戏\n小羊说你的脸儿脏兮兮\n猪小弟去找兔子玩游戏\n兔子说你的身体都是泥\n\n猪小弟哭哭啼啼回家去\n妈妈说快快洗澡再出去\n猪小弟哭哭啼啼回家去\n妈妈说快快洗澡再出去\n猪小弟哭哭啼啼回家去\n妈妈说快快洗澡再出去",
+                "format": 0
+              }
+            ],
+            "play_length": 148,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "杨威、小甄妮、苗苗等",
+                "type": 6
+              }
+            ],
+            "title": "猪小弟"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "510047033778506913",
+        "title": "木马歌",
+        "performers": "北京府学胡同幼儿园",
+        "desc": "00:58",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/d167d658c75dae9cfdb8b0f99d2fc53f-00fec0db1c28447199645b4f673b8292-3.mp3",
+            "format": "MP3",
+            "bytes": 1395003
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/9c71856da13b7ca0a55e115821bd3af6-00fec0db1c28447199645b4f673b8292-2.mp3",
+            "format": "MP3",
+            "bytes": 930024
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/4561c7072524c1ed92ead33e31db4190-00fec0db1c28447199645b4f673b8292-1.mp3",
+            "format": "MP3",
+            "bytes": 465253
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 1395003,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/d167d658c75dae9cfdb8b0f99d2fc53f-00fec0db1c28447199645b4f673b8292-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 930024,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/9c71856da13b7ca0a55e115821bd3af6-00fec0db1c28447199645b4f673b8292-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 465253,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/4561c7072524c1ed92ead33e31db4190-00fec0db1c28447199645b4f673b8292-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861215535055257605081005",
+            "lyric": {
+              "content": "作词：武冀平\n作曲：龚跃年\n演唱：北京府学胡同幼儿园\n\n木马木马两人骑呀\n一边高来一边低\n马儿马儿别淘气\n我和弟弟笑眯眯\n驾\n\n木马木马两人骑呀\n一边高来一边低\n马儿马儿别淘气\n我和弟弟笑眯眯\n驾\n\n木马木马两人骑呀\n一边高来一边低\n马儿马儿别淘气\n我和弟弟笑眯眯\n驾",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：武冀平\n作曲：龚跃年\n演唱：北京府学胡同幼儿园\n\n木马木马两人骑呀\n一边高来一边低\n马儿马儿别淘气\n我和弟弟笑眯眯\n驾\n\n木马木马两人骑呀\n一边高来一边低\n马儿马儿别淘气\n我和弟弟笑眯眯\n驾\n\n木马木马两人骑呀\n一边高来一边低\n马儿马儿别淘气\n我和弟弟笑眯眯\n驾",
+                "format": 0
+              }
+            ],
+            "play_length": 58,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "北京府学胡同幼儿园",
+                "type": 6
+              }
+            ],
+            "title": "木马歌"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "8093010224894610515",
+        "title": "拾豆豆",
+        "performers": "北京市后海幼儿园",
+        "desc": "01:40",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/1adb315aea67d76e88585c693d57781b-07cec8fb89724328b37b7a3f671d4bc4-3.mp3",
+            "format": "MP3",
+            "bytes": 2410644
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/a8228dd62f72c444fe2808e91dd7a952-07cec8fb89724328b37b7a3f671d4bc4-2.mp3",
+            "format": "MP3",
+            "bytes": 1607118
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/7becbc715110ab74ac2fa3e97610097f-07cec8fb89724328b37b7a3f671d4bc4-1.mp3",
+            "format": "MP3",
+            "bytes": 803800
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2410644,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/1adb315aea67d76e88585c693d57781b-07cec8fb89724328b37b7a3f671d4bc4-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1607118,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/a8228dd62f72c444fe2808e91dd7a952-07cec8fb89724328b37b7a3f671d4bc4-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 803800,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/7becbc715110ab74ac2fa3e97610097f-07cec8fb89724328b37b7a3f671d4bc4-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861216015729868815081005",
+            "lyric": {
+              "content": "作词：李如会\n作曲：李从陆\n演唱：北京市后海幼儿园\n\n胖丫丫俊妞妞\n拉着手儿过沟沟\n过沟沟拾豆豆\n一拾拾了一兜兜\n\n金豆豆银豆豆\n滴溜圆的红豆豆\n一颗颗都拾起\n丰收果实不能丢 不能丢\n\n胖丫丫俊妞妞\n拉着手儿过沟沟\n过沟沟拾豆豆\n一拾拾了一兜兜\n呦\n\n金豆豆银豆豆\n滴溜圆的红豆豆\n一颗颗都拾起\n丰收果实不能丢 嘿 \n丰收果实不能丢 \n呦",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：李如会\n作曲：李从陆\n演唱：北京市后海幼儿园\n\n胖丫丫俊妞妞\n拉着手儿过沟沟\n过沟沟拾豆豆\n一拾拾了一兜兜\n\n金豆豆银豆豆\n滴溜圆的红豆豆\n一颗颗都拾起\n丰收果实不能丢 不能丢\n\n胖丫丫俊妞妞\n拉着手儿过沟沟\n过沟沟拾豆豆\n一拾拾了一兜兜\n呦\n\n金豆豆银豆豆\n滴溜圆的红豆豆\n一颗颗都拾起\n丰收果实不能丢 嘿 \n丰收果实不能丢 \n呦",
+                "format": 0
+              }
+            ],
+            "play_length": 100,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "北京市后海幼儿园",
+                "type": 6
+              }
+            ],
+            "title": "拾豆豆"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "11936247128177797461",
+        "title": "国旗国旗多美丽",
+        "performers": "北京市府分司厅幼儿园",
+        "desc": "01:36",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/1bc16faacccf9ccd303cc59e6f89c19a-20f10501828c4e35a93c686aed323000-3.mp3",
+            "format": "MP3",
+            "bytes": 2317230
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/fe9d83e4c5cc6f11641581a5c38ea467-20f10501828c4e35a93c686aed323000-2.mp3",
+            "format": "MP3",
+            "bytes": 1544842
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/6b38a86c25188b42fc3a79ec2770cd16-20f10501828c4e35a93c686aed323000-1.mp3",
+            "format": "MP3",
+            "bytes": 772662
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2317230,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/1bc16faacccf9ccd303cc59e6f89c19a-20f10501828c4e35a93c686aed323000-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1544842,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/fe9d83e4c5cc6f11641581a5c38ea467-20f10501828c4e35a93c686aed323000-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 772662,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/6b38a86c25188b42fc3a79ec2770cd16-20f10501828c4e35a93c686aed323000-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861216584468070406081005",
+            "lyric": {
+              "content": "作词：常瑞\n作曲：谢白倩\n演唱：北京市府分司厅幼儿园\n \n国旗国旗多美丽\n天天升在朝霞里\n小朋友们爱祖国\n向着国旗敬礼\n敬个礼\n\n国旗国旗多美丽\n天天升在朝霞里\n小朋友们爱祖国\n向着国旗敬礼\n敬个礼\n\n国旗国旗多美丽\n五颗星星照大地\n祖国前进我长大\n我向国旗敬礼\n敬个礼\n\n国旗国旗多美丽\n五颗星星照大地\n祖国前进我长大\n我向国旗敬礼\n敬个礼\n我向国旗敬礼\n敬个礼",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：常瑞\n作曲：谢白倩\n演唱：北京市府分司厅幼儿园\n \n国旗国旗多美丽\n天天升在朝霞里\n小朋友们爱祖国\n向着国旗敬礼\n敬个礼\n\n国旗国旗多美丽\n天天升在朝霞里\n小朋友们爱祖国\n向着国旗敬礼\n敬个礼\n\n国旗国旗多美丽\n五颗星星照大地\n祖国前进我长大\n我向国旗敬礼\n敬个礼\n\n国旗国旗多美丽\n五颗星星照大地\n祖国前进我长大\n我向国旗敬礼\n敬个礼\n我向国旗敬礼\n敬个礼",
+                "format": 0
+              }
+            ],
+            "play_length": 96,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "北京市府分司厅幼儿园",
+                "type": 6
+              }
+            ],
+            "title": "国旗国旗多美丽"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "10474127538303119450",
+        "title": "金孔雀",
+        "performers": "群星",
+        "desc": "01:18",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/80351f57aaa669dc13aea533520d1b82-f651cb53a50d4aa3a59c9dae32895c65-3.mp3",
+            "format": "MP3",
+            "bytes": 1887777
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/735b1974dc7dcd83edd0aa9e3d28a88a-f651cb53a50d4aa3a59c9dae32895c65-2.mp3",
+            "format": "MP3",
+            "bytes": 1258540
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/a3defcecc06fcd9532b98d0bffed876b-f651cb53a50d4aa3a59c9dae32895c65-1.mp3",
+            "format": "MP3",
+            "bytes": 629511
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 1887777,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/80351f57aaa669dc13aea533520d1b82-f651cb53a50d4aa3a59c9dae32895c65-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1258540,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/735b1974dc7dcd83edd0aa9e3d28a88a-f651cb53a50d4aa3a59c9dae32895c65-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 629511,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/a3defcecc06fcd9532b98d0bffed876b-f651cb53a50d4aa3a59c9dae32895c65-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861217018161152005081005",
+            "lyric": {
+              "content": "金孔雀呀金孔雀\n百鸟里面传美名\n一束花枝头上戴\n身上披着五彩云\n展翅飞万里\n跳舞轻盈盈\n是个友谊小使者\n五洲小朋友来了忙开屏\n忙开屏 忙开屏\n\n金孔雀呀金孔雀\n百鸟里面传美名\n一束花枝头上戴\n身上披着五彩云\n展翅飞万里\n跳舞轻盈盈\n是个友谊小使者\n五洲小朋友来了忙开屏\n忙开屏 忙开屏",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "金孔雀呀金孔雀\n百鸟里面传美名\n一束花枝头上戴\n身上披着五彩云\n展翅飞万里\n跳舞轻盈盈\n是个友谊小使者\n五洲小朋友来了忙开屏\n忙开屏 忙开屏\n\n金孔雀呀金孔雀\n百鸟里面传美名\n一束花枝头上戴\n身上披着五彩云\n展翅飞万里\n跳舞轻盈盈\n是个友谊小使者\n五洲小朋友来了忙开屏\n忙开屏 忙开屏",
+                "format": 0
+              }
+            ],
+            "play_length": 78,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "群星",
+                "type": 6
+              }
+            ],
+            "title": "金孔雀"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "3994953753287212913",
+        "title": "小板凳，你莫歪",
+        "performers": "古小兔",
+        "desc": "02:01",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/8a916d6a3ff38e7527f809702ca9594b-921d2cc63a9641ff8b2cd016779d317e-3.mp3",
+            "format": "MP3",
+            "bytes": 2927869
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/5e61b4c8bfd075bcfc558d33fed60d0f-921d2cc63a9641ff8b2cd016779d317e-2.mp3",
+            "format": "MP3",
+            "bytes": 1951934
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/707dcee0df37b8a5804638f7dcd6cd81-921d2cc63a9641ff8b2cd016779d317e-1.mp3",
+            "format": "MP3",
+            "bytes": 976208
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2927869,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/8a916d6a3ff38e7527f809702ca9594b-921d2cc63a9641ff8b2cd016779d317e-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1951934,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/5e61b4c8bfd075bcfc558d33fed60d0f-921d2cc63a9641ff8b2cd016779d317e-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 976208,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/707dcee0df37b8a5804638f7dcd6cd81-921d2cc63a9641ff8b2cd016779d317e-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65861217553354342405081005",
+            "lyric": {
+              "format": 0,
+              "url": "https://boot-video.xuexi.cn/text/audio/1005/202206/9508a02191d844e68f57bf4117a61629.txt"
+            },
+            "lyrics": [
+              {
+                "format": 0,
+                "url": "https://boot-video.xuexi.cn/text/audio/1005/202206/9508a02191d844e68f57bf4117a61629.txt"
+              }
+            ],
+            "play_length": 121,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "古小兔",
+                "type": 6
+              }
+            ],
+            "title": "小板凳，你莫歪"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "13265832467873113825",
+        "title": "找朋友",
+        "performers": "叶明珠",
+        "desc": "02:13",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/9bb86a9c3dd789bd6d7adb4100ddc1cd-f11421efb2fe46009cfaa816445f8dad-3.mp3",
+            "format": "MP3",
+            "bytes": 3204349
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/38a516556c9ea3b9941306d5a5e95586-f11421efb2fe46009cfaa816445f8dad-2.mp3",
+            "format": "MP3",
+            "bytes": 2136254
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/1d28167b6304bae77df9e08811c7917e-f11421efb2fe46009cfaa816445f8dad-1.mp3",
+            "format": "MP3",
+            "bytes": 1068368
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 3204349,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/9bb86a9c3dd789bd6d7adb4100ddc1cd-f11421efb2fe46009cfaa816445f8dad-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2136254,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/38a516556c9ea3b9941306d5a5e95586-f11421efb2fe46009cfaa816445f8dad-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1068368,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/1d28167b6304bae77df9e08811c7917e-f11421efb2fe46009cfaa816445f8dad-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65863152312390041617081005",
+            "lyric": {
+              "content": "民间儿歌\n演唱：叶明珠\n \n找 找 找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "民间儿歌\n演唱：叶明珠\n \n找 找 找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见\n\n找呀找呀找呀找\n找到一个好朋友\n敬个礼握握手\n大家一起大家一起\n再见",
+                "format": 0
+              }
+            ],
+            "play_length": 133,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "叶明珠",
+                "type": 6
+              }
+            ],
+            "title": "找朋友"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "5299712988585108520",
+        "title": "火车向着韶山跑",
+        "performers": "上海杨浦少年宫合唱队",
+        "desc": "02:07",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/96f53b65615f43e9c2b6c8b22043bbec-c7fad571240e47138639596ac2f34ab0-3.mp3",
+            "format": "MP3",
+            "bytes": 3052630
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/2abc28156416a87383a0b6a4d49d2793-c7fad571240e47138639596ac2f34ab0-2.mp3",
+            "format": "MP3",
+            "bytes": 2035108
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/85024fb1d10ed886d1aa772c053eb600-c7fad571240e47138639596ac2f34ab0-1.mp3",
+            "format": "MP3",
+            "bytes": 1017795
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 3052630,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/96f53b65615f43e9c2b6c8b22043bbec-c7fad571240e47138639596ac2f34ab0-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2035108,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/2abc28156416a87383a0b6a4d49d2793-c7fad571240e47138639596ac2f34ab0-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1017795,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/85024fb1d10ed886d1aa772c053eb600-c7fad571240e47138639596ac2f34ab0-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65863152791799808003081005",
+            "lyric": {
+              "content": "作词：张秋生    \n作曲：薄兰谷  、程金元     \n演唱：上海杨浦少年宫合唱队\n\n呜 轰隆隆隆隆隆隆\n轰隆隆隆隆隆隆\n车轮飞汽笛叫\n火车向着韶山跑\n穿过峻岭越过河\n迎着霞光千万道\n嘿 迎着霞光千万道\n\n阳光灿烂照车厢\n车厢里面真热闹\n真呀真热闹\n藏族大爷弹起琴\n新疆姐姐把舞跳\n蒙族叔叔唱起歌\n一路歌声一路笑\n一路笑\n\n韶山松树青又青\n湘江两岸红旗飘\n红呀红旗飘\n毛主席啊毛主席\n您的教导永记劳\n各族人民团结紧\n祖国山河换新貌\n换新貌\n\n呜 轰隆隆隆隆隆\n轰隆隆隆隆隆\n车轮飞汽笛叫\n火车向着韶山跑\n越近韶山歌越响\n欢乐歌声冲云霄\n嘿 欢乐歌声冲云霄\n呜 轰隆隆",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：张秋生    \n作曲：薄兰谷  、程金元     \n演唱：上海杨浦少年宫合唱队\n\n呜 轰隆隆隆隆隆隆\n轰隆隆隆隆隆隆\n车轮飞汽笛叫\n火车向着韶山跑\n穿过峻岭越过河\n迎着霞光千万道\n嘿 迎着霞光千万道\n\n阳光灿烂照车厢\n车厢里面真热闹\n真呀真热闹\n藏族大爷弹起琴\n新疆姐姐把舞跳\n蒙族叔叔唱起歌\n一路歌声一路笑\n一路笑\n\n韶山松树青又青\n湘江两岸红旗飘\n红呀红旗飘\n毛主席啊毛主席\n您的教导永记劳\n各族人民团结紧\n祖国山河换新貌\n换新貌\n\n呜 轰隆隆隆隆隆\n轰隆隆隆隆隆\n车轮飞汽笛叫\n火车向着韶山跑\n越近韶山歌越响\n欢乐歌声冲云霄\n嘿 欢乐歌声冲云霄\n呜 轰隆隆",
+                "format": 0
+              }
+            ],
+            "play_length": 127,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "上海杨浦少年宫合唱队",
+                "type": 6
+              }
+            ],
+            "title": "火车向着韶山跑"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "3189061831756852615",
+        "title": "种太阳",
+        "performers": "孙佳星",
+        "desc": "02:38",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/a7f289b3f740b53d89d7b9cda72b9e1f-405d91d75b4d412e963d817296d2cff7-3.mp3",
+            "format": "MP3",
+            "bytes": 3808091
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/5dbce10293d68f5d469f50fed4650cff-405d91d75b4d412e963d817296d2cff7-2.mp3",
+            "format": "MP3",
+            "bytes": 2538749
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/89c677579e9193b5228c975672c3c34c-405d91d75b4d412e963d817296d2cff7-1.mp3",
+            "format": "MP3",
+            "bytes": 1269616
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 3808091,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/a7f289b3f740b53d89d7b9cda72b9e1f-405d91d75b4d412e963d817296d2cff7-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2538749,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/5dbce10293d68f5d469f50fed4650cff-405d91d75b4d412e963d817296d2cff7-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1269616,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/89c677579e9193b5228c975672c3c34c-405d91d75b4d412e963d817296d2cff7-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65863153325731020806081005",
+            "lyric": {
+              "content": "作词：李冰雪\n作曲：徐沛东\n演唱：孙佳星\n\n我有一个美丽的愿望\n长大以后能播种太阳\n播种一颗 一颗就够了\n会结出许多的许多的太阳\n一颗送给 送给南极\n一颗送给 送给北冰洋\n一颗挂在 挂在冬天\n一颗挂在晚上 挂在晚上\n\n啦啦啦 种太阳\n啦啦啦 种太阳\n啦啦啦 啦啦啦 种太阳\n到那个时候\n世界每一个角落\n都会变得都会变得温暖又明亮\n\n我有一个美丽的愿望\n长大以后能播种太阳\n播种一颗一颗就够了\n会结出许多的许多的太阳\n一颗送给 送给南极\n一颗送给 送给北冰洋\n一颗挂在 挂在冬天\n一颗挂在晚上 挂在晚上\n\n啦啦啦 种太阳\n啦啦啦 种太阳\n啦啦啦 啦啦啦 种太阳\n到那个时候\n世界每一个角落\n都会变得都会变得温暖又明亮\n\n啦啦啦 种太阳\n啦啦啦 种太阳\n啦啦啦 啦啦啦 种太阳\n到那个时候\n世界每一个角落\n都会变得都会变得温暖又明亮",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：李冰雪\n作曲：徐沛东\n演唱：孙佳星\n\n我有一个美丽的愿望\n长大以后能播种太阳\n播种一颗 一颗就够了\n会结出许多的许多的太阳\n一颗送给 送给南极\n一颗送给 送给北冰洋\n一颗挂在 挂在冬天\n一颗挂在晚上 挂在晚上\n\n啦啦啦 种太阳\n啦啦啦 种太阳\n啦啦啦 啦啦啦 种太阳\n到那个时候\n世界每一个角落\n都会变得都会变得温暖又明亮\n\n我有一个美丽的愿望\n长大以后能播种太阳\n播种一颗一颗就够了\n会结出许多的许多的太阳\n一颗送给 送给南极\n一颗送给 送给北冰洋\n一颗挂在 挂在冬天\n一颗挂在晚上 挂在晚上\n\n啦啦啦 种太阳\n啦啦啦 种太阳\n啦啦啦 啦啦啦 种太阳\n到那个时候\n世界每一个角落\n都会变得都会变得温暖又明亮\n\n啦啦啦 种太阳\n啦啦啦 种太阳\n啦啦啦 啦啦啦 种太阳\n到那个时候\n世界每一个角落\n都会变得都会变得温暖又明亮",
+                "format": 0
+              }
+            ],
+            "play_length": 158,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "孙佳星",
+                "type": 6
+              }
+            ],
+            "title": "种太阳"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "12738449941140534779",
+        "title": "泼水歌",
+        "performers": "徐唱",
+        "desc": "03:06",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/a26b9dd460bcd7885e5424cb50ae8bb3-158d7e61c83b4683bbdcd94e05fee018-3.mp3",
+            "format": "MP3",
+            "bytes": 4467630
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/03db6b7cfd27b1bedd530aa98cfb25e0-158d7e61c83b4683bbdcd94e05fee018-2.mp3",
+            "format": "MP3",
+            "bytes": 2978442
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/10241bd88b416c2083fae9d8d480f645-158d7e61c83b4683bbdcd94e05fee018-1.mp3",
+            "format": "MP3",
+            "bytes": 1489462
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 4467630,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/a26b9dd460bcd7885e5424cb50ae8bb3-158d7e61c83b4683bbdcd94e05fee018-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2978442,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/03db6b7cfd27b1bedd530aa98cfb25e0-158d7e61c83b4683bbdcd94e05fee018-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1489462,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/10241bd88b416c2083fae9d8d480f645-158d7e61c83b4683bbdcd94e05fee018-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65863153920488652816081005",
+            "lyric": {
+              "content": "新疆儿歌\n演唱：徐唱\n\n昨天我打从你门前过\n你提着那水桶往外泼\n泼在我的皮鞋上\n路边的行人笑得乐呵呵\n你什么话也没有对我说\n你只是眯着眼睛望着我\n对不起对不起\n向你敬个礼\n请你不要对我那么生气\n没关系没关系\n向你回个礼\n我会对你笑呵呵\n\n昨天我打从你门前过\n你提着那水桶往外泼\n泼在我的皮鞋上\n路边的行人笑得乐呵呵\n你什么话也没有对我说\n你只是眯着眼睛望着我\n对不起对不起\n向你敬个礼\n请你不要对我那么生气\n没关系没关系\n向你回个礼\n我会对你笑呵呵\n\n昨天我打从你门前过\n你提着那水桶往外泼\n泼在我的皮鞋上\n路边的行人笑得乐呵呵\n你什么话也没有对我说\n你只是眯着眼睛望着我\n对不起对不起\n向你敬个礼\n请你不要对我那么生气\n没关系没关系\n向你回个礼\n我会对你笑呵呵\n没关系没关系\n向你回个礼\n我会对你笑呵呵\n没关系没关系\n向你回个礼\n我会对你笑呵呵",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "新疆儿歌\n演唱：徐唱\n\n昨天我打从你门前过\n你提着那水桶往外泼\n泼在我的皮鞋上\n路边的行人笑得乐呵呵\n你什么话也没有对我说\n你只是眯着眼睛望着我\n对不起对不起\n向你敬个礼\n请你不要对我那么生气\n没关系没关系\n向你回个礼\n我会对你笑呵呵\n\n昨天我打从你门前过\n你提着那水桶往外泼\n泼在我的皮鞋上\n路边的行人笑得乐呵呵\n你什么话也没有对我说\n你只是眯着眼睛望着我\n对不起对不起\n向你敬个礼\n请你不要对我那么生气\n没关系没关系\n向你回个礼\n我会对你笑呵呵\n\n昨天我打从你门前过\n你提着那水桶往外泼\n泼在我的皮鞋上\n路边的行人笑得乐呵呵\n你什么话也没有对我说\n你只是眯着眼睛望着我\n对不起对不起\n向你敬个礼\n请你不要对我那么生气\n没关系没关系\n向你回个礼\n我会对你笑呵呵\n没关系没关系\n向你回个礼\n我会对你笑呵呵\n没关系没关系\n向你回个礼\n我会对你笑呵呵",
+                "format": 0
+              }
+            ],
+            "play_length": 186,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "徐唱",
+                "type": 6
+              }
+            ],
+            "title": "泼水歌"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "2460317260330008325",
+        "title": "小小葫芦娃",
+        "performers": "群星",
+        "desc": "01:26",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/3441ec6efb46eae597c3ab9ab2ddd859-7a19f642dee0425d97e855ae29ac5b50-3.mp3",
+            "format": "MP3",
+            "bytes": 2080247
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/e5f20f080d15ca484ea8bc42dedb540d-7a19f642dee0425d97e855ae29ac5b50-2.mp3",
+            "format": "MP3",
+            "bytes": 1386853
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/b1da64aeda22f00c983a1bd9e3494f26-7a19f642dee0425d97e855ae29ac5b50-1.mp3",
+            "format": "MP3",
+            "bytes": 693668
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2080247,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/3441ec6efb46eae597c3ab9ab2ddd859-7a19f642dee0425d97e855ae29ac5b50-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1386853,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/e5f20f080d15ca484ea8bc42dedb540d-7a19f642dee0425d97e855ae29ac5b50-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 693668,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/b1da64aeda22f00c983a1bd9e3494f26-7a19f642dee0425d97e855ae29ac5b50-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/upload/4e8f397788394334bd7374232f0a1e48.jpg",
+              "width": 480
+            },
+            "id": "65863154348724633617081005",
+            "lyric": {
+              "content": "剪纸系列片《葫芦兄弟》主题歌\n作词：姚忠礼\n作曲：吴应炬\n演唱：王迟\n\n葫芦娃葫芦娃\n一根藤上七个花\n小小树藤是我家\n啦 叮铛咚咚铛铛\n小树藤\n叮铛咚咚铛铛\n是我家\n葫芦娃葫芦娃\n七朵花\n\n葫芦娃葫芦娃\n一根藤上七朵花\n风吹雨打都不怕\n啦 叮铛咚咚铛铛\n葫芦娃\n叮铛咚咚铛铛\n本领大\n啦\n葫芦娃葫芦娃\n本领大",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "剪纸系列片《葫芦兄弟》主题歌\n作词：姚忠礼\n作曲：吴应炬\n演唱：王迟\n\n葫芦娃葫芦娃\n一根藤上七个花\n小小树藤是我家\n啦 叮铛咚咚铛铛\n小树藤\n叮铛咚咚铛铛\n是我家\n葫芦娃葫芦娃\n七朵花\n\n葫芦娃葫芦娃\n一根藤上七朵花\n风吹雨打都不怕\n啦 叮铛咚咚铛铛\n葫芦娃\n叮铛咚咚铛铛\n本领大\n啦\n葫芦娃葫芦娃\n本领大",
+                "format": 0
+              }
+            ],
+            "play_length": 86,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "群星",
+                "type": 6
+              }
+            ],
+            "title": "小小葫芦娃"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "11241785657499965379",
+        "title": "邋遢大王",
+        "performers": "曹蕾",
+        "desc": "00:46",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/bac72683bcd1781aef902d2480c512ca-33401f61a9ae49f787b9353ffb896cac-3.mp3",
+            "format": "MP3",
+            "bytes": 1122285
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/ed060802daae9c67f522a990372ef8d0-33401f61a9ae49f787b9353ffb896cac-2.mp3",
+            "format": "MP3",
+            "bytes": 748212
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/cebd3c886a7cdfed05fb65886cd04bd4-33401f61a9ae49f787b9353ffb896cac-1.mp3",
+            "format": "MP3",
+            "bytes": 374347
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 1122285,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/bac72683bcd1781aef902d2480c512ca-33401f61a9ae49f787b9353ffb896cac-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 748212,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/ed060802daae9c67f522a990372ef8d0-33401f61a9ae49f787b9353ffb896cac-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 374347,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/cebd3c886a7cdfed05fb65886cd04bd4-33401f61a9ae49f787b9353ffb896cac-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863154796257689603081005",
+            "lyric": {
+              "content": "动画片《邋遢大王》主题歌\n作词：凌纾\n作曲：郑方\n演唱：曹蕾\n\n小邋遢真呀真邋遢\n邋遢大王就是他\n人家的小邋遢\n小邋遢真呀真邋遢\n邋遢大王就是他\n没人喜欢他\n忽然有一天\n小邋遢变了\n邋遢大王他不邋遢\n我们喜欢他\n忽然有一天\n小邋遢变了\n邋遢大王他不邋遢\n我们大家都喜欢他",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "动画片《邋遢大王》主题歌\n作词：凌纾\n作曲：郑方\n演唱：曹蕾\n\n小邋遢真呀真邋遢\n邋遢大王就是他\n人家的小邋遢\n小邋遢真呀真邋遢\n邋遢大王就是他\n没人喜欢他\n忽然有一天\n小邋遢变了\n邋遢大王他不邋遢\n我们喜欢他\n忽然有一天\n小邋遢变了\n邋遢大王他不邋遢\n我们大家都喜欢他",
+                "format": 0
+              }
+            ],
+            "play_length": 46,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "曹蕾",
+                "type": 6
+              }
+            ],
+            "title": "邋遢大王"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "18076483931545408717",
+        "title": "小鸭子",
+        "performers": "中央银河少年电视艺术团",
+        "desc": "01:08",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/01c2f5d779a7bdb668bb49799240cb88-c896ca0096124effbfd6bda5f36bb57c-3.mp3",
+            "format": "MP3",
+            "bytes": 1633240
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/6a7ab1f5bff9507b8b138e5e736a14c6-c896ca0096124effbfd6bda5f36bb57c-2.mp3",
+            "format": "MP3",
+            "bytes": 1088848
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/b15d9fbac3f912e38afc344af029fb6e-c896ca0096124effbfd6bda5f36bb57c-1.mp3",
+            "format": "MP3",
+            "bytes": 544665
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 1633240,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/01c2f5d779a7bdb668bb49799240cb88-c896ca0096124effbfd6bda5f36bb57c-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1088848,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/6a7ab1f5bff9507b8b138e5e736a14c6-c896ca0096124effbfd6bda5f36bb57c-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 544665,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/b15d9fbac3f912e38afc344af029fb6e-c896ca0096124effbfd6bda5f36bb57c-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863155250502451216081005",
+            "lyric": {
+              "content": "作词：潘振声\n作曲：潘振声\n演唱：中央银河少年电视艺术团\n\n我们村里养了一群小鸭子\n我天天早晨赶着它们到池塘里\n小鸭子向着我就嘎嘎嘎地叫\n再见吧小鸭子我要上学了\n再见吧小鸭子我要上学了\n\n我们村里养了一群小鸭子\n我放学回来赶着他们到棚里去\n小鸭子向着我就嘎嘎嘎地叫\n睡觉吧小鸭子太阳下山了\n睡觉吧小鸭子太阳下山了",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：潘振声\n作曲：潘振声\n演唱：中央银河少年电视艺术团\n\n我们村里养了一群小鸭子\n我天天早晨赶着它们到池塘里\n小鸭子向着我就嘎嘎嘎地叫\n再见吧小鸭子我要上学了\n再见吧小鸭子我要上学了\n\n我们村里养了一群小鸭子\n我放学回来赶着他们到棚里去\n小鸭子向着我就嘎嘎嘎地叫\n睡觉吧小鸭子太阳下山了\n睡觉吧小鸭子太阳下山了",
+                "format": 0
+              }
+            ],
+            "play_length": 68,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "中央银河少年电视艺术团",
+                "type": 6
+              }
+            ],
+            "title": "小鸭子"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "10435568416330757706",
+        "title": "我给牙齿洗个澡",
+        "performers": "北京市西城区少年宫合唱团",
+        "desc": "02:05",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/08c317186a46e18fbd7d272367b050e4-3ceb6141f2614028b92e32dd6e011268-3.mp3",
+            "format": "MP3",
+            "bytes": 3008744
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/4c7f3922252bd030bd4e5f7e3fbac07c-3ceb6141f2614028b92e32dd6e011268-2.mp3",
+            "format": "MP3",
+            "bytes": 2005851
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/aaa17c65ccc0f4f406b1933eb11dae80-3ceb6141f2614028b92e32dd6e011268-1.mp3",
+            "format": "MP3",
+            "bytes": 1003167
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 3008744,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/08c317186a46e18fbd7d272367b050e4-3ceb6141f2614028b92e32dd6e011268-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2005851,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/4c7f3922252bd030bd4e5f7e3fbac07c-3ceb6141f2614028b92e32dd6e011268-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1003167,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/aaa17c65ccc0f4f406b1933eb11dae80-3ceb6141f2614028b92e32dd6e011268-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863155720259174406081005",
+            "lyric": {
+              "content": "作词：汪小林\n作曲：侯海波\n编曲：王喆\n演唱：北京市西城区少年宫合唱团\n\n鸟儿叫花儿笑\n宝宝宝宝起床了\n牛奶牛奶你等一等\n我给牙齿洗个澡\n\n鸟儿叫花儿笑\n宝宝宝宝起床了\n牛奶牛奶你等一等\n我给牙齿洗个澡\n\n鸟儿叫花儿笑\n宝宝宝宝起床了\n牛奶牛奶你等一等\n我给牙齿洗个澡\n\n晚风吹月光照\n宝宝宝宝要睡觉\n枕头枕头你等一等\n我给牙齿洗个澡\n\n晚风吹月光照\n宝宝宝宝要睡觉\n枕头枕头你等一等\n我给牙齿洗个澡\n\n晚风吹月光照\n宝宝宝宝要睡觉\n枕头枕头你等一等\n我给牙齿洗个澡",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：汪小林\n作曲：侯海波\n编曲：王喆\n演唱：北京市西城区少年宫合唱团\n\n鸟儿叫花儿笑\n宝宝宝宝起床了\n牛奶牛奶你等一等\n我给牙齿洗个澡\n\n鸟儿叫花儿笑\n宝宝宝宝起床了\n牛奶牛奶你等一等\n我给牙齿洗个澡\n\n鸟儿叫花儿笑\n宝宝宝宝起床了\n牛奶牛奶你等一等\n我给牙齿洗个澡\n\n晚风吹月光照\n宝宝宝宝要睡觉\n枕头枕头你等一等\n我给牙齿洗个澡\n\n晚风吹月光照\n宝宝宝宝要睡觉\n枕头枕头你等一等\n我给牙齿洗个澡\n\n晚风吹月光照\n宝宝宝宝要睡觉\n枕头枕头你等一等\n我给牙齿洗个澡",
+                "format": 0
+              }
+            ],
+            "play_length": 125,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "北京市西城区少年宫合唱团",
+                "type": 6
+              }
+            ],
+            "title": "我给牙齿洗个澡"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "11611907317262210694",
+        "title": "小熊娃娃",
+        "performers": "群星",
+        "desc": "02:04",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/1767b3650a086a1f71f821313efd8e45-ab307c64ce13448d9e3a40dfceeb33c9-3.mp3",
+            "format": "MP3",
+            "bytes": 2989309
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/8e7b31e1686bb711c1797b470c396a82-ab307c64ce13448d9e3a40dfceeb33c9-2.mp3",
+            "format": "MP3",
+            "bytes": 1992894
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/ff0d614e376061127e4f01739ab9f3a5-ab307c64ce13448d9e3a40dfceeb33c9-1.mp3",
+            "format": "MP3",
+            "bytes": 996688
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2989309,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/1767b3650a086a1f71f821313efd8e45-ab307c64ce13448d9e3a40dfceeb33c9-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1992894,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/8e7b31e1686bb711c1797b470c396a82-ab307c64ce13448d9e3a40dfceeb33c9-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 996688,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/ff0d614e376061127e4f01739ab9f3a5-ab307c64ce13448d9e3a40dfceeb33c9-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863156188343091204081005",
+            "lyric": {
+              "content": "小熊熊呀小熊熊呀\n是一个布娃娃\n它的年纪和我一样大\n和它过家家和它悄悄话\n和它一起等着爸爸和妈妈\n\n我的小熊熊呀我的布娃娃\n我哭了它就给我讲笑话\n我的小熊熊呀我的布娃娃\n我呀我好喜欢它真心喜欢它\n\n小熊熊呀小熊熊呀\n是一个布娃娃\n从小我就一直陪着它\n和它玩泥巴和它看烟花\n和它一起等着机器猫来了\n我的小熊熊呀我的布娃娃\n我笑了它也跟着笑哈哈\n我的小熊熊呀 \n我的布娃娃\n我呀我好喜欢它\n真心喜欢它\n我呀我好喜欢它\n我的小熊熊呀",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "小熊熊呀小熊熊呀\n是一个布娃娃\n它的年纪和我一样大\n和它过家家和它悄悄话\n和它一起等着爸爸和妈妈\n\n我的小熊熊呀我的布娃娃\n我哭了它就给我讲笑话\n我的小熊熊呀我的布娃娃\n我呀我好喜欢它真心喜欢它\n\n小熊熊呀小熊熊呀\n是一个布娃娃\n从小我就一直陪着它\n和它玩泥巴和它看烟花\n和它一起等着机器猫来了\n我的小熊熊呀我的布娃娃\n我笑了它也跟着笑哈哈\n我的小熊熊呀 \n我的布娃娃\n我呀我好喜欢它\n真心喜欢它\n我呀我好喜欢它\n我的小熊熊呀",
+                "format": 0
+              }
+            ],
+            "play_length": 124,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "群星",
+                "type": 6
+              }
+            ],
+            "title": "小熊娃娃"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "17377856874351111097",
+        "title": "小红帽",
+        "performers": "刘瞾晶",
+        "desc": "02:12",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/e5e8fc4c45681b082ad8329c108603c7-d9a2698bfe3346a88c4b087e2fb0c575-3.mp3",
+            "format": "MP3",
+            "bytes": 3188048
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/10a3214ae23789cf4071126fc44fc1ba-d9a2698bfe3346a88c4b087e2fb0c575-2.mp3",
+            "format": "MP3",
+            "bytes": 2125387
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/0916a05dc55934cfb285e1d1c2264eb6-d9a2698bfe3346a88c4b087e2fb0c575-1.mp3",
+            "format": "MP3",
+            "bytes": 1062935
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 3188048,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/e5e8fc4c45681b082ad8329c108603c7-d9a2698bfe3346a88c4b087e2fb0c575-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2125387,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/10a3214ae23789cf4071126fc44fc1ba-d9a2698bfe3346a88c4b087e2fb0c575-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1062935,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/0916a05dc55934cfb285e1d1c2264eb6-d9a2698bfe3346a88c4b087e2fb0c575-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863156817912627201081005",
+            "lyric": {
+              "content": "作词：李众\n作曲：郭成志\n演唱：刘瞾晶\n\n小鸟叫百花香\n太阳挂在那树梢上\n我的名字叫小红帽\n是一个快乐快乐快乐的小姑娘\n是一个快乐快乐快乐的小姑娘\n\n妈妈做好了甜点心\n装满小篮喷喷香\n哎呀 好香呀\n小红帽我呀走得快\n送给那外婆尝一尝\n我是能干的小红帽\n一路走来一路唱 一路唱\n\n太阳落秋风凉\n草丛里跳出大灰狼\n它要吃掉小红帽\n坏主意写在写在写在那脑门上\n坏主意写在写在写在那脑门上\n遇到了危险可怎么办\n高声叫呀大声嚷\n哎呀 怎么办呀\n小红帽我呀喊救命\n大灰狼吓得心发慌\n我是勇敢的小红帽\n一路走来一路唱 一路唱\n我是勇敢的小红帽\n一路走来一路唱 一路唱",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：李众\n作曲：郭成志\n演唱：刘瞾晶\n\n小鸟叫百花香\n太阳挂在那树梢上\n我的名字叫小红帽\n是一个快乐快乐快乐的小姑娘\n是一个快乐快乐快乐的小姑娘\n\n妈妈做好了甜点心\n装满小篮喷喷香\n哎呀 好香呀\n小红帽我呀走得快\n送给那外婆尝一尝\n我是能干的小红帽\n一路走来一路唱 一路唱\n\n太阳落秋风凉\n草丛里跳出大灰狼\n它要吃掉小红帽\n坏主意写在写在写在那脑门上\n坏主意写在写在写在那脑门上\n遇到了危险可怎么办\n高声叫呀大声嚷\n哎呀 怎么办呀\n小红帽我呀喊救命\n大灰狼吓得心发慌\n我是勇敢的小红帽\n一路走来一路唱 一路唱\n我是勇敢的小红帽\n一路走来一路唱 一路唱",
+                "format": 0
+              }
+            ],
+            "play_length": 132,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "刘瞾晶",
+                "type": 6
+              }
+            ],
+            "title": "小红帽"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "684176337243981731",
+        "title": "小桥流水",
+        "performers": "金晶",
+        "desc": "03:19",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/294fca14e22593630332d2cddb75d568-263059e086f6440799ae871533093120-3.mp3",
+            "format": "MP3",
+            "bytes": 4794265
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/dce8d9dc9b585eaa647abc15c73cec62-263059e086f6440799ae871533093120-2.mp3",
+            "format": "MP3",
+            "bytes": 3196198
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/ee36a13847a7358a1c9eb14c1a111af8-263059e086f6440799ae871533093120-1.mp3",
+            "format": "MP3",
+            "bytes": 1598340
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 4794265,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/294fca14e22593630332d2cddb75d568-263059e086f6440799ae871533093120-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 3196198,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/dce8d9dc9b585eaa647abc15c73cec62-263059e086f6440799ae871533093120-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1598340,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/ee36a13847a7358a1c9eb14c1a111af8-263059e086f6440799ae871533093120-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/c85bb642eb1f48b6b695e79a882a5366.jpg",
+              "width": 480
+            },
+            "id": "65865270011443609606081005",
+            "lyric": {
+              "format": 0,
+              "url": "https://boot-video.xuexi.cn/text/audio/1005/202206/fdb4751db8b74a7caa3c994af0e9bea1.txt"
+            },
+            "lyrics": [
+              {
+                "format": 0,
+                "url": "https://boot-video.xuexi.cn/text/audio/1005/202206/fdb4751db8b74a7caa3c994af0e9bea1.txt"
+              }
+            ],
+            "play_length": 199,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "金晶",
+                "type": 6
+              }
+            ],
+            "title": "小桥流水"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "51803543376864007",
+        "title": "爸爸妈妈听我说",
+        "performers": "段丽阳",
+        "desc": "03:25",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/f37a1259a37bf6abf4ac77ca4a3a8d1b-041f841de75e4240b439539c76cd0e8e-3.mp3",
+            "format": "MP3",
+            "bytes": 4944104
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/cf33c91f6d57f86359044025b592acbd-041f841de75e4240b439539c76cd0e8e-2.mp3",
+            "format": "MP3",
+            "bytes": 3296091
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/64d48bf7af3ecebe4d28e07bf6d5deb9-041f841de75e4240b439539c76cd0e8e-1.mp3",
+            "format": "MP3",
+            "bytes": 1648287
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 4944104,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/f37a1259a37bf6abf4ac77ca4a3a8d1b-041f841de75e4240b439539c76cd0e8e-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 3296091,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/cf33c91f6d57f86359044025b592acbd-041f841de75e4240b439539c76cd0e8e-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1648287,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/64d48bf7af3ecebe4d28e07bf6d5deb9-041f841de75e4240b439539c76cd0e8e-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863159095420928016081005",
+            "lyric": {
+              "content": "作词：彭野\n作曲：彭野\n演唱：段丽阳\n\n你对我好我心里都知道\n我学学这个学学那个忙得不得了\n我的烦恼又有谁能知道\n学得太多学得太杂消化不了\n\n你对我好我心里都知道\n我学学这个学学那个忙得不得了\n我的烦恼又有谁能知道\n学得太多学得太杂消化不了\n\n爸爸听我说妈妈听我说\n我喜欢和小朋友蹦蹦跳跳\n爸爸听我说妈妈听我说\n我也喜欢和你们打打闹闹\n\n你对我好我心里都知道\n我学学这个学学那个忙得不得了\n我的烦恼又有谁能知道\n学得太多学得太杂消化不了\n\n爸爸听我说妈妈听我说\n我喜欢和小朋友蹦蹦跳跳\n爸爸听我说妈妈听我说\n我也喜欢和你们打打闹闹\n爸爸听我说妈妈听我说\n我喜欢和小朋友蹦蹦跳跳\n爸爸听我说妈妈听我说\n我也喜欢和你们打打闹闹",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：彭野\n作曲：彭野\n演唱：段丽阳\n\n你对我好我心里都知道\n我学学这个学学那个忙得不得了\n我的烦恼又有谁能知道\n学得太多学得太杂消化不了\n\n你对我好我心里都知道\n我学学这个学学那个忙得不得了\n我的烦恼又有谁能知道\n学得太多学得太杂消化不了\n\n爸爸听我说妈妈听我说\n我喜欢和小朋友蹦蹦跳跳\n爸爸听我说妈妈听我说\n我也喜欢和你们打打闹闹\n\n你对我好我心里都知道\n我学学这个学学那个忙得不得了\n我的烦恼又有谁能知道\n学得太多学得太杂消化不了\n\n爸爸听我说妈妈听我说\n我喜欢和小朋友蹦蹦跳跳\n爸爸听我说妈妈听我说\n我也喜欢和你们打打闹闹\n爸爸听我说妈妈听我说\n我喜欢和小朋友蹦蹦跳跳\n爸爸听我说妈妈听我说\n我也喜欢和你们打打闹闹",
+                "format": 0
+              }
+            ],
+            "play_length": 205,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "段丽阳",
+                "type": 6
+              }
+            ],
+            "title": "爸爸妈妈听我说"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "2894234336581355715",
+        "title": "娃哈哈",
+        "performers": "新月合唱团",
+        "desc": "01:48",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/b5411b76ddb166bb0fa34c87d52a0a4f-53897e2858dc4cd3ad906d94e27d3fbf-3.mp3",
+            "format": "MP3",
+            "bytes": 2605622
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/1786f981cde57199f836714e4498af9d-53897e2858dc4cd3ad906d94e27d3fbf-2.mp3",
+            "format": "MP3",
+            "bytes": 1737103
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/20e47247429c8fd9b2b536db2d6f917f-53897e2858dc4cd3ad906d94e27d3fbf-1.mp3",
+            "format": "MP3",
+            "bytes": 868793
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 2605622,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/b5411b76ddb166bb0fa34c87d52a0a4f-53897e2858dc4cd3ad906d94e27d3fbf-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 1737103,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/1786f981cde57199f836714e4498af9d-53897e2858dc4cd3ad906d94e27d3fbf-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 868793,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/20e47247429c8fd9b2b536db2d6f917f-53897e2858dc4cd3ad906d94e27d3fbf-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863159585733836814081005",
+            "lyric": {
+              "content": "维吾尔族民歌\n作词：石夫\n演唱：新月合唱团\n\n我们的祖国是花园\n花园里花朵真鲜艳\n和暖的阳光照耀着我们\n每个人脸上都笑开颜\n娃哈哈 娃哈哈\n每个人脸上都笑开颜\n\n大姐姐你呀快快来\n小弟弟你也莫躲开\n手拉着手呀唱起那歌儿\n我们的生活多愉快\n娃哈哈 娃哈哈\n我们的生活多愉快\n\n我们的祖国是花园\n花园里花朵真鲜艳\n和暖的阳光照耀着我们\n每个人脸上都笑开颜\n娃哈哈 娃哈哈\n每个人脸上都笑开颜\n\n大姐姐你呀快快来\n小弟弟你也莫躲开\n手拉着手呀唱起那歌儿\n我们的生活多愉快\n娃哈哈 娃哈哈\n我们的生活多愉快",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "维吾尔族民歌\n作词：石夫\n演唱：新月合唱团\n\n我们的祖国是花园\n花园里花朵真鲜艳\n和暖的阳光照耀着我们\n每个人脸上都笑开颜\n娃哈哈 娃哈哈\n每个人脸上都笑开颜\n\n大姐姐你呀快快来\n小弟弟你也莫躲开\n手拉着手呀唱起那歌儿\n我们的生活多愉快\n娃哈哈 娃哈哈\n我们的生活多愉快\n\n我们的祖国是花园\n花园里花朵真鲜艳\n和暖的阳光照耀着我们\n每个人脸上都笑开颜\n娃哈哈 娃哈哈\n每个人脸上都笑开颜\n\n大姐姐你呀快快来\n小弟弟你也莫躲开\n手拉着手呀唱起那歌儿\n我们的生活多愉快\n娃哈哈 娃哈哈\n我们的生活多愉快",
+                "format": 0
+              }
+            ],
+            "play_length": 108,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "新月合唱团",
+                "type": 6
+              }
+            ],
+            "title": "娃哈哈"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "11928042429217147079",
+        "title": "水立方童话",
+        "performers": "毛薇薇、逍遥猫组合",
+        "desc": "02:49",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/9160590a459fa7a00dcd9999b1d3f37c-20c6d7f54bca4ac7b84220348dc67f81-3.mp3",
+            "format": "MP3",
+            "bytes": 4076421
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/544dcf443d342a43ce2fca1950a4698d-20c6d7f54bca4ac7b84220348dc67f81-2.mp3",
+            "format": "MP3",
+            "bytes": 2717635
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/f71ce33400c35fe7320e396cb0743d55-20c6d7f54bca4ac7b84220348dc67f81-1.mp3",
+            "format": "MP3",
+            "bytes": 1359059
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 4076421,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/9160590a459fa7a00dcd9999b1d3f37c-20c6d7f54bca4ac7b84220348dc67f81-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2717635,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/544dcf443d342a43ce2fca1950a4698d-20c6d7f54bca4ac7b84220348dc67f81-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1359059,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/f71ce33400c35fe7320e396cb0743d55-20c6d7f54bca4ac7b84220348dc67f81-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863160207334195202081005",
+            "lyric": {
+              "content": "作词：李幼容\n作曲：孙敬东\n演唱：毛薇薇  、逍遥猫组合\n\n好多好多的水泡泡\n闪亮在北京城\n它叫水立方\n就像那水晶宫\n就像那水晶宫\n亮亮闪闪的水泡泡\n美丽了北京城\n它是水房子\n池水那清又清\n池水那清又清\n\n我做了一个梦\n心里呀好高兴\n梦见了美人鱼\n带我去游泳\n游到水晶宫呀哈\n变成一条龙\n游到水晶宫呀\n变成一条龙\n\n我正要飞上天\n突然呀被叫醒\n妈妈呀告诉我\n有件好事情\n参观水立方呀哈\n从小学游泳\n参观水立方呀\n从小学游泳\n\n好多好多的水泡泡\n闪亮在北京城\n它叫水立方\n就像那水晶宫\n就像那水晶宫",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：李幼容\n作曲：孙敬东\n演唱：毛薇薇  、逍遥猫组合\n\n好多好多的水泡泡\n闪亮在北京城\n它叫水立方\n就像那水晶宫\n就像那水晶宫\n亮亮闪闪的水泡泡\n美丽了北京城\n它是水房子\n池水那清又清\n池水那清又清\n\n我做了一个梦\n心里呀好高兴\n梦见了美人鱼\n带我去游泳\n游到水晶宫呀哈\n变成一条龙\n游到水晶宫呀\n变成一条龙\n\n我正要飞上天\n突然呀被叫醒\n妈妈呀告诉我\n有件好事情\n参观水立方呀哈\n从小学游泳\n参观水立方呀\n从小学游泳\n\n好多好多的水泡泡\n闪亮在北京城\n它叫水立方\n就像那水晶宫\n就像那水晶宫",
+                "format": 0
+              }
+            ],
+            "play_length": 169,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "毛薇薇、逍遥猫组合",
+                "type": 6
+              }
+            ],
+            "title": "水立方童话"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "16142195201844952643",
+        "title": "嘀哩，嘀哩",
+        "performers": "中央人民广播电台少年儿童合唱团",
+        "desc": "02:24",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/d8b61bc5a7dfdf2aec00bf9386128951-0156c2c452894b2c8815b03a8aef9300-3.mp3",
+            "format": "MP3",
+            "bytes": 3472052
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/f74269f9be0dd8e4cfc756a884d78be1-0156c2c452894b2c8815b03a8aef9300-2.mp3",
+            "format": "MP3",
+            "bytes": 2314723
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/07775668ba4d07852486aaa9a8b4814f-0156c2c452894b2c8815b03a8aef9300-1.mp3",
+            "format": "MP3",
+            "bytes": 1157602
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 3472052,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/d8b61bc5a7dfdf2aec00bf9386128951-0156c2c452894b2c8815b03a8aef9300-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 2314723,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/f74269f9be0dd8e4cfc756a884d78be1-0156c2c452894b2c8815b03a8aef9300-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1157602,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/07775668ba4d07852486aaa9a8b4814f-0156c2c452894b2c8815b03a8aef9300-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863160736227328006081005",
+            "lyric": {
+              "content": "作词：望安\n作曲：潘振声\n演唱：中央人民广播电台少年儿童合唱团\n\n春天在哪里呀\n春天在哪里\n春天在那青翠的山林里\n这里有红花呀\n这里有绿草\n还有那会唱歌的小黄鹂\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n春天在青翠的山林里\n还有那会唱歌的小黄鹂\n\n春天在哪里呀\n春天在哪里\n春天在那湖水的倒影里\n映出红的花呀\n映出绿的草\n还有那会唱歌的小黄鹂\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n春天在湖水的倒影里\n还有那会唱歌的小黄鹂\n\n春天在哪里呀\n春天在哪里\n春天在那小朋友眼睛里\n看见红的花呀\n看见绿的草\n还有那会唱歌的小黄鹂\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n春天在小朋友眼睛里\n还有那会唱歌的小黄鹂\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n春天在小朋友眼睛里\n还有那会唱歌的小黄鹂",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：望安\n作曲：潘振声\n演唱：中央人民广播电台少年儿童合唱团\n\n春天在哪里呀\n春天在哪里\n春天在那青翠的山林里\n这里有红花呀\n这里有绿草\n还有那会唱歌的小黄鹂\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n春天在青翠的山林里\n还有那会唱歌的小黄鹂\n\n春天在哪里呀\n春天在哪里\n春天在那湖水的倒影里\n映出红的花呀\n映出绿的草\n还有那会唱歌的小黄鹂\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n春天在湖水的倒影里\n还有那会唱歌的小黄鹂\n\n春天在哪里呀\n春天在哪里\n春天在那小朋友眼睛里\n看见红的花呀\n看见绿的草\n还有那会唱歌的小黄鹂\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n春天在小朋友眼睛里\n还有那会唱歌的小黄鹂\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n嘀哩哩嘀哩嘀哩哩\n嘀哩哩嘀哩哩\n春天在小朋友眼睛里\n还有那会唱歌的小黄鹂",
+                "format": 0
+              }
+            ],
+            "play_length": 144,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "中央人民广播电台少年儿童合唱团",
+                "type": 6
+              }
+            ],
+            "title": "嘀哩，嘀哩"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "6548568113071328070",
+        "title": "生日祝福歌",
+        "performers": "杨祺琦",
+        "desc": "03:21",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 192,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/bd510b19dad1910a7dd05adabbf44a45-cf8b131d74ed4edf8962ac9f79ce63c1-3.mp3",
+            "format": "MP3",
+            "bytes": 4842540
+          },
+          {
+            "bitrate": 128,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/ff5583c3c5231647ce462f2ecfdbd5b8-cf8b131d74ed4edf8962ac9f79ce63c1-2.mp3",
+            "format": "MP3",
+            "bytes": 3228381
+          },
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/bb82d3e2f9721630579f06a3c4fe8382-cf8b131d74ed4edf8962ac9f79ce63c1-1.mp3",
+            "format": "MP3",
+            "bytes": 1614432
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 192,
+                "format": "MP3",
+                "resolution": "3",
+                "size": 4842540,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/bd510b19dad1910a7dd05adabbf44a45-cf8b131d74ed4edf8962ac9f79ce63c1-3.mp3"
+              },
+              {
+                "bitrate": 128,
+                "format": "MP3",
+                "resolution": "2",
+                "size": 3228381,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/ff5583c3c5231647ce462f2ecfdbd5b8-cf8b131d74ed4edf8962ac9f79ce63c1-2.mp3"
+              },
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 1614432,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/bb82d3e2f9721630579f06a3c4fe8382-cf8b131d74ed4edf8962ac9f79ce63c1-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 993,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/6d059d15e554434089f03cd597618861.jpg",
+              "width": 993
+            },
+            "id": "65863161471498240015081005",
+            "lyric": {
+              "content": "作词：李众\n作曲：孟庆华\n演唱：杨祺琦\n\nHappy  birthday  to  you\nHappy  birthday  to  you\nHappy  birthday  to  you\nHappy  birthday  to  you\n\n用许多甜蜜做成大蛋糕\n用许多笑脸架起幸福桥\n用许多惊喜点亮红蜡烛\n用许多心愿祝你生日好\n\n用许多甜蜜做成大蛋糕\n用许多笑脸架起幸福桥\n用许多惊喜点亮红蜡烛\n用许多心愿祝你生日好\n\n生日快乐 生日好\n爸爸妈妈千万别变老\n生日快乐 生日好 \n朋友一个都不能少\n生日快乐 生日好\n大家祝你快长高\n生日快乐 生日好\n大家祝你天天笑\n\n用许多甜蜜做成大蛋糕\n用许多笑脸架起幸福桥\n用许多惊喜点亮红蜡烛\n用许多心愿祝你生日好\n\n生日快乐 生日好\n爸爸妈妈千万别变老\n生日快乐 生日好 \n朋友一个都一个都不能少\n生日快乐 生日好\n大家祝我快长高\n生日快乐 生日好\n大家祝我天天笑\n生日快乐 生日好\n大家祝我快长高\n生日快乐 生日好\n大家祝我天天笑\n大家祝我天天都笑",
+              "format": 0
+            },
+            "lyrics": [
+              {
+                "content": "作词：李众\n作曲：孟庆华\n演唱：杨祺琦\n\nHappy  birthday  to  you\nHappy  birthday  to  you\nHappy  birthday  to  you\nHappy  birthday  to  you\n\n用许多甜蜜做成大蛋糕\n用许多笑脸架起幸福桥\n用许多惊喜点亮红蜡烛\n用许多心愿祝你生日好\n\n用许多甜蜜做成大蛋糕\n用许多笑脸架起幸福桥\n用许多惊喜点亮红蜡烛\n用许多心愿祝你生日好\n\n生日快乐 生日好\n爸爸妈妈千万别变老\n生日快乐 生日好 \n朋友一个都不能少\n生日快乐 生日好\n大家祝你快长高\n生日快乐 生日好\n大家祝你天天笑\n\n用许多甜蜜做成大蛋糕\n用许多笑脸架起幸福桥\n用许多惊喜点亮红蜡烛\n用许多心愿祝你生日好\n\n生日快乐 生日好\n爸爸妈妈千万别变老\n生日快乐 生日好 \n朋友一个都一个都不能少\n生日快乐 生日好\n大家祝我快长高\n生日快乐 生日好\n大家祝我天天笑\n生日快乐 生日好\n大家祝我快长高\n生日快乐 生日好\n大家祝我天天笑\n大家祝我天天都笑",
+                "format": 0
+              }
+            ],
+            "play_length": 201,
+            "play_rate_enable": true,
+            "show_infos": [
+              {
+                "info": "杨祺琦",
+                "type": 6
+              }
+            ],
+            "title": "生日祝福歌"
+          }
+        ]
+      }
+    ],
+    "relatedArtIds": [
+      "10435568416330757706",
+      "10474127538303119450",
+      "1086875580912601113",
+      "10869370363327164896",
+      "11241785657499965379",
+      "11611907317262210694",
+      "11928042429217147079",
+      "11936247128177797461",
+      "12738449941140534779",
+      "13265832467873113825",
+      "13985296122571089948",
+      "16142195201844952643",
+      "17377856874351111097",
+      "18076483931545408717",
+      "18345332359034623644",
+      "2460317260330008325",
+      "2765254747599334291",
+      "2894234336581355715",
+      "3189061831756852615",
+      "3751715474377810027",
+      "3994953753287212913",
+      "5023043848805477696",
+      "510047033778506913",
+      "51803543376864007",
+      "5299712988585108520",
+      "64007656275093577",
+      "64008046297370287",
+      "6548568113071328070",
+      "684176337243981731",
+      "71944698125330867",
+      "7617192199319184014",
+      "8093010224894610515",
+      "8769228391902820588",
+      "9833697650281580394"
+    ],
+    "seriesLinks": [],
+    "targetHits": []
+  },
+  "陪你读童谣(一)": {
+    "url": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=17735598666313749703&type=album",
+    "pageTitle": "陪你读童谣（一）",
+    "apiResponses": 2,
+    "apiKeys": [
+      {
+        "api": "1001002672813127",
+        "topKeys": [
+          "data",
+          "message",
+          "status"
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "topKeys": [
+          "data",
+          "message",
+          "status"
+        ]
+      }
+    ],
+    "entries": [
+      {
+        "api": "1001002672813127",
+        "id": "17735598666313749703",
+        "title": "陪你读童谣（一）",
+        "performers": "刘雪姣",
+        "desc": "12条音频",
+        "duration": "",
+        "audioChoices": [],
+        "audiosRaw": []
+      },
+      {
+        "api": "1001002672813127",
+        "id": "36:49056506710777041",
+        "title": "听小喇叭",
+        "performers": "",
+        "desc": "",
+        "duration": "",
+        "audioChoices": [],
+        "audiosRaw": []
+      },
+      {
+        "api": "1001002672813127",
+        "id": "18186309758880795175",
+        "title": "彩虹之上",
+        "performers": "刘雪姣",
+        "desc": "01:07",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/a565d76f6f2c710739e911dc71778e5e-525be7e70d6948ee8b05b2446c526ddb-1.mp3",
+            "format": "MP3",
+            "bytes": 541113
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 541113,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/a565d76f6f2c710739e911dc71778e5e-525be7e70d6948ee8b05b2446c526ddb-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071303130663321603081006",
+            "lyrics": [],
+            "play_length": 67,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "彩虹之上"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "17517392770382344115",
+        "title": "丛林流浪",
+        "performers": "刘雪姣",
+        "desc": "01:30",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/6639633fed0aed307f172b7c7ccec946-a6c69a51663b4bdeb75c93405d193166-1.mp3",
+            "format": "MP3",
+            "bytes": 720417
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 720417,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/6639633fed0aed307f172b7c7ccec946-a6c69a51663b4bdeb75c93405d193166-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071304172947865603081006",
+            "lyrics": [],
+            "play_length": 90,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "丛林流浪"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "6492556706115506975",
+        "title": "大象",
+        "performers": "刘雪姣",
+        "desc": "00:40",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/21c4c8f597fbb5ca17cafb662b84ae6d-f3be41f27d64421899ec469c36dac20b-1.mp3",
+            "format": "MP3",
+            "bytes": 324819
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 324819,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/21c4c8f597fbb5ca17cafb662b84ae6d-f3be41f27d64421899ec469c36dac20b-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071304674582118406081006",
+            "lyrics": [],
+            "play_length": 40,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "大象"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "14022757091938913081",
+        "title": "鹅妈妈",
+        "performers": "刘雪姣",
+        "desc": "00:38",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/e812c6b2d49c276a21b25f9fec556b16-0cfc9c5bfc2a419981ee584931c98136-1.mp3",
+            "format": "MP3",
+            "bytes": 308727
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 308727,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/e812c6b2d49c276a21b25f9fec556b16-0cfc9c5bfc2a419981ee584931c98136-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071305184201523202081006",
+            "lyrics": [],
+            "play_length": 38,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "鹅妈妈"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "4549973411511284381",
+        "title": "给匹诺曹的信",
+        "performers": "刘雪姣",
+        "desc": "01:22",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/7c1c81cc372aed51d8f511c071bb342a-848af8b86184463fa8079a5e48d375fa-1.mp3",
+            "format": "MP3",
+            "bytes": 658141
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 658141,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/7c1c81cc372aed51d8f511c071bb342a-848af8b86184463fa8079a5e48d375fa-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071305710999142403081006",
+            "lyrics": [],
+            "play_length": 82,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "给匹诺曹的信"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "13287168473567159579",
+        "title": "泥娃娃",
+        "performers": "刘雪姣",
+        "desc": "00:56",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/de3d26a881f8c1a4348c0a4c382db2cf-a8fb4bd9e76347cd9be15b21addf8fcc-1.mp3",
+            "format": "MP3",
+            "bytes": 454804
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 454804,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/de3d26a881f8c1a4348c0a4c382db2cf-a8fb4bd9e76347cd9be15b21addf8fcc-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071306879112806403081006",
+            "lyrics": [],
+            "play_length": 56,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "泥娃娃"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "11354074580889688058",
+        "title": "如果所有的海变成一个大海",
+        "performers": "刘雪姣",
+        "desc": "00:59",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/22cbdf10b29848b0a7620d4cdc9ad4ad-68264dc7e1e041c591c5b50de54dc26c-1.mp3",
+            "format": "MP3",
+            "bytes": 475284
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 475284,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/22cbdf10b29848b0a7620d4cdc9ad4ad-68264dc7e1e041c591c5b50de54dc26c-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071307390398464003081006",
+            "lyrics": [],
+            "play_length": 59,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "如果所有的海变成一个大海"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "13891788958395814906",
+        "title": "数鸭子",
+        "performers": "刘雪姣",
+        "desc": "01:04",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/6a01a59d5dec1730b0c5dab021ff8598-d117856df90c4b5cba3331380647ddfa-1.mp3",
+            "format": "MP3",
+            "bytes": 518334
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 518334,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/6a01a59d5dec1730b0c5dab021ff8598-d117856df90c4b5cba3331380647ddfa-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071307903776768006081006",
+            "lyrics": [],
+            "play_length": 64,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "数鸭子"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "10928096772100386615",
+        "title": "外婆桥",
+        "performers": "刘雪姣",
+        "desc": "01:03",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/8dd1dcc490c466e8db2b0989c32307fb-2925b81d09054cb19fc52907046f80dc-1.mp3",
+            "format": "MP3",
+            "bytes": 505377
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 505377,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/8dd1dcc490c466e8db2b0989c32307fb-2925b81d09054cb19fc52907046f80dc-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071308409616384001081006",
+            "lyrics": [],
+            "play_length": 63,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "外婆桥"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "10122793402243091706",
+        "title": "我有一个小陀螺",
+        "performers": "刘雪姣",
+        "desc": "01:15",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/c9ac103b0f7271bd76e9590bbc01a4e7-77441f64f8cb4eb68f8a30ea9ba8f614-1.mp3",
+            "format": "MP3",
+            "bytes": 603180
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 603180,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/c9ac103b0f7271bd76e9590bbc01a4e7-77441f64f8cb4eb68f8a30ea9ba8f614-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/a140d88885ba4cddafc3fbaa22ba6df2.jpg",
+              "width": 480
+            },
+            "id": "70071309434699776005081006",
+            "lyrics": [],
+            "play_length": 75,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "我有一个小陀螺"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "1960255395324892485",
+        "title": "萤火虫",
+        "performers": "刘雪姣",
+        "desc": "00:51",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/f8ac249b33c9895903580a16ae2ae5d3-91063b3c1d1242dea191f2bf6501cd1d-1.mp3",
+            "format": "MP3",
+            "bytes": 411336
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 411336,
+                "url": "https://boot-video.xuexi.cn/audio/1006/p/f8ac249b33c9895903580a16ae2ae5d3-91063b3c1d1242dea191f2bf6501cd1d-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/b2b0aeab4511425191e98551499fea48.jpg",
+              "width": 480
+            },
+            "id": "70071310952201420803081006",
+            "lyrics": [],
+            "play_length": 51,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "萤火虫"
+          }
+        ]
+      },
+      {
+        "api": "1001002672813127",
+        "id": "10057523472153619497",
+        "title": "趁着月亮有微光",
+        "performers": "刘雪姣",
+        "desc": "01:35",
+        "duration": "",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1005/p/2bd7a589f533ebb40ad926ad963d3220-6bdb653858c44f208507d94fce66a714-1.mp3",
+            "format": "MP3",
+            "bytes": 766811
+          }
+        ],
+        "audiosRaw": [
+          {
+            "audio_storage_infos": [
+              {
+                "bitrate": 64,
+                "format": "MP3",
+                "resolution": "1",
+                "size": 766811,
+                "url": "https://boot-video.xuexi.cn/audio/1005/p/2bd7a589f533ebb40ad926ad963d3220-6bdb653858c44f208507d94fce66a714-1.mp3"
+              }
+            ],
+            "cover": {
+              "height": 480,
+              "type": "jpg",
+              "url": "https://boot-img.xuexi.cn/image/1005/process/b2b0aeab4511425191e98551499fea48.jpg",
+              "width": 480
+            },
+            "id": "74564658203487846406081005",
+            "lyrics": [],
+            "play_length": 95,
+            "play_rate_enable": false,
+            "show_infos": [
+              {
+                "info": "刘雪姣",
+                "type": 2
+              }
+            ],
+            "title": "趁着月亮有微光"
+          }
+        ]
+      }
+    ],
+    "relatedArtIds": [
+      "10057523472153619497",
+      "10122793402243091706",
+      "10928096772100386615",
+      "11354074580889688058",
+      "13287168473567159579",
+      "13891788958395814906",
+      "14022757091938913081",
+      "17517392770382344115",
+      "17735598666313749703",
+      "18186309758880795175",
+      "1960255395324892485",
+      "4549973411511284381",
+      "49056506710777041",
+      "6492556706115506975"
+    ],
+    "seriesLinks": [],
+    "targetHits": [
+      {
+        "title": "数鸭子",
+        "id": "13891788958395814906",
+        "audioChoices": [
+          {
+            "bitrate": 64,
+            "url": "https://boot-video.xuexi.cn/audio/1006/p/6a01a59d5dec1730b0c5dab021ff8598-d117856df90c4b5cba3331380647ddfa-1.mp3",
+            "format": "MP3",
+            "bytes": 518334
+          }
+        ]
+      }
+    ]
+  }
+}

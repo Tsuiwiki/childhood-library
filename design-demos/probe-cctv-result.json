@@ -1,0 +1,330 @@
+{
+  "卖报歌-大手牵小手": {
+    "workId": "CN-C20",
+    "url": "https://tv.cctv.com/v/v1/VIDExSfFIKK3Fmoyx84K4FHl220606.html",
+    "host": "tv.cctv.com",
+    "title": "[大手牵小手]《卖报歌》 演唱：总台央广少年广播70-80年代团员合唱团_CCTV节目官网-CCTV-14_央视网(cctv.com)",
+    "streams": [
+      {
+        "host": "dh5ws01.v.cntv.cn",
+        "guid": "0e52d5648057443a81fac2ef01886f18",
+        "mainUrl": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/0e52d5648057443a81fac2ef01886f18/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/1200/0303000a/3/default/0e52d5648057443a81fac2ef01886f18/1200.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/2000/0303000a/3/default/0e52d5648057443a81fac2ef01886f18/2000.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/450/0303000a/3/default/0e52d5648057443a81fac2ef01886f18/450.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/850/0303000a/3/default/0e52d5648057443a81fac2ef01886f18/850.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/0e52d5648057443a81fac2ef01886f18/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "0052038ae7ca47af84f0b72b1f123d25",
+      "00afdb82e060428d86335be034b061b3",
+      "04410f81e2034165b0e326656d5bf323",
+      "04be85d58c75420c8536b0f361466fe0",
+      "08c5e467b1e04c1da3a9b542c5b34d8b",
+      "0afea2c4749b449e807c2aea5c884713",
+      "0e0e0fa7e61c44b284e485ce770153e4",
+      "0ef152649cb54d66b537273a221b0bf1",
+      "11f4ef4de1b346ed88167588c2797966",
+      "1430751258dd47d5bf24942c0df18fc3"
+    ],
+    "mediaCount": 6
+  },
+  "小毛驴-回声嘹亮": {
+    "workId": "CN-N03",
+    "url": "https://tv.cntv.cn/video/C11356/f110df6245dc4bcca52c1205cd76c5a0",
+    "host": "tv.cntv.cn",
+    "title": "[回声嘹亮]儿歌《小毛驴》 演唱：老皮匠乐队_CCTV节目官网-CCTV-3_央视网(cctv.com)",
+    "streams": [
+      {
+        "host": "dh5wswx02.v.cntv.cn",
+        "guid": "f110df6245dc4bcca52c1205cd76c5a0",
+        "mainUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/f110df6245dc4bcca52c1205cd76c5a0/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/2000/0303000a/3/default/f110df6245dc4bcca52c1205cd76c5a0/2000.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/450/0303000a/3/default/f110df6245dc4bcca52c1205cd76c5a0/450.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/850/0303000a/3/default/f110df6245dc4bcca52c1205cd76c5a0/850.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/f110df6245dc4bcca52c1205cd76c5a0/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "06a38be02560485289b69d5b692125bb",
+      "08d9c062b5cd4669aac91bdf9b8599c7",
+      "09ec47304585406f9c2e7cb408edf1ff",
+      "0c271ee3550d4bf09d939d447b337dc6",
+      "0ddb7225609249c6a717dec5087b2574",
+      "0e168afa4dd54b02b56f5f49f7254ab1",
+      "0e7b582f5b7a48ba95e026de53fd151c",
+      "10631de413734c48816bd9f571cf626c",
+      "11e32ef3cfa549bfa6f3a13aa965f9e7",
+      "1396ec330ef9419bba6fb06a95f69488"
+    ],
+    "mediaCount": 6
+  },
+  "小小螺丝帽-宝贝亮相吧": {
+    "workId": "CN-C21",
+    "url": "https://tv.cctv.com/v/v2/VIDEreA9pWmeIZ7Ehlx9Fa64210314.html",
+    "host": "tv.cctv.com",
+    "title": "[宝贝亮相吧]歌曲《小小螺丝帽》 表演：鲁彦皓_CCTV节目官网-CCTV-11_央视网(cctv.com)",
+    "streams": [
+      {
+        "host": "dh5wx.cntv.kfcbest.com",
+        "guid": "09dfd319d5064fac9e9aefbe73ec868f",
+        "mainUrl": "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/main/0303000a/3/default/09dfd319d5064fac9e9aefbe73ec868f/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/1200/0303000a/3/default/09dfd319d5064fac9e9aefbe73ec868f/1200.m3u8",
+          "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/2000/0303000a/3/default/09dfd319d5064fac9e9aefbe73ec868f/2000.m3u8",
+          "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/450/0303000a/3/default/09dfd319d5064fac9e9aefbe73ec868f/450.m3u8",
+          "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/850/0303000a/3/default/09dfd319d5064fac9e9aefbe73ec868f/850.m3u8",
+          "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/main/0303000a/3/default/09dfd319d5064fac9e9aefbe73ec868f/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "02ede766877844f09c5cb29ae95a5274",
+      "038699ccc6f048efadd7786a881e145a",
+      "065e8d0c0c3b4d8d47d12487520ac1a7",
+      "0a0de7c8892d474ba133a405133a9a56",
+      "0a10a3d6566943fc8afe194743ca0b5a",
+      "0c1accd487774fa086d7ae7d6e471f1a",
+      "0ccf231ca12a49b9856451c33806758e",
+      "0f00813050df456a93339e64a9d384b2",
+      "0fefe526d1164ec499fb14a54fcd2dfe",
+      "1007e5fcef7941d28e67331ea372c0e8"
+    ],
+    "mediaCount": 7
+  },
+  "外婆的澎湖湾-回声嘹亮": {
+    "workId": "CN-C08",
+    "url": "https://tv.cctv.com/2014/06/28/VIDE1403959879035109.shtml",
+    "host": "tv.cctv.com",
+    "title": "[回声嘹亮]歌曲《外婆的澎湖湾》 演唱：张楚怡_CCTV节目官网-CCTV-3_央视网(cctv.com)",
+    "streams": [
+      {
+        "host": "dh5wx.cntv.kfcbest.com",
+        "guid": "050d5c2ce9094dedacd2978d785c0ef0",
+        "mainUrl": "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/main/0303000a/3/default/050d5c2ce9094dedacd2978d785c0ef0/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/2000/0303000a/3/default/050d5c2ce9094dedacd2978d785c0ef0/2000.m3u8",
+          "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/450/0303000a/3/default/050d5c2ce9094dedacd2978d785c0ef0/450.m3u8",
+          "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/850/0303000a/3/default/050d5c2ce9094dedacd2978d785c0ef0/850.m3u8",
+          "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/main/0303000a/3/default/050d5c2ce9094dedacd2978d785c0ef0/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "03666be4ed2a42f4a62e4b0c7061cc98",
+      "06ace9f7decf4d40a4e4f095a0d1d08d",
+      "08d9c062b5cd4669aac91bdf9b8599c7",
+      "0964ea4aaf3e4dd1b4995186445a44b8",
+      "0ab0c7fdcc594f9093689822232c05c0",
+      "0b863329ccb6d0d2b456e37254463346",
+      "0ba6856286d644c7bb3b9b61e8337fb4",
+      "0e7b582f5b7a48ba95e026de53fd151c",
+      "10631de413734c48816bd9f571cf626c",
+      "11e32ef3cfa549bfa6f3a13aa965f9e7"
+    ],
+    "mediaCount": 6
+  },
+  "外婆的澎湖湾-民歌中国": {
+    "workId": "CN-C08",
+    "url": "https://tv.cctv.com/2018/11/28/VIDEleQytPNFhXoSzx7F1Ahl181128.shtml",
+    "host": "tv.cctv.com",
+    "title": "[民歌中国]歌曲《外婆的澎湖湾》 演唱：任贤齐_CCTV节目官网-CCTV-15_央视网(cctv.com)",
+    "streams": [
+      {
+        "host": "dh5ws01.v.cntv.cn",
+        "guid": "02be9178fb7749b48291d7a1b4eab91f",
+        "mainUrl": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/02be9178fb7749b48291d7a1b4eab91f/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/1200/0303000a/3/default/02be9178fb7749b48291d7a1b4eab91f/1200.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/2000/0303000a/3/default/02be9178fb7749b48291d7a1b4eab91f/2000.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/450/0303000a/3/default/02be9178fb7749b48291d7a1b4eab91f/450.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/850/0303000a/3/default/02be9178fb7749b48291d7a1b4eab91f/850.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/02be9178fb7749b48291d7a1b4eab91f/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "022600e5f8174133862dc10850f30101",
+      "0275214fa9214fa99c52b4f7a28cbc07",
+      "03697e388ecd4565b4898d32eba4d5c6",
+      "0394a247e2744c1fa28e72a2af32c721",
+      "07d80045faec4379b782406a51adbab4",
+      "0c1f3270bcc04961cfa88f5e213b5288",
+      "0d6ab0fa84fa462897fb6b7d3b74bdf8",
+      "0e5fc106824c4ec6a19dea16eea83cc6",
+      "1396ec330ef9419bba6fb06a95f69488",
+      "181bb15947234219a79315709832caac"
+    ],
+    "mediaCount": 7
+  },
+  "虫儿飞-大手牵小手": {
+    "workId": "CN-N05",
+    "url": "https://tv.cctv.cn/2019/10/16/VIDExGznIy4bpUu1j8wsX4pD191016.shtml",
+    "host": "tv.cctv.cn",
+    "title": "[大手牵小手]歌曲《虫儿飞》 演唱：赵蕾_CCTV节目官网-CCTV-14_央视网(cctv.com)",
+    "streams": [
+      {
+        "host": "dh5wswx02.v.cntv.cn",
+        "guid": "986f05b8affa4af09c2df82c47cbec17",
+        "mainUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/986f05b8affa4af09c2df82c47cbec17/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/1200/0303000a/3/default/986f05b8affa4af09c2df82c47cbec17/1200.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/2000/0303000a/3/default/986f05b8affa4af09c2df82c47cbec17/2000.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/450/0303000a/3/default/986f05b8affa4af09c2df82c47cbec17/450.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/850/0303000a/3/default/986f05b8affa4af09c2df82c47cbec17/850.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/986f05b8affa4af09c2df82c47cbec17/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "00d49745ee2846a983c8f829b7c5c0af",
+      "00effd664ff044a28b4381feedf3137e",
+      "0357ef03cf6a43ea80ada4e09f33fc13",
+      "07da398df4b943519bcf2f4e21cb3421",
+      "083a66dfa7b44a8bade8ce66647f58d3",
+      "095e62f12a554906a84495faefce8b61",
+      "0ba368e9151447398425e77bf9056cfc",
+      "1ad1e51b5eda462aae93ed3e6f73bd80",
+      "1da8f36474cd47ce96ddee9f7a038c8b",
+      "1efa169a8de04f499e5cb89d42118583"
+    ],
+    "mediaCount": 5
+  },
+  "虫儿飞-精彩音乐汇": {
+    "workId": "CN-N05",
+    "url": "https://tv.cctv.com/2019/03/18/VIDEBTQh3QtxHe0f4lUqVjBu190318.shtml",
+    "host": "tv.cctv.com",
+    "title": "[精彩音乐汇]歌曲《虫儿飞》 演唱：麦麦_CCTV节目官网-CCTV-15_央视网(cctv.com)",
+    "streams": [
+      {
+        "host": "dh5wswx02.v.cntv.cn",
+        "guid": "fe80f4ee68244325adc9cfa19b0f68b1",
+        "mainUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/fe80f4ee68244325adc9cfa19b0f68b1/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/1200/0303000a/3/default/fe80f4ee68244325adc9cfa19b0f68b1/1200.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/2000/0303000a/3/default/fe80f4ee68244325adc9cfa19b0f68b1/2000.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/450/0303000a/3/default/fe80f4ee68244325adc9cfa19b0f68b1/450.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/850/0303000a/3/default/fe80f4ee68244325adc9cfa19b0f68b1/850.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/fe80f4ee68244325adc9cfa19b0f68b1/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "006aea721daa403ca955e74fcc8002cb",
+      "028308a04ab8451f9d83e0508de7ddf6",
+      "0485054398784e49bc8719ac43dc96b6",
+      "0509ddeff00d4d3aaf85b5f23cf839e9",
+      "0761eb4aef614ef4bad98233f9d6b654",
+      "09f9f5f8d21e4d8b87754e2a4736cd0b",
+      "0b11868349304eb39c88ebf2e5b3f9e8",
+      "0c786b8ca72b4fe289e7be44130dc82b",
+      "0db8192da7234eae96e6bd38c8108836",
+      "0e3f6890e6704dcfa7d23c90d4bcbd63"
+    ],
+    "mediaCount": 7
+  },
+  "童年-快乐大巴": {
+    "workId": "CN-N02",
+    "url": "https://tv.cctv.cn/2018/09/22/VIDEgSZ1eNOUpujo720kdGFe180922.shtml",
+    "host": "tv.cctv.cn",
+    "title": "[快乐大巴]歌曲《童年》 演唱：刘昱星_CCTV节目官网-CCTV-14_央视网(cctv.com)",
+    "streams": [
+      {
+        "host": "dh5ws01.v.cntv.cn",
+        "guid": "78173ae4b086418aaf84397adcbfd8a5",
+        "mainUrl": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/78173ae4b086418aaf84397adcbfd8a5/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/1200/0303000a/3/default/78173ae4b086418aaf84397adcbfd8a5/1200.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/2000/0303000a/3/default/78173ae4b086418aaf84397adcbfd8a5/2000.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/450/0303000a/3/default/78173ae4b086418aaf84397adcbfd8a5/450.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/850/0303000a/3/default/78173ae4b086418aaf84397adcbfd8a5/850.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/78173ae4b086418aaf84397adcbfd8a5/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "000899175caf43ae98ac717fea6c7e89",
+      "002864b456ac43f59ef6ef2dc48a88d6",
+      "042849d445004400b2fa4fa33acd6025",
+      "04ccd393c6894a4db4542e118212f442",
+      "052b4e2651a5452ca6b71eb0b6184892",
+      "0589a4e607cf4c14a0c4afd32d4775f1",
+      "078fef73128b4ceeb9679f168fc56f9d",
+      "0a1ec8a54bb346e2a610b8c28099f196",
+      "0a2951c482c84447ae62ae545d6a0e1c",
+      "0c40c24f26e246dab2adff6f69005020"
+    ],
+    "mediaCount": 5
+  },
+  "童年-精彩音乐汇": {
+    "workId": "CN-N02",
+    "url": "https://tv.cctv.com/2023/07/19/VIDE4nJ9pjWogBYb7od9Ghd2230719.shtml",
+    "host": "tv.cctv.com",
+    "title": "[精彩音乐汇]歌曲《童年》 演唱：周觅",
+    "streams": [
+      {
+        "host": "dh5ws01.v.cntv.cn",
+        "guid": "0cfa28be874548849dea14aa7507b92b",
+        "mainUrl": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/0cfa28be874548849dea14aa7507b92b/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/1200/0303000a/3/default/0cfa28be874548849dea14aa7507b92b/1200.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/2000/0303000a/3/default/0cfa28be874548849dea14aa7507b92b/2000.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/450/0303000a/3/default/0cfa28be874548849dea14aa7507b92b/450.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/850/0303000a/3/default/0cfa28be874548849dea14aa7507b92b/850.m3u8",
+          "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/0cfa28be874548849dea14aa7507b92b/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "0152fa28117345ee84f67c6491eade83",
+      "01711759d39e4f16be5eec375762306c",
+      "03adae80de6a4cf5a422fc23038037aa",
+      "0ab054dba3e847388f133aa1ae6078b1",
+      "0d7af5b6c15f4fb287833598ab746d28",
+      "16e7386425674114a6f238aec6fed13d",
+      "1ed87eb3bca29461cba7de9c8ee44be1",
+      "1feec784235d408d9ad73fe2e84b567b",
+      "25cef1b70ab1478282660f7a45b5006c",
+      "2947db791abd4452a55750a8cd4d5d0d"
+    ],
+    "mediaCount": 7
+  },
+  "一园青菜成了精-七巧板": {
+    "workId": "CN-T12",
+    "url": "https://tv.cctv.com/v/v1/VIDEEUPGaW9KNkr8KvsAZNBn210626.html",
+    "host": "tv.cctv.com",
+    "title": "[七巧板]《一园青菜成了精》 表演：刘瀚元家庭_CCTV节目官网-CCTV-14_央视网(cctv.com)",
+    "streams": [
+      {
+        "host": "dh5wswx02.v.cntv.cn",
+        "guid": "55c52746433b45b19e55f9ad2791475e",
+        "mainUrl": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/55c52746433b45b19e55f9ad2791475e/main.m3u8?maxbr=2048&contentid=15120519184043",
+        "observedUrls": [
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/1200/0303000a/3/default/55c52746433b45b19e55f9ad2791475e/1200.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/2000/0303000a/3/default/55c52746433b45b19e55f9ad2791475e/2000.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/450/0303000a/3/default/55c52746433b45b19e55f9ad2791475e/450.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/850/0303000a/3/default/55c52746433b45b19e55f9ad2791475e/850.m3u8",
+          "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/55c52746433b45b19e55f9ad2791475e/main.m3u8?maxbr=2048&contentid=15120519184043"
+        ]
+      }
+    ],
+    "looseGuids": [
+      "008ce1e66b0c414db1e0cf4b2e210b86",
+      "00d49745ee2846a983c8f829b7c5c0af",
+      "01b521257bca4ad49981a8c4314617e8",
+      "02cc9a32f0c34fdeb93f59005e4e69d5",
+      "043b979f42904524af057a247c80e422",
+      "061704f14987471087e2d21a622e2ec8",
+      "08bf36f5befc4dceb07ea1708ee3f151",
+      "0a4833214f224172ab9b219c1118f5bd",
+      "0eccf93b0e1f4c8f92c51bb0f3ed1411",
+      "0ef169bd1afa47f8b840a9c67f41e47a"
+    ],
+    "mediaCount": 6
+  }
+}

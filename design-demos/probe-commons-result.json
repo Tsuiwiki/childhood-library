@@ -1,0 +1,32 @@
+{
+  "status": "blocked_by_wikimedia_rate_limit",
+  "api": "https://commons.wikimedia.org/w/api.php",
+  "httpStatus": 403,
+  "detail": "HTTP 403；Wikimedia 边缘缓存对共享出口 IP 限流（403 Too Many Reqs / 429）。",
+  "note": "0 候选不等于 Commons 没有开放许可音频。本轮通过 WebFetch 通道核验到的候选见 verifiedCandidates；它们多为器乐片段、MIDI、同名异曲或现代专辑录音，且本地无法下载二进制媒体，因此 47 首一律标「音频待采集」。",
+  "worksChecked": 47,
+  "worksWithUsableAudio": null,
+  "verifiedCandidates": [
+    {
+      "id": "EN-M01",
+      "note": "Commons 仅命中 File:Hush, Little Baby.mid（CC0 的 MIDI 数据），不是可播放的真实录音，按「真实录音优先」口径不接入。"
+    },
+    {
+      "id": "EN-M08",
+      "note": "Commons 命中 File:Simple Gifts - Miriam Bowen.ogg 与 File:Simple Gifts - Pendyrus Choir-cory Band.ogg（CC BY-SA 3.0，署名 Sain (Recordiau) Cyf.）、File:Simple Gifts (2017) - Concert Band - United States Air Force Band.mp3（美国联邦政府作品）；均未完成逐项身份与授权复核。"
+    },
+    {
+      "id": "EN-T04",
+      "note": "已核验 Commons 文件元数据：File:Baa, Baa, Blacksheep.ogg → CC BY-SA 3.0，作者 CambridgeBayWeather，23.95 秒，application/ogg，文件说明为「Tune for Baa, Baa, Blacksheep」的曲调演奏而非人声演唱；本地采集受源站 429 限制未完成。"
+    },
+    {
+      "id": "EN-T15",
+      "note": "Commons 搜索命中 File:Old McDonald Had a Farm.ogg（CC BY-SA 3.0 片段），但文件标题拼写 McDonald 与目录条目 MacDonald 不一致，需逐项比对版本后才能判断，未核验前不接入。"
+    },
+    {
+      "id": "EN-T22",
+      "note": "Commons 命中 File:Yankee Doodle (choral).ogg（Public Domain Mark 1.0）、File:Yankee Doodle - Concert Band - United States Air Force Heritage of America Band.mp3（美国联邦政府作品）；同批结果里另有多首 1910–1917 年同名异曲录音（When Yankee Doodle Marches Thro' Berlin 等），必须严格排除。"
+    }
+  ],
+  "checkedOn": "2026-11-18"
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="童年书房研究资源库：双层架构、五维状态模型、研究看板、来源线索与采集边界。">
+  <title>研究资源库｜童年书房</title>
+  <style>
+
+    :root {
+      --paper: #f4eddc; --paper-light: #fffaf0; --ink: #191917;
+      --red: #e64a38; --yellow: #f1bd32; --blue: #2858b8; --green: #739348; --brown: #8b5e3c;
+      --line: 3px solid var(--ink); --shadow: 7px 7px 0 var(--ink);
+      --serif: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      --sans: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background-color: var(--paper);
+      background-image: radial-gradient(circle, rgba(25,25,23,.18) .8px, transparent .9px);
+      background-size: 9px 9px; font-family: var(--sans); font-size: 16px; line-height: 1.7;
+      overflow-x: clip;
+    }
+    [hidden] { display: none !important; }
+    a { color: inherit; } a, button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
+    button, input, select { font: inherit; }
+    svg { display: block; max-width: 100%; }
+    h1, h2, h3, p { margin-top: 0; }
+    section { scroll-margin-top: 104px; }
+    ::selection { color: var(--paper-light); background: var(--blue); }
+    :focus-visible { outline: 4px solid var(--blue); outline-offset: 4px; }
+    .shell { width: min(calc(100% - 48px), 1240px); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 30; top: 0; border-bottom: var(--line); background-color: var(--paper); background-image: radial-gradient(circle, rgba(25,25,23,.16) .8px, transparent .9px); background-size: 9px 9px; }
+    .header-inner { min-height: 80px; display: flex; align-items: center; gap: 22px; }
+    .brand { display: inline-flex; align-items: center; min-height: 48px; margin-right: auto; text-decoration: none; font-family: var(--serif); font-size: 24px; font-weight: 900; letter-spacing: .08em; white-space: nowrap; }
+    .brand small { margin-left: 11px; padding-left: 11px; border-left: 2px solid var(--ink); font-family: var(--sans); font-size: 11px; font-weight: 700; line-height: 1.25; letter-spacing: .08em; }
+    .desktop-nav { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; }
+    .desktop-nav a, .mobile-nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 11px; text-decoration: none; font-weight: 800; font-size: 15px; }
+    .desktop-nav a:hover { text-decoration: underline 3px var(--red); text-underline-offset: 6px; }
+    .desktop-nav a[aria-current="page"], .mobile-nav a[aria-current="page"] { text-decoration: underline 3px var(--red); text-underline-offset: 6px; }
+    .menu-toggle { display: none; width: 48px; height: 48px; padding: 11px; border: var(--line); background: var(--yellow); box-shadow: 3px 3px 0 var(--ink); }
+    .menu-toggle span { display: block; width: 100%; height: 2px; margin: 4px 0; background: var(--ink); }
+    .mobile-nav { padding: 8px 0 18px; border-top: 2px solid var(--ink); }
+    .mobile-nav a { width: 100%; justify-content: flex-start; border-bottom: 1px dashed var(--ink); }
+    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 11px 22px; border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); font-weight: 800; line-height: 1.35; text-decoration: none; transition: translate .16s ease, box-shadow .16s ease; }
+    .button:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .button:active { translate: 3px 3px; box-shadow: 1px 1px 0 var(--ink); }
+    .button-primary { background: var(--yellow); }
+    .button svg { width: 20px; height: 20px; flex: 0 0 auto; }
+    .eyebrow { display: inline-block; margin-bottom: 20px; padding: 5px 13px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 3px 3px 0 var(--ink); font-size: 14px; font-weight: 800; letter-spacing: .12em; transform: rotate(-2deg); }
+    .site-footer { margin-top: 34px; padding-block: 30px 40px; border-top: var(--line); background: var(--ink); color: var(--paper-light); }
+    .site-footer p { margin: 0; font-size: 13px; opacity: .82; }
+    .site-footer a { text-decoration: underline; }
+    @media (max-width: 1080px) { .desktop-nav a { padding-inline: 8px; font-size: 14px; } }
+    @media (max-width: 900px) { .desktop-nav { display: none; } .menu-toggle { display: block; } .header-inner { gap: 12px; } }
+
+    
+
+    .hero { padding-block: 48px 26px; }
+    .hero h1 { font-family: var(--serif); font-size: clamp(40px, 5vw, 60px); font-weight: 900; line-height: 1.16; letter-spacing: -.04em; margin-bottom: 16px; }
+    .hero h1 .accent { color: var(--blue); }
+    .hero-desc { max-width: 780px; font-size: 17px; line-height: 1.9; margin-bottom: 20px; }
+    .quote { padding: 16px 20px; border: var(--line); background: var(--yellow); box-shadow: var(--shadow); font-family: var(--serif); font-size: 19px; font-weight: 900; max-width: 820px; }
+    .section { padding-block: 26px 10px; }
+    .section h2 { font-family: var(--serif); font-size: clamp(26px, 3.2vw, 34px); font-weight: 900; margin-bottom: 8px; }
+    .section > p { font-size: 15px; color: #4a4841; max-width: 860px; }
+    .layer-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 18px; }
+    .layer { border: var(--line); background: var(--paper-light); box-shadow: var(--shadow); padding: 20px 20px 16px; }
+    .layer.research { background: #dde5f6; }
+    .layer.library { background: #e2ebd7; }
+    .layer .kicker { font-size: 12px; font-weight: 900; letter-spacing: .1em; }
+    .layer h3 { font-family: var(--serif); font-size: 23px; font-weight: 900; margin: 4px 0 8px; }
+    .layer p { font-size: 14px; margin: 0 0 8px; }
+    .layer ul { margin: 0; padding-left: 20px; font-size: 14px; }
+    .dash { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 18px; }
+    .dash-cell { border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); padding: 15px 16px; }
+    .dash-cell b { display: block; font-family: var(--serif); font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .dash-cell span { font-size: 12px; color: #4a4841; }
+    .dash-cell small { display: block; margin-top: 6px; font-size: 11px; color: #55534b; }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 16px; }
+    .data-table th, .data-table td { border: 2px solid var(--ink); padding: 9px 11px; text-align: left; vertical-align: top; }
+    .data-table th { background: var(--yellow); font-weight: 900; }
+    .data-table code { font-family: monospace; font-weight: 800; }
+    .data-table a { text-decoration: underline 2px var(--blue); text-underline-offset: 3px; font-weight: 800; }
+    .flow { counter-reset: step; list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .flow li { counter-increment: step; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 3px 3px 0 var(--ink); padding: 12px 12px 12px 40px; font-size: 13px; position: relative; }
+    .flow li::before { content: counter(step); position: absolute; left: 10px; top: 10px; width: 22px; height: 22px; display: grid; place-items: center; border: 2px solid var(--ink); background: var(--yellow); font-weight: 900; font-size: 12px; }
+    .boundary { margin-top: 18px; border: var(--line); background: #fbe3dd; box-shadow: var(--shadow); padding: 20px 20px 14px; }
+    .boundary h3 { font-family: var(--serif); font-size: 21px; font-weight: 900; }
+    .boundary ul { margin: 0; padding-left: 20px; font-size: 14px; }
+    .boundary li { margin-bottom: 6px; }
+    .boundary a { text-decoration: underline 2px var(--blue); text-underline-offset: 3px; font-weight: 800; }
+    .table-scroll { overflow-x: auto; margin-top: 16px; }
+    .table-scroll .data-table { margin-top: 0; min-width: 620px; }
+    @media (max-width: 1000px) { .flow { grid-template-columns: repeat(2, 1fr); } .dash { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      .layer-row { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .hero { padding-block: 34px 20px; }
+      .data-table { font-size: 12px; }
+    }
+  
+    /* ===== LIBRARY_LINKS:CSS ===== */
+    .lib-map { padding-block: 26px 54px; }
+    .lib-map-box { border: var(--line); background: var(--paper-light); box-shadow: var(--shadow); padding: 26px 26px 22px; }
+    .lib-map-box h2 { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); font-weight: 900; margin-bottom: 6px; }
+    .lib-map-box > p { font-size: 14px; color: #4a4841; margin-bottom: 20px; }
+    .lib-halls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lib-hall { display: flex; flex-direction: column; gap: 4px; padding: 14px 14px 12px; border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); text-decoration: none; transition: translate .15s ease, box-shadow .15s ease; }
+    .lib-hall:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .lib-hall b { font-family: var(--serif); font-size: 20px; font-weight: 900; }
+    .lib-hall span { font-size: 12px; line-height: 1.5; color: #4a4841; }
+    .lib-hall.lib-story { background: #fbe3dd; }
+    .lib-hall.lib-music { background: #fdf1c9; }
+    .lib-hall.lib-poetry { background: #e2ebd7; }
+    .lib-hall.lib-research { background: #dde5f6; }
+    .lib-hall[aria-current="page"] { outline: 3px dashed var(--ink); outline-offset: 3px; }
+    .lib-specs { margin-top: 20px; padding-top: 16px; border-top: 2px dashed var(--ink); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .lib-specs > strong { font-size: 13px; margin-right: 4px; }
+    .lib-specs a { padding: 4px 10px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-specs a:hover { background: var(--yellow); }
+    .lib-specs a[aria-current="page"] { background: var(--yellow); }
+    .lib-more { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; font-weight: 800; }
+    .lib-more a { text-decoration: underline 2px var(--blue); text-underline-offset: 4px; }
+    .lib-peers { padding-block: 6px 26px; }
+    .lib-peers-inner { border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); padding: 16px 18px; }
+    .lib-peers-inner > strong { display: block; font-size: 13px; margin-bottom: 10px; }
+    .lib-peer-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lib-peer-list a { padding: 5px 10px; border: 2px solid var(--ink); background: var(--paper-light); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-peer-list a:hover { background: var(--yellow); }
+    .lib-peer-list a[aria-current="page"] { background: var(--yellow); box-shadow: 2px 2px 0 var(--ink); }
+    .lib-peer-ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 13px; font-weight: 800; }
+    .lib-peer-ends a { text-decoration: none; border-bottom: 2px solid var(--ink); }
+    .lib-peer-ends .spacer { flex: 1; }
+    @media (max-width: 1000px) { .lib-halls { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      .lib-halls { grid-template-columns: 1fr; }
+      .lib-map-box { padding: 20px 16px 18px; }
+      .shell { width: min(calc(100% - 32px), 1240px); }
+    }
+    .work-spec-links { margin-top: 18px; padding: 12px 14px; border: 2px dashed var(--ink); background: #dde5f6; font-size: 13px; }
+    .work-spec-links > strong { display: block; margin-bottom: 8px; }
+    .work-spec-links div { display: flex; flex-wrap: wrap; gap: 8px; }
+    .work-spec-links a { padding: 3px 9px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-weight: 800; text-decoration: none; }
+    .work-spec-links a:hover { background: var(--yellow); }
+    /* ===== /LIBRARY_LINKS:CSS ===== */
+</style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="dir-3.html" aria-label="返回童年书房首页">童年书房<small>CHILDHOOD<br>LIBRARY</small></a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="dir-3.html">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html">音乐馆</a>
+        <a href="poetry.html">古诗词馆</a>
+        <a href="research.html" aria-current="page">研究资源库</a>
+        <a href="works.html">作品目录</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="展开导航">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="shell mobile-nav" id="mobile-nav" aria-label="移动端导航" hidden>
+      <a href="dir-3.html">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html">音乐馆</a>
+        <a href="poetry.html">古诗词馆</a>
+        <a href="research.html" aria-current="page">研究资源库</a>
+        <a href="works.html">作品目录</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="shell hero" aria-labelledby="page-title">
+      <span class="eyebrow">RESEARCH LAYER · 研究资源库</span>
+      <h1 id="page-title">先尽可能完整地<span class="accent">发现与理解</span>，再审慎决定每项资源可以如何被使用。</h1>
+      <p class="hero-desc">童年书房首先是一个面向儿童文化的研究、发现、采集、整理与学习项目，其次才是面向儿童和家庭的资源产品。这一页展示研究层的数据口径、状态模型、采集边界与当前进度。</p>
+      <div class="quote">版权状态未知，不等于没有研究价值；暂时不能公开使用，不等于不应该收录研究线索。</div>
+      <div class="hero-actions" style="margin-top:22px">
+        <a class="button button-primary" href="#dashboard">看状态看板</a>
+        <a class="button" href="#boundary">看使用边界</a>
+      </div>
+    </section>
+
+    <section class="shell section" aria-labelledby="layers-title">
+      <h2 id="layers-title">双层架构：研究资源库 / 儿童使用层</h2>
+      <p>同一份作品可以同时存在于两层，但两层回答不同的问题、受不同的门禁约束。</p>
+      <div class="layer-row">
+        <article class="layer research">
+          <span class="kicker">A · RESEARCH</span>
+          <h3>研究资源库</h3>
+          <p>用于发现、登记、研究和维护候选作品及其版本线索。当前三馆目录页都属于这一层。</p>
+          <ul>
+            <li>可登记权利未知、待核验或权利复杂的作品候选</li>
+            <li>保留作品身份、版本描述、来源名称、发布者、原始 URL、发现日期与核验状态</li>
+            <li>优先保存必要元数据与原始来源链接，而不是复制第三方内容</li>
+            <li>作品、内容版本、来源条目、媒体资产、权利记录分开建模</li>
+          </ul>
+        </article>
+        <article class="layer library">
+          <span class="kicker">B · LIBRARY</span>
+          <h3>儿童阅读与使用层</h3>
+          <p>面向儿童和家庭提供经过编辑整理的内容体验。进入具体使用场景前逐项判断。</p>
+          <ul>
+            <li>展示作品介绍或目录信息</li>
+            <li>展示正文、歌词、译文、注释或插画</li>
+            <li>跳转原始来源 / 嵌入第三方播放器</li>
+            <li>站内播放、下载、转载或分发</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section" id="model" aria-labelledby="model-title">
+      <h2 id="model-title">统一状态模型 · 五个维度</h2>
+      <p>研究进度、权利状态、内容质量、访问方式与发布状态必须分开管理，不能用一个「是否可用」相互替代。依据顶层原则 §6 与 GitHub 版《数据模型设计》§4。</p>
+      <div class="table-scroll"><table class="data-table">
+        <thead><tr><th>字段</th><th>建议状态</th><th>回答的问题</th><th>本项目口径</th></tr></thead>
+        <tbody><tr><td><code>research_status</code></td><td>discovered / researching / reviewed / rejected</td><td>研究到哪一步？</td><td>发现线索即登记，不因权利未知而丢弃。</td></tr>
+<tr><td><code>rights_status</code></td><td>unknown / pending / verified / restricted / revoked</td><td>权利核验到哪一步？</td><td>细化到具体文本、译本、插画、录音、视频资产，不只在作品级设一个笼统状态。</td></tr>
+<tr><td><code>quality_status</code></td><td>unreviewed / suitable / needs_context / unsuitable</td><td>内容是否符合项目质量定位？</td><td>含文学/艺术质量、事实核验与儿童适宜性，由编辑判断。</td></tr>
+<tr><td><code>access_method</code></td><td>source_link / official_embed / licensed_media / own_original / none</td><td>当前允许采用什么访问方式？</td><td>研究库默认只保存必要元数据与原始页面链接。</td></tr>
+<tr><td><code>publication_status</code></td><td>draft / pending_review / approved / published / withdrawn</td><td>是否可以进入公开层？</td><td>研究完成不等于版权确认，也不等于可以公开发布。</td></tr></tbody>
+      </table></div>
+    </section>
+
+    <section class="shell section" id="dashboard" aria-labelledby="dash-title">
+      <h2 id="dash-title">研究状态看板 · 当前实际进度</h2>
+      <p>下列数字由项目内数据文件实时计算：专题目录、作品目录、资料卡、本地录音清单与官方试听清单。数字分别统计「已登记」「资料完整」「可公开播放」三类，互不混同。录音类型沿用项目既有缺省口径：早期 3 条 CC 开放许可录音未显式写 <code>sampleType</code>，按 <code>open</code> 计。</p>
+      <div class="dash">
+        <div class="dash-cell"><b>105</b><span>音乐馆发现目录条目</span><small>中国 55 / 英文 50，属发现目录，不等同 100 首种子库</small></div>
+        <div class="dash-cell"><b>102</b><span>作品资料卡</span><small>中国 55 / 世界经典 47；歌词、谱面与封面按实际状态展示</small></div>
+        <div class="dash-cell"><b>100 + 60</b><span>故事 / 诗词研究记录</span><small>本轮按原则新增，全部 publication_status = draft</small></div>
+        <div class="dash-cell"><b>58 / 63</b><span>本地作品录音 / 可播放版本</span><small>含多版本选择器；不等于已获公开播放授权</small></div>
+        <div class="dash-cell"><b>27 / 28</b><span>本轮采集媒体文件 / 作品映射</span><small>内部研究采集，含公开页面完整录音与视频原声音轨</small></div>
+        <div class="dash-cell"><b>5</b><span>官方发行 30 秒试听</span><small>点击加载、逐次核验曲目身份、不持久化预览 URL</small></div>
+        <div class="dash-cell"><b>26 / 21 / 11</b><span>internal / generated / open</span><small>internal = 权利待核验；generated = 非原曲测试音；open = 开放素材</small></div>
+        <div class="dash-cell"><b>0</b><span>已由本站完成公开再发布核验的媒体</span><small>公共部署仍须逐项通过权利门禁，当前均为研究 / 原型层</small></div>
+      </div>
+      <div class="table-scroll"><table class="data-table">
+        <thead><tr><th>数据文件</th><th>用途</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td><a href="library-content.json">library-content.json</a></td><td>故事馆 / 古诗词馆研究候选目录</td><td>100 + 60 条，含五维状态与来源线索</td></tr>
+          <tr><td><a href="specialties.json">specialties.json</a></td><td>音乐馆发现目录与八专题映射</td><td>105 条作品记录</td></tr>
+          <tr><td><a href="audio/samples.json">audio/samples.json</a></td><td>作品录音与资料卡入口</td><td>58 条 / 63 个可播放版本</td></tr>
+          <tr><td><a href="china-materials.json">china-materials.json</a></td><td>中国经典资料卡</td><td>55 条，含歌词、谱面与原创封面</td></tr>
+          <tr><td><a href="world-materials.json">world-materials.json</a></td><td>世界经典资料卡</td><td>47 条，封面 / 已核验歌词 / 来源 / 权利状态；音频一律「待采集」</td></tr>
+          <tr><td><a href="world-lyrics-sources.json">world-lyrics-sources.json</a></td><td>世界经典歌词与来源逐曲核验底稿</td><td>47 条，无证歌词置 null 并写明原因</td></tr>
+          <tr><td><a href="world-audio-clues.json">world-audio-clues.json</a></td><td>开放许可音频线索与采集受阻记录</td><td>5 组已核验候选，均未接入播放</td></tr>
+          <tr><td><a href="audio/public-recording-collection.json">audio/public-recording-collection.json</a></td><td>累计两轮内部研究采集清单</td><td>27 个文件 / 28 条映射，含来源、SHA-256 与时长</td></tr>
+          <tr><td><a href="audio/official-recordings.json">audio/official-recordings.json</a></td><td>官方发行试听清单</td><td>5 首，30 秒预览，不与内部完整录音混同</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="shell section" aria-labelledby="sources-title">
+      <h2 id="sources-title">来源线索 · 机构入口</h2>
+      <p>下表为发现与考证入口，不是具体作品页面，也不构成转载许可。研究库默认只保存必要元数据与原始页面链接。</p>
+      <div class="table-scroll"><table class="data-table">
+        <thead><tr><th>信源</th><th>入口</th><th>主要用途</th></tr></thead>
+        <tbody><tr><td>中国国家图书馆</td><td><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">机构入口 ↗</a></td><td>中国故事源流、地方异文、古籍与诗词版本</td></tr>
+<tr><td>中国非物质文化遗产网</td><td><a href="https://www.ihchina.cn/" target="_blank" rel="noopener noreferrer">机构入口 ↗</a></td><td>口传童谣、吟诵调、地方采录线索</td></tr>
+<tr><td>Project Gutenberg</td><td><a href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer">机构入口 ↗</a></td><td>世界儿童文学历史版本与书目发现</td></tr>
+<tr><td>International Children&#x27;s Digital Library</td><td><a href="http://www.childrenslibrary.org/" target="_blank" rel="noopener noreferrer">机构入口 ↗</a></td><td>多语言儿童书籍发现</td></tr>
+<tr><td>Library of Congress</td><td><a href="https://www.loc.gov/" target="_blank" rel="noopener noreferrer">机构入口 ↗</a></td><td>书目、历史馆藏与版本考证</td></tr>
+<tr><td>StoryWeaver</td><td><a href="https://storyweaver.org.in/" target="_blank" rel="noopener noreferrer">机构入口 ↗</a></td><td>开放许可故事；许可需逐本核验</td></tr></tbody>
+      </table></div>
+    </section>
+
+    <section class="shell section" id="replacement" aria-labelledby="replacement-title">
+      <h2 id="replacement-title">非原曲测试音替换进展 · 剩余 21 首</h2>
+      <p>原始 44 条程序合成的「原创播放示范 · 非原曲」测试音中，两轮已累计替换 <b>23 首</b>为可核验的公开来源真实录音（第一轮 15 首；第二轮 8 首，来自央视网独立单曲页原声音轨与学习强国童谣诵读音频）。剩余 21 首按核查结论分三组登记。<b>找不到的不硬配</b>：同名不同曲、整期节目片段、商业平台条目一律不接入作品播放，只保留研究线索，避免把不相关音频标成目标作品原曲。</p>
+      <div class="table-scroll"><table class="data-table">
+        <thead><tr><th>分组</th><th>数量</th><th>作品 ID</th><th>核查结论</th><th>已核实来源线索</th></tr></thead>
+        <tbody><tr><td><b>闽南童谣「念谣」· 非遗项目页的体裁举例</b></td><td>7 首</td><td><code>CN-T03, CN-T04, CN-T06, CN-T07, CN-T08, CN-T09, CN-T10</code></td><td>国家级非遗项目页把这些篇名列为连锁调、问答歌、绕口令、摇篮曲等体裁举例，本质是口传念谣，没有固定乐谱与唯一原唱。检索到的同名音频多为不同文本异文或商业平台条目：例如央视《七巧板》的原创歌曲《小蜜蜂》与闽南童谣《小蜜蜂》并非同一作品，人民日报「童声童谣」的《一两三》也不是非遗页所指的《一二三》数数歌，均不得冒充目标作品原曲。</td><td><a href="https://www.ihchina.cn/project_details/12316.html" target="_blank" rel="noopener noreferrer">中国非遗网《童谣（闽南童谣）》项目页 ↗</a><br><a href="http://www.isrc.com.cn/html/2022/page_8349.html" target="_blank" rel="noopener noreferrer">ISRC 申报平台《白鹭鸶》录音制品登记 ↗</a><br><a href="https://www.peopleapp.com/rmharticle/30009804516" target="_blank" rel="noopener noreferrer">人民日报「童声童谣」栏目（漳州新闻网） ↗</a><br><a href="https://tv.cctv.cn/2021/04/24/VIDErHfSo6Rq8SLxsRaoxpTB210424.shtml" target="_blank" rel="noopener noreferrer">央视网《七巧板》原创歌曲《小蜜蜂》· 同名不同曲 ↗</a></td></tr>
+<tr><td><b>地方 / 历史童谣 · 分类专题与文献条目</b></td><td>11 首</td><td><code>CN-C30, CN-N04, CN-T11, CN-T13, CN-T14, CN-T15, CN-T16, CN-T17, CN-T18, CN-T19, CN-T20</code></td><td>多为版本分类专题、地方异文或历史文献条目，本身不对应一段可定位的单曲录音。已核实的北京童谣、湖湘童谣与《水牛儿》演出版本属于相关文化语境或相近曲目，不是这些条目的原曲，故只登记来源线索，不接入播放。</td><td><a href="https://www.chinawriter.com.cn/n1/2020/1029/c404076-31910728.html" target="_blank" rel="noopener noreferrer">中国作家网《北京童谣传唱八百年》 ↗</a><br><a href="https://tv.cctv.com/2015/07/07/VIDE1436223441788633.shtml" target="_blank" rel="noopener noreferrer">央视网《七巧板》歌曲《湖湘童谣》 ↗</a><br><a href="https://tv.cctv.com/2024/10/28/VIDEqBPnvxmWPJESINiNJwsa241028.shtml" target="_blank" rel="noopener noreferrer">央视网《民歌·中国》北京民歌《水牛儿》 ↗</a></td></tr>
+<tr><td><b>创作儿歌 · 未找到公开机构独立单曲页</b></td><td>3 首</td><td><code>CN-C22, CN-C23, CN-C24</code></td><td>检索结果集中于歌词站、商业音乐平台与整期教学节目。央视《音乐告诉你》20120608 只是含《种瓜》片段赏析的教学节目，不是单曲原声；课程页面只有歌词与词曲信息。按「整期节目不当单曲用」的口径暂不采集，继续等待可靠单曲页或权利人授权版本。</td><td><a href="https://tv.cctv.com/2012/06/08/VIDE1355662984922415.shtml" target="_blank" rel="noopener noreferrer">央视网《音乐告诉你》20120608 · 整期教学节目 ↗</a><br><a href="https://mooc1.chaoxing.com/mooc-ans/ztnodedetailcontroller/visitnodedetail?courseId=200819820&amp;knowledgeId=114368107" target="_blank" rel="noopener noreferrer">超星慕课《我们在大地上栽种鲜花》课程页 ↗</a></td></tr></tbody>
+      </table></div>
+    </section>
+
+    <section class="shell section" id="world-pending" aria-labelledby="world-pending-title">
+      <h2 id="world-pending-title">世界经典资料卡 · 47 条已补齐，真实录音待采集</h2>
+      <p>作品目录 105 条现已全部配置资料卡：中国 55 条、世界经典 47 条，另 3 条英语条目随示例音频提供资料。世界经典逐曲核验了公版歌词与权威来源，其中 <b>33 条</b>照录到可逐行复核的歌词，<b>14 条</b>因来源未刊全文而明确留白并写明原因；没有可考证旋律的一律不生成五线谱。</p>
+      <p><b>真实录音优先 · 找不到的不硬配</b>：47 首的播放位统一标「待采集」，不接程序合成音冒充原曲。Commons API 检索经 WebFetch 通道逐项核验，本地出口 IP 被 Wikimedia 403 / 429 限流、upload.wikimedia.org 无法下载；已命中的候选还包含器乐片段、MIDI 数据、同名异曲与现代专辑录音，未逐项完成版本与授权复核前不接入。</p>
+      <div class="table-scroll"><table class="data-table">
+        <thead><tr><th>作品 ID</th><th>已核验的开放许可候选与核查结论</th></tr></thead>
+        <tbody><tr><td><code>EN-M01</code></td><td>Commons 仅命中 File:Hush, Little Baby.mid（CC0 的 MIDI 数据），不是可播放的真实录音，按「真实录音优先」口径不接入。</td></tr>
+<tr><td><code>EN-M08</code></td><td>Commons 命中 File:Simple Gifts - Miriam Bowen.ogg 与 File:Simple Gifts - Pendyrus Choir-cory Band.ogg（CC BY-SA 3.0，署名 Sain (Recordiau) Cyf.）、File:Simple Gifts (2017) - Concert Band - United States Air Force Band.mp3（美国联邦政府作品）；均未完成逐项身份与授权复核。</td></tr>
+<tr><td><code>EN-T04</code></td><td>已核验 Commons 文件元数据：File:Baa, Baa, Blacksheep.ogg → CC BY-SA 3.0，作者 CambridgeBayWeather，23.95 秒，application/ogg，文件说明为「Tune for Baa, Baa, Blacksheep」的曲调演奏而非人声演唱；本地采集受源站 429 限制未完成。</td></tr>
+<tr><td><code>EN-T15</code></td><td>Commons 搜索命中 File:Old McDonald Had a Farm.ogg（CC BY-SA 3.0 片段），但文件标题拼写 McDonald 与目录条目 MacDonald 不一致，需逐项比对版本后才能判断，未核验前不接入。</td></tr>
+<tr><td><code>EN-T22</code></td><td>Commons 命中 File:Yankee Doodle (choral).ogg（Public Domain Mark 1.0）、File:Yankee Doodle - Concert Band - United States Air Force Heritage of America Band.mp3（美国联邦政府作品）；同批结果里另有多首 1910–1917 年同名异曲录音（When Yankee Doodle Marches Thro&#x27; Berlin 等），必须严格排除。</td></tr></tbody>
+      </table></div>
+      <p>依据文件：<a href="world-materials.json">world-materials.json</a> · <a href="world-lyrics-sources.json">world-lyrics-sources.json</a> · <a href="world-audio-clues.json">world-audio-clues.json</a>；生成脚本 <code>build_world_materials.py</code>，探针 <code>probe_commons.py</code>。</p>
+    </section>
+
+    <section class="shell section" aria-labelledby="flow-title">
+      <h2 id="flow-title">从研究到公开的八步流程</h2>
+      <p>版权审核不是研究采集的入口门槛，而是进入具体公开使用场景前的必要判断。</p>
+      <ol class="flow"><li>发现作品或来源线索</li>
+<li>登记候选作品与来源，不因权利未知丢弃</li>
+<li>核实身份、作者、版本、年代与文化背景</li>
+<li>内容质量与儿童适宜性评估</li>
+<li>逐项核验正文、译文、插画、录音、视频权利</li>
+<li>按使用方式选择外链、官方嵌入、授权媒体或仅保留目录</li>
+<li>人工审核后发布</li>
+<li>授权或来源变化时重新评估</li></ol>
+    </section>
+
+    <section class="shell section" id="boundary" aria-labelledby="boundary-title">
+      <h2 id="boundary-title">采集边界与待办</h2>
+      <div class="boundary">
+        <h3>⚠️ 当前明确边界</h3>
+        <ul>
+          <li>研究库默认只登记元数据、研究笔记与原始链接；<b>不因「内部研究」默认下载、缓存、镜像或转存第三方媒体</b>。</li>
+          <li>累计两轮经项目明确批准，为版本鉴定与内部原型验证保存了 27 个公开页面内完整录音 / 原声音轨（28 条作品映射），统一标为 <code>internal · 权利待核验</code>；每个文件均记录来源页、原始地址、版本、采集日期、处理方式、大小与 SHA-256。第二轮新增央视网「独立单曲页」原声音轨与学习强国童谣诵读音频，诵读 / 表演 / 改编版本均在资料卡中如实标注，不冒充歌曲原唱。详见<a href="audio/public-recording-collection.json">采集清单</a>与<a href="../docs/COPYRIGHT_POLICY.md">来源与权利说明</a>。</li>
+          <li>政府、高校、公共文化机构或教育平台上的完整歌曲页面，可作为可靠的来源与版本核验线索；<b>其公开展示本身不代表本站获得再发布授权</b>。</li>
+          <li>仍有 21 个 <code>generated</code> 条目是程序合成的「原创播放示范 · 非原曲」测试音，页面持续标注，不得当作目标作品原声；需继续寻找可靠原曲录音。</li>
+          <li>世界经典 47 条资料卡只补齐元数据与原创封面，<b>未接入任何第三方音频</b>；歌词按来源页照录或明确留白，谱面不伪造，播放位统一标「待采集」。资料卡齐备不等于取得公开播放授权。</li>
+          <li>5 首官方 30 秒试听属于平台预览，点击才加载、逐首核验曲目身份、不持久化预览 URL，与内部完整录音分开管理。</li>
+          <li>故事馆「当代原创」15 条是编辑征集方向，不是已登记作品；古诗词馆 12 条是版本 / 媒体资产层线索，不是独立作品。统计中单独列出，不虚报作品数。</li>
+        </ul>
+      </div>
+      <div class="boundary" style="background:#fdf1c9">
+        <h3>下一步待办（按优先级）</h3>
+        <ul>
+          <li>为故事馆与古诗词馆每条候选补具体来源页面 URL、发现日期与版本考证记录，把 <code>research_status</code> 从 discovered 推进到 researching / reviewed。</li>
+          <li>逐条完成权利证据归档，把 <code>rights_status</code> 从 pending / unknown 推进到 verified；证据含目标地域、权利人、许可、用途、期限与复核人。</li>
+          <li>补齐剩余 21 首非原曲测试音对应的真实录音，替换时保留原有版本与来源记录。</li>
+          <li>为世界经典 47 首逐项完成开放许可 / 公开机构录音的身份、表演者、版本与授权复核；条件允许时再采集，未复核前继续标「待采集」，不硬配。</li>
+          <li>为 14 条未取得歌词全文的世界经典补权威公版文本，并考证可生成五线谱的旋律依据；无证内容继续保持留白。</li>
+          <li>公共部署前逐项执行发布门禁：<code>publication_status</code> 为 published 的内容，其正文与所有待公开资产的权利状态必须通过校验。</li>
+          <li>文档口径待同步：GitHub main 版《数据模型设计》已新增 §4「研究状态、权利状态与访问方式」四字段，本地 <a href="../docs/DATA_MODEL.md">docs/DATA_MODEL.md</a> 仍是旧版章节结构（含 3.1 三大支柱 / 3.2 中国经典七专题 / 作品分类字段）。本页按 GitHub 版建模；同步时应保留本地独有分类字段作为附录，不直接丢弃。</li>
+        </ul>
+      </div>
+    </section>
+  <!-- LIBRARY_LINKS:MAP -->
+    <section class="shell lib-map" aria-labelledby="lib-map-title">
+      <div class="lib-map-box">
+        <h2 id="lib-map-title">全站地图 · 三馆与研究层</h2>
+        <p>童年书房分为研究资源库（Research）与儿童使用层（Library）。三馆目录可以互相跳转，音乐馆八个专题横向串联，作品目录可回链到专题与研究层。</p>
+        <div class="lib-halls">
+<a class="lib-hall lib-story" href="story.html"><b>故事馆</b><span>六个专题 · 100 条研究记录</span></a>
+<a class="lib-hall lib-music" href="music.html"><b>音乐馆</b><span>八专题 · 105 条发现目录</span></a>
+<a class="lib-hall lib-poetry" href="poetry.html"><b>古诗词馆</b><span>十个专题 · 60 条研究记录</span></a>
+<a class="lib-hall lib-research" href="research.html" aria-current="page"><b>研究资源库</b><span>五维状态 · 来源与边界</span></a>
+        </div>
+        <div class="lib-specs">
+          <strong>音乐馆八专题：</strong>
+<a href="specialty-childhood.html">01 童年的歌</a>
+<a href="specialty-nature.html">02 大自然的歌</a>
+<a href="specialty-play.html">03 游戏与伙伴</a>
+<a href="specialty-lullaby.html">04 月亮与摇篮曲</a>
+<a href="specialty-classical.html">05 古典音乐的童年</a>
+<a href="specialty-world.html">06 世界的童谣</a>
+<a href="specialty-forgotten.html">07 被遗忘的童谣</a>
+<a href="specialty-original.html">08 新芽原创</a>
+        </div>
+        <div class="lib-more">
+          <a href="works.html">作品目录（音乐馆 105 条）</a>
+          <a href="../docs/PROJECT_PRINCIPLES.md">项目顶层原则</a>
+          <a href="../docs/DATA_MODEL.md">统一数据模型</a>
+          <a href="../docs/COPYRIGHT_POLICY.md">来源与权利说明</a>
+        </div>
+      </div>
+    </section>
+    <!-- /LIBRARY_LINKS:MAP -->
+  </main>
+  <footer class="site-footer">
+    <div class="shell">
+      <p>研究资源库 · 依据 docs/PROJECT_PRINCIPLES.md v1.0 与 docs/DATA_MODEL.md v0.1 §4，2026-11-18 生成。</p>
+      <p>本页为内部研究与原型展示视图。候选目录不构成法律意见，也不授予任何第三方内容的使用权；具体公开、复制、翻译、改编、插画和音频使用，按目标发布地域、具体版本和实际许可逐项核实。</p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const t = document.getElementById('menu-toggle');
+      const n = document.getElementById('mobile-nav');
+      if (t && n) t.addEventListener('click', () => {
+        const e = t.getAttribute('aria-expanded') === 'true';
+        t.setAttribute('aria-expanded', String(!e)); n.hidden = e;
+      });
+    })();
+  </script>
+</body>
+</html>

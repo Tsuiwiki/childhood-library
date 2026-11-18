@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">EN-T04 — Baa, Baa, Black Sheep</title>
+  <desc id="desc">童年书房剪贴簿风格原创封面：星月小景，配中英双语标题</desc>
+  <defs>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.8" fill="#191917" opacity=".22"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#f4eddc"/>
+  <rect width="800" height="600" fill="url(#dots)"/>
+  <rect x="18" y="18" width="764" height="564" fill="none" stroke="#191917" stroke-width="8"/>
+  <rect x="42" y="42" width="14" height="96" fill="#e64a38" stroke="#191917" stroke-width="4"/>
+  <rect x="548" y="48" width="184" height="52" fill="#fffaf0" stroke="#191917" stroke-width="4" transform="rotate(3 640 74)"/>
+  <text x="640" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#191917">EN-T04</text>
+  <g fill="#191917" font-family="Georgia, 'Noto Serif CJK SC', serif" font-weight="900" letter-spacing="-1"><text x="64" y="142" class="cover-title" font-size="38">Baa, Baa, Black Sheep</text></g>
+  <text x="64" y="212" font-family="'Noto Serif CJK SC', 'Songti SC', SimSun, serif" font-size="23" font-weight="700" fill="#2858b8">咩咩黑绵羊</text>
+  <g transform="translate(48,332)"><rect x="0" y="0" width="704" height="176" fill="#dfe8fb" stroke="#191917" stroke-width="6"/><circle cx="560" cy="62" r="46" fill="#f1bd32" stroke="#191917" stroke-width="5"/>
+<circle cx="580" cy="44" r="40" fill="#dfe8fb"/>
+<path d="M70 116 l9 20 22 3 -16 15 4 22 -19-11 -19 11 4-22 -16-15 22-3z" fill="#2858b8" stroke="#191917" stroke-width="5"/>
+<path d="M230 60 l7 16 18 2 -13 13 3 18 -15-9 -16 9 3-18 -13-13 18-2z" fill="#f1bd32" stroke="#191917" stroke-width="5"/>
+<path d="M380 116 l6 14 15 2 -11 11 3 15 -13-8 -13 8 3-15 -11-11 15-2z" fill="#739348" stroke="#191917" stroke-width="5"/></g>
+  <rect x="48" y="520" width="704" height="38" fill="#fffaf0" stroke="#191917" stroke-width="4"/>
+  <text x="64" y="546" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="800" fill="#191917">童年书房 · 世界经典童谣 · 原创封面</text>
+</svg>

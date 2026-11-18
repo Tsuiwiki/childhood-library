@@ -1,0 +1,32 @@
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+        <title id="title">CN-C03 — 小燕子 穿花衣</title>
+        <desc id="desc">童年书房剪贴簿风格原创歌曲封面</desc>
+        <defs>
+          <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+            <circle cx="3" cy="3" r="1.8" fill="#191917" opacity=".22"/>
+          </pattern>
+        </defs>
+        <rect width="800" height="600" fill="#f4eddc"/>
+        <rect width="800" height="600" fill="url(#dots)"/>
+        <rect x="18" y="18" width="764" height="564" fill="none" stroke="#191917" stroke-width="8"/>
+        <rect x="42" y="42" width="14" height="116" fill="#739348" stroke="#191917" stroke-width="4"/>
+        <rect x="548" y="48" width="184" height="52" fill="#fffaf0" stroke="#191917" stroke-width="4" transform="rotate(3 640 74)"/>
+        <text x="640" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#191917">CN-C03</text>
+        <g class="title" fill="#191917" font-family="Georgia, 'Noto Serif CJK SC', 'Songti SC', SimSun, serif" font-size="45" font-weight="900" letter-spacing="-1"><text x="54" y="98" class="cover-title">小燕子</text><text x="54" y="152" class="cover-title">穿花衣</text></g>
+        <rect x="352" y="144" width="386" height="346" fill="#2858b8" stroke="#191917" stroke-width="7" transform="rotate(2 545 317)"/>
+<circle cx="650" cy="212" r="48" fill="#f1bd32" stroke="#191917" stroke-width="6"/>
+<path d="M368 410 Q434 346 500 410 T632 402 T738 398 L738 482 L368 482 Z" fill="#739348" stroke="#191917" stroke-width="6"/>
+<path d="M394 310 Q454 248 514 304 Q560 244 622 278 Q566 296 530 354 Q476 302 394 310 Z" fill="#191917" stroke="#191917" stroke-width="5"/>
+<path d="M520 344 L566 396 L534 382 L510 408 L500 356 Z" fill="#191917"/>
+<path d="M476 306 Q500 318 520 348 Q486 348 462 326 Z" fill="#fffaf0"/>
+<circle cx="594" cy="282" r="5" fill="#fffaf0"/>
+<path d="M620 286 L644 294 L620 302 Z" fill="#e64a38"/>
+<path d="M76 392 Q176 312 292 382 L310 474 L68 474 Z" fill="#fffaf0" stroke="#191917" stroke-width="7"/>
+<path d="M102 386 Q110 330 158 366 Q178 308 214 360 Q260 326 280 382" fill="#e64a38" stroke="#191917" stroke-width="6"/>
+<path d="M112 430 L274 418 M120 454 L280 442" stroke="#2858b8" stroke-width="9"/>
+<path d="M100 230 Q160 196 220 230 T320 220" fill="none" stroke="#739348" stroke-width="10"/>
+<path d="M148 216 Q134 176 108 176 M226 224 Q240 184 268 184" fill="none" stroke="#739348" stroke-width="7"/>
+
+        <rect x="48" y="520" width="704" height="38" fill="#fffaf0" stroke="#191917" stroke-width="4"/>
+        <text x="64" y="546" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="800" fill="#191917">童年书房 · 经典创作儿歌 · 原创封面</text>
+      </svg>

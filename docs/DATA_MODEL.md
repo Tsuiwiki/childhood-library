@@ -41,6 +41,30 @@
 
 语言使用 BCP 47 风格标签，例如 zh-CN、en、zh-Hant。
 
+### 3.1 音乐资源三大支柱（V1.0 新增）
+
+音乐馆按「以中国经典为根，以世界经典为窗，以优秀原创为未来」的定位，为 `works` 增加 `pillar` 字段，建议枚举：
+
+- `china_classic`：中国经典（核心支柱，初期建设精力约 55%）
+- `world_classic`：世界经典（重要支柱，约 30%）
+- `original`：优秀原创（未来支柱，约 15%）
+
+`pillar` 与既有 `work_type`、`language` 正交：同一支柱下可有童谣、创作儿歌、民歌、器乐等多种作品类型。早期若未显式赋值，可视为 `pending`（待归类），不默认归入任一支柱。
+
+### 3.2 中国经典七个专题（V1.0 新增）
+
+`china_classic` 支柱内进一步细分专题，建议用 `china_theme` 枚举或 `tags` 表达：
+
+- `classic_children_song`：经典儿童歌曲
+- `traditional_rhyme`：传统童谣
+- `school_and_childhood`：校园与童年
+- `nature_and_seasons`：自然与四季
+- `animals_and_life`：动物与生命
+- `classical_poetry_music`：古诗词音乐
+- `folk_and_regional`：民族与地方音乐
+
+分类注意：校园歌曲、儿童歌曲、成人创作的怀旧歌曲不应混为一谈；可按创作视角与音乐定位归入不同专题（如《童年》归入「校园与童年」而非「传统童谣」）。
+
 ## 4. 版权状态
 
 建议枚举：
@@ -220,9 +244,15 @@ CREATE TABLE review_records (
 - embed_allowed, embed_enabled（默认 false）
 - platform_terms_checked_at, review_status, review_notes
 
+**作品分类字段（V1.0 新增）**
+- `pillar`：china_classic / world_classic / original（对应三大支柱）
+- `china_theme`：中国经典七专题（见 3.2 节）
+- `age_min` / `age_max` 或 `age_band`：0–2 / 2–4 / 4–6 / 6–12 岁推荐层级，仅作参考而非限制
+- `editorial_note`：编辑推荐语，承载「每首歌一篇小档案」的内容定位
+
 **权利记录补充**
 - 对歌词/词作、曲/旋律、译词/改编/编曲、表演、录音制品、MV/视频画面分别核验。
 - 记录目标地域、允许用途、期限、署名要求、权利人和证据。
 - 作品公版状态不能自动推导具体录音、编曲或视频也可使用。
 
-首期可以先用现有 works、work_contributors、sources 和 rights_records 管理歌曲元数据；在实现播放功能前，再通过数据库迁移增加版本与播放资源表。详细字段和阶段要求见 [音乐馆设计](MUSIC_LIBRARY_DESIGN.md)。
+首期可以先用现有 works、work_contributors、sources 和 rights_records 管理歌曲元数据；在实现播放功能前，再通过数据库迁移增加版本与播放资源表。详细字段和阶段要求见 [音乐馆设计](MUSIC_LIBRARY_DESIGN.md)，长期定位与选曲纲领见 [儿童经典音乐资源库 V1.0 规划](MUSIC_LIBRARY_V1.md)。

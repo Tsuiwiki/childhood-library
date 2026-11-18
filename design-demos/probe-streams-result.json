@@ -1,0 +1,178 @@
+[
+  {
+    "workId": "CN-C20",
+    "label": "卖报歌-大手牵小手",
+    "url": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/0e52d5648057443a81fac2ef01886f18/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cctv.com/v/v1/VIDExSfFIKK3Fmoyx84K4FHl220606.html",
+    "referer": "https://tv.cctv.com/v/v1/VIDExSfFIKK3Fmoyx84K4FHl220606.html",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:01:13.32"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-N03",
+    "label": "小毛驴-回声嘹亮",
+    "url": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/f110df6245dc4bcca52c1205cd76c5a0/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cntv.cn/video/C11356/f110df6245dc4bcca52c1205cd76c5a0",
+    "referer": "https://tv.cntv.cn/video/C11356/f110df6245dc4bcca52c1205cd76c5a0",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:01:11.12"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-C21",
+    "label": "小小螺丝帽-宝贝亮相吧",
+    "url": "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/main/0303000a/3/default/09dfd319d5064fac9e9aefbe73ec868f/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cctv.com/v/v2/VIDEreA9pWmeIZ7Ehlx9Fa64210314.html",
+    "referer": "https://tv.cctv.com/v/v2/VIDEreA9pWmeIZ7Ehlx9Fa64210314.html",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:00:58.40"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-C08",
+    "label": "外婆的澎湖湾-回声嘹亮",
+    "url": "https://dh5wx.cntv.kfcbest.com/asp/h5e/hls/main/0303000a/3/default/050d5c2ce9094dedacd2978d785c0ef0/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cctv.com/2014/06/28/VIDE1403959879035109.shtml",
+    "referer": "https://tv.cctv.com/2014/06/28/VIDE1403959879035109.shtml",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:01:31.12"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-C08",
+    "label": "外婆的澎湖湾-民歌中国",
+    "url": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/02be9178fb7749b48291d7a1b4eab91f/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cctv.com/2018/11/28/VIDEleQytPNFhXoSzx7F1Ahl181128.shtml",
+    "referer": "https://tv.cctv.com/2018/11/28/VIDEleQytPNFhXoSzx7F1Ahl181128.shtml",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:02:52.24"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-N05",
+    "label": "虫儿飞-大手牵小手",
+    "url": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/986f05b8affa4af09c2df82c47cbec17/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cctv.cn/2019/10/16/VIDExGznIy4bpUu1j8wsX4pD191016.shtml",
+    "referer": "https://tv.cctv.cn/2019/10/16/VIDExGznIy4bpUu1j8wsX4pD191016.shtml",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:01:07.08"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-N05",
+    "label": "虫儿飞-精彩音乐汇",
+    "url": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/fe80f4ee68244325adc9cfa19b0f68b1/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cctv.com/2019/03/18/VIDEBTQh3QtxHe0f4lUqVjBu190318.shtml",
+    "referer": "https://tv.cctv.com/2019/03/18/VIDEBTQh3QtxHe0f4lUqVjBu190318.shtml",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:02:56.60"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-N02",
+    "label": "童年-快乐大巴",
+    "url": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/78173ae4b086418aaf84397adcbfd8a5/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cctv.cn/2018/09/22/VIDEgSZ1eNOUpujo720kdGFe180922.shtml",
+    "referer": "https://tv.cctv.cn/2018/09/22/VIDEgSZ1eNOUpujo720kdGFe180922.shtml",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:01:09.92"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-N02",
+    "label": "童年-精彩音乐汇",
+    "url": "https://dh5ws01.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/0cfa28be874548849dea14aa7507b92b/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cctv.com/2023/07/19/VIDE4nJ9pjWogBYb7od9Ghd2230719.shtml",
+    "referer": "https://tv.cctv.com/2023/07/19/VIDE4nJ9pjWogBYb7od9Ghd2230719.shtml",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:03:42.44"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-T12",
+    "label": "一园青菜成了精-七巧板",
+    "url": "https://dh5wswx02.v.cntv.cn/asp/h5e/hls/main/0303000a/3/default/55c52746433b45b19e55f9ad2791475e/main.m3u8?maxbr=2048&contentid=15120519184043",
+    "sourcePage": "https://tv.cctv.com/v/v1/VIDEEUPGaW9KNkr8KvsAZNBn210626.html",
+    "referer": "https://tv.cctv.com/v/v1/VIDEEUPGaW9KNkr8KvsAZNBn210626.html",
+    "ok": true,
+    "audio": [
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp",
+      "aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp"
+    ],
+    "duration": [
+      "00:02:29.68"
+    ],
+    "reason": ""
+  },
+  {
+    "workId": "CN-N01",
+    "label": "学习强国 陪你读童谣(一) · 数鸭子",
+    "url": "https://boot-video.xuexi.cn/audio/1006/p/6a01a59d5dec1730b0c5dab021ff8598-d117856df90c4b5cba3331380647ddfa-1.mp3",
+    "sourcePage": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=17735598666313749703&type=album",
+    "referer": "https://article.xuexi.cn/articles/audio/share/index.html?art_id=17735598666313749703&type=album",
+    "ok": true,
+    "audio": [
+      "mp3 (mp3float), 22050 Hz, stereo, fltp, 64 kb/s",
+      "pcm_s16le, 22050 Hz, stereo, s16, 705 kb/s"
+    ],
+    "duration": [
+      "00:01:04.76"
+    ],
+    "reason": ""
+  }
+]

@@ -1,0 +1,3391 @@
+<svg width="990px" height="554px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" id="w1q8gbl3">
+   <desc>Engraved by Verovio 6.4.1[undefined]</desc>
+   <defs>
+      <g id="E050-w1q8gbl3">
+         <path transform="scale(1,-1)" d="M441 -245c-23 -4 -48 -6 -76 -6c-59 0 -102 7 -130 20c-88 42 -150 93 -187 154c-26 44 -43 103 -48 176c0 6 -1 13 -1 19c0 54 15 111 45 170c29 57 65 106 110 148s96 85 153 127c-3 16 -8 46 -13 92c-4 43 -5 73 -5 89c0 117 16 172 69 257c34 54 64 82 89 82 c21 0 43 -30 69 -92s39 -115 41 -159v-15c0 -109 -21 -162 -67 -241c-13 -20 -63 -90 -98 -118c-13 -9 -25 -19 -37 -29l31 -181c8 1 18 2 28 2c58 0 102 -12 133 -35c59 -43 92 -104 98 -184c1 -7 1 -15 1 -22c0 -123 -87 -209 -181 -248c8 -57 17 -110 25 -162 c5 -31 6 -58 6 -80c0 -30 -5 -53 -14 -70c-35 -64 -88 -99 -158 -103c-5 0 -11 -1 -16 -1c-37 0 -72 10 -108 27c-50 24 -77 59 -80 105v11c0 29 7 55 20 76c18 28 45 42 79 44h6c49 0 93 -42 97 -87v-9c0 -51 -34 -86 -105 -106c17 -24 51 -36 102 -36c62 0 116 43 140 85 c9 16 13 41 13 74c0 20 -1 42 -5 67c-8 53 -18 106 -26 159zM461 939c-95 0 -135 -175 -135 -286c0 -24 2 -48 5 -71c50 39 92 82 127 128c40 53 60 100 60 140v8c-4 53 -22 81 -55 81h-2zM406 119l54 -326c73 25 110 78 110 161c0 7 0 15 -1 23c-7 95 -57 142 -151 142h-12 zM382 117c-72 -2 -128 -47 -128 -120v-7c2 -46 43 -99 75 -115c-3 -2 -7 -5 -10 -10c-70 33 -116 88 -123 172v11c0 68 44 126 88 159c23 17 49 29 78 36l-29 170c-21 -13 -52 -37 -92 -73c-50 -44 -86 -84 -109 -119c-45 -69 -67 -130 -67 -182v-13c5 -68 35 -127 93 -176 s125 -73 203 -73c25 0 50 3 75 9c-19 111 -36 221 -54 331z" />
+      </g>
+      <g id="E084-w1q8gbl3">
+         <path transform="scale(1,-1)" d="M20 -78c84 97 114 180 134 329h170c-13 -32 -82 -132 -99 -151l-84 -97c-33 -36 -59 -63 -80 -81h162v102l127 123v-225h57v-39h-57v-34c0 -43 19 -65 57 -65v-34h-244v36c48 0 60 26 60 70v27h-203v39z" />
+      </g>
+      <g id="E0A4-w1q8gbl3">
+         <path transform="scale(1,-1)" d="M0 -39c0 68 73 172 200 172c66 0 114 -37 114 -95c0 -84 -106 -171 -218 -171c-64 0 -96 30 -96 94z" />
+      </g>
+      <g id="E240-w1q8gbl3">
+         <path transform="scale(1,-1)" d="M179 -646c15 29 29 55 46 102c18 49 30 108 30 138c0 105 -80 173 -168 200c-18 5 -47 9 -87 16v190h22c8 0 33 -61 71 -95c4 -3 -2 3 61 -56c62 -58 122 -137 122 -241c0 -38 -13 -106 -35 -163c-20 -51 -43 -99 -66 -132c-6 -5 -10 -7 -13 -7s-5 2 -5 5l4 10 c1 3 14 25 18 33z" />
+      </g>
+      <g id="E241-w1q8gbl3">
+         <path transform="scale(1,-1)" d="M179 646c-4 8 -17 30 -18 33l-4 10c0 3 2 5 5 5s7 -2 13 -7c23 -33 46 -81 66 -132c22 -57 35 -125 35 -163c0 -104 -60 -183 -122 -241c-63 -59 -57 -53 -61 -56c-38 -34 -63 -95 -71 -95h-22v190c40 7 69 11 87 16c88 27 168 95 168 200c0 30 -12 89 -30 138 c-17 47 -31 73 -46 102z" />
+      </g>
+   </defs>
+   <style type="text/css">#w1q8gbl3 g.ending, #w1q8gbl3 g.fing, #w1q8gbl3 g.reh, #w1q8gbl3 g.tempo {font-weight:bold;}#w1q8gbl3 g.dir, #w1q8gbl3 g.dynam, #w1q8gbl3 g.mNum {font-style:italic;}#w1q8gbl3 g.label {font-weight:normal;}#w1q8gbl3 ellipse, #w1q8gbl3 path, #w1q8gbl3 polygon, #w1q8gbl3 polyline, #w1q8gbl3 rect {stroke:currentColor}#w1q8gbl3 g.cursor {fill:dodgerblue; color:dodgerblue;}#w1q8gbl3 g.cursor.chord {fill:limegreen; color:limegreen;}#w1q8gbl3 g.placeholder {visibility:hidden}</style>
+   <svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 22000 12310">
+      <g class="page-margin" transform="translate(600, 600)">
+         <g id="g5cafmu" class="mdiv pageMilestone" />
+         <g id="hzj11do" class="score pageMilestone" />
+         <g id="a1g9fowv" class="system">
+            <g id="siwb4if" class="label">
+               <text x="1443" y="990" text-anchor="end" font-size="0px">
+                  <tspan id="t1g4357o" class="text">
+                     <tspan font-size="405px">Melody</tspan>
+                  </tspan>
+               </text>
+            </g>
+            <g id="j1hebrrt" class="section placeholder systemMilestone">
+               <ellipse cx="1623" cy="-810" rx="90" ry="90" />
+            </g>
+            <g id="k12fsdyo" class="pb placeholder">
+               <ellipse cx="1623" cy="-270" rx="90" ry="90" />
+            </g>
+            <g id="c1idj3ku" class="section placeholder systemMilestone">
+               <ellipse cx="1623" cy="0" rx="90" ry="90" />
+            </g>
+            <g id="z1akqpq9" class="measure">
+               <g id="i1wjmxd5" class="staff">
+                  <path d="M1623 540 L7286 540" stroke-width="13" />
+                  <path d="M1623 720 L7286 720" stroke-width="13" />
+                  <path d="M1623 900 L7286 900" stroke-width="13" />
+                  <path d="M1623 1080 L7286 1080" stroke-width="13" />
+                  <path d="M1623 1260 L7286 1260" stroke-width="13" />
+                  <g id="s12r837i" class="clef">
+                     <use xlink:href="#E050-w1q8gbl3" transform="translate(1713, 1080) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="t1qi5otg" class="keySig" />
+                  <g id="u9476x1" class="meterSig">
+                     <use xlink:href="#E084-w1q8gbl3" transform="translate(2344, 720) scale(0.72, 0.72)" />
+                     <use xlink:href="#E084-w1q8gbl3" transform="translate(2344, 1080) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="j1izqtug" class="layer">
+                     <g id="k19a9ou2" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(2935, 1260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="dbf4nfm" class="stem">
+                           <path d="M3152 1232 L3152 630" stroke-width="18" />
+                           <g id="ewxo7qm" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(3143, 630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="l6xpatm" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3458, 1260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="fihyc9b" class="stem">
+                           <path d="M3675 1232 L3675 630" stroke-width="18" />
+                           <g id="g1n37lg4" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(3666, 630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="m1s3p2f9" class="verse">
+                           <g id="nhceidy" class="syl">
+                              <text x="3368" y="1847" font-size="0px">
+                                 <tspan id="o1lfljy5" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="pnwe06k" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(4033, 1080) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="hf5f6xl" class="stem">
+                           <path d="M4250 1052 L4250 450" stroke-width="18" />
+                           <g id="is0i3ey" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(4241, 450) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="q3uauxw" class="verse">
+                           <g id="r1vfbrj4" class="syl">
+                              <text x="3943" y="1847" font-size="0px">
+                                 <tspan id="spiai9b" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="tygugvt" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(4555, 1080) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="juso36j" class="stem">
+                           <path d="M4772 1052 L4772 450" stroke-width="18" />
+                           <g id="kinpbq6" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(4763, 450) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="uit1dkw" class="verse">
+                           <g id="v13em0e2" class="syl">
+                              <text x="4465" y="1847" font-size="0px">
+                                 <tspan id="wwe3vnq" class="text">
+                                    <tspan font-size="405px">一</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="xg940kq" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(5131, 990) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="lwssg6v" class="stem">
+                           <path d="M5348 962 L5348 360" stroke-width="18" />
+                           <g id="m1i3x1q5" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(5339, 360) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="ysg0b9h" class="verse">
+                           <g id="zvirbxm" class="syl">
+                              <text x="5041" y="1847" font-size="0px">
+                                 <tspan id="asqqj3c" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="b1bao9fm" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(5653, 990) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n13mpb47" class="stem">
+                           <path d="M5870 962 L5870 360" stroke-width="18" />
+                           <g id="o1e3uhl5" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(5861, 360) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="c42qoxk" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(6229, 810) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="p172wckh" class="stem">
+                           <path d="M6238 838 L6238 1440" stroke-width="18" />
+                           <g id="q8nboz3" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(6229, 1440) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="d18q97zr" class="verse">
+                           <g id="ewbnpai" class="syl">
+                              <text x="6139" y="1847" font-size="0px">
+                                 <tspan id="f1iz7fic" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="gvec483" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(6751, 810) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="rzjg1fv" class="stem">
+                           <path d="M6760 838 L6760 1440" stroke-width="18" />
+                           <g id="sgnbwt6" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(6751, 1440) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="h1vpo231" class="verse">
+                           <g id="i1t77qcv" class="syl">
+                              <text x="6661" y="1847" font-size="0px">
+                                 <tspan id="j1hnobco" class="text">
+                                    <tspan font-size="405px">一</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="ho3f7s8" class="barLine">
+                  <path d="M7273 540 L7273 1260" stroke-width="27" />
+               </g>
+            </g>
+            <g id="kk5pbhn" class="measure">
+               <g id="txlpbnc" class="staff">
+                  <path d="M7286 540 L11756 540" stroke-width="13" />
+                  <path d="M7286 720 L11756 720" stroke-width="13" />
+                  <path d="M7286 900 L11756 900" stroke-width="13" />
+                  <path d="M7286 1080 L11756 1080" stroke-width="13" />
+                  <path d="M7286 1260 L11756 1260" stroke-width="13" />
+                  <g id="u13ll993" class="layer">
+                     <g id="v1wojn0a" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7495, 990) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="tqhp686" class="stem">
+                           <path d="M7712 962 L7712 360" stroke-width="18" />
+                           <g id="usmdl78" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(7703, 360) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="w1vn4x7d" class="verse">
+                           <g id="x66gybs" class="syl">
+                              <text x="7405" y="1847" font-size="0px">
+                                 <tspan id="ycfzhub" class="text">
+                                    <tspan font-size="405px">一</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="zjf3wpd" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(8018, 990) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v1v38ko9" class="stem">
+                           <path d="M8235 962 L8235 360" stroke-width="18" />
+                           <g id="w1st4b47" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(8226, 360) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="a1jhavg7" class="verse">
+                           <g id="b1985hhp" class="syl">
+                              <text x="7928" y="1847" font-size="0px">
+                                 <tspan id="cx6tce1" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="d1ix3h7n" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(8540, 1080) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="x8rb0b1" class="stem">
+                           <path d="M8757 1052 L8757 450" stroke-width="18" />
+                           <g id="yotk8q7" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(8748, 450) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="e1ui4738" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(9062, 1080) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="zpmsm4u" class="stem">
+                           <path d="M9279 1052 L9279 450" stroke-width="18" />
+                           <g id="a16yw6se" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(9270, 450) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="f5619tv" class="verse">
+                           <g id="g1261n4s" class="syl">
+                              <text x="8972" y="1847" font-size="0px">
+                                 <tspan id="hgy6dgl" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="iyydp1q" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(9584, 1260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b1lx5zoj" class="stem">
+                           <path d="M9801 1232 L9801 630" stroke-width="18" />
+                           <g id="c1x1bppw" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(9792, 630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="jmf18pm" class="verse">
+                           <g id="k3mnysl" class="syl">
+                              <text x="9494" y="1847" font-size="0px">
+                                 <tspan id="l1tjq3mh" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="mvevhp0" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10106, 1260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d181n9pb" class="stem">
+                           <path d="M10323 1232 L10323 630" stroke-width="18" />
+                           <g id="e13i5cgx" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(10314, 630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="n18oi2kr" class="verse">
+                           <g id="o2t12ld" class="syl">
+                              <text x="10016" y="1847" font-size="0px">
+                                 <tspan id="pi8id5b" class="text">
+                                    <tspan font-size="405px">哭</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="qqfefza" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10629, 1350) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f1t94uu1" class="stem">
+                           <path d="M10846 1322 L10846 720" stroke-width="18" />
+                           <g id="gyzm1zd" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(10837, 720) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="ror37cd" class="verse">
+                           <g id="s99e66m" class="syl">
+                              <text x="10539" y="1847" font-size="0px">
+                                 <tspan id="t6s941w" class="text">
+                                    <tspan font-size="405px">叽</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ux54eu1" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(11151, 1350) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="h1mvxxoo" class="stem">
+                           <path d="M11368 1322 L11368 720" stroke-width="18" />
+                           <g id="i1seh5f4" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(11359, 720) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="vsvn1gm" class="verse">
+                           <g id="w166pxvi" class="syl">
+                              <text x="11061" y="1847" font-size="0px">
+                                 <tspan id="xpz7fzh" class="text">
+                                    <tspan font-size="405px">叽</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="s1w6lg9e" class="barLine">
+                  <path d="M11743 540 L11743 1260" stroke-width="27" />
+               </g>
+            </g>
+            <g id="yha2bd8" class="measure">
+               <g id="h19b3dul" class="staff">
+                  <path d="M11756 540 L16226 540" stroke-width="13" />
+                  <path d="M11756 720 L16226 720" stroke-width="13" />
+                  <path d="M11756 900 L16226 900" stroke-width="13" />
+                  <path d="M11756 1080 L16226 1080" stroke-width="13" />
+                  <path d="M11756 1260 L16226 1260" stroke-width="13" />
+                  <g id="i1e4z5bn" class="layer">
+                     <g id="j1jljzhs" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(11965, 810) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="jwoqlsv" class="stem">
+                           <path d="M11974 838 L11974 1440" stroke-width="18" />
+                           <g id="k1j5051c" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(11965, 1440) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="k1iov0wi" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(12488, 810) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l15bm8r" class="stem">
+                           <path d="M12497 838 L12497 1440" stroke-width="18" />
+                           <g id="m1bnk16o" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(12488, 1440) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="l2m213m" class="verse">
+                           <g id="mgcvkeb" class="syl">
+                              <text x="12398" y="1847" font-size="0px">
+                                 <tspan id="n42kitf" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="o7m8eas" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(13010, 990) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n9y1wun" class="stem">
+                           <path d="M13227 962 L13227 360" stroke-width="18" />
+                           <g id="o18qridu" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(13218, 360) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="px1ac11" class="verse">
+                           <g id="q1obkwmi" class="syl">
+                              <text x="12920" y="1847" font-size="0px">
+                                 <tspan id="reaa5ec" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="sjep7u8" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(13532, 990) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="p11owmq2" class="stem">
+                           <path d="M13749 962 L13749 360" stroke-width="18" />
+                           <g id="q10dp6vf" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(13740, 360) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="trbogsl" class="verse">
+                           <g id="u1jmrazk" class="syl">
+                              <text x="13442" y="1847" font-size="0px">
+                                 <tspan id="vi6cxcv" class="text">
+                                    <tspan font-size="405px">二</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="w14mn4rs" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14054, 1080) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="r1y05j84" class="stem">
+                           <path d="M14271 1052 L14271 450" stroke-width="18" />
+                           <g id="s1kxkmhm" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(14262, 450) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="xnjvbzx" class="verse">
+                           <g id="yhdff7r" class="syl">
+                              <text x="13964" y="1847" font-size="0px">
+                                 <tspan id="z1dgxmtc" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="a1ydmrf6" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14576, 1080) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="thelkkc" class="stem">
+                           <path d="M14793 1052 L14793 450" stroke-width="18" />
+                           <g id="u14tphoj" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(14784, 450) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="b4y239p" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(15099, 1260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v1lbqr1p" class="stem">
+                           <path d="M15316 1232 L15316 630" stroke-width="18" />
+                           <g id="w182xe9y" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(15307, 630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="c7cjb8y" class="verse">
+                           <g id="d12u4roc" class="syl">
+                              <text x="15009" y="1847" font-size="0px">
+                                 <tspan id="e10rbaj1" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="f1t2fkyi" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(15621, 1260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="xeby2n2" class="stem">
+                           <path d="M15838 1232 L15838 630" stroke-width="18" />
+                           <g id="y7dp7p3" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(15829, 630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="g12jhsow" class="verse">
+                           <g id="hd59ldn" class="syl">
+                              <text x="15531" y="1847" font-size="0px">
+                                 <tspan id="i1nnnb9o" class="text">
+                                    <tspan font-size="405px">二</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="g1wx5f16" class="barLine">
+                  <path d="M16213 540 L16213 1260" stroke-width="27" />
+               </g>
+            </g>
+            <g id="j1vlxuum" class="measure">
+               <g id="s1sqlord" class="staff">
+                  <path d="M16226 540 L20802 540" stroke-width="13" />
+                  <path d="M16226 720 L20802 720" stroke-width="13" />
+                  <path d="M16226 900 L20802 900" stroke-width="13" />
+                  <path d="M16226 1080 L20802 1080" stroke-width="13" />
+                  <path d="M16226 1260 L20802 1260" stroke-width="13" />
+                  <g class="ledgerLines below">
+                     <path d="M17432 1440 L17754 1440" stroke-width="22" />
+                     <path d="M17954 1440 L18276 1440" stroke-width="22" />
+                  </g>
+                  <g id="tykh1bk" class="layer">
+                     <g id="ua2sjjh" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(16435, 1350) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="z1rs9zy8" class="stem">
+                           <path d="M16652 1322 L16652 720" stroke-width="18" />
+                           <g id="a1ajjw0x" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(16643, 720) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="vsnueo4" class="verse">
+                           <g id="w11w00o4" class="syl">
+                              <text x="16345" y="1847" font-size="0px">
+                                 <tspan id="x1gt2rcu" class="text">
+                                    <tspan font-size="405px">二</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="y1871d1v" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(16958, 1350) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="bd67l73" class="stem">
+                           <path d="M17175 1322 L17175 720" stroke-width="18" />
+                           <g id="c1cabfpy" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(17166, 720) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="z1batz9e" class="verse">
+                           <g id="a1hlxvte" class="syl">
+                              <text x="16868" y="1847" font-size="0px">
+                                 <tspan id="buw8wlj" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="c1apsnqn" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(17480, 1440) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d1dvik6o" class="stem">
+                           <path d="M17697 1412 L17697 810" stroke-width="18" />
+                           <g id="eaovr8m" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(17688, 810) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="dntd0mt" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(18002, 1440) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="fxnoa1q" class="stem">
+                           <path d="M18219 1412 L18219 810" stroke-width="18" />
+                           <g id="g14mruue" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(18210, 810) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="edmg9gv" class="verse">
+                           <g id="fvt60w" class="syl">
+                              <text x="17912" y="1847" font-size="0px">
+                                 <tspan id="g1v7kejm" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="h15jrjms" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(18578, 1350) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="h1jf4ncm" class="stem">
+                           <path d="M18795 1322 L18795 720" stroke-width="18" />
+                           <g id="io7cqkr" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(18786, 720) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="in1wkt4" class="verse">
+                           <g id="j115pind" class="syl">
+                              <text x="18488" y="1847" font-size="0px">
+                                 <tspan id="k1tgjbuh" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="l1ej2noj" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(19100, 1350) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="j1tub6vt" class="stem">
+                           <path d="M19317 1322 L19317 720" stroke-width="18" />
+                           <g id="k19j52sr" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(19308, 720) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="mdyxrqi" class="verse">
+                           <g id="nklha85" class="syl">
+                              <text x="19010" y="1847" font-size="0px">
+                                 <tspan id="o19dfhau" class="text">
+                                    <tspan font-size="405px">挑</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="p7wioy2" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(19675, 1260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l1tbs6rd" class="stem">
+                           <path d="M19892 1232 L19892 630" stroke-width="18" />
+                           <g id="mzw7apm" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(19883, 630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="qkd4blf" class="verse">
+                           <g id="r15u5e9v" class="syl">
+                              <text x="19585" y="1847" font-size="0px">
+                                 <tspan id="s13x6cpi" class="text">
+                                    <tspan font-size="405px">荠</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="t1almt71" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(20198, 1260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="njvx38z" class="stem">
+                           <path d="M20415 1232 L20415 630" stroke-width="18" />
+                           <g id="o10hgldq" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(20406, 630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="usa1lmr" class="verse">
+                           <g id="vpe674c" class="syl">
+                              <text x="20108" y="1847" font-size="0px">
+                                 <tspan id="wswuo2t" class="text">
+                                    <tspan font-size="405px">菜</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="rqjeozm" class="barLine">
+                  <path d="M20789 540 L20789 1260" stroke-width="27" />
+               </g>
+            </g>
+         </g>
+         <g id="dka21p6" class="system">
+            <g id="hpyncnr" class="sb placeholder">
+               <ellipse cx="0" cy="2295" rx="90" ry="90" />
+            </g>
+            <g id="x1iu1srk" class="measure">
+               <g id="xl1hm1o" class="mNum autogenerated">
+                  <text y="2592" text-anchor="middle" font-size="0px">
+                     <tspan id="yj8z6qp" class="text">
+                        <tspan font-size="324px">5</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="gktqsnb" class="staff">
+                  <path d="M0 2835 L5659 2835" stroke-width="13" />
+                  <path d="M0 3015 L5659 3015" stroke-width="13" />
+                  <path d="M0 3195 L5659 3195" stroke-width="13" />
+                  <path d="M0 3375 L5659 3375" stroke-width="13" />
+                  <path d="M0 3555 L5659 3555" stroke-width="13" />
+                  <g id="z1ivhobc" class="clef">
+                     <use xlink:href="#E050-w1q8gbl3" transform="translate(90, 3375) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="a1lyrbss" class="keySig" />
+                  <g class="ledgerLines below">
+                     <path d="M3145 3735 L3467 3735" stroke-width="22" />
+                     <path d="M3725 3735 L4047 3735" stroke-width="22" />
+                  </g>
+                  <g id="ijicsct" class="layer">
+                     <g id="j1r63fny" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(877, 3555) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="p1l2vfhx" class="stem">
+                           <path d="M1094 3527 L1094 2925" stroke-width="18" />
+                           <g id="q13lfl0h" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(1085, 2925) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="k518y46" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(1456, 3555) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="r108s72k" class="stem">
+                           <path d="M1673 3527 L1673 2925" stroke-width="18" />
+                           <g id="su15btz" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(1664, 2925) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="l3d8qao" class="verse">
+                           <g id="ml5947e" class="syl">
+                              <text x="1366" y="4142" font-size="0px">
+                                 <tspan id="nb9mqka" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="oj1xf4a" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(2035, 3645) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="t3li1sd" class="stem">
+                           <path d="M2252 3617 L2252 3015" stroke-width="18" />
+                           <g id="uanjwhu" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(2243, 3015) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="p97holv" class="verse">
+                           <g id="q4bads" class="syl">
+                              <text x="1945" y="4142" font-size="0px">
+                                 <tspan id="r56b7sl" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="srq8ayz" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(2614, 3645) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v1l9izho" class="stem">
+                           <path d="M2831 3617 L2831 3015" stroke-width="18" />
+                           <g id="w15k6ya8" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(2822, 3015) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="t19wnbrl" class="verse">
+                           <g id="ulotcj2" class="syl">
+                              <text x="2524" y="4142" font-size="0px">
+                                 <tspan id="v160u38p" class="text">
+                                    <tspan font-size="405px">三</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="w6hvdwz" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3193, 3735) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="x16m37oh" class="stem">
+                           <path d="M3410 3707 L3410 3105" stroke-width="18" />
+                           <g id="yiny69v" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(3401, 3105) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="xr8gtb3" class="verse">
+                           <g id="y1elk4fj" class="syl">
+                              <text x="3103" y="4142" font-size="0px">
+                                 <tspan id="z18cs9dl" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="az3l9qd" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3773, 3735) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="z1q5ackw" class="stem">
+                           <path d="M3990 3707 L3990 3105" stroke-width="18" />
+                           <g id="a14yaa6n" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(3981, 3105) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="b1bdckh3" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(4411, 3645) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b1a0gnkv" class="stem">
+                           <path d="M4628 3617 L4628 3015" stroke-width="18" />
+                           <g id="c15icp3b" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(4619, 3015) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="cwjiidu" class="verse">
+                           <g id="d17dvy62" class="syl">
+                              <text x="4321" y="4142" font-size="0px">
+                                 <tspan id="e1b1kvgv" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ft1tzot" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(4990, 3645) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="df1f7q9" class="stem">
+                           <path d="M5207 3617 L5207 3015" stroke-width="18" />
+                           <g id="e1bdrcdi" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(5198, 3015) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="gp5nz4f" class="verse">
+                           <g id="h8ceh83" class="syl">
+                              <text x="4900" y="4142" font-size="0px">
+                                 <tspan id="i1d7opaw" class="text">
+                                    <tspan font-size="405px">三</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="f1qt4xbd" class="barLine">
+                  <path d="M5646 2835 L5646 3555" stroke-width="27" />
+               </g>
+            </g>
+            <g id="j1qtmahq" class="measure">
+               <g id="s89el7q" class="staff">
+                  <path d="M5659 2835 L10714 2835" stroke-width="13" />
+                  <path d="M5659 3015 L10714 3015" stroke-width="13" />
+                  <path d="M5659 3195 L10714 3195" stroke-width="13" />
+                  <path d="M5659 3375 L10714 3375" stroke-width="13" />
+                  <path d="M5659 3555 L10714 3555" stroke-width="13" />
+                  <g id="t5bbddx" class="layer">
+                     <g id="upoyen0" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(5891, 3555) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f1f2ha7l" class="stem">
+                           <path d="M6108 3527 L6108 2925" stroke-width="18" />
+                           <g id="g6i0gg6" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(6099, 2925) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="v14z3put" class="verse">
+                           <g id="wjw6xk9" class="syl">
+                              <text x="5801" y="4142" font-size="0px">
+                                 <tspan id="xqde8sc" class="text">
+                                    <tspan font-size="405px">三</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ymktfjj" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(6470, 3555) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="hu8wdu1" class="stem">
+                           <path d="M6687 3527 L6687 2925" stroke-width="18" />
+                           <g id="i17x3hc4" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(6678, 2925) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="zcd5dli" class="verse">
+                           <g id="a263jy" class="syl">
+                              <text x="6380" y="4142" font-size="0px">
+                                 <tspan id="bjhmsk7" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="c1bu4395" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7108, 3375) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="jv9x1pp" class="stem">
+                           <path d="M7325 3347 L7325 2745" stroke-width="18" />
+                           <g id="k14jv7r8" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(7316, 2745) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="d17rah9j" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7688, 3375) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l77vlio" class="stem">
+                           <path d="M7905 3347 L7905 2745" stroke-width="18" />
+                           <g id="m7tujv0" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(7896, 2745) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="e5z4yw6" class="verse">
+                           <g id="faeazr3" class="syl">
+                              <text x="7598" y="4142" font-size="0px">
+                                 <tspan id="g1m47b2t" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="hm466j8" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(8326, 3285) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n13da5md" class="stem">
+                           <path d="M8543 3257 L8543 2655" stroke-width="18" />
+                           <g id="ogy354v" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(8534, 2655) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="iglvhac" class="verse">
+                           <g id="j4di7gs" class="syl">
+                              <text x="8236" y="4142" font-size="0px">
+                                 <tspan id="k1mymlev" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="l1w95fz" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(8905, 3285) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="p1yzzeuy" class="stem">
+                           <path d="M9122 3257 L9122 2655" stroke-width="18" />
+                           <g id="q1ezp7zs" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(9113, 2655) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="miys6vu" class="verse">
+                           <g id="n4s2l1b" class="syl">
+                              <text x="8815" y="4142" font-size="0px">
+                                 <tspan id="o1hilqki" class="text">
+                                    <tspan font-size="405px">吃</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="pkz22lr" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(9543, 3105) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="r1ryb7i9" class="stem">
+                           <path d="M9552 3133 L9552 3735" stroke-width="18" />
+                           <g id="smzkb4i" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(9543, 3735) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="q1agjadi" class="verse">
+                           <g id="r19jtzk4" class="syl">
+                              <text x="9453" y="4142" font-size="0px">
+                                 <tspan id="sodmsgc" class="text">
+                                    <tspan font-size="405px">饼</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="t1p5kbsa" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10122, 3105) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="tumuf7n" class="stem">
+                           <path d="M10131 3133 L10131 3735" stroke-width="18" />
+                           <g id="ue75hbs" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(10122, 3735) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="ubkdncl" class="verse">
+                           <g id="vecabcz" class="syl">
+                              <text x="10032" y="4142" font-size="0px">
+                                 <tspan id="w10ynnvw" class="text">
+                                    <tspan font-size="405px">干</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="r1w1s76u" class="barLine">
+                  <path d="M10701 2835 L10701 3555" stroke-width="27" />
+               </g>
+            </g>
+            <g id="x14wdj6k" class="measure">
+               <g id="g7ff6e0" class="staff">
+                  <path d="M10714 2835 L15847 2835" stroke-width="13" />
+                  <path d="M10714 3015 L15847 3015" stroke-width="13" />
+                  <path d="M10714 3195 L15847 3195" stroke-width="13" />
+                  <path d="M10714 3375 L15847 3375" stroke-width="13" />
+                  <path d="M10714 3555 L15847 3555" stroke-width="13" />
+                  <g id="hwuacc8" class="layer">
+                     <g id="ib9ijy2" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10946, 3645) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v1mpxnq0" class="stem">
+                           <path d="M11163 3617 L11163 3015" stroke-width="18" />
+                           <g id="wav47e9" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(11154, 3015) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="j1q1ich1" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(11525, 3645) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="xrsqran" class="stem">
+                           <path d="M11742 3617 L11742 3015" stroke-width="18" />
+                           <g id="ykc1mha" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(11733, 3015) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="k19e9f3g" class="verse">
+                           <g id="l1fmfmp" class="syl">
+                              <text x="11435" y="4142" font-size="0px">
+                                 <tspan id="mc8xzxl" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="n13s955n" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(12163, 3555) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="zi875ry" class="stem">
+                           <path d="M12380 3527 L12380 2925" stroke-width="18" />
+                           <g id="aszfixa" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(12371, 2925) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="o4fm3dk" class="verse">
+                           <g id="p1knwlg7" class="syl">
+                              <text x="12073" y="4142" font-size="0px">
+                                 <tspan id="q1afxbmi" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="r4v1m34" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(12743, 3555) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="bj2k9fy" class="stem">
+                           <path d="M12960 3527 L12960 2925" stroke-width="18" />
+                           <g id="ceu4afp" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(12951, 2925) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="s1rw44lo" class="verse">
+                           <g id="t10519i1" class="syl">
+                              <text x="12653" y="4142" font-size="0px">
+                                 <tspan id="une5n8x" class="text">
+                                    <tspan font-size="405px">四</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="v1bqdjxw" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(13381, 3375) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d1gwn10d" class="stem">
+                           <path d="M13598 3347 L13598 2745" stroke-width="18" />
+                           <g id="ezahnba" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(13589, 2745) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="wafcae0" class="verse">
+                           <g id="xs4n9df" class="syl">
+                              <text x="13291" y="4142" font-size="0px">
+                                 <tspan id="y1dh5344" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="zeil8go" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(13960, 3375) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f5e7hwu" class="stem">
+                           <path d="M14177 3347 L14177 2745" stroke-width="18" />
+                           <g id="g1ohh146" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(14168, 2745) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="a18uc3oc" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14598, 3285) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="h1daql82" class="stem">
+                           <path d="M14815 3257 L14815 2655" stroke-width="18" />
+                           <g id="i1lf1hdt" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(14806, 2655) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="b1qzg52o" class="verse">
+                           <g id="c1a4zofy" class="syl">
+                              <text x="14508" y="4142" font-size="0px">
+                                 <tspan id="d1u77jns" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="e1jemk6w" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(15177, 3285) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="jd2zmva" class="stem">
+                           <path d="M15394 3257 L15394 2655" stroke-width="18" />
+                           <g id="k19ecgx4" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(15385, 2655) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="f1cq3u5a" class="verse">
+                           <g id="g1jbmqta" class="syl">
+                              <text x="15087" y="4142" font-size="0px">
+                                 <tspan id="h1fj1cd2" class="text">
+                                    <tspan font-size="405px">四</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="fgdakfo" class="barLine">
+                  <path d="M15834 2835 L15834 3555" stroke-width="27" />
+               </g>
+            </g>
+            <g id="i2pstrc" class="measure">
+               <g id="rg3s7ol" class="staff">
+                  <path d="M15847 2835 L20802 2835" stroke-width="13" />
+                  <path d="M15847 3015 L20802 3015" stroke-width="13" />
+                  <path d="M15847 3195 L20802 3195" stroke-width="13" />
+                  <path d="M15847 3375 L20802 3375" stroke-width="13" />
+                  <path d="M15847 3555 L20802 3555" stroke-width="13" />
+                  <g id="s1bnmj48" class="layer">
+                     <g id="t17dxnlz" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(16079, 3105) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="lqepn3" class="stem">
+                           <path d="M16088 3133 L16088 3735" stroke-width="18" />
+                           <g id="m1m09zkc" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(16079, 3735) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="uo6vwax" class="verse">
+                           <g id="v1vihsgp" class="syl">
+                              <text x="15989" y="4142" font-size="0px">
+                                 <tspan id="w1nx1bhp" class="text">
+                                    <tspan font-size="405px">四</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="x11tsepz" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(16658, 3105) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n19c3lbu" class="stem">
+                           <path d="M16667 3133 L16667 3735" stroke-width="18" />
+                           <g id="o1dlznn9" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(16658, 3735) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="y1lhk3at" class="verse">
+                           <g id="z57mw5x" class="syl">
+                              <text x="16568" y="4142" font-size="0px">
+                                 <tspan id="a1mym38a" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="b1ev53iq" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(17237, 3285) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="p13wfs6f" class="stem">
+                           <path d="M17454 3257 L17454 2655" stroke-width="18" />
+                           <g id="q1bx42rm" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(17445, 2655) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="cn5kw9o" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(17816, 3285) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="r1jv06h4" class="stem">
+                           <path d="M18033 3257 L18033 2655" stroke-width="18" />
+                           <g id="s120ekh" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(18024, 2655) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="d1maq211" class="verse">
+                           <g id="e195hfyb" class="syl">
+                              <text x="17726" y="4142" font-size="0px">
+                                 <tspan id="f1jk315a" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="g1pfce1c" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(18395, 3375) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="t1m1cycu" class="stem">
+                           <path d="M18612 3347 L18612 2745" stroke-width="18" />
+                           <g id="u1e40er3" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(18603, 2745) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="hqscpvj" class="verse">
+                           <g id="i1whii7r" class="syl">
+                              <text x="18305" y="4142" font-size="0px">
+                                 <tspan id="jduy4d9" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="k1mf2nl3" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(18975, 3375) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v18bhhlj" class="stem">
+                           <path d="M19192 3347 L19192 2745" stroke-width="18" />
+                           <g id="w1kol1r7" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(19183, 2745) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="l1mpb8jk" class="verse">
+                           <g id="mxti2tx" class="syl">
+                              <text x="18885" y="4142" font-size="0px">
+                                 <tspan id="n1xsvf32" class="text">
+                                    <tspan font-size="405px">吃</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="o1ygdlvj" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(19554, 3555) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="xdae1ro" class="stem">
+                           <path d="M19771 3527 L19771 2925" stroke-width="18" />
+                           <g id="y14y0rta" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(19762, 2925) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="p1jfcy4h" class="verse">
+                           <g id="qbtz0tt" class="syl">
+                              <text x="19464" y="4142" font-size="0px">
+                                 <tspan id="r1bv8f9l" class="text">
+                                    <tspan font-size="405px">洋</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="s15pvw3y" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(20133, 3555) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="zoycuqp" class="stem">
+                           <path d="M20350 3527 L20350 2925" stroke-width="18" />
+                           <g id="a1nbdlv3" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(20341, 2925) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="t1eof6l5" class="verse">
+                           <g id="ula1qqi" class="syl">
+                              <text x="20043" y="4142" font-size="0px">
+                                 <tspan id="v1c4xym2" class="text">
+                                    <tspan font-size="405px">柿</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="q1ab1avc" class="barLine">
+                  <path d="M20789 2835 L20789 3555" stroke-width="27" />
+               </g>
+            </g>
+         </g>
+         <g id="g11sd0is" class="system">
+            <g id="gjbqq29" class="sb placeholder">
+               <ellipse cx="0" cy="4590" rx="90" ry="90" />
+            </g>
+            <g id="wao6hlq" class="measure">
+               <g id="f18mzojl" class="mNum autogenerated">
+                  <text y="4887" text-anchor="middle" font-size="0px">
+                     <tspan id="g1i7ngw0" class="text">
+                        <tspan font-size="324px">9</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="fh1qh8g" class="staff">
+                  <path d="M0 5130 L5669 5130" stroke-width="13" />
+                  <path d="M0 5310 L5669 5310" stroke-width="13" />
+                  <path d="M0 5490 L5669 5490" stroke-width="13" />
+                  <path d="M0 5670 L5669 5670" stroke-width="13" />
+                  <path d="M0 5850 L5669 5850" stroke-width="13" />
+                  <g id="f1m8h27v" class="clef">
+                     <use xlink:href="#E050-w1q8gbl3" transform="translate(90, 5670) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="g1a2xrv" class="keySig" />
+                  <g id="h1ow2nuz" class="layer">
+                     <g id="imta0e3" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(878, 5580) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="bzmjtzn" class="stem">
+                           <path d="M1095 5552 L1095 4950" stroke-width="18" />
+                           <g id="c10dt3d" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(1086, 4950) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="j1or8gaa" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(1458, 5580) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d1qjwblx" class="stem">
+                           <path d="M1675 5552 L1675 4950" stroke-width="18" />
+                           <g id="e1tmm9gk" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(1666, 4950) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="k1pugueg" class="verse">
+                           <g id="liweb64" class="syl">
+                              <text x="1368" y="6437" font-size="0px">
+                                 <tspan id="mv5grcr" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="n1d24unc" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(2097, 5400) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f1vw9f5s" class="stem">
+                           <path d="M2106 5428 L2106 6030" stroke-width="18" />
+                           <g id="g102uai3" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(2097, 6030) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="o70y90t" class="verse">
+                           <g id="p1eh3mm0" class="syl">
+                              <text x="2007" y="6437" font-size="0px">
+                                 <tspan id="q18cy7sg" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="rai3b4" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(2678, 5400) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="heubze7" class="stem">
+                           <path d="M2687 5428 L2687 6030" stroke-width="18" />
+                           <g id="iig3h3h" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(2678, 6030) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="s18xm0ro" class="verse">
+                           <g id="t5vep0y" class="syl">
+                              <text x="2588" y="6437" font-size="0px">
+                                 <tspan id="u1okapt5" class="text">
+                                    <tspan font-size="405px">五</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="v1sw3a0o" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3258, 5580) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="j1uxz4nd" class="stem">
+                           <path d="M3475 5552 L3475 4950" stroke-width="18" />
+                           <g id="kxko4um" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(3466, 4950) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="wnr4tq4" class="verse">
+                           <g id="xuwcmct" class="syl">
+                              <text x="3168" y="6437" font-size="0px">
+                                 <tspan id="y1yvnw6l" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="z7t4q7h" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3838, 5580) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l1t6xid2" class="stem">
+                           <path d="M4055 5552 L4055 4950" stroke-width="18" />
+                           <g id="md1pple" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(4046, 4950) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ahkoc1k" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(4419, 5670) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n171gdos" class="stem">
+                           <path d="M4636 5642 L4636 5040" stroke-width="18" />
+                           <g id="oi5ume8" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(4627, 5040) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="b5c7hul" class="verse">
+                           <g id="c10ql7bg" class="syl">
+                              <text x="4329" y="6437" font-size="0px">
+                                 <tspan id="d1ewtm17" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="exqb874" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(4999, 5670) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="pvkgagq" class="stem">
+                           <path d="M5216 5642 L5216 5040" stroke-width="18" />
+                           <g id="qhn3xtr" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(5207, 5040) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="ftritgx" class="verse">
+                           <g id="gsj667v" class="syl">
+                              <text x="4909" y="6437" font-size="0px">
+                                 <tspan id="h13t4cru" class="text">
+                                    <tspan font-size="405px">五</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="ezdmztc" class="barLine">
+                  <path d="M5656 5130 L5656 5850" stroke-width="27" />
+               </g>
+            </g>
+            <g id="i10k6txv" class="measure">
+               <g id="ru9wg81" class="staff">
+                  <path d="M5669 5130 L10693 5130" stroke-width="13" />
+                  <path d="M5669 5310 L10693 5310" stroke-width="13" />
+                  <path d="M5669 5490 L10693 5490" stroke-width="13" />
+                  <path d="M5669 5670 L10693 5670" stroke-width="13" />
+                  <path d="M5669 5850 L10693 5850" stroke-width="13" />
+                  <g class="ledgerLines below">
+                     <path d="M8175 6030 L8497 6030" stroke-width="22" />
+                     <path d="M8755 6030 L9077 6030" stroke-width="22" />
+                  </g>
+                  <g id="sagyrrr" class="layer">
+                     <g id="t1gkimyo" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(5902, 5850) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="rpe4cck" class="stem">
+                           <path d="M6119 5822 L6119 5220" stroke-width="18" />
+                           <g id="sgsie3w" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(6110, 5220) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="u1numtwf" class="verse">
+                           <g id="v1vl8scf" class="syl">
+                              <text x="5812" y="6437" font-size="0px">
+                                 <tspan id="w90wf4i" class="text">
+                                    <tspan font-size="405px">五</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="x1w49sc8" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(6482, 5850) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="t1rrk7wi" class="stem">
+                           <path d="M6699 5822 L6699 5220" stroke-width="18" />
+                           <g id="u1jd1b1u" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(6690, 5220) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="yfqa2vz" class="verse">
+                           <g id="zbxr66a" class="syl">
+                              <text x="6392" y="6437" font-size="0px">
+                                 <tspan id="a1t1sjze" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="b170u0sk" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7062, 5940) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v13dwlum" class="stem">
+                           <path d="M7279 5912 L7279 5310" stroke-width="18" />
+                           <g id="wyr26z9" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(7270, 5310) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="c8d26gf" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7642, 5940) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="xaaqii2" class="stem">
+                           <path d="M7859 5912 L7859 5310" stroke-width="18" />
+                           <g id="yewzl81" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(7850, 5310) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="d1cr5khv" class="verse">
+                           <g id="e1nj84l9" class="syl">
+                              <text x="7552" y="6437" font-size="0px">
+                                 <tspan id="fym4m2c" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="gzs7yws" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(8223, 6030) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="z1ehs5c" class="stem">
+                           <path d="M8440 6002 L8440 5400" stroke-width="18" />
+                           <g id="a12470ej" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(8431, 5400) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="hicsuzs" class="verse">
+                           <g id="i1quryg8" class="syl">
+                              <text x="8133" y="6437" font-size="0px">
+                                 <tspan id="jvqnbrl" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="k1ifo5sd" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(8803, 6030) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b1l6dlnk" class="stem">
+                           <path d="M9020 6002 L9020 5400" stroke-width="18" />
+                           <g id="cctxzah" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(9011, 5400) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="lksdng" class="verse">
+                           <g id="mduija7" class="syl">
+                              <text x="8713" y="6437" font-size="0px">
+                                 <tspan id="nt9r0ap" class="text">
+                                    <tspan font-size="405px">打</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="o1d4y0tk" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(9443, 5940) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d1072k6o" class="stem">
+                           <path d="M9660 5912 L9660 5310" stroke-width="18" />
+                           <g id="e1josa0n" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(9651, 5310) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="pp4iex7" class="verse">
+                           <g id="qj7oldy" class="syl">
+                              <text x="9353" y="6437" font-size="0px">
+                                 <tspan id="r1uo0lh9" class="text">
+                                    <tspan font-size="405px">边</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="sos607z" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10023, 5940) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f18ximlh" class="stem">
+                           <path d="M10240 5912 L10240 5310" stroke-width="18" />
+                           <g id="gkyyxzd" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(10231, 5310) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="t1e87dhd" class="verse">
+                           <g id="u1h131wk" class="syl">
+                              <text x="9933" y="6437" font-size="0px">
+                                 <tspan id="v194o2g4" class="text">
+                                    <tspan font-size="405px">鼓</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="q13qwcw0" class="barLine">
+                  <path d="M10680 5130 L10680 5850" stroke-width="27" />
+               </g>
+            </g>
+            <g id="wha6z3z" class="measure">
+               <g id="f4mqe0x" class="staff">
+                  <path d="M10693 5130 L15658 5130" stroke-width="13" />
+                  <path d="M10693 5310 L15658 5310" stroke-width="13" />
+                  <path d="M10693 5490 L15658 5490" stroke-width="13" />
+                  <path d="M10693 5670 L15658 5670" stroke-width="13" />
+                  <path d="M10693 5850 L15658 5850" stroke-width="13" />
+                  <g class="ledgerLines below">
+                     <path d="M14359 6030 L14681 6030" stroke-width="22" />
+                     <path d="M14939 6030 L15261 6030" stroke-width="22" />
+                  </g>
+                  <g id="gnw4nor" class="layer">
+                     <g id="h1aeod0e" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10926, 5670) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="hecy5a9" class="stem">
+                           <path d="M11143 5642 L11143 5040" stroke-width="18" />
+                           <g id="i1f6ie4b" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(11134, 5040) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="iyy2gq2" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(11506, 5670) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="j14ab915" class="stem">
+                           <path d="M11723 5642 L11723 5040" stroke-width="18" />
+                           <g id="k1j3li1m" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(11714, 5040) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="j109i817" class="verse">
+                           <g id="kguqq8f" class="syl">
+                              <text x="11416" y="6437" font-size="0px">
+                                 <tspan id="luwht1c" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="m1k903wl" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(12086, 5850) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l10lss33" class="stem">
+                           <path d="M12303 5822 L12303 5220" stroke-width="18" />
+                           <g id="mwjbzib" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(12294, 5220) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="n1yyd6he" class="verse">
+                           <g id="ode2xr3" class="syl">
+                              <text x="11996" y="6437" font-size="0px">
+                                 <tspan id="p1jergyy" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="qrahz1h" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(12666, 5850) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n18wdq0f" class="stem">
+                           <path d="M12883 5822 L12883 5220" stroke-width="18" />
+                           <g id="op5lg5o" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(12874, 5220) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="r1bizbi" class="verse">
+                           <g id="s1isrmkp" class="syl">
+                              <text x="12576" y="6437" font-size="0px">
+                                 <tspan id="ts9uanx" class="text">
+                                    <tspan font-size="405px">六</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="u1jrz8lu" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(13247, 5940) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="pltttqb" class="stem">
+                           <path d="M13464 5912 L13464 5310" stroke-width="18" />
+                           <g id="qt2pn1x" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(13455, 5310) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="v1jm8qwh" class="verse">
+                           <g id="weufu5w" class="syl">
+                              <text x="13157" y="6437" font-size="0px">
+                                 <tspan id="xzcrd93" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="y17a1mts" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(13827, 5940) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ruq7g4p" class="stem">
+                           <path d="M14044 5912 L14044 5310" stroke-width="18" />
+                           <g id="soy7q2k" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(14035, 5310) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="zlcioxn" class="verse">
+                           <g id="a1p8k6az" class="syl">
+                              <text x="13737" y="6437" font-size="0px">
+                                 <tspan id="bsm1dow" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="c1hym1pe" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14407, 6030) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="thhul2n" class="stem">
+                           <path d="M14624 6002 L14624 5400" stroke-width="18" />
+                           <g id="ul2mjdn" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(14615, 5400) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="d2uuh1n" class="verse">
+                           <g id="e5zycyk" class="syl">
+                              <text x="14317" y="6437" font-size="0px">
+                                 <tspan id="fhk956c" class="text">
+                                    <tspan font-size="405px">六</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="gd24n6r" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14987, 6030) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v54h1rj" class="stem">
+                           <path d="M15204 6002 L15204 5400" stroke-width="18" />
+                           <g id="w1r54xkc" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(15195, 5400) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="h1b39iw9" class="verse">
+                           <g id="ip1dvh8" class="syl">
+                              <text x="14897" y="6437" font-size="0px">
+                                 <tspan id="jzy5p1q" class="text">
+                                    <tspan font-size="405px">六</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="ehn9u97" class="barLine">
+                  <path d="M15645 5130 L15645 5850" stroke-width="27" />
+               </g>
+            </g>
+            <g id="k1tm05o1" class="measure">
+               <g id="t1x5zy6" class="staff">
+                  <path d="M15658 5130 L20801 5130" stroke-width="13" />
+                  <path d="M15658 5310 L20801 5310" stroke-width="13" />
+                  <path d="M15658 5490 L20801 5490" stroke-width="13" />
+                  <path d="M15658 5670 L20801 5670" stroke-width="13" />
+                  <path d="M15658 5850 L20801 5850" stroke-width="13" />
+                  <g id="u1s8watx" class="layer">
+                     <g id="v3l809e" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(15891, 5940) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="x1heu243" class="stem">
+                           <path d="M16108 5912 L16108 5310" stroke-width="18" />
+                           <g id="yln2iy2" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(16099, 5310) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="w12a63dp" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(16471, 5940) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="zj7zin4" class="stem">
+                           <path d="M16688 5912 L16688 5310" stroke-width="18" />
+                           <g id="aock8ao" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(16679, 5310) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="x1g5ivti" class="verse">
+                           <g id="y4smwtz" class="syl">
+                              <text x="16381" y="6437" font-size="0px">
+                                 <tspan id="zm8erqe" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ayb718g" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(17110, 5850) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b1oqsxm1" class="stem">
+                           <path d="M17327 5822 L17327 5220" stroke-width="18" />
+                           <g id="c16ij7wn" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(17318, 5220) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="b1d5zdzf" class="verse">
+                           <g id="c1m3f5ep" class="syl">
+                              <text x="17020" y="6437" font-size="0px">
+                                 <tspan id="dxcyoiz" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="e1ln6gfa" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(17691, 5850) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="dxexlzi" class="stem">
+                           <path d="M17908 5822 L17908 5220" stroke-width="18" />
+                           <g id="e10ussig" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(17899, 5220) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="f1vkv2o0" class="verse">
+                           <g id="g1llh2wc" class="syl">
+                              <text x="17601" y="6437" font-size="0px">
+                                 <tspan id="h1c5wx9o" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ij7c8cr" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(18330, 5670) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f73dnaj" class="stem">
+                           <path d="M18547 5642 L18547 5040" stroke-width="18" />
+                           <g id="g1k3d5cn" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(18538, 5040) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="jzgp2a9" class="verse">
+                           <g id="k5qcqna" class="syl">
+                              <text x="18240" y="6437" font-size="0px">
+                                 <tspan id="lvorkl3" class="text">
+                                    <tspan font-size="405px">吃</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="m4d23zq" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(18911, 5670) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="h16h9myk" class="stem">
+                           <path d="M19128 5642 L19128 5040" stroke-width="18" />
+                           <g id="iwbywhx" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(19119, 5040) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="no31swf" class="verse">
+                           <g id="o1xpy4s2" class="syl">
+                              <text x="18821" y="6437" font-size="0px">
+                                 <tspan id="ptgwzgr" class="text">
+                                    <tspan font-size="405px">涮</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="q1hz0ecv" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(19550, 5580) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="j4isrbz" class="stem">
+                           <path d="M19767 5552 L19767 4950" stroke-width="18" />
+                           <g id="klns493" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(19758, 4950) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="r1e8x3ao" class="verse">
+                           <g id="sqlosnz" class="syl">
+                              <text x="19460" y="6437" font-size="0px">
+                                 <tspan id="tualqo8" class="text">
+                                    <tspan font-size="405px">羊</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="u10buhj2" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(20130, 5580) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l1rapoo6" class="stem">
+                           <path d="M20347 5552 L20347 4950" stroke-width="18" />
+                           <g id="ml1mmll" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(20338, 4950) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="vp5xavk" class="verse">
+                           <g id="wyu1qjp" class="syl">
+                              <text x="20040" y="6437" font-size="0px">
+                                 <tspan id="x117l2f8" class="text">
+                                    <tspan font-size="405px">肉</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="s15bis8o" class="barLine">
+                  <path d="M20788 5130 L20788 5850" stroke-width="27" />
+               </g>
+            </g>
+         </g>
+         <g id="j2na9iy" class="system">
+            <g id="inmgp21" class="sb placeholder">
+               <ellipse cx="0" cy="6885" rx="90" ry="90" />
+            </g>
+            <g id="yeb71p0" class="measure">
+               <g id="n1qo08e9" class="mNum autogenerated">
+                  <text y="7182" text-anchor="middle" font-size="0px">
+                     <tspan id="oswbvr5" class="text">
+                        <tspan font-size="324px">13</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="haqaxg6" class="staff">
+                  <path d="M0 7425 L5773 7425" stroke-width="13" />
+                  <path d="M0 7605 L5773 7605" stroke-width="13" />
+                  <path d="M0 7785 L5773 7785" stroke-width="13" />
+                  <path d="M0 7965 L5773 7965" stroke-width="13" />
+                  <path d="M0 8145 L5773 8145" stroke-width="13" />
+                  <g id="lzxyuhr" class="clef">
+                     <use xlink:href="#E050-w1q8gbl3" transform="translate(90, 7965) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="m1t3hegu" class="keySig" />
+                  <g class="ledgerLines below">
+                     <path d="M829 8325 L1151 8325" stroke-width="22" />
+                     <path d="M1407 8325 L1729 8325" stroke-width="22" />
+                  </g>
+                  <g id="j32xf1q" class="layer">
+                     <g id="kwblenz" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(877, 8325) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="no4rs5g" class="stem">
+                           <path d="M1094 8297 L1094 7695" stroke-width="18" />
+                           <g id="ot5j9x4" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(1085, 7695) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="l16bp3dl" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(1455, 8325) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="pti9cbo" class="stem">
+                           <path d="M1672 8297 L1672 7695" stroke-width="18" />
+                           <g id="q1cwcq6o" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(1663, 7695) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="mickym6" class="verse">
+                           <g id="nmp7b2u" class="syl">
+                              <text x="1365" y="8732" font-size="0px">
+                                 <tspan id="o1wieii" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="pfswy9e" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(2093, 8235) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="r1ooulgd" class="stem">
+                           <path d="M2310 8207 L2310 7605" stroke-width="18" />
+                           <g id="s16p7vxt" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(2301, 7605) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="qtc5ohs" class="verse">
+                           <g id="r15o53x3" class="syl">
+                              <text x="2003" y="8732" font-size="0px">
+                                 <tspan id="slq8x6x" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="t12kzt6q" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(2672, 8235) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="t1vojxxz" class="stem">
+                           <path d="M2889 8207 L2889 7605" stroke-width="18" />
+                           <g id="uv6pztb" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(2880, 7605) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="u1lwtclo" class="verse">
+                           <g id="v114maq3" class="syl">
+                              <text x="2582" y="8732" font-size="0px">
+                                 <tspan id="wfod1vv" class="text">
+                                    <tspan font-size="405px">七</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="x10rm4hr" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3309, 8145) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v1f71t0" class="stem">
+                           <path d="M3526 8117 L3526 7515" stroke-width="18" />
+                           <g id="w6zv8bw" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(3517, 7515) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="y88lyv8" class="verse">
+                           <g id="z13i8mym" class="syl">
+                              <text x="3219" y="8732" font-size="0px">
+                                 <tspan id="a1rq4gv5" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="b1vpg7e6" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3888, 8145) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="xe8ka7f" class="stem">
+                           <path d="M4105 8117 L4105 7515" stroke-width="18" />
+                           <g id="y6pk97m" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(4096, 7515) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="cedqng1" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(4526, 7965) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ztqe2du" class="stem">
+                           <path d="M4743 7937 L4743 7335" stroke-width="18" />
+                           <g id="a1e8geu9" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(4734, 7335) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="d89ph6r" class="verse">
+                           <g id="e2i5ptr" class="syl">
+                              <text x="4436" y="8732" font-size="0px">
+                                 <tspan id="f1rdj74h" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="g18olyr" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(5104, 7965) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b1nd5m4g" class="stem">
+                           <path d="M5321 7937 L5321 7335" stroke-width="18" />
+                           <g id="csvrrxm" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(5312, 7335) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="hzo6udj" class="verse">
+                           <g id="i1ufnpic" class="syl">
+                              <text x="5014" y="8732" font-size="0px">
+                                 <tspan id="j1l4fycm" class="text">
+                                    <tspan font-size="405px">七</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="g1ottlbq" class="barLine">
+                  <path d="M5760 7425 L5760 8145" stroke-width="27" />
+               </g>
+            </g>
+            <g id="k19l8tva" class="measure">
+               <g id="tsnbd0r" class="staff">
+                  <path d="M5773 7425 L10783 7425" stroke-width="13" />
+                  <path d="M5773 7605 L10783 7605" stroke-width="13" />
+                  <path d="M5773 7785 L10783 7785" stroke-width="13" />
+                  <path d="M5773 7965 L10783 7965" stroke-width="13" />
+                  <path d="M5773 8145 L10783 8145" stroke-width="13" />
+                  <g id="u1tvcz0s" class="layer">
+                     <g id="v17ix3rt" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(6005, 7875) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d1fm7byg" class="stem">
+                           <path d="M6222 7847 L6222 7245" stroke-width="18" />
+                           <g id="e1hih059" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(6213, 7245) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="wo6r3vo" class="verse">
+                           <g id="xrqf6l5" class="syl">
+                              <text x="5915" y="8732" font-size="0px">
+                                 <tspan id="y1szj64i" class="text">
+                                    <tspan font-size="405px">七</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="zissai9" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(6583, 7875) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f1ruacz0" class="stem">
+                           <path d="M6800 7847 L6800 7245" stroke-width="18" />
+                           <g id="gl5jnb4" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(6791, 7245) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="adov6fs" class="verse">
+                           <g id="bzj81xi" class="syl">
+                              <text x="6493" y="8732" font-size="0px">
+                                 <tspan id="c1vzjt68" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="d5qxz95" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7221, 7695) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="h1nv7jpn" class="stem">
+                           <path d="M7230 7723 L7230 8325" stroke-width="18" />
+                           <g id="i44z594" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(7221, 8325) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="e1gq1hud" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7800, 7695) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="jjiuvqa" class="stem">
+                           <path d="M7809 7723 L7809 8325" stroke-width="18" />
+                           <g id="kb1v94v" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(7800, 8325) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="f18373ae" class="verse">
+                           <g id="g1ij5jhb" class="syl">
+                              <text x="7710" y="8732" font-size="0px">
+                                 <tspan id="h12if3lf" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="i3rmrss" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(8378, 7875) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l1l5prpj" class="stem">
+                           <path d="M8595 7847 L8595 7245" stroke-width="18" />
+                           <g id="m7g8nhf" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(8586, 7245) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="j1hy4pz8" class="verse">
+                           <g id="k1r7qjcp" class="syl">
+                              <text x="8288" y="8732" font-size="0px">
+                                 <tspan id="l770fne" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="m12rjtk0" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(8957, 7875) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n15jsxhy" class="stem">
+                           <path d="M9174 7847 L9174 7245" stroke-width="18" />
+                           <g id="o1fzh6c5" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(9165, 7245) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="n1gt1hgq" class="verse">
+                           <g id="o12xdm6k" class="syl">
+                              <text x="8867" y="8732" font-size="0px">
+                                 <tspan id="p1i0mtok" class="text">
+                                    <tspan font-size="405px">坐</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="q1osebzv" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(9535, 7965) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="peijnfb" class="stem">
+                           <path d="M9752 7937 L9752 7335" stroke-width="18" />
+                           <g id="q10cbg3l" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(9743, 7335) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="r1f0htgu" class="verse">
+                           <g id="s14wch9w" class="syl">
+                              <text x="9445" y="8732" font-size="0px">
+                                 <tspan id="ttuamti" class="text">
+                                    <tspan font-size="405px">飞</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="usvlqx0" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10114, 7965) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="r86v3d3" class="stem">
+                           <path d="M10331 7937 L10331 7335" stroke-width="18" />
+                           <g id="sci82l2" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(10322, 7335) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="vnjinsm" class="verse">
+                           <g id="wz73czm" class="syl">
+                              <text x="10024" y="8732" font-size="0px">
+                                 <tspan id="xcu8d1b" class="text">
+                                    <tspan font-size="405px">机</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="s11om88y" class="barLine">
+                  <path d="M10770 7425 L10770 8145" stroke-width="27" />
+               </g>
+            </g>
+            <g id="y1b63et2" class="measure">
+               <g id="hsktlw5" class="staff">
+                  <path d="M10783 7425 L15852 7425" stroke-width="13" />
+                  <path d="M10783 7605 L15852 7605" stroke-width="13" />
+                  <path d="M10783 7785 L15852 7785" stroke-width="13" />
+                  <path d="M10783 7965 L15852 7965" stroke-width="13" />
+                  <path d="M10783 8145 L15852 8145" stroke-width="13" />
+                  <g id="i15oil4k" class="layer">
+                     <g id="jwh59vi" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(11015, 7965) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="t1x992eq" class="stem">
+                           <path d="M11232 7937 L11232 7335" stroke-width="18" />
+                           <g id="u640obk" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(11223, 7335) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="k7avpm4" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(11593, 7965) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v1wvi1wx" class="stem">
+                           <path d="M11810 7937 L11810 7335" stroke-width="18" />
+                           <g id="w16t030x" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(11801, 7335) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="lm7tthi" class="verse">
+                           <g id="m1su7we" class="syl">
+                              <text x="11503" y="8732" font-size="0px">
+                                 <tspan id="n1fknodv" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="occng5b" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(12231, 7875) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="x1hufa1" class="stem">
+                           <path d="M12448 7847 L12448 7245" stroke-width="18" />
+                           <g id="y16daf2z" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(12439, 7245) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="p1r19c08" class="verse">
+                           <g id="q1qgsiw3" class="syl">
+                              <text x="12141" y="8732" font-size="0px">
+                                 <tspan id="rjfxt76" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="s8q1f5e" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(12810, 7875) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="zqbpojp" class="stem">
+                           <path d="M13027 7847 L13027 7245" stroke-width="18" />
+                           <g id="a1s23skc" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(13018, 7245) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="tbrl6qf" class="verse">
+                           <g id="u14wfvm9" class="syl">
+                              <text x="12720" y="8732" font-size="0px">
+                                 <tspan id="v1ce9amq" class="text">
+                                    <tspan font-size="405px">八</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="w18bgxa" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(13447, 7695) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b6t4t56" class="stem">
+                           <path d="M13456 7723 L13456 8325" stroke-width="18" />
+                           <g id="c15wz3iu" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(13447, 8325) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="x1io7eyi" class="verse">
+                           <g id="y1tp7ze4" class="syl">
+                              <text x="13357" y="8732" font-size="0px">
+                                 <tspan id="z14em5qv" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="a1ih7s2c" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14026, 7695) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d1717npi" class="stem">
+                           <path d="M14035 7723 L14035 8325" stroke-width="18" />
+                           <g id="eekx9j9" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(14026, 8325) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="b9db9vq" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14605, 7875) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f1d80773" class="stem">
+                           <path d="M14822 7847 L14822 7245" stroke-width="18" />
+                           <g id="gk857ms" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(14813, 7245) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="c1niyfss" class="verse">
+                           <g id="d1vkxib0" class="syl">
+                              <text x="14515" y="8732" font-size="0px">
+                                 <tspan id="eqxur0y" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="fscay02" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(15183, 7875) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="h1scuzk2" class="stem">
+                           <path d="M15400 7847 L15400 7245" stroke-width="18" />
+                           <g id="i1iem2vu" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(15391, 7245) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="g1hf0f4n" class="verse">
+                           <g id="h1fac4al" class="syl">
+                              <text x="15093" y="8732" font-size="0px">
+                                 <tspan id="i1urv4g8" class="text">
+                                    <tspan font-size="405px">八</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="g1nzpyhg" class="barLine">
+                  <path d="M15839 7425 L15839 8145" stroke-width="27" />
+               </g>
+            </g>
+            <g id="j13rha7u" class="measure">
+               <g id="s1wuvydw" class="staff">
+                  <path d="M15852 7425 L20803 7425" stroke-width="13" />
+                  <path d="M15852 7605 L20803 7605" stroke-width="13" />
+                  <path d="M15852 7785 L20803 7785" stroke-width="13" />
+                  <path d="M15852 7965 L20803 7965" stroke-width="13" />
+                  <path d="M15852 8145 L20803 8145" stroke-width="13" />
+                  <g class="ledgerLines below">
+                     <path d="M19507 8325 L19829 8325" stroke-width="22" />
+                     <path d="M20086 8325 L20408 8325" stroke-width="22" />
+                  </g>
+                  <g id="tteoghn" class="layer">
+                     <g id="u1eg6ivm" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(16084, 7965) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="j1jpuit0" class="stem">
+                           <path d="M16301 7937 L16301 7335" stroke-width="18" />
+                           <g id="k7m4665" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(16292, 7335) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="v13bmpq3" class="verse">
+                           <g id="w18dtfr7" class="syl">
+                              <text x="15994" y="8732" font-size="0px">
+                                 <tspan id="x18tf42i" class="text">
+                                    <tspan font-size="405px">八</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="y1mup7f9" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(16662, 7965) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ler29pf" class="stem">
+                           <path d="M16879 7937 L16879 7335" stroke-width="18" />
+                           <g id="mnm3pv6" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(16870, 7335) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="zpotnw5" class="verse">
+                           <g id="a15qyawz" class="syl">
+                              <text x="16572" y="8732" font-size="0px">
+                                 <tspan id="b13e5n5n" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="cxhbdgf" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(17241, 8145) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n12e20sg" class="stem">
+                           <path d="M17458 8117 L17458 7515" stroke-width="18" />
+                           <g id="o1lth2sn" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(17449, 7515) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="du8c2rt" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(17820, 8145) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="p1f6wwlw" class="stem">
+                           <path d="M18037 8117 L18037 7515" stroke-width="18" />
+                           <g id="q1i3fjsi" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(18028, 7515) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="eshqge2" class="verse">
+                           <g id="fyumr4p" class="syl">
+                              <text x="17730" y="8732" font-size="0px">
+                                 <tspan id="g1983ipt" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="hmp10y5" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(18398, 8235) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="r1h4weyb" class="stem">
+                           <path d="M18615 8207 L18615 7605" stroke-width="18" />
+                           <g id="s1b81g5z" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(18606, 7605) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="ilaojj4" class="verse">
+                           <g id="j1v34iyw" class="syl">
+                              <text x="18308" y="8732" font-size="0px">
+                                 <tspan id="k3hxvlh" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ly6mt0" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(18977, 8235) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="tyo9gvv" class="stem">
+                           <path d="M19194 8207 L19194 7605" stroke-width="18" />
+                           <g id="ukcouxs" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(19185, 7605) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="m1o3dljm" class="verse">
+                           <g id="n1xdofzu" class="syl">
+                              <text x="18887" y="8732" font-size="0px">
+                                 <tspan id="ooefrxk" class="text">
+                                    <tspan font-size="405px">笑</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="p1dyihj8" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(19555, 8325) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="ve54cgz" class="stem">
+                           <path d="M19772 8297 L19772 7695" stroke-width="18" />
+                           <g id="w101hane" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(19763, 7695) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="qdbniqy" class="verse">
+                           <g id="rk974zg" class="syl">
+                              <text x="19465" y="8732" font-size="0px">
+                                 <tspan id="s1wg4suy" class="text">
+                                    <tspan font-size="405px">哈</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="tnzf936" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(20134, 8325) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="x135d4iu" class="stem">
+                           <path d="M20351 8297 L20351 7695" stroke-width="18" />
+                           <g id="y1nyj5n5" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(20342, 7695) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="u1vf3bnj" class="verse">
+                           <g id="v9q4ukg" class="syl">
+                              <text x="20044" y="8732" font-size="0px">
+                                 <tspan id="w12rz2mj" class="text">
+                                    <tspan font-size="405px">哈</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="rib71mu" class="barLine">
+                  <path d="M20790 7425 L20790 8145" stroke-width="27" />
+               </g>
+            </g>
+         </g>
+         <g id="m836mb2" class="system">
+            <g id="h1skc5ur" class="sb placeholder">
+               <ellipse cx="0" cy="9180" rx="90" ry="90" />
+            </g>
+            <g id="x1pt18y5" class="measure">
+               <g id="v1bywigg" class="mNum autogenerated">
+                  <text y="9477" text-anchor="middle" font-size="0px">
+                     <tspan id="w1yyqd2i" class="text">
+                        <tspan font-size="324px">17</tspan>
+                     </tspan>
+                  </text>
+               </g>
+               <g id="g1r3t3fz" class="staff">
+                  <path d="M0 9720 L4498 9720" stroke-width="13" />
+                  <path d="M0 9900 L4498 9900" stroke-width="13" />
+                  <path d="M0 10080 L4498 10080" stroke-width="13" />
+                  <path d="M0 10260 L4498 10260" stroke-width="13" />
+                  <path d="M0 10440 L4498 10440" stroke-width="13" />
+                  <g id="r1j5sgm4" class="clef">
+                     <use xlink:href="#E050-w1q8gbl3" transform="translate(90, 10260) scale(0.72, 0.72)" />
+                  </g>
+                  <g id="syluig" class="keySig" />
+                  <g id="iaejkl2" class="layer">
+                     <g id="jd4yyzl" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(825, 10170) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="z1tm53tq" class="stem">
+                           <path d="M1042 10142 L1042 9540" stroke-width="18" />
+                           <g id="azn4xvb" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(1033, 9540) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="kmgszmu" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(1275, 10170) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b1ubx93f" class="stem">
+                           <path d="M1492 10142 L1492 9540" stroke-width="18" />
+                           <g id="c13sl194" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(1483, 9540) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="ljvvybo" class="verse">
+                           <g id="m16jfxz5" class="syl">
+                              <text x="1185" y="11027" font-size="0px">
+                                 <tspan id="n1tyvsfv" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="o1se7qxk" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(1725, 10260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d1u5lzxs" class="stem">
+                           <path d="M1942 10232 L1942 9630" stroke-width="18" />
+                           <g id="e4dz70s" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(1933, 9630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="pl722sh" class="verse">
+                           <g id="qk5yipb" class="syl">
+                              <text x="1635" y="11027" font-size="0px">
+                                 <tspan id="r11gry9k" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="s87cznu" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(2175, 10260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f1dca7yt" class="stem">
+                           <path d="M2392 10232 L2392 9630" stroke-width="18" />
+                           <g id="gwbui82" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(2383, 9630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="tczfnqx" class="verse">
+                           <g id="u187th1g" class="syl">
+                              <text x="2085" y="11027" font-size="0px">
+                                 <tspan id="v4q2tiz" class="text">
+                                    <tspan font-size="405px">九</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="w1sq7the" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(2625, 10440) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="h71dwg2" class="stem">
+                           <path d="M2842 10412 L2842 9810" stroke-width="18" />
+                           <g id="iyv1ddy" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(2833, 9810) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="x9dwqwk" class="verse">
+                           <g id="y4pq8hu" class="syl">
+                              <text x="2535" y="11027" font-size="0px">
+                                 <tspan id="zs5b15r" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ailhxe6" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3075, 10440) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="jmipwii" class="stem">
+                           <path d="M3292 10412 L3292 9810" stroke-width="18" />
+                           <g id="k1g06kq1" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(3283, 9810) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="b1doyb9d" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3525, 10530) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l1f1b7f1" class="stem">
+                           <path d="M3742 10502 L3742 9900" stroke-width="18" />
+                           <g id="mykqmrc" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(3733, 9900) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="c4ktuch" class="verse">
+                           <g id="d1ltrjfd" class="syl">
+                              <text x="3435" y="11027" font-size="0px">
+                                 <tspan id="esv6cn3" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="fjqwgsk" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(3975, 10530) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n19xbc94" class="stem">
+                           <path d="M4192 10502 L4192 9900" stroke-width="18" />
+                           <g id="ows07ox" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(4183, 9900) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="g10esl1e" class="verse">
+                           <g id="hhyf7k2" class="syl">
+                              <text x="3885" y="11027" font-size="0px">
+                                 <tspan id="i18a1ulk" class="text">
+                                    <tspan font-size="405px">九</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="f6rlmsk" class="barLine">
+                  <path d="M4485 9720 L4485 10440" stroke-width="27" />
+               </g>
+            </g>
+            <g id="j12m2hxp" class="measure">
+               <g id="ssrnm5e" class="staff">
+                  <path d="M4498 9720 L8489 9720" stroke-width="13" />
+                  <path d="M4498 9900 L8489 9900" stroke-width="13" />
+                  <path d="M4498 10080 L8489 10080" stroke-width="13" />
+                  <path d="M4498 10260 L8489 10260" stroke-width="13" />
+                  <path d="M4498 10440 L8489 10440" stroke-width="13" />
+                  <g class="ledgerLines below">
+                     <path d="M4630 10620 L4952 10620" stroke-width="22" />
+                     <path d="M5080 10620 L5402 10620" stroke-width="22" />
+                  </g>
+                  <g id="tmhkzqq" class="layer">
+                     <g id="ul3910b" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(4678, 10620) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="pdqmngz" class="stem">
+                           <path d="M4895 10592 L4895 9990" stroke-width="18" />
+                           <g id="qq2lvfz" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(4886, 9990) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="v1np5plt" class="verse">
+                           <g id="w1mvbszu" class="syl">
+                              <text x="4588" y="11027" font-size="0px">
+                                 <tspan id="x1vmr11n" class="text">
+                                    <tspan font-size="405px">九</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="y129z9y3" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(5128, 10620) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="rwg0ic3" class="stem">
+                           <path d="M5345 10592 L5345 9990" stroke-width="18" />
+                           <g id="s1ndhv14" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(5336, 9990) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="z4v6mzb" class="verse">
+                           <g id="abeoucs" class="syl">
+                              <text x="5038" y="11027" font-size="0px">
+                                 <tspan id="b1dg2llw" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="c1ewjq2o" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(5624, 10530) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="tq56py1" class="stem">
+                           <path d="M5841 10502 L5841 9900" stroke-width="18" />
+                           <g id="uyvdplg" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(5832, 9900) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="d1qzyxia" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(6074, 10530) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="veigumh" class="stem">
+                           <path d="M6291 10502 L6291 9900" stroke-width="18" />
+                           <g id="w14fjiqn" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(6282, 9900) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="evjz1uy" class="verse">
+                           <g id="fynprlf" class="syl">
+                              <text x="5984" y="11027" font-size="0px">
+                                 <tspan id="gbaghq4" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="h1fpsk9y" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(6570, 10440) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="xrbh39n" class="stem">
+                           <path d="M6787 10412 L6787 9810" stroke-width="18" />
+                           <g id="y8yf0na" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(6778, 9810) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="i1lb804c" class="verse">
+                           <g id="j1i9itg6" class="syl">
+                              <text x="6480" y="11027" font-size="0px">
+                                 <tspan id="k1sphyo5" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ltiepeq" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7020, 10440) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="z129t7zi" class="stem">
+                           <path d="M7237 10412 L7237 9810" stroke-width="18" />
+                           <g id="a37shtd" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(7228, 9810) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="m1q22r6s" class="verse">
+                           <g id="n1uc9u95" class="syl">
+                              <text x="6930" y="11027" font-size="0px">
+                                 <tspan id="o1hp0adx" class="text">
+                                    <tspan font-size="405px">推</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="p1w9wjup" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7516, 10260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b1vynxku" class="stem">
+                           <path d="M7733 10232 L7733 9630" stroke-width="18" />
+                           <g id="c7xo6" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(7724, 9630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="q11vgx4n" class="verse">
+                           <g id="r1iqqz8j" class="syl">
+                              <text x="7426" y="11027" font-size="0px">
+                                 <tspan id="s9l2j37" class="text">
+                                    <tspan font-size="405px">牌</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="t1r4rhvl" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(7966, 10260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="d1x98qe9" class="stem">
+                           <path d="M8183 10232 L8183 9630" stroke-width="18" />
+                           <g id="emvdo5v" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(8174, 9630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="upaid2u" class="verse">
+                           <g id="v1fzk3bx" class="syl">
+                              <text x="7876" y="11027" font-size="0px">
+                                 <tspan id="wje4b9n" class="text">
+                                    <tspan font-size="405px">九</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="r1s9a1rh" class="barLine">
+                  <path d="M8476 9720 L8476 10440" stroke-width="27" />
+               </g>
+            </g>
+            <g id="xwmi9v6" class="measure">
+               <g id="g1br7o9c" class="staff">
+                  <path d="M8489 9720 L12434 9720" stroke-width="13" />
+                  <path d="M8489 9900 L12434 9900" stroke-width="13" />
+                  <path d="M8489 10080 L12434 10080" stroke-width="13" />
+                  <path d="M8489 10260 L12434 10260" stroke-width="13" />
+                  <path d="M8489 10440 L12434 10440" stroke-width="13" />
+                  <g class="ledgerLines below">
+                     <path d="M9521 10620 L9843 10620" stroke-width="22" />
+                     <path d="M9971 10620 L10293 10620" stroke-width="22" />
+                  </g>
+                  <g id="h16dng8p" class="layer">
+                     <g id="iwii6kc" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(8669, 10530) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="fc7e9ch" class="stem">
+                           <path d="M8886 10502 L8886 9900" stroke-width="18" />
+                           <g id="g1ez8vvp" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(8877, 9900) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                     </g>
+                     <g id="j12prpln" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(9119, 10530) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="hesdyhr" class="stem">
+                           <path d="M9336 10502 L9336 9900" stroke-width="18" />
+                           <g id="i7sq7ph" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(9327, 9900) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="kbhx69j" class="verse">
+                           <g id="l8xkr47" class="syl">
+                              <text x="9029" y="11027" font-size="0px">
+                                 <tspan id="m7lkv2b" class="text">
+                                    <tspan font-size="405px">你</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="n1vxluzr" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(9569, 10620) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="j1k23hh7" class="stem">
+                           <path d="M9786 10592 L9786 9990" stroke-width="18" />
+                           <g id="k14f5dhk" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(9777, 9990) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="ojgl6a5" class="verse">
+                           <g id="pxnbuwd" class="syl">
+                              <text x="9479" y="11027" font-size="0px">
+                                 <tspan id="qwohd7s" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="rj19ed" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10019, 10620) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="l1lgd0ak" class="stem">
+                           <path d="M10236 10592 L10236 9990" stroke-width="18" />
+                           <g id="mdx8ij8" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(10227, 9990) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="s1sd8kvg" class="verse">
+                           <g id="t17340lg" class="syl">
+                              <text x="9929" y="11027" font-size="0px">
+                                 <tspan id="u4rrlpz" class="text">
+                                    <tspan font-size="405px">十</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="v621n3s" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10515, 10530) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="n1tg1ina" class="stem">
+                           <path d="M10732 10502 L10732 9900" stroke-width="18" />
+                           <g id="o183elh" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(10723, 9900) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="w976yzv" class="verse">
+                           <g id="x1etqkxp" class="syl">
+                              <text x="10425" y="11027" font-size="0px">
+                                 <tspan id="y6e2uwc" class="text">
+                                    <tspan font-size="405px">我</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="z1ptwcd" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(10965, 10530) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="pi1zapw" class="stem">
+                           <path d="M11182 10502 L11182 9900" stroke-width="18" />
+                           <g id="q1ntnk9n" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(11173, 9900) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="aay7hwy" class="verse">
+                           <g id="bjc89v3" class="syl">
+                              <text x="10875" y="11027" font-size="0px">
+                                 <tspan id="czrn1ea" class="text">
+                                    <tspan font-size="405px">拍</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="de4skws" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(11461, 10440) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="r1meyemx" class="stem">
+                           <path d="M11678 10412 L11678 9810" stroke-width="18" />
+                           <g id="s1yof32c" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(11669, 9810) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="e1wmb9q3" class="verse">
+                           <g id="f1dbxk6" class="syl">
+                              <text x="11371" y="11027" font-size="0px">
+                                 <tspan id="g1ep6zk8" class="text">
+                                    <tspan font-size="405px">十</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="h47m1jd" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(11911, 10440) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="t1s5eg0r" class="stem">
+                           <path d="M12128 10412 L12128 9810" stroke-width="18" />
+                           <g id="u1st0n7r" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(12119, 9810) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="iguaobw" class="verse">
+                           <g id="j2w0mne" class="syl">
+                              <text x="11821" y="11027" font-size="0px">
+                                 <tspan id="klixl7n" class="text">
+                                    <tspan font-size="405px">十</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="f107ku1n" class="barLine">
+                  <path d="M12421 9720 L12421 10440" stroke-width="27" />
+               </g>
+            </g>
+            <g id="lysthca" class="measure">
+               <g id="uhg9zng" class="staff">
+                  <path d="M12434 9720 L16541 9720" stroke-width="13" />
+                  <path d="M12434 9900 L16541 9900" stroke-width="13" />
+                  <path d="M12434 10080 L16541 10080" stroke-width="13" />
+                  <path d="M12434 10260 L16541 10260" stroke-width="13" />
+                  <path d="M12434 10440 L16541 10440" stroke-width="13" />
+                  <g id="va4p5h1" class="layer">
+                     <g id="w1en1lbd" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(12614, 10260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="v143ci9t" class="stem">
+                           <path d="M12831 10232 L12831 9630" stroke-width="18" />
+                           <g id="wwhxs4" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(12822, 9630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="x1r3qacr" class="verse">
+                           <g id="y1pt2s5i" class="syl">
+                              <text x="12524" y="11027" font-size="0px">
+                                 <tspan id="zh1qb4o" class="text">
+                                    <tspan font-size="405px">个</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="a1hhxemp" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(13064, 10260) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="x1fl1r3v" class="stem">
+                           <path d="M13281 10232 L13281 9630" stroke-width="18" />
+                           <g id="ytylosq" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(13272, 9630) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="b7au1e0" class="verse">
+                           <g id="c118arwh" class="syl">
+                              <text x="12974" y="11027" font-size="0px">
+                                 <tspan id="do6ov8s" class="text">
+                                    <tspan font-size="405px">小</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="e16qmszd" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(13560, 10170) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="z1v0zsli" class="stem">
+                           <path d="M13777 10142 L13777 9540" stroke-width="18" />
+                           <g id="ap5gho6" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(13768, 9540) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="fs6mr1u" class="verse">
+                           <g id="g1eqo0qp" class="syl">
+                              <text x="13470" y="11027" font-size="0px">
+                                 <tspan id="hubwbrs" class="text">
+                                    <tspan font-size="405px">孩</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="i1unfnrl" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14010, 10170) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="b1enpzvr" class="stem">
+                           <path d="M14227 10142 L14227 9540" stroke-width="18" />
+                           <g id="c18x4l5l" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(14218, 9540) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="jn20m6f" class="verse">
+                           <g id="kk651pu" class="syl">
+                              <text x="13920" y="11027" font-size="0px">
+                                 <tspan id="l2dnweu" class="text">
+                                    <tspan font-size="405px">打</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="m1ogpwqf" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14506, 9990) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="dshgfnw" class="stem">
+                           <path d="M14515 10018 L14515 10620" stroke-width="18" />
+                           <g id="elz0925" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(14506, 10620) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="n19aq6m1" class="verse">
+                           <g id="o1ni9lad" class="syl">
+                              <text x="14416" y="11027" font-size="0px">
+                                 <tspan id="p1lajtn7" class="text">
+                                    <tspan font-size="405px">到</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="qdtxte1" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(14956, 9990) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="f1towbk5" class="stem">
+                           <path d="M14965 10018 L14965 10620" stroke-width="18" />
+                           <g id="gqemf95" class="flag">
+                              <use xlink:href="#E241-w1q8gbl3" transform="translate(14956, 10620) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="rp5iv5x" class="verse">
+                           <g id="s1d5qzhl" class="syl">
+                              <text x="14866" y="11027" font-size="0px">
+                                 <tspan id="t1oip05s" class="text">
+                                    <tspan font-size="405px">蒋</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="u4008fk" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(15406, 10170) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="hdnunj2" class="stem">
+                           <path d="M15623 10142 L15623 9540" stroke-width="18" />
+                           <g id="iv9yr5h" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(15614, 9540) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="v18zq5gs" class="verse">
+                           <g id="w1rxy8wr" class="syl">
+                              <text x="15316" y="11027" font-size="0px">
+                                 <tspan id="xo0grx1" class="text">
+                                    <tspan font-size="405px">介</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                     <g id="ysedd1v" class="note">
+                        <g class="notehead">
+                           <use xlink:href="#E0A4-w1q8gbl3" transform="translate(15856, 10170) scale(0.72, 0.72)" />
+                        </g>
+                        <g id="j1hj31y3" class="stem">
+                           <path d="M16073 10142 L16073 9540" stroke-width="18" />
+                           <g id="kj98cl3" class="flag">
+                              <use xlink:href="#E240-w1q8gbl3" transform="translate(16064, 9540) scale(0.72, 0.72)" />
+                           </g>
+                        </g>
+                        <g id="z1s2j4jk" class="verse">
+                           <g id="ahoj2bz" class="syl">
+                              <text x="15766" y="11027" font-size="0px">
+                                 <tspan id="b1sbnu5v" class="text">
+                                    <tspan font-size="405px">石</tspan>
+                                 </tspan>
+                              </text>
+                           </g>
+                        </g>
+                     </g>
+                  </g>
+               </g>
+               <g id="tu6wetp" class="barLine">
+                  <path d="M16366 9720 L16366 10440" stroke-width="27" />
+                  <path d="M16496 9720 L16496 10440" stroke-width="90" />
+               </g>
+            </g>
+            <g id="lv43nxj" class="systemMilestoneEnd c1idj3ku" />
+            <g id="m1drlzww" class="systemMilestoneEnd j1hebrrt" />
+         </g>
+         <g id="nkhcbg5" class="pageMilestoneEnd hzj11do" />
+         <g id="o1qowgu2" class="pageMilestoneEnd g5cafmu" />
+      </g>
+   </svg>
+</svg>

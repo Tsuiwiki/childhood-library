@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="古典诗词、儿童诗、民间歌谣，以及不同译注、吟诵与朗诵版本的儿童诗歌档案。">
+  <title>古诗词馆｜童年书房</title>
+  <style>
+
+    :root {
+      --paper: #f4eddc; --paper-light: #fffaf0; --ink: #191917;
+      --red: #e64a38; --yellow: #f1bd32; --blue: #2858b8; --green: #739348; --brown: #8b5e3c;
+      --line: 3px solid var(--ink); --shadow: 7px 7px 0 var(--ink);
+      --serif: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      --sans: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background-color: var(--paper);
+      background-image: radial-gradient(circle, rgba(25,25,23,.18) .8px, transparent .9px);
+      background-size: 9px 9px; font-family: var(--sans); font-size: 16px; line-height: 1.7;
+      overflow-x: clip;
+    }
+    [hidden] { display: none !important; }
+    a { color: inherit; } a, button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
+    button, input, select { font: inherit; }
+    svg { display: block; max-width: 100%; }
+    h1, h2, h3, p { margin-top: 0; }
+    section { scroll-margin-top: 104px; }
+    ::selection { color: var(--paper-light); background: var(--blue); }
+    :focus-visible { outline: 4px solid var(--blue); outline-offset: 4px; }
+    .shell { width: min(calc(100% - 48px), 1240px); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 30; top: 0; border-bottom: var(--line); background-color: var(--paper); background-image: radial-gradient(circle, rgba(25,25,23,.16) .8px, transparent .9px); background-size: 9px 9px; }
+    .header-inner { min-height: 80px; display: flex; align-items: center; gap: 22px; }
+    .brand { display: inline-flex; align-items: center; min-height: 48px; margin-right: auto; text-decoration: none; font-family: var(--serif); font-size: 24px; font-weight: 900; letter-spacing: .08em; white-space: nowrap; }
+    .brand small { margin-left: 11px; padding-left: 11px; border-left: 2px solid var(--ink); font-family: var(--sans); font-size: 11px; font-weight: 700; line-height: 1.25; letter-spacing: .08em; }
+    .desktop-nav { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; }
+    .desktop-nav a, .mobile-nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 11px; text-decoration: none; font-weight: 800; font-size: 15px; }
+    .desktop-nav a:hover { text-decoration: underline 3px var(--red); text-underline-offset: 6px; }
+    .desktop-nav a[aria-current="page"], .mobile-nav a[aria-current="page"] { text-decoration: underline 3px var(--red); text-underline-offset: 6px; }
+    .menu-toggle { display: none; width: 48px; height: 48px; padding: 11px; border: var(--line); background: var(--yellow); box-shadow: 3px 3px 0 var(--ink); }
+    .menu-toggle span { display: block; width: 100%; height: 2px; margin: 4px 0; background: var(--ink); }
+    .mobile-nav { padding: 8px 0 18px; border-top: 2px solid var(--ink); }
+    .mobile-nav a { width: 100%; justify-content: flex-start; border-bottom: 1px dashed var(--ink); }
+    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 11px 22px; border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); font-weight: 800; line-height: 1.35; text-decoration: none; transition: translate .16s ease, box-shadow .16s ease; }
+    .button:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .button:active { translate: 3px 3px; box-shadow: 1px 1px 0 var(--ink); }
+    .button-primary { background: var(--yellow); }
+    .button svg { width: 20px; height: 20px; flex: 0 0 auto; }
+    .eyebrow { display: inline-block; margin-bottom: 20px; padding: 5px 13px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 3px 3px 0 var(--ink); font-size: 14px; font-weight: 800; letter-spacing: .12em; transform: rotate(-2deg); }
+    .site-footer { margin-top: 34px; padding-block: 30px 40px; border-top: var(--line); background: var(--ink); color: var(--paper-light); }
+    .site-footer p { margin: 0; font-size: 13px; opacity: .82; }
+    .site-footer a { text-decoration: underline; }
+    @media (max-width: 1080px) { .desktop-nav a { padding-inline: 8px; font-size: 14px; } }
+    @media (max-width: 900px) { .desktop-nav { display: none; } .menu-toggle { display: block; } .header-inner { gap: 12px; } }
+
+    
+
+    .hero { padding-block: 48px 26px; }
+    .hero h1 { font-family: var(--serif); font-size: clamp(40px, 5vw, 62px); font-weight: 900; line-height: 1.16; letter-spacing: -.04em; margin-bottom: 16px; }
+    .hero h1 .accent { color: var(--red); }
+    .hero-desc { max-width: 760px; font-size: 17px; line-height: 1.9; margin-bottom: 22px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .stat-strip { display: grid; grid-template-columns: repeat(4, 1fr); border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--blue); margin-top: 30px; }
+    .stat-cell { padding: 16px 18px; border-right: 2px solid var(--ink); }
+    .stat-cell:last-child { border-right: 0; }
+    .stat-cell b { display: block; font-family: var(--serif); font-size: 27px; font-weight: 900; line-height: 1.2; }
+    .stat-cell span { font-size: 12px; color: #4a4841; }
+    .notice { margin-top: 24px; padding: 14px 18px; border: 2px solid var(--ink); background: #dde5f6; box-shadow: 4px 4px 0 var(--ink); font-size: 14px; line-height: 1.75; }
+    .notice b { color: var(--blue); }
+    .toolbar { padding-block: 26px 8px; }
+    .toolbar-inner { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 14px 16px; border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); }
+    .toolbar label { font-size: 13px; font-weight: 800; }
+    .toolbar input[type="search"], .toolbar select { min-height: 42px; padding: 8px 12px; border: 2px solid var(--ink); background: var(--paper-light); font-size: 14px; }
+    .toolbar input[type="search"] { flex: 1 1 240px; }
+    .toolbar .result-count { margin-left: auto; font-size: 13px; font-weight: 800; }
+    .group-nav { padding-block: 16px 4px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .group-nav a { padding: 5px 11px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .group-nav a:hover { background: var(--yellow); }
+    .group-section { padding-block: 26px 12px; }
+    .group-head { border-bottom: 2px dashed var(--ink); padding-bottom: 12px; margin-bottom: 20px; }
+    .group-head .no { font-size: 12px; font-weight: 900; letter-spacing: .12em; }
+    .group-head h2 { font-family: var(--serif); font-size: clamp(25px, 3vw, 32px); font-weight: 900; margin: 4px 0 6px; }
+    .group-head h2 small { font-family: var(--sans); font-size: 14px; font-weight: 800; margin-left: 10px; color: #4a4841; }
+    .group-head p { margin: 0; font-size: 14px; color: #4a4841; max-width: 900px; }
+    .group-head .focus { margin-top: 6px; font-size: 13px; font-weight: 800; }
+    .rec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .rec-card { border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); padding: 14px 15px 12px; display: flex; flex-direction: column; gap: 6px; }
+    .rec-card .rid { font-size: 11px; font-weight: 900; color: var(--blue); letter-spacing: .08em; }
+    .rec-card h3 { font-family: var(--serif); font-size: 19px; font-weight: 900; line-height: 1.4; margin: 0; }
+    .rec-card .meta { font-size: 12px; color: #4a4841; }
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 2px; }
+    .rec-tags span { padding: 1px 7px; border: 2px solid var(--ink); background: var(--yellow); font-size: 10px; font-weight: 800; }
+    .rec-tags span.warn { background: #dde5f6; }
+    .rec-card details { margin-top: 6px; border-top: 2px dashed var(--ink); padding-top: 8px; font-size: 13px; }
+    .rec-card summary { font-weight: 800; cursor: pointer; }
+    .rec-card details p { margin: 8px 0 0; line-height: 1.65; color: #33322e; }
+    .rec-card details a { text-decoration: underline 2px var(--blue); text-underline-offset: 3px; font-weight: 800; }
+    .status-list { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 8px 0 0; font-size: 12px; }
+    .status-list dt { font-weight: 800; font-family: monospace; }
+    .status-list dd { margin: 0; }
+    .model-band { padding-block: 30px 20px; }
+    .model-box { border: var(--line); background: var(--paper-light); box-shadow: var(--shadow); padding: 24px 24px 18px; }
+    .model-box h2 { font-family: var(--serif); font-size: 27px; font-weight: 900; margin-bottom: 6px; }
+    .model-box > p { font-size: 14px; color: #4a4841; margin-bottom: 16px; }
+    .model-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .model-table th, .model-table td { border: 2px solid var(--ink); padding: 8px 10px; text-align: left; vertical-align: top; }
+    .model-table th { background: var(--yellow); font-weight: 900; }
+    .model-table code { font-family: monospace; font-weight: 800; }
+    .model-box .button { margin-top: 18px; }
+    @media (max-width: 1000px) { .rec-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      .stat-strip { grid-template-columns: repeat(2, 1fr); }
+      .stat-cell:nth-child(2) { border-right: 0; }
+      .stat-cell:nth-child(-n+2) { border-bottom: 2px solid var(--ink); }
+      .rec-grid { grid-template-columns: 1fr; }
+      .hero { padding-block: 34px 20px; }
+      .model-box { padding: 18px 14px 14px; }
+      .model-table { font-size: 12px; }
+    }
+  
+    /* ===== LIBRARY_LINKS:CSS ===== */
+    .lib-map { padding-block: 26px 54px; }
+    .lib-map-box { border: var(--line); background: var(--paper-light); box-shadow: var(--shadow); padding: 26px 26px 22px; }
+    .lib-map-box h2 { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); font-weight: 900; margin-bottom: 6px; }
+    .lib-map-box > p { font-size: 14px; color: #4a4841; margin-bottom: 20px; }
+    .lib-halls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lib-hall { display: flex; flex-direction: column; gap: 4px; padding: 14px 14px 12px; border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); text-decoration: none; transition: translate .15s ease, box-shadow .15s ease; }
+    .lib-hall:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); }
+    .lib-hall b { font-family: var(--serif); font-size: 20px; font-weight: 900; }
+    .lib-hall span { font-size: 12px; line-height: 1.5; color: #4a4841; }
+    .lib-hall.lib-story { background: #fbe3dd; }
+    .lib-hall.lib-music { background: #fdf1c9; }
+    .lib-hall.lib-poetry { background: #e2ebd7; }
+    .lib-hall.lib-research { background: #dde5f6; }
+    .lib-hall[aria-current="page"] { outline: 3px dashed var(--ink); outline-offset: 3px; }
+    .lib-specs { margin-top: 20px; padding-top: 16px; border-top: 2px dashed var(--ink); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .lib-specs > strong { font-size: 13px; margin-right: 4px; }
+    .lib-specs a { padding: 4px 10px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-specs a:hover { background: var(--yellow); }
+    .lib-specs a[aria-current="page"] { background: var(--yellow); }
+    .lib-more { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; font-weight: 800; }
+    .lib-more a { text-decoration: underline 2px var(--blue); text-underline-offset: 4px; }
+    .lib-peers { padding-block: 6px 26px; }
+    .lib-peers-inner { border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); padding: 16px 18px; }
+    .lib-peers-inner > strong { display: block; font-size: 13px; margin-bottom: 10px; }
+    .lib-peer-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lib-peer-list a { padding: 5px 10px; border: 2px solid var(--ink); background: var(--paper-light); font-size: 12px; font-weight: 800; text-decoration: none; }
+    .lib-peer-list a:hover { background: var(--yellow); }
+    .lib-peer-list a[aria-current="page"] { background: var(--yellow); box-shadow: 2px 2px 0 var(--ink); }
+    .lib-peer-ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 13px; font-weight: 800; }
+    .lib-peer-ends a { text-decoration: none; border-bottom: 2px solid var(--ink); }
+    .lib-peer-ends .spacer { flex: 1; }
+    @media (max-width: 1000px) { .lib-halls { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      .lib-halls { grid-template-columns: 1fr; }
+      .lib-map-box { padding: 20px 16px 18px; }
+      .shell { width: min(calc(100% - 32px), 1240px); }
+    }
+    .work-spec-links { margin-top: 18px; padding: 12px 14px; border: 2px dashed var(--ink); background: #dde5f6; font-size: 13px; }
+    .work-spec-links > strong { display: block; margin-bottom: 8px; }
+    .work-spec-links div { display: flex; flex-wrap: wrap; gap: 8px; }
+    .work-spec-links a { padding: 3px 9px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 2px 2px 0 var(--ink); font-weight: 800; text-decoration: none; }
+    .work-spec-links a:hover { background: var(--yellow); }
+    /* ===== /LIBRARY_LINKS:CSS ===== */
+</style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="dir-3.html" aria-label="返回童年书房首页">童年书房<small>CHILDHOOD<br>LIBRARY</small></a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="dir-3.html">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html">音乐馆</a>
+        <a href="poetry.html" aria-current="page">古诗词馆</a>
+        <a href="research.html">研究资源库</a>
+        <a href="works.html">作品目录</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="展开导航">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="shell mobile-nav" id="mobile-nav" aria-label="移动端导航" hidden>
+      <a href="dir-3.html">书房首页</a>
+        <a href="story.html">故事馆</a>
+        <a href="music.html">音乐馆</a>
+        <a href="poetry.html" aria-current="page">古诗词馆</a>
+        <a href="research.html">研究资源库</a>
+        <a href="works.html">作品目录</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="shell hero" aria-labelledby="page-title">
+      <span class="eyebrow">POETRY HALL · 研究目录</span>
+      <h1 id="page-title">古诗词馆 · <span class="accent">把诗，读成声音与画面</span></h1>
+      <p class="hero-desc">古典诗词、儿童诗、民间歌谣，以及不同译注、吟诵与朗诵版本的儿童诗歌档案。 目前按《项目顶层设计原则》§3 儿童诗歌与诗词范围建立研究目录，共 10 个专题、60 条研究记录。</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="research.html">看研究资源库与五维状态
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
+        </a>
+        <a class="button" href="#groups">按专题浏览</a>
+      </div>
+      <div class="stat-strip">
+        <div class="stat-cell"><b>60</b><span>研究记录总数</span></div>
+        <div class="stat-cell"><b>10</b><span>一级专题</span></div>
+        <div class="stat-cell"><b>48</b><span>作品 / 题材线索</span></div>
+        <div class="stat-cell"><b>12</b><span>征集方向 / 版本资产线索</span></div>
+      </div>
+      <div class="notice"><b>这一页是「研究资源库」视图，不是儿童阅读页。</b>这里按主题与<b>版本层级</b>登记研究线索：作品文本、译注、绘本、吟诵与朗诵分别建档，不把某个录音或绘本误当成作品本身。作品文本通常属古典公版范畴，但本项目尚未逐条完成地区与版本证据归档，因此权利状态一律记为 pending，不自动标为已核验。 所有记录当前 <code>publication_status = draft</code>、<code>quality_status = unreviewed</code>，页面不展示任何正文、译文、插画或音视频。</div>
+    </section>
+
+    <section class="shell toolbar" id="groups" aria-label="目录筛选">
+      <div class="toolbar-inner">
+        <label for="hall-search">检索目录</label>
+        <input type="search" id="hall-search" placeholder="输入作品、作者或编号" autocomplete="off">
+        <label for="hall-group">专题</label>
+        <select id="hall-group"><option value="all">全部专题</option><option value="primer">01 启蒙与蒙学</option>
+<option value="seasons">02 自然与四季</option>
+<option value="childplay">03 童趣与游戏</option>
+<option value="family">04 思乡与亲情</option>
+<option value="pastoral">05 田园与劳作</option>
+<option value="festival">06 节令与风俗</option>
+<option value="farewell">07 送别与友情</option>
+<option value="object">08 咏物与言志</option>
+<option value="music">09 诗词入乐 · 版本线索</option>
+<option value="editions">10 译注与朗诵 · 资产层</option></select>
+        <span class="result-count" id="hall-visible">显示 60 / 60 条</span>
+      </div>
+      <nav class="group-nav" aria-label="专题快捷导航"><a href="#group-primer">01 启蒙与蒙学</a>
+<a href="#group-seasons">02 自然与四季</a>
+<a href="#group-childplay">03 童趣与游戏</a>
+<a href="#group-family">04 思乡与亲情</a>
+<a href="#group-pastoral">05 田园与劳作</a>
+<a href="#group-festival">06 节令与风俗</a>
+<a href="#group-farewell">07 送别与友情</a>
+<a href="#group-object">08 咏物与言志</a>
+<a href="#group-music">09 诗词入乐 · 版本线索</a>
+<a href="#group-editions">10 译注与朗诵 · 资产层</a></nav>
+    </section>
+
+    <section class="shell group-section" id="group-primer" data-group-section="primer">
+      <div class="group-head">
+        <span class="no" style="color:#e64a38">01 · POETRY HALL · 研究目录</span>
+        <h2>启蒙与蒙学<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>短小、有画面、易于吟诵的启蒙篇目。是许多孩子第一次遇见的古典诗歌。</p>
+        <p class="focus">编辑关注：文本版本、注音与大字版、吟诵节奏</p>
+        
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="primer" data-search="po-001 咏鹅 骆宾王 · 唐 唐 文本版本与配图版本需分开 启蒙与蒙学">
+      <span class="rid">PO-001 · 作品线索</span>
+      <h3>咏鹅</h3>
+      <span class="meta">唐 · 骆宾王 · 唐</span>
+      <span class="meta">适读 0–2 岁 · 启蒙与蒙学</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>文本版本与配图版本需分开</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="primer" data-search="po-002 静夜思 李白 · 唐 唐 通行本与宋本异文需说明 启蒙与蒙学">
+      <span class="rid">PO-002 · 作品线索</span>
+      <h3>静夜思</h3>
+      <span class="meta">唐 · 李白 · 唐</span>
+      <span class="meta">适读 2–4 岁 · 启蒙与蒙学</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>通行本与宋本异文需说明</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="primer" data-search="po-003 春晓 孟浩然 · 唐 唐 与「诗词入乐」组的谱曲版本关联 启蒙与蒙学">
+      <span class="rid">PO-003 · 作品线索</span>
+      <h3>春晓</h3>
+      <span class="meta">唐 · 孟浩然 · 唐</span>
+      <span class="meta">适读 2–4 岁 · 启蒙与蒙学</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>与「诗词入乐」组的谱曲版本关联</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="primer" data-search="po-004 悯农（其一） 李绅 · 唐 唐 「悯农」组诗篇目需分开登记 启蒙与蒙学">
+      <span class="rid">PO-004 · 作品线索</span>
+      <h3>悯农（其一）</h3>
+      <span class="meta">唐 · 李绅 · 唐</span>
+      <span class="meta">适读 4–6 岁 · 启蒙与蒙学</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>「悯农」组诗篇目需分开登记</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="primer" data-search="po-005 登鹳雀楼 王之涣 · 唐 唐 作者归属的版本讨论需语境说明 启蒙与蒙学">
+      <span class="rid">PO-005 · 作品线索</span>
+      <h3>登鹳雀楼</h3>
+      <span class="meta">唐 · 王之涣 · 唐</span>
+      <span class="meta">适读 4–6 岁 · 启蒙与蒙学</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>作者归属的版本讨论需语境说明</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="primer" data-search="po-006 古朗月行（节选） 李白 · 唐 唐 节选范围与全篇需区分 启蒙与蒙学">
+      <span class="rid">PO-006 · 作品线索</span>
+      <h3>古朗月行（节选）</h3>
+      <span class="meta">唐 · 李白 · 唐</span>
+      <span class="meta">适读 4–6 岁 · 启蒙与蒙学</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>节选范围与全篇需区分</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+    <section class="shell group-section" id="group-seasons" data-group-section="seasons">
+      <div class="group-head">
+        <span class="no" style="color:#739348">02 · POETRY HALL · 研究目录</span>
+        <h2>自然与四季<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>春夏秋冬、山水风月。自然观察与语言节奏，是诗词与音乐馆共通的主题。</p>
+        <p class="focus">编辑关注：时节、地域与意象的版本差异</p>
+        
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="seasons" data-search="po-007 绝句（两个黄鹂） 杜甫 · 唐 唐 画面感与对仗，可作自然观察入门 自然与四季">
+      <span class="rid">PO-007 · 作品线索</span>
+      <h3>绝句（两个黄鹂）</h3>
+      <span class="meta">唐 · 杜甫 · 唐</span>
+      <span class="meta">适读 4–6 岁 · 自然与四季</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>画面感与对仗，可作自然观察入门</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="seasons" data-search="po-008 早发白帝城 李白 · 唐 唐 地名与写作背景需注释 自然与四季">
+      <span class="rid">PO-008 · 作品线索</span>
+      <h3>早发白帝城</h3>
+      <span class="meta">唐 · 李白 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 自然与四季</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>地名与写作背景需注释</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="seasons" data-search="po-009 晓出净慈寺送林子方 杨万里 · 宋 宋 题中含送别，归类需编辑判断 自然与四季">
+      <span class="rid">PO-009 · 作品线索</span>
+      <h3>晓出净慈寺送林子方</h3>
+      <span class="meta">宋 · 杨万里 · 宋</span>
+      <span class="meta">适读 6–8 岁 · 自然与四季</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>题中含送别，归类需编辑判断</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="seasons" data-search="po-010 山行 杜牧 · 唐 唐 秋景意象，与音乐馆自然主题呼应 自然与四季">
+      <span class="rid">PO-010 · 作品线索</span>
+      <h3>山行</h3>
+      <span class="meta">唐 · 杜牧 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 自然与四季</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>秋景意象，与音乐馆自然主题呼应</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="seasons" data-search="po-011 江雪 柳宗元 · 唐 唐 孤寂情绪需适龄语境说明 自然与四季">
+      <span class="rid">PO-011 · 作品线索</span>
+      <h3>江雪</h3>
+      <span class="meta">唐 · 柳宗元 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 自然与四季</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>孤寂情绪需适龄语境说明</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="seasons" data-search="po-012 春夜喜雨 杜甫 · 唐 唐 「喜」字与农事语境需说明 自然与四季">
+      <span class="rid">PO-012 · 作品线索</span>
+      <h3>春夜喜雨</h3>
+      <span class="meta">唐 · 杜甫 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 自然与四季</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>「喜」字与农事语境需说明</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+    <section class="shell group-section" id="group-childplay" data-group-section="childplay">
+      <div class="group-head">
+        <span class="no" style="color:#f1bd32">03 · POETRY HALL · 研究目录</span>
+        <h2>童趣与游戏<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>写儿童、写玩耍、写日常小景的篇目，与音乐馆「游戏与伙伴」专题相互呼应。</p>
+        <p class="focus">编辑关注：儿童视角、生活场景与适龄说明</p>
+        
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="childplay" data-search="po-013 村居 高鼎 · 清 清 「儿童散学归来早」与游戏主题呼应 童趣与游戏">
+      <span class="rid">PO-013 · 作品线索</span>
+      <h3>村居</h3>
+      <span class="meta">清 · 高鼎 · 清</span>
+      <span class="meta">适读 4–6 岁 · 童趣与游戏</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>「儿童散学归来早」与游戏主题呼应</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="childplay" data-search="po-014 宿新市徐公店 杨万里 · 宋 宋 儿童追蝶场景，适合图像化 童趣与游戏">
+      <span class="rid">PO-014 · 作品线索</span>
+      <h3>宿新市徐公店</h3>
+      <span class="meta">宋 · 杨万里 · 宋</span>
+      <span class="meta">适读 4–6 岁 · 童趣与游戏</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>儿童追蝶场景，适合图像化</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="childplay" data-search="po-015 所见 袁枚 · 清 清 牧童与蝉，短小有画面 童趣与游戏">
+      <span class="rid">PO-015 · 作品线索</span>
+      <h3>所见</h3>
+      <span class="meta">清 · 袁枚 · 清</span>
+      <span class="meta">适读 4–6 岁 · 童趣与游戏</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>牧童与蝉，短小有画面</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="childplay" data-search="po-016 小儿垂钓 胡令能 · 唐 唐 儿童视角，可配亲子共读提示 童趣与游戏">
+      <span class="rid">PO-016 · 作品线索</span>
+      <h3>小儿垂钓</h3>
+      <span class="meta">唐 · 胡令能 · 唐</span>
+      <span class="meta">适读 4–6 岁 · 童趣与游戏</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>儿童视角，可配亲子共读提示</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="childplay" data-search="po-017 池上 白居易 · 唐 唐 小娃撑小艇，语言浅白 童趣与游戏">
+      <span class="rid">PO-017 · 作品线索</span>
+      <h3>池上</h3>
+      <span class="meta">唐 · 白居易 · 唐</span>
+      <span class="meta">适读 2–4 岁 · 童趣与游戏</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>小娃撑小艇，语言浅白</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="childplay" data-search="po-018 牧童 吕岩 · 唐 唐 作者归属待版本核验 童趣与游戏">
+      <span class="rid">PO-018 · 作品线索</span>
+      <h3>牧童</h3>
+      <span class="meta">唐 · 吕岩 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 童趣与游戏</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>作者归属待版本核验</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+    <section class="shell group-section" id="group-family" data-group-section="family">
+      <div class="group-head">
+        <span class="no" style="color:#2858b8">04 · POETRY HALL · 研究目录</span>
+        <h2>思乡与亲情<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>思念、归乡与亲人之情。保留情绪的层次，不把诗简化成知识点。</p>
+        <p class="focus">编辑关注：背景语境、节令与情绪适龄性</p>
+        
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="family" data-search="po-019 游子吟 孟郊 · 唐 唐 与谱曲版本线索关联 思乡与亲情">
+      <span class="rid">PO-019 · 作品线索</span>
+      <h3>游子吟</h3>
+      <span class="meta">唐 · 孟郊 · 唐</span>
+      <span class="meta">适读 4–6 岁 · 思乡与亲情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>与谱曲版本线索关联</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="family" data-search="po-020 回乡偶书 贺知章 · 唐 唐 「乡音无改」可作方言文化线索 思乡与亲情">
+      <span class="rid">PO-020 · 作品线索</span>
+      <h3>回乡偶书</h3>
+      <span class="meta">唐 · 贺知章 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 思乡与亲情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>「乡音无改」可作方言文化线索</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="family" data-search="po-021 九月九日忆山东兄弟 王维 · 唐 唐 与节令组主题交叉，专题可多选 思乡与亲情">
+      <span class="rid">PO-021 · 作品线索</span>
+      <h3>九月九日忆山东兄弟</h3>
+      <span class="meta">唐 · 王维 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 思乡与亲情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>与节令组主题交叉，专题可多选</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="family" data-search="po-022 泊船瓜洲 王安石 · 宋 宋 「绿」字推敲故事需核实出处 思乡与亲情">
+      <span class="rid">PO-022 · 作品线索</span>
+      <h3>泊船瓜洲</h3>
+      <span class="meta">宋 · 王安石 · 宋</span>
+      <span class="meta">适读 8–12 岁 · 思乡与亲情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>「绿」字推敲故事需核实出处</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="family" data-search="po-023 秋思 张籍 · 唐 唐 家书场景，情绪层次需保留 思乡与亲情">
+      <span class="rid">PO-023 · 作品线索</span>
+      <h3>秋思</h3>
+      <span class="meta">唐 · 张籍 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 思乡与亲情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>家书场景，情绪层次需保留</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="family" data-search="po-024 夜书所见 叶绍翁 · 宋 宋 儿童挑促织，与童趣组交叉 思乡与亲情">
+      <span class="rid">PO-024 · 作品线索</span>
+      <h3>夜书所见</h3>
+      <span class="meta">宋 · 叶绍翁 · 宋</span>
+      <span class="meta">适读 6–8 岁 · 思乡与亲情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>儿童挑促织，与童趣组交叉</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+    <section class="shell group-section" id="group-pastoral" data-group-section="pastoral">
+      <div class="group-head">
+        <span class="no" style="color:#8b5e3c">05 · POETRY HALL · 研究目录</span>
+        <h2>田园与劳作<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>田家、农事与乡居生活，让孩子看见日常劳动与土地。</p>
+        <p class="focus">编辑关注：名物、农事语境与注释版本</p>
+        
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="pastoral" data-search="po-025 归园田居（其三） 陶渊明 · 晋 晋 节选与全组诗需区分 田园与劳作">
+      <span class="rid">PO-025 · 作品线索</span>
+      <h3>归园田居（其三）</h3>
+      <span class="meta">晋 · 陶渊明 · 晋</span>
+      <span class="meta">适读 8–12 岁 · 田园与劳作</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>节选与全组诗需区分</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="pastoral" data-search="po-026 过故人庄 孟浩然 · 唐 唐 田家生活与待客礼俗 田园与劳作">
+      <span class="rid">PO-026 · 作品线索</span>
+      <h3>过故人庄</h3>
+      <span class="meta">唐 · 孟浩然 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 田园与劳作</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>田家生活与待客礼俗</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="pastoral" data-search="po-027 四时田园杂兴（选一） 范成大 · 宋 宋 组诗需按首分别登记 田园与劳作">
+      <span class="rid">PO-027 · 作品线索</span>
+      <h3>四时田园杂兴（选一）</h3>
+      <span class="meta">宋 · 范成大 · 宋</span>
+      <span class="meta">适读 6–8 岁 · 田园与劳作</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>组诗需按首分别登记</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="pastoral" data-search="po-028 乡村四月 翁卷 · 宋 宋 农事名物需注释 田园与劳作">
+      <span class="rid">PO-028 · 作品线索</span>
+      <h3>乡村四月</h3>
+      <span class="meta">宋 · 翁卷 · 宋</span>
+      <span class="meta">适读 6–8 岁 · 田园与劳作</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>农事名物需注释</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="pastoral" data-search="po-029 清平乐·村居 辛弃疾 · 宋 宋 词牌与儿歌节奏可比较 田园与劳作">
+      <span class="rid">PO-029 · 作品线索</span>
+      <h3>清平乐·村居</h3>
+      <span class="meta">宋 · 辛弃疾 · 宋</span>
+      <span class="meta">适读 6–8 岁 · 田园与劳作</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>词牌与儿歌节奏可比较</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="pastoral" data-search="po-030 悯农（其二） 李绅 · 唐 唐 与启蒙组「其一」为不同篇目 田园与劳作">
+      <span class="rid">PO-030 · 作品线索</span>
+      <h3>悯农（其二）</h3>
+      <span class="meta">唐 · 李绅 · 唐</span>
+      <span class="meta">适读 4–6 岁 · 田园与劳作</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>与启蒙组「其一」为不同篇目</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+    <section class="shell group-section" id="group-festival" data-group-section="festival">
+      <div class="group-head">
+        <span class="no" style="color:#e64a38">06 · POETRY HALL · 研究目录</span>
+        <h2>节令与风俗<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>春节、清明、七夕、中秋等节令诗词，关联传统节日文化 research 线索。</p>
+        <p class="focus">编辑关注：节俗来源、地域差异与适龄表达</p>
+        
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="festival" data-search="po-031 元日 王安石 · 宋 宋 春节风俗线索 节令与风俗">
+      <span class="rid">PO-031 · 作品线索</span>
+      <h3>元日</h3>
+      <span class="meta">宋 · 王安石 · 宋</span>
+      <span class="meta">适读 4–6 岁 · 节令与风俗</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>春节风俗线索</p>
+        <p><b>来源线索：</b><a href="https://www.ihchina.cn/" target="_blank" rel="noopener noreferrer">中国非物质文化遗产网 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="festival" data-search="po-032 清明 杜牧 · 唐 唐 作者归属与节俗需分别核验 节令与风俗">
+      <span class="rid">PO-032 · 作品线索</span>
+      <h3>清明</h3>
+      <span class="meta">唐 · 杜牧 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 节令与风俗</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>作者归属与节俗需分别核验</p>
+        <p><b>来源线索：</b><a href="https://www.ihchina.cn/" target="_blank" rel="noopener noreferrer">中国非物质文化遗产网 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="festival" data-search="po-033 寒食 韩翃 · 唐 唐 节令制度背景需注释 节令与风俗">
+      <span class="rid">PO-033 · 作品线索</span>
+      <h3>寒食</h3>
+      <span class="meta">唐 · 韩翃 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 节令与风俗</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>节令制度背景需注释</p>
+        <p><b>来源线索：</b><a href="https://www.ihchina.cn/" target="_blank" rel="noopener noreferrer">中国非物质文化遗产网 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="festival" data-search="po-034 乞巧 林杰 · 唐 唐 七夕与牛郎织女传说互链 节令与风俗">
+      <span class="rid">PO-034 · 作品线索</span>
+      <h3>乞巧</h3>
+      <span class="meta">唐 · 林杰 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 节令与风俗</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>七夕与牛郎织女传说互链</p>
+        <p><b>来源线索：</b><a href="https://www.ihchina.cn/" target="_blank" rel="noopener noreferrer">中国非物质文化遗产网 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="festival" data-search="po-035 水调歌头·明月几时有 苏轼 · 宋 宋 中秋主题，与谱曲版本线索关联 节令与风俗">
+      <span class="rid">PO-035 · 作品线索</span>
+      <h3>水调歌头·明月几时有</h3>
+      <span class="meta">宋 · 苏轼 · 宋</span>
+      <span class="meta">适读 8–12 岁 · 节令与风俗</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>中秋主题，与谱曲版本线索关联</p>
+        <p><b>来源线索：</b><a href="https://www.ihchina.cn/" target="_blank" rel="noopener noreferrer">中国非物质文化遗产网 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="festival" data-search="po-036 正月十五夜 苏味道 · 唐 唐 元宵灯火，与节俗采录互链 节令与风俗">
+      <span class="rid">PO-036 · 作品线索</span>
+      <h3>正月十五夜</h3>
+      <span class="meta">唐 · 苏味道 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 节令与风俗</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>元宵灯火，与节俗采录互链</p>
+        <p><b>来源线索：</b><a href="https://www.ihchina.cn/" target="_blank" rel="noopener noreferrer">中国非物质文化遗产网 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+    <section class="shell group-section" id="group-farewell" data-group-section="farewell">
+      <div class="group-head">
+        <span class="no" style="color:#2858b8">07 · POETRY HALL · 研究目录</span>
+        <h2>送别与友情<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>送别诗里的友情与距离感，适合稍大一点的孩子慢慢读。</p>
+        <p class="focus">编辑关注：人物关系、写作背景与注释</p>
+        
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="farewell" data-search="po-037 赠汪伦 李白 · 唐 唐 送别场景浅白，适合入门 送别与友情">
+      <span class="rid">PO-037 · 作品线索</span>
+      <h3>赠汪伦</h3>
+      <span class="meta">唐 · 李白 · 唐</span>
+      <span class="meta">适读 4–6 岁 · 送别与友情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>送别场景浅白，适合入门</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="farewell" data-search="po-038 黄鹤楼送孟浩然之广陵 李白 · 唐 唐 地名与人物关系需注释 送别与友情">
+      <span class="rid">PO-038 · 作品线索</span>
+      <h3>黄鹤楼送孟浩然之广陵</h3>
+      <span class="meta">唐 · 李白 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 送别与友情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>地名与人物关系需注释</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="farewell" data-search="po-039 送元二使安西 王维 · 唐 唐 与《阳关三叠》音乐线索关联 送别与友情">
+      <span class="rid">PO-039 · 作品线索</span>
+      <h3>送元二使安西</h3>
+      <span class="meta">唐 · 王维 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 送别与友情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>与《阳关三叠》音乐线索关联</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="farewell" data-search="po-040 别董大 高适 · 唐 唐 情绪基调与适龄说明 送别与友情">
+      <span class="rid">PO-040 · 作品线索</span>
+      <h3>别董大</h3>
+      <span class="meta">唐 · 高适 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 送别与友情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>情绪基调与适龄说明</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="farewell" data-search="po-041 芙蓉楼送辛渐 王昌龄 · 唐 唐 「一片冰心」典故需解释 送别与友情">
+      <span class="rid">PO-041 · 作品线索</span>
+      <h3>芙蓉楼送辛渐</h3>
+      <span class="meta">唐 · 王昌龄 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 送别与友情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>「一片冰心」典故需解释</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="farewell" data-search="po-042 送杜少府之任蜀州 王勃 · 唐 唐 长篇，适合独立阅读起步 送别与友情">
+      <span class="rid">PO-042 · 作品线索</span>
+      <h3>送杜少府之任蜀州</h3>
+      <span class="meta">唐 · 王勃 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 送别与友情</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>长篇，适合独立阅读起步</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+    <section class="shell group-section" id="group-object" data-group-section="object">
+      <div class="group-head">
+        <span class="no" style="color:#739348">08 · POETRY HALL · 研究目录</span>
+        <h2>咏物与言志<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>借物写品格与志趣的篇目。不急于归纳「中心思想」，先读语言与画面。</p>
+        <p class="focus">编辑关注：意象、典故与不同解读</p>
+        
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="object" data-search="po-043 石灰吟 于谦 · 明 明 托物言志，避免简化成唯一寓意 咏物与言志">
+      <span class="rid">PO-043 · 作品线索</span>
+      <h3>石灰吟</h3>
+      <span class="meta">明 · 于谦 · 明</span>
+      <span class="meta">适读 8–12 岁 · 咏物与言志</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>托物言志，避免简化成唯一寓意</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="object" data-search="po-044 竹石 郑燮 · 清 清 题画诗，插画版本另建档 咏物与言志">
+      <span class="rid">PO-044 · 作品线索</span>
+      <h3>竹石</h3>
+      <span class="meta">清 · 郑燮 · 清</span>
+      <span class="meta">适读 8–12 岁 · 咏物与言志</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>题画诗，插画版本另建档</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="object" data-search="po-045 梅花 王安石 · 宋 宋 与「咏鹅」同为启蒙常见篇 咏物与言志">
+      <span class="rid">PO-045 · 作品线索</span>
+      <h3>梅花</h3>
+      <span class="meta">宋 · 王安石 · 宋</span>
+      <span class="meta">适读 6–8 岁 · 咏物与言志</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>与「咏鹅」同为启蒙常见篇</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="object" data-search="po-046 墨梅 王冕 · 元 元 题画诗与版本差异 咏物与言志">
+      <span class="rid">PO-046 · 作品线索</span>
+      <h3>墨梅</h3>
+      <span class="meta">元 · 王冕 · 元</span>
+      <span class="meta">适读 8–12 岁 · 咏物与言志</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>题画诗与版本差异</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="object" data-search="po-047 赋得古原草送别 白居易 · 唐 唐 节选与全篇、送别与咏物双重归类 咏物与言志">
+      <span class="rid">PO-047 · 作品线索</span>
+      <h3>赋得古原草送别</h3>
+      <span class="meta">唐 · 白居易 · 唐</span>
+      <span class="meta">适读 8–12 岁 · 咏物与言志</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>节选与全篇、送别与咏物双重归类</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="object" data-search="po-048 望庐山瀑布 李白 · 唐 唐 夸张手法与地理语境 咏物与言志">
+      <span class="rid">PO-048 · 作品线索</span>
+      <h3>望庐山瀑布</h3>
+      <span class="meta">唐 · 李白 · 唐</span>
+      <span class="meta">适读 6–8 岁 · 咏物与言志</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利待核验</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>夸张手法与地理语境</p>
+        <p><b>来源线索：</b><a href="https://www.nlc.cn/" target="_blank" rel="noopener noreferrer">中国国家图书馆 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>仅登记作品身份、来源线索与待核验事项；不保存正文、译文、插画、音视频。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>pending · 权利待核验</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+    <section class="shell group-section" id="group-music" data-group-section="music">
+      <div class="group-head">
+        <span class="no" style="color:#8b5e3c">09 · POETRY HALL · 研究目录</span>
+        <h2>诗词入乐 · 版本线索<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>古诗词谱曲、新学堂歌与童声吟唱的**版本与录音线索**，不是新的文学作品；与音乐馆「古典音乐的童年」专题互通。</p>
+        <p class="focus">编辑关注：词、曲、编曲、演唱、录音分别核验</p>
+        <span class="focus">本组为版本 / 媒体资产层线索，不是独立作品。</span>
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="music" data-search="po-049 《春晓》谱曲版本线索 作曲 / 演唱版本待核验 版本 / 资产层 版本线索；词、曲、编曲、录音权利分别核验 诗词入乐 · 版本线索">
+      <span class="rid">PO-049 · 版本 / 资产线索</span>
+      <h3>《春晓》谱曲版本线索</h3>
+      <span class="meta">版本 / 资产层 · 作曲 / 演唱版本待核验</span>
+      <span class="meta">适读 2–4 岁 · 诗词入乐 · 版本线索</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>版本线索；词、曲、编曲、录音权利分别核验</p>
+        <p><b>来源线索：</b><a href="specialty-classical.html">音乐馆 · 古典音乐的童年 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="music" data-search="po-050 《静夜思》谱曲版本线索 作曲 / 演唱版本待核验 版本 / 资产层 版本线索；不把某个录音当作作品本身 诗词入乐 · 版本线索">
+      <span class="rid">PO-050 · 版本 / 资产线索</span>
+      <h3>《静夜思》谱曲版本线索</h3>
+      <span class="meta">版本 / 资产层 · 作曲 / 演唱版本待核验</span>
+      <span class="meta">适读 2–4 岁 · 诗词入乐 · 版本线索</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>版本线索；不把某个录音当作作品本身</p>
+        <p><b>来源线索：</b><a href="specialty-classical.html">音乐馆 · 古典音乐的童年 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="music" data-search="po-051 《咏鹅》谱曲版本线索 作曲 / 演唱版本待核验 版本 / 资产层 版本线索；需核对具体出版物或公开页面 诗词入乐 · 版本线索">
+      <span class="rid">PO-051 · 版本 / 资产线索</span>
+      <h3>《咏鹅》谱曲版本线索</h3>
+      <span class="meta">版本 / 资产层 · 作曲 / 演唱版本待核验</span>
+      <span class="meta">适读 0–2 岁 · 诗词入乐 · 版本线索</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>版本线索；需核对具体出版物或公开页面</p>
+        <p><b>来源线索：</b><a href="specialty-classical.html">音乐馆 · 古典音乐的童年 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="music" data-search="po-052 《悯农》谱曲版本线索 作曲 / 演唱版本待核验 版本 / 资产层 版本线索；需核对具体出版物或公开页面 诗词入乐 · 版本线索">
+      <span class="rid">PO-052 · 版本 / 资产线索</span>
+      <h3>《悯农》谱曲版本线索</h3>
+      <span class="meta">版本 / 资产层 · 作曲 / 演唱版本待核验</span>
+      <span class="meta">适读 4–6 岁 · 诗词入乐 · 版本线索</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>版本线索；需核对具体出版物或公开页面</p>
+        <p><b>来源线索：</b><a href="specialty-classical.html">音乐馆 · 古典音乐的童年 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="music" data-search="po-053 《游子吟》谱曲版本线索 作曲 / 演唱版本待核验 版本 / 资产层 版本线索；新学堂歌等具体录音权利待核验 诗词入乐 · 版本线索">
+      <span class="rid">PO-053 · 版本 / 资产线索</span>
+      <h3>《游子吟》谱曲版本线索</h3>
+      <span class="meta">版本 / 资产层 · 作曲 / 演唱版本待核验</span>
+      <span class="meta">适读 4–6 岁 · 诗词入乐 · 版本线索</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>版本线索；新学堂歌等具体录音权利待核验</p>
+        <p><b>来源线索：</b><a href="specialty-classical.html">音乐馆 · 古典音乐的童年 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="music" data-search="po-054 《水调歌头》谱曲版本线索 作曲 / 演唱版本待核验 版本 / 资产层 版本线索；现代作曲与录音权利另行核验 诗词入乐 · 版本线索">
+      <span class="rid">PO-054 · 版本 / 资产线索</span>
+      <h3>《水调歌头》谱曲版本线索</h3>
+      <span class="meta">版本 / 资产层 · 作曲 / 演唱版本待核验</span>
+      <span class="meta">适读 8–12 岁 · 诗词入乐 · 版本线索</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>版本线索；现代作曲与录音权利另行核验</p>
+        <p><b>来源线索：</b><a href="specialty-classical.html">音乐馆 · 古典音乐的童年 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+    <section class="shell group-section" id="group-editions" data-group-section="editions">
+      <div class="group-head">
+        <span class="no" style="color:#f1bd32">10 · POETRY HALL · 研究目录</span>
+        <h2>译注与朗诵 · 资产层<small>6 条线索 / 规划目标 6 条</small></h2>
+        <p>注本、绘本、吟诵、朗诵、英译与大字版等**内容版本与媒体资产类型**。按 DATA_MODEL 与作品主记录分开建档。</p>
+        <p class="focus">编辑关注：每项资产独立权利记录与审核状态</p>
+        <span class="focus">本组为版本 / 媒体资产层线索，不是独立作品。</span>
+      </div>
+      <div class="rec-grid">
+<article class="rec-card" data-group="editions" data-search="po-055 唐诗选注本 · 版本线索 注者 / 出版社待核验 版本 / 资产层 注释属独立内容版本，权利不随原作公版状态推导 译注与朗诵 · 资产层">
+      <span class="rid">PO-055 · 版本 / 资产线索</span>
+      <h3>唐诗选注本 · 版本线索</h3>
+      <span class="meta">版本 / 资产层 · 注者 / 出版社待核验</span>
+      <span class="meta">适读 6–8 岁 · 译注与朗诵 · 资产层</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>注释属独立内容版本，权利不随原作公版状态推导</p>
+        <p><b>来源线索：</b><a href="../docs/DATA_MODEL.md">统一数据模型 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="editions" data-search="po-056 儿童古诗绘本 · 插画资产线索 绘者 / 出版社待核验 版本 / 资产层 插画、版式、改写文本分别建档 译注与朗诵 · 资产层">
+      <span class="rid">PO-056 · 版本 / 资产线索</span>
+      <h3>儿童古诗绘本 · 插画资产线索</h3>
+      <span class="meta">版本 / 资产层 · 绘者 / 出版社待核验</span>
+      <span class="meta">适读 2–4 岁 · 译注与朗诵 · 资产层</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>插画、版式、改写文本分别建档</p>
+        <p><b>来源线索：</b><a href="../docs/DATA_MODEL.md">统一数据模型 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="editions" data-search="po-057 传统吟诵调 · 录音资产线索 吟诵者 / 采录者待核验 版本 / 资产层 与「中国非物质文化遗产网」采录线索关联 译注与朗诵 · 资产层">
+      <span class="rid">PO-057 · 版本 / 资产线索</span>
+      <h3>传统吟诵调 · 录音资产线索</h3>
+      <span class="meta">版本 / 资产层 · 吟诵者 / 采录者待核验</span>
+      <span class="meta">适读 6–8 岁 · 译注与朗诵 · 资产层</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>与「中国非物质文化遗产网」采录线索关联</p>
+        <p><b>来源线索：</b><a href="../docs/DATA_MODEL.md">统一数据模型 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="editions" data-search="po-058 童声朗诵 · 录音资产线索 朗读者 / 制作者待核验 版本 / 资产层 表演与录音制品权利独立核验 译注与朗诵 · 资产层">
+      <span class="rid">PO-058 · 版本 / 资产线索</span>
+      <h3>童声朗诵 · 录音资产线索</h3>
+      <span class="meta">版本 / 资产层 · 朗读者 / 制作者待核验</span>
+      <span class="meta">适读 4–6 岁 · 译注与朗诵 · 资产层</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>表演与录音制品权利独立核验</p>
+        <p><b>来源线索：</b><a href="../docs/DATA_MODEL.md">统一数据模型 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="editions" data-search="po-059 古典诗词英译 · 译本线索 译者 / 出版信息待核验 版本 / 资产层 现代译本权利与授权地域单独核验 译注与朗诵 · 资产层">
+      <span class="rid">PO-059 · 版本 / 资产线索</span>
+      <h3>古典诗词英译 · 译本线索</h3>
+      <span class="meta">版本 / 资产层 · 译者 / 出版信息待核验</span>
+      <span class="meta">适读 8–12 岁 · 译注与朗诵 · 资产层</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>现代译本权利与授权地域单独核验</p>
+        <p><b>来源线索：</b><a href="../docs/DATA_MODEL.md">统一数据模型 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+<article class="rec-card" data-group="editions" data-search="po-060 注音 / 大字版 · 排版资产线索 出版方待核验 版本 / 资产层 版式设计属独立资产，需单独权利记录 译注与朗诵 · 资产层">
+      <span class="rid">PO-060 · 版本 / 资产线索</span>
+      <h3>注音 / 大字版 · 排版资产线索</h3>
+      <span class="meta">版本 / 资产层 · 出版方待核验</span>
+      <span class="meta">适读 0–2 岁 · 译注与朗诵 · 资产层</span>
+      <div class="rec-tags"><span class="" title="researchStatus">已发现线索</span><span class="warn" title="rightsStatus">权利未知</span><span class="" title="qualityStatus">质量未审</span><span class="" title="accessMethod">元数据 + 来源外链</span><span class="warn" title="publicationStatus">研究草稿</span></div>
+      <details>
+        <summary>研究备注与来源线索</summary>
+        <p><b>待核验事项：</b>版式设计属独立资产，需单独权利记录</p>
+        <p><b>来源线索：</b><a href="../docs/DATA_MODEL.md">统一数据模型 ↗</a>（机构/栏目入口，具体作品页面待逐条考证）</p>
+        <p><b>资产边界：</b>此条为内容版本 / 媒体资产类型线索，不是独立作品；按 DATA_MODEL 与作品主记录分开建档。</p>
+        <dl class="status-list"><dt>research_status</dt><dd>discovered · 已发现线索</dd>
+<dt>rights_status</dt><dd>unknown · 权利未知</dd>
+<dt>quality_status</dt><dd>unreviewed · 质量未审</dd>
+<dt>access_method</dt><dd>source_link · 元数据 + 来源外链</dd>
+<dt>publication_status</dt><dd>draft · 研究草稿</dd></dl>
+      </details>
+    </article>
+      </div>
+    </section>
+
+    <section class="shell model-band" aria-labelledby="model-title">
+      <div class="model-box">
+        <h2 id="model-title">统一状态模型 · 五个维度互不替代</h2>
+        <p>研究完成不等于版权已确认；版权确认不等于质量审核通过；内容适合儿童也不等于获得公开传播许可。依据《项目顶层设计原则》§6 与《数据模型设计》§4。</p>
+        <table class="model-table">
+          <thead><tr><th>字段</th><th>建议状态</th><th>回答的问题</th></tr></thead>
+          <tbody><tr><td><code>research_status</code></td><td>discovered / researching / reviewed / rejected</td><td>研究到哪一步？</td></tr>
+<tr><td><code>rights_status</code></td><td>unknown / pending / verified / restricted / revoked</td><td>权利核验到哪一步？</td></tr>
+<tr><td><code>quality_status</code></td><td>unreviewed / suitable / needs_context / unsuitable</td><td>内容是否符合项目质量定位？</td></tr>
+<tr><td><code>access_method</code></td><td>source_link / official_embed / licensed_media / own_original / none</td><td>当前允许采用什么访问方式？</td></tr>
+<tr><td><code>publication_status</code></td><td>draft / pending_review / approved / published / withdrawn</td><td>是否可以进入公开层？</td></tr></tbody>
+        </table>
+        <a class="button" href="research.html#dashboard">查看研究状态看板</a>
+      </div>
+    </section>
+  <!-- LIBRARY_LINKS:MAP -->
+    <section class="shell lib-map" aria-labelledby="lib-map-title">
+      <div class="lib-map-box">
+        <h2 id="lib-map-title">全站地图 · 三馆与研究层</h2>
+        <p>童年书房分为研究资源库（Research）与儿童使用层（Library）。三馆目录可以互相跳转，音乐馆八个专题横向串联，作品目录可回链到专题与研究层。</p>
+        <div class="lib-halls">
+<a class="lib-hall lib-story" href="story.html"><b>故事馆</b><span>六个专题 · 100 条研究记录</span></a>
+<a class="lib-hall lib-music" href="music.html"><b>音乐馆</b><span>八专题 · 105 条发现目录</span></a>
+<a class="lib-hall lib-poetry" href="poetry.html" aria-current="page"><b>古诗词馆</b><span>十个专题 · 60 条研究记录</span></a>
+<a class="lib-hall lib-research" href="research.html"><b>研究资源库</b><span>五维状态 · 来源与边界</span></a>
+        </div>
+        <div class="lib-specs">
+          <strong>音乐馆八专题：</strong>
+<a href="specialty-childhood.html">01 童年的歌</a>
+<a href="specialty-nature.html">02 大自然的歌</a>
+<a href="specialty-play.html">03 游戏与伙伴</a>
+<a href="specialty-lullaby.html">04 月亮与摇篮曲</a>
+<a href="specialty-classical.html">05 古典音乐的童年</a>
+<a href="specialty-world.html">06 世界的童谣</a>
+<a href="specialty-forgotten.html">07 被遗忘的童谣</a>
+<a href="specialty-original.html">08 新芽原创</a>
+        </div>
+        <div class="lib-more">
+          <a href="works.html">作品目录（音乐馆 105 条）</a>
+          <a href="../docs/PROJECT_PRINCIPLES.md">项目顶层原则</a>
+          <a href="../docs/DATA_MODEL.md">统一数据模型</a>
+          <a href="../docs/COPYRIGHT_POLICY.md">来源与权利说明</a>
+        </div>
+      </div>
+    </section>
+    <!-- /LIBRARY_LINKS:MAP -->
+  </main>
+  <footer class="site-footer">
+    <div class="shell">
+      <p>古诗词馆研究目录 · 依据项目顶层原则与统一数据模型建立，2026-11-18 生成。</p>
+      <p>本页为内部研究与原型展示视图。候选目录不构成法律意见，也不授予任何第三方内容的使用权；具体公开、复制、翻译、改编、插画和音频使用，按目标发布地域、具体版本和实际许可逐项核实。</p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const t = document.getElementById('menu-toggle');
+      const n = document.getElementById('mobile-nav');
+      if (t && n) t.addEventListener('click', () => {
+        const e = t.getAttribute('aria-expanded') === 'true';
+        t.setAttribute('aria-expanded', String(!e)); n.hidden = e;
+      });
+    })();
+  
+    (() => {
+      const q = document.getElementById('hall-search');
+      const g = document.getElementById('hall-group');
+      const out = document.getElementById('hall-visible');
+      const cards = [...document.querySelectorAll('.rec-card')];
+      const sections = [...document.querySelectorAll('[data-group-section]')];
+      const total = cards.length;
+      function apply() {
+        const needle = (q.value || '').trim().toLowerCase();
+        const group = g.value;
+        let visible = 0;
+        cards.forEach(card => {
+          const ok = (!needle || card.dataset.search.includes(needle)) && (group === 'all' || card.dataset.group === group);
+          card.hidden = !ok;
+          if (ok) visible += 1;
+        });
+        sections.forEach(sec => {
+          sec.hidden = [...sec.querySelectorAll('.rec-card')].every(card => card.hidden);
+        });
+        out.textContent = `显示 ${visible} / ${total} 条`;
+      }
+      q.addEventListener('input', apply);
+      g.addEventListener('change', apply);
+    })();
+  </script>
+</body>
+</html>
