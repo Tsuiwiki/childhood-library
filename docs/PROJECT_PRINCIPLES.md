@@ -4,8 +4,6 @@
 - 版本：1.0
 - 适用范围：整个 Childhood Library，包括音乐馆、故事馆、诗词馆及未来新增内容馆
 
-> 本文件逐字同步自 GitHub `Tsuiwiki/childhood-library` main 分支，源文件 SHA `f60cbb0931d196f098459c8eef6774ee8150d2f6`。本地 checkout 原先缺少此文件，为避免原型与 Spec 中的引用悬空而补入；如需修改原则，请以仓库 main 为准。
-
 ## 1. 项目定位
 
 Childhood Library 首先是一个面向儿童文化的**研究、发现、采集、整理与学习项目**，其次才是面向儿童和家庭提供阅读、聆听与欣赏服务的资源产品。
