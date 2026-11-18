@@ -1,0 +1,378 @@
+<!--
+ASSUMPTIONS
+- 本文件实现候选 A2「一部作品，许多版本」，供用户选择，不另做视觉换皮。
+- 本页是内容与交互方向原型；作品简介均为原型编辑概述，所有现实版本、来源与权利均标为待核验，不暗示已核验或可转载。
+- 阅读抽屉内文字为本原型原创，只演示排版；收藏与阅读进度仅保存在本机浏览器。
+- 使用系统字体回退，不请求外部字体、脚本或图片；指定主视觉原样内联。
+FORM 来源
+- form 来自 STORY_LIBRARY_PLAN_V1 第 4 章「作品、文本、插画、朗读分别建档」：版本关系因此成为首屏骨架，而非商品卡片。
+- 摊开的双页、非居中版心、书眉、窄旁注与地脚留白来自 directions.md 的 A2 吕敬人书籍设计思维。
+- 灰绿纸色、墨绿与朱砂馆藏章来自 brand-spec.md；少量错位题签和粗描边来自「童年剪贴簿」，阅读区保持规整。
+-->
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="儿童故事馆 A2 方向稿：一部作品，许多版本。">
+<title>儿童故事馆｜一部作品，许多版本</title>
+<style>
+:root{--ground:#d9e1d6;--paper:#f2f3eb;--ink:#263c32;--muted:#52675c;--line:#91a091;--red:#963f32;--soft:#e5eae1;--dark:#1d342a;--serif:"Noto Serif SC","Songti SC",SimSun,serif;--sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-synthesis:none;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;line-break:strict}
+body{margin:0;background:var(--ground);color:var(--ink);font:16px/1.8 var(--sans);overflow-wrap:break-word}
+button,input,select{font:inherit;color:inherit}
+button,a,input,select,summary{-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+[hidden]{display:none!important}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.3;text-wrap:balance}
+p{text-wrap:pretty}
+small,.small{font-size:13px;line-height:1.6}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em}
+.wrap{width:min(1320px,calc(100% - 64px));margin-inline:auto}
+.running-head{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.wordmark{display:flex;align-items:center;gap:14px;min-height:44px;flex:none}
+.wordmark strong{font:700 22px/1.2 var(--serif);letter-spacing:.04em}
+.wordmark span{font-size:12px;letter-spacing:.12em;border-left:1px solid var(--line);padding-left:14px}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a,.nav button{min-height:44px;min-width:44px;padding:8px 13px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:0;font-size:14px}
+.menu-button,.shelf-button{min-height:44px;min-width:44px;padding:8px 13px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:0;font-size:14px}
+.nav a:hover{background:var(--soft)}
+.shelf-button{border:1px solid var(--ink)!important;margin-left:8px}
+.menu-button{display:none}
+.book-wrap{position:relative;padding:38px 0 80px}
+.book-meta{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px;font-size:12px;letter-spacing:.06em}
+.book{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr) 154px;position:relative;margin-top:18px;filter:drop-shadow(0 15px 16px rgba(38,60,50,.1))}
+.page{background:var(--paper);border:2px solid var(--ink);padding:38px 42px 44px;position:relative;min-width:0}
+.left-page{border-right:0;padding-right:48px}
+.right-page{border-left:1px solid var(--line);padding-left:48px}
+.left-page:after{content:"";position:absolute;top:0;right:0;bottom:0;width:20px;background:linear-gradient(90deg,transparent,rgba(38,60,50,.09));pointer-events:none}
+.right-page:before{content:"";position:absolute;top:0;left:0;bottom:0;width:18px;background:linear-gradient(90deg,rgba(38,60,50,.08),transparent);pointer-events:none}
+.page-running{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:28px;font-size:12px;color:var(--muted)}
+.slip{display:inline-block;background:var(--dark);color:var(--paper);padding:4px 13px;border:2px solid var(--dark);font-size:13px;transform:rotate(-1.5deg)}
+.left-page h1{font-size:clamp(42px,4vw,62px);letter-spacing:-.02em;margin:22px 0 20px;max-width:8em}
+.vision{font:17px/1.95 var(--serif);max-width:28em;margin-bottom:22px}
+.cover-plate{border:2px solid var(--ink);background:#fff;padding:7px;transform:rotate(.6deg);margin:25px 4px 20px;position:relative}
+.cover-plate img{display:block;width:100%;height:auto}
+.cover-plate figcaption{font-size:12px;color:var(--muted);padding:7px 4px 1px;display:flex;justify-content:space-between;gap:12px}
+.work-picks{display:flex;flex-wrap:wrap;gap:5px 8px;margin-top:18px}
+.work-picks button{min-height:44px;border:0;border-bottom:1px solid var(--line);background:transparent;padding:7px 10px;font-size:14px}
+.work-picks button[aria-pressed="true"]{color:var(--red);border-bottom:3px solid var(--red);font-weight:700}
+.archive-tab-title{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.archive-tab-title h2{font-size:clamp(36px,3.4vw,52px);margin:12px 0 8px}
+.stamp{flex:none;border:2px solid var(--red);color:var(--red);padding:5px 8px;font:700 13px/1.35 var(--serif);transform:rotate(5deg);text-align:center;margin-top:12px}
+.archive-meta{font-size:13px;color:var(--muted);padding-bottom:17px;border-bottom:1px solid var(--line)}
+.archive-summary{font:16px/1.9 var(--serif);margin:18px 0;max-width:32em}
+.version-tabs{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--ink);margin-top:20px}
+.version-tabs button{flex:1;min-width:56px;min-height:44px;padding:8px 5px;border:0;background:transparent;font-size:13px;position:relative}
+.version-tabs button[aria-selected="true"]{color:var(--red);font-weight:700}
+.version-tabs button[aria-selected="true"]:after{content:"";position:absolute;left:8px;right:8px;bottom:-1px;height:4px;background:var(--red)}
+.version-panel{padding:18px 0 12px;min-height:174px}
+.version-panel h3{font-size:20px;margin-bottom:8px}
+.version-panel p{font-size:15px;line-height:1.8;margin-bottom:8px}
+.version-panel .version-meta{font-size:12px;color:var(--muted)}
+.archive-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{min-height:44px;border:2px solid var(--ink);background:transparent;padding:8px 16px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.btn:hover{background:var(--soft)}
+.btn-primary{background:var(--dark);color:var(--paper)}
+.btn-primary:hover{background:#304b3f}
+.btn[aria-pressed="true"]{border-color:var(--red);color:var(--red);background:transparent}
+.margin-notes{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:30px 14px 20px 22px;background:var(--ground)}
+.margin-notes .note{font:16px/2 var(--serif);border-top:1px solid var(--line);padding-top:17px;margin-top:18px}
+.margin-notes .note strong{color:var(--red);font-weight:700}
+.margin-notes details{font-size:13px;margin-top:28px;border-top:1px solid var(--line)}
+summary{min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:14px;cursor:pointer;font-weight:700}
+summary:after{content:"＋";font-family:var(--sans);font-weight:400;font-size:18px}
+details[open]>summary:after{content:"−"}
+.margin-notes details p{font-size:13px;line-height:1.8}
+.folio{position:absolute;bottom:14px;left:42px;font:12px/1 var(--serif);color:var(--muted)}
+.right-page .folio{left:auto;right:42px}
+.book-footnote{position:absolute;bottom:25px;left:0;font-size:12px;color:var(--muted)}
+.section{border-top:1px solid var(--line);padding:86px 0 104px}
+.section.paper{background:var(--paper)}
+.section-grid{display:grid;grid-template-columns:3fr 9fr;gap:72px}
+.section-intro{max-width:280px}
+.section-intro h2{font-size:36px;margin:14px 0 20px}
+.section-intro p{font-size:16px;color:var(--muted)}
+.topic-list{border-top:2px solid var(--ink)}
+.topic-list details{border-bottom:1px solid var(--line)}
+.topic-list summary{font-family:var(--serif);font-size:20px;min-height:66px}
+.topic-list summary .topic-focus{font:13px/1.6 var(--sans);color:var(--muted);margin-left:auto;max-width:25em}
+.topic-body{padding:0 0 24px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.topic-body p{margin:0;font-size:15px;max-width:34em}
+.text-links{display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start;justify-content:flex-end}
+.text-links button{border:0;border-bottom:1px solid var(--ink);background:transparent;min-height:44px;padding:6px 10px;font-size:14px}
+.text-links button:hover{color:var(--red);border-color:var(--red)}
+.age-note{border-left:3px solid var(--red);padding-left:18px;margin-top:28px;font-size:14px;max-width:26em}
+.age-bands{border-top:2px solid var(--ink)}
+.age-band{display:grid;grid-template-columns:110px 1fr 1fr;gap:28px;padding:23px 0;border-bottom:1px solid var(--line);align-items:start}
+.age-band h3{font-size:23px;margin:0}
+.age-band p{font-size:15px;margin:0}
+.age-band p:last-child{color:var(--muted)}
+.lineage-layout{display:grid;grid-template-columns:250px 1fr;gap:44px;align-items:stretch}
+.work-root{border:2px solid var(--ink);padding:26px;display:flex;flex-direction:column;justify-content:center;position:relative;background:var(--soft)}
+.work-root h3{font-size:30px;margin:8px 0}
+.work-root p{font-size:13px;margin:0;color:var(--muted)}
+.work-root:after{content:"";position:absolute;right:-45px;top:50%;width:44px;border-top:2px solid var(--ink)}
+.branches{border-top:1px solid var(--line)}
+.branch{display:grid;grid-template-columns:100px 1fr auto;gap:20px;align-items:center;min-height:70px;border-bottom:1px solid var(--line);position:relative}
+.branch:before{content:"";position:absolute;left:-44px;top:0;bottom:0;border-left:2px solid var(--ink)}
+.branch:after{content:"";position:absolute;left:-44px;top:50%;width:44px;border-top:2px solid var(--ink)}
+.branch:first-child:before{top:50%}
+.branch:last-child:before{bottom:50%}
+.branch h3{font-size:19px;margin:0}
+.branch p{font-size:14px;margin:0;color:var(--muted)}
+.status{font-size:12px;color:var(--red);border:1px solid var(--red);padding:2px 8px;white-space:nowrap}
+.lineage-caption{margin:24px 0 0;font-size:13px;color:var(--muted)}
+.catalog-tools{display:grid;grid-template-columns:1fr 220px;gap:16px;margin-bottom:28px}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.field input,.field select{width:100%;min-height:48px;border:1px solid var(--ink);border-radius:0;background:transparent;padding:9px 12px;font-size:16px}
+.catalog-list{border-top:2px solid var(--ink)}
+.catalog-item{display:grid;grid-template-columns:1.1fr 1.6fr 1fr auto;gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.catalog-item h3{font-size:23px;margin:0 0 4px}
+.catalog-item p{font-size:14px;margin:0;color:var(--muted)}
+.catalog-item .catalog-action{font-size:13px;color:var(--ink)}
+.empty-results{padding:28px 0;margin:0}
+.rights-banner{display:flex;justify-content:space-between;gap:24px;align-items:center;border:2px solid var(--ink);padding:18px 22px;margin-bottom:30px;background:var(--soft)}
+.rights-banner strong{font-family:var(--serif);font-size:20px}
+.rights-banner span{font-size:13px;color:var(--red);font-weight:700}
+.source-list{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;border-top:1px solid var(--line)}
+.source-list details{border-bottom:1px solid var(--line)}
+.source-list summary{font-size:15px;min-height:62px}
+.source-list p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.gate-flow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:42px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.gate-step{padding:20px 18px;border-right:1px solid var(--line);font-size:14px;min-height:110px}
+.gate-step:last-child{border-right:0}
+.gate-step strong{display:block;font-family:var(--serif);font-size:18px;margin-bottom:7px}
+.gate-step:last-child{color:var(--red)}
+.footer{background:var(--dark);color:var(--paper);padding:54px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px}
+.footer h2{font-size:30px;max-width:12em}
+.footer p,.footer a{font-size:14px;color:#dce5dc}
+.footer nav{display:flex;flex-direction:column;align-items:flex-start}
+.footer nav a{min-height:44px;display:flex;align-items:center}
+.footer-bottom{border-top:1px solid #718078;margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#cbd7cc}
+dialog{color:var(--ink);background:var(--paper);border:2px solid var(--ink);padding:0}
+dialog::backdrop{background:rgba(20,37,29,.58)}
+.dialog-head{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.dialog-head h2{font-size:24px;margin:0}
+.close-button{min-width:44px;min-height:44px;border:1px solid var(--ink);background:transparent;padding:6px 12px}
+.shelf-dialog{width:min(560px,calc(100% - 32px));max-height:80vh}
+.shelf-content{padding:22px;overflow:auto;max-height:calc(80vh - 82px)}
+.shelf-content>p{font-size:14px;color:var(--muted)}
+.shelf-entry{border-top:1px solid var(--line);padding:18px 0;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.shelf-entry h3{font-size:20px;margin:0}
+.shelf-entry p{font-size:12px;margin:4px 0 0;color:var(--muted)}
+.shelf-entry button{min-height:44px;border:1px solid var(--ink);background:transparent;padding:6px 12px}
+.reader-dialog{margin:0 0 0 auto;width:min(620px,100%);height:100dvh;max-height:none;max-width:none;border-right:0;border-top:0;border-bottom:0}
+.reader-shell{height:100%;display:flex;flex-direction:column}
+.reader-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 22px;border-bottom:1px solid var(--line)}
+.reader-tools button{min-width:44px;min-height:44px;border:1px solid var(--ink);background:transparent}
+.reader-tools span{font-size:13px;min-width:48px;text-align:center}
+.progress-wrap{margin-left:auto;flex:1;min-width:130px}
+.progress-wrap label{display:flex;justify-content:space-between;font-size:12px}
+progress{width:100%;height:8px;accent-color:var(--red)}
+.demo-notice{margin:0;padding:13px 22px;background:var(--dark);color:var(--paper);font-size:13px;font-weight:700}
+.reader-scroll{overflow:auto;padding:34px 36px 90px;flex:1;--reader-size:19px}
+.reader-scroll h3{font-size:31px;margin-bottom:8px}
+.reader-context{font-size:13px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:26px}
+.reader-copy{font:var(--reader-size)/2 var(--serif)}
+.reader-copy p{margin-bottom:1.4em}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--dark);color:var(--paper);border:1px solid var(--paper);padding:10px 18px;font-size:14px;z-index:20;max-width:calc(100% - 32px);text-align:center}
+@media(max-width:1100px){.wrap{width:min(100% - 40px,960px)}.book{grid-template-columns:1fr 1fr}.margin-notes{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px 28px}.margin-notes .note{margin-top:0}.margin-notes details{margin-top:0}.page{padding:32px}.section-grid{gap:40px}.catalog-item{grid-template-columns:1fr 1.4fr auto}.catalog-item .catalog-action{display:none}.nav a{padding-inline:8px}}
+@media(max-width:760px){html{scroll-padding-top:72px}.wrap{width:calc(100% - 28px)}.running-head{height:70px;gap:8px}.wordmark strong{font-size:19px}.wordmark span{display:none}.menu-button{display:inline-flex!important}.nav{position:absolute;top:70px;left:14px;right:14px;background:var(--paper);border:2px solid var(--ink);z-index:10;padding:8px;display:grid;grid-template-columns:1fr 1fr}.nav a{justify-content:flex-start;padding:10px 14px}.shelf-button{margin-left:auto}.book-wrap{padding-top:24px;padding-bottom:72px}.book-meta{font-size:12px}.book{display:block}.page{padding:25px 22px 40px}.left-page{border-right:2px solid var(--ink);border-bottom:0;padding-right:22px}.right-page{border-left:2px solid var(--ink);border-top:1px solid var(--line);padding-left:22px}.left-page:after,.right-page:before{display:none}.left-page h1{font-size:42px}.vision{font-size:16px}.cover-plate{margin-top:22px}.cover-plate figcaption{display:block}.cover-plate figcaption span{display:block}.page-running{margin-bottom:22px}.margin-notes{display:block;padding:22px;border-bottom:2px solid var(--ink)}.margin-notes .note{margin-top:14px}.margin-notes details{margin-top:20px}.archive-tab-title h2{font-size:40px}.version-panel{min-height:0}.archive-actions .btn{flex:1}.folio{left:22px;bottom:12px}.right-page .folio{right:22px}.book-footnote{bottom:20px;line-height:1.5;right:0}.section{padding:62px 0 76px}.section-grid{display:block}.section-intro{max-width:none;margin-bottom:34px}.section-intro h2{font-size:32px}.topic-list summary{font-size:18px;min-height:64px;flex-wrap:wrap;padding:10px 0}.topic-list summary .topic-focus{order:3;width:100%;max-width:none;margin-left:0;font-size:12px}.topic-body{grid-template-columns:1fr}.text-links{justify-content:flex-start}.age-band{grid-template-columns:85px 1fr;gap:8px 18px}.age-band p:last-child{grid-column:2}.lineage-layout{display:block}.work-root{margin-bottom:30px}.work-root:after{display:none}.branch{grid-template-columns:76px 1fr;gap:8px 14px;padding:16px 0}.branch:before,.branch:after{display:none}.branch .status{grid-column:2;justify-self:start}.catalog-tools{grid-template-columns:1fr}.catalog-item{grid-template-columns:1fr auto;gap:10px 16px}.catalog-item p{grid-column:1/-1}.catalog-item .catalog-action{display:block;grid-column:1/-1}.catalog-item .btn{grid-row:1;grid-column:2}.rights-banner{display:block}.rights-banner span{display:block;margin-top:8px}.source-list{grid-template-columns:1fr}.gate-flow{grid-template-columns:1fr}.gate-step{min-height:0;border-right:0;border-bottom:1px solid var(--line)}.gate-step:last-child{border-bottom:0}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.footer-grid>div:first-child{grid-column:1/-1}.footer-bottom{display:block}.reader-scroll{padding:28px 22px 80px}.reader-tools{padding:12px 16px}.progress-wrap{order:3;flex-basis:100%;margin-left:0}.dialog-head{padding:14px 16px}.demo-notice{padding:12px 16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="wrap running-head">
+<a class="wordmark" href="#top" aria-label="儿童故事馆首页"><strong>童年书房 · 故事馆</strong><span>CHILDHOOD LIBRARY</span></a>
+<button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mainNav">目录</button>
+<nav class="nav" id="mainNav" aria-label="主导航">
+<a href="#topics">专题</a><a href="#ages">年龄</a><a href="#lineage">版本谱系</a><a href="#recent">最近整理</a><a href="#rights">来源与权利</a>
+</nav>
+<button class="shelf-button" id="openShelf">书架 <span id="shelfCount">0</span></button>
+</header>
+<main id="top">
+<section class="wrap book-wrap" aria-labelledby="heroTitle">
+<div class="book-meta"><span>故事馆 · 作品档案</span><span>书眉 / 人工策展 · 版本分别建档</span></div>
+<div class="book">
+<article class="page left-page">
+<div class="page-running"><span>编辑精选</span><span>不是热门榜</span></div>
+<span class="slip">一部作品，许多版本</span>
+<h1 id="heroTitle">把故事的来路，<br>留在书页上。</h1>
+<p class="vision">以中国经典为根，以世界文学为窗，以优秀原创为未来。这里不追逐点击量，只慢慢整理值得陪伴童年的好故事。</p>
+<figure class="cover-plate">
+<template id="coverAsset"><svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="coverTitle coverDesc">
+<title id="coverTitle">儿童故事馆：让好故事陪伴童年</title><desc id="coverDesc">打开的故事书连接中国古典亭台、世界城堡、森林与星空，孩子和小动物围坐阅读。</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8e8cc"/><stop offset=".55" stop-color="#e4efe5"/><stop offset="1" stop-color="#d8e8f2"/></linearGradient><linearGradient id="h" x2="0" y2="1"><stop stop-color="#fffdf6"/><stop offset="1" stop-color="#ead8b8"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#43544b" flood-opacity=".18"/></filter></defs>
+<rect width="1440" height="720" rx="28" fill="url(#bg)"/><circle cx="1180" cy="112" r="54" fill="#f5d58a"/>
+<g fill="#fff9e9"><path d="M160 125q22-38 65-18q40-26 65 16q37-4 42 28H125q0-27 35-26z"/><path d="M930 90q20-31 55-15q33-22 54 14q32-4 37 23H900q0-20 30-22z"/></g>
+<g fill="#e7bf76"><path d="M1060 70l8 20 22 2-17 14 5 21-18-12-18 12 6-21-17-14 22-2z"/><path d="M1320 205l5 13 14 2-11 9 4 14-12-8-12 8 4-14-11-9 14-2z"/></g>
+<path d="M0 490Q220 380 430 490T850 475T1440 450V720H0Z" fill="#a9c4a4"/><path d="M0 570Q280 450 520 560T1020 540T1440 530V720H0Z" fill="#71977e"/>
+<g transform="translate(1080 260)" fill="#e6c99b" stroke="#9b805e" stroke-width="5" stroke-linejoin="round"><path d="M0 210V95h70V35h55v60h70v115z"/><path d="M-15 95h35V50h35v45M175 95h35V50h35v45" fill="#d4b27e"/><path d="M80 210v-70q27-43 54 0v70" fill="#7b9c8a"/><path d="M18 125h22v28H18zM150 125h22v28h-22z" fill="#8faeb0"/></g>
+<g transform="translate(180 300)" fill="#b67d54" stroke="#815d49" stroke-width="4"><path d="M70 190V80h95v110z" fill="#e8c99c"/><path d="M45 85h145l-20-22H65zM55 60h125l-20-20H75zM82 38h72l-12-18H94z" fill="#b87952"/><path d="M112 20V0" stroke-width="5"/><path d="M90 190v-48h55v48" fill="#759583"/></g>
+<g transform="translate(90 390)"><path d="M70 170q15-75-2-125h42q-20 70 8 125" fill="#977451"/><circle cx="92" cy="45" r="72" fill="#6f9678"/><circle cx="40" cy="85" r="45" fill="#8caf8c"/><circle cx="145" cy="90" r="46" fill="#7ea685"/></g>
+<g filter="url(#s)" transform="translate(420 380)"><path d="M0 72Q125 12 260 72V250Q125 194 0 242Z" fill="url(#h)" stroke="#9c8061" stroke-width="6"/><path d="M260 72Q395 12 520 72V242Q395 194 260 250Z" fill="#fffdf7" stroke="#9c8061" stroke-width="6"/><path d="M260 72V250" stroke="#b69b78" stroke-width="5"/><g stroke="#c7b79d" stroke-width="5" stroke-linecap="round"><path d="M35 105q85-30 185-3M35 140q85-30 185-3M35 175q85-30 185-3M295 105q85-30 185-3M295 140q85-30 185-3M295 175q85-30 185-3"/></g><path d="M115 55q-35-62-75-35q26 38 75 35M115 55q38-76 78-25q-30 30-78 25" fill="#7da586"/></g>
+<g transform="translate(700 260)"><circle cx="60" cy="38" r="36" fill="#d69a6c"/><path d="M25 35q-3-45 38-45q37 0 37 42q-30-20-75 3" fill="#55453b"/><path d="M25 80q36-28 72 0l25 100H5z" fill="#7299b8"/><path d="M42 80l22 44 23-44" fill="#f5e8ce"/><circle cx="190" cy="35" r="35" fill="#d9a276"/><path d="M155 34q-4-47 39-48q42 4 37 49q-31-25-76-1" fill="#57443c"/><path d="M154 78q37-27 74 0l28 102h-130z" fill="#c77d69"/><path d="M170 79l22 42 20-42" fill="#f8e7d1"/></g>
+<g transform="translate(935 520)"><ellipse cx="0" cy="0" rx="44" ry="25" fill="#e7d6b7"/><circle cx="-18" cy="-24" r="17" fill="#e7d6b7"/><path d="M-31-36l-8-24 20 12M-8-38l9-22 9 25" fill="#e7d6b7"/><circle cx="-23" cy="-25" r="3" fill="#55483f"/><circle cx="15" cy="-3" r="3" fill="#55483f"/></g>
+<g font-family="Georgia,'Noto Serif SC',serif" fill="#405b4d"><text x="720" y="112" font-size="26" text-anchor="middle" letter-spacing="8">CHILDHOOD LIBRARY</text><text x="720" y="205" font-size="76" font-weight="bold" text-anchor="middle">儿童故事馆</text><text x="720" y="260" font-size="28" text-anchor="middle">以中国经典为根 · 以世界文学为窗 · 以优秀原创为未来</text></g>
+<text x="720" y="665" font-family="'Noto Sans SC',sans-serif" font-size="24" fill="#fffaf0" text-anchor="middle">让好故事陪伴童年，让文化在阅读中自然生长</text>
+</svg></template><img id="coverImage" width="1440" height="720" alt="儿童故事馆主视觉：打开的故事书连接中国亭台、世界城堡、森林与星空">
+<figcaption><span>馆藏主视觉 · 项目规划资产</span><span>原样内嵌</span></figcaption>
+</figure>
+<div class="work-picks" aria-label="切换作品档案">
+<button data-work="nuwa" aria-pressed="true">女娲补天</button><button data-work="ugly" aria-pressed="false">丑小鸭</button><button data-work="scarecrow" aria-pressed="false">稻草人</button><button data-work="snail" aria-pressed="false">田螺姑娘</button>
+</div>
+<span class="folio">左页 · 编辑的荐语</span>
+</article>
+<article class="page right-page" id="archive" aria-live="polite">
+<div class="page-running"><span id="workType">中国神话与传说</span><span>作品层档案</span></div>
+<div class="archive-tab-title"><div><span class="eyebrow" id="workOrigin">中国 · 上古神话</span><h2 id="workTitle">女娲补天</h2></div><span class="stamp">版本<br>待核验</span></div>
+<div class="archive-meta" id="workCreator">作者与典籍出处待考证 · 适龄依具体版本判断</div>
+<p class="archive-summary" id="workSummary">女娲补天作为候选题材进入作品层档案；现代讲述、插画与音频须分别建档。此处简介为原型编辑概述，不指向某一现实出版物。</p>
+<div class="version-tabs" role="tablist" aria-label="版本类型">
+<button role="tab" id="tab-original" data-version="original" aria-selected="true" aria-controls="versionPanel">原作</button>
+<button role="tab" id="tab-translation" data-version="translation" aria-selected="false" aria-controls="versionPanel" tabindex="-1">译本</button>
+<button role="tab" id="tab-adaptation" data-version="adaptation" aria-selected="false" aria-controls="versionPanel" tabindex="-1">改写本</button>
+<button role="tab" id="tab-picture" data-version="picture" aria-selected="false" aria-controls="versionPanel" tabindex="-1">绘本</button>
+<button role="tab" id="tab-narration" data-version="narration" aria-selected="false" aria-controls="versionPanel" tabindex="-1">朗读</button>
+</div>
+<div class="version-panel" id="versionPanel" role="tabpanel" aria-labelledby="tab-original" tabindex="0">
+<h3 id="versionTitle">典籍出处与现代讲述分开</h3><p id="versionText">先记录典籍出处、异文与采录线索，不把后世改写误标为唯一原版。</p><p class="version-meta" id="versionMeta">待补：出处、原文题名、整理依据</p>
+</div>
+<div class="archive-actions"><button class="btn btn-primary" id="saveWork" aria-pressed="false">收藏到书架</button><button class="btn" id="openReader">阅读排版演示</button></div>
+<span class="folio">右页 · 作品的谱系</span>
+</article>
+<aside class="margin-notes" aria-label="档案旁注">
+<span class="eyebrow">切口旁注</span>
+<p class="note"><strong>作品≠版本</strong><br>文本≠插画≠朗读</p>
+<details><summary>来源与权利</summary><p>当前仅展示目录结构与合规来源类型。没有逐项权利证据，就不展示正式正文、绘本图片或朗读媒体。</p><p>作品公版不等于译文、插画、录音也公版。</p></details>
+</aside>
+</div>
+<p class="book-footnote">原型说明：未声称任何现实版本已核验；「100条」仅为首批目录建设目标。</p>
+</section>
+<section class="section paper" id="topics" aria-labelledby="topicsTitle">
+<div class="wrap section-grid"><div class="section-intro"><span class="eyebrow">内容地图</span><h2 id="topicsTitle">六个专题，<br>安静地排列。</h2><p>专题是进入故事的六条路径，不是六个互相隔绝的书架。作品仍可保留地区、语言、作者与时代信息。</p><p class="age-note">人工策展优先于流量排序；候选题材不等于已经取得公开权利。</p></div>
+<div class="topic-list">
+<details open><summary>中国神话与传说<span class="topic-focus">区分神话、传说与后世文学改写</span></summary><div class="topic-body"><p>从创世、自然与英雄故事进入，保留典籍出处、异文和整理依据。</p><div class="text-links"><button data-work="nuwa">女娲补天</button><button data-work="jingwei">精卫填海</button></div></div></details>
+<details><summary>中国民间故事<span class="topic-focus">记录地域、讲述者、采录者和异文</span></summary><div class="topic-body"><p>让地方记忆与生活智慧被看见，不将某一种现代讲述当成唯一原貌。</p><div class="text-links"><button data-work="snail">田螺姑娘</button></div></div></details>
+<details><summary>世界经典童话<span class="topic-focus">标明原始版本、改编版本与文化背景</span></summary><div class="topic-body"><p>原作、中文译本和儿童改写本分别建档，世界故事也不只等于欧洲童话。</p><div class="text-links"><button data-work="ugly">丑小鸭</button></div></div></details>
+<details><summary>寓言与智慧<span class="topic-focus">不把寓意简化成唯一标准答案</span></summary><div class="topic-body"><p>在原典、注释和儿童讲述之间保留差异，给开放理解留下空间。</p><div class="text-links"><button data-work="farmer">守株待兔</button></div></div></details>
+<details><summary>儿童文学经典<span class="topic-focus">区分幼儿故事与独立阅读长篇</span></summary><div class="topic-body"><p>同时记录文学背景、具体文本与插图资源，适龄建议依附于版本。</p><div class="text-links"><button data-work="scarecrow">稻草人</button></div></div></details>
+<details><summary>当代原创故事<span class="topic-focus">尊重原创表达，取得清晰授权</span></summary><div class="topic-body"><p>为当代作家、绘本作者与讲述者留出位置。当前仅展示准入原则，不虚构馆藏。</p><div class="text-links"><button id="originalNotice">查看权利门禁</button></div></div></details>
+</div></div>
+</section>
+<section class="section" id="ages" aria-labelledby="agesTitle">
+<div class="wrap section-grid"><div class="section-intro"><span class="eyebrow">按年龄发现</span><h2 id="agesTitle">年龄是路标，<br>不是刻度尺。</h2><p>它帮助家庭发现内容，不是儿童能力测评，也不是强制阅读门槛。一个故事可以跨年龄段，推荐理由必须落到具体版本。</p><p class="age-note">文本长度、语言难度、主题复杂度、情绪强度和改写程度，都应由编辑人工判断。</p></div>
+<div class="age-bands">
+<article class="age-band"><h3>0–2岁</h3><p>亲子共读 · 图像感知 · 声音与节奏</p><p>简短图画故事、重复句式；大图少字与朗读提示。</p></article>
+<article class="age-band"><h3>2–4岁</h3><p>情节初识 · 角色与日常经验</p><p>短篇与动物故事；清晰段落、轻量插图、可选朗读。</p></article>
+<article class="age-band"><h3>4–6岁</h3><p>想象 · 情绪理解 · 因果与角色</p><p>完整童话、寓言、神话简编；可附亲子讨论提示。</p></article>
+<article class="age-band"><h3>6–8岁</h3><p>独立阅读起步 · 人物与情节</p><p>中短篇与儿童文学；章节、词语注释与相关作品。</p></article>
+<article class="age-band"><h3>8–12岁</h3><p>文学体验 · 文化理解 · 多元视角</p><p>儿童小说与世界文学；作者背景和版本说明。</p></article>
+</div></div>
+</section>
+<section class="section paper" id="lineage" aria-labelledby="lineageTitle">
+<div class="wrap section-grid"><div class="section-intro"><span class="eyebrow">版本谱系</span><h2 id="lineageTitle">关联，而不混同。</h2><p>同一部作品可以延伸出多种文本与媒体。每一条支脉都保留自己的贡献者、来源和权利记录。</p><p class="age-note">下面是数据关系示意，不是现实版本清单；各支脉均为待建档、待核验。</p></div>
+<div><div class="lineage-layout">
+<div class="work-root"><span class="eyebrow">作品层入口</span><h3 id="lineageWork">女娲补天</h3><p>规范标题、文化背景、作品类型与编辑说明。</p></div>
+<div class="branches">
+<article class="branch"><h3>原作</h3><p>原典、原文与整理依据</p><span class="status">待考证</span></article>
+<article class="branch"><h3>译本</h3><p>译者、出版信息、译文权利</p><span class="status">待建档</span></article>
+<article class="branch"><h3>改写本</h3><p>改编者、改写程度、文本权利</p><span class="status">待建档</span></article>
+<article class="branch"><h3>绘本</h3><p>改写文本、插画、封面分别记录</p><span class="status">待建档</span></article>
+<article class="branch"><h3>朗读</h3><p>朗读者、录音制作者与独立授权</p><span class="status">待建档</span></article>
+</div></div><p class="lineage-caption">民间故事异文同样保留地域、讲述者与采录版本差异，不随意合并。</p></div></div>
+</section>
+<section class="section" id="recent" aria-labelledby="recentTitle">
+<div class="wrap section-grid"><div class="section-intro"><span class="eyebrow">最近整理</span><h2 id="recentTitle">看见编辑<br>正在做什么。</h2><p>透明展示档案动作，而不是制造「上新」热度。以下均为首批候选目录中的研究任务。</p><p class="age-note">检索只筛选本页原型条目，不代表完整馆藏数量。</p></div>
+<div><div class="catalog-tools">
+<div class="field"><label for="catalogSearch">检索候选作品</label><input id="catalogSearch" type="search" placeholder="输入标题、类型或整理事项" autocomplete="off"></div>
+<div class="field"><label for="catalogFilter">按内容范围筛选</label><select id="catalogFilter"><option value="all">全部候选</option><option value="china">中国故事</option><option value="world">世界故事</option></select></div>
+</div><div class="catalog-list" id="catalogList">
+<article class="catalog-item" data-group="china" data-search="女娲补天 中国神话 典籍出处 现代讲述"><div><h3>女娲补天</h3><p>中国神话与传说</p></div><p class="catalog-action">建立作品层入口；下一步核对典籍出处与现代讲述版本。</p><p>简介为原型编辑概述</p><button class="btn" data-work="nuwa">翻开档案</button></article>
+<article class="catalog-item" data-group="china" data-search="精卫填海 中国神话 文献出处 改写文本"><div><h3>精卫填海</h3><p>中国神话与传说</p></div><p class="catalog-action">保留文献出处与儿童改写之间的差异，分别等待考证。</p><p>版本与权利待核验</p><button class="btn" data-work="jingwei">翻开档案</button></article>
+<article class="catalog-item" data-group="china" data-search="田螺姑娘 民间故事 采录地区 异文"><div><h3>田螺姑娘</h3><p>中国民间故事</p></div><p class="catalog-action">建立异文记录任务；采录地区、讲述者与采录者仍待确认。</p><p>不合并地方异文</p><button class="btn" data-work="snail">翻开档案</button></article>
+<article class="catalog-item" data-group="china" data-search="守株待兔 寓言 古籍 注释 改写"><div><h3>守株待兔</h3><p>寓言与智慧</p></div><p class="catalog-action">古籍出处、现代注释与儿童改写分别列入核验事项。</p><p>寓意不作唯一答案</p><button class="btn" data-work="farmer">翻开档案</button></article>
+<article class="catalog-item" data-group="china" data-search="稻草人 叶圣陶 儿童文学 原作 插图"><div><h3>稻草人</h3><p>儿童文学经典</p></div><p class="catalog-action">以叶圣陶作品线索建立档案；具体版本、插图和权利待核验。</p><p>文本与插图分离</p><button class="btn" data-work="scarecrow">翻开档案</button></article>
+<article class="catalog-item" data-group="world" data-search="丑小鸭 安徒生 世界童话 原作 译本 改写 绘本"><div><h3>丑小鸭</h3><p>世界经典童话</p></div><p class="catalog-action">以安徒生作品为入口；中文译本、改写本和绘本分别建档。</p><p>不暗示译本可转载</p><button class="btn" data-work="ugly">翻开档案</button></article>
+</div><p class="empty-results" id="emptyResults" hidden>没有匹配的原型条目。可以换一个标题或筛选范围。</p></div></div>
+</section>
+<section class="section paper" id="rights" aria-labelledby="rightsTitle">
+<div class="wrap section-grid"><div class="section-intro"><span class="eyebrow">来源与权利门禁</span><h2 id="rightsTitle">能发现，<br>不等于能转载。</h2><p>信源用于发现与考证；公开使用必须另有具体版本、目标地域、用途与许可证据。AI只能辅助整理，不能决定版权。</p><p class="age-note">授权不明时，仅保留必要元数据与合规来源，不复制正文或媒体。</p></div>
+<div><div class="rights-banner"><strong>当前演示：仅目录，不提供正式正文与媒体</strong><span>所有具体权利状态均待逐项核验</span></div>
+<div class="source-list">
+<details><summary>中国文化与文献档案<span class="small">L1</span></summary><p>国家图书馆、公共图书馆、非遗机构、地方志与博物馆，用于故事源流、地方异文、出版和采录线索。数字化展示不自动授予转载权。</p></details>
+<details><summary>国际数字图书馆<span class="small">L2</span></summary><p>Project Gutenberg、International Children’s Digital Library、Library of Congress等用于书目发现；公版与馆藏使用条件须逐项核实。</p></details>
+<details><summary>开放许可故事平台<span class="small">L3</span></summary><p>StoryWeaver等开放内容平台可作为发现入口，但每部作品的署名、改编、非商业与再分发条件可能不同。</p></details>
+<details><summary>专业机构与出版体系<span class="small">L4</span></summary><p>出版社目录、作家官网和文学机构用于核对作者、译者、出版版本与背景；页面可读不等于允许复制。</p></details>
+<details><summary>创作者与文化传承人<span class="small">L5</span></summary><p>作家、译者、绘本作者、讲述者及地方文化机构，通过官方投稿、合作和授权渠道明确使用范围。</p></details>
+<details><summary>权利记录的最小单位<span class="small">逐项</span></summary><p>原始文学作品、现代译文、改写注释、绘本插画与版式、朗读表演和录音制品，都需独立记录权利人、地域、期限、用途与证据。</p></details>
+</div>
+<div class="gate-flow" aria-label="发布门禁流程"><div class="gate-step"><strong>信源发现</strong>只采集必要目录线索</div><div class="gate-step"><strong>身份确认</strong>作品与版本不混同</div><div class="gate-step"><strong>事实与适龄</strong>保留人工编辑审核</div><div class="gate-step"><strong>权利逐项核验</strong>文本、插画、朗读分开</div><div class="gate-step"><strong>人工终审后公开</strong>否则仅目录或合规外链</div></div>
+</div></div>
+</section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-grid"><div><span class="eyebrow">CHILDHOOD LIBRARY · 童年书房</span><h2>让好故事陪伴童年，<br>让文化在阅读中自然生长。</h2><p>一座值得长期整理、阅读、收藏和传承的儿童文学图书馆。</p></div><nav aria-label="页脚内容导航"><strong>继续翻阅</strong><a href="#topics">六大专题</a><a href="#ages">年龄分层</a><a href="#recent">最近整理</a></nav><nav aria-label="页脚档案导航"><strong>档案原则</strong><a href="#lineage">版本谱系</a><a href="#rights">来源与权利</a><a href="#top">回到书页</a></nav></div><div class="footer-bottom"><span>A2 高保真方向稿 · 非正式上线页面</span><span>无社交、积分、打卡与排行榜</span></div></div></footer>
+<dialog class="shelf-dialog" id="shelfDialog" aria-labelledby="shelfTitle"><div class="dialog-head"><h2 id="shelfTitle">我的书架</h2><button class="close-button" data-close="shelfDialog">关闭</button></div><div class="shelf-content"><p>只保存收藏与排版演示进度，不含社交、积分或打卡。数据仅留在此浏览器。</p><div id="shelfList"></div></div></dialog>
+<dialog class="reader-dialog" id="readerDialog" aria-labelledby="readerTitle"><div class="reader-shell"><div class="dialog-head"><h2 id="readerTitle">阅读排版演示</h2><button class="close-button" data-close="readerDialog">关闭</button></div><div class="reader-tools"><button id="fontDown" aria-label="减小正文字号">A−</button><span id="fontSize">19px</span><button id="fontUp" aria-label="增大正文字号">A＋</button><div class="progress-wrap"><label for="readProgress"><span>阅读进度</span><span id="progressText">0%</span></label><progress id="readProgress" max="100" value="0">0%</progress></div></div><p class="demo-notice">排版演示文字，非正式馆藏正文</p><article class="reader-scroll" id="readerScroll" tabindex="0"><h3>窗边的一盏小灯</h3><p class="reader-context">当前档案：<span id="readerWork">女娲补天</span> · 以下短篇为本原型原创，仅演示字号、行距与进度，不是该作品正文。</p><div class="reader-copy" id="readerCopy">
+<p>傍晚，雨把窗外的屋檐洗得发亮。小满坐在书桌前，发现一只纸船停在窗台的水洼里。它没有帆，船头只画着一扇很小的门。</p>
+<p>她想，这么小的门，里面会住着谁呢？也许是一位收集雨声的邮差，每天把滴答滴答的声音装进信封，寄给远方睡不着觉的孩子。</p>
+<p>小满找来一支铅笔，在纸船的另一侧补上一扇窗。她没有打开那扇门，也没有往船里塞进自己的想象。有些故事，需要给陌生的事物留一点安静。</p>
+<p>天色慢慢暗下来。她拧亮桌边的小灯，光圈落在水面，像一条通往纸船的小路。风从窗缝里进来，纸船轻轻晃了晃，却没有急着出发。</p>
+<p>楼下传来收伞的声音，远处有人关上一扇木门。雨声变得稀疏，世界仿佛把一页书翻到了后半部分。小满把手放在桌沿，耐心地等着。</p>
+<p>终于，纸船顺着一道细细的水流离开窗台。它经过一片落叶，绕过一粒小石子，在拐角处停了一会儿，像在辨认方向。</p>
+<p>小满没有追上去。她只在心里说，愿你去的地方也有人为你留一盏灯。然后她合上窗，把那支铅笔放回笔筒，继续读自己尚未读完的书。</p>
+<p>第二天清晨，水洼已经干了。窗台上留着一道浅浅的船形印记，旁边多了一颗圆润的小石子。小满把它夹进书页，当作一枚没有文字的书签。</p>
+</div></article></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script>
+const works={
+nuwa:{title:"女娲补天",type:"中国神话与传说",origin:"中国 · 上古神话",creator:"作者与典籍出处待考证",summary:"女娲补天作为候选题材进入作品层档案；现代讲述、插画与音频须分别建档。此处简介为原型编辑概述，不指向某一现实出版物。",research:"典籍出处、异文与现代讲述版本"},
+jingwei:{title:"精卫填海",type:"中国神话与传说",origin:"中国 · 上古神话",creator:"文献出处与改写文本待核验",summary:"以候选上古神话建立作品入口，后续将文献出处、现代改写和儿童阅读建议分开记录。本简介只用于原型，不指向已公开馆藏。",research:"文献出处、异文与儿童改写文本"},
+snail:{title:"田螺姑娘",type:"中国民间故事",origin:"中国 · 民间故事",creator:"采录地区、讲述者与异文待核验",summary:"从民间故事的作品层入口出发，保留地域、讲述者、采录者与异文差异，不把某一种现代讲述当成唯一原貌。",research:"采录地区、讲述者、采录者与地方异文"},
+farmer:{title:"守株待兔",type:"寓言与智慧",origin:"中国 · 寓言",creator:"古籍出处与现代注释待核验",summary:"作为候选寓言建立档案，古籍出处、现代注释和儿童改写分别核验；编辑不把寓意简化成唯一标准答案。",research:"古籍出处、现代注释与儿童改写"},
+scarecrow:{title:"稻草人",type:"儿童文学经典",origin:"中国 · 儿童文学",creator:"叶圣陶作品线索 · 具体版本待核验",summary:"以规划所列叶圣陶作品线索建立原型档案；具体出版物、文本版本与插图资源仍需分别确认，不提供正文或插图。",research:"叶圣陶原作线索、具体版本与插图权利"},
+ugly:{title:"丑小鸭",type:"世界经典童话",origin:"丹麦 · 文学童话",creator:"安徒生作品线索 · 中文版本待核验",summary:"以规划所列安徒生作品为入口，原作、不同中文译本、儿童改写本、绘本和朗读都应建立关联，而非混成一条记录。",research:"安徒生原作线索、中文译本与儿童改写"}
+};
+const versionInfo={
+original:{title:"原作与作品入口分开",text:w=>`先考证${w.research}，不把后世改写误标为唯一原版。`,meta:"待补：出处、原文题名、整理依据"},
+translation:{title:"译本拥有自己的档案",text:()=>"若发现现代译文，将独立记录译者、出版信息、目标地域和译文权利证据。",meta:"当前没有可公开译本 · 未声称任何现实译本已核验"},
+adaptation:{title:"改写不是隐形的复制",text:()=>"儿童改写本需记录改编者、改写程度、文本来源与适龄依据，并单独核验权利。",meta:"待补：改编者、内容版本、编辑说明"},
+picture:{title:"插画与文本分别授权",text:()=>"绘本可能同时包含改写文本、插画、封面和版式权利；没有合法插画时不抓取书封填充。",meta:"待补：插画师、图像来源、独立权利记录"},
+narration:{title:"朗读是另一项创作",text:()=>"朗读资源需独立记录朗读者、录音制作者、表演与录音授权，不随文本状态自动公开。",meta:"当前无可播放音频 · 不提供媒体"}
+};
+let current="nuwa",activeVersion="original",fontSize=19,toastTimer;
+const $=id=>document.getElementById(id);
+const coverSvg=new XMLSerializer().serializeToString($("coverAsset").content.firstElementChild);
+$("coverImage").src="data:image/svg+xml;base64,"+btoa(String.fromCharCode(...new TextEncoder().encode(coverSvg)));
+let saved=new Set(),progressByWork={};
+try{const stored=JSON.parse(localStorage.getItem("childhood-a2-shelf")||"{}");saved=new Set(stored.saved||[]);progressByWork=stored.progress||{}}catch(e){}
+function persist(){try{localStorage.setItem("childhood-a2-shelf",JSON.stringify({saved:[...saved],progress:progressByWork}))}catch(e){}}
+function notify(message){$("toast").textContent=message;$("toast").hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").hidden=true,2400)}
+function renderVersion(){const tab=$("tab-"+activeVersion),info=versionInfo[activeVersion],w=works[current];document.querySelectorAll("[data-version]").forEach(b=>{const on=b.dataset.version===activeVersion;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1});$("versionPanel").setAttribute("aria-labelledby",tab.id);$("versionTitle").textContent=info.title;$("versionText").textContent=info.text(w);$("versionMeta").textContent=info.meta}
+function renderShelf(){const list=$("shelfList");list.textContent="";$("shelfCount").textContent=saved.size;if(!saved.size){const p=document.createElement("p");p.textContent="书架还空着。翻开一份作品档案，再决定是否收藏。";list.appendChild(p);return}saved.forEach(key=>{if(!works[key])return;const row=document.createElement("div");row.className="shelf-entry";const text=document.createElement("div"),title=document.createElement("h3"),meta=document.createElement("p"),button=document.createElement("button");title.textContent=works[key].title;meta.textContent=`排版演示进度 ${progressByWork[key]||0}% · 非正式正文`;button.textContent="查看档案";button.dataset.openWork=key;text.append(title,meta);row.append(text,button);list.appendChild(row)})}
+function renderWork(key,shouldScroll=false){if(!works[key])return;current=key;const w=works[key];$("workTitle").textContent=w.title;$("workType").textContent=w.type;$("workOrigin").textContent=w.origin;$("workCreator").textContent=w.creator+" · 适龄依具体版本判断";$("workSummary").textContent=w.summary;$("lineageWork").textContent=w.title;$("readerWork").textContent=w.title;document.querySelectorAll(".work-picks [data-work]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.work===key));const on=saved.has(key);$("saveWork").setAttribute("aria-pressed",on);$("saveWork").textContent=on?"移出书架":"收藏到书架";renderVersion();if(shouldScroll){window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});notify("已翻到《"+w.title+"》作品档案")}}
+document.addEventListener("click",e=>{const workButton=e.target.closest("[data-work]");if(workButton)renderWork(workButton.dataset.work,!workButton.closest(".work-picks"));const openButton=e.target.closest("[data-open-work]");if(openButton){$("shelfDialog").close();renderWork(openButton.dataset.openWork,true)}const close=e.target.closest("[data-close]");if(close)$(close.dataset.close).close()});
+document.querySelectorAll("[data-version]").forEach(button=>{button.addEventListener("click",()=>{activeVersion=button.dataset.version;renderVersion()});button.addEventListener("keydown",e=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(e.key))return;e.preventDefault();const tabs=[...document.querySelectorAll("[data-version]")],i=tabs.indexOf(button);let next=e.key==="Home"?0:e.key==="End"?tabs.length-1:(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;activeVersion=tabs[next].dataset.version;renderVersion();tabs[next].focus()})});
+$("saveWork").addEventListener("click",()=>{if(saved.has(current)){saved.delete(current);notify("已从书架移出《"+works[current].title+"》")}else{saved.add(current);notify("已收藏《"+works[current].title+"》到书架")}persist();renderWork(current);renderShelf()});
+$("openShelf").addEventListener("click",()=>{renderShelf();$("shelfDialog").showModal()});
+$("openReader").addEventListener("click",()=>{$("readerDialog").showModal();$("readerScroll").scrollTop=((progressByWork[current]||0)/100)*($("readerScroll").scrollHeight-$("readerScroll").clientHeight);updateProgress()});
+function updateProgress(){const el=$("readerScroll"),max=el.scrollHeight-el.clientHeight,value=max<=0?100:Math.min(100,Math.round(el.scrollTop/max*100));$("readProgress").value=value;$("readProgress").textContent=value+"%";$("progressText").textContent=value+"%";progressByWork[current]=value;persist()}
+$("readerScroll").addEventListener("scroll",updateProgress);
+function setFont(next){fontSize=Math.max(16,Math.min(26,next));$("readerCopy").parentElement.style.setProperty("--reader-size",fontSize+"px");$("fontSize").textContent=fontSize+"px";updateProgress()}
+$("fontDown").addEventListener("click",()=>setFont(fontSize-1));$("fontUp").addEventListener("click",()=>setFont(fontSize+1));
+$("menuButton").addEventListener("click",()=>{const open=$("menuButton").getAttribute("aria-expanded")==="true";$("menuButton").setAttribute("aria-expanded",!open);$("mainNav").hidden=open});
+document.querySelectorAll("#mainNav a").forEach(a=>a.addEventListener("click",()=>{if(innerWidth<=760){$("mainNav").hidden=true;$("menuButton").setAttribute("aria-expanded","false")}}));
+$("originalNotice").addEventListener("click",()=>$("rights").scrollIntoView({behavior:"smooth"}));
+function filterCatalog(){const q=$("catalogSearch").value.trim().toLowerCase(),group=$("catalogFilter").value;let visible=0;document.querySelectorAll(".catalog-item").forEach(item=>{const show=(!q||item.dataset.search.toLowerCase().includes(q))&&(group==="all"||item.dataset.group===group);item.hidden=!show;if(show)visible++});$("emptyResults").hidden=visible>0}
+$("catalogSearch").addEventListener("input",filterCatalog);$("catalogFilter").addEventListener("change",filterCatalog);
+function syncMenu(){if(innerWidth>760){$("mainNav").hidden=false;$("menuButton").setAttribute("aria-expanded","false")}else{$("mainNav").hidden=true;$("menuButton").setAttribute("aria-expanded","false")}}
+window.addEventListener("resize",syncMenu);syncMenu();renderWork(current);renderShelf();
+</script>
+</body>
+</html>

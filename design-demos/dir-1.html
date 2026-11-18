@@ -1,0 +1,394 @@
+<!doctype html>
+<!--
+Assumptions
+- 本稿实现候选 A1「故事正在发生」，供用户选择；依据 directions.md，不扩展其他方向，也不改动项目其他源文件。
+- 页面是故事首页高保真方向稿，不是已上线馆藏；所有作品均来自 STORY_LIBRARY_PLAN_V1.md 的候选目录。
+- 「100」仅表示首批目录建设目标；不声称任何作品已上架、已完成版权核验或可公开阅读。
+- 简介为原型编辑概述，年龄为发现辅助与排版示例，均需随具体文本版本复核；本稿不展示故事正文。
+- 收藏仅保存于当前浏览器 localStorage；书架是本地交互原型，不含账户、社交、积分或阅读进度。
+Form 五问
+- 叙事角色：首屏以「故」为故事入口，后续从发现、档案到版本权利逐层展开。
+- 观众距离：1m 笔记本为主，兼顾手机；正文保持清晰行长与不低于 16px 的字号。
+- 视觉温度：冷调、安静、可信，玩味集中在首屏错位，正文信息区保持规整。
+- 容量：六大专题、五段年龄、候选作品、编辑精选、整理任务与权利说明组成完整长页。
+- 视觉母题：「故」的双色水平条纹错位、项目原封面、馆藏签与版本档案，而非通用营销卡片。
+Form 来自内容哪里：「故」既是故事，也是旧书页上被重新发现的过去；版本签与错位书封则来自作品和版本必须分离的内容原则。
+-->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="儿童故事馆 A1 高保真交互方向稿：故事正在发生。">
+  <title>故事正在发生｜儿童故事馆</title>
+  <style>
+    :root{--sky:#dfe9ed;--sky-light:#edf3f4;--ink:#284b3f;--deep:#183b31;--red:#a84f3f;--yellow:#e7bf76;--blue:#7196b6;--paper:#fbf7ed;--white:#fff;--line:#405b4d;--serif:"Noto Serif SC","Songti SC",SimSun,serif;--sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--sky);color:var(--deep);font-family:var(--sans);font-size:16px;line-height:1.75}
+    button,input,select{font:inherit;color:inherit}
+    button,a,input,select{min-height:44px}
+    button{cursor:pointer}
+    a{color:inherit;text-decoration:none}
+    button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+    [hidden]{display:none!important}
+    .wrap{width:min(1280px,calc(100% - 80px));margin-inline:auto}
+    .serif{font-family:var(--serif)}
+    .eyebrow{margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:.12em}
+    .section-head{display:grid;grid-template-columns:1fr minmax(280px,440px);gap:40px;align-items:end;margin-bottom:38px}
+    .section-head h2{margin:0;font:700 clamp(34px,4vw,54px)/1.25 var(--serif);letter-spacing:-.03em}
+    .section-head p{margin:0;font-size:16px}
+    .site-header{position:relative;z-index:20;border-bottom:2px solid var(--line);background:rgba(223,233,237,.96)}
+    .header-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .wordmark{display:flex;align-items:center;gap:14px;min-height:44px;font-weight:700}
+    .wordmark-cn{font:700 24px/1 var(--serif);letter-spacing:.08em}
+    .wordmark-en{padding-left:14px;border-left:1px solid var(--line);font-size:12px;line-height:1.25;letter-spacing:.08em;max-width:90px}
+    .main-nav{display:flex;align-items:center;gap:24px}
+    .main-nav a{display:flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;border-bottom:2px solid transparent}
+    .main-nav a:hover{border-color:var(--red)}
+    .header-actions{display:flex;align-items:center;gap:10px}
+    .shelf-button{border:2px solid var(--line);background:var(--yellow);padding:8px 16px;font-weight:700;box-shadow:3px 3px 0 var(--line)}
+    .count{display:inline-grid;place-items:center;min-width:24px;height:24px;margin-left:6px;background:var(--deep);color:#fff;border-radius:50%;font-size:12px}
+    .menu-button{display:none;border:2px solid var(--line);background:transparent;padding:8px 14px;font-weight:700}
+    .mobile-menu{position:absolute;top:82px;left:0;right:0;padding:16px 20px 22px;background:var(--sky-light);border-bottom:2px solid var(--line)}
+    .mobile-menu a{display:flex;align-items:center;border-bottom:1px solid rgba(40,75,63,.25);font-weight:600}
+    .hero{overflow:hidden;padding:42px 0 72px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
+    .hero-copy{position:relative;z-index:2}
+    .hero-title{margin:0;max-width:600px;font:900 clamp(52px,5.4vw,78px)/1.12 var(--serif);letter-spacing:-.055em}
+    .hero-intro{max-width:510px;margin:18px 0 10px;font-size:17px;line-height:1.85}
+    .glyph-button{display:block;width:min(100%,590px);margin:-4px 0 -18px -18px;padding:0;border:0;background:transparent;text-align:left;min-height:0}
+    .glyph-button svg{display:block;width:100%;height:auto;overflow:visible;transition:transform .25s ease}
+    .glyph-button:hover svg{transform:translateX(6px)}
+    .glyph-hint{display:inline-flex;align-items:center;min-height:44px;margin-left:20px;padding:5px 12px;border-bottom:2px solid var(--red);font-size:13px;font-weight:700}
+    .hero-collage{position:relative;padding:18px 0 52px}
+    .cover-asset{width:94%;margin-left:6%;border:3px solid var(--line);background:var(--paper);transform:rotate(2deg);box-shadow:8px 8px 0 var(--blue);overflow:hidden}
+    .cover-asset svg{display:block;width:100%;height:auto}
+    .cover-asset svg text{display:none}
+    .today-card{position:relative;z-index:2;width:90%;margin:-44px 0 0;padding:24px 26px 22px;background:var(--paper);border:3px solid var(--line);box-shadow:10px 10px 0 var(--line);transform:rotate(-1deg)}
+    .today-top{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;font-size:13px;font-weight:700}
+    .today-top span{padding:2px 9px;background:var(--red);color:#fff}
+    .today-top span+span{background:var(--yellow);color:var(--deep)}
+    .today-top em{font-style:normal}
+    .today-card h2{margin:0 80px 8px 0;font:700 38px/1.25 var(--serif)}
+    .today-card p{margin:0 0 12px;max-width:390px;font-size:15px;line-height:1.75}
+    .story-meta{font-size:13px;font-weight:600}
+    .story-meta span{display:block}
+    .card-actions{position:relative;z-index:4;display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .primary-button,.secondary-button{padding:9px 16px;border:2px solid var(--line);font-weight:700}
+    .primary-button{background:var(--deep);color:#fff}
+    .primary-button:hover{background:var(--red)}
+    .secondary-button{background:transparent}
+    .secondary-button:hover,.secondary-button.is-saved{background:var(--yellow)}
+    .work-slip{position:absolute;z-index:3;right:-12px;top:206px;width:156px;padding:13px 16px;background:var(--yellow);border:2px solid var(--line);box-shadow:4px 4px 0 var(--red);transform:rotate(5deg);font-size:13px;line-height:1.5}
+    .work-slip strong{display:block;font:700 21px/1.3 var(--serif)}
+    .hero-footnote{margin:28px 0 0;padding-top:18px;border-top:1px solid rgba(40,75,63,.45);font-size:13px}
+    .topics{padding:88px 0 98px;background:var(--sky-light);border-top:2px solid var(--line)}
+    .topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .topic-card{position:relative;min-height:180px;padding:24px 24px 20px;border:2px solid var(--line);background:var(--sky);text-align:left;box-shadow:5px 5px 0 var(--line);transition:transform .18s ease}
+    .topic-card:nth-child(2),.topic-card:nth-child(5){transform:translateY(12px)}
+    .topic-card:hover{transform:translate(-2px,-2px)}
+    .topic-card:nth-child(2):hover,.topic-card:nth-child(5):hover{transform:translate(-2px,10px)}
+    .topic-card[aria-pressed="true"]{background:var(--yellow);box-shadow:7px 7px 0 var(--red)}
+    .topic-mark{display:block;width:34px;height:8px;margin-bottom:20px;background:var(--topic-color,var(--red))}
+    .topic-card strong{display:block;margin-bottom:8px;font:700 24px/1.35 var(--serif)}
+    .topic-card span:last-child{display:block;font-size:14px;line-height:1.7}
+    .discover{padding:92px 0 100px;background:var(--paper);border-top:2px solid var(--line)}
+    .filter-board{padding:26px;border:2px solid var(--line);background:var(--sky-light)}
+    .search-row{display:grid;grid-template-columns:1fr 280px;gap:18px}
+    .field label{display:block;margin-bottom:6px;font-size:13px;font-weight:700}
+    .field input,.field select{width:100%;height:50px;padding:8px 14px;border:2px solid var(--line);border-radius:0;background:#fff;font-size:16px}
+    .age-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .age-button{padding:8px 16px;border:1.5px solid var(--line);background:#fff;font-size:14px;font-weight:600}
+    .age-button[aria-pressed="true"]{background:var(--deep);color:#fff}
+    .filter-note{margin:16px 0 0;font-size:16px}
+    .result-bar{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:26px 0 18px;font-size:14px}
+    .result-bar p{margin:0}
+    .clear-button{padding:7px 12px;border:0;border-bottom:1px solid var(--line);background:transparent;font-weight:700}
+    .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .story-card{display:flex;flex-direction:column;min-width:0;border:2px solid var(--line);background:#fff}
+    .mini-cover{position:relative;min-height:174px;padding:18px 20px;background:var(--cover,var(--sky));border-bottom:2px solid var(--line);overflow:hidden}
+    .mini-cover::after{content:"";position:absolute;right:18px;top:18px;width:38px;height:38px;border:2px solid var(--line);transform:rotate(9deg)}
+    .cover-char{display:block;font:900 82px/1.1 var(--serif);color:var(--deep)}
+    .cover-type{position:absolute;left:20px;bottom:14px;font-size:12px;font-weight:700;letter-spacing:.08em}
+    .cover-type span{display:block;letter-spacing:0}
+    .story-card-body{display:flex;flex:1;flex-direction:column;padding:20px}
+    .story-card h3{margin:0 0 7px;font:700 25px/1.4 var(--serif)}
+    .story-card p{margin:0 0 14px;font-size:15px;line-height:1.75}
+    .story-card .story-meta{margin-top:auto}
+    .rights-label{display:inline-block;margin-top:9px;padding:2px 7px;background:#f3ded8;color:#713528;font-size:12px;font-weight:700}
+    .empty-state{grid-column:1/-1;padding:44px 24px;border:2px dashed var(--line);text-align:center}
+    .empty-state strong{display:block;font:700 26px/1.4 var(--serif)}
+    .empty-state p{margin:8px 0 0}
+    .editors{padding:92px 0 100px;background:var(--deep);color:#f7f3e8}
+    .editors .section-head{border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:28px}
+    .editor-list{display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:28px}
+    .editor-item{display:flex;flex-direction:column;min-height:320px;padding:26px;border:2px solid #f7f3e8;background:transparent;color:#f7f3e8;text-align:left}
+    .editor-item:first-child{background:var(--yellow);color:var(--deep);transform:rotate(-1deg)}
+    .editor-item:nth-child(2){margin-top:26px}
+    .editor-item small{font-size:13px;font-weight:700}
+    .editor-item strong{display:block;margin:28px 0 14px;font:700 32px/1.3 var(--serif)}
+    .editor-item span{font-size:15px;line-height:1.8}
+    .editor-item b{margin-top:auto;padding-top:24px;font-size:14px;text-decoration:underline;text-underline-offset:5px}
+    .recent{padding:92px 0 100px;background:var(--sky)}
+    .recent-list{border-top:2px solid var(--line)}
+    .recent-row{display:grid;grid-template-columns:1fr 1.4fr 170px;gap:24px;align-items:center;min-height:104px;padding:18px 0;border-bottom:1px solid var(--line)}
+    .recent-row h3{margin:0;font:700 24px/1.4 var(--serif)}
+    .recent-row p{margin:0;font-size:15px}
+    .recent-row button{width:100%;padding:8px 12px;border:2px solid var(--line);background:transparent;font-weight:700}
+    .recent-row button:hover{background:var(--yellow)}
+    .rights{padding:92px 0;background:var(--sky-light);border-top:2px solid var(--line)}
+    .rights-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:start}
+    .version-map{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+    .version-node{padding:20px 16px;border:2px solid var(--line);background:#fff}
+    .version-node:nth-child(2){transform:translateY(16px);background:var(--yellow)}
+    .version-node strong{display:block;margin-bottom:8px;font:700 21px/1.35 var(--serif)}
+    .version-node span{font-size:13px;line-height:1.7}
+    .rights-copy{margin:26px 0 0;font-size:15px}
+    .target-card{padding:30px;background:var(--red);color:#fff;border:2px solid var(--deep);box-shadow:8px 8px 0 var(--deep)}
+    .target-number{display:block;font:900 clamp(80px,10vw,142px)/.95 var(--serif);letter-spacing:-.08em}
+    .target-card h3{margin:18px 0 10px;font:700 26px/1.35 var(--serif)}
+    .target-card p{margin:0;font-size:15px}
+    .rights-list{margin:28px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+    .rights-list li{padding:10px 0;border-bottom:1px solid rgba(40,75,63,.35);font-size:14px}
+    .site-footer{padding:44px 0;background:#102f27;color:#f4f0e5}
+    .footer-grid{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start}
+    .footer-title{margin:0 0 8px;font:700 28px/1.3 var(--serif)}
+    .footer-copy{margin:0;max-width:650px;font-size:13px}
+    .footer-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+    .footer-links a{display:flex;align-items:center;font-size:14px;text-decoration:underline;text-underline-offset:4px}
+    dialog{padding:0;border:2px solid var(--line);border-radius:0;background:var(--paper);color:var(--deep);box-shadow:10px 10px 0 rgba(16,47,39,.45)}
+    dialog::backdrop{background:rgba(16,47,39,.68)}
+    .story-dialog{width:min(760px,calc(100% - 40px));max-height:90vh}
+    .dialog-head{position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 22px;background:var(--sky);border-bottom:2px solid var(--line)}
+    .dialog-head span{font-size:13px;font-weight:700}
+    .close-button{padding:7px 12px;border:2px solid var(--line);background:transparent;font-weight:700}
+    .dialog-content{padding:28px}
+    .dialog-content h2{margin:0 0 8px;font:700 40px/1.3 var(--serif)}
+    .dialog-description{margin:0 0 12px;font-size:16px}
+    .dialog-actions{margin:18px 0}
+    .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;border-bottom:2px solid var(--line)}
+    .tab-button{padding:10px 15px;border:1px solid var(--line);border-bottom:0;background:#fff;font-weight:700}
+    .tab-button[aria-selected="true"]{background:var(--deep);color:#fff}
+    .tab-panel{padding:24px 4px 6px}
+    .tab-panel h3{margin:0 0 10px;font:700 23px/1.4 var(--serif)}
+    .tab-panel p{margin:0 0 14px;font-size:16px}
+    .archive-table{width:100%;border-collapse:collapse;font-size:15px}
+    .archive-table th,.archive-table td{padding:12px 8px;border-bottom:1px solid rgba(40,75,63,.35);text-align:left;vertical-align:top}
+    .archive-table th{width:110px;font-size:13px}
+    .rights-warning{padding:16px;border:2px solid var(--red);background:#f3ded8;font-weight:700}
+    .shelf-dialog{width:min(440px,100%);max-width:100vw;height:100%;max-height:100%;margin:0 0 0 auto;border-top:0;border-right:0;border-bottom:0;box-shadow:none;background:var(--sky-light)}
+    .shelf-content{padding:24px}
+    .shelf-content h2{margin:0 0 8px;font:700 34px/1.3 var(--serif)}
+    .shelf-content>p{margin:0 0 20px;font-size:14px}
+    .shelf-list{display:grid;gap:12px}
+    .shelf-item{padding:16px;border:2px solid var(--line);background:#fff}
+    .shelf-item strong{display:block;font:700 22px/1.4 var(--serif)}
+    .shelf-item span{font-size:12px}
+    .shelf-item .card-actions{margin-top:10px}
+    .shelf-empty{padding:26px 18px;border:2px dashed var(--line);text-align:center}
+    .toast{position:fixed;z-index:100;left:50%;bottom:24px;transform:translate(-50%,20px);max-width:calc(100% - 32px);padding:10px 18px;background:var(--deep);color:#fff;border:1px solid #fff;opacity:0;pointer-events:none;transition:.2s ease;font-size:14px}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    @keyframes enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .hero-copy,.hero-collage{animation:enter .65s ease both}
+    .hero-collage{animation-delay:.12s}
+    @media(max-width:1050px){
+      .wrap{width:min(100% - 48px,900px)}.main-nav{gap:14px}.main-nav a{font-size:13px}.wordmark-en{display:none}
+      .hero-grid{gap:28px}.hero-title{font-size:56px}.today-card{width:96%;padding:22px}.work-slip{right:-4px}
+      .story-grid{grid-template-columns:repeat(2,1fr)}.topic-grid{grid-template-columns:repeat(2,1fr)}
+      .editor-list{grid-template-columns:1fr 1fr}.editor-item:first-child{grid-row:span 2}.rights-layout{grid-template-columns:1fr}
+      .target-card{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center}.target-card .rights-list{grid-column:1/-1}
+    }
+    @media(max-width:720px){
+      html{scroll-padding-top:72px}.wrap{width:calc(100% - 36px)}body{font-size:16px;line-height:1.8}
+      .header-inner{min-height:70px;gap:10px}.wordmark-cn{font-size:21px}.main-nav{display:none}.menu-button{display:block}.shelf-button{padding:7px 10px}.mobile-menu{top:70px}
+      .section-head{grid-template-columns:1fr;gap:14px;margin-bottom:26px}.section-head h2{font-size:36px}.section-head p{font-size:16px}
+      .hero{padding:28px 0 52px}.hero-grid{grid-template-columns:1fr;gap:20px}.hero-title{font-size:50px;max-width:330px}.hero-intro{font-size:16px;margin-top:16px}
+      .glyph-button{width:100%;max-width:410px;margin:0 auto -8px}.glyph-hint{margin-left:0}.hero-footnote{font-size:13px}
+      .hero-collage{padding:12px 4px 46px}.cover-asset{width:96%;margin-left:4%;box-shadow:5px 5px 0 var(--blue)}
+      .today-card{width:95%;margin:-24px 0 0;padding:20px;box-shadow:7px 7px 0 var(--line)}.today-card h2{font-size:32px;margin-right:62px}.today-card p{font-size:16px}
+      .work-slip{top:144px;right:-5px;width:126px;padding:10px 12px;font-size:12px}.work-slip strong{font-size:18px}
+      .topics,.discover,.editors,.recent,.rights{padding:64px 0}.topic-grid{grid-template-columns:1fr;gap:16px}.topic-card{min-height:150px;padding:20px}
+      .topic-card:nth-child(2),.topic-card:nth-child(5){transform:none}.topic-card:nth-child(2):hover,.topic-card:nth-child(5):hover{transform:translate(-2px,-2px)}
+      .filter-board{padding:18px}.search-row{grid-template-columns:1fr}.age-row{gap:8px}.age-button{padding:8px 13px}.result-bar{align-items:flex-start;font-size:13px}
+      .story-grid{grid-template-columns:1fr;gap:18px}.mini-cover{min-height:156px}.story-card-body{padding:20px}.story-card p{font-size:16px}
+      .editor-list{grid-template-columns:1fr;gap:18px}.editor-item,.editor-item:first-child{min-height:260px;margin:0;grid-row:auto;transform:none}.editor-item strong{font-size:30px}
+      .recent-row{grid-template-columns:1fr;gap:8px;padding:22px 0}.recent-row p{font-size:16px}.recent-row button{margin-top:6px}
+      .version-map{grid-template-columns:1fr;gap:12px}.version-node:nth-child(2){transform:none}.target-card{display:block;padding:24px}.target-number{font-size:100px}.rights-copy{font-size:16px}
+      .footer-grid{grid-template-columns:1fr}.footer-links{display:grid;grid-template-columns:1fr 1fr}.footer-copy{font-size:13px}
+      .story-dialog{width:calc(100% - 20px);max-height:92vh}.dialog-head{padding:12px 16px}.dialog-content{padding:20px 16px}.dialog-content h2{font-size:34px}.tabs{gap:5px}.tab-button{padding:9px 11px;font-size:14px}
+      .archive-table{font-size:16px}.archive-table th{width:86px}.shelf-dialog{width:100%}.shelf-content{padding:20px}.toast{bottom:16px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top" aria-label="儿童故事馆首页"><span class="wordmark-cn">童年书房</span><span class="wordmark-en">CHILDHOOD LIBRARY</span></a>
+      <nav class="main-nav" aria-label="主导航"><a href="#topics">六大专题</a><a href="#discover">按年龄发现</a><a href="#editors">编辑精选</a><a href="#rights">版本与权利</a></nav>
+      <div class="header-actions"><button class="shelf-button" id="openShelf" type="button">我的书架<span class="count" id="savedCount">0</span></button><button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu">菜单</button></div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="移动端导航" hidden><a href="#topics">六大专题</a><a href="#discover">按年龄发现</a><a href="#editors">编辑精选</a><a href="#recent">最近整理</a><a href="#rights">版本与权利</a></nav>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">儿童故事馆首页方向稿</p>
+          <h1 class="hero-title" id="heroTitle">故事正在发生</h1>
+          <p class="hero-intro">以中国经典为根，以世界文学为窗，以优秀原创为未来。先找到故事，再看清它的版本与来路。</p>
+          <button class="glyph-button" type="button" data-topic-link="myth" aria-label="点击故字，筛选中国神话与传说">
+            <svg viewBox="0 0 600 490" role="img" aria-label="双色水平条纹错位组成的故字">
+              <defs>
+                <clipPath id="g0" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="600" height="49"/></clipPath><clipPath id="g1" clipPathUnits="userSpaceOnUse"><rect x="0" y="49" width="600" height="49"/></clipPath><clipPath id="g2" clipPathUnits="userSpaceOnUse"><rect x="0" y="98" width="600" height="49"/></clipPath><clipPath id="g3" clipPathUnits="userSpaceOnUse"><rect x="0" y="147" width="600" height="49"/></clipPath><clipPath id="g4" clipPathUnits="userSpaceOnUse"><rect x="0" y="196" width="600" height="49"/></clipPath><clipPath id="g5" clipPathUnits="userSpaceOnUse"><rect x="0" y="245" width="600" height="49"/></clipPath><clipPath id="g6" clipPathUnits="userSpaceOnUse"><rect x="0" y="294" width="600" height="49"/></clipPath><clipPath id="g7" clipPathUnits="userSpaceOnUse"><rect x="0" y="343" width="600" height="49"/></clipPath><clipPath id="g8" clipPathUnits="userSpaceOnUse"><rect x="0" y="392" width="600" height="49"/></clipPath><clipPath id="g9" clipPathUnits="userSpaceOnUse"><rect x="0" y="441" width="600" height="49"/></clipPath>
+              </defs>
+              <g font-family="Noto Serif SC,Songti SC,SimSun,serif" font-size="460" font-weight="900"><g clip-path="url(#g0)" transform="translate(-10 0)"><text x="55" y="420" fill="#284b3f">故</text></g><g clip-path="url(#g1)" transform="translate(8 0)"><text x="55" y="420" fill="#a84f3f">故</text></g><g clip-path="url(#g2)" transform="translate(-14 0)"><text x="55" y="420" fill="#284b3f">故</text></g><g clip-path="url(#g3)" transform="translate(12 0)"><text x="55" y="420" fill="#a84f3f">故</text></g><g clip-path="url(#g4)" transform="translate(-6 0)"><text x="55" y="420" fill="#284b3f">故</text></g><g clip-path="url(#g5)" transform="translate(14 0)"><text x="55" y="420" fill="#a84f3f">故</text></g><g clip-path="url(#g6)" transform="translate(-12 0)"><text x="55" y="420" fill="#284b3f">故</text></g><g clip-path="url(#g7)" transform="translate(7 0)"><text x="55" y="420" fill="#a84f3f">故</text></g><g clip-path="url(#g8)" transform="translate(-8 0)"><text x="55" y="420" fill="#284b3f">故</text></g><g clip-path="url(#g9)" transform="translate(10 0)"><text x="55" y="420" fill="#a84f3f">故</text></g></g>
+            </svg>
+          </button>
+          <span class="glyph-hint">点击巨字，从中国神话走进故事</span>
+          <p class="hero-footnote">这里是候选目录原型。作品、译本、改写、插画与朗读分别建档，权利待核验时只展示目录信息。</p>
+        </div>
+        <div class="hero-collage">
+          <figure class="cover-asset" aria-label="项目规划主视觉">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="t d">
+              <title id="t">儿童故事馆：让好故事陪伴童年</title><desc id="d">打开的故事书连接中国古典亭台、世界城堡、森林与星空，孩子和小动物围坐阅读。</desc>
+              <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8e8cc"/><stop offset=".55" stop-color="#e4efe5"/><stop offset="1" stop-color="#d8e8f2"/></linearGradient><linearGradient id="h" x2="0" y2="1"><stop stop-color="#fffdf6"/><stop offset="1" stop-color="#ead8b8"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#43544b" flood-opacity=".18"/></filter></defs>
+              <rect width="1440" height="720" rx="28" fill="url(#bg)"/><circle cx="1180" cy="112" r="54" fill="#f5d58a"/><g fill="#fff9e9"><path d="M160 125q22-38 65-18q40-26 65 16q37-4 42 28H125q0-27 35-26z"/><path d="M930 90q20-31 55-15q33-22 54 14q32-4 37 23H900q0-20 30-22z"/></g>
+              <g fill="#e7bf76"><path d="M1060 70l8 20 22 2-17 14 5 21-18-12-18 12 6-21-17-14 22-2z"/><path d="M1320 205l5 13 14 2-11 9 4 14-12-8-12 8 4-14-11-9 14-2z"/></g><path d="M0 490Q220 380 430 490T850 475T1440 450V720H0Z" fill="#a9c4a4"/><path d="M0 570Q280 450 520 560T1020 540T1440 530V720H0Z" fill="#71977e"/>
+              <g transform="translate(1080 260)" fill="#e6c99b" stroke="#9b805e" stroke-width="5" stroke-linejoin="round"><path d="M0 210V95h70V35h55v60h70v115z"/><path d="M-15 95h35V50h35v45M175 95h35V50h35v45" fill="#d4b27e"/><path d="M80 210v-70q27-43 54 0v70" fill="#7b9c8a"/><path d="M18 125h22v28H18zM150 125h22v28h-22z" fill="#8faeb0"/></g>
+              <g transform="translate(180 300)" fill="#b67d54" stroke="#815d49" stroke-width="4"><path d="M70 190V80h95v110z" fill="#e8c99c"/><path d="M45 85h145l-20-22H65zM55 60h125l-20-20H75zM82 38h72l-12-18H94z" fill="#b87952"/><path d="M112 20V0" stroke-width="5"/><path d="M90 190v-48h55v48" fill="#759583"/></g>
+              <g transform="translate(90 390)"><path d="M70 170q15-75-2-125h42q-20 70 8 125" fill="#977451"/><circle cx="92" cy="45" r="72" fill="#6f9678"/><circle cx="40" cy="85" r="45" fill="#8caf8c"/><circle cx="145" cy="90" r="46" fill="#7ea685"/></g>
+              <g filter="url(#s)" transform="translate(420 380)"><path d="M0 72Q125 12 260 72V250Q125 194 0 242Z" fill="url(#h)" stroke="#9c8061" stroke-width="6"/><path d="M260 72Q395 12 520 72V242Q395 194 260 250Z" fill="#fffdf7" stroke="#9c8061" stroke-width="6"/><path d="M260 72V250" stroke="#b69b78" stroke-width="5"/><g stroke="#c7b79d" stroke-width="5" stroke-linecap="round"><path d="M35 105q85-30 185-3M35 140q85-30 185-3M35 175q85-30 185-3M295 105q85-30 185-3M295 140q85-30 185-3M295 175q85-30 185-3"/></g><path d="M115 55q-35-62-75-35q26 38 75 35M115 55q38-76 78-25q-30 30-78 25" fill="#7da586"/></g>
+              <g transform="translate(700 260)"><circle cx="60" cy="38" r="36" fill="#d69a6c"/><path d="M25 35q-3-45 38-45q37 0 37 42q-30-20-75 3" fill="#55453b"/><path d="M25 80q36-28 72 0l25 100H5z" fill="#7299b8"/><path d="M42 80l22 44 23-44" fill="#f5e8ce"/><circle cx="190" cy="35" r="35" fill="#d9a276"/><path d="M155 34q-4-47 39-48q42 4 37 49q-31-25-76-1" fill="#57443c"/><path d="M154 78q37-27 74 0l28 102h-130z" fill="#c77d69"/><path d="M170 79l22 42 20-42" fill="#f8e7d1"/></g>
+              <g transform="translate(935 520)"><ellipse cx="0" cy="0" rx="44" ry="25" fill="#e7d6b7"/><circle cx="-18" cy="-24" r="17" fill="#e7d6b7"/><path d="M-31-36l-8-24 20 12M-8-38l9-22 9 25" fill="#e7d6b7"/><circle cx="-23" cy="-25" r="3" fill="#55483f"/><circle cx="15" cy="-3" r="3" fill="#55483f"/></g>
+              <g font-family="Georgia,'Noto Serif SC',serif" fill="#405b4d"><text x="720" y="112" font-size="26" text-anchor="middle" letter-spacing="8">CHILDHOOD LIBRARY</text><text x="720" y="205" font-size="76" font-weight="bold" text-anchor="middle">儿童故事馆</text><text x="720" y="260" font-size="28" text-anchor="middle">以中国经典为根 · 以世界文学为窗 · 以优秀原创为未来</text></g><text x="720" y="665" font-family="'Noto Sans SC',sans-serif" font-size="24" fill="#fffaf0" text-anchor="middle">让好故事陪伴童年，让文化在阅读中自然生长</text>
+            </svg>
+          </figure>
+          <article class="today-card">
+            <div class="today-top"><span>今日故事</span><span>候选</span><em>编辑策展位置</em></div>
+            <h2>女娲补天</h2>
+            <p>天空破裂之后，女娲炼石修补天地。目录需区分典籍线索与后来的儿童讲述。</p>
+            <div class="story-meta"><span>中国神话与传说</span><span>建议 4–6 / 6–8 岁</span></div>
+            <div class="card-actions"><button class="primary-button" type="button" data-open="nuwa">打开作品档案</button><button class="secondary-button" type="button" data-save="nuwa">收藏</button></div>
+          </article>
+          <aside class="work-slip" aria-label="作品签"><strong>作品签</strong>候选目录<br>权利待核验</aside>
+        </div>
+      </div>
+    </section>
+    <section class="topics" id="topics" aria-labelledby="topicsTitle">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">故事的内容地图</p><h2 id="topicsTitle">六条走进故事的路</h2></div><p>从神话、民间讲述到当代原创。选择专题，下方候选目录会同步筛选；专题不替代作品类型与文化来源。</p></div>
+        <div class="topic-grid">
+          <button class="topic-card" style="--topic-color:#a84f3f" type="button" data-topic-link="myth" aria-pressed="false"><span class="topic-mark"></span><strong>中国神话与传说</strong><span>区分神话、民间传说与后世文学改写。</span></button>
+          <button class="topic-card" style="--topic-color:#e7bf76" type="button" data-topic-link="folk" aria-pressed="false"><span class="topic-mark"></span><strong>中国民间故事</strong><span>记录地域、讲述者、采录者与异文。</span></button>
+          <button class="topic-card" style="--topic-color:#7196b6" type="button" data-topic-link="fairy" aria-pressed="false"><span class="topic-mark"></span><strong>世界经典童话</strong><span>标明原始版本、改编版本与文化背景。</span></button>
+          <button class="topic-card" style="--topic-color:#a18fb7" type="button" data-topic-link="fable" aria-pressed="false"><span class="topic-mark"></span><strong>寓言与智慧</strong><span>保留解释的开放性，不把寓意化成唯一答案。</span></button>
+          <button class="topic-card" style="--topic-color:#71977e" type="button" data-topic-link="literature" aria-pressed="false"><span class="topic-mark"></span><strong>儿童文学经典</strong><span>区分幼儿故事与适合独立阅读的长篇作品。</span></button>
+          <button class="topic-card" style="--topic-color:#a84f3f" type="button" data-topic-link="original" aria-pressed="false"><span class="topic-mark"></span><strong>当代原创故事</strong><span>尊重原创表达，取得清晰授权后公开。</span></button>
+        </div>
+      </div>
+    </section>
+    <section class="discover" id="discover" aria-labelledby="discoverTitle">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">候选作品目录</p><h2 id="discoverTitle">找到此刻想读的故事</h2></div><p>按标题搜索，或组合专题与年龄。年龄只是发现辅助，不是能力测评；同一作品的不同版本可能有不同建议。</p></div>
+        <form class="filter-board" id="filterForm" onsubmit="return false">
+          <div class="search-row"><div class="field"><label for="searchInput">按作品标题查找</label><input id="searchInput" type="search" placeholder="例如：丑小鸭" autocomplete="off"></div><div class="field"><label for="topicSelect">内容专题</label><select id="topicSelect"><option value="all">全部专题</option><option value="myth">中国神话与传说</option><option value="folk">中国民间故事</option><option value="fairy">世界经典童话</option><option value="fable">寓言与智慧</option><option value="literature">儿童文学经典</option><option value="original">当代原创故事</option></select></div></div>
+          <div class="age-row" role="group" aria-label="按年龄筛选"><button class="age-button" type="button" data-age="all" aria-pressed="true">全部年龄</button><button class="age-button" type="button" data-age="0–2" aria-pressed="false">0–2 岁</button><button class="age-button" type="button" data-age="2–4" aria-pressed="false">2–4 岁</button><button class="age-button" type="button" data-age="4–6" aria-pressed="false">4–6 岁</button><button class="age-button" type="button" data-age="6–8" aria-pressed="false">6–8 岁</button><button class="age-button" type="button" data-age="8–12" aria-pressed="false">8–12 岁</button></div>
+          <p class="filter-note">当前为原型适龄建议，均待随具体版本复核。没有匹配内容时会如实留白，不用推荐算法补齐。</p>
+        </form>
+        <div class="result-bar"><p id="resultSummary" role="status">正在整理候选目录…</p><button class="clear-button" id="clearFilters" type="button">清除筛选</button></div>
+        <div class="story-grid" id="storyGrid"></div>
+      </div>
+    </section>
+    <section class="editors" id="editors" aria-labelledby="editorsTitle">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">编辑精选的策展说明</p><h2 id="editorsTitle">人工策展，不做热门榜</h2></div><p>这里演示编辑如何说明选择理由与核验重点，不依据点击量，也不表示已经完成事实、适龄或版权审核。</p></div>
+        <div class="editor-list">
+          <button class="editor-item" type="button" data-open="nuwa"><small>从故事的源头开始</small><strong>女娲补天</strong><span>先把典籍出处与现代儿童讲述分开，再讨论怎样共读。古老并不等于无需核对版本。</span><b>查看策展档案</b></button>
+          <button class="editor-item" type="button" data-open="chou"><small>一部作品，许多版本</small><strong>丑小鸭</strong><span>安徒生原作、中文译本、儿童改写与绘本分别建档。</span><b>查看版本关系</b></button>
+          <button class="editor-item" type="button" data-open="dao"><small>中国儿童文学入口</small><strong>稻草人</strong><span>从叶圣陶原作出发，继续核对具体文本、插图与使用权利。</span><b>查看核验事项</b></button>
+        </div>
+      </div>
+    </section>
+    <section class="recent" id="recent" aria-labelledby="recentTitle">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">最近整理的规划任务</p><h2 id="recentTitle">每一次整理，都留下线索</h2></div><p>以下内容摘自首批候选选题与对应核验重点，不表示近期新增上架，也不虚构更新日期。</p></div>
+        <div class="recent-list">
+          <article class="recent-row"><h3>精卫填海</h3><p>待核验：文献出处、改写文本。</p><button type="button" data-open="jing">查看目录档案</button></article>
+          <article class="recent-row"><h3>田螺姑娘</h3><p>待核验：采录地区与民间异文。</p><button type="button" data-open="tian">查看目录档案</button></article>
+          <article class="recent-row"><h3>青蛙王子</h3><p>待核验：格林版本与其他异文。</p><button type="button" data-open="qing">查看目录档案</button></article>
+          <article class="recent-row"><h3>木偶奇遇记</h3><p>待核验：原作、译本、节选与改写。</p><button type="button" data-open="mu">查看目录档案</button></article>
+        </div>
+      </div>
+    </section>
+    <section class="rights" id="rights" aria-labelledby="rightsTitle">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">版本与版权说明</p><h2 id="rightsTitle">先确认是哪一版，再决定怎样读</h2></div><p>能发现一部作品，不代表可以复制它；原作属于公版，也不代表现代译文、插画或录音可以直接使用。</p></div>
+        <div class="rights-layout">
+          <div><div class="version-map" aria-label="作品、文本版本与媒体资源关系"><div class="version-node"><strong>作品入口</strong><span>规范标题、作者或采录者、文化背景与别名。</span></div><div class="version-node"><strong>文本版本</strong><span>原作、译本、改写、节选与注释分别记录。</span></div><div class="version-node"><strong>媒体资源</strong><span>绘本插画、封面、朗读与录音独立核验。</span></div></div><p class="rights-copy">权利待核验时，只展示必要目录与合规来源，不提供正文或媒体。本原型没有展示任何故事正文；如后续加入排版样张，必须明确标注「排版演示文字，非正式馆藏正文」。</p></div>
+          <aside class="target-card"><span class="target-number">100</span><div><h3>首批目录建设目标</h3><p>目标是建立经过初步筛选的故事作品档案，不是承诺 100 篇正文、插画或音频可立即公开。</p></div><ul class="rights-list"><li>原作与现代译文分别判断</li><li>改写、缩写与注释分别记录</li><li>插画、封面与版式独立授权</li><li>朗读表演与录音制品分别核验</li></ul></aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><h2 class="footer-title">童年书房的儿童故事馆</h2><p class="footer-copy">A1「故事正在发生」单文件交互方向稿。内容依据《儿童故事馆建设方案》v1.0（2026-11-18）；候选不等于上架，权利待核验不等于可公开使用。</p></div><nav class="footer-links" aria-label="页脚导航"><a href="#topics">专题发现</a><a href="#discover">标题搜索</a><a href="#recent">整理任务</a><a href="#rights">权利说明</a></nav></div></footer>
+  <dialog class="story-dialog" id="storyDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-head"><span>候选作品档案（仅目录信息）</span><button class="close-button" id="closeStory" type="button">关闭</button></div>
+    <div class="dialog-content"><h2 id="dialogTitle"></h2><p class="dialog-description" id="dialogMeta"></p><p class="dialog-description" id="dialogAges"></p><div class="dialog-actions"><button class="secondary-button" id="dialogSave" type="button">收藏</button></div>
+      <div class="tabs" role="tablist" aria-label="作品档案栏目"><button class="tab-button" id="tabIntro" type="button" role="tab" aria-selected="true" aria-controls="panelIntro" data-tab="intro">简介</button><button class="tab-button" id="tabVersion" type="button" role="tab" aria-selected="false" aria-controls="panelVersion" data-tab="version">版本档案</button><button class="tab-button" id="tabRights" type="button" role="tab" aria-selected="false" aria-controls="panelRights" data-tab="rights">来源与权利</button></div>
+      <section class="tab-panel" id="panelIntro" role="tabpanel" aria-labelledby="tabIntro"><h3>原型编辑概述</h3><p id="dialogSynopsis"></p><p>本段用于目录信息设计，不是正式故事正文。适龄建议仅辅助发现，需结合具体文本长度、主题复杂度与改写程度复核。</p></section>
+      <section class="tab-panel" id="panelVersion" role="tabpanel" aria-labelledby="tabVersion" hidden><h3>作品与版本分开建档</h3><table class="archive-table"><tbody><tr><th>作品身份</th><td id="archiveIdentity"></td></tr><tr><th>版本关系</th><td id="archiveVersion"></td></tr><tr><th>适龄状态</th><td>原型建议，待编辑随具体版本审核</td></tr><tr><th>公开状态</th><td>候选目录，未提供正文、绘本或朗读媒体</td></tr></tbody></table></section>
+      <section class="tab-panel" id="panelRights" role="tabpanel" aria-labelledby="tabRights" hidden><h3>来源线索与使用边界</h3><p>规划依据：《儿童故事馆建设方案》v1.0「第一批候选选题（示例）」及对应核验重点。</p><p id="rightsCheck"></p><p>合规来源链接须在逐条核验后补充。发现作品、在线可读或平台收录，都不自动构成转载许可。</p><p class="rights-warning">权利待核验。本档案不代表已授权、已确认公版或允许转载。</p></section>
+    </div>
+  </dialog>
+  <dialog class="shelf-dialog" id="shelfDialog" aria-labelledby="shelfTitle"><div class="dialog-head"><span>保存在此浏览器</span><button class="close-button" id="closeShelf" type="button">关闭</button></div><div class="shelf-content"><h2 id="shelfTitle">我的书架</h2><p>本地原型书架只保存收藏，不含社交、积分、打卡与排行榜。</p><div class="shelf-list" id="shelfList"></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    const stories=[
+      {id:'nuwa',title:'女娲补天',char:'娲',topic:'myth',topicName:'中国神话与传说',ages:['4–6','6–8'],color:'#e7bf76',identity:'中国神话；具体典籍出处与现代讲述者待核验',version:'典籍线索、现代讲述版本与儿童改写分别建档。',check:'核验重点：典籍出处、现代讲述版本。',synopsis:'天空破裂之后，女娲炼石修补天地。目录需区分典籍线索与后来的儿童讲述。'},
+      {id:'jing',title:'精卫填海',char:'卫',topic:'myth',topicName:'中国神话与传说',ages:['4–6','6–8'],color:'#c7dce4',identity:'中国神话；文献出处与改写者待核验',version:'文献线索、现代改写文本分别建档。',check:'核验重点：文献出处、改写文本。',synopsis:'一只鸟不断衔来木石投向大海，故事在坚持与自然的想象中被反复讲述。'},
+      {id:'tian',title:'田螺姑娘',char:'螺',topic:'folk',topicName:'中国民间故事',ages:['2–4','4–6'],color:'#d7e3cf',identity:'中国民间故事；采录地区、讲述者与采录者待核验',version:'不同地区、讲述者或采录版本作为异文保留。',check:'核验重点：采录地区与异文。',synopsis:'从田间邂逅到生活互助，民间异文与采录地区是这份档案的整理重点。'},
+      {id:'shou',title:'守株待兔',char:'株',topic:'fable',topicName:'寓言与智慧',ages:['4–6','6–8'],color:'#ead6b8',identity:'中国寓言；古籍出处与现代注释者待核验',version:'古籍线索、现代注释与儿童改写分别建档。',check:'核验重点：古籍出处、现代注释权利。',synopsis:'一次偶然得来的兔子，让农夫守在树旁；原典与现代注释不可混为一版。'},
+      {id:'dao',title:'稻草人',char:'稻',topic:'literature',topicName:'儿童文学经典',ages:['6–8','8–12'],color:'#c9d9c4',identity:'叶圣陶原作；具体出版与文本版本待核验',version:'原作、具体文本版本与插图资源分别建档。',check:'核验重点：叶圣陶原作、版本和插图。',synopsis:'以田间的稻草人为视点，看见他人的处境；具体文本、插图与版本权利分别建档。'},
+      {id:'chou',title:'丑小鸭',char:'鸭',topic:'fairy',topicName:'世界经典童话',ages:['4–6','6–8'],color:'#d2dfed',identity:'安徒生文学童话；中文译者与改写者待核验',version:'安徒生原作、中文译本、儿童改写本与绘本分别建档。',check:'核验重点：安徒生原作、译本和改写本。',synopsis:'从被排斥到发现自己，安徒生原作、中文译本与儿童改写本需要清楚区分。'},
+      {id:'qing',title:'青蛙王子',char:'蛙',topic:'fairy',topicName:'世界经典童话',ages:['4–6','6–8'],color:'#c9ddc9',identity:'格林童话候选；具体版本与其他异文待核验',version:'格林版本、其他异文与现代儿童改写分别建档。',check:'核验重点：格林版本与其他异文。',synopsis:'金球、水井与一位公主的约定；格林版本及其他异文分别核验。'},
+      {id:'ai',title:'爱丽丝梦游仙境',char:'爱',topic:'literature',topicName:'儿童文学经典',ages:['8–12'],color:'#ddd4e6',identity:'英国幻想文学候选；原作、译者与插画师待核验',version:'原作、中文译本与插画版本分别建立关联。',check:'核验重点：原作、译本、插画版本。',synopsis:'追随白兔进入奇异世界；原作、译本与插画版本构成不同的阅读入口。'},
+      {id:'lv',title:'绿野仙踪',char:'绿',topic:'literature',topicName:'儿童文学经典',ages:['6–8','8–12'],color:'#d1e0be',identity:'儿童幻想文学候选；原作、译者与改编者待核验',version:'原作、中文译本与后续改编分别建档。',check:'核验重点：原作、译本与改编作品。',synopsis:'一段通往奥兹国的旅程；原作、中文译本与后续改编分别建立版本关系。'},
+      {id:'mu',title:'木偶奇遇记',char:'木',topic:'literature',topicName:'儿童文学经典',ages:['6–8','8–12'],color:'#ead2bd',identity:'意大利儿童文学候选；原作、译者与改写者待核验',version:'原作、译本、节选本和改写本分别建档。',check:'核验重点：原作、译本、节选和改写。',synopsis:'木偶在冒险中学习与世界相处；原作、译本、节选与改写不可混同。'}
+    ];
+    const state={topic:'all',age:'all',query:'',current:null};
+    const grid=document.getElementById('storyGrid'),search=document.getElementById('searchInput'),topicSelect=document.getElementById('topicSelect');
+    const storyDialog=document.getElementById('storyDialog'),shelfDialog=document.getElementById('shelfDialog');
+    let saved=new Set(),toastTimer;
+    try{saved=new Set(JSON.parse(localStorage.getItem('childhood-story-shelf')||'[]'))}catch(e){saved=new Set()}
+    function persist(){try{localStorage.setItem('childhood-story-shelf',JSON.stringify([...saved]))}catch(e){}}
+    function notify(message){const toast=document.getElementById('toast');toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
+    function saveLabel(id){return saved.has(id)?'已收藏，点击移出':'收藏'}
+    function updateSavedUI(){document.getElementById('savedCount').textContent=saved.size;document.querySelectorAll('[data-save]').forEach(btn=>{const on=saved.has(btn.dataset.save);btn.textContent=saveLabel(btn.dataset.save);btn.classList.toggle('is-saved',on);btn.setAttribute('aria-pressed',String(on))});if(state.current)document.getElementById('dialogSave').textContent=saveLabel(state.current)}
+    function toggleSave(id){const title=stories.find(s=>s.id===id).title;if(saved.has(id)){saved.delete(id);notify(`已将《${title}》移出书架`)}else{saved.add(id);notify(`已收藏《${title}》`)}persist();updateSavedUI();renderShelf()}
+    function cardTemplate(s){return `<article class="story-card"><div class="mini-cover" style="--cover:${s.color}"><span class="cover-char">${s.char}</span><span class="cover-type"><span>${s.topicName}</span><span>候选目录</span></span></div><div class="story-card-body"><h3>${s.title}</h3><p>${s.synopsis}</p><div class="story-meta"><span>原型适龄建议</span><span>${s.ages.join(' / ')} 岁</span></div><span class="rights-label">权利待核验，仅目录</span><div class="card-actions"><button class="primary-button" type="button" data-open="${s.id}">查看档案</button><button class="secondary-button" type="button" data-save="${s.id}">${saveLabel(s.id)}</button></div></div></article>`}
+    function filteredStories(){return stories.filter(s=>(state.topic==='all'||s.topic===state.topic)&&(state.age==='all'||s.ages.includes(state.age))&&s.title.toLowerCase().includes(state.query.toLowerCase()))}
+    function renderStories(){const items=filteredStories();grid.innerHTML=items.length?items.map(cardTemplate).join(''):`<div class="empty-state"><strong>这个组合暂时没有候选作品</strong><p>可更换年龄或专题；这里不会把空缺包装成已上架内容。</p></div>`;document.getElementById('resultSummary').textContent=items.length?`当前筛选显示 ${items.length} 条本页候选目录，均非上架声明。`:'当前条件没有匹配的本页候选目录。';updateSavedUI()}
+    function syncTopic(topic,scroll=false){state.topic=topic;topicSelect.value=topic;document.querySelectorAll('.topic-card').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.topicLink===topic)));renderStories();if(scroll){const top=document.getElementById('discover').getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}}
+    function setTab(name){document.querySelectorAll('[data-tab]').forEach(btn=>{const tabName=btn.dataset.tab,active=tabName===name;btn.setAttribute('aria-selected',String(active));document.getElementById(`panel${tabName[0].toUpperCase()+tabName.slice(1)}`).hidden=!active})}
+    function openStory(id){const s=stories.find(item=>item.id===id);if(!s)return;state.current=id;document.getElementById('dialogTitle').textContent=s.title;document.getElementById('dialogMeta').textContent=`${s.topicName}，候选目录`;document.getElementById('dialogAges').textContent=`原型适龄建议：${s.ages.join(' / ')} 岁，仅用于发现而非能力测评`;document.getElementById('dialogSynopsis').textContent=s.synopsis;document.getElementById('archiveIdentity').textContent=s.identity;document.getElementById('archiveVersion').textContent=s.version;document.getElementById('rightsCheck').textContent=s.check;setTab('intro');updateSavedUI();storyDialog.showModal()}
+    function renderShelf(){const box=document.getElementById('shelfList');const items=stories.filter(s=>saved.has(s.id));box.innerHTML=items.length?items.map(s=>`<article class="shelf-item"><strong>${s.title}</strong><span>${s.topicName}<br>权利待核验</span><div class="card-actions"><button class="primary-button" type="button" data-shelf-open="${s.id}">查看档案</button><button class="secondary-button" type="button" data-save="${s.id}">移出书架</button></div></article>`).join(''):'<div class="shelf-empty">书架还是空的。可在候选作品卡或档案弹窗中收藏。</div>';updateSavedUI()}
+    document.addEventListener('click',event=>{const open=event.target.closest('[data-open]'),save=event.target.closest('[data-save]'),topic=event.target.closest('[data-topic-link]'),shelfOpen=event.target.closest('[data-shelf-open]');if(open)openStory(open.dataset.open);if(save)toggleSave(save.dataset.save);if(topic)syncTopic(topic.dataset.topicLink,true);if(shelfOpen){shelfDialog.close();openStory(shelfOpen.dataset.shelfOpen)}});
+    search.addEventListener('input',()=>{state.query=search.value.trim();renderStories()});
+    topicSelect.addEventListener('change',()=>syncTopic(topicSelect.value));
+    document.querySelectorAll('[data-age]').forEach(btn=>btn.addEventListener('click',()=>{state.age=btn.dataset.age;document.querySelectorAll('[data-age]').forEach(item=>item.setAttribute('aria-pressed',String(item===btn)));renderStories()}));
+    document.getElementById('clearFilters').addEventListener('click',()=>{state.age='all';state.query='';search.value='';document.querySelectorAll('[data-age]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.age==='all')));syncTopic('all')});
+    document.getElementById('closeStory').addEventListener('click',()=>storyDialog.close());
+    document.getElementById('dialogSave').addEventListener('click',()=>{if(state.current)toggleSave(state.current)});
+    document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>setTab(btn.dataset.tab)));
+    document.getElementById('openShelf').addEventListener('click',()=>{renderShelf();shelfDialog.showModal()});
+    document.getElementById('closeShelf').addEventListener('click',()=>shelfDialog.close());
+    [storyDialog,shelfDialog].forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()}));
+    const menuButton=document.getElementById('menuButton'),mobileMenu=document.getElementById('mobileMenu');
+    menuButton.addEventListener('click',()=>{const open=mobileMenu.hidden;mobileMenu.hidden=!open;menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'收起':'菜单'});
+    mobileMenu.addEventListener('click',event=>{if(event.target.matches('a')){mobileMenu.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.textContent='菜单'}});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!mobileMenu.hidden){mobileMenu.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.textContent='菜单';menuButton.focus()}});
+    renderStories();renderShelf();
+  </script>
+</body>
+</html>
