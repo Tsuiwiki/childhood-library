@@ -31,7 +31,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 
 ## 当前开发状态
 
-**当前阶段：Phase 0 已完成基础设计；Phase 0.5 静态原型验证已取得进展；正式资源管理 MVP 尚未开始。**
+**当前阶段：Phase 0 / 0.5 已完成；Phase 1 文档基线、目标架构与迁移方案已定稿，正式资源管理 MVP 尚未开始实施。**
 
 仓库已经包含音乐馆、故事馆、诗词馆等静态页面原型、JSON 内容配置、Python 数据构建/整理/校验脚本，以及音乐本地试听和官方短时试听实验。当前尚无正式 FastAPI 服务、PostgreSQL 数据库迁移、统一编辑后台和生产级采集任务系统。
 
@@ -65,10 +65,12 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 ├── docs/                    # 项目原则、产品/架构/数据/版权/路线图文档
 ├── design-demos/            # 当前静态页面、JSON 数据、Python 构建脚本和原型素材
 ├── story-library.html       # 故事馆相关静态原型入口
-├── backend/                 # 正式后端（后续迭代）
-├── frontend/                # 正式 Web 前台与管理后台（后续迭代）
-├── ingestion/               # 标准化采集适配器与任务（后续迭代）
-└── deploy/                  # 本地及生产部署配置（后续迭代）
+├── backend/                 # 正式后端（规划中，尚未创建）
+├── frontend/                # 正式 Web 前台与管理后台（规划中，尚未创建）
+├── ingestion/               # 标准化采集适配器与任务（规划中，尚未创建）
+├── deploy/                  # Compose / 备份恢复配置骨架（源码已入库，尚未在 VM 启用）
+├── scripts/                 # 资产盘点等只读工具
+└── docs/reports/            # 资产完整性与迁移报告
 ```
 
 ## 文档导航
@@ -86,12 +88,22 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 - [开发进度盘点](docs/DEVELOPMENT_STATUS.md)
 
 ### 儿童音乐馆
+- [音乐馆统一规划入口（MASTER PLAN）](docs/MUSIC_LIBRARY_MASTER_PLAN.md)
 - [儿童经典音乐资源库 V1.0 规划](docs/MUSIC_LIBRARY_V1.md)
 - [音乐馆设计：歌曲目录、版权与播放资源](docs/MUSIC_LIBRARY_DESIGN.md)
 - [音乐馆实施优化方案](docs/MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md)
 - [经典儿童歌曲候选目录（首批采集）](docs/CLASSIC_SONGS_CATALOG.md)
 - [中国经典儿歌研究与资源采集](docs/CHINESE_CLASSIC_SONGS_RESEARCH.md)
 - [中国儿童歌曲500首研究目录](docs/CHINESE_CHILDRENS_SONGS_500_CATALOG.md)
+
+### 工程、迁移与环境
+- [项目现状审计报告](docs/PROJECT_AUDIT.md)
+- [目标架构与数据库设计](docs/DATABASE_DESIGN.md)
+- [远程开发环境方案](docs/REMOTE_DEVELOPMENT_ENVIRONMENT.md)
+- [音乐馆重构计划](docs/MUSIC_LIBRARY_REFACTOR_PLAN.md)
+- [数据迁移方案](docs/DATA_MIGRATION_PLAN.md)
+- [实施路线与任务清单](docs/IMPLEMENTATION_ROADMAP.md)
+- [资产与媒体完整性清单](docs/reports/asset-inventory.md)
 
 ### 儿童故事馆与其他内容馆
 - [儿童故事馆建设方案 v1.1（图文版）](docs/STORY_LIBRARY_PLAN_V1.md)

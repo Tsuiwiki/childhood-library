@@ -1,7 +1,7 @@
 # 数据模型设计
 
 - 文档状态：Draft
-- 版本：0.1
+- 版本：0.2
 
 ## 1. 建模原则
 
@@ -295,3 +295,24 @@ CREATE TABLE review_records (
 外部官方预览、官方嵌入和站内托管文件统一由 `playback_resources` 表达，但必须区分 `resource_type` 和访问策略。临时签名 URL 不作为永久数据保存；播放请求应经过权利与发布状态检查后按需签发。
 
 **重要约束：** 研究登记不授权保存第三方媒体；私有 Bucket 默认拒绝匿名访问；只有权利审核通过且符合发布策略的资产才可进入公开播放流程。
+
+## 11. 音乐馆 10 实体与通用层命名映射（2026-11-19 补充）
+
+§2 定义的是**跨馆通用层**；[音乐馆实施优化方案](MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md) §3 定义的是**音乐领域层**。二者不是重复表，落库时按以下映射统一命名，避免建出双份实体：
+
+| 通用层（本文 §2 / §9） | 音乐领域层（实施基准） | 处理 |
+| --- | --- | --- |
+| `works` | `Work` | 同一主记录；音乐特有字段走 `music_work_profile` 或 JSONB 扩展，不改通用表语义 |
+| `authors` + `work_contributors` | `Contribution` | 统一为角色关联，角色枚举见实施基准 §3.2 |
+| `work_contents` | `WorkVersion` | 音乐侧细化为歌词/语言/译配/改编版本 |
+| `song_versions` | `RecordingVersion` | 统一采用 `RecordingVersion`，`song_versions` 仅作历史别名 |
+| `media_assets` | `MediaAsset` | 统一采用 `MediaAsset` + `StorageLocation` |
+| `playback_resources` | `PlaybackResource` | 统一采用 `PlaybackResource`，外链/官方预览/站内托管分型 |
+| — | `ScoreEdition` | 新增：简谱 / 五线谱 / MusicXML / SVG 派生关系 |
+| `sources` + `source_items` | `SourceRecord` | 统一为证据记录，保留 `evidence_scope` 与 `confidence` |
+| `rights_records` | `RightsRecord` | 统一：分对象（作品/版本/媒体）、地域、用途、期限 |
+| `review_records` | `EditorialReview` | 统一：内容 + 审美 + 儿童适宜性，针对具体版本评审 |
+
+**状态模型不变**：`research_status` / `rights_status` / `quality_status` / `access_method` / `publication_status` 五维独立（§4、§6）；发布门禁必须检查所有待公开资产的权利状态（§6）。
+
+完整主键、唯一性、状态流转与 DDL 见 [数据库设计](DATABASE_DESIGN.md)。

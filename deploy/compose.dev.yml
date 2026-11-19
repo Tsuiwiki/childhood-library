@@ -1,0 +1,15 @@
+# Development overlay. Use with:
+#   docker compose -p cl-dev -f deploy/docker-compose.yml -f deploy/compose.dev.yml up -d
+
+services:
+  db:
+    environment:
+      POSTGRES_DB: ${CL_DEV_DB_NAME:-childhood_library_dev}
+    ports:
+      - "127.0.0.1:${CL_DEV_DB_PORT:-55432}:5432"
+    volumes:
+      - cl-dev-db-data:/var/lib/postgresql/data
+      - ${MEDIA_ROOT:-./var/media}:/app/var/media
+
+volumes:
+  cl-dev-db-data:

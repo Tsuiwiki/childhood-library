@@ -1,0 +1,39 @@
+# Childhood Library - base Compose skeleton
+#
+# STATUS: source skeleton only. NOT enabled on the remote VM yet (see docs/REMOTE_DEVELOPMENT_ENVIRONMENT.md).
+# Only PostgreSQL is defined here; api / web / nginx are added after T-05 and T-08.
+#
+# SECURITY: every internal port is bound to 127.0.0.1. The VM has firewalld inactive,
+# so a 0.0.0.0 binding would be reachable from the public network. Never expose
+# the database port or admin tools publicly.
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?set POSTGRES_DB in .env}
+      POSTGRES_USER: ${POSTGRES_USER:?set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${CL_DB_PORT:-55432}:5432"
+    volumes:
+      - cl-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+# Use an explicit project name per environment:
+#   development: -p cl-dev
+#   testing:     -p cl-test  (with compose.test.yml, separate volume and database)
+# Two environments must never share a database, media volume or .env.
+
+volumes:
+  cl-db-data:

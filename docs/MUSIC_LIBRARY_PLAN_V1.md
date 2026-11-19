@@ -3,7 +3,7 @@
 > **Childhood Library · Music Library**
 >
 > 版本：v1.0  
-> 状态：产品与内容规划基线  
+> 状态：产品与内容规划基线（**历史扩展版**，内容保留；当前产品定位基准以 `MUSIC_LIBRARY_V1.md` 为准，统一入口见 `MUSIC_LIBRARY_MASTER_PLAN.md`）  
 > 更新日期：2026-11-18  
 > 定位：以中国经典为根，以世界经典为窗，以优秀原创为未来。
 

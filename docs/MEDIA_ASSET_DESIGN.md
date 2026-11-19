@@ -1,7 +1,7 @@
 # 统一媒体资产与对象存储设计
 
 - 文档状态：Design Proposal
-- 版本：1.0
+- 版本：1.1
 - 更新日期：2026-11-19
 - 适用范围：音乐馆、故事馆、诗词馆及后续所有媒体内容模块
 
@@ -257,3 +257,15 @@ childhood-library/
 - [音乐馆实施优化方案](MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md)
 - [项目路线图](ROADMAP.md)
 - [版权与内容审核政策](COPYRIGHT_POLICY.md)
+
+## 13. 本地资产清单与迁移前校验（2026-11-19 补充）
+
+本节不改动 §6 数据模型与 §8 访问控制，只补第一阶段落地要求：
+
+1. **先盘点再迁移**：以 `scripts/asset_inventory.py` 生成只读清单，输出配置引用数、唯一文件数、实际文件数、缺失、孤立、重复、SHA-256、大小、格式与时长；报告落在 `docs/reports/asset-inventory.md`。
+2. **基线数字**：`samples.json` 58 条 / 63 版本 / 62 个唯一文件名；本地 85 个真实音频；62 个引用零缺失、23 个孤儿文件、3 条缺 `sampleType`。这些数字是本地工作区口径，GitHub `main` 因 `.gitignore` 不托管二进制媒体。
+3. **权利门禁**：27 个 `internal` 研究录音、21 个 `generated` 合成示范音、5 个官方短时预览与站内授权媒体分别登记；`internal` 只进研究层，不自动进入公开播放目录。
+4. **StorageProvider 顺序**：先本地适配器验证 put/get/stat/delete/Range 与校验和；COS/BOS 仅保留接口与配置位，本阶段不采购、不上传第三方媒体。
+5. **备份与迁移**：媒体与数据库使用独立 volume；备份同时校验 checksum，恢复演练先在 testing 环境完成。孤儿文件在迁移报告中单列，不自动删除。
+
+关联：[数据迁移方案](DATA_MIGRATION_PLAN.md)、[项目现状审计报告](PROJECT_AUDIT.md)。

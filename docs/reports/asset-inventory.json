@@ -1,0 +1,924 @@
+{
+  "summary": {
+    "generatedOn": "2026-11-19 15:33:33",
+    "scope": "local design-demos working tree (GitHub main excludes binary media via .gitignore)",
+    "mode": "read-only; no media file was modified, moved or deleted",
+    "sampleEntries": 58,
+    "recordingVersions": 63,
+    "uniqueAudioReferences": 62,
+    "actualAudioFiles": 85,
+    "missingReferences": 0,
+    "orphanFiles": 23,
+    "entriesWithoutSampleType": 3,
+    "sampleTypeCounts": {
+      "MISSING": 3,
+      "generated": 21,
+      "internal": 26,
+      "open": 8
+    },
+    "officialPreviews": 5,
+    "researchCollectionFiles": 27,
+    "researchCollectionMappings": 28,
+    "worldMaterials": 47,
+    "worldAudioPending": 47,
+    "catalogWorks": 105,
+    "extensionCounts": {
+      ".flac": 1,
+      ".html": 23,
+      ".jpg": 3,
+      ".json": 13,
+      ".m4a": 16,
+      ".md": 5,
+      ".mp3": 15,
+      ".mp4": 1,
+      ".musicxml": 14,
+      ".png": 161,
+      ".py": 26,
+      ".svg": 119,
+      ".wav": 52
+    }
+  },
+  "audio": [
+    {
+      "file": "CN-C01-original.mp3",
+      "path": "design-demos/audio/CN-C01-original.mp3",
+      "ext": ".mp3",
+      "bytes": 6965063,
+      "sha256": "f362616eb1cca71ab438fbdb739b3dcc2d159f9eef35dce7a8b873fdb48c7f75",
+      "duration_seconds": 143.69,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C02-gxzf.flac",
+      "path": "design-demos/audio/CN-C02-gxzf.flac",
+      "ext": ".flac",
+      "bytes": 16005871,
+      "sha256": "541db2ffc65ddd656d4f2bcbc7bb4e239def32f301dfecad4b4dd03beac91998",
+      "duration_seconds": 189.68,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C02-xuexi-chorus.m4a",
+      "path": "design-demos/audio/CN-C02-xuexi-chorus.m4a",
+      "ext": ".m4a",
+      "bytes": 2965673,
+      "sha256": "8ec9568caba8e243a793974c5c7845d7f955a5bba91dc2ca2c304c19339bebd8",
+      "duration_seconds": 187.07,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C02.wav",
+      "path": "design-demos/audio/CN-C02.wav",
+      "ext": ".wav",
+      "bytes": 478348,
+      "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
+      "duration_seconds": 10.85,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C03-original.mp4",
+      "path": "design-demos/audio/CN-C03-original.mp4",
+      "ext": ".mp4",
+      "bytes": 7242213,
+      "sha256": "8b77aa56b45afc921bd848ea13f4c94e5f2a1d3b2434bb94b1e6ed516522fcad",
+      "duration_seconds": 66.73,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C03-xuexi-chorus.mp3",
+      "path": "design-demos/audio/CN-C03-xuexi-chorus.mp3",
+      "ext": ".mp3",
+      "bytes": 3722200,
+      "sha256": "252c84360cfe10a899bb6e2b045fa724e2f452b3cc591705edccbf7e8a9627f1",
+      "duration_seconds": 155.01,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C04-CN-C16-xuexi.mp3",
+      "path": "design-demos/audio/CN-C04-CN-C16-xuexi.mp3",
+      "ext": ".mp3",
+      "bytes": 3472052,
+      "sha256": "8b5c2f16ea82e199655cd1bd2fdfd6707eacf3c794268dc76950650acf94e6a1",
+      "duration_seconds": 144.59,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C04.wav",
+      "path": "design-demos/audio/CN-C04.wav",
+      "ext": ".wav",
+      "bytes": 411314,
+      "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
+      "duration_seconds": 9.33,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C05-cctv.m4a",
+      "path": "design-demos/audio/CN-C05-cctv.m4a",
+      "ext": ".m4a",
+      "bytes": 312337,
+      "sha256": "32aaca82a675d51ae5735f8769585167d19937f763fe0e81761c7ce4dfbe64b3",
+      "duration_seconds": 80.09,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C05.wav",
+      "path": "design-demos/audio/CN-C05.wav",
+      "ext": ".wav",
+      "bytes": 478348,
+      "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
+      "duration_seconds": 10.85,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C06-xuexi.mp3",
+      "path": "design-demos/audio/CN-C06-xuexi.mp3",
+      "ext": ".mp3",
+      "bytes": 2129149,
+      "sha256": "b71237e91c53854deb9e5acca8a3aede606de6c01c77bbdd0a8f9cf531fb044e",
+      "duration_seconds": 88.63,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C06.wav",
+      "path": "design-demos/audio/CN-C06.wav",
+      "ext": ".wav",
+      "bytes": 478348,
+      "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
+      "duration_seconds": 10.85,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C07-xuexi.mp3",
+      "path": "design-demos/audio/CN-C07-xuexi.mp3",
+      "ext": ".mp3",
+      "bytes": 2480861,
+      "sha256": "84cb3bf3b5dfb287d7ea1f910e96776401743e339078aa5142f4b58412ee3f25",
+      "duration_seconds": 103.29,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C07.wav",
+      "path": "design-demos/audio/CN-C07.wav",
+      "ext": ".wav",
+      "bytes": 453424,
+      "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
+      "duration_seconds": 10.28,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C08-cctv-hsl.m4a",
+      "path": "design-demos/audio/CN-C08-cctv-hsl.m4a",
+      "ext": ".m4a",
+      "bytes": 353743,
+      "sha256": "e731e5ce906b5cbaff3488efcd0ad6fd89ddf2e981c907112dfb85e5c485c6be",
+      "duration_seconds": 91.09,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C08-cctv-mgzg.m4a",
+      "path": "design-demos/audio/CN-C08-cctv-mgzg.m4a",
+      "ext": ".m4a",
+      "bytes": 667861,
+      "sha256": "1d30a32b909177dfc07d70906db5f73589da60dd9cd88083ede432dfd8b2cfec",
+      "duration_seconds": 172.25,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C08.wav",
+      "path": "design-demos/audio/CN-C08.wav",
+      "ext": ".wav",
+      "bytes": 431220,
+      "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
+      "duration_seconds": 9.78,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C09-cctv.m4a",
+      "path": "design-demos/audio/CN-C09-cctv.m4a",
+      "ext": ".m4a",
+      "bytes": 333529,
+      "sha256": "a2c27f72bdde5aa80412e673256fa474946c734f4fa42e3f5a16444002cece09",
+      "duration_seconds": 85.99,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C09.wav",
+      "path": "design-demos/audio/CN-C09.wav",
+      "ext": ".wav",
+      "bytes": 411314,
+      "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
+      "duration_seconds": 9.33,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C10-original.mp3",
+      "path": "design-demos/audio/CN-C10-original.mp3",
+      "ext": ".mp3",
+      "bytes": 3255302,
+      "sha256": "58c8cfba39e7121f5c71929e34aa699e52aaf9dbf58ed9718376affe48a6e49f",
+      "duration_seconds": 203.37,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C11-xuexi.m4a",
+      "path": "design-demos/audio/CN-C11-xuexi.m4a",
+      "ext": ".m4a",
+      "bytes": 2882544,
+      "sha256": "d07b03e3547ca7f6caf5be67faef655fe697aaa193e4529df9031957c11f0ece",
+      "duration_seconds": 283.2,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C11.wav",
+      "path": "design-demos/audio/CN-C11.wav",
+      "ext": ".wav",
+      "bytes": 411314,
+      "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
+      "duration_seconds": 9.33,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C12-xuexi-galaxy.m4a",
+      "path": "design-demos/audio/CN-C12-xuexi-galaxy.m4a",
+      "ext": ".m4a",
+      "bytes": 1052493,
+      "sha256": "e943bfcd8c860804880fbc8ad0183f7d03fa18ec3cb4d4d17269fc118ed4a6f7",
+      "duration_seconds": 251.6,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C12.wav",
+      "path": "design-demos/audio/CN-C12.wav",
+      "ext": ".wav",
+      "bytes": 506522,
+      "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
+      "duration_seconds": 11.48,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C13-xuexi.mp3",
+      "path": "design-demos/audio/CN-C13-xuexi.mp3",
+      "ext": ".mp3",
+      "bytes": 5142843,
+      "sha256": "578d5399f32249a691c8a22f1442f4b83337bb640c62a6407565998c9e24bd3e",
+      "duration_seconds": 214.21,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C13.wav",
+      "path": "design-demos/audio/CN-C13.wav",
+      "ext": ".wav",
+      "bytes": 453424,
+      "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
+      "duration_seconds": 10.28,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C14-xuexi.mp3",
+      "path": "design-demos/audio/CN-C14-xuexi.mp3",
+      "ext": ".mp3",
+      "bytes": 700355,
+      "sha256": "e083a891c2d79c472c327d4ed502b8852e28d1e926f574a42706131430651289",
+      "duration_seconds": 29.1,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C14.wav",
+      "path": "design-demos/audio/CN-C14.wav",
+      "ext": ".wav",
+      "bytes": 431220,
+      "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
+      "duration_seconds": 9.78,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C15-xuexi.mp3",
+      "path": "design-demos/audio/CN-C15-xuexi.mp3",
+      "ext": ".mp3",
+      "bytes": 1633240,
+      "sha256": "d7f7ae445780e393b0d879163ea9fc882294a95a58cd97248479226ef39414c3",
+      "duration_seconds": 67.97,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C15.wav",
+      "path": "design-demos/audio/CN-C15.wav",
+      "ext": ".wav",
+      "bytes": 431220,
+      "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
+      "duration_seconds": 9.78,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C16.wav",
+      "path": "design-demos/audio/CN-C16.wav",
+      "ext": ".wav",
+      "bytes": 506522,
+      "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
+      "duration_seconds": 11.48,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C17-xuexi.mp3",
+      "path": "design-demos/audio/CN-C17-xuexi.mp3",
+      "ext": ".mp3",
+      "bytes": 2605622,
+      "sha256": "401b5d2f1a1a7ed6c944eb0213a8be4a1ad8728b724dc16792d07a1c8dfd0db9",
+      "duration_seconds": 108.49,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C17.wav",
+      "path": "design-demos/audio/CN-C17.wav",
+      "ext": ".wav",
+      "bytes": 506522,
+      "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
+      "duration_seconds": 11.48,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C18-hbwy.m4a",
+      "path": "design-demos/audio/CN-C18-hbwy.m4a",
+      "ext": ".m4a",
+      "bytes": 1440429,
+      "sha256": "32e2c86816982f35833bf9d0bcf15326490c99f67b89a6a0a2affa5c46e54d19",
+      "duration_seconds": 93.16,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C18.wav",
+      "path": "design-demos/audio/CN-C18.wav",
+      "ext": ".wav",
+      "bytes": 478348,
+      "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
+      "duration_seconds": 10.85,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C19-xuexi.mp3",
+      "path": "design-demos/audio/CN-C19-xuexi.mp3",
+      "ext": ".mp3",
+      "bytes": 3204349,
+      "sha256": "bf679209d9e46767983a769cb553c5d40c3c1eec4c1d438b5c33f07aa54e710e",
+      "duration_seconds": 133.43,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C19.wav",
+      "path": "design-demos/audio/CN-C19.wav",
+      "ext": ".wav",
+      "bytes": 411314,
+      "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
+      "duration_seconds": 9.33,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C20-cctv.m4a",
+      "path": "design-demos/audio/CN-C20-cctv.m4a",
+      "ext": ".m4a",
+      "bytes": 284161,
+      "sha256": "fbb51fce155822d69dd0fba8bbf4a2f8d79f2ca31be40214490bac862fa19974",
+      "duration_seconds": 73.26,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C20.wav",
+      "path": "design-demos/audio/CN-C20.wav",
+      "ext": ".wav",
+      "bytes": 506522,
+      "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
+      "duration_seconds": 11.48,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C21-cctv.m4a",
+      "path": "design-demos/audio/CN-C21-cctv.m4a",
+      "ext": ".m4a",
+      "bytes": 226972,
+      "sha256": "45031ca204f73dd53186f1ecf9529fee7f5af7c1e9147640bd12c45e85078e97",
+      "duration_seconds": 58.39,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-C21.wav",
+      "path": "design-demos/audio/CN-C21.wav",
+      "ext": ".wav",
+      "bytes": 453424,
+      "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
+      "duration_seconds": 10.28,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-C22.wav",
+      "path": "design-demos/audio/CN-C22.wav",
+      "ext": ".wav",
+      "bytes": 506522,
+      "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
+      "duration_seconds": 11.48,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-C23.wav",
+      "path": "design-demos/audio/CN-C23.wav",
+      "ext": ".wav",
+      "bytes": 431220,
+      "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
+      "duration_seconds": 9.78,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-C24.wav",
+      "path": "design-demos/audio/CN-C24.wav",
+      "ext": ".wav",
+      "bytes": 411314,
+      "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
+      "duration_seconds": 9.33,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-C25.wav",
+      "path": "design-demos/audio/CN-C25.wav",
+      "ext": ".wav",
+      "bytes": 928348,
+      "sha256": "eb1e85926db7de11f747ba780ecabc71846192278f661c5ff5693a1958a8544b",
+      "duration_seconds": 21.05,
+      "referenced": true,
+      "sampleType": "open"
+    },
+    {
+      "file": "CN-C26.wav",
+      "path": "design-demos/audio/CN-C26.wav",
+      "ext": ".wav",
+      "bytes": 802348,
+      "sha256": "a1b90c89be2cb878f46fc1b8520bcaa57d9349a7c889b4e77eda856a3dd8607b",
+      "duration_seconds": 18.19,
+      "referenced": true,
+      "sampleType": "open"
+    },
+    {
+      "file": "CN-C27.wav",
+      "path": "design-demos/audio/CN-C27.wav",
+      "ext": ".wav",
+      "bytes": 1316428,
+      "sha256": "419f980ccc8c81c346ff66428f167113234409a2e3a5bed59a3b11ab099e5b04",
+      "duration_seconds": 29.85,
+      "referenced": true,
+      "sampleType": "open"
+    },
+    {
+      "file": "CN-C28.wav",
+      "path": "design-demos/audio/CN-C28.wav",
+      "ext": ".wav",
+      "bytes": 1104748,
+      "sha256": "5f14b6176f2391dfeb22d632cd8301369d62e5f68c95608357ade418d22f137b",
+      "duration_seconds": 25.05,
+      "referenced": true,
+      "sampleType": "open"
+    },
+    {
+      "file": "CN-C29.wav",
+      "path": "design-demos/audio/CN-C29.wav",
+      "ext": ".wav",
+      "bytes": 1656956,
+      "sha256": "79780330548d2cfcd1b32e77cdf86d6374ac91c213dd36831047e37149d6bf93",
+      "duration_seconds": 37.57,
+      "referenced": true,
+      "sampleType": "open"
+    },
+    {
+      "file": "CN-C30.wav",
+      "path": "design-demos/audio/CN-C30.wav",
+      "ext": ".wav",
+      "bytes": 411314,
+      "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
+      "duration_seconds": 9.33,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-N01-xuexi.mp3",
+      "path": "design-demos/audio/CN-N01-xuexi.mp3",
+      "ext": ".mp3",
+      "bytes": 518334,
+      "sha256": "073546f6a4efdb163aec6b8dd25d9b0ad40966cc59a2f2c85c49f812407a61d8",
+      "duration_seconds": 64.68,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-N01.wav",
+      "path": "design-demos/audio/CN-N01.wav",
+      "ext": ".wav",
+      "bytes": 506522,
+      "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
+      "duration_seconds": 11.48,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-N02-cctv-jcyyh.m4a",
+      "path": "design-demos/audio/CN-N02-cctv-jcyyh.m4a",
+      "ext": ".m4a",
+      "bytes": 860652,
+      "sha256": "636f94c7f9c6ae27053c106f0b19b8679742edd0e4376723f96874e6aea5ef37",
+      "duration_seconds": 222.42,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-N02-cctv-kldb.m4a",
+      "path": "design-demos/audio/CN-N02-cctv-kldb.m4a",
+      "ext": ".m4a",
+      "bytes": 273515,
+      "sha256": "0b18730c9896a0bda783c3210aa63664d38a455a6e0d7d237d36d40cf4894e57",
+      "duration_seconds": 69.93,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-N02.wav",
+      "path": "design-demos/audio/CN-N02.wav",
+      "ext": ".wav",
+      "bytes": 478348,
+      "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
+      "duration_seconds": 10.85,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-N03-cctv.m4a",
+      "path": "design-demos/audio/CN-N03-cctv.m4a",
+      "ext": ".m4a",
+      "bytes": 277724,
+      "sha256": "77f9eae1a3431dc9adfaec08603aaec52281c6547c01a89116aab7d640c0a2c7",
+      "duration_seconds": 71.08,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-N03.wav",
+      "path": "design-demos/audio/CN-N03.wav",
+      "ext": ".wav",
+      "bytes": 453424,
+      "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
+      "duration_seconds": 10.28,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-N04.wav",
+      "path": "design-demos/audio/CN-N04.wav",
+      "ext": ".wav",
+      "bytes": 431220,
+      "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
+      "duration_seconds": 9.78,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-N05-cctv-dqsx.m4a",
+      "path": "design-demos/audio/CN-N05-cctv-dqsx.m4a",
+      "ext": ".m4a",
+      "bytes": 262516,
+      "sha256": "8de0a9547369b684d25d21a360c0bfeb621059293f7f5cf08adf79e69d87e97a",
+      "duration_seconds": 67.09,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-N05-cctv-jcyyh.m4a",
+      "path": "design-demos/audio/CN-N05-cctv-jcyyh.m4a",
+      "ext": ".m4a",
+      "bytes": 685112,
+      "sha256": "eb0a7895115065a405b3e2c56b03dd6c7b205c17d99fb22d928fffe27c71aa75",
+      "duration_seconds": 176.62,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-N05.wav",
+      "path": "design-demos/audio/CN-N05.wav",
+      "ext": ".wav",
+      "bytes": 411314,
+      "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
+      "duration_seconds": 9.33,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-T01.wav",
+      "path": "design-demos/audio/CN-T01.wav",
+      "ext": ".wav",
+      "bytes": 1078934,
+      "sha256": "a4273755126d35a934b344d86cb67e077e5034914f7c9729169635d4050aa128",
+      "duration_seconds": 24.46,
+      "referenced": true,
+      "sampleType": "open"
+    },
+    {
+      "file": "CN-T02.wav",
+      "path": "design-demos/audio/CN-T02.wav",
+      "ext": ".wav",
+      "bytes": 1078934,
+      "sha256": "55737042d04d459ce1878fdc5842f167a147a924d695a36f1046606f43e6850a",
+      "duration_seconds": 24.46,
+      "referenced": true,
+      "sampleType": "open"
+    },
+    {
+      "file": "CN-T03.wav",
+      "path": "design-demos/audio/CN-T03.wav",
+      "ext": ".wav",
+      "bytes": 453424,
+      "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
+      "duration_seconds": 10.28,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T04.wav",
+      "path": "design-demos/audio/CN-T04.wav",
+      "ext": ".wav",
+      "bytes": 431220,
+      "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
+      "duration_seconds": 9.78,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T05.wav",
+      "path": "design-demos/audio/CN-T05.wav",
+      "ext": ".wav",
+      "bytes": 2081732,
+      "sha256": "f8e7122a387604c4569288b554a599bdc509d6b1f754308e85b54cce683227ad",
+      "duration_seconds": 47.2,
+      "referenced": true,
+      "sampleType": "open"
+    },
+    {
+      "file": "CN-T06.wav",
+      "path": "design-demos/audio/CN-T06.wav",
+      "ext": ".wav",
+      "bytes": 478348,
+      "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
+      "duration_seconds": 10.85,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T07.wav",
+      "path": "design-demos/audio/CN-T07.wav",
+      "ext": ".wav",
+      "bytes": 506522,
+      "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
+      "duration_seconds": 11.48,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T08.wav",
+      "path": "design-demos/audio/CN-T08.wav",
+      "ext": ".wav",
+      "bytes": 478348,
+      "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
+      "duration_seconds": 10.85,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T09.wav",
+      "path": "design-demos/audio/CN-T09.wav",
+      "ext": ".wav",
+      "bytes": 453424,
+      "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
+      "duration_seconds": 10.28,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T10.wav",
+      "path": "design-demos/audio/CN-T10.wav",
+      "ext": ".wav",
+      "bytes": 431220,
+      "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
+      "duration_seconds": 9.78,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T11.wav",
+      "path": "design-demos/audio/CN-T11.wav",
+      "ext": ".wav",
+      "bytes": 453424,
+      "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
+      "duration_seconds": 10.28,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T12-cctv.m4a",
+      "path": "design-demos/audio/CN-T12-cctv.m4a",
+      "ext": ".m4a",
+      "bytes": 579288,
+      "sha256": "d075660852d2b54ac5659cd18b7790979446e3d81de6d45fea2b30f66b19ed4f",
+      "duration_seconds": 149.67,
+      "referenced": true,
+      "sampleType": "internal"
+    },
+    {
+      "file": "CN-T12.wav",
+      "path": "design-demos/audio/CN-T12.wav",
+      "ext": ".wav",
+      "bytes": 411314,
+      "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
+      "duration_seconds": 9.33,
+      "referenced": false,
+      "sampleType": null
+    },
+    {
+      "file": "CN-T13.wav",
+      "path": "design-demos/audio/CN-T13.wav",
+      "ext": ".wav",
+      "bytes": 431220,
+      "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
+      "duration_seconds": 9.78,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T14.wav",
+      "path": "design-demos/audio/CN-T14.wav",
+      "ext": ".wav",
+      "bytes": 478348,
+      "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
+      "duration_seconds": 10.85,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T15.wav",
+      "path": "design-demos/audio/CN-T15.wav",
+      "ext": ".wav",
+      "bytes": 453424,
+      "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
+      "duration_seconds": 10.28,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T16.wav",
+      "path": "design-demos/audio/CN-T16.wav",
+      "ext": ".wav",
+      "bytes": 411314,
+      "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
+      "duration_seconds": 9.33,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T17.wav",
+      "path": "design-demos/audio/CN-T17.wav",
+      "ext": ".wav",
+      "bytes": 506522,
+      "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
+      "duration_seconds": 11.48,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T18.wav",
+      "path": "design-demos/audio/CN-T18.wav",
+      "ext": ".wav",
+      "bytes": 478348,
+      "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
+      "duration_seconds": 10.85,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T19.wav",
+      "path": "design-demos/audio/CN-T19.wav",
+      "ext": ".wav",
+      "bytes": 453424,
+      "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
+      "duration_seconds": 10.28,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "CN-T20.wav",
+      "path": "design-demos/audio/CN-T20.wav",
+      "ext": ".wav",
+      "bytes": 431220,
+      "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
+      "duration_seconds": 9.78,
+      "referenced": true,
+      "sampleType": "generated"
+    },
+    {
+      "file": "EN-T01.mp3",
+      "path": "design-demos/audio/EN-T01.mp3",
+      "ext": ".mp3",
+      "bytes": 743756,
+      "sha256": "6f18c286021f23de8b86f77f931d04d746e7bca967e5ff6bc1735e457eb13fde",
+      "duration_seconds": 24.58,
+      "referenced": true,
+      "sampleType": "MISSING"
+    },
+    {
+      "file": "EN-T02.mp3",
+      "path": "design-demos/audio/EN-T02.mp3",
+      "ext": ".mp3",
+      "bytes": 232560,
+      "sha256": "462c5c3c4acb1487df0c8f558180f5ecdbb7e5ffb0f045d9ddc09d9db881ec35",
+      "duration_seconds": 10.31,
+      "referenced": true,
+      "sampleType": "MISSING"
+    },
+    {
+      "file": "EN-T03.mp3",
+      "path": "design-demos/audio/EN-T03.mp3",
+      "ext": ".mp3",
+      "bytes": 998382,
+      "sha256": "fb6969a5b4242113ac67b479b0195309535f36d0439b61e8d8f24e5dbe183ec3",
+      "duration_seconds": 44.69,
+      "referenced": true,
+      "sampleType": "MISSING"
+    }
+  ],
+  "missingReferences": [],
+  "orphanFiles": [
+    "CN-C02.wav",
+    "CN-C04.wav",
+    "CN-C05.wav",
+    "CN-C06.wav",
+    "CN-C07.wav",
+    "CN-C08.wav",
+    "CN-C09.wav",
+    "CN-C11.wav",
+    "CN-C12.wav",
+    "CN-C13.wav",
+    "CN-C14.wav",
+    "CN-C15.wav",
+    "CN-C16.wav",
+    "CN-C17.wav",
+    "CN-C18.wav",
+    "CN-C19.wav",
+    "CN-C20.wav",
+    "CN-C21.wav",
+    "CN-N01.wav",
+    "CN-N02.wav",
+    "CN-N03.wav",
+    "CN-N05.wav",
+    "CN-T12.wav"
+  ],
+  "entriesWithoutSampleType": [
+    "EN-T01",
+    "EN-T02",
+    "EN-T03"
+  ]
+}

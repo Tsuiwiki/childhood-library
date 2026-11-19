@@ -1,0 +1,16 @@
+# Testing overlay. MUST use a separate project name, database and volume:
+#   docker compose -p cl-test -f deploy/docker-compose.yml -f deploy/compose.test.yml up -d
+# Run migrations, import tests and backup/restore drills here, never against cl-dev.
+
+services:
+  db:
+    environment:
+      POSTGRES_DB: ${CL_TEST_DB_NAME:-childhood_library_test}
+    ports:
+      - "127.0.0.1:${CL_TEST_DB_PORT:-55433}:5432"
+    volumes:
+      - cl-test-db-data:/var/lib/postgresql/data
+      - ${TEST_MEDIA_ROOT:-./var/media-test}:/app/var/media
+
+volumes:
+  cl-test-db-data:
