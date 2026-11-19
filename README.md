@@ -31,7 +31,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 
 ## 当前开发状态
 
-**当前阶段：Phase 0 / 0.5 已完成；Phase 1 文档基线、目标架构与迁移方案已定稿，正式资源管理 MVP 尚未开始实施。**
+**当前阶段：Phase 0 / 0.5 已完成；Phase 1 文档基线、目标架构与迁移方案已定稿；T-04 远程开发环境已在 VM 启用（PostgreSQL 16 开发库 healthy、备份恢复演练通过），正式资源管理 MVP 尚未开始实施。**
 
 仓库已经包含音乐馆、故事馆、诗词馆等静态页面原型、JSON 内容配置、Python 数据构建/整理/校验脚本，以及音乐本地试听和官方短时试听实验。当前尚无正式 FastAPI 服务、PostgreSQL 数据库迁移、统一编辑后台和生产级采集任务系统。
 
@@ -68,7 +68,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 ├── backend/                 # 正式后端（规划中，尚未创建）
 ├── frontend/                # 正式 Web 前台与管理后台（规划中，尚未创建）
 ├── ingestion/               # 标准化采集适配器与任务（规划中，尚未创建）
-├── deploy/                  # Compose / 备份恢复配置骨架（源码已入库，尚未在 VM 启用）
+├── deploy/                  # Compose / 备份恢复配置（已在 VM 启用 cl-dev，详见 deploy/README.md）
 ├── scripts/                 # 资产盘点等只读工具
 └── docs/reports/            # 资产完整性与迁移报告
 ```

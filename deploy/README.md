@@ -1,6 +1,6 @@
 # deploy/ — 配置骨架与运维说明
 
-> **状态：源码骨架已入库，远程 VM 尚未启用。** 本目录不包含任何密钥、主机地址或账号信息。
+> **状态：已在远程 VM 启用 cl-dev 开发库（healthy、仅回环），cl-test 备份恢复演练通过。** 本目录不包含任何密钥、主机地址或账号信息。
 > 环境实测与完整方案见 [REMOTE_DEVELOPMENT_ENVIRONMENT.md](../docs/REMOTE_DEVELOPMENT_ENVIRONMENT.md)。
 
 ## 文件
@@ -98,8 +98,17 @@ pytest
 4. 数据库与媒体使用独立 volume；备份同时校验 checksum；恢复演练先在 `cl-test` 完成。
 5. 本阶段不启用 COS / BOS / CDN，不采购云资源。
 
-## 当前未完成
+## 当前状态与未完成
 
-- VM 上未创建 `/data/childhood-library` 目录，未启动任何容器，未写入任何文件。
-- `api` / `web` / `nginx` 服务定义、健康检查端点、迁移执行与自动化测试尚未落地。
-- 端口值、备份保留周期、异地副本策略待门禁 B 确认后定稿。
+**已完成（2026-11-19，VM）**
+
+- `/data/childhood-library` 已 clone；仓库根 `.env`（`600`）、`python3.12` venv、`var/` 均已建立且被 `.gitignore` 忽略。
+- `cl-dev`（`127.0.0.1:55432`，`childhood_library_dev`）运行中且 healthy；公网 IP 探测不可达。
+- `cl-test`（`127.0.0.1:55433`，`childhood_library_test`）备份 / 恢复演练通过，演练后容器已停止、卷保留。
+- 已有 TiDB / anydev-agent 容器未受影响。
+
+**未完成 / 待确认**
+
+- `api` / `web` / `nginx` 服务定义、`/healthz`、迁移执行与自动化测试尚未落地（T-05+）。
+- ⚠️ 门禁 B 正式确认仍待：端口 `55432` / `55433` / `58000` 目前按 `.env.example` 默认值落地；备份保留周期、异地副本策略未定。
+- ⚠️ `/data` 实测可用 14 G，低于检查清单的 ≥ 20 G；本阶段只放代码 + venv + 空库，迁移 85 个媒体文件前需扩容评估。
