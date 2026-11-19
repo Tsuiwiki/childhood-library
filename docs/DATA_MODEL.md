@@ -271,3 +271,27 @@ CREATE TABLE review_records (
 - 作品公版状态不能自动推导具体录音、编曲或视频也可使用。
 
 首期可以先用现有 works、work_contributors、sources 和 rights_records 管理歌曲元数据；在实现播放功能前，再通过数据库迁移增加版本与播放资源表。详细字段和阶段要求见 [音乐馆设计](MUSIC_LIBRARY_DESIGN.md)，长期定位与选曲纲领见 [儿童经典音乐资源库 V1.0 规划](MUSIC_LIBRARY_V1.md)。
+
+
+## 10. 统一媒体资产与存储位置
+
+媒体资产与物理存储位置分离，避免供应商切换导致作品数据迁移。详细设计见 [统一媒体资产与对象存储设计](MEDIA_ASSET_DESIGN.md)。
+
+建议将现有概念级 `media_assets` 扩展为：
+
+- `asset_id`：稳定资产 ID。
+- `work_id`、`version_id`：关联作品及具体版本。
+- `asset_role`：cover / recording / narration / score / illustration 等。
+- `media_type`、`mime_type`、`file_size_bytes`、`duration_ms`、`checksum_sha256`。
+- `rights_record_id`、`publication_status`。
+
+新增 `storage_locations` 管理物理位置：
+
+- `storage_location_id`、`asset_id`。
+- `provider`：local / tencent_cos / baidu_bos / s3_compatible。
+- `region`、`bucket`、`object_key`、`storage_class`。
+- `is_primary`、`replica_status`、`verified_at`。
+
+外部官方预览、官方嵌入和站内托管文件统一由 `playback_resources` 表达，但必须区分 `resource_type` 和访问策略。临时签名 URL 不作为永久数据保存；播放请求应经过权利与发布状态检查后按需签发。
+
+**重要约束：** 研究登记不授权保存第三方媒体；私有 Bucket 默认拒绝匿名访问；只有权利审核通过且符合发布策略的资产才可进入公开播放流程。
