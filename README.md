@@ -7,8 +7,6 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 > **顶层原则：先研究采集，再判断使用。版权状态未知，不应成为有价值的儿童文化作品进入内部研究目录的门槛；公开展示、播放、下载、转载和分发，则按具体作品、版本、媒体与使用方式另行核实。**
 
 > **项目原则：免费公共教育、广泛建立目录、来源可追溯、具体内容评审后公开。**
->
-> 公版古籍原文与公版英文原作可作为可核验的文本样例出现在本地交互原型中，但必须逐项记录权利状态与发布审批；原型中的全文展示不等于已通过公开层审核，也不改变本仓库不提交受保护第三方内容的原则。
 
 项目采用“研究资源库（Research）+ 儿童阅读与使用层（Library）”双层架构。研究阶段优先发现、记录和研究中国及世界的优秀儿童文化资源；使用阶段再审核来源规则、内容质量、适宜性和权利范围。
 
@@ -31,6 +29,17 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 3. 古诗词：唐诗、宋词、元曲及儿童诗词启蒙。
 4. 英文儿歌：Nursery Rhymes、字母歌、数字歌、动物与自然主题歌曲。
 
+## 当前开发状态
+
+**当前阶段：Phase 0 已完成基础设计；Phase 0.5 静态原型验证已取得进展；正式资源管理 MVP 尚未开始。**
+
+仓库已经包含音乐馆、故事馆、诗词馆等静态页面原型、JSON 内容配置、Python 数据构建/整理/校验脚本，以及音乐本地试听和官方短时试听实验。当前尚无正式 FastAPI 服务、PostgreSQL 数据库迁移、统一编辑后台和生产级采集任务系统。
+
+- [开发进度盘点](docs/DEVELOPMENT_STATUS.md)：仓库现状、资产规模、已实现能力和缺口。
+- [音乐馆实施优化方案](docs/MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md)：以现有音乐馆代码为基础的领域模型、资源分类和分阶段实施路径。
+
+本阶段盘点是静态仓库检查，不代表全部页面已完成运行测试、所有数据已逐条核验或所有媒体已获得公开使用许可。
+
 ## 技术路线（拟定）
 
 | 层次 | 首选方案 |
@@ -39,11 +48,11 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 | API | Python、FastAPI、Pydantic |
 | 主数据库 | PostgreSQL |
 | 采集与解析 | Python、HTTPX、BeautifulSoup（遵守来源规则） |
-| 任务队列 | Celery + Redis（MVP 可先简化） |
+| 任务队列 | MVP 先用简化后台任务；规模需要时再考虑 Celery + Redis |
 | 媒体存储 | S3 兼容对象存储；仅保存获准使用的媒体 |
 | 部署 | Docker Compose、Nginx |
 
-技术选型允许在 MVP 实施中调整，避免过早引入微服务和复杂基础设施。
+技术选型允许在 MVP 实施中调整，避免过早引入微服务和复杂基础设施。当前静态原型是产品验证资产，不代表上述正式应用栈已经落地。
 
 ## 仓库结构
 
@@ -53,41 +62,38 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 ├── LICENSE
 ├── .gitignore
 ├── .env.example
-├── docs/
-│   ├── PROJECT_PRINCIPLES.md
-│   ├── PRD.md
-│   ├── ARCHITECTURE.md
-│   ├── DATA_MODEL.md
-│   ├── INGESTION_DESIGN.md
-│   ├── SOURCE_CATALOG.md
-│   ├── COPYRIGHT_POLICY.md
-│   └── ROADMAP.md
-├── backend/                 # 后端服务（后续迭代）
-├── frontend/                # Web 前台与管理后台（后续迭代）
-├── ingestion/               # 采集适配器与任务（后续迭代）
+├── docs/                    # 项目原则、产品/架构/数据/版权/路线图文档
+├── design-demos/            # 当前静态页面、JSON 数据、Python 构建脚本和原型素材
+├── story-library.html       # 故事馆相关静态原型入口
+├── backend/                 # 正式后端（后续迭代）
+├── frontend/                # 正式 Web 前台与管理后台（后续迭代）
+├── ingestion/               # 标准化采集适配器与任务（后续迭代）
 └── deploy/                  # 本地及生产部署配置（后续迭代）
 ```
 
 ## 文档导航
 
+### 项目总纲
 - [项目顶层设计原则](docs/PROJECT_PRINCIPLES.md)
 - [产品需求文档](docs/PRD.md)
 - [系统架构设计](docs/ARCHITECTURE.md)
 - [数据模型设计](docs/DATA_MODEL.md)
 - [采集系统设计](docs/INGESTION_DESIGN.md)
 - [信源清单与接入计划](docs/SOURCE_CATALOG.md)
+- [版权与内容审核政策](docs/COPYRIGHT_POLICY.md)
+- [项目路线图](docs/ROADMAP.md)
+- [开发进度盘点](docs/DEVELOPMENT_STATUS.md)
+
+### 儿童音乐馆
+- [儿童经典音乐资源库 V1.0 规划](docs/MUSIC_LIBRARY_V1.md)
+- [音乐馆设计：歌曲目录、版权与播放资源](docs/MUSIC_LIBRARY_DESIGN.md)
+- [音乐馆实施优化方案](docs/MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md)
 - [经典儿童歌曲候选目录（首批采集）](docs/CLASSIC_SONGS_CATALOG.md)
 - [中国经典儿歌研究与资源采集](docs/CHINESE_CLASSIC_SONGS_RESEARCH.md)
 - [中国儿童歌曲500首研究目录](docs/CHINESE_CHILDRENS_SONGS_500_CATALOG.md)
-- [儿童经典音乐图书馆建设方案 v1.0（图文版）](docs/MUSIC_LIBRARY_PLAN_V1.md)
+
+### 儿童故事馆与其他内容馆
 - [儿童故事馆建设方案 v1.1（图文版）](docs/STORY_LIBRARY_PLAN_V1.md)
-- [音乐馆设计：歌曲目录、版权与播放资源](docs/MUSIC_LIBRARY_DESIGN.md)
-- [版权与内容审核政策](docs/COPYRIGHT_POLICY.md)
-- [项目路线图](docs/ROADMAP.md)
-
-## 开发状态
-
-当前处于 **Phase 0：项目定义与基础设计**。当前提交建立产品边界、技术方案和数据治理规范；尚未包含可运行的前后端程序或已核实可转载的内容数据。
 
 ## 基本原则
 
@@ -98,7 +104,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 - “可访问”“公版作品”“开放许可”“允许转载”不是同一个概念，必须逐项核实。
 - 作品正文、译文、歌词、插画、录音和编曲分别记录权利状态。
 - 待确认或授权不明的内容可以进入内部研究库，记录必要元数据和原始来源链接；不得据此公开受保护正文或媒体，也不得默认下载、缓存、镜像或分发第三方媒体文件。
-- 可合法发现的资源先进入公共候选目录；待评审资源可公开必要的基础元数据与合法来源链接，但不公开正文、不分发媒体文件。
+- 可合法发现的资源先进入公共候选目录；待评审资源可公开必要的基础元数据与合法来源链接，但不公开受保护正文、不分发未经许可的媒体文件。
 - 保留原始来源、采集时间、版本、转换记录和审核轨迹。
 
 ## License
