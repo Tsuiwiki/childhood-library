@@ -1,6 +1,6 @@
 # 远程开发环境建设方案 · REMOTE_DEVELOPMENT_ENVIRONMENT
 
-- 文档状态：Active（**方案已确认；T-04 环境、T-05 API 骨架、T-06 数据库模型与迁移均已在 VM 启用**）
+- 文档状态：Active（**方案已确认；T-04 环境、T-05 API 骨架、T-06 数据库模型与迁移、T-07 媒体资产模块均已在 VM 启用**）
 - 版本：v0.2
 - 日期：2026-11-19
 - 依据：Phase 0 远程 VM 只读实机探测（命令编号 C1–C4）、[PROJECT_AUDIT.md §6](PROJECT_AUDIT.md)、[ARCHITECTURE.md §5](ARCHITECTURE.md)
@@ -140,6 +140,13 @@ T-06 已把领域实体落到 `app/models/`（按 [DATA_MODEL.md §11](DATA_MODE
 - [x] T-05 `api` 容器 healthy、`/healthz` 200、`58000` 仅回环且公网 IP 探测不可达
 - [x] T-06 `alembic upgrade head` 在 `cl-dev` 通过（21 张表、业务表 0 行），`/readyz` 200、57 个 pytest 全绿
 
-> **当前状态（2026-11-19，T-04 / T-05 / T-06 已落地）**：VM `/data/childhood-library` 已同步到 `60607bc`；仓库根 `.env`（`600`）、`python3.12` venv、`var/` 均建立且被忽略。`cl-dev` 的 `db`（`127.0.0.1:55432`）与 `api`（`127.0.0.1:58000`）均 healthy；20 张业务表已迁移（`8d6b729f5152`），**表内尚无业务数据**；`cl-test` 备份 / 恢复演练通过后已停止并保留卷。57 个 pytest 用例全绿，`/healthz` 双探测与 `/readyz` 均正常。`web` / `nginx` 仍属 T-08。
+> **阶段快照（2026-11-19，T-06 完成时；最新状态见 §9）**：VM `/data/childhood-library` 已同步到 `60607bc`；仓库根 `.env`（`600`）、`python3.12` venv、`var/` 均建立且被忽略。`cl-dev` 的 `db`（`127.0.0.1:55432`）与 `api`（`127.0.0.1:58000`）均 healthy；20 张业务表已迁移（`8d6b729f5152`），**表内尚无业务数据**；`cl-test` 备份 / 恢复演练通过后已停止并保留卷。57 个 pytest 用例全绿，`/healthz` 双探测与 `/readyz` 均正常。`web` / `nginx` 仍属 T-08。
 >
 > ⚠️ 门禁 B（端口 / 备份策略正式确认）与 `/data` 容量缺口仍待处理；当前端口按 `.env.example` 默认值落地。
+
+## 9. T-07 追加状态（2026-11-19）
+
+- `app/media/` 与 `scripts/media_integrity.py` 已随代码进入 GitHub main；`api` 容器通过 `deploy/compose.dev.yml` 正式只读挂载 `var/media`（`Mode:ro`、`RW:false`），两段 `-f` 即自足，临时仓库外 overlay 只保留可选的回环调试预览页。
+- VM 上 85 个迁移媒体逐文件 SHA-256 校验 85/85 通过、文件权限 `644`；`scripts/media_integrity.py --root var/media` 可重复执行，只读、不删孤儿。
+- 容器重建后 `/healthz` / `/readyz` 200、`GET /api/v1/media/capabilities` 返回 `root_exists=true`、`read_only=true`、`flat_object_count=85`、`public_url_issued=false`；`55432` / `58000` / `58080` 仍只绑 `127.0.0.1`。
+- ⚠️ 门禁 B（端口正式确认、备份保留周期、异地副本）、门禁 C（V2/V3 目录来源、100 首权威定义）仍未确认；`/data` 可用 14 G 中本批媒体仅占约 100 MiB，扩容评估针对全量媒体而非本批。

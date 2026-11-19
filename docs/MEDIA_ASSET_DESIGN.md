@@ -1,7 +1,7 @@
 # 统一媒体资产与对象存储设计
 
 - 文档状态：Design Proposal
-- 版本：1.1
+- 版本：1.2（T-07 M0 实装）
 - 更新日期：2026-11-19
 - 适用范围：音乐馆、故事馆、诗词馆及后续所有媒体内容模块
 
@@ -212,11 +212,11 @@ childhood-library/
 
 ### M0：本地适配器
 
-- [ ] 定义 StorageProvider 接口。
-- [ ] 实现 LocalStorageAdapter。
-- [ ] 实现上传、下载/读取、删除、HEAD、checksum。
-- [ ] 实现 MediaAsset 与 StorageLocation 元数据。
-- [ ] 增加媒体文件存在性和完整性检查脚本。
+- [x] 定义 StorageProvider 接口（T-07：`app/media/provider.py`）。
+- [x] 实现 LocalStorageAdapter（T-07：`app/media/local.py`）。
+- [x] 实现上传、下载/读取、删除、HEAD、checksum（T-07，含 HTTP Range 206/416）。
+- [x] 实现 MediaAsset 与 StorageLocation 元数据（T-07：`app/media/service.py`，含 AuditLog）。
+- [x] 增加媒体文件存在性和完整性检查脚本（T-07：`scripts/media_integrity.py`）。
 
 ### M1：云端适配器
 
@@ -269,3 +269,35 @@ childhood-library/
 5. **备份与迁移**：媒体与数据库使用独立 volume；备份同时校验 checksum，恢复演练先在 testing 环境完成。孤儿文件在迁移报告中单列，不自动删除。
 
 关联：[数据迁移方案](DATA_MIGRATION_PLAN.md)、[项目现状审计报告](PROJECT_AUDIT.md)。
+
+## 14. T-07 实装与定型（2026-11-19）
+
+本节不回改 §1–§13 的概念设计，只记录 M0 落地结果与取舍。任务口径见 `IMPLEMENTATION_ROADMAP.md` L94-L101（「T-07 媒体资产模块」）与该文 §6 实测记录，实机约束见 §13。
+
+### 14.1 已落地
+
+| 项 | 实现 |
+| --- | --- |
+| Provider 接口 | `app/media/provider.py`：`put / get / stat / delete / range / checksum`，`ObjectStat` / `ByteRange` 与 6 类异常 |
+| 本地适配器 | `app/media/local.py`：`object_key` 沙箱（拒绝绝对 / `..` / 非规范路径）、临时文件 + `os.replace` 原子写、声明 checksum 先校验再替换、`read_only` 显式拒绝写 |
+| 格式与时长 | `app/media/probe.py`：签名优先（不信任客户端 Content-Type / 扩展名）；WAV 用标准库 `wave`，其余在 PyAV 可选可用时探测，**无解码器记 `None` 不猜测**，口径与 `scripts/asset_inventory.py` L37-L57 一致 |
+| 完整性 | `app/media/integrity.py` + `scripts/media_integrity.py`：SHA-256 比对只报告、不自动修复或删除；孤儿文件单列 |
+| 权利门禁 | `app/media/rights_gate.py`：`research_metadata`（恒允许）/ `internal_content`（需校验和通过）/ `public_url`（需有效权利核验 + published + approved + 非 none 访问方式）三级；复用 T-06 `rights_clearance_is_valid()` |
+| Range 响应 | `app/media/http.py`：200 / 206 / 416，先过访问决策再出字节，**不生成任何 URL** |
+| 元数据登记 | `app/media/service.py`：写 `MediaAsset` + `StorageLocation` + `AuditLog`，默认 `rights_status=unknown` / `publication_status=draft`，**从不创建 `PlaybackResource`** |
+| 可观测端点 | `GET /api/v1/media/capabilities`（只读、不返 URL）；七个域的清单端点仍为 501，业务 CRUD 属 T-09/T-10 |
+| 正式挂载 | `deploy/compose.dev.yml` 给 `api` 增加 `${MEDIA_ROOT}:/app/var/media:ro` 与 `MEDIA_READ_ONLY=true`，不再依赖仓库外临时 overlay |
+
+### 14.2 三处定型取舍
+
+1. **不引入新依赖**：M0 只用标准库 + 已有 FastAPI/SQLAlchemy 栈，`requirements.txt` 仍 8 个顶层依赖、`requirements.lock` 仍 36 包；时长不靠新增解码器硬凑。
+2. **`object_key` 与供应商 URL 解耦**：`childhood-library/{audio|images|scores|attachments}/.../{asset_id}{ext}` 是内部键；DTO 显式标注 `object_key_note`，不返回任何访问地址，COS/BOS 适配器可后续替换而不改表。
+3. **写入走受信任宿主管理端**：`api` 容器只读挂载（保护已迁移的 85 个平铺文件），`put/delete` 由宿主机 venv / 管理命令执行；云适配器与在线上传留待 M1 / T-09。
+
+### 14.3 实机验证（VM）
+
+104 个 pytest 全绿（T-06 为 57）；两段 overlay `config -q` 自足；`scripts/media_integrity.py` 对 VM `var/media/` 85/85 校验通过、0 意外文件；隔离临时库 `cl_t07_media` 完成 put/get/stat/checksum/range/delete 往返、篡改告警、`rights_record_id` 关联、未授权 `public_url` 拒绝与审计留痕后删库；`cl-dev` 五张业务表仍 0 行；`/readyz` 200，端口仅回环。
+
+### 14.4 明确未做
+
+不导入任何真实曲目 / 录音 / 权利结论；不创建公开播放资源或签名 URL；不采购或上传第三方云存储；不启用 CDN；不实现媒体业务 CRUD 端点。

@@ -1,6 +1,6 @@
-# app/ — FastAPI 模块化单体（T-05 骨架 + T-06 数据层）
+# app/ — FastAPI 模块化单体（T-05 骨架 + T-06 数据层 + T-07 媒体能力）
 
-> **状态：T-06 已落地 20 张表的关系模型、Alembic 迁移、发布门禁规则与 SQL 就绪探针。`cl-dev` 已完成迁移，但所有业务表为空；7 个业务路由仍返回 501，不产生任何示例业务数据。**
+> **状态：T-06 已落地 20 张表的关系模型、Alembic 迁移、发布门禁规则与 SQL 就绪探针；T-07 已落地 `app/media/` 能力层与 `api` 容器的 `var/media:ro` 正式挂载。`cl-dev` 已完成迁移但所有业务表为空；7 个业务域的清单端点仍返回 501，不产生任何示例业务数据。**
 
 ## 目录
 
@@ -16,6 +16,7 @@
 | `domain/status.py` | **五维状态契约**（纯枚举）：研究 / 权利 / 质量 / 访问方式 / 发布状态互相独立 |
 | `domain/publication_gate.py` | T-06 发布门禁 5 条规则（跨对象部分），T-09 接入发布命令 |
 | `models/` | T-06 ORM：10 类核心实体 + 10 张支撑表；`VARCHAR + CHECK` 枚举、UUID 主键、JSONB 扩展字段 |
+| `media/` | T-07：StorageProvider 接口、本地适配器、签名/时长探测、SHA-256 完整性、三级权利门禁、Range 响应与元数据登记；包初始化惰性 |
 | `db/probe.py`、`db/session.py` | 短超时 SQL 就绪探针（延迟导入 SQLAlchemy）/ Engine 与 Session 工厂 |
 | `api/v1/` | `health` / `readyz` + 7 个领域路由；`_skeleton.py` 生成占位路由 |
 | `../migrations/`、`../alembic.ini` | Alembic 配置与初始迁移 `8d6b729f5152` |
@@ -31,6 +32,7 @@ GET  /api/openapi.json                 OpenAPI
 GET  /api/docs                          Swagger UI（production 关闭）
 GET  /api/v1/{catalog,versions,sources,rights,reviews,media,ingestion}
                                        占位：501 NOT_IMPLEMENTED，data.planned_from = post-T-06
+GET  /api/v1/media/capabilities        T-07 只读能力状态（不返回任何 URL）
 ```
 
 七个领域全部显式返回 **501**，不返回任何伪造的示例数据。`limit` 参数已接入校验（1–100）。
@@ -46,6 +48,7 @@ GET  /api/v1/{catalog,versions,sources,rights,reviews,media,ingestion}
 | `NOT_FOUND` | 404 | 路由不存在 |
 | `METHOD_NOT_ALLOWED` | 405 | 方法不允许 |
 | `NOT_IMPLEMENTED` | 501 | 占位业务域 |
+| `FORBIDDEN` | 403 | 媒体访问未通过权利门禁 |
 | `HTTP_ERROR` | 400 | 其它 HTTP 错误 |
 | `NOT_READY` | 503 | `/readyz` 依赖未就绪 |
 | `INTERNAL_ERROR` | 500 | 未捕获异常（堆栈只进日志，不返回客户端） |
@@ -76,5 +79,5 @@ pytest
 
 - **不导入现有 JSON 原型数据、不生成示例曲目、不虚构任何作品 / 录音 / 权利结论**；`cl-dev` 业务表为空。
 - 不启用 `web` / `nginx`、Celery / Redis、对象存储或独立搜索（按 ARCHITECTURE.md §3 后续引入）。
-- 发布门禁尚未接入发布命令（T-09）；媒体文件与 StorageProvider 适配器属 T-07。
+- 发布门禁尚未接入发布命令（T-09）；StorageProvider M0 本地适配器已由 T-07 落地，但媒体业务 CRUD 端点属 T-09/T-10，云端适配器属 M1；`api` 容器只读挂载媒体，写入走宿主机管理端。
 - 不把 `database_url`、口令或 `.env` 内容写进日志、响应或提交。

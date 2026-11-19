@@ -1,6 +1,6 @@
 # deploy/ — 配置骨架与运维说明
 
-> **状态：`cl-dev` 的 `db` + `api` 均已在远程 VM 启用（healthy、仅回环），T-06 的 20 张表已完成迁移（业务表为空），`cl-test` 备份恢复演练通过。** 本目录不包含任何密钥、主机地址或账号信息。
+> **状态：`cl-dev` 的 `db` + `api` 均已在远程 VM 启用（healthy、仅回环），T-06 的 20 张表已完成迁移（业务表为空），T-07 媒体资产模块已落地且 `api` 只读挂载 `var/media`，`cl-test` 备份恢复演练通过。** 本目录不包含任何密钥、主机地址或账号信息。
 > 环境实测与完整方案见 [REMOTE_DEVELOPMENT_ENVIRONMENT.md](../docs/REMOTE_DEVELOPMENT_ENVIRONMENT.md)。
 
 ## 文件
@@ -16,9 +16,10 @@
 | 仓库根 `Dockerfile` / `.dockerignore` | api 镜像（Python 3.12-slim、非 root）；构建上下文含 `app/` / `migrations/` / `alembic.ini` |
 | 仓库根 `alembic.ini` | T-06 Alembic 入口；连接串只从 `DATABASE_URL` 读取 |
 | 仓库根 `app/models/` / `migrations/versions/` | T-06 ORM 模型与初始迁移 |
+| 仓库根 `app/media/` / `scripts/media_integrity.py` | T-07 媒体能力层与只读完整性检查脚本 |
 | 仓库根 `requirements.lock` | 36 个包的精确版本锁，镜像构建只认它 |
 
-`api` 服务已在 `compose.dev.yml` 定义（T-05），容器内 `DATABASE_URL` 由 `POSTGRES_USER` / `POSTGRES_PASSWORD` / `CL_DEV_DB_NAME` 拼成 `db:5432`（宿主机 venv 仍用 `.env` 里的 `127.0.0.1:55432`）。`cl-test` 仍是纯数据库 project；`web` / `nginx` 留到 T-08。七个业务路由当前全部返回 501，不代表业务已实现。
+`api` 服务已在 `compose.dev.yml` 定义（T-05），容器内 `DATABASE_URL` 由 `POSTGRES_USER` / `POSTGRES_PASSWORD` / `CL_DEV_DB_NAME` 拼成 `db:5432`（宿主机 venv 仍用 `.env` 里的 `127.0.0.1:55432`）。`cl-test` 仍是纯数据库 project；`web` / `nginx` 留到 T-08。七个业务域的清单端点当前全部返回 501，不代表业务已实现；T-07 另加了只读的 `GET /api/v1/media/capabilities`。`api` 容器以 `:ro` 挂载 `var/media` 且 `MEDIA_READ_ONLY=true`，媒体写入只走宿主机 venv / 管理命令。
 
 ## Compose 合并契约（改动配置前必读）
 
@@ -79,6 +80,8 @@ $DEV logs -f api db
 $DEV ps
 curl -fsS http://127.0.0.1:${CL_API_PORT:-58000}/healthz
 curl -fsS http://127.0.0.1:${CL_API_PORT:-58000}/readyz   # SQL 不可达时 503
+curl -fsS http://127.0.0.1:${CL_API_PORT:-58000}/api/v1/media/capabilities
+.venv/bin/python scripts/media_integrity.py --root var/media   # 只读，85 条清单
 
 # 数据库迁移（宿主机 venv；连接串读仓库根 .env，不写入 alembic.ini）
 .venv/bin/alembic -c alembic.ini current
@@ -121,9 +124,10 @@ pytest
 - T-05：VM `.venv` 下 31 个 pytest 用例全绿；`requirements.lock` 的 29 个包两次安装结果一致。
 - T-06：`alembic upgrade head` 已在 `cl-dev` 完成（20 张业务表 + `alembic_version`，业务表 0 行）；隔离空库 `upgrade → downgrade → upgrade` 往返与 `compare_metadata` 0 差异通过；13 项约束违规全部按预期拒绝。
 - T-06：VM 57 个 pytest 全绿；`/healthz` 的 `database_tcp` / `database_sql` 均 reachable、`/readyz` 200；`pg_dump` + SHA-256 sidecar 仍可 dump 新 schema（`pg_restore -l` 42 个 TABLE 条目）。
+- T-07：`app/media/` 落地后 VM **104 个 pytest** 全绿；两段 overlay `config -q` 自足；`api` 容器 `var/media:ro`、`MEDIA_READ_ONLY=true`、可读 85 个文件且写入被拒；`scripts/media_integrity.py` 85/85 校验通过；隔离临时库 `cl_t07_media` 登记/校验/删除演练通过并已删除，业务表仍 0 行。
 
 **未完成 / 待确认**
 
-- `web` / `nginx` 服务定义、媒体存储适配器与业务回归测试尚未落地（T-07 / T-08+）；数据库迁移与业务表已由 T-06 建好，但**尚未导入任何数据**、发布门禁尚未接入发布命令（T-09）。
+- `web` / `nginx` 服务定义与业务回归测试尚未落地（T-08+）；媒体存储适配器已由 T-07 完成 M0 本地实现，但业务 CRUD 端点、云端适配器仍待 T-09/M1；数据库迁移与业务表已由 T-06 建好，**尚未导入任何数据**、发布门禁尚未接入发布命令（T-09）。
 - ⚠️ 门禁 B 正式确认仍待：端口 `55432` / `55433` / `58000` 目前按 `.env.example` 默认值落地；备份保留周期、异地副本策略未定。
-- ⚠️ `/data` 实测可用 14 G，低于检查清单的 ≥ 20 G；本阶段只放代码 + venv + 空库，迁移 85 个媒体文件前需扩容评估。
+- ⚠️ `/data` 实测可用 14 G，低于检查清单的 ≥ 20 G。85 个媒体已迁入 `var/media/`（约 100 MiB，逐文件 SHA-256 校验通过），本批不构成容量阻塞；≥ 20 G 仍作为全量媒体扩容门槛保留，备份脚本每次会连带复制这 100 MiB。

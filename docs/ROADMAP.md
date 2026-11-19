@@ -14,7 +14,7 @@
 | Phase 1 | 统一资源管理 MVP（模块化单体） | 环境、API 骨架与数据库模型/迁移就绪，MVP 业务开发进行中 |
 | Phase 2 | 规范化来源采集与任务管理 | 未开始 |
 | Phase 3 | AI 辅助研究和编辑 | 未开始 |
-| Phase 4 | 合法媒体资产、播放和专题策展 | 局部原型，正式能力未开始 |
+| Phase 4 | 合法媒体资产、播放和专题策展 | 局部原型；T-07 已落地 M0 本地适配器与权利门禁 |
 | Phase 5 | 运营、审计、监控、备份与持续维护 | 未开始 |
 
 ## Phase 0：项目定义与治理（基础版本已完成）
@@ -60,13 +60,13 @@
 - [x] 建立统一作品、创作者、分类和标签模型（T-06：`Work` / `Contribution` / `Tag` / `Collection`）
 - [x] 建立作品版本、录音版本和乐谱版本模型（T-06：`WorkVersion` / `RecordingVersion` / `ScoreEdition`）
 - [x] 建立来源证据、媒体资产和播放资源模型（T-06：`SourceRecord` / `MediaAsset` / `PlaybackResource`）
-- [ ] 建立统一 Media Asset Service 与 Storage Provider Adapter 接口（T-07）
-- [ ] 实现本地存储适配器及媒体完整性校验（T-07）
+- [x] 建立统一 Media Asset Service 与 Storage Provider Adapter 接口（T-07：`app/media/provider.py`，put/get/stat/delete/range/checksum）
+- [x] 实现本地存储适配器及媒体完整性校验（T-07：`LocalStorageAdapter` + SHA-256 + `scripts/media_integrity.py`，85/85 校验通过）
 - [x] 建立分对象 RightsRecord 与 EditorialReview（T-06）
 - [ ] 实现 JSON / CSV 导入导出和迁移报告（T-11）
 - [ ] 实现编辑端作品列表、详情和审核入口（T-09）
 - [ ] 实现发布门禁和操作审计（T-06 已提供门禁函数与审计表；T-09 接入发布命令）
-- [ ] 建立完整自动化测试与 Docker Compose 环境（57 个 pytest 与 `cl-dev` Compose 已由 T-04 / T-05 / T-06 建立；业务回归待 T-07+）
+- [ ] 建立完整自动化测试与 Docker Compose 环境（104 个 pytest 与 `cl-dev` Compose 已由 T-04 / T-05 / T-06 / T-07 建立；业务回归待 T-09+）
 
 验收：编辑人员可以从一条候选歌曲开始，完成作品身份、创作者、版本、来源证据、审美评审和使用方式登记；未通过门禁的媒体不能进入公开层。
 

@@ -31,9 +31,9 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 
 ## 当前开发状态
 
-**当前阶段：Phase 0 / 0.5 已完成；Phase 1 文档基线、目标架构与迁移方案已定稿；T-04 远程环境、T-05 FastAPI 骨架与 T-06 数据库模型/迁移已在 VM 启用（PostgreSQL 16 + 20 张业务表、API 容器 healthy、57 个 pytest 全绿、备份恢复演练通过）。业务表目前为空，尚未导入任何真实曲目，正式资源管理 MVP 仍在开发中。**
+**当前阶段：Phase 0 / 0.5 已完成；Phase 1 文档基线、目标架构与迁移方案已定稿；T-04 远程环境、T-05 FastAPI 骨架、T-06 数据库模型/迁移与 T-07 媒体资产模块已在 VM 启用（PostgreSQL 16 + 20 张业务表、API 容器 healthy、104 个 pytest 全绿、备份恢复演练通过）。85 个本地媒体已复制到 VM `var/media/` 并逐文件 SHA-256 校验通过；业务表目前为空，尚未导入任何真实曲目，正式资源管理 MVP 仍在开发中。**
 
-仓库已经包含音乐馆、故事馆、诗词馆等静态页面原型、JSON 内容配置、Python 数据构建/整理/校验脚本，以及音乐本地试听和官方短时试听实验。T-05 已建立 FastAPI 骨架服务（7 个领域路由占位、统一响应与结构化日志），T-06 已落地 20 张表的关系模型、Alembic 迁移与发布门禁规则；目前**只建表、不导入数据**，尚无统一编辑后台、媒体存储适配器和生产级采集任务系统。
+仓库已经包含音乐馆、故事馆、诗词馆等静态页面原型、JSON 内容配置、Python 数据构建/整理/校验脚本，以及音乐本地试听和官方短时试听实验。T-05 已建立 FastAPI 骨架服务（7 个领域路由占位、统一响应与结构化日志），T-06 已落地 20 张表的关系模型、Alembic 迁移与发布门禁规则；目前**只建表、不导入数据**，尚无统一编辑后台和生产级采集任务系统；T-07 已落地本地 StorageProvider、校验和与权利门禁，但业务 CRUD 端点仍属 T-09/T-10。
 
 - [开发进度盘点](docs/DEVELOPMENT_STATUS.md)：仓库现状、资产规模、已实现能力和缺口。
 - [音乐馆实施优化方案](docs/MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md)：以现有音乐馆代码为基础的领域模型、资源分类和分阶段实施路径。
@@ -52,7 +52,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 | 媒体存储 | 统一 Media Asset Service；本地适配器起步，云端可接 COS / BOS；仅保存获准使用的媒体 |
 | 部署 | Docker Compose、Nginx |
 
-技术选型允许在 MVP 实施中调整，避免过早引入微服务和复杂基础设施。当前静态原型是产品验证资产；API 骨架（T-05）、数据库模型与迁移（T-06）已落地，前端工程、媒体存储适配器与采集系统仍待后续任务。
+技术选型允许在 MVP 实施中调整，避免过早引入微服务和复杂基础设施。当前静态原型是产品验证资产；API 骨架（T-05）、数据库模型与迁移（T-06）已落地，媒体存储适配器（T-07 M0 本地实现）已落地，前端工程、云端适配器与采集系统仍待后续任务。
 
 ## 仓库结构
 
@@ -65,15 +65,16 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 ├── docs/                    # 项目原则、产品/架构/数据/版权/路线图文档
 ├── design-demos/            # 当前静态页面、JSON 数据、Python 构建脚本和原型素材
 ├── story-library.html       # 故事馆相关静态原型入口
-├── app/                     # FastAPI 模块化单体（T-05 骨架 + T-06 ORM / 门禁 / 探针）
-├── tests/                   # pytest 基线（57 用例）
+├── app/                     # FastAPI 模块化单体（T-05 骨架 + T-06 ORM + T-07 媒体资产）
+│   └── media/               # StorageProvider / 本地适配器 / 校验和 / 权利门禁
+├── tests/                   # pytest 基线（104 用例）
 ├── migrations/              # Alembic 配置与初始迁移（T-06，详见 migrations/README.md）
 ├── alembic.ini              # Alembic 入口；连接串只从环境变量读取
 ├── Dockerfile / .dockerignore / pytest.ini
 ├── requirements.txt / requirements.lock   # 顶层依赖 + 全量精确锁（36 包）
 ├── web/                     # 正式 Web 前台与管理后台（规划中，T-08）
 ├── deploy/                  # Compose / 备份恢复配置（cl-dev 的 db + api 已在 VM 启用）
-├── scripts/                 # 资产盘点等只读工具
+├── scripts/                 # 资产盘点、媒体完整性等只读工具
 └── docs/reports/            # 资产完整性与迁移报告
 ```
 

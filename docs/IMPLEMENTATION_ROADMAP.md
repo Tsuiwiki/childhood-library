@@ -26,7 +26,8 @@
 | T-04 部署配置骨架 | **已完成（VM 侧）**：修复 overlay 序列合并与仓库根 `.env` 加载；VM 已 clone、生成 `.env`（`600`）、建 3.12 venv、启动 `cl-dev`（healthy、仅回环），`cl-test` 备份恢复演练通过。⚠️ 门禁 B 正式确认与 `/data` 容量缺口待处理 |
 | T-05 后端工程初始化 | **已完成**：FastAPI 3.12 骨架 + 统一 envelope / 错误码 + 结构化日志 + 7 域占位路由；`requirements.lock` 29 包；31 个 pytest 全绿；api 容器 healthy、`/healthz` 200 |
 | T-06 数据库模型与迁移 | **已完成**：20 张表（10 核心 + 10 支撑）、Alembic 初始迁移、五维状态 + 发布门禁；57 个 pytest 全绿；cl-dev 已迁移且业务表为空；备份链路可 dump 新 schema |
-| T-07 ～ T-12 | 未开始（门禁 B 正式确认 / 门禁 C 待办） |
+| T-07 媒体资产模块 | **已完成**：`app/media/` 能力层、本地适配器、SHA-256 完整性、三级权利门禁、Range 响应、只读 capabilities 端点、`api` 容器 `var/media:ro` 正式挂载；VM 104 个 pytest 全绿、85/85 完整性校验、隔离库登记演练通过 |
+| T-08 ～ T-12 | 未开始（门禁 B 正式确认 / 门禁 C 待办） |
 
 ---
 
@@ -164,3 +165,13 @@ T-01 → T-02 → T-03 ─┐
 ```
 
 T-11 另依赖门禁 C；T-12 之后才进入 Phase 5（故事馆 / 诗词馆）。
+
+## 6. T-07 实测记录（2026-11-19）
+
+- 提交 `e4ae3dd`（22 文件 / +1762 行）；GitHub main 与 VM `/data/childhood-library` 均同步到该提交，工作区干净。
+- 本地静态校验：`verify_compose.py` / `verify_t05.py` / `verify_t06.py` / `verify_t07.py` / `verify_docs.py` 全绿；143 条本地链接 0 断、0 密钥、9 个受保护文件检查通过。
+- VM 实机：`git pull --ff-only` 到 `e4ae3dd`；两段 overlay `config -q` PASS；`docker compose build api` + `up -d --wait` 后三服务 healthy；104 个 pytest 全绿；`alembic current` 仍为 `8d6b729f5152 (head)`。
+- 媒体完整性：`scripts/media_integrity.py --root var/media` → 85 条清单 / 85 校验通过 / 0 失败 / 0 意外文件；`api` 容器内可读 85 个文件且写入被 `Read-only file system` 拒绝。
+- 隔离库演练 `cl_t07_media`：put/get/stat/checksum/range/delete 往返、篡改告警、object_key 沙箱、只读挂载守卫、`rights_record_id` 关联、未授权 `public_url` 拒绝、删除留审计；库随演练删除，`cl-dev` 业务表仍 0 行。
+- ⚠️ 踩坑：① `.gitignore` 的 `media/` 会匹配任意层级同名目录，导致 `app/media/` 整个被忽略，已收窄为 `/media/`；② `up -d` 只重建容器不重建镜像，新路由曾返回 404，必须先 `build api`；③ `app/models/__init__.py` 会注册全部 ORM，故 `app/media/__init__.py` 改为惰性导出，保证 `app.media.integrity` 这类纯 Python 路径不被 SQLAlchemy 拖住。
+- ⚠️ 仍待确认：门禁 B / 门禁 C 未变；媒体业务 CRUD 端点属 T-09/T-10；云端适配器属 M1。
