@@ -22,9 +22,11 @@ dist/
 *.key
 
 # Local data and media
+# Root-only on purpose: `media/` would also match app/media/, which is T-07
+# SOURCE CODE and must stay tracked. Runtime media lives in var/ (below).
 data/
 uploads/
-media/
+/media/
 var/
 *.sqlite3
 *.db

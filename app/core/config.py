@@ -43,6 +43,16 @@ class Settings(BaseSettings):
     # never returned by safe_summary, never echoed into a response.
     database_url: str | None = None
 
+    # T-07 local media provider. Paths resolve against the REPOSITORY ROOT, not
+    # the process cwd, so host venv and the container behave the same way.
+    media_root: Path = Path("var/media")
+    media_read_only: bool = False
+    media_max_object_bytes: int = 256 * 1024 * 1024
+
+    def resolved_media_root(self) -> Path:
+        path = Path(self.media_root)
+        return path if path.is_absolute() else (REPO_ROOT / path).resolve()
+
     def safe_summary(self) -> dict:
         return {
             "app_name": self.app_name,
@@ -53,6 +63,8 @@ class Settings(BaseSettings):
             "log_json": self.log_json,
             "health_check_db": self.health_check_db,
             "health_check_sql": self.health_check_sql,
+            "media_root_exists": self.resolved_media_root().is_dir(),
+            "media_read_only": self.media_read_only,
         }
 
 
