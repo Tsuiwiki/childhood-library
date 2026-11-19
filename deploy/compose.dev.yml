@@ -1,8 +1,11 @@
 # Development overlay. Use with:
-#   docker compose -p cl-dev -f deploy/docker-compose.yml -f deploy/compose.dev.yml up -d
+#   docker compose --project-directory . -p cl-dev -f deploy/docker-compose.yml -f deploy/compose.dev.yml up -d
 #
 # Owns EVERY per-environment value: database name, host port, volumes.
 # Do not add `ports` / `volumes` to the base file - Compose appends those lists.
+# The `api` service lives ONLY in this overlay: cl-test stays a db-only project.
+# Relative paths resolve against the PROJECT DIRECTORY (repo root, set via
+# --project-directory .), so build context is `.` and not `..`.
 
 services:
   db:
@@ -13,6 +16,49 @@ services:
     volumes:
       - cl-dev-db-data:/var/lib/postgresql/data
       - ${MEDIA_ROOT:-./var/media}:/app/var/media
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: childhood-library/api:t05
+    restart: unless-stopped
+    environment:
+      APP_NAME: ${APP_NAME:-childhood-library}
+      APP_ENV: ${APP_ENV:-development}
+      APP_VERSION: ${APP_VERSION:-0.5.0}
+      API_HOST: 0.0.0.0
+      API_PORT: "8000"
+      API_V1_PREFIX: ${API_V1_PREFIX:-/api/v1}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      LOG_JSON: ${LOG_JSON:-true}
+      LOG_DIR: /app/var/logs
+      HEALTH_CHECK_DB: "true"
+      # Inside the Compose network the database is reachable at db:5432,
+      # not at the host loopback port 55432.
+      DB_TCP_HOST: db
+      DB_TCP_PORT: "5432"
+    ports:
+      - "127.0.0.1:${CL_API_PORT:-58000}:8000"
+    volumes:
+      - ${LOG_ROOT:-./var/logs}:/app/var/logs
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=2)"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
 
 volumes:
   cl-dev-db-data:
