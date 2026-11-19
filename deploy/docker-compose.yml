@@ -6,21 +6,27 @@
 # SECURITY: every internal port is bound to 127.0.0.1. The VM has firewalld inactive,
 # so a 0.0.0.0 binding would be reachable from the public network. Never expose
 # the database port or admin tools publicly.
+#
+# OVERLAY CONTRACT (important):
+#   This base MUST be used together with one environment overlay. It deliberately
+#   does NOT declare `ports`, `volumes` or `POSTGRES_DB`.
+#   Compose APPENDS sequence fields (ports, volumes) when merging files; declaring
+#   them here as well would produce a duplicate host-port binding and two volumes
+#   mounted on /var/lib/postgresql/data. All per-environment values live in
+#   compose.dev.yml / compose.test.yml.
 
 services:
   db:
     image: pgvector/pgvector:pg16
     restart: unless-stopped
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:?set POSTGRES_DB in .env}
       POSTGRES_USER: ${POSTGRES_USER:?set POSTGRES_USER in .env}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
-    ports:
-      - "127.0.0.1:${CL_DB_PORT:-55432}:5432"
-    volumes:
-      - cl-db-data:/var/lib/postgresql/data
+    # `$$` escapes Compose interpolation so the CONTAINER's own environment is
+    # expanded at runtime. This keeps the check correct whichever overlay set
+    # POSTGRES_DB, instead of freezing a value from the host .env.
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -31,9 +37,6 @@ services:
         max-file: "5"
 
 # Use an explicit project name per environment:
-#   development: -p cl-dev
-#   testing:     -p cl-test  (with compose.test.yml, separate volume and database)
-# Two environments must never share a database, media volume or .env.
-
-volumes:
-  cl-db-data:
+#   development: -p cl-dev  + deploy/compose.dev.yml
+#   testing:     -p cl-test + deploy/compose.test.yml
+# Two environments must never share a database, volume or backup target.

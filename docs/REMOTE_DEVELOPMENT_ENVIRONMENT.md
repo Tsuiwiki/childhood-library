@@ -95,7 +95,7 @@
 
 ## 6. 敏感配置
 
-- `.env.example` 已含 `APP_ENV`、`DATABASE_URL`、`REDIS_URL`、`S3_*`、`AI_*` 等占位项，需补齐 `POSTGRES_USER/PASSWORD/DB`、`MEDIA_ROOT`、`BACKUP_ROOT` 与端口变量。
+- `.env.example` 已含 `APP_ENV`、`DATABASE_URL`、`REDIS_URL`、`S3_*`、`AI_*` 等占位项，需补齐 `POSTGRES_USER` / `POSTGRES_PASSWORD`、`CL_DEV_DB_NAME` / `CL_TEST_DB_NAME`、`MEDIA_ROOT` / `TEST_MEDIA_ROOT`、`BACKUP_ROOT` 与端口变量。数据库名由环境 overlay 决定，不设全局 `POSTGRES_DB`，避免开发与测试库名漂移。
 - `.gitignore` 已忽略 `.env`、`.env.*`（保留 `.env.example`）；提交前做密钥扫描。
 - SSH 别名、主机、端口、账号、`IdentityFile` 路径只保留在本机 `~/.ssh/config`，不写入文档、脚本或提交信息。
 - 对象存储密钥位保持为空；本阶段不接云存储。

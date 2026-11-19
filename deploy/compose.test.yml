@@ -1,6 +1,9 @@
 # Testing overlay. MUST use a separate project name, database and volume:
 #   docker compose -p cl-test -f deploy/docker-compose.yml -f deploy/compose.test.yml up -d
 # Run migrations, import tests and backup/restore drills here, never against cl-dev.
+#
+# Owns EVERY per-environment value: database name, host port, volumes.
+# Do not add `ports` / `volumes` to the base file - Compose appends those lists.
 
 services:
   db:

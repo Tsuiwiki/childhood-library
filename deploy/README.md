@@ -7,14 +7,26 @@
 
 | 文件 | 用途 |
 |---|---|
-| `docker-compose.yml` | 基础服务：PostgreSQL 16（`pgvector/pgvector:pg16`），端口仅绑定 `127.0.0.1` |
-| `compose.dev.yml` | 开发环境 overlay，独立 project / volume / 媒体目录 |
-| `compose.test.yml` | 测试环境 overlay，独立库与卷，用于迁移与恢复演练 |
-| `backup.sh` | `pg_dump` + SHA-256 校验文件 + 媒体 checksum 复制 |
-| `restore.sh` | `pg_restore` 到指定 project，先校验 checksum |
+| `docker-compose.yml` | 基础服务：PostgreSQL 16（`pgvector/pgvector:pg16`）、账号口令、健康检查、日志；**必须配合 overlay 使用** |
+| `compose.dev.yml` | 开发环境 overlay：独占数据库名、宿主端口、两个卷 |
+| `compose.test.yml` | 测试环境 overlay：独立库 / 端口 / 卷，用于迁移与恢复演练 |
+| `backup.sh` | `pg_dump` + SHA-256 sidecar + 媒体 checksum 复制 |
+| `restore.sh` | 校验 dump checksum 后 `pg_restore` 到指定 project |
 | 仓库根 `.env.example` | 占位模板；实际 `.env` 已被 `.gitignore` 忽略 |
 
 `api` / `web` / `nginx` 服务在 T-05 / T-08 工程初始化后加入；当前只定义数据库，避免半成品服务被误启动。
+
+## Compose 合并契约（改动配置前必读）
+
+Compose 多文件合并时，`environment` 这类映射按 key **覆盖**，但 `ports` / `volumes` 这类**序列是追加**，不是覆盖。因此：
+
+- `docker-compose.yml`（base）**不声明** `ports`、`volumes`、`POSTGRES_DB`；
+- `compose.dev.yml` / `compose.test.yml` 各自**独占**这三类值；
+- 若把 `ports` 或 `volumes` 加回 base，会出现同一宿主端口重复绑定，以及两个卷同时挂到 `/var/lib/postgresql/data`。
+
+健康检查用 `$$POSTGRES_USER` / `$$POSTGRES_DB`（双美元符转义 Compose 插值），由容器内 shell 展开，因此不受 host `.env` 里的库名影响。`backup.sh` / `restore.sh` 也直接从**运行中的容器**读取 `POSTGRES_USER` / `POSTGRES_DB`，不 source `.env`，避免口令含 shell 元字符时出错、也避免库名与 overlay 漂移。
+
+**启用前必须跑一次 `docker compose config`（见下）**，确认最终合并结果只有一个宿主端口、一个数据库卷。
 
 ## 前置检查（每次启用前）
 
@@ -33,8 +45,13 @@ docker compose version   # v2.27.0
 
 ```bash
 # 配置
-cp .env.example .env && vi .env       # 填 POSTGRES_* / 端口 / MEDIA_ROOT / BACKUP_ROOT
+cp .env.example .env && vi .env       # 填 POSTGRES_USER / POSTGRES_PASSWORD / CL_*_DB_NAME / 端口 / MEDIA_ROOT
+chmod 600 .env
 python3.12 -m venv .venv && . .venv/bin/activate
+
+# 配置校验（先做，不启动容器）
+docker compose -p cl-dev  -f deploy/docker-compose.yml -f deploy/compose.dev.yml  config
+docker compose -p cl-test -f deploy/docker-compose.yml -f deploy/compose.test.yml config
 
 # 启动 / 停止（注意：down 不加 -v，避免删卷）
 docker compose -p cl-dev -f deploy/docker-compose.yml -f deploy/compose.dev.yml up -d
@@ -48,13 +65,18 @@ curl -fsS http://127.0.0.1:${CL_API_PORT:-58000}/healthz   # T-05 后才可用
 # 测试环境（独立 project，绝不指向开发库）
 docker compose -p cl-test -f deploy/docker-compose.yml -f deploy/compose.test.yml up -d
 
-# 备份 / 恢复
+# 备份 / 恢复（脚本从运行中的容器读取库名与账号）
 CL_PROJECT=cl-dev bash deploy/backup.sh
-CL_PROJECT=cl-test CL_COMPOSE_OVERLAY=deploy/compose.test.yml bash deploy/restore.sh var/backups/db-cl-dev-YYYYMMDD-HHMMSS.dump
+CL_PROJECT=cl-test CL_COMPOSE_OVERLAY=deploy/compose.test.yml \
+  CL_MEDIA_ROOT=./var/media-test bash deploy/backup.sh
+CL_PROJECT=cl-test CL_COMPOSE_OVERLAY=deploy/compose.test.yml \
+  bash deploy/restore.sh var/backups/db-cl-dev-YYYYMMDD-HHMMSS.dump
 
 # 自动化测试
 pytest
 ```
+
+> 备份/恢复不需要手动 `source .env`；Docker Compose 自身会读取仓库根 `.env` 做变量插值。`CL_MEDIA_ROOT` 只影响附带的媒体复制，数据库部分不受影响。
 
 ## 安全约定
 

@@ -1,5 +1,8 @@
 # Development overlay. Use with:
 #   docker compose -p cl-dev -f deploy/docker-compose.yml -f deploy/compose.dev.yml up -d
+#
+# Owns EVERY per-environment value: database name, host port, volumes.
+# Do not add `ports` / `volumes` to the base file - Compose appends those lists.
 
 services:
   db:
