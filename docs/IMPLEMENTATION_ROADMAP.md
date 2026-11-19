@@ -185,4 +185,5 @@ T-11 另依赖门禁 C；T-12 之后才进入 Phase 5（故事馆 / 诗词馆）
 - 契约对齐：`web/src/api/types.ts` 的 7 个域名与 9 个错误码由静态脚本对照 `app/api/v1/router.py` L6-L7、`app/core/errors.py` L17-L26 逐项比对；API 客户端默认相对 `/api/v1`，不硬编码主机；7 域清单端点仍 501，占位页显式呈现而不造数据。
 - 边界：`design-demos/` 原型、`app/` 后端与 `deploy/` 下的 Compose/备份配置全部未改动（`deploy/README.md` 仅同步状态文字）；不导入业务数据；不启动 nginx / Compose `web` 服务；不引入 UI 框架或状态管理库。
 - ⚠️ 踩坑：① Windows PowerShell 5.1 执行策略禁止 `npm.ps1`，须用 `npm.cmd`；② vitest 会把 `import.meta.url` 重写为非 file 协议，`fileURLToPath` 不可用，测试改用 `process.cwd()` 解析；③ 在已有 `node_modules` 上跑 `npm ci` 会触发沙箱批量删除保护（57 个 `.bin` 文件 > 50 阈值）导致半成品安装，改用**全新空目录**复制 `package.json` + `package-lock.json` 后 `npm ci` 验证锁可重现。
-- ⚠️ 仍待确认：门禁 B / 门禁 C 未变；VM 侧 ff-only 同步与实机构建需重新授权 SSH 通道；`web` / `nginx` 服务定义与业务页面属 T-09/T-10。
+- **VM 补记（2026-11-20）**：SSH 通道重新授权后，VM `/data/childhood-library` 已 `git pull --ff-only` 到 `137cf68`；`web/` 实测 Node v22.12.0 / npm 10.9.0、`npm ci` 装 167 包、`vue-tsc --noEmit` + `vite build` 通过（51 模块 / 105.34 kB JS / 7.33 kB CSS）、`vitest run` **18/18 全绿**；`node_modules/` 与 `dist/` 均被忽略，工作区干净。⚠️ `npm ci` 出现两条 `EBADENGINE` 警告（`abbrev@5.0.0` / `nopt@10.0.1` 要求 Node `^22.22.2 || ^24.15.0 || >=26.0.0`，VM 为 22.12.0），当前构建与测试不受影响，Node 版本对齐留待环境基线确认。
+- ⚠️ 仍待确认：门禁 B / 门禁 C 未变；`web` / `nginx` 服务定义与业务页面属 T-09/T-10。
