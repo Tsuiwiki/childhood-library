@@ -31,9 +31,9 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 
 ## 当前开发状态
 
-**当前阶段：Phase 0 / 0.5 已完成；Phase 1 文档基线、目标架构与迁移方案已定稿；T-04 远程开发环境已在 VM 启用（PostgreSQL 16 开发库 healthy、备份恢复演练通过），正式资源管理 MVP 尚未开始实施。**
+**当前阶段：Phase 0 / 0.5 已完成；Phase 1 文档基线、目标架构与迁移方案已定稿；T-04 远程开发环境与 T-05 FastAPI 骨架已在 VM 启用（PostgreSQL 16 与 API 容器均 healthy，备份恢复演练与 31 个 pytest 用例通过），正式资源管理 MVP 尚未开始实施。**
 
-仓库已经包含音乐馆、故事馆、诗词馆等静态页面原型、JSON 内容配置、Python 数据构建/整理/校验脚本，以及音乐本地试听和官方短时试听实验。当前尚无正式 FastAPI 服务、PostgreSQL 数据库迁移、统一编辑后台和生产级采集任务系统。
+仓库已经包含音乐馆、故事馆、诗词馆等静态页面原型、JSON 内容配置、Python 数据构建/整理/校验脚本，以及音乐本地试听和官方短时试听实验。T-05 已建立 FastAPI 骨架服务（7 个领域路由占位、统一响应与结构化日志），但尚无数据库迁移、业务表、统一编辑后台和生产级采集任务系统。
 
 - [开发进度盘点](docs/DEVELOPMENT_STATUS.md)：仓库现状、资产规模、已实现能力和缺口。
 - [音乐馆实施优化方案](docs/MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md)：以现有音乐馆代码为基础的领域模型、资源分类和分阶段实施路径。
@@ -52,7 +52,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 | 媒体存储 | 统一 Media Asset Service；本地适配器起步，云端可接 COS / BOS；仅保存获准使用的媒体 |
 | 部署 | Docker Compose、Nginx |
 
-技术选型允许在 MVP 实施中调整，避免过早引入微服务和复杂基础设施。当前静态原型是产品验证资产，不代表上述正式应用栈已经落地。
+技术选型允许在 MVP 实施中调整，避免过早引入微服务和复杂基础设施。当前静态原型是产品验证资产；API 骨架（T-05）已落地，前端工程、数据库模型与采集系统仍待后续任务。
 
 ## 仓库结构
 
@@ -65,10 +65,13 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 ├── docs/                    # 项目原则、产品/架构/数据/版权/路线图文档
 ├── design-demos/            # 当前静态页面、JSON 数据、Python 构建脚本和原型素材
 ├── story-library.html       # 故事馆相关静态原型入口
-├── backend/                 # 正式后端（规划中，尚未创建）
-├── frontend/                # 正式 Web 前台与管理后台（规划中，尚未创建）
-├── ingestion/               # 标准化采集适配器与任务（规划中，尚未创建）
-├── deploy/                  # Compose / 备份恢复配置（已在 VM 启用 cl-dev，详见 deploy/README.md）
+├── app/                     # FastAPI 模块化单体骨架（T-05，详见 app/README.md）
+├── tests/                   # pytest 基线（31 用例）
+├── migrations/              # Alembic 占位（T-06 起启用）
+├── Dockerfile / .dockerignore / pytest.ini
+├── requirements.txt / requirements.lock   # 顶层依赖 + 全量精确锁
+├── web/                     # 正式 Web 前台与管理后台（规划中，T-08）
+├── deploy/                  # Compose / 备份恢复配置（cl-dev 的 db + api 已在 VM 启用）
 ├── scripts/                 # 资产盘点等只读工具
 └── docs/reports/            # 资产完整性与迁移报告
 ```
@@ -104,6 +107,8 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 - [数据迁移方案](docs/DATA_MIGRATION_PLAN.md)
 - [实施路线与任务清单](docs/IMPLEMENTATION_ROADMAP.md)
 - [资产与媒体完整性清单](docs/reports/asset-inventory.md)
+- [后端骨架说明](app/README.md)
+- [部署与运维命令](deploy/README.md)
 
 ### 儿童故事馆与其他内容馆
 - [儿童故事馆建设方案 v1.1（图文版）](docs/STORY_LIBRARY_PLAN_V1.md)

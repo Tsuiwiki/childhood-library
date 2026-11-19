@@ -1,6 +1,6 @@
 # deploy/ — 配置骨架与运维说明
 
-> **状态：已在远程 VM 启用 cl-dev 开发库（healthy、仅回环），cl-test 备份恢复演练通过。** 本目录不包含任何密钥、主机地址或账号信息。
+> **状态：`cl-dev` 的 `db` + `api` 均已在远程 VM 启用（healthy、仅回环），`cl-test` 备份恢复演练通过。** 本目录不包含任何密钥、主机地址或账号信息。
 > 环境实测与完整方案见 [REMOTE_DEVELOPMENT_ENVIRONMENT.md](../docs/REMOTE_DEVELOPMENT_ENVIRONMENT.md)。
 
 ## 文件
@@ -13,8 +13,10 @@
 | `backup.sh` | `pg_dump` + SHA-256 sidecar + 媒体 checksum 复制 |
 | `restore.sh` | 校验 dump checksum 后 `pg_restore` 到指定 project |
 | 仓库根 `.env.example` | 占位模板；实际 `.env` 已被 `.gitignore` 忽略 |
+| 仓库根 `Dockerfile` / `.dockerignore` | T-05 api 镜像（Python 3.12-slim、非 root）；构建上下文只含 `app/` 与 `migrations/` |
+| 仓库根 `requirements.lock` | 29 个包的精确版本锁，镜像构建只认它 |
 
-`api` / `web` / `nginx` 服务在 T-05 / T-08 工程初始化后加入；当前只定义数据库，避免半成品服务被误启动。
+`api` 服务已在 `compose.dev.yml` 定义（T-05），`cl-test` 仍是纯数据库 project；`web` / `nginx` 留到 T-08。七个业务路由当前全部返回 501，不代表业务已实现。
 
 ## Compose 合并契约（改动配置前必读）
 
@@ -65,14 +67,15 @@ TEST="docker compose --project-directory . -p cl-test -f deploy/docker-compose.y
 # 配置校验（先做，不启动容器；-q 不回显口令）
 $DEV config -q && $TEST config -q
 
-# 启动 / 停止（注意：down 不加 -v，避免删卷）
-$DEV up -d
+# 构建 / 启动 / 停止（注意：down 不加 -v，避免删卷）
+$DEV build api
+$DEV up -d --wait
 $DEV down
 
 # 日志与状态（必须带同一组 -f / -p / --project-directory）
-$DEV logs -f db
+$DEV logs -f api db
 $DEV ps
-curl -fsS http://127.0.0.1:${CL_API_PORT:-58000}/healthz   # T-05 后才可用
+curl -fsS http://127.0.0.1:${CL_API_PORT:-58000}/healthz
 
 # 测试环境（独立 project，绝不指向开发库）
 $TEST up -d
@@ -106,9 +109,11 @@ pytest
 - `cl-dev`（`127.0.0.1:55432`，`childhood_library_dev`）运行中且 healthy；公网 IP 探测不可达。
 - `cl-test`（`127.0.0.1:55433`，`childhood_library_test`）备份 / 恢复演练通过，演练后容器已停止、卷保留。
 - 已有 TiDB / anydev-agent 容器未受影响。
+- T-05：`api` 容器（Python 3.12-slim、非 root）healthy，`127.0.0.1:58000` 仅回环、公网 IP 探测不可达；`/healthz` 200、占位域 501、JSON 访问日志含 request_id / status_code / duration_ms。
+- T-05：VM `.venv` 下 31 个 pytest 用例全绿；`requirements.lock` 的 29 个包两次安装结果一致。
 
 **未完成 / 待确认**
 
-- `api` / `web` / `nginx` 服务定义、`/healthz`、迁移执行与自动化测试尚未落地（T-05+）。
+- `web` / `nginx` 服务定义、数据库迁移、业务表与业务回归测试尚未落地（T-06 / T-08+）；`/healthz` 与 pytest 基线已可用。
 - ⚠️ 门禁 B 正式确认仍待：端口 `55432` / `55433` / `58000` 目前按 `.env.example` 默认值落地；备份保留周期、异地副本策略未定。
 - ⚠️ `/data` 实测可用 14 G，低于检查清单的 ≥ 20 G；本阶段只放代码 + venv + 空库，迁移 85 个媒体文件前需扩容评估。

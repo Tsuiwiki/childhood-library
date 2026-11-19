@@ -1,6 +1,6 @@
 # 远程开发环境建设方案 · REMOTE_DEVELOPMENT_ENVIRONMENT
 
-- 文档状态：Design Proposal（**方案已确认，环境尚未在 VM 启用**）
+- 文档状态：Active（**方案已确认；T-04 环境、T-05 API 骨架均已在 VM 启用**）
 - 版本：v0.1
 - 日期：2026-11-19
 - 依据：Phase 0 远程 VM 只读实机探测（命令编号 C1–C4）、[PROJECT_AUDIT.md §6](PROJECT_AUDIT.md)、[ARCHITECTURE.md §5](ARCHITECTURE.md)
@@ -48,14 +48,17 @@
 
 ```text
 /data/childhood-library/                 # 独立目录，避开 /data 下已有项目
-├── app/                                 # 模块化单体后端
-│   ├── common/                          # 跨馆通用：work / contribution / tag / source / review
-│   ├── music/                           # 音乐馆独立领域层
-│   └── catalog/ versions/ sources/ rights/ reviews/ media/ ingestion/
-├── web/                                 # Vue 前台 + 编辑后台
-├── migrations/                          # Alembic
+├── app/                                 # 模块化单体后端（T-05 已落地）
+│   ├── core/                            # 配置 / 运行时断言 / 错误码 / 结构化日志 / 请求上下文
+│   ├── domain/                          # 五维状态契约（T-06 接 ORM）
+│   ├── schemas/                         # 统一响应 envelope
+│   └── api/v1/                          # health + 7 个领域路由（占位 501）
+├── web/                                 # Vue 前台 + 编辑后台（T-08，尚未创建）
+├── migrations/                          # Alembic 占位（T-06 起）
 ├── scripts/                             # 导入、导出、校验、备份、恢复
-├── tests/
+├── tests/                               # pytest 基线（31 用例）
+├── Dockerfile / .dockerignore / pytest.ini
+├── requirements.txt / requirements.lock # 顶层依赖 + 全量精确锁
 ├── design-demos/                        # 历史原型（只读保留，直到新系统验收）
 ├── docs/
 ├── var/
@@ -71,6 +74,8 @@
 └── .env                                 # 不入库（模板见 .env.example）
 ```
 
+`app/common/`（跨馆通用层）、`app/music/`（音乐馆领域层）以及 `catalog` / `versions` / `sources` / `rights` / `reviews` / `media` / `ingestion` 七个领域包计划在 T-06 补齐；当前同名模块只存在于 `app/api/v1/` 的路由层。
+
 ## 4. 三环境分离
 
 | 环境 | 用途 | 隔离方式 |
@@ -85,8 +90,8 @@
 
 | 服务 | 绑定 | 持久化 | 说明 |
 |---|---|---|---|
-| `db`（PostgreSQL 16） | `127.0.0.1:<未占用>` | `var/db` volume | 账号口令走 `.env`，**端口不暴露公网** |
-| `api`（FastAPI） | `127.0.0.1:<未占用>` | — | `/healthz`、结构化日志、统一异常处理 |
+| `db`（PostgreSQL 16） | `127.0.0.1:55432` | `cl-dev_cl-dev-db-data` volume | 账号口令走 `.env`，**端口不暴露公网** |
+| `api`（FastAPI） | `127.0.0.1:58000` | `var/logs` 只读用途挂载 | `/healthz` 200（已验证）、结构化日志、统一异常处理 |
 | `web`（Vite / 构建产物） | `127.0.0.1:<未占用>` | — | 由 Nginx 反向代理 |
 | `nginx` | 对外唯一入口 | 配置只读挂载 | 管理后台加访问控制 |
 | `adminer` 等管理工具 | 默认**不启用** | — | 需要时临时、仅回环、用完停止 |
@@ -129,7 +134,8 @@
 - [x] 备份/恢复演练在 `testing` 通过
 - [x] 数据库端口从公网不可达（`127.0.0.1` 绑定 + 公网 IP 探测失败）
 - [x] 未启用云存储 / CDN / 管理工具
+- [x] T-05 `api` 容器 healthy、`/healthz` 200、`58000` 仅回环且公网 IP 探测不可达
 
-> **当前状态（2026-11-19，T-04 已落地）**：VM `/data/childhood-library` 已 clone 到 `38d4d8d`；仓库根 `.env`（`600`）、`python3.12` venv、`var/` 均建立且被忽略。`cl-dev`（`127.0.0.1:55432`）运行中 healthy，`cl-test` 备份 / 恢复演练通过后已停止并保留卷。`api` / `web` / `nginx` 与业务表仍属 T-05+。
+> **当前状态（2026-11-19，T-04 / T-05 已落地）**：VM `/data/childhood-library` 已 clone 到 `29d22d2`；仓库根 `.env`（`600`）、`python3.12` venv、`var/` 均建立且被忽略。`cl-dev` 的 `db`（`127.0.0.1:55432`）与 `api`（`127.0.0.1:58000`）均 healthy；`cl-test` 备份 / 恢复演练通过后已停止并保留卷。31 个 pytest 用例全绿，`/healthz` 200。`web` / `nginx` 与业务表仍属 T-08 / T-06+。
 >
 > ⚠️ 门禁 B（端口 / 备份策略正式确认）与 `/data` 容量缺口仍待处理；当前端口按 `.env.example` 默认值落地。

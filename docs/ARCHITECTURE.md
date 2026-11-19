@@ -119,4 +119,4 @@ MVP 可在一台服务器上运行：
 | 共享机现状 | 已有 TiDB v8.5.0、anydev-agent 等容器；8080/8090/4000/10080/2379 已占用 | 独立目录、独立 Compose project name、独立 volume 与端口段；不清理已有容器 |
 | 出站网络 | GitHub / PyPI / npm 均 200 | 可拉取依赖，但须锁定版本并保留离线清单 |
 
-**边界**：本节只记录约束，不代表远程环境已经搭建；实际目录、Compose、备份与恢复命令见 [远程开发环境方案](REMOTE_DEVELOPMENT_ENVIRONMENT.md)，配置骨架见 `deploy/`。SSH 主机、端口、账号与密钥路径属于敏感配置，不写入本仓库任何文档。
+**边界**：本节只记录实机约束；T-04 已按此完成 VM 环境搭建，T-05 已接入 `api` 容器。实际目录、Compose、备份与恢复命令见 [远程开发环境方案](REMOTE_DEVELOPMENT_ENVIRONMENT.md)，配置见 `deploy/`，骨架说明见 `app/README.md`。SSH 主机、端口、账号与密钥路径属于敏感配置，不写入本仓库任何文档。

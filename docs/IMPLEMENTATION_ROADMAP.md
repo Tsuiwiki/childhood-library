@@ -24,7 +24,8 @@
 | T-02 文档基线 | **已完成**：新增 7 份文档、升版 3 份、修订 4 份，历史专项文档全部保留 |
 | T-03 资产清单 | **已完成**：只读脚本与报告落盘 |
 | T-04 部署配置骨架 | **已完成（VM 侧）**：修复 overlay 序列合并与仓库根 `.env` 加载；VM 已 clone、生成 `.env`（`600`）、建 3.12 venv、启动 `cl-dev`（healthy、仅回环），`cl-test` 备份恢复演练通过。⚠️ 门禁 B 正式确认与 `/data` 容量缺口待处理 |
-| T-05 ～ T-12 | 未开始（T-04 前置已就绪；门禁 B 正式确认 / 门禁 C 待办） |
+| T-05 后端工程初始化 | **已完成**：FastAPI 3.12 骨架 + 统一 envelope / 错误码 + 结构化日志 + 7 域占位路由；`requirements.lock` 29 包；31 个 pytest 全绿；api 容器 healthy、`/healthz` 200 |
+| T-06 ～ T-12 | 未开始（门禁 B 正式确认 / 门禁 C 待办） |
 
 ---
 
@@ -64,7 +65,7 @@
 - **前置**：T-01、门禁 B。
 - **文件**：`deploy/` 配置骨架、`REMOTE_DEVELOPMENT_ENVIRONMENT.md`、VM 上 `.env` 与 `var/`。
 - **步骤**：复核 `ss -lntp` → 建 `/data/childhood-library` → `python3.12 -m venv` → 起 PostgreSQL 16 容器（回环）→ 独立 volume → 日志 / 备份 / 健康检查 → 恢复演练。
-- **测试**：`docker compose ps` 全 healthy；数据库端口从公网不可达；`pg_dump` + 恢复演练成功（三项均已在 T-04 通过）；`/healthz` 200 属 T-05，尚未验证。
+- **测试**：`docker compose ps` 全 healthy；数据库端口从公网不可达；`pg_dump` + 恢复演练成功（三项均已在 T-04 通过）；`/healthz` 200 已在 T-05 验证。
 - **验收**：部署 / 启动 / 停止 / 日志 / 备份 / 恢复六类说明可执行；不触碰已有 TiDB 容器。
 - **风险/回滚**：`firewalld` inactive、共享机端口冲突 → 全端口绑回环 + 独立 project name；`docker compose down`（**不加 `-v`**）。
 
@@ -76,6 +77,7 @@
 - **测试**：`pytest` 全绿；`/healthz`；错误码与日志格式断言；`python --version` 断言为 3.12。
 - **验收**：无业务表也能启动；依赖版本锁定。
 - **风险/回滚**：误用系统 Python 3.6 → CI 版本断言；骨架独立提交可 revert。
+- **实测（2026-11-19）**：VM `.venv` 31 个 pytest 全绿；venv 直跑与容器两种启动方式均 `/healthz` 200（VM venv Python 3.12.11、容器 3.12.16）；`cl-dev-api-1` healthy、`58000` 仅回环、公网不可达；7 个领域路由均 501，不返回任何伪造业务数据。
 
 ### T-06 数据库模型与迁移
 - **目标**：落地 10 类实体 + 跨馆通用层，明确主键、唯一性、状态流转与校验规则。
