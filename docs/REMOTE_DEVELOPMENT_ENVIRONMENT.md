@@ -96,6 +96,7 @@
 ## 6. 敏感配置
 
 - `.env.example` 已含 `APP_ENV`、`DATABASE_URL`、`REDIS_URL`、`S3_*`、`AI_*` 等占位项，需补齐 `POSTGRES_USER` / `POSTGRES_PASSWORD`、`CL_DEV_DB_NAME` / `CL_TEST_DB_NAME`、`MEDIA_ROOT` / `TEST_MEDIA_ROOT`、`BACKUP_ROOT` 与端口变量。数据库名由环境 overlay 决定，不设全局 `POSTGRES_DB`，避免开发与测试库名漂移。
+- `.env` 只放**仓库根**。Compose v2 默认从第一个 `-f` 文件所在目录（`deploy/`）加载 `.env`，因此所有 Compose 命令必须带 `--project-directory .`；漏掉会报 `required variable POSTGRES_USER is missing a value`。详见 `deploy/README.md`。
 - `.gitignore` 已忽略 `.env`、`.env.*`（保留 `.env.example`）；提交前做密钥扫描。
 - SSH 别名、主机、端口、账号、`IdentityFile` 路径只保留在本机 `~/.ssh/config`，不写入文档、脚本或提交信息。
 - 对象存储密钥位保持为空；本阶段不接云存储。
@@ -107,7 +108,7 @@
 | 动作 | 命令形态 |
 |---|---|
 | 备份本地项目（已执行） | 完整复制到仓库外备份目录，含 `.git` 与被忽略媒体；记录文件数与字节数 |
-| 部署 | `git clone` → `cp .env.example .env` 并填值 → `python3.12 -m venv .venv` → `docker compose -p cl-dev -f deploy/docker-compose.yml -f deploy/compose.dev.yml up -d`（完整命令见 `deploy/README.md`） |
+| 部署 | `git clone` → 仓库根 `cp .env.example .env` 并填值（`chmod 600`）→ `python3.12 -m venv .venv` → `docker compose --project-directory . -p cl-dev -f deploy/docker-compose.yml -f deploy/compose.dev.yml up -d`（完整命令见 `deploy/README.md`） |
 | 启动 / 停止 | `docker compose … up -d` / `docker compose … down`（**不带 `-v`，避免删卷**） |
 | 日志查看 | `docker compose logs -f api db`；应用日志落 `var/logs`，含请求 ID、错误码、审计事件 |
 | 状态检查 | `docker compose ps`、`curl /healthz`、数据库连接探测、`df -h` 与媒体目录水位 |

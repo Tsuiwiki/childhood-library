@@ -28,7 +28,8 @@ else
   echo "WARNING: no checksum sidecar for $DUMP" >&2
 fi
 
-COMPOSE=(docker compose -p "$PROJECT" -f deploy/docker-compose.yml -f "$OVERLAY")
+# --project-directory . is REQUIRED so Compose finds the repo-root .env.
+COMPOSE=(docker compose --project-directory . -p "$PROJECT" -f deploy/docker-compose.yml -f "$OVERLAY")
 DB_USER="$("${COMPOSE[@]}" exec -T db printenv POSTGRES_USER)"
 DB_NAME="$("${COMPOSE[@]}" exec -T db printenv POSTGRES_DB)"
 if [ -z "$DB_USER" ] || [ -z "$DB_NAME" ]; then

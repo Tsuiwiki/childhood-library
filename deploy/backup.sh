@@ -11,7 +11,10 @@ MEDIA_DIR="${CL_MEDIA_ROOT:-./var/media}"
 STAMP="$(date +%Y%m%d-%H%M%S)"
 OUT="${BACKUP_DIR}/db-${PROJECT}-${STAMP}.dump"
 
-COMPOSE=(docker compose -p "$PROJECT" -f deploy/docker-compose.yml -f "$OVERLAY")
+# --project-directory . is REQUIRED: Compose v2 loads .env from the directory of
+# the first -f file (deploy/), not from the shell's cwd. It also makes ./var/media
+# resolve against the repo root instead of deploy/.
+COMPOSE=(docker compose --project-directory . -p "$PROJECT" -f deploy/docker-compose.yml -f "$OVERLAY")
 
 # Read credentials from the RUNNING container, not from the shell environment.
 # Compose loads the repo-root .env for interpolation by itself; sourcing .env

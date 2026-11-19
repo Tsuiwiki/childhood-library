@@ -14,6 +14,9 @@
 #   them here as well would produce a duplicate host-port binding and two volumes
 #   mounted on /var/lib/postgresql/data. All per-environment values live in
 #   compose.dev.yml / compose.test.yml.
+# ALWAYS invoke with `docker compose --project-directory . ...` so Compose loads
+# the repo-root .env (v2 defaults to the first -f file's directory, i.e. deploy/)
+# and resolves ./var/media against the repo root.
 
 services:
   db:
