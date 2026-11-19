@@ -1,6 +1,6 @@
 # deploy/ — 配置骨架与运维说明
 
-> **状态：`cl-dev` 的 `db` + `api` 均已在远程 VM 启用（healthy、仅回环），`cl-test` 备份恢复演练通过。** 本目录不包含任何密钥、主机地址或账号信息。
+> **状态：`cl-dev` 的 `db` + `api` 均已在远程 VM 启用（healthy、仅回环），T-06 的 20 张表已完成迁移（业务表为空），`cl-test` 备份恢复演练通过。** 本目录不包含任何密钥、主机地址或账号信息。
 > 环境实测与完整方案见 [REMOTE_DEVELOPMENT_ENVIRONMENT.md](../docs/REMOTE_DEVELOPMENT_ENVIRONMENT.md)。
 
 ## 文件
@@ -13,10 +13,12 @@
 | `backup.sh` | `pg_dump` + SHA-256 sidecar + 媒体 checksum 复制 |
 | `restore.sh` | 校验 dump checksum 后 `pg_restore` 到指定 project |
 | 仓库根 `.env.example` | 占位模板；实际 `.env` 已被 `.gitignore` 忽略 |
-| 仓库根 `Dockerfile` / `.dockerignore` | T-05 api 镜像（Python 3.12-slim、非 root）；构建上下文只含 `app/` 与 `migrations/` |
-| 仓库根 `requirements.lock` | 29 个包的精确版本锁，镜像构建只认它 |
+| 仓库根 `Dockerfile` / `.dockerignore` | api 镜像（Python 3.12-slim、非 root）；构建上下文含 `app/` / `migrations/` / `alembic.ini` |
+| 仓库根 `alembic.ini` | T-06 Alembic 入口；连接串只从 `DATABASE_URL` 读取 |
+| 仓库根 `app/models/` / `migrations/versions/` | T-06 ORM 模型与初始迁移 |
+| 仓库根 `requirements.lock` | 36 个包的精确版本锁，镜像构建只认它 |
 
-`api` 服务已在 `compose.dev.yml` 定义（T-05），`cl-test` 仍是纯数据库 project；`web` / `nginx` 留到 T-08。七个业务路由当前全部返回 501，不代表业务已实现。
+`api` 服务已在 `compose.dev.yml` 定义（T-05），容器内 `DATABASE_URL` 由 `POSTGRES_USER` / `POSTGRES_PASSWORD` / `CL_DEV_DB_NAME` 拼成 `db:5432`（宿主机 venv 仍用 `.env` 里的 `127.0.0.1:55432`）。`cl-test` 仍是纯数据库 project；`web` / `nginx` 留到 T-08。七个业务路由当前全部返回 501，不代表业务已实现。
 
 ## Compose 合并契约（改动配置前必读）
 
@@ -76,6 +78,12 @@ $DEV down
 $DEV logs -f api db
 $DEV ps
 curl -fsS http://127.0.0.1:${CL_API_PORT:-58000}/healthz
+curl -fsS http://127.0.0.1:${CL_API_PORT:-58000}/readyz   # SQL 不可达时 503
+
+# 数据库迁移（宿主机 venv；连接串读仓库根 .env，不写入 alembic.ini）
+.venv/bin/alembic -c alembic.ini current
+.venv/bin/alembic -c alembic.ini upgrade head
+.venv/bin/alembic -c alembic.ini downgrade base   # 仅演练环境，down 会删全部表
 
 # 测试环境（独立 project，绝不指向开发库）
 $TEST up -d
@@ -111,9 +119,11 @@ pytest
 - 已有 TiDB / anydev-agent 容器未受影响。
 - T-05：`api` 容器（Python 3.12-slim、非 root）healthy，`127.0.0.1:58000` 仅回环、公网 IP 探测不可达；`/healthz` 200、占位域 501、JSON 访问日志含 request_id / status_code / duration_ms。
 - T-05：VM `.venv` 下 31 个 pytest 用例全绿；`requirements.lock` 的 29 个包两次安装结果一致。
+- T-06：`alembic upgrade head` 已在 `cl-dev` 完成（20 张业务表 + `alembic_version`，业务表 0 行）；隔离空库 `upgrade → downgrade → upgrade` 往返与 `compare_metadata` 0 差异通过；13 项约束违规全部按预期拒绝。
+- T-06：VM 57 个 pytest 全绿；`/healthz` 的 `database_tcp` / `database_sql` 均 reachable、`/readyz` 200；`pg_dump` + SHA-256 sidecar 仍可 dump 新 schema（`pg_restore -l` 42 个 TABLE 条目）。
 
 **未完成 / 待确认**
 
-- `web` / `nginx` 服务定义、数据库迁移、业务表与业务回归测试尚未落地（T-06 / T-08+）；`/healthz` 与 pytest 基线已可用。
+- `web` / `nginx` 服务定义、媒体存储适配器与业务回归测试尚未落地（T-07 / T-08+）；数据库迁移与业务表已由 T-06 建好，但**尚未导入任何数据**、发布门禁尚未接入发布命令（T-09）。
 - ⚠️ 门禁 B 正式确认仍待：端口 `55432` / `55433` / `58000` 目前按 `.env.example` 默认值落地；备份保留周期、异地副本策略未定。
 - ⚠️ `/data` 实测可用 14 G，低于检查清单的 ≥ 20 G；本阶段只放代码 + venv + 空库，迁移 85 个媒体文件前需扩容评估。

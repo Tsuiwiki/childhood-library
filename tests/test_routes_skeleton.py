@@ -25,7 +25,7 @@ def test_domain_returns_not_implemented(client, domain):
     body = response.json()
     assert body["code"] == "NOT_IMPLEMENTED"
     assert body["data"]["domain"] == domain
-    assert body["data"]["planned_from"] == "T-06"
+    assert body["data"]["planned_from"] == "post-T-06"
     assert response.headers["X-Error-Code"] == "NOT_IMPLEMENTED"
 
 

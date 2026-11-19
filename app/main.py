@@ -25,7 +25,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app = FastAPI(
         title=f"{settings.app_name} API",
         version=settings.app_version,
-        description="童年书房统一资源管理 API（T-05 骨架，业务能力自 T-06 起）",
+        description="童年书房统一资源管理 API（T-05 骨架 + T-06 数据层；业务能力待后续任务）",
         docs_url="/api/docs" if settings.app_env != "production" else None,
         redoc_url=None,
         openapi_url="/api/openapi.json",

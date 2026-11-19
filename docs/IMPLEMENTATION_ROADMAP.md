@@ -25,7 +25,8 @@
 | T-03 资产清单 | **已完成**：只读脚本与报告落盘 |
 | T-04 部署配置骨架 | **已完成（VM 侧）**：修复 overlay 序列合并与仓库根 `.env` 加载；VM 已 clone、生成 `.env`（`600`）、建 3.12 venv、启动 `cl-dev`（healthy、仅回环），`cl-test` 备份恢复演练通过。⚠️ 门禁 B 正式确认与 `/data` 容量缺口待处理 |
 | T-05 后端工程初始化 | **已完成**：FastAPI 3.12 骨架 + 统一 envelope / 错误码 + 结构化日志 + 7 域占位路由；`requirements.lock` 29 包；31 个 pytest 全绿；api 容器 healthy、`/healthz` 200 |
-| T-06 ～ T-12 | 未开始（门禁 B 正式确认 / 门禁 C 待办） |
+| T-06 数据库模型与迁移 | **已完成**：20 张表（10 核心 + 10 支撑）、Alembic 初始迁移、五维状态 + 发布门禁；57 个 pytest 全绿；cl-dev 已迁移且业务表为空；备份链路可 dump 新 schema |
+| T-07 ～ T-12 | 未开始（门禁 B 正式确认 / 门禁 C 待办） |
 
 ---
 
@@ -87,6 +88,7 @@
 - **测试**：upgrade / downgrade 往返；唯一约束、外键、枚举断言；一首歌多版本多来源样例写入。
 - **验收**：支持 500 首目录、多录音版本、传统童谣多地区/语言/歌词版本、多贡献角色、音频/简谱/五线谱、审美评审、权利审核与发布。
 - **风险/回滚**：通用层与音乐层命名冲突 → 先定映射表；downgrade 可回滚。
+- **实测（2026-11-19）**：VM 隔离空库 `upgrade head → compare_metadata` 0 差异 `→ downgrade base → upgrade head` 全通过（53 CHECK / 35 FK）；13 项约束违规全部按预期拒绝；合成样例图（2 作品 / 2 文本版本 / 3 来源 / 4 贡献角色 / 录音 / 谱面 / 媒体 / 播放 / 评审 / 权利）写入成功且随临时库一并删除；`cl-dev` 已 `upgrade head`（`8d6b729f5152`），21 张表、业务表 0 行；57 个 pytest 全绿；`/healthz` 双探测 reachable、`/readyz` 200；`pg_restore -l` 列出 42 个 TABLE 条目。定型取舍见 [DATABASE_DESIGN.md §9](DATABASE_DESIGN.md)。
 
 ### T-07 媒体资产模块
 - **目标**：StorageProvider 接口 + 本地适配器 + 校验和 + 权利门禁。

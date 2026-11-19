@@ -1,7 +1,7 @@
 # 数据库设计 · DATABASE_DESIGN
 
-- 文档状态：Design Proposal
-- 版本：v0.1
+- 文档状态：Design Baseline（概念设计定稿；T-06 已按本文实装，定型与取舍见 §9）
+- 版本：v0.2
 - 日期：2026-11-19
 - 范围：儿童音乐馆 MVP 的关系模型；故事馆 / 诗词馆复用通用层
 - 依据：[DATA_MODEL.md](DATA_MODEL.md)（跨馆通用层）、[MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md §3](MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md)（音乐领域层）、[MUSIC_LIBRARY_V1.md L164-L168](MUSIC_LIBRARY_V1.md)（作品与录音版本分离）
@@ -212,3 +212,50 @@ access_method:    none → source_link / official_embed / licensed_media / own_o
 - PostgreSQL 具体主版本（建议 16，VM 已有 `pgvector:pg16` 镜像）、UUID 生成策略、JSONB 与独立 profile 表的取舍。
 - 迁移工具（建议 Alembic）与全量/增量导入的批次策略。
 - 搜索方案：MVP 用 PostgreSQL 全文检索，不提前引入独立搜索引擎 [ARCHITECTURE.md L19]。
+
+
+---
+
+## 9. T-06 实装与定型（2026-11-19 补充）
+
+§1–§8 是概念设计，本节只记录**实装时的定型与取舍**，不回改上面的设计判断。
+
+### 9.1 §8 待确认项的定型
+
+| 待确认项 | 定型结果 | 理由 |
+| --- | --- | --- |
+| PostgreSQL 主版本 | **16**（VM 已有 `pgvector/pgvector:pg16`） | 与 T-04 环境一致，无需新增镜像 |
+| UUID 生成策略 | `UUID` 列 + Python 侧 `uuid.uuid4()` 默认值 | 离线可构造、测试不依赖 `pgcrypto` / 服务端默认值 |
+| JSONB vs 独立 profile 表 | 各实体 `metadata JSONB`，**不建** `music_work_profile` 空表 | 符合 §1.6「不为故事/诗词加空列」，领域扩展字段按需演进 |
+| 枚举实现 | `VARCHAR + CHECK`，值集由 `app/domain/status.py` 与 `app/models/enums.py` 单一来源生成 | 与 T-05 五维契约逐值对齐；downgrade 对称、加值不需类型迁移 |
+| 迁移工具 | Alembic 1.15.2；`alembic.ini` 在仓库根、`script_location = migrations`；连接串只读 `DATABASE_URL` | 单一入口，凭证不入配置文件 |
+| 搜索方案 | **本阶段不引入**；MVP 全文检索留待 T-09+ | 符合 §8 建议，避免提前引入独立搜索引擎 |
+
+### 9.2 实装范围
+
+`app/models/` 落地 **20 张表**：§3 的 10 类核心实体（其中 `StorageLocation` 单列）+ `Person`、`ExternalIdentifier`、`Collection` / `CollectionMembership`、`Tag` / `WorkTag`、`WorkRelation`、`ImportBatch`、`AuditLog`。命名严格按 [DATA_MODEL.md §11](DATA_MODEL.md) 映射，不建双份通用层。实测 **53 个 CHECK、35 个外键、13 个唯一约束、10 个索引**，迁移版本号 `8d6b729f5152`。
+
+### 9.3 与设计原文的三处有意取舍
+
+1. **checksum 重复检测**：§3.7 同时写了 `UNIQUE(checksum_sha256, file_size_bytes)` 与「不作硬拒绝，需人工确认」。实装为普通索引 `ix_media_assets_checksum`，把判断留给人，避免数据库直接拒收待人工确认的重复资产。
+2. **多态关联不加跨表 FK**：`SourceRecord` / `RightsRecord` / `EditorialReview` 的 `subject_*` 保持无 FK（应用层校验存在性）；`media_assets.recording_version_id` / `score_edition_id` 也不带 FK，避免与 `recording_versions.primary_asset_id` 形成外键环导致迁移无法排序。
+3. **NULL 参与唯一约束**：PG15+ `NULLS NOT DISTINCT` 用于贡献关系、版本业务键等含可空列的唯一约束；`StorageLocation` 每个资产至多一个 primary 用部分唯一索引 `WHERE is_primary` 实现。
+
+### 9.4 发布门禁的分层
+
+§4 五条门禁的数据库可判定部分落成 CHECK（`published → quality_status=suitable`、媒体发布需 checksum + verified、embed 需许可、官方预览 URL 不得持久化）；**跨对象**部分（逐对象权利记录、播放资源审批、绑定评审、审计留痕）在 `app/domain/publication_gate.py` 实现并由 26 个用例覆盖，**T-09 接入发布命令**。研究状态不在门禁输入中：权利未知不阻止研究登记。
+
+### 9.5 实机验证（2026-11-19）
+
+| 项 | 结果 |
+| --- | --- |
+| 迁移往返 | 隔离空库 `upgrade head → compare_metadata` **0 差异** `→ downgrade base`（只剩 `alembic_version`）`→ upgrade head`，`current = 8d6b729f5152 (head)` |
+| 约束 | 13 项违规（重复 slug、非法枚举、越级发布、`no_lyric_applicable` 缺结论、歌词缺来源、重复外部 ID、NULLS NOT DISTINCT、embed 越权、预览 URL 持久化、双 primary、自关系、悬空外键等）全部按预期拒绝 |
+| 样例图 | 2 作品 / 2 文本版本 / 3 来源 / 4 贡献角色 / 录音 / 谱面 / 媒体 / 播放 / 评审 / 权利，写入与关联断言通过 |
+| 测试 | VM 57 个 pytest 全绿 |
+| cl-dev | 21 张表（20 业务 + `alembic_version`），**所有业务表 0 行**；`/healthz` 双探测 reachable、`/readyz` 200；容器 healthy、端口仅回环 |
+| 备份 | `pg_dump` + SHA-256 sidecar 通过，`pg_restore -l` 列出 42 个 TABLE 条目 |
+
+### 9.6 明确未做
+
+只建表，**不导入任何真实曲目、录音、乐谱、来源或权利结论**；合成结构验证样本全部写在隔离临时库并随库删除；cl-dev 业务表保持为空。`web` / 媒体存储适配器 / 内容导入 / 发布审核流仍属 T-07 及以后。

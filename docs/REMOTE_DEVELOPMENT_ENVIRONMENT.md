@@ -1,7 +1,7 @@
 # 远程开发环境建设方案 · REMOTE_DEVELOPMENT_ENVIRONMENT
 
-- 文档状态：Active（**方案已确认；T-04 环境、T-05 API 骨架均已在 VM 启用**）
-- 版本：v0.1
+- 文档状态：Active（**方案已确认；T-04 环境、T-05 API 骨架、T-06 数据库模型与迁移均已在 VM 启用**）
+- 版本：v0.2
 - 日期：2026-11-19
 - 依据：Phase 0 远程 VM 只读实机探测（命令编号 C1–C4）、[PROJECT_AUDIT.md §6](PROJECT_AUDIT.md)、[ARCHITECTURE.md §5](ARCHITECTURE.md)
 
@@ -48,17 +48,20 @@
 
 ```text
 /data/childhood-library/                 # 独立目录，避开 /data 下已有项目
-├── app/                                 # 模块化单体后端（T-05 已落地）
+├── app/                                 # 模块化单体后端（T-05 骨架 + T-06 数据层）
 │   ├── core/                            # 配置 / 运行时断言 / 错误码 / 结构化日志 / 请求上下文
-│   ├── domain/                          # 五维状态契约（T-06 接 ORM）
+│   ├── domain/                          # 五维状态契约 + 发布门禁规则
+│   ├── models/                          # T-06 ORM：10 核心实体 + 10 支撑表
+│   ├── db/                              # T-06 SQL 就绪探针 / Session 工厂
 │   ├── schemas/                         # 统一响应 envelope
-│   └── api/v1/                          # health + 7 个领域路由（占位 501）
+│   └── api/v1/                          # health / readyz + 7 个领域路由（占位 501）
 ├── web/                                 # Vue 前台 + 编辑后台（T-08，尚未创建）
-├── migrations/                          # Alembic 占位（T-06 起）
+├── migrations/                          # Alembic env.py / script.py.mako / versions（T-06 已启用）
+├── alembic.ini                          # 连接串只从环境变量读取
 ├── scripts/                             # 导入、导出、校验、备份、恢复
-├── tests/                               # pytest 基线（31 用例）
+├── tests/                               # pytest 基线（57 用例）
 ├── Dockerfile / .dockerignore / pytest.ini
-├── requirements.txt / requirements.lock # 顶层依赖 + 全量精确锁
+├── requirements.txt / requirements.lock # 顶层依赖 + 全量精确锁（36 包）
 ├── design-demos/                        # 历史原型（只读保留，直到新系统验收）
 ├── docs/
 ├── var/
@@ -74,7 +77,7 @@
 └── .env                                 # 不入库（模板见 .env.example）
 ```
 
-`app/common/`（跨馆通用层）、`app/music/`（音乐馆领域层）以及 `catalog` / `versions` / `sources` / `rights` / `reviews` / `media` / `ingestion` 七个领域包计划在 T-06 补齐；当前同名模块只存在于 `app/api/v1/` 的路由层。
+T-06 已把领域实体落到 `app/models/`（按 [DATA_MODEL.md §11](DATA_MODEL.md) 的映射表统一命名，不建双份通用层）。`app/common/` / `app/music/` 与七个领域**业务包**仍待 T-07 起按能力拆分；当前同名模块只存在于 `app/api/v1/` 的路由层。
 
 ## 4. 三环境分离
 
@@ -135,7 +138,8 @@
 - [x] 数据库端口从公网不可达（`127.0.0.1` 绑定 + 公网 IP 探测失败）
 - [x] 未启用云存储 / CDN / 管理工具
 - [x] T-05 `api` 容器 healthy、`/healthz` 200、`58000` 仅回环且公网 IP 探测不可达
+- [x] T-06 `alembic upgrade head` 在 `cl-dev` 通过（21 张表、业务表 0 行），`/readyz` 200、57 个 pytest 全绿
 
-> **当前状态（2026-11-19，T-04 / T-05 已落地）**：VM `/data/childhood-library` 已 clone 到 `29d22d2`；仓库根 `.env`（`600`）、`python3.12` venv、`var/` 均建立且被忽略。`cl-dev` 的 `db`（`127.0.0.1:55432`）与 `api`（`127.0.0.1:58000`）均 healthy；`cl-test` 备份 / 恢复演练通过后已停止并保留卷。31 个 pytest 用例全绿，`/healthz` 200。`web` / `nginx` 与业务表仍属 T-08 / T-06+。
+> **当前状态（2026-11-19，T-04 / T-05 / T-06 已落地）**：VM `/data/childhood-library` 已同步到 `60607bc`；仓库根 `.env`（`600`）、`python3.12` venv、`var/` 均建立且被忽略。`cl-dev` 的 `db`（`127.0.0.1:55432`）与 `api`（`127.0.0.1:58000`）均 healthy；20 张业务表已迁移（`8d6b729f5152`），**表内尚无业务数据**；`cl-test` 备份 / 恢复演练通过后已停止并保留卷。57 个 pytest 用例全绿，`/healthz` 双探测与 `/readyz` 均正常。`web` / `nginx` 仍属 T-08。
 >
 > ⚠️ 门禁 B（端口 / 备份策略正式确认）与 `/data` 容量缺口仍待处理；当前端口按 `.env.example` 默认值落地。

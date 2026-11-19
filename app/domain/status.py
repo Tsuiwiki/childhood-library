@@ -1,9 +1,11 @@
-"""Five independent status dimensions (contract only, no tables in T-05).
+"""Five independent status dimensions.
 
 Source: PROJECT_PRINCIPLES.md L83-L87, DATA_MODEL.md L76-L81,
-DATABASE_DESIGN.md L157-L161. These enums are NOT database models - T-06 builds
-the schema. Keeping them as separate types prevents later code from collapsing
-"研究完成 / 权利确认 / 质量适合 / 访问方式 / 公开发布" into one review flag.
+DATABASE_DESIGN.md L157-L161. These enums stay pure Python: T-06 landed them as
+five independent columns + CHECK constraints on `works`, with per-object
+clearance in `rights_records`. Keeping them as separate types prevents later
+code from collapsing "研究完成 / 权利确认 / 质量适合 / 访问方式 / 公开发布" into
+one review flag.
 """
 from enum import StrEnum
 
