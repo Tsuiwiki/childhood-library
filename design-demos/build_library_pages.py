@@ -758,6 +758,7 @@ def render_research(data: dict) -> str:
     if any(r.get("audioStatus") != "待采集" or r.get("hasAudio") is not False for r in world_records):
         raise ValueError("Every world material must keep audio pending")
     world_lyrics_ready = sum(1 for r in world_records if r.get("lyrics"))
+    world_verdict_resolved = sum(1 for r in world_records if r.get("lyricsVerdict"))
     world_pending_rows = "\n".join(
         "<tr><td><code>{}</code></td><td>{}</td></tr>".format(E(c["id"]), E(c["note"]))
         for c in world_clues.get("verifiedCandidates", [])
@@ -861,7 +862,7 @@ def render_research(data: dict) -> str:
 
     <section class="shell section" id="world-pending" aria-labelledby="world-pending-title">
       <h2 id="world-pending-title">世界经典资料卡 · {len(world_records)} 条已补齐，真实录音待采集</h2>
-      <p>作品目录 105 条现已全部配置资料卡：中国 55 条、世界经典 {len(world_records)} 条，另 3 条英语条目随示例音频提供资料。世界经典逐曲核验了公版歌词与权威来源，其中 <b>{world_lyrics_ready} 条</b>照录到可逐行复核的歌词，<b>{len(world_records) - world_lyrics_ready} 条</b>因来源未刊全文而明确留白并写明原因；没有可考证旋律的一律不生成五线谱。</p>
+      <p>作品目录 105 条现已全部配置资料卡：中国 55 条、世界经典 {len(world_records)} 条，另 3 条英语条目随示例音频提供资料。世界经典逐曲核验了公版歌词与权威来源：<b>{world_lyrics_ready} 条</b>照录到可逐行复核的公版全文；其余 <b>{len(world_records) - world_lyrics_ready} 条</b>经独立核验已给出定性结论（专辑/曲目专题不设单曲歌词、具体采风录音机构未刊逐字文本、改编文本受版权或文化敏感不宜录入、无 1929 年前公版全文），逐条写明精确出处与硬证据，不再笼统标「歌词待采集」。没有可考证旋律的一律不生成五线谱。</p>
       <p><b>真实录音优先 · 找不到的不硬配</b>：{len(world_records)} 首的播放位统一标「待采集」，不接程序合成音冒充原曲。Commons API 检索经 WebFetch 通道逐项核验，本地出口 IP 被 Wikimedia 403 / 429 限流、upload.wikimedia.org 无法下载；已命中的候选还包含器乐片段、MIDI 数据、同名异曲与现代专辑录音，未逐项完成版本与授权复核前不接入。</p>
       <table class="data-table">
         <thead><tr><th>作品 ID</th><th>已核验的开放许可候选与核查结论</th></tr></thead>
@@ -885,7 +886,7 @@ def render_research(data: dict) -> str:
           <li>累计两轮经项目明确批准，为版本鉴定与内部原型验证保存了 {s['files']} 个公开页面内完整录音 / 原声音轨（{s['mappings']} 条作品映射），统一标为 <code>internal · 权利待核验</code>；每个文件均记录来源页、原始地址、版本、采集日期、处理方式、大小与 SHA-256。第二轮新增央视网「独立单曲页」原声音轨与学习强国童谣诵读音频，诵读 / 表演 / 改编版本均在资料卡中如实标注，不冒充歌曲原唱。详见<a href="audio/public-recording-collection.json">采集清单</a>与<a href="../docs/COPYRIGHT_POLICY.md">来源与权利说明</a>。</li>
           <li>政府、高校、公共文化机构或教育平台上的完整歌曲页面，可作为可靠的来源与版本核验线索；<b>其公开展示本身不代表本站获得再发布授权</b>。</li>
           <li>仍有 {s['types'].get('generated', 0)} 个 <code>generated</code> 条目是程序合成的「原创播放示范 · 非原曲」测试音，页面持续标注，不得当作目标作品原声；需继续寻找可靠原曲录音。</li>
-          <li>世界经典 {s['worldMaterials']} 条资料卡只补齐元数据与原创封面，<b>未接入任何第三方音频</b>；歌词按来源页照录或明确留白，谱面不伪造，播放位统一标「待采集」。资料卡齐备不等于取得公开播放授权。</li>
+          <li>世界经典 {s['worldMaterials']} 条资料卡只补齐元数据与原创封面，<b>未接入任何第三方音频</b>；歌词按来源页照录或经核验定性为「本条不适用单曲歌词」，谱面不伪造，播放位统一标「待采集」。资料卡齐备不等于取得公开播放授权。</li>
           <li>{s['official']} 首官方 30 秒试听属于平台预览，点击才加载、逐首核验曲目身份、不持久化预览 URL，与内部完整录音分开管理。</li>
           <li>故事馆「当代原创」15 条是编辑征集方向，不是已登记作品；古诗词馆 12 条是版本 / 媒体资产层线索，不是独立作品。统计中单独列出，不虚报作品数。</li>
         </ul>
@@ -897,7 +898,7 @@ def render_research(data: dict) -> str:
           <li>逐条完成权利证据归档，把 <code>rights_status</code> 从 pending / unknown 推进到 verified；证据含目标地域、权利人、许可、用途、期限与复核人。</li>
           <li>补齐剩余 {s['types'].get('generated', 0)} 首非原曲测试音对应的真实录音，替换时保留原有版本与来源记录。</li>
           <li>为世界经典 {s['worldMaterials']} 首逐项完成开放许可 / 公开机构录音的身份、表演者、版本与授权复核；条件允许时再采集，未复核前继续标「待采集」，不硬配。</li>
-          <li>为 {len(world_records) - world_lyrics_ready} 条未取得歌词全文的世界经典补权威公版文本，并考证可生成五线谱的旋律依据；无证内容继续保持留白。</li>
+          <li>已定性的 {world_verdict_resolved} 条世界经典不再作为「补歌词」待办：如需呈现，应先完成专辑拆分为单曲、机构纸本歌词的合法转录授权，或权利人授权，而不是补写歌词。余下工作是考证可生成五线谱的旋律依据；无证内容继续保持留白。</li>
           <li>公共部署前逐项执行发布门禁：<code>publication_status</code> 为 published 的内容，其正文与所有待公开资产的权利状态必须通过校验。</li>
           <li>文档口径待同步：GitHub main 版《数据模型设计》已新增 §4「研究状态、权利状态与访问方式」四字段，本地 <a href="../docs/DATA_MODEL.md">docs/DATA_MODEL.md</a> 仍是旧版章节结构（含 3.1 三大支柱 / 3.2 中国经典七专题 / 作品分类字段）。本页按 GitHub 版建模；同步时应保留本地独有分类字段作为附录，不直接丢弃。</li>
         </ul>

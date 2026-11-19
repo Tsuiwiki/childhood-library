@@ -719,6 +719,8 @@
 
     
 
+    
+
     /* ===== LIBRARY_LINKS:CSS ===== */
     .lib-map { padding-block: 26px 54px; }
     .lib-map-box { border: var(--line); background: var(--paper-light); box-shadow: var(--shadow); padding: 26px 26px 22px; }
@@ -894,6 +896,7 @@
         <nav class="pagination" id="pagination" aria-label="作品列表分页"></nav>
       </section>
     </section>
+  
   
   
   
@@ -1333,6 +1336,7 @@
             ? '传统文本公版；现代改编、译词与具体录音另行核验'
             : materials.publicDomain === false ? '含现代版权作品，权利待核验' : '状态未知，按待核验处理']);
         }
+        if (materials.lyricsVerdict) sourceRows.push(['歌词结论', `${materials.lyricsVerdict}（本条不设单曲歌词，非待采集；依据见资料来源与研究线索）`]);
         if (materials.audioStatus) sourceRows.push(['音频状态', `${materials.audioStatus} · 不硬配合成音冒充原曲`]);
         if (materials.audioClue) sourceRows.push(['音频线索', materials.audioClue]);
         if (materials.extraNotes) sourceRows.push(['研究线索', materials.extraNotes]);

@@ -280,20 +280,29 @@ def main() -> None:
             cover_svg(work_id, title, chinese, motif, palette), encoding="utf-8"
         )
         lyrics = row.get("lyrics") or []
+        # A "verdict" means the missing lyric has been RESOLVED, not merely
+        # left pending: the source proves no single-song lyric applies (album
+        # topic, institution never published a transcript, copyright/cultural
+        # restriction, or no pre-1929 public-domain full text). Keep that
+        # conclusion visible instead of collapsing it back to "待采集".
+        verdict = (row.get("lyricsVerdict") or "").strip()
         lyrics_title = (row.get("lyricsTitle") or "").strip() or "传统歌词（来源页逐行照录）"
         lyrics_note = re.sub(r"^\s*lyrics=null[。.]?\s*", "", row.get("lyricsNote") or "").strip()
         if not lyrics:
-            lyrics_title = "歌词待采集 · 权威来源未刊全文"
+            if not verdict:
+                lyrics_title = "歌词待采集 · 权威来源未刊全文"
             if not lyrics_note:
                 lyrics_note = "所查权威来源未刊出可逐行照录的歌词全文；按口径不凭记忆补写、不推测、不扩写。"
         else:
             if not lyrics_note:
                 lyrics_note = "歌词按所列来源页逐行照录，保留原标点；未凭记忆补写或改写。"
         public_domain = row.get("publicDomain", "unknown")
-        availability = (
-            "歌词 / 谱面 / 真实录音待采集" if not lyrics
-            else "歌词已核验 · 真实录音待采集"
-        )
+        if lyrics:
+            availability = "歌词已核验 · 真实录音待采集"
+        elif verdict:
+            availability = f"{verdict} · 真实录音待采集"
+        else:
+            availability = "歌词 / 谱面 / 真实录音待采集"
         materials.append({
             "id": work_id,
             "title": title,
@@ -307,7 +316,12 @@ def main() -> None:
             "audioStatus": "待采集",
             "status": "metadata_verified",
             "rightsStatus": rights_status(public_domain),
-            "researchStatus": "lyrics_verified" if lyrics else "source_only",
+            "researchStatus": (
+                "lyrics_verified" if lyrics
+                else "no_lyric_applicable" if verdict
+                else "source_only"
+            ),
+            "lyricsVerdict": verdict,
             "lyricsTitle": lyrics_title,
             "lyrics": lyrics,
             "lyricsNote": lyrics_note,
@@ -358,6 +372,7 @@ def main() -> None:
         "covers": len(list(ASSETS.glob("EN-*-cover.svg"))),
         "withLyrics": sum(1 for m in materials if m["lyrics"]),
         "lyricsPending": sum(1 for m in materials if not m["lyrics"]),
+        "verdictResolved": sum(1 for m in materials if m["lyricsVerdict"]),
         "audioPending": sum(1 for m in materials if m["audioStatus"] == "待采集"),
         "verifiedAudioClues": len(clues["verifiedCandidates"]),
         "materialsFile": MATERIALS_OUT.name,
