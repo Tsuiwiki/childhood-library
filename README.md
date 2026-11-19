@@ -49,7 +49,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 | 主数据库 | PostgreSQL |
 | 采集与解析 | Python、HTTPX、BeautifulSoup（遵守来源规则） |
 | 任务队列 | MVP 先用简化后台任务；规模需要时再考虑 Celery + Redis |
-| 媒体存储 | S3 兼容对象存储；仅保存获准使用的媒体 |
+| 媒体存储 | 统一 Media Asset Service；本地适配器起步，云端可接 COS / BOS；仅保存获准使用的媒体 |
 | 部署 | Docker Compose、Nginx |
 
 技术选型允许在 MVP 实施中调整，避免过早引入微服务和复杂基础设施。当前静态原型是产品验证资产，不代表上述正式应用栈已经落地。
@@ -77,6 +77,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 - [项目顶层设计原则](docs/PROJECT_PRINCIPLES.md)
 - [产品需求文档](docs/PRD.md)
 - [系统架构设计](docs/ARCHITECTURE.md)
+- [统一媒体资产与对象存储设计](docs/MEDIA_ASSET_DESIGN.md)
 - [数据模型设计](docs/DATA_MODEL.md)
 - [采集系统设计](docs/INGESTION_DESIGN.md)
 - [信源清单与接入计划](docs/SOURCE_CATALOG.md)
