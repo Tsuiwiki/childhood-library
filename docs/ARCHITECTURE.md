@@ -40,6 +40,15 @@ flowchart TB
 | Media | S3-compatible storage | 仅存储具有明确使用权的媒体 |
 | Deploy | Docker Compose + Nginx | 单机部署起步 |
 
+
+## 3.1 统一媒体资产服务
+
+音乐馆、故事馆、诗词馆共享 Media Asset Service，不分别实现供应商 SDK。媒体服务负责资产元数据、权利门禁、上传校验、访问授权和生命周期；Storage Provider Adapter 负责本地文件系统、腾讯 COS、百度 BOS 等后端的具体读写操作。
+
+第一阶段使用本地适配器完成业务链路；云端测试时选择一家供应商，使用私有 Bucket 和短时授权 URL，暂不启用 CDN。只有在获得真实访问数据后才评估 CDN。媒体资产的稳定 ID 与 `object_key` 和供应商 URL 分离，禁止在作品主记录中硬编码临时播放地址。
+
+详见 [统一媒体资产与对象存储设计](MEDIA_ASSET_DESIGN.md)。
+
 ## 4. 业务模块边界
 
 - catalog：作品、作者、分类、标签、作品关系。
