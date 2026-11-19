@@ -1,0 +1,21 @@
+/* T-08 visual tokens.
+ * Source of truth: design-demos/music.html L9-L15 (:root) and
+ * design-demos/works.html L9-L20 (:root). Values are copied verbatim; the
+ * prototypes stay the visual baseline and MUST NOT be edited by the web app.
+ * --brown exists in music.html L11; works.html does not declare it.
+ */
+:root {
+  --paper: #f4eddc;
+  --paper-light: #fffaf0;
+  --ink: #191917;
+  --red: #e64a38;
+  --yellow: #f1bd32;
+  --blue: #2858b8;
+  --green: #739348;
+  --brown: #8b5e3c;
+  --ink-soft: #4a4841; /* literal text colour in music.html L59 / L72 */
+  --line: 3px solid var(--ink);
+  --shadow: 7px 7px 0 var(--ink);
+  --serif: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+  --sans: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+}

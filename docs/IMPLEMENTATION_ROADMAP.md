@@ -27,7 +27,8 @@
 | T-05 后端工程初始化 | **已完成**：FastAPI 3.12 骨架 + 统一 envelope / 错误码 + 结构化日志 + 7 域占位路由；`requirements.lock` 29 包；31 个 pytest 全绿；api 容器 healthy、`/healthz` 200 |
 | T-06 数据库模型与迁移 | **已完成**：20 张表（10 核心 + 10 支撑）、Alembic 初始迁移、五维状态 + 发布门禁；57 个 pytest 全绿；cl-dev 已迁移且业务表为空；备份链路可 dump 新 schema |
 | T-07 媒体资产模块 | **已完成**：`app/media/` 能力层、本地适配器、SHA-256 完整性、三级权利门禁、Range 响应、只读 capabilities 端点、`api` 容器 `var/media:ro` 正式挂载；VM 104 个 pytest 全绿、85/85 完整性校验、隔离库登记演练通过 |
-| T-08 ～ T-12 | 未开始（门禁 B 正式确认 / 门禁 C 待办） |
+| T-08 前端工程初始化 | **已完成**：`web/` Vue 3 + TS + Vite 骨架、精确版本锁、原型 token 与共享组件、统一 API 客户端与路由；18 个 vitest 全绿、构建通过、`validate_prototypes.py` 3/3 PASS；原型未改动、业务数据未导入 |
+| T-09 ～ T-12 | 未开始（门禁 B 正式确认 / 门禁 C 待办） |
 
 ---
 
@@ -175,3 +176,13 @@ T-11 另依赖门禁 C；T-12 之后才进入 Phase 5（故事馆 / 诗词馆）
 - 隔离库演练 `cl_t07_media`：put/get/stat/checksum/range/delete 往返、篡改告警、object_key 沙箱、只读挂载守卫、`rights_record_id` 关联、未授权 `public_url` 拒绝、删除留审计；库随演练删除，`cl-dev` 业务表仍 0 行。
 - ⚠️ 踩坑：① `.gitignore` 的 `media/` 会匹配任意层级同名目录，导致 `app/media/` 整个被忽略，已收窄为 `/media/`；② `up -d` 只重建容器不重建镜像，新路由曾返回 404，必须先 `build api`；③ `app/models/__init__.py` 会注册全部 ORM，故 `app/media/__init__.py` 改为惰性导出，保证 `app.media.integrity` 这类纯 Python 路径不被 SQLAlchemy 拖住。
 - ⚠️ 仍待确认：门禁 B / 门禁 C 未变；媒体业务 CRUD 端点属 T-09/T-10；云端适配器属 M1。
+
+## 7. T-08 实测记录（2026-11-19）
+
+- 工程：`web/` Vue 3.5.45 + TypeScript 5.9.3 + Vite 6.4.6 + Vitest 3.2.7；`package.json` 10 个顶层依赖精确锁，`package-lock.json` lockfileVersion 3 / 218 个包。全新空目录 `npm ci` 重装 167 包后 lock 文件哈希不变、`vue=3.5.45`。
+- 本地验证：`vue-tsc --noEmit` + `vite build` 通过（51 模块，105.34 kB JS / 7.33 kB CSS）；`vitest run` **18/18 全绿**；`_audit_main/verify_t08.py` **107 项静态检查 PASSED**。
+- 视觉回归：`design-demos/validate_prototypes.py` 对 dir-1/2/3.html **3/3 PASS**（筛选、搜索、空结果/重置、dialog/Escape、移动菜单、溢出、控制台错误）；原型目录 `git status` 为空，`tokens.css` 的 7 个核心色值与 music.html / works.html 逐值一致。
+- 契约对齐：`web/src/api/types.ts` 的 7 个域名与 9 个错误码由静态脚本对照 `app/api/v1/router.py` L6-L7、`app/core/errors.py` L17-L26 逐项比对；API 客户端默认相对 `/api/v1`，不硬编码主机；7 域清单端点仍 501，占位页显式呈现而不造数据。
+- 边界：`design-demos/` 原型、`app/` 后端与 `deploy/` 下的 Compose/备份配置全部未改动（`deploy/README.md` 仅同步状态文字）；不导入业务数据；不启动 nginx / Compose `web` 服务；不引入 UI 框架或状态管理库。
+- ⚠️ 踩坑：① Windows PowerShell 5.1 执行策略禁止 `npm.ps1`，须用 `npm.cmd`；② vitest 会把 `import.meta.url` 重写为非 file 协议，`fileURLToPath` 不可用，测试改用 `process.cwd()` 解析；③ 在已有 `node_modules` 上跑 `npm ci` 会触发沙箱批量删除保护（57 个 `.bin` 文件 > 50 阈值）导致半成品安装，改用**全新空目录**复制 `package.json` + `package-lock.json` 后 `npm ci` 验证锁可重现。
+- ⚠️ 仍待确认：门禁 B / 门禁 C 未变；VM 侧 ff-only 同步与实机构建需重新授权 SSH 通道；`web` / `nginx` 服务定义与业务页面属 T-09/T-10。

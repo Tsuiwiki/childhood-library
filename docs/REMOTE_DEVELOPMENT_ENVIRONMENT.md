@@ -150,3 +150,11 @@ T-06 已把领域实体落到 `app/models/`（按 [DATA_MODEL.md §11](DATA_MODE
 - VM 上 85 个迁移媒体逐文件 SHA-256 校验 85/85 通过、文件权限 `644`；`scripts/media_integrity.py --root var/media` 可重复执行，只读、不删孤儿。
 - 容器重建后 `/healthz` / `/readyz` 200、`GET /api/v1/media/capabilities` 返回 `root_exists=true`、`read_only=true`、`flat_object_count=85`、`public_url_issued=false`；`55432` / `58000` / `58080` 仍只绑 `127.0.0.1`。
 - ⚠️ 门禁 B（端口正式确认、备份保留周期、异地副本）、门禁 C（V2/V3 目录来源、100 首权威定义）仍未确认；`/data` 可用 14 G 中本批媒体仅占约 100 MiB，扩容评估针对全量媒体而非本批。
+
+## 10. T-08 追加状态（2026-11-19）
+
+- `web/` 前端工程骨架已进入 GitHub main（Vue 3 + TS + Vite），依赖在 `package.json` 精确锁定、`package-lock.json` 全量锁；本地实测 Node 22.22.2 / npm 10.9.7，在全新空目录 `npm ci` 重装 167 包且 lock 哈希不变。
+- 本地验证：`vue-tsc --noEmit` + `vite build` 通过、18 个 vitest 全绿、`_audit_main/verify_t08.py` 107 项 PASSED、`design-demos/validate_prototypes.py` 3/3 PASS；原型、`app/` 后端与 `deploy/` 的 Compose 配置均未改动（`deploy/README.md` 仅同步状态文字）。
+- VM 侧：T-08 **未启用** `web` / `nginx` 容器、未新增端口、未拉新镜像；`cl-dev` 仍是 db + api（+ 可选回环预览），`55432` / `58000` / `58080` 仍只绑 `127.0.0.1`。
+- ⚠️ 本次 VM ff-only 同步与 `npm ci && npm run build` 实机构建未执行：SSH 别名通道被本地权限规则拒绝读取 `~/.ssh/config`，需重新授权后补做。VM 已具备 Node 22.12.0 / npm 10.9.0（见 §5），前端工具链条件满足。
+- ⚠️ 门禁 B（端口正式确认、备份保留周期、异地副本）、门禁 C（V2/V3 目录来源、100 首权威定义）、`/data` 全量媒体扩容评估仍未确认。

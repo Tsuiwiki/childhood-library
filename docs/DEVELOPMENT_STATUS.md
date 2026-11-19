@@ -187,7 +187,7 @@ Childhood Library 已经拥有可观的内容研究资产和多馆视觉原型�
 
 合规边界不变：内部研究收录不等于取得公开播放、下载或分发授权；27 个 `internal` 录音继续只登记在研究层。
 
-## 9. 补充：T-04 / T-05 / T-06 / T-07 后续进展（2026-11-19，盘点后新增）
+## 9. 补充：T-04 / T-05 / T-06 / T-07 / T-08 后续进展（2026-11-19，盘点后新增）
 
 本节记录本次盘点之后的工程进展，**§1 的判断保留为盘点时点状态**，不回改历史结论。
 
@@ -202,6 +202,7 @@ Childhood Library 已经拥有可观的内容研究资产和多馆视觉原型�
 | 就绪探针 | `/healthz` 增加 `database_sql` 信息项、新增 `/readyz`（SQL 不可达返回 503）；VM 实测两者均为 `reachable` / 200 |
 | 测试与依赖 | T-06 时点 VM 57 个 pytest 全绿；`requirements.lock` 36 包（新增 SQLAlchemy 2.0.58 / Alembic 1.15.2 / psycopg 3.2.13）；T-07 后为 104 个 |
 | 媒体能力 | T-07 落地：`app/media/`（StorageProvider + 本地适配器 + 签名探测 + SHA-256 + 三级权利门禁 + Range 响应）、`scripts/media_integrity.py`；`api` 容器 `var/media:ro` 正式挂载；VM 104 个 pytest 全绿、85 个媒体 85/85 校验通过、隔离库登记演练通过；业务表仍为空 |
-| 仍未开始 | 前端工程（T-08）、后台 MVP（T-09）、内容导入（T-11）、发布审核流 |
+| 前端工程 | T-08 落地：`web/`（Vue 3 + TS + Vite、精确版本锁）、`src/styles/tokens.css` 逐值照抄原型配色、`ClCard` / `ClFilterBar` / `ClDetailDialog` 共享组件、统一 API 客户端对齐 envelope 与 7 域 501；18 个 vitest 全绿、构建通过、原型视觉回归 3/3 PASS；不改原型、不导入业务数据、不启动 nginx |
+| 仍未开始 | 后台 MVP（T-09）、前台 MVP（T-10）、内容导入（T-11）、发布审核流 |
 
-> 七个业务域的**清单端点**仍全部返回 `501 NOT_IMPLEMENTED`，**不产生任何示例业务数据**；T-07 只新增了只读的 `GET /api/v1/media/capabilities`。T-06 只建表、T-07 只登记合成样本，均不导入任何真实曲目、录音或权利结论；合成验证样本仅存在于已删除的临时库。
+> 七个业务域的**清单端点**仍全部返回 `501 NOT_IMPLEMENTED`，**不产生任何示例业务数据**；T-07 只新增了只读的 `GET /api/v1/media/capabilities`，T-08 前端骨架只呈现真实接口状态、不造数据。T-06 只建表、T-07 只登记合成样本，均不导入任何真实曲目、录音或权利结论；合成验证样本仅存在于已删除的临时库。
