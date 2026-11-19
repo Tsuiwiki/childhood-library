@@ -78,6 +78,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 - [信源清单与接入计划](docs/SOURCE_CATALOG.md)
 - [经典儿童歌曲候选目录（首批采集）](docs/CLASSIC_SONGS_CATALOG.md)
 - [中国经典儿歌研究与资源采集](docs/CHINESE_CLASSIC_SONGS_RESEARCH.md)
+- [中国儿童歌曲500首研究目录](docs/CHINESE_CHILDRENS_SONGS_500_CATALOG.md)
 - [儿童经典音乐图书馆建设方案 v1.0（图文版）](docs/MUSIC_LIBRARY_PLAN_V1.md)
 - [儿童故事馆建设方案 v1.1（图文版）](docs/STORY_LIBRARY_PLAN_V1.md)
 - [音乐馆设计：歌曲目录、版权与播放资源](docs/MUSIC_LIBRARY_DESIGN.md)
