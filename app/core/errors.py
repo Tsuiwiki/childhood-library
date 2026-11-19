@@ -21,6 +21,7 @@ class ErrorCode(StrEnum):
     METHOD_NOT_ALLOWED = "METHOD_NOT_ALLOWED"
     NOT_IMPLEMENTED = "NOT_IMPLEMENTED"
     HTTP_ERROR = "HTTP_ERROR"
+    NOT_READY = "NOT_READY"
     INTERNAL_ERROR = "INTERNAL_ERROR"
 
 
@@ -30,6 +31,7 @@ ERROR_HTTP_STATUS: dict[ErrorCode, int] = {
     ErrorCode.METHOD_NOT_ALLOWED: 405,
     ErrorCode.NOT_IMPLEMENTED: 501,
     ErrorCode.HTTP_ERROR: 400,
+    ErrorCode.NOT_READY: 503,
     ErrorCode.INTERNAL_ERROR: 500,
 }
 
@@ -39,6 +41,7 @@ DEFAULT_MESSAGES: dict[ErrorCode, str] = {
     ErrorCode.METHOD_NOT_ALLOWED: "请求方法不被允许",
     ErrorCode.NOT_IMPLEMENTED: "该能力尚未实现",
     ErrorCode.HTTP_ERROR: "HTTP 请求错误",
+    ErrorCode.NOT_READY: "依赖未就绪",
     ErrorCode.INTERNAL_ERROR: "服务内部错误",
 }
 

@@ -34,10 +34,14 @@ services:
       LOG_JSON: ${LOG_JSON:-true}
       LOG_DIR: /app/var/logs
       HEALTH_CHECK_DB: "true"
+      HEALTH_CHECK_SQL: "true"
       # Inside the Compose network the database is reachable at db:5432,
-      # not at the host loopback port 55432.
+      # not at the host loopback port 55432. The host-venv .env keeps
+      # 127.0.0.1:55432; this container-only override is built from the SAME
+      # credentials and is never written to logs or responses.
       DB_TCP_HOST: db
       DB_TCP_PORT: "5432"
+      DATABASE_URL: "postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${CL_DEV_DB_NAME:-childhood_library_dev}"
     ports:
       - "127.0.0.1:${CL_API_PORT:-58000}:8000"
     volumes:

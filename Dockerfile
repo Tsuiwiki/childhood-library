@@ -12,6 +12,7 @@ RUN groupadd --system cl && useradd --system --gid cl --create-home cl
 COPY requirements.lock /app/requirements.lock
 RUN pip install -r /app/requirements.lock
 
+COPY alembic.ini /app/alembic.ini
 COPY app /app/app
 COPY migrations /app/migrations
 RUN mkdir -p /app/var/logs && chown -R cl:cl /app/var

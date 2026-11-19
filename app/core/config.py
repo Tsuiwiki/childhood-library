@@ -34,7 +34,13 @@ class Settings(BaseSettings):
     db_tcp_host: str = "127.0.0.1"
     db_tcp_port: int = 55432
 
-    # Read from T-06 onward (SQLAlchemy / Alembic). Never exposed in logs.
+    # T-06: opt-in real SQL readiness. Off by default so a local test run
+    # without a database (and without SQLAlchemy installed) stays deterministic.
+    health_check_sql: bool = False
+    db_sql_timeout: float = 0.8
+
+    # Read from T-06 onward (SQLAlchemy / Alembic). Never exposed in logs,
+    # never returned by safe_summary, never echoed into a response.
     database_url: str | None = None
 
     def safe_summary(self) -> dict:
@@ -46,6 +52,7 @@ class Settings(BaseSettings):
             "log_level": self.log_level,
             "log_json": self.log_json,
             "health_check_db": self.health_check_db,
+            "health_check_sql": self.health_check_sql,
         }
 
 

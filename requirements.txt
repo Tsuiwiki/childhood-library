@@ -1,4 +1,4 @@
-# Top-level dependencies, pinned exactly (T-05).
+# Top-level dependencies, pinned exactly (T-05, extended by T-06).
 # Full transitive lock: requirements.lock, generated on the VM with
 # Python 3.12.11 / pip 23.2.1. Install reproducibly with:
 #   pip install -r requirements.lock
@@ -7,3 +7,6 @@ uvicorn[standard]==0.54.0
 pydantic-settings==2.16.3
 httpx==0.28.1
 pytest==9.2.0
+SQLAlchemy==2.0.58
+alembic==1.15.2
+psycopg[binary]==3.2.13
