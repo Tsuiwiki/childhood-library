@@ -74,7 +74,7 @@ Childhood Library 的音频、图片、乐谱等媒体文件不应放入 GitHub 
 官方入口：
 - 腾讯 COS：<https://cloud.tencent.com/product/cos>；价格：<https://cloud.tencent.com/document/product/436/6239>
 - 腾讯 CDN：<https://cloud.tencent.com/product/cdn>；价格：<https://cloud.tencent.com/document/product/228/2949>
-- 百度 BOS：<https://cloud.baidu.com/product/bos.html>；价格：<https://cloud.baidu.com/doc/BOS/s/ ik3wvx3dp>
+- 百度 BOS：<https://cloud.baidu.com/product/bos.html>；价格：<https://cloud.baidu.com/doc/BOS/index.html>
 - 百度 CDN：<https://cloud.baidu.com/product/cdn.html>
 
 ## 5. 初期费用估算
