@@ -27,13 +27,15 @@ def test_five_status_dimensions_are_separate_columns():
     for name in STATUS_DIMENSION_COLUMNS:
         assert name in columns
     assert len(STATUS_DIMENSION_COLUMNS) == 5
-    checks = {
-        constraint.name
+    check_texts = {
+        str(constraint.sqltext)
         for constraint in Work.__table__.constraints
         if isinstance(constraint, CheckConstraint)
     }
     for name in STATUS_DIMENSION_COLUMNS:
-        assert name in checks, "missing CHECK for %s" % name
+        assert any(name in text for text in check_texts), (
+            "missing CHECK expression for %s" % name
+        )
 
 
 def test_enum_checks_cover_every_value():
