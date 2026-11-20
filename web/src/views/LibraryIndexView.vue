@@ -142,7 +142,7 @@ function reset(): void {
     <section v-if="!browsing" class="shell documents" aria-labelledby="documents-title">
       <div class="section-heading"><h2 id="documents-title">最新研究档案</h2><p>文档原文保存在 GitHub；页面只建立入口和作品关系，不复制档案正文。</p></div>
       <div class="document-grid">
-        <a v-for="document in researchDocuments.slice(1, 6)" :key="document.id" class="document-card" :href="documentUrl(document.path)" target="_blank" rel="noopener noreferrer">
+        <a v-for="document in researchDocuments.filter((document) => document.id.startsWith('songs-') && document.id !== 'songs-500')" :key="document.id" class="document-card" :href="documentUrl(document.path)" target="_blank" rel="noopener noreferrer">
           <span>{{ document.updated }}</span><h3>{{ document.title }}</h3><p>{{ document.description }}</p><template v-if="document.workTitles.length"><b>关联作品</b><p>{{ document.workTitles.join(' · ') }}</p></template><strong>阅读研究原文 ↗</strong>
         </a>
       </div>

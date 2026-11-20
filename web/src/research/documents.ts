@@ -61,6 +61,14 @@ export const researchDocuments: ResearchDocument[] = [
     workTitles: ['一分钱', '快乐的节日', '听妈妈讲那过去的事情', '我们的田野', '丢手绢'],
   },
   {
+    id: 'songs-audio-links-05',
+    title: '音频链接采集 · 批次 05',
+    path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_05_AUDIO_LINKS.md',
+    description: '汇集正规平台、唱片与机构页面的人工试听入口，逐版本保留来源。',
+    updated: '2026-11-21',
+    workTitles: ['一分钱', '快乐的节日', '丢手绢', '听妈妈讲那过去的事情', '我们的田野', '红星歌', '小螺号', '采蘑菇的小姑娘', '种太阳', '歌声与微笑', '让我们荡起双桨'],
+  },
+  {
     id: 'story-plan',
     title: '儿童故事馆建设方案',
     path: 'docs/STORY_LIBRARY_PLAN_V1.md',

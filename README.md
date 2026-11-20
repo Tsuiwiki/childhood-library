@@ -110,6 +110,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 - [逐曲研究档案·批次03](docs/research/CHINESE_CHILDRENS_SONGS_BATCH_03.md)
 - [音频入口与版本核验·批次04](docs/research/CHINESE_CHILDRENS_SONGS_AUDIO_BATCH_04.md)
 - [音频优先采集档案·批次04](docs/research/CHINESE_CHILDRENS_SONGS_BATCH_04_AUDIO.md)
+- [音频链接采集·批次05](docs/research/CHINESE_CHILDRENS_SONGS_BATCH_05_AUDIO_LINKS.md)
 
 ### 工程、迁移与环境
 - [项目现状审计报告](docs/PROJECT_AUDIT.md)
