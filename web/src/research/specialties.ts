@@ -42,7 +42,7 @@ export const specialtyDefinitions: SpecialtyDefinition[] = [
   { id: 'original', no: '08', name: '新芽原创', shortDescription: '当代原创儿童音乐，尊重儿童视角与明确授权。', description: '当代原创儿童音乐。尊重儿童视角、创作质量与明确授权，给真正的新作品留出空间。', scope: '当代原创儿童音乐', focus: '尊重儿童视角、创作质量与明确授权', tone: 'green' },
 ]
 
-const works = payload.works as SpecialtyWork[]
+export const specialtyCatalog = payload.works as SpecialtyWork[]
 const audioWorkIds = new Set(researchSamples.map((sample) => sample.id))
 
 export function isSpecialtyId(value: string): value is SpecialtyId {
@@ -54,7 +54,7 @@ export function getSpecialty(id: string): SpecialtyDefinition | undefined {
 }
 
 export function specialtyWorks(id: SpecialtyId): SpecialtyWork[] {
-  return works
+  return specialtyCatalog
     .filter((work) => work.specialties.includes(id))
     .sort((a, b) => a.id.localeCompare(b.id))
 }
@@ -65,4 +65,12 @@ export function specialtyCount(id: SpecialtyId): number {
 
 export function hasResearchAudio(workId: string): boolean {
   return audioWorkIds.has(workId)
+}
+
+export function workSpecialties(workId: string): SpecialtyDefinition[] {
+  const work = specialtyCatalog.find((item) => item.id === workId)
+  if (!work) return []
+  return work.specialties
+    .map((id) => getSpecialty(id))
+    .filter((item): item is SpecialtyDefinition => Boolean(item))
 }

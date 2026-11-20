@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import ClLibraryMap from '@/components/ClLibraryMap.vue'
+import { documentUrl, researchDocuments } from '@/research/documents'
 import { specialtyCount, specialtyDefinitions } from '@/research/specialties'
+
+const latestDocuments = researchDocuments.filter((document) => document.id.startsWith('songs-') && document.id !== 'songs-500')
 
 const pillars = [
   { key: 'ROOT', name: '中国经典', count: '55 首', description: '创作儿歌、传统童谣、地方歌谣、诗词音乐等。', className: 'p-china' },
@@ -17,6 +20,7 @@ const pillars = [
       <p class="hero-desc">一座免费供大众及教育使用的儿童音乐数据库。以清楚的来源、版本与权利记录为基础，让孩子听见自然、优美、安静与想象。</p>
       <div class="hero-actions">
         <RouterLink class="button button-primary" to="/works">浏览候选目录 <span aria-hidden="true">→</span></RouterLink>
+        <RouterLink class="button" to="/library">查找作品与研究档案</RouterLink>
         <a class="button" href="#specialties">看八个专题</a>
       </div>
     </section>
@@ -68,6 +72,13 @@ const pillars = [
       </div>
     </section>
 
+    <section class="shell research-shelf" aria-labelledby="research-shelf-title">
+      <div class="research-shelf-heading"><div><h2 id="research-shelf-title">逐曲研究档案</h2><p>从作品身份到音频版本，每条研究都保留来源和待核项。</p></div><RouterLink class="button" to="/library">在资料总览中查找</RouterLink></div>
+      <div class="research-document-list">
+        <a v-for="document in latestDocuments" :key="document.id" :href="documentUrl(document.path)" target="_blank" rel="noopener noreferrer"><span>{{ document.updated }}</span><h3>{{ document.title }}</h3><p>{{ document.description }}</p><b>关联：{{ document.workTitles.join(' · ') }}</b></a>
+      </div>
+    </section>
+
     <section class="shell footnote" aria-label="馆藏边界">
       <h2 class="visually-hidden">馆藏边界</h2>
       <p>本页面为儿童音乐馆馆藏导览层，依据《儿童经典音乐图书馆建设方案》§2.1 八个专题与 §11 信息架构整理。所有曲目均为候选发现层，不构成法律意见，也不授予任何第三方内容的使用权。</p>
@@ -109,9 +120,19 @@ const pillars = [
 .catalogue-band h2 { font-family: var(--serif); font-size: 26px; font-weight: 900; margin-bottom: 8px; }
 .catalogue-band p { margin: 0; font-size: 15px; }
 .catalogue-band .button { background: var(--yellow); color: var(--ink); flex-shrink: 0; }
+.research-shelf { padding-block: 8px 42px; }
+.research-shelf-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px 22px; margin-bottom: 20px; }
+.research-shelf-heading h2 { margin-bottom: 5px; font-family: var(--serif); font-size: 29px; }
+.research-shelf-heading p { margin: 0; color: var(--ink-soft); }
+.research-document-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.research-document-list a { padding: 18px; border: var(--line); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); /* taste-skill-ignore: 保留原型档案卡硬阴影。 */ text-decoration: none; }
+.research-document-list span { color: var(--red); font-size: 13px; font-weight: 900; }
+.research-document-list h3 { margin: 6px 0; font-family: var(--serif); font-size: 21px; }
+.research-document-list p { color: var(--ink-soft); font-size: 14px; line-height: 1.7; }
+.research-document-list b { font-size: 13px; line-height: 1.7; }
 .footnote { padding-block: 8px 60px; }
 .footnote p { max-width: 780px; font-size: 13px; color: var(--ink-soft); }
 @media (max-width: 1000px) { .spec-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 900px) { .pillar-row { grid-template-columns: 1fr; } }
-@media (max-width: 640px) { .music-page > .shell { width: min(calc(100% - 32px), var(--page-width)); } .spec-grid { grid-template-columns: 1fr; } .hero { padding-block: 40px 36px; } .hero h1 { font-size: clamp(34px, 10vw, 48px); } .catalogue-band { padding: 26px 22px; } }
+@media (max-width: 640px) { .music-page > .shell { width: min(calc(100% - 32px), var(--page-width)); } .spec-grid { grid-template-columns: 1fr; } .hero { padding-block: 40px 36px; } .hero h1 { font-size: clamp(34px, 10vw, 48px); } .catalogue-band { padding: 26px 22px; } .research-document-list { grid-template-columns: 1fr; } }
 </style>

@@ -68,6 +68,7 @@ function onVersionChange(version: ResearchVersion): void {
 <template>
   <section class="shell works-page">
     <header class="works-header">
+      <nav class="works-context" aria-label="资料导航"><RouterLink to="/library">← 资料总览</RouterLink><RouterLink to="/music">儿童音乐馆与专题</RouterLink></nav>
       <h1>曲目列表</h1>
       <p>
         内部研究试听，共 {{ samples.length }} 条主录音记录。查看封面、歌词谱面、录音版本、来源与权利状态；
@@ -171,6 +172,8 @@ function onVersionChange(version: ResearchVersion): void {
 /* Card and button geometry copied from design-demos/works.html L299-L400. */
 .works-page { padding-block: 42px 64px; }
 .works-header { max-width: 850px; margin-bottom: 30px; }
+.works-context { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-bottom: 18px; font-size: 14px; font-weight: 900; }
+.works-context a { text-underline-offset: 4px; }
 .works-header h1 { margin-bottom: 12px; font-family: var(--serif); font-size: clamp(38px, 5vw, 58px); font-weight: 900; line-height: 1.2; }
 .works-header p { margin-bottom: 12px; font-size: 17px; }
 .works-header code { padding: 1px 5px; background: rgba(25, 25, 23, .08); overflow-wrap: anywhere; }

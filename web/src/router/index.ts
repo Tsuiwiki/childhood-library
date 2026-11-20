@@ -8,6 +8,7 @@ import {
 import { DOMAIN_NAMES } from '@/api/types'
 import HomeView from '@/views/HomeView.vue'
 import WorksView from '@/views/WorksView.vue'
+import LibraryIndexView from '@/views/LibraryIndexView.vue'
 import MusicView from '@/views/MusicView.vue'
 import ResearchHallView from '@/views/ResearchHallView.vue'
 import SpecialtyView from '@/views/SpecialtyView.vue'
@@ -24,6 +25,7 @@ const domainRoutes: RouteRecordRaw[] = DOMAIN_NAMES.map((domain) => ({
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: HomeView },
   { path: '/works', name: 'works', component: WorksView },
+  { path: '/library', name: 'library', component: LibraryIndexView },
   { path: '/music', name: 'music', component: MusicView },
   { path: '/music/specialties/:id', name: 'specialty', component: SpecialtyView },
   { path: '/story', name: 'story', component: ResearchHallView, props: { hall: 'story' } },
@@ -34,6 +36,7 @@ const routes: RouteRecordRaw[] = [
 
 const pageTitles: Record<string, string> = {
   works: '内部曲目与录音详情',
+  library: '跨馆资料总览',
   music: '儿童音乐馆',
   story: '儿童故事馆',
   poetry: '古诗词馆',

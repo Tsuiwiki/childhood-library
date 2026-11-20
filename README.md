@@ -31,14 +31,17 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 
 ## 当前开发状态
 
-**当前阶段：Phase 0 / 0.5 已完成；Phase 1 文档基线、目标架构与迁移方案已定稿；T-04 远程环境、T-05 FastAPI 骨架、T-06 数据库模型/迁移与 T-07 媒体资产模块已在 VM 启用（PostgreSQL 16 + 20 张业务表、API 容器 healthy、104 个 pytest 全绿、备份恢复演练通过）；T-08 前端工程骨架已在本地落地（Vue 3 + TypeScript + Vite、18 个 vitest 全绿、生产构建通过、原型视觉回归 3/3 PASS）。85 个本地媒体已复制到 VM `var/media/` 并逐文件 SHA-256 校验通过；业务表目前为空，尚未导入任何真实曲目，正式资源管理 MVP 仍在开发中。**
+**更新至 2026-11-21：T-04～T-08 已落地，Vue 内部研究前端已覆盖音乐馆、8 个音乐专题、故事馆、古诗词馆、录音列表与详情，并新增跨馆资料总览。** 当前可直接检索 105 条音乐作品目录、100 条故事研究记录、60 条诗词研究记录及已登记的逐曲研究文档；58 条主录音记录可查看封面、歌词/谱面状态、版本、来源、许可与文件校验信息。
 
-仓库已经包含音乐馆、故事馆、诗词馆等静态页面原型、JSON 内容配置、Python 数据构建/整理/校验脚本，以及音乐本地试听和官方短时试听实验。T-05 已建立 FastAPI 骨架服务（7 个领域路由占位、统一响应与结构化日志），T-06 已落地 20 张表的关系模型、Alembic 迁移与发布门禁规则；目前**只建表、不导入数据**，尚无统一编辑后台和生产级采集任务系统；T-07 已落地本地 StorageProvider、校验和与权利门禁，T-08 已落地 `web/` 前端骨架与共享组件且仍不导入任何业务数据，但业务 CRUD 端点仍属 T-09/T-10。
+前端保留原型视觉与研究边界，使用已有 JSON 快照和 GitHub 文档建立链接，不把研究收录当作公开发布授权。51 个 Vitest 用例与生产构建通过；真实服务在远程 VM 的只读回环预览容器中运行。85 个媒体文件仅存于 VM，不提交 GitHub。
 
-- [开发进度盘点](docs/DEVELOPMENT_STATUS.md)：仓库现状、资产规模、已实现能力和缺口。
-- [音乐馆实施优化方案](docs/MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md)：以现有音乐馆代码为基础的领域模型、资源分类和分阶段实施路径。
+后端已有 FastAPI 骨架、PostgreSQL 16、20 张业务表、Alembic 迁移、媒体资产模块与 104 个 pytest 基线；**业务表仍为空，7 个业务域清单接口仍为 501，正式编辑后台、业务 CRUD、数据导入与发布审核尚未完成**。因此当前 Vue 页面是内部研究前端，不是正式公开曲库。
 
-本阶段盘点是静态仓库检查，不代表全部页面已完成运行测试、所有数据已逐条核验或所有媒体已获得公开使用许可。
+- [开发进度盘点](docs/DEVELOPMENT_STATUS.md)：历史审计与最新实现进展。
+- [前端运行与数据边界](web/README.md)：Vue 路由、测试、Node 基线和资料来源。
+- [音乐馆实施优化方案](docs/MUSIC_LIBRARY_IMPLEMENTATION_PLAN.md)：领域模型、资源分类和分阶段实施路径。
+
+文档中的数量均按研究快照统计，不代表所有数据已逐条核验或所有媒体已获得公开使用许可。
 
 ## 技术路线（拟定）
 
@@ -72,9 +75,9 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 ├── alembic.ini              # Alembic 入口；连接串只从环境变量读取
 ├── Dockerfile / .dockerignore / pytest.ini
 ├── requirements.txt / requirements.lock   # 顶层依赖 + 全量精确锁（36 包）
-├── web/                     # Vue 3 + TS + Vite 前端骨架（T-08，18 个 vitest）
-│   ├── src/                 # 视觉 token / 共享组件 / API 客户端 / 路由 / 视图
-│   └── tests/               # Vitest 用例（API client / 组件 / 路由 / token）
+├── web/                     # Vue 3 + TS + Vite 内部研究前端（51 个 Vitest）
+│   ├── src/                 # 三馆 / 专题 / 录音详情 / 跨馆资料总览 / API 客户端
+│   └── tests/               # 组件、播放器、资料关联、深链接与路由测试
 ├── deploy/                  # Compose / 备份恢复配置（cl-dev 的 db + api 已在 VM 启用）
 ├── scripts/                 # 资产盘点、媒体完整性等只读工具
 └── docs/reports/            # 资产完整性与迁移报告
@@ -102,6 +105,11 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 - [经典儿童歌曲候选目录（首批采集）](docs/CLASSIC_SONGS_CATALOG.md)
 - [中国经典儿歌研究与资源采集](docs/CHINESE_CLASSIC_SONGS_RESEARCH.md)
 - [中国儿童歌曲500首研究目录](docs/CHINESE_CHILDRENS_SONGS_500_CATALOG.md)
+- [逐曲研究：历史作品与版本线索](docs/CHINESE_CHILDRENS_SONGS_RESEARCH_BATCH_2026-11-20.md)
+- [逐曲研究档案·批次02](docs/research/CHINESE_CHILDRENS_SONGS_BATCH_02.md)
+- [逐曲研究档案·批次03](docs/research/CHINESE_CHILDRENS_SONGS_BATCH_03.md)
+- [音频入口与版本核验·批次04](docs/research/CHINESE_CHILDRENS_SONGS_AUDIO_BATCH_04.md)
+- [音频优先采集档案·批次04](docs/research/CHINESE_CHILDRENS_SONGS_BATCH_04_AUDIO.md)
 
 ### 工程、迁移与环境
 - [项目现状审计报告](docs/PROJECT_AUDIT.md)

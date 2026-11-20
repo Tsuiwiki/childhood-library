@@ -41,6 +41,7 @@ const halls = [
         >{{ specialty.no }} {{ specialty.name }}</RouterLink>
       </div>
       <div class="lib-more">
+        <RouterLink to="/library">跨馆资料总览与检索</RouterLink>
         <RouterLink to="/works">内部曲目与录音详情</RouterLink>
         <a href="https://github.com/Tsuiwiki/childhood-library/blob/main/docs/PROJECT_PRINCIPLES.md" target="_blank" rel="noopener noreferrer">项目顶层原则</a>
         <a href="https://github.com/Tsuiwiki/childhood-library/blob/main/docs/DATA_MODEL.md" target="_blank" rel="noopener noreferrer">统一数据模型</a>

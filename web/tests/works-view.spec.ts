@@ -3,6 +3,13 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import WorksView from '../src/views/WorksView.vue'
 import sampleRecords from '../../design-demos/audio/samples.json'
 
+function mountWorks(attach = false) {
+  return mount(WorksView, {
+    attachTo: attach ? document.body : undefined,
+    global: { stubs: { RouterLink: { template: '<a><slot /></a>' } } },
+  })
+}
+
 describe('WorksView audio integration', () => {
   beforeEach(() => {
     vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue()
@@ -16,7 +23,7 @@ describe('WorksView audio integration', () => {
   })
 
   it('renders the first nine research recordings with detail and play buttons', () => {
-    const wrapper = mount(WorksView)
+    const wrapper = mountWorks()
 
     expect(wrapper.findAll('.work-card')).toHaveLength(9)
     expect(wrapper.findAll('[data-audio-play]')).toHaveLength(9)
@@ -32,7 +39,7 @@ describe('WorksView audio integration', () => {
 
   it('plays the selected card, switches recordings and closes back to the list', async () => {
     const play = vi.spyOn(HTMLMediaElement.prototype, 'play')
-    const wrapper = mount(WorksView, { attachTo: document.body })
+    const wrapper = mountWorks(true)
     const firstButton = wrapper.find('[data-work-id="CN-C01"]')
 
     await firstButton.trigger('click')
@@ -65,7 +72,7 @@ describe('WorksView audio integration', () => {
     ['CN-C25', '试听歌曲示例', '开放许可 / 原创示范', '/audio/CN-C25.wav'],
     ['EN-T01', '试听歌曲示例', 'CC BY-SA 3.0', '/audio/EN-T01.mp3'],
   ])('keeps the recording-specific action and rights label for %s', async (id, action, label, source) => {
-    const wrapper = mount(WorksView)
+    const wrapper = mountWorks()
     await wrapper.find('input[type="search"]').setValue(id)
     const button = wrapper.find(`[data-work-id="${id}"]`)
     expect(button.text()).toBe(action)
@@ -79,7 +86,7 @@ describe('WorksView audio integration', () => {
   })
 
   it('searches, filters by category and recovers from an empty result', async () => {
-    const wrapper = mount(WorksView)
+    const wrapper = mountWorks()
     const search = wrapper.find('input[type="search"]')
 
     await search.setValue('小燕子')
@@ -101,7 +108,7 @@ describe('WorksView audio integration', () => {
   })
 
   it('paginates without losing the selected audio', async () => {
-    const wrapper = mount(WorksView)
+    const wrapper = mountWorks()
     await wrapper.find('[data-work-id="CN-C01"]').trigger('click')
     await flushPromises()
 

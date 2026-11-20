@@ -6,6 +6,7 @@ const route = useRoute()
 const mobileOpen = ref(false)
 const isResearchHall = computed(() => ['story', 'poetry'].includes(String(route.name)))
 const navItems = [
+  { label: '资料总览', to: '/library', external: false },
   { label: '故事馆', to: '/story', external: false },
   { label: '音乐馆', to: '/music', external: false },
   { label: '古诗词馆', to: '/poetry', external: false },

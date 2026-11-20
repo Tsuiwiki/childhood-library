@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import ClLibraryMap from '@/components/ClLibraryMap.vue'
 import ClResearchRecordCard from '@/components/ClResearchRecordCard.vue'
 import {
@@ -15,6 +16,7 @@ import {
 } from '@/research/library'
 
 const props = defineProps<{ hall: ResearchHall }>()
+const route = useRoute()
 const query = ref('')
 const group = ref('all')
 
@@ -45,6 +47,12 @@ function resetFilters() {
 }
 
 watch(() => props.hall, resetFilters)
+onMounted(() => {
+  const requestedQuery = route.query.q
+  const requestedGroup = route.query.group
+  if (typeof requestedQuery === 'string') query.value = requestedQuery
+  if (typeof requestedGroup === 'string' && groups.value.some((item) => item.id === requestedGroup)) group.value = requestedGroup
+})
 </script>
 
 <template>
@@ -54,7 +62,8 @@ watch(() => props.hall, resetFilters)
       <h1 id="page-title">{{ titleParts[0] }} · <span class="accent">{{ titleParts[1] }}</span></h1>
       <p class="hero-desc">{{ content.description }}共 {{ stats.groups }} 个目录组、{{ stats.total }} 条研究记录。</p>
       <div class="hero-actions">
-        <a class="button button-primary" href="/research.html">看研究资源库与五维状态 <span aria-hidden="true">→</span></a>
+        <RouterLink class="button button-primary" to="/library">跨馆检索作品与档案 <span aria-hidden="true">→</span></RouterLink>
+        <a class="button" href="/research.html">看研究资源库与五维状态</a>
         <a class="button" href="#groups">按专题浏览</a>
       </div>
       <div class="stat-strip" aria-label="目录统计">

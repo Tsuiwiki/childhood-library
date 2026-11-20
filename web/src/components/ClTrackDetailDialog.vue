@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { documentUrl, documentsForWork } from '@/research/documents'
+import { workSpecialties } from '@/research/specialties'
 import {
   actionLabel,
   assetUrl,
@@ -26,6 +28,8 @@ const rightsText = computed(() => selectedVersion.value ? rightsNote(selectedVer
 const sourcePage = computed(() => externalUrl(selectedVersion.value?.sourcePage))
 const licensePage = computed(() => externalUrl(selectedVersion.value?.licenseUrl))
 const downloadedFile = computed(() => externalUrl(selectedVersion.value?.downloadedFile))
+const specialties = computed(() => props.sample ? workSpecialties(props.sample.id) : [])
+const documents = computed(() => props.sample ? documentsForWork(props.sample.id) : [])
 
 function sync(open: boolean): void {
   if (!open) document.body.classList.remove('dialog-open')
@@ -108,6 +112,15 @@ onBeforeUnmount(() => document.body.classList.remove('dialog-open'))
         <div><dt>音频文件</dt><dd>{{ selectedVersion.file }} · {{ formatBytes(selectedVersion.bytes) }}</dd></div>
         <div><dt>SHA-256</dt><dd class="hash-value">{{ selectedVersion.sha256 || '待核验' }}</dd></div>
       </dl>
+
+      <section class="work-context" aria-labelledby="work-context-title">
+        <div class="context-heading"><h3 id="work-context-title">作品脉络</h3><RouterLink to="/library">返回资料总览</RouterLink></div>
+        <div class="context-grid">
+          <div><h4>所属音乐专题</h4><nav v-if="specialties.length" aria-label="当前作品所属专题"><RouterLink v-for="item in specialties" :key="item.id" :to="`/music/specialties/${item.id}`">{{ item.name }} →</RouterLink></nav><p v-else>专题关系待核验。</p></div>
+          <div><h4>相关研究档案</h4><nav v-if="documents.length" aria-label="当前作品研究档案"><a v-for="document in documents" :key="document.id" :href="documentUrl(document.path)" target="_blank" rel="noopener noreferrer">{{ document.title }} ↗<small>{{ document.description }}</small></a></nav><p v-else>当前尚无逐曲研究文档；可先查看录音来源与权利记录。</p></div>
+        </div>
+        <p class="context-note">专题用于内容策展；研究文档记录史料和线索。它们都不替代下方具体录音版本的来源与权利核验。</p>
+      </section>
 
       <section class="sample-audio-panel" :class="`is-${selectedVersion.sampleType || 'open'}`" aria-labelledby="sample-audio-title">
         <h3 id="sample-audio-title">{{ sourceLabel(selectedVersion) }}</h3>
@@ -206,6 +219,17 @@ onBeforeUnmount(() => document.body.classList.remove('dialog-open'))
 .dialog-meta dt { font-size: 14px; font-weight: 900; }
 .dialog-meta dd { margin: 0; font-size: 16px; overflow-wrap: anywhere; }
 .hash-value { font-family: ui-monospace, monospace; font-size: 13px !important; overflow-wrap: anywhere; } /* taste-skill-ignore: SHA-256 是逐字核对的校验值。 */
+.work-context { margin-bottom: 24px; padding: 20px; border: var(--line); background: var(--paper-light); }
+.context-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 14px; }
+.context-heading h3 { margin: 0; font-family: var(--serif); font-size: 25px; }
+.context-heading > a { font-size: 14px; font-weight: 900; }
+.context-grid { display: grid; grid-template-columns: minmax(160px, .65fr) minmax(0, 1.35fr); gap: 22px; }
+.context-grid h4 { margin: 0 0 8px; font-size: 15px; }
+.context-grid nav { display: grid; gap: 8px; }
+.context-grid nav a { font-weight: 900; line-height: 1.5; text-underline-offset: 4px; }
+.context-grid nav small { display: block; color: var(--ink-soft); font-size: 13px; font-weight: 500; }
+.context-grid p { font-size: 14px; }
+.context-note { margin: 16px 0 0; padding-top: 12px; border-top: 2px dashed var(--ink); font-size: 13px; color: var(--ink-soft); }
 .sample-audio-panel { margin-bottom: 22px; padding: 18px; border: var(--line); background: #e2edcf; box-shadow: 5px 5px 0 var(--green); /* taste-skill-ignore: 原型录音面板硬阴影。 */ }
 .sample-audio-panel.is-internal { background: #f9ddd7; box-shadow: 5px 5px 0 var(--red); /* taste-skill-ignore: 原型权利待核验面板。 */ }
 .sample-audio-panel.is-generated { background: #dfe8fb; box-shadow: 5px 5px 0 var(--blue); /* taste-skill-ignore: 原型原创示范面板。 */ }
@@ -248,7 +272,7 @@ onBeforeUnmount(() => document.body.classList.remove('dialog-open'))
   .dialog-header { padding: 13px 14px; }
   .dialog-body { padding: 22px 18px; }
   .dialog-meta div { grid-template-columns: 100px minmax(0, 1fr); gap: 10px; padding-inline: 12px; }
-  .song-material-grid { grid-template-columns: 1fr; }
+  .song-material-grid, .context-grid { grid-template-columns: 1fr; }
   .song-cover { max-width: 420px; }
   .material-sources dl { grid-template-columns: 1fr; gap: 4px; }
   .material-sources dd { margin-bottom: 10px; }

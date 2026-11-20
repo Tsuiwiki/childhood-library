@@ -159,7 +159,7 @@ describe('museum navigation and recording deep links', () => {
 
   it('opens the requested recording detail when arriving from a specialty card', async () => {
     window.history.replaceState({}, '', '/works?work=CN-C02')
-    const wrapper = mount(WorksView, { attachTo: document.body })
+    const wrapper = mount(WorksView, { attachTo: document.body, global: { stubs: { RouterLink: { template: '<a><slot /></a>' } } } })
     await flushPromises()
 
     expect(wrapper.find('dialog').exists()).toBe(true)

@@ -4,6 +4,7 @@ import { createAppRouter } from '../src/router'
 import { DOMAIN_NAMES } from '../src/api/types'
 import HomeView from '../src/views/HomeView.vue'
 import WorksView from '../src/views/WorksView.vue'
+import LibraryIndexView from '../src/views/LibraryIndexView.vue'
 import MusicView from '../src/views/MusicView.vue'
 import ResearchHallView from '../src/views/ResearchHallView.vue'
 import SpecialtyView from '../src/views/SpecialtyView.vue'
@@ -25,6 +26,10 @@ describe('router', () => {
     await router.push('/works')
     expect(router.currentRoute.value.name).toBe('works')
     expect(router.currentRoute.value.matched[0]?.components?.default).toBe(WorksView)
+
+    await router.push('/library')
+    expect(router.currentRoute.value.name).toBe('library')
+    expect(router.currentRoute.value.matched[0]?.components?.default).toBe(LibraryIndexView)
 
     await router.push('/music')
     expect(router.currentRoute.value.name).toBe('music')
@@ -57,8 +62,8 @@ describe('router', () => {
   it('declares the frontend pages plus exactly one placeholder route per backend domain', () => {
     const router = createAppRouter(createMemoryHistory())
     const named = router.getRoutes().map((route) => route.name).filter(String)
-    expect(named).toHaveLength(6 + DOMAIN_NAMES.length + 1)
-    for (const name of ['works', 'music', 'specialty', 'story', 'poetry']) {
+    expect(named).toHaveLength(7 + DOMAIN_NAMES.length + 1)
+    for (const name of ['works', 'library', 'music', 'specialty', 'story', 'poetry']) {
       expect(named).toContain(name)
     }
     for (const domain of DOMAIN_NAMES) {
