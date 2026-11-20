@@ -1,43 +1,59 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import ClAudioPlayer, { type AudioPlayerTrack } from '@/components/ClAudioPlayer.vue'
-import sampleRecords from '../../../design-demos/audio/samples.json'
+import ClTrackDetailDialog from '@/components/ClTrackDetailDialog.vue'
+import {
+  actionLabel,
+  assetUrl,
+  researchSamples,
+  sampleCategory,
+  sourceLabel,
+  toPlayerTrack,
+  type ResearchSample,
+  type ResearchVersion,
+} from '@/research/samples'
 
-interface ResearchSample {
-  id: string
-  file: string
-  workTitle: string
-  kind: string
-  sampleType?: 'internal' | 'generated' | 'open'
-  attribution: string
-  license: string
-}
-
-// Reuse the checked-in research source directly; do not maintain a second copy
-// in web/ and do not present these records as the empty production database.
-const samples = sampleRecords as ResearchSample[]
+const samples = researchSamples
 const selectedTrack = ref<AudioPlayerTrack | null>(null)
+const detailSample = ref<ResearchSample | null>(null)
+const query = ref('')
+const category = ref('all')
+const page = ref(1)
+const PAGE_SIZE = 9
+const categoryFilters = [
+  { value: 'all', label: '全部录音' },
+  { value: 'internal', label: '经典原声 · 权利待核验' },
+  { value: 'generated', label: '原创示范 · 非原曲' },
+  { value: 'open', label: '开放许可' },
+]
 
-function sourceLabel(sample: ResearchSample): string {
-  if (sample.sampleType === 'internal') return '内部经典录音 · 权利待核验'
-  if (sample.sampleType === 'generated') return '原创播放示范 · 非原曲'
-  return '开放许可 / 原创示范'
+const filteredSamples = computed(() => {
+  const needle = query.value.normalize('NFKC').trim().toLocaleLowerCase()
+  return samples.filter((sample) => {
+    if (category.value !== 'all' && sampleCategory(sample) !== category.value) return false
+    if (!needle) return true
+    return [sample.id, sample.workTitle, sample.kind, sample.author, sample.attribution, sample.sourceTitle, sample.license]
+      .filter(Boolean).join(' ').normalize('NFKC').toLocaleLowerCase().includes(needle)
+  })
+})
+const totalPages = computed(() => Math.max(1, Math.ceil(filteredSamples.value.length / PAGE_SIZE)))
+const pageItems = computed(() => filteredSamples.value.slice((page.value - 1) * PAGE_SIZE, page.value * PAGE_SIZE))
+
+watch([query, category], () => { page.value = 1 })
+watch(totalPages, (total) => { if (page.value > total) page.value = total })
+
+function playSample(version: ResearchVersion, work: ResearchSample): void {
+  selectedTrack.value = toPlayerTrack(version, work)
 }
 
-function actionLabel(sample: ResearchSample): string {
-  if (sample.sampleType === 'internal') return '播放经典原声'
-  if (sample.sampleType === 'generated') return '播放原创示范'
-  return '试听歌曲示例'
+function playFromDetail(version: ResearchVersion): void {
+  if (detailSample.value) playSample(version, detailSample.value)
 }
 
-function playSample(sample: ResearchSample): void {
-  selectedTrack.value = {
-    id: sample.id,
-    title: sample.workTitle,
-    source: `/audio/${sample.file}`,
-    kicker: `${sourceLabel(sample)} · ${sample.license}`,
-    fileLabel: `${sample.kind} · ${sample.attribution}`,
-    kind: 'sample',
+function onVersionChange(version: ResearchVersion): void {
+  const work = detailSample.value
+  if (work && selectedTrack.value?.id === work.id && selectedTrack.value.source !== `/audio/${version.file}`) {
+    selectedTrack.value = null
   }
 }
 </script>
@@ -47,40 +63,100 @@ function playSample(sample: ResearchSample): void {
     <header class="works-header">
       <h1>曲目列表</h1>
       <p>
-        内部研究试听，共 {{ samples.length }} 条主录音记录。本页直接读取既有
-        <code>design-demos/audio/samples.json</code>，不是已发布曲库，也不代表数据库已经导入。
+        内部研究试听，共 {{ samples.length }} 条主录音记录。查看封面、歌词谱面、录音版本、来源与权利状态；
+        本页不是已发布曲库，也不代表数据库已经导入。
       </p>
       <p class="rights-note">权利待核验的录音仅限内部研究试听；开放许可仅对应各条目注明的具体录音。</p>
     </header>
 
-    <div class="works-grid" aria-label="内部研究录音列表">
-      <article v-for="sample in samples" :key="sample.id" class="work-card">
+    <section class="filter-card" aria-labelledby="filter-title">
+      <h2 id="filter-title" class="visually-hidden">搜索和筛选录音</h2>
+      <label class="search-field">
+        <span>搜索曲目、演唱者、来源或许可</span>
+        <input v-model="query" type="search" placeholder="例如：小燕子、CC0、中央乐团" autocomplete="off">
+      </label>
+      <div class="category-filters" role="group" aria-label="按录音类型筛选">
+        <button
+          v-for="filter in categoryFilters"
+          :key="filter.value"
+          type="button"
+          :aria-pressed="category === filter.value"
+          @click="category = filter.value"
+        >{{ filter.label }}</button>
+      </div>
+      <p class="results-status" role="status" aria-live="polite">
+        找到 {{ filteredSamples.length }} 条；当前显示第 {{ page }} / {{ totalPages }} 页。
+      </p>
+    </section>
+
+    <div v-if="pageItems.length" class="works-grid" aria-label="内部研究录音列表">
+      <article v-for="sample in pageItems" :key="sample.id" class="work-card">
         <div class="card-top">
           <span class="id-tag">{{ sample.id }}</span>
           <span class="status-badge">{{ sample.license }}</span>
         </div>
-        <h2>{{ sample.workTitle }}</h2>
-        <p class="card-group">{{ sample.kind }}</p>
+        <div class="sample-card-intro">
+          <img
+            class="sample-card-cover"
+            :src="assetUrl(sample.materials.cover)"
+            :alt="sample.materials.coverAlt"
+            width="800"
+            height="600"
+            loading="lazy"
+          >
+          <div class="sample-card-copy">
+            <h2>{{ sample.workTitle }}</h2>
+            <p class="card-group">{{ sample.kind }}</p>
+          </div>
+        </div>
         <dl class="card-meta">
           <div><dt>录音</dt><dd>{{ sample.attribution }}</dd></div>
           <div><dt>来源</dt><dd>{{ sourceLabel(sample) }}</dd></div>
+          <div><dt>素材</dt><dd>{{ sample.materials.lyrics?.length ? '歌词与谱面已收录' : '封面已收录 · 歌词待核验' }}</dd></div>
         </dl>
         <div class="card-footer">
+          <button class="detail-button" type="button" :data-work-detail="sample.id" @click="detailSample = sample">查看详情</button>
           <button
             class="detail-button audio-action"
             type="button"
             data-audio-play="true"
             :data-work-id="sample.id"
             :aria-label="`${actionLabel(sample)}：${sample.workTitle}`"
-            @click="playSample(sample)"
+            @click="playSample(sample, sample)"
           >
             {{ actionLabel(sample) }}
           </button>
         </div>
       </article>
     </div>
+
+    <div v-else class="no-results" role="status">
+      <h2>没有匹配的录音</h2>
+      <p>可以缩短关键词，或切换为“全部录音”。</p>
+      <button class="detail-button" type="button" @click="query = ''; category = 'all'">清空搜索与筛选</button>
+    </div>
+
+    <nav v-if="filteredSamples.length > PAGE_SIZE" class="pagination" aria-label="录音列表分页">
+      <button class="detail-button" type="button" :disabled="page === 1" @click="page -= 1">上一页</button>
+      <button
+        v-for="number in totalPages"
+        :key="number"
+        class="detail-button page-button"
+        type="button"
+        :aria-current="page === number ? 'page' : undefined"
+        :aria-label="`第 ${number} 页`"
+        @click="page = number"
+      >{{ number }}</button>
+      <button class="detail-button" type="button" :disabled="page === totalPages" @click="page += 1">下一页</button>
+    </nav>
   </section>
 
+  <ClTrackDetailDialog
+    :sample="detailSample"
+    @close="detailSample = null"
+    @play="playFromDetail"
+    @version-change="onVersionChange"
+  />
   <ClAudioPlayer :track="selectedTrack" @close="selectedTrack = null" />
 </template>
 
@@ -122,6 +198,23 @@ function playSample(sample: ResearchSample): void {
 .card-meta dd { margin: 0; font-size: 16px; line-height: 1.5; overflow-wrap: anywhere; }
 .card-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 13px; border-top: 2px solid var(--ink); }
 .detail-button { min-height: 44px; flex: 0 0 auto; padding: 8px 12px; border: 2px solid var(--ink); border-radius: 0; background: var(--paper-light); box-shadow: 3px 3px 0 var(--ink); /* taste-skill-ignore: 保留原型按钮硬阴影。 */ font-size: 14px; font-weight: 900; }
+.audio-action { background: var(--yellow); }
+.filter-card { margin-bottom: 30px; padding: 20px; border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--ink); /* taste-skill-ignore: 保留原型筛选卡硬阴影。 */ }
+.search-field { display: grid; gap: 7px; font-weight: 900; }
+.search-field input { width: 100%; min-height: 52px; padding: 10px 14px; border: 2px solid var(--ink); border-radius: 0; background: #fff; color: var(--ink); font: inherit; }
+.category-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.category-filters button { min-height: 44px; padding: 8px 13px; border: 2px solid var(--ink); border-radius: 0; background: var(--paper); font-size: 14px; font-weight: 800; }
+.category-filters button[aria-pressed="true"] { background: var(--blue); color: var(--paper-light); }
+.results-status { margin: 14px 0 0; font-weight: 800; }
+.sample-card-intro { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: start; gap: 14px; margin-bottom: 13px; }
+.sample-card-copy { min-width: 0; }
+.sample-card-cover { width: 104px; height: auto; aspect-ratio: 4 / 3; display: block; object-fit: cover; border: 2px solid var(--ink); background: var(--paper); transform: rotate(-1.5deg); }
+.sample-card-intro .card-group { margin-bottom: 0; }
+.no-results { padding: 30px 22px; border: var(--line); background: var(--yellow); text-align: center; }
+.no-results h2 { font-family: var(--serif); font-size: 28px; }
+.pagination { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin-top: 30px; }
+.page-button[aria-current="page"] { background: var(--yellow); }
+.detail-button:disabled { cursor: not-allowed; opacity: .55; }
 
 @media (max-width: 1100px) {
   .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

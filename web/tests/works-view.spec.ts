@@ -11,19 +11,23 @@ describe('WorksView audio integration', () => {
   })
 
   afterEach(() => {
-    document.body.classList.remove('audio-player-open')
+    document.body.classList.remove('audio-player-open', 'dialog-open')
     document.body.innerHTML = ''
   })
 
-  it('renders every existing research recording with a play button', () => {
+  it('renders the first nine research recordings with detail and play buttons', () => {
     const wrapper = mount(WorksView)
 
-    expect(wrapper.findAll('.work-card')).toHaveLength(sampleRecords.length)
-    expect(wrapper.findAll('[data-audio-play]')).toHaveLength(sampleRecords.length)
+    expect(wrapper.findAll('.work-card')).toHaveLength(9)
+    expect(wrapper.findAll('[data-audio-play]')).toHaveLength(9)
+    expect(wrapper.findAll('[data-work-detail]')).toHaveLength(9)
     expect(wrapper.find('h1').text()).toBe('曲目列表')
     expect(wrapper.text()).toContain('58 条主录音记录')
     expect(wrapper.text()).toContain('不是已发布曲库')
+    expect(wrapper.find('[data-work-id="CN-C01"]').exists()).toBe(true)
+    expect(wrapper.find('[data-work-id="CN-C10"]').exists()).toBe(false)
     expect(wrapper.find('.audio-player').attributes('hidden')).not.toBeUndefined()
+    expect(sampleRecords).toHaveLength(58)
   })
 
   it('plays the selected card, switches recordings and closes back to the list', async () => {
@@ -62,6 +66,7 @@ describe('WorksView audio integration', () => {
     ['EN-T01', '试听歌曲示例', 'CC BY-SA 3.0', '/audio/EN-T01.mp3'],
   ])('keeps the recording-specific action and rights label for %s', async (id, action, label, source) => {
     const wrapper = mount(WorksView)
+    await wrapper.find('input[type="search"]').setValue(id)
     const button = wrapper.find(`[data-work-id="${id}"]`)
     expect(button.text()).toBe(action)
 
@@ -71,5 +76,43 @@ describe('WorksView audio integration', () => {
     expect(wrapper.find('.player-kicker').text()).toContain(label)
     expect(wrapper.find('audio').attributes('src')).toBe(source)
     wrapper.unmount()
+  })
+
+  it('searches, filters by category and recovers from an empty result', async () => {
+    const wrapper = mount(WorksView)
+    const search = wrapper.find('input[type="search"]')
+
+    await search.setValue('小燕子')
+    expect(wrapper.findAll('.work-card')).toHaveLength(1)
+    expect(wrapper.find('.work-card').text()).toContain('小燕子')
+
+    await search.setValue('')
+    const generated = wrapper.findAll('.category-filters button')
+      .find((button) => button.text() === '原创示范 · 非原曲')
+    await generated?.trigger('click')
+    expect(wrapper.find('.results-status').text()).toContain('找到 21 条')
+    expect(wrapper.findAll('.work-card')).toHaveLength(9)
+
+    await search.setValue('not-a-recording')
+    expect(wrapper.find('.no-results').exists()).toBe(true)
+    await wrapper.find('.no-results button').trigger('click')
+    expect(wrapper.find('.results-status').text()).toContain('找到 58 条')
+    expect(wrapper.findAll('.work-card')).toHaveLength(9)
+  })
+
+  it('paginates without losing the selected audio', async () => {
+    const wrapper = mount(WorksView)
+    await wrapper.find('[data-work-id="CN-C01"]').trigger('click')
+    await flushPromises()
+
+    await wrapper.find('[aria-label="第 2 页"]').trigger('click')
+    expect(wrapper.find('[data-work-id="CN-C10"]').exists()).toBe(true)
+    expect(wrapper.find('[data-work-id="CN-C01"]').exists()).toBe(false)
+    expect(wrapper.find('.results-status').text()).toContain('第 2 / 7 页')
+    expect(wrapper.find('.player-title').text()).toBe('让我们荡起双桨')
+
+    const next = wrapper.findAll('.pagination button').find((button) => button.text() === '下一页')
+    await next?.trigger('click')
+    expect(wrapper.find('.results-status').text()).toContain('第 3 / 7 页')
   })
 })
