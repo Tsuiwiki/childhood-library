@@ -5,6 +5,7 @@ import { defineConfig } from 'vitest/config'
 // No host address is hard-coded. Set VITE_API_PROXY_TARGET when the API runs on
 // a reachable loopback (for example via an SSH tunnel to the dev VM).
 const proxyTarget = process.env.VITE_API_PROXY_TARGET
+const mediaProxyTarget = process.env.VITE_MEDIA_PROXY_TARGET
 
 export default defineConfig({
   plugins: [vue()],
@@ -15,8 +16,15 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 55173,
     strictPort: true,
-    proxy: proxyTarget
-      ? { '/api': { target: proxyTarget, changeOrigin: false } }
+    proxy: proxyTarget || mediaProxyTarget
+      ? {
+          ...(proxyTarget
+            ? { '/api': { target: proxyTarget, changeOrigin: false } }
+            : {}),
+          ...(mediaProxyTarget
+            ? { '/audio': { target: mediaProxyTarget, changeOrigin: false } }
+            : {}),
+        }
       : undefined,
   },
   preview: { host: '127.0.0.1', port: 55173, strictPort: true },

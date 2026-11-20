@@ -9,7 +9,8 @@ import { DOMAIN_NAMES } from '@/api/types'
         <RouterLink class="brand" to="/">
           童年书房 <small>T-08 · 前端工程骨架</small>
         </RouterLink>
-        <nav class="desktop-nav" aria-label="领域占位导航">
+        <nav class="desktop-nav" aria-label="主导航">
+          <RouterLink to="/works">内部曲目</RouterLink>
           <RouterLink v-for="domain in DOMAIN_NAMES" :key="domain" :to="`/${domain}`">
             {{ domain }}
           </RouterLink>
