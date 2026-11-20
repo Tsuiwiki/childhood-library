@@ -15,6 +15,22 @@ npm run dev            # 127.0.0.1:55173（vite dev server）
 
 本机实测：Node `v22.22.2` / npm `10.9.7`。依赖在 `package.json` 中逐个精确锁定，`package-lock.json` 为全量锁，二者都必须提交；`node_modules/`、`dist/`、`coverage/` 不入库。
 
+## Node 版本基线
+
+`web/.nvmrc` 固定为 `22.22.2`，与本地开发机一致；`nvm use`（在 `web/` 下）或任何版本管理器都应以它为准。选这个版本不是随意升级：`abbrev@5.0.0` / `nopt@10.0.1` 在 lock 里声明 `^22.22.2 || ^24.15.0 || >=26.0.0`，低于该版本时 `npm ci` 会报 `EBADENGINE`。
+
+> ⚠️ **远程 VM 上不要改系统默认 Node。** VM 的 `/usr/local/bin/node` → `/usr/local/node22/bin/node` 是共享的 CodeBuddy 工具链（`v22.12.0` / npm `10.9.0`），同目录还有 `cbc` / `agent-browser` 等命令，且有运行中进程。本工程在 VM 上改用仓库外独立安装：
+
+```bash
+# 只在 childhood-library 的复跑会话中临时生效，不写入 profile、不改软链
+export PATH=/data/cl-node/node-v22.22.2-linux-x64/bin:$PATH
+node -v   # v22.22.2
+npm -v    # 10.9.7
+cd /data/childhood-library/web && npm ci && npm run build && npm run test
+```
+
+2026-11-20 用该独立 Node 在 VM 复跑：`npm ci` 装 167 包、`EBADENGINE` 警告从 2 条降到 **0**、`vite build` 51 模块（105.34 kB JS / 7.33 kB CSS）、`vitest run` **18/18 全绿**、`package-lock.json` SHA-256 前后不变、工作区干净；系统默认 `v22.12.0` 保持未动。独立 Node 的安装包与 `SHASUMS256.txt` 校验结果放在 `/data/cl-node/`，不进仓库。
+
 ## 目录
 
 | 路径 | 说明 |

@@ -109,7 +109,7 @@
 | 系统 | TencentOS Server 3.2（el8.2 兼容），内核 5.4.241 x86_64 |
 | 资源 | 8 核 / 15 Gi（无 swap）/ 99 G 磁盘 65 G 可用 / inode 5% |
 | 网络 | GitHub / PyPI / npm 出站均 200；`firewalld` inactive |
-| 软件 | git 2.43.7、Docker 26.1.3、Compose v2.27.0、Node 22.12.0、npm 10.9.0 |
+| 软件 | git 2.43.7、Docker 26.1.3、Compose v2.27.0、系统默认 Node 22.12.0、npm 10.9.0（Phase 0 实测快照；前端工程基线 Node 22.22.2 见 `web/.nvmrc`） |
 | Python | `python3` = 3.6.8（EOL），另有 `python3.11` / `python3.12.11` |
 | 数据库 | 未安装 PostgreSQL；已有 `pgvector/pgvector:pg16` 镜像 |
 | 共享机 | 已有 TiDB v8.5.0、anydev-agent 等容器；8080/8090/4000/10080/2379 已占用；5432/8000/5173/3000/6379 空闲 |

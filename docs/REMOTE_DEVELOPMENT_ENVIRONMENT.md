@@ -20,7 +20,7 @@
 | 出站网络 | GitHub 200、PyPI 200、npm registry 200 | [C3] |
 | Git | 2.43.7 | [C1] |
 | Docker / Compose | 26.1.3 / v2.27.0 | [C1][C4] |
-| Node / npm | v22.12.0 / 10.9.0 | [C1] |
+| Node / npm | v22.12.0 / 10.9.0（**系统默认，Phase 0 实测快照；工程前端基线另见 §10**） | [C1] |
 | Python | 系统 `python3` = **3.6.8（EOL）**；另有 `python3.11`、`python3.12.11` | [C1][C2][C4] |
 | PostgreSQL | **未安装**（无 `psql/postgres/initdb`）；已有 `pgvector/pgvector:pg16` 镜像 438 MB | [C2] |
 | 现有容器 | 运行中：TiDB v8.5.0（pd / server / tikv）、anydev-agent；退出：db-agent-ollama、db-agent-pg | [C2] |
@@ -154,8 +154,19 @@ T-06 已把领域实体落到 `app/models/`（按 [DATA_MODEL.md §11](DATA_MODE
 ## 10. T-08 追加状态（2026-11-19，2026-11-20 补记 VM 实机结果）
 
 - `web/` 前端工程骨架已进入 GitHub main（Vue 3 + TS + Vite），依赖在 `package.json` 精确锁定、`package-lock.json` 全量锁；本地实测 Node 22.22.2 / npm 10.9.7，在全新空目录 `npm ci` 重装 167 包且 lock 哈希不变。
-- 本地验证：`vue-tsc --noEmit` + `vite build` 通过、18 个 vitest 全绿、`_audit_main/verify_t08.py` 107 项 PASSED、`design-demos/validate_prototypes.py` 3/3 PASS；原型、`app/` 后端与 `deploy/` 的 Compose 配置均未改动（`deploy/README.md` 仅同步状态文字）。
+- 本地验证：`vue-tsc --noEmit` + `vite build` 通过、18 个 vitest 全绿、`_audit_main/verify_t08.py` 107 项 PASSED（T-08 交付时口径；Node 基线检查加入后为 112 项）、`design-demos/validate_prototypes.py` 3/3 PASS；原型、`app/` 后端与 `deploy/` 的 Compose 配置均未改动（`deploy/README.md` 仅同步状态文字）。
 - VM 侧：T-08 **未启用** `web` / `nginx` 容器、未新增端口、未拉新镜像；`cl-dev` 仍是 db + api（+ 可选回环预览），`55432` / `58000` / `58080` 仍只绑 `127.0.0.1`。
 - **补记（2026-11-20）**：SSH 通道重新授权后，VM 已 `git pull --ff-only` 到 `137cf68`；`web/` 实测 Node v22.12.0 / npm 10.9.0、`npm ci` 装 167 包、`vue-tsc --noEmit` + `vite build` 通过（51 模块）、`vitest run` **18/18 全绿**；`node_modules/` 与 `dist/` 均被忽略，仓库工作区干净，未新增端口或容器。
-- ⚠️ `npm ci` 有两条 `EBADENGINE` 警告：`abbrev@5.0.0` / `nopt@10.0.1` 声明 Node `^22.22.2 || ^24.15.0 || >=26.0.0`，VM 当前 22.12.0（本地开发机为 22.22.2）。当前构建与测试均通过，但 Node 版本对齐需纳入环境基线确认。
+- 当时 `npm ci` 有两条 `EBADENGINE` 警告：`abbrev@5.0.0` / `nopt@10.0.1` 声明 Node `^22.22.2 || ^24.15.0 || >=26.0.0`，VM 系统默认 22.12.0（本地开发机为 22.22.2）。构建与测试不受影响，该问题已按下方「Node 版本对齐」闭环。
+- **Node 版本对齐（2026-11-20）**：工程基线以新增的 `web/.nvmrc` = `22.22.2` 为准。**系统默认 Node 保持不变**（§2 表内 v22.12.0 / npm 10.9.0 是共享机实测值，且 `/usr/local/node22` 同时承载 `cbc` / `codebuddy` / `agent-browser` 等工具链并有运行中进程，替换会波及其它项目）。做法是仓库外独立安装：
+
+  | 项 | 值 |
+  |---|---|
+  | 安装位置 | `/data/cl-node/node-v22.22.2-linux-x64/`（仓库外，不入库） |
+  | 来源与校验 | 官方 `nodejs.org/dist/v22.22.2/` 的 tar.xz + `SHASUMS256.txt`，`sha256sum -c` 结果 `node-v22.22.2-linux-x64.tar.xz: OK` |
+  | 生效方式 | 仅复跑会话内 `export PATH=/data/cl-node/node-v22.22.2-linux-x64/bin:$PATH`，不写 profile、不改 `/usr/local/bin` 软链 |
+  | 复跑结果 | Node v22.22.2 / npm 10.9.7；`npm ci` 167 包、`EBADENGINE` **0 条**；`vite build` 51 模块；`vitest run` **18/18 全绿**；lock SHA-256 前后不变；`git status` 0 行 |
+  | 系统默认复核 | `/usr/local/bin/node` 仍为 v22.12.0、npm 10.9.0，未改动 |
+  | 容量 | 该独立包约 31 MB，`/data` 可用空间不构成压力 |
+
 - ⚠️ 门禁 B（端口正式确认、备份保留周期、异地副本）、门禁 C（V2/V3 目录来源、100 首权威定义）、`/data` 全量媒体扩容评估仍未确认。

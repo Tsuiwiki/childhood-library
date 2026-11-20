@@ -114,7 +114,7 @@ MVP 可在一台服务器上运行：
 | 计算 / 内存 / 磁盘 | 8 核、15 Gi（无 swap）、99 G 磁盘 65 G 可用 | 为容器设内存上限；媒体使用独立 volume 并监控水位 |
 | Python | 系统 `python3` 为 3.6.8（EOL），另有 `python3.11` / `python3.12.11` | **显式使用 3.12 venv 或容器镜像**，禁止修改系统默认解释器 |
 | 数据库 | 未安装 PostgreSQL；已有 `pgvector/pgvector:pg16` 镜像 | PG16 以容器启动，端口仅绑定回环 |
-| Docker | 26.1.3 / Compose v2.27.0；Node 22.12.0 / npm 10.9.0 | 满足前后端工程化条件 |
+| Docker | 26.1.3 / Compose v2.27.0；系统默认 Node 22.12.0 / npm 10.9.0（Phase 0 实测快照） | 满足后端工程化条件；**前端工程基线为 Node 22.22.2**（`web/.nvmrc`），因共享机系统 Node 不可替换，VM 采用仓库外独立 Node + 显式 `PATH`，详见 `REMOTE_DEVELOPMENT_ENVIRONMENT.md` §10 |
 | 主机防火墙 | `firewalld` inactive | 数据库、管理后台、管理工具**不得监听 0.0.0.0**；仅 Nginx 对外 |
 | 共享机现状 | 已有 TiDB v8.5.0、anydev-agent 等容器；8080/8090/4000/10080/2379 已占用 | 独立目录、独立 Compose project name、独立 volume 与端口段；不清理已有容器 |
 | 出站网络 | GitHub / PyPI / npm 均 200 | 可拉取依赖，但须锁定版本并保留离线清单 |
