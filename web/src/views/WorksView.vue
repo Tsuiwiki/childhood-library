@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import ClAudioPlayer, { type AudioPlayerTrack } from '@/components/ClAudioPlayer.vue'
 import ClTrackDetailDialog from '@/components/ClTrackDetailDialog.vue'
 import {
@@ -41,6 +41,13 @@ const pageItems = computed(() => filteredSamples.value.slice((page.value - 1) * 
 
 watch([query, category], () => { page.value = 1 })
 watch(totalPages, (total) => { if (page.value > total) page.value = total })
+
+onMounted(() => {
+  const workId = new URLSearchParams(window.location.search).get('work')
+  if (!workId) return
+  const sample = samples.find((item) => item.id === workId)
+  if (sample) detailSample.value = sample
+})
 
 function playSample(version: ResearchVersion, work: ResearchSample): void {
   selectedTrack.value = toPlayerTrack(version, work)
