@@ -20,7 +20,7 @@
 | 出站网络 | GitHub 200、PyPI 200、npm registry 200 | [C3] |
 | Git | 2.43.7 | [C1] |
 | Docker / Compose | 26.1.3 / v2.27.0 | [C1][C4] |
-| Node / npm | v22.12.0 / 10.9.0（**系统默认，Phase 0 实测快照；工程前端基线另见 §10**） | [C1] |
+| Node / npm | v22.12.0 / 10.9.0（**系统默认，Phase 0 实测快照；工程前端基线另见 §10「Node 版本对齐」**） | [C1] |
 | Python | 系统 `python3` = **3.6.8（EOL）**；另有 `python3.11`、`python3.12.11` | [C1][C2][C4] |
 | PostgreSQL | **未安装**（无 `psql/postgres/initdb`）；已有 `pgvector/pgvector:pg16` 镜像 438 MB | [C2] |
 | 现有容器 | 运行中：TiDB v8.5.0（pd / server / tikv）、anydev-agent；退出：db-agent-ollama、db-agent-pg | [C2] |
@@ -158,7 +158,7 @@ T-06 已把领域实体落到 `app/models/`（按 [DATA_MODEL.md §11](DATA_MODE
 - VM 侧：T-08 **未启用** `web` / `nginx` 容器、未新增端口、未拉新镜像；`cl-dev` 仍是 db + api（+ 可选回环预览），`55432` / `58000` / `58080` 仍只绑 `127.0.0.1`。
 - **补记（2026-11-20）**：SSH 通道重新授权后，VM 已 `git pull --ff-only` 到 `137cf68`；`web/` 实测 Node v22.12.0 / npm 10.9.0、`npm ci` 装 167 包、`vue-tsc --noEmit` + `vite build` 通过（51 模块）、`vitest run` **18/18 全绿**；`node_modules/` 与 `dist/` 均被忽略，仓库工作区干净，未新增端口或容器。
 - 当时 `npm ci` 有两条 `EBADENGINE` 警告：`abbrev@5.0.0` / `nopt@10.0.1` 声明 Node `^22.22.2 || ^24.15.0 || >=26.0.0`，VM 系统默认 22.12.0（本地开发机为 22.22.2）。构建与测试不受影响，该问题已按下方「Node 版本对齐」闭环。
-- **Node 版本对齐（2026-11-20）**：工程基线以新增的 `web/.nvmrc` = `22.22.2` 为准。**系统默认 Node 保持不变**（§2 表内 v22.12.0 / npm 10.9.0 是共享机实测值，且 `/usr/local/node22` 同时承载 `cbc` / `codebuddy` / `agent-browser` 等工具链并有运行中进程，替换会波及其它项目）。做法是仓库外独立安装：
+- **Node 版本对齐（2026-11-20）**：工程基线以新增的 `web/.nvmrc` = `22.22.2` 为准。**系统默认 Node 保持不变**（§1 实机勘察表内 v22.12.0 / npm 10.9.0 是共享机实测值，且 `/usr/local/node22` 同时承载 `cbc` / `codebuddy` / `agent-browser` 等工具链并有运行中进程，替换会波及其它项目）。做法是仓库外独立安装：
 
   | 项 | 值 |
   |---|---|
