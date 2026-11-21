@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
-import ClAudioPlayer, { type AudioPlayerTrack } from '@/components/ClAudioPlayer.vue'
 import ClTrackDetailDialog from '@/components/ClTrackDetailDialog.vue'
+import { useAudioPlayer } from '@/composables/useAudioPlayer'
 import {
   actionLabel,
   assetUrl,
@@ -14,7 +14,7 @@ import {
 } from '@/research/samples'
 
 const samples = researchSamples
-const selectedTrack = ref<AudioPlayerTrack | null>(null)
+const { playTrack, stopVersion } = useAudioPlayer()
 const detailSample = ref<ResearchSample | null>(null)
 const query = ref('')
 const category = ref('all')
@@ -50,7 +50,7 @@ onMounted(() => {
 })
 
 function playSample(version: ResearchVersion, work: ResearchSample): void {
-  selectedTrack.value = toPlayerTrack(version, work)
+  playTrack(toPlayerTrack(version, work))
 }
 
 function playFromDetail(version: ResearchVersion): void {
@@ -59,9 +59,7 @@ function playFromDetail(version: ResearchVersion): void {
 
 function onVersionChange(version: ResearchVersion): void {
   const work = detailSample.value
-  if (work && selectedTrack.value?.id === work.id && selectedTrack.value.source !== `/audio/${version.file}`) {
-    selectedTrack.value = null
-  }
+  if (work) stopVersion(work.id, `/audio/${version.file}`)
 }
 </script>
 
@@ -165,7 +163,6 @@ function onVersionChange(version: ResearchVersion): void {
     @play="playFromDetail"
     @version-change="onVersionChange"
   />
-  <ClAudioPlayer :track="selectedTrack" @close="selectedTrack = null" />
 </template>
 
 <style scoped>

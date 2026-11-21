@@ -11,9 +11,11 @@ Vue 3 + TypeScript + Vite 实现的内部研究界面。`design-demos/` 保持�
 | `/music/specialties/:id` | 八个音乐专题子页；有研究录音的作品可进入对应录音详情 |
 | `/story` | 九个目录组、100 条研究记录，支持关键词、专题和深链接筛选 |
 | `/poetry` | 十个专题、60 条研究记录，保留版本线索、资产边界与五维状态 |
-| `/works` | 58 条主录音记录；搜索、类型筛选、分页、封面和底部播放器 |
+| `/works` | 58 条主录音记录；搜索、类型筛选、分页、封面和全站共享底部播放器 |
 | `/works?work=<作品ID>` | 指定作品的录音详情、版本切换、歌词/谱面状态、来源与权利说明 |
 | `/catalog` 等 7 个业务域 | 仍展示 API 的 `501 NOT_IMPLEMENTED`，不用本地数据伪装业务接口 |
+
+底部播放器和当前曲目状态位于 `App.vue` 全站层。在资料总览、三馆、音乐专题和录音页之间进行 Vue 路由切换时，保留同一个 `<audio>`、播放位置和底栏；切歌、切换当前作品录音版本或主动关闭仍按原规则处理。跳到独立静态原型页会离开 Vue 应用，不属于连续播放范围。
 
 歌曲详情还展示其所属专题，以及 GitHub 上已有的逐曲研究档案。文档关联依据现有作品 ID 与标准题名建立；不把候选音频、平台试听或研究登记描述为已获公开授权。
 
@@ -51,6 +53,7 @@ cd /data/childhood-library/web && npm ci && npm run build && npm run test
 | --- | --- |
 | `src/styles/tokens.css` | 逐值复用原型配色；纸纹、墨边、硬阴影等视觉基准不改写 |
 | `src/components/` | 播放器、录音详情、研究卡片、全站地图及基础共享组件 |
+| `src/composables/useAudioPlayer.ts` | 跨路由共享当前曲目；实际 `<audio>` 只在 `App.vue` 挂载一次 |
 | `src/research/samples.ts` | 唯一允许读取 `design-demos/audio/samples.json` 的数据层 |
 | `src/research/library.ts` | 唯一允许读取故事/诗词 `library-content.json` 的数据层 |
 | `src/research/specialties.ts` | 唯一允许读取 105 条音乐目录与专题映射的数据层 |

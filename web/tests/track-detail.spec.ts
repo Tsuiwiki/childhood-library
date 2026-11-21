@@ -1,6 +1,6 @@
-import { flushPromises, mount } from '@vue/test-utils'
+import { flushPromises } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import WorksView from '../src/views/WorksView.vue'
+import { mountAudioWorks, resetSharedPlayer } from './audio-works-harness'
 
 describe('track detail integration', () => {
   beforeEach(() => {
@@ -10,12 +10,13 @@ describe('track detail integration', () => {
   })
 
   afterEach(() => {
+    resetSharedPlayer()
     document.body.classList.remove('audio-player-open', 'dialog-open')
     document.body.innerHTML = ''
   })
 
   it('opens complete metadata, cover, lyrics, score, source and rights for CN-C01', async () => {
-    const wrapper = mount(WorksView, { attachTo: document.body, global: { stubs: { RouterLink: { template: '<a><slot /></a>' } } } })
+    const wrapper = mountAudioWorks(true)
     await wrapper.find('[data-work-detail="CN-C01"]').trigger('click')
     await flushPromises()
 
@@ -47,7 +48,7 @@ describe('track detail integration', () => {
   })
 
   it('switches CN-C02 versions and stops the old version before playing the new one', async () => {
-    const wrapper = mount(WorksView, { attachTo: document.body, global: { stubs: { RouterLink: { template: '<a><slot /></a>' } } } })
+    const wrapper = mountAudioWorks(true)
     await wrapper.find('[data-work-detail="CN-C02"]').trigger('click')
     await flushPromises()
 
@@ -70,7 +71,7 @@ describe('track detail integration', () => {
   })
 
   it('keeps generated-audio disclosure and closes with Escape/cancel', async () => {
-    const wrapper = mount(WorksView, { attachTo: document.body, global: { stubs: { RouterLink: { template: '<a><slot /></a>' } } } })
+    const wrapper = mountAudioWorks(true)
     await wrapper.find('input[type="search"]').setValue('CN-C22')
     await wrapper.find('[data-work-detail="CN-C22"]').trigger('click')
     await flushPromises()

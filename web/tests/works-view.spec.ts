@@ -1,14 +1,7 @@
-import { flushPromises, mount } from '@vue/test-utils'
+import { flushPromises } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import WorksView from '../src/views/WorksView.vue'
 import sampleRecords from '../../design-demos/audio/samples.json'
-
-function mountWorks(attach = false) {
-  return mount(WorksView, {
-    attachTo: attach ? document.body : undefined,
-    global: { stubs: { RouterLink: { template: '<a><slot /></a>' } } },
-  })
-}
+import { mountAudioWorks as mountWorks, resetSharedPlayer } from './audio-works-harness'
 
 describe('WorksView audio integration', () => {
   beforeEach(() => {
@@ -18,6 +11,7 @@ describe('WorksView audio integration', () => {
   })
 
   afterEach(() => {
+    resetSharedPlayer()
     document.body.classList.remove('audio-player-open', 'dialog-open')
     document.body.innerHTML = ''
   })
