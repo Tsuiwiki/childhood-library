@@ -5,7 +5,14 @@ import ClAudioPlayer from '@/components/ClAudioPlayer.vue'
 import { useAudioPlayer } from '@/composables/useAudioPlayer'
 
 const route = useRoute()
-const { selectedTrack, closePlayer } = useAudioPlayer()
+const {
+  selectedTrack,
+  playlistPosition,
+  playlistLength,
+  nextTrack,
+  previousTrack,
+  closePlayer,
+} = useAudioPlayer()
 const mobileOpen = ref(false)
 const isResearchHall = computed(() => ['story', 'poetry'].includes(String(route.name)))
 const navItems = [
@@ -59,7 +66,14 @@ watch(() => route.fullPath, () => { mobileOpen.value = false })
       <div class="shell">内部研究前端 · 原型页面保留在 <code>design-demos/</code>；录音与权利状态以各条目说明为准。</div>
     </footer>
 
-    <ClAudioPlayer :track="selectedTrack" @close="closePlayer" />
+    <ClAudioPlayer
+      :track="selectedTrack"
+      :playlist-position="playlistPosition"
+      :playlist-length="playlistLength"
+      @next="nextTrack"
+      @previous="previousTrack"
+      @close="closePlayer"
+    />
   </div>
 </template>
 

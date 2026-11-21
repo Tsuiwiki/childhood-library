@@ -174,4 +174,30 @@ describe('ClAudioPlayer', () => {
       else Reflect.deleteProperty(URL, 'revokeObjectURL')
     }
   })
+
+  it('emits playlist navigation and advances when the current recording ends', async () => {
+    const wrapper = mount(ClAudioPlayer, {
+      props: { track: localTrack(), playlistPosition: 1, playlistLength: 2 },
+    })
+    await flushPromises()
+
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 1 / 2')
+    expect(wrapper.find('audio').attributes('loop')).toBeUndefined()
+    await wrapper.find('[aria-label="播放列表上一首"]').trigger('click')
+    expect(wrapper.emitted('previous')).toHaveLength(1)
+    await wrapper.find('[aria-label="播放列表下一首"]').trigger('click')
+    expect(wrapper.emitted('next')).toHaveLength(1)
+
+    await wrapper.find('audio').trigger('ended')
+    expect(wrapper.emitted('next')).toHaveLength(2)
+  })
+
+  it('does not turn a single recording into a playlist or auto-advance it', async () => {
+    const wrapper = mount(ClAudioPlayer, { props: { track: localTrack() } })
+    await flushPromises()
+
+    expect(wrapper.find('.playlist-controls').exists()).toBe(false)
+    await wrapper.find('audio').trigger('ended')
+    expect(wrapper.emitted('next')).toBeUndefined()
+  })
 })

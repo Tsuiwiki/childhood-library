@@ -15,7 +15,7 @@ import {
 } from '@/research/samples'
 
 const samples = researchSamples
-const { playTrack, stopVersion } = useAudioPlayer()
+const { playTrack, playPlaylist, stopVersion } = useAudioPlayer()
 const detailSample = ref<ResearchSample | null>(null)
 const query = ref('')
 const category = ref('all')
@@ -60,6 +60,10 @@ function clearFilters(): void {
   query.value = ''
   category.value = 'all'
   topicId.value = null
+}
+
+function playFilteredSamples(): void {
+  playPlaylist(filteredSamples.value.map((sample) => toPlayerTrack(sample, sample)))
 }
 
 function playSample(version: ResearchVersion, work: ResearchSample): void {
@@ -108,6 +112,16 @@ function onVersionChange(version: ResearchVersion): void {
           :aria-pressed="category === filter.value"
           @click="category = filter.value"
         >{{ filter.label }}</button>
+      </div>
+      <div class="playlist-launch">
+        <button
+          class="detail-button playlist-start"
+          type="button"
+          data-playlist-start
+          :disabled="!filteredSamples.length"
+          @click="playFilteredSamples"
+        >循环播放当前 {{ filteredSamples.length }} 首</button>
+        <p>包含全部筛选结果和后续分页；启动后保留这份播放列表。</p>
       </div>
       <p class="results-status" role="status" aria-live="polite">
         找到 {{ filteredSamples.length }} 条；当前显示第 {{ page }} / {{ totalPages }} 页。
@@ -235,6 +249,9 @@ function onVersionChange(version: ResearchVersion): void {
 .category-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 .category-filters button { min-height: 44px; padding: 8px 13px; border: 2px solid var(--ink); border-radius: 0; background: var(--paper); font-size: 14px; font-weight: 800; }
 .category-filters button[aria-pressed="true"] { background: var(--blue); color: var(--paper-light); }
+.playlist-launch { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 16px; }
+.playlist-launch p { margin: 0; font-size: 13px; font-weight: 700; }
+.playlist-start { background: var(--yellow); }
 .results-status { margin: 14px 0 0; font-weight: 800; }
 .sample-card-intro { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: start; gap: 14px; margin-bottom: 13px; }
 .sample-card-copy { min-width: 0; }

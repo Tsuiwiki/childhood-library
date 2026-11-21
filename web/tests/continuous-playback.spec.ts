@@ -62,4 +62,29 @@ describe('continuous playback across Vue routes', () => {
     expect(wrapper.find('.audio-player').attributes('hidden')).not.toBeUndefined()
     wrapper.unmount()
   })
+
+  it('keeps the playlist alive and advances it from another Vue route', async () => {
+    const router = createAppRouter(createMemoryHistory())
+    await router.push('/works')
+    await router.isReady()
+    const wrapper = mount(App, { attachTo: document.body, global: { plugins: [router] } })
+
+    await wrapper.find('[data-playlist-start]').trigger('click')
+    await flushPromises()
+    const originalAudio = wrapper.find('audio').element
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 1 / 58')
+
+    await wrapper.find('.desktop-nav a[href="/story"]').trigger('click')
+    await flushPromises()
+    expect(router.currentRoute.value.name).toBe('story')
+    expect(wrapper.find('audio').element).toBe(originalAudio)
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 1 / 58')
+
+    await wrapper.find('audio').trigger('ended')
+    await flushPromises()
+    expect(wrapper.find('.player-title').text()).toBe('我们的田野')
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 2 / 58')
+    expect(wrapper.find('audio').element).toBe(originalAudio)
+    wrapper.unmount()
+  })
 })

@@ -8,7 +8,7 @@
 > 本目录的逐曲研究档案已拆分为独立批次文档，便于持续积累来源证据、版本信息和待核问题。
 > - [逐曲研究档案·批次02（2026-11-20）：《快乐的节日》《听妈妈讲那过去的事情》《每当我走过老师窗前》《小燕子》《我们的田野》](research/CHINESE_CHILDRENS_SONGS_BATCH_02.md)
 > - [音源采集·批次08（2026-11-21）：小蓓蕾组合 / 颂今音乐正规专辑与音质核验](research/CHINESE_CHILDRENS_SONGS_BATCH_08_AUDIO_QUALITY.md)
-> - [音源采集·批次09（2026-11-21）：系列专辑与逐曲音源入口](research/CHINESE_CHILDRENS_SONGS_BATCH_09_AUDIO_QUALITY.md)
+> - 音源采集·批次09（2026-11-21）：系列专辑与逐曲音源入口（研究文档待补，暂不保留无效链接）
 > - [音源采集·批次10（2026-11-21）：小蓓蕾组合系列专辑扩展采集](research/CHINESE_CHILDRENS_SONGS_BATCH_10_AUDIO_CATALOG.md)
 
 ## 1. 重要依据与范围

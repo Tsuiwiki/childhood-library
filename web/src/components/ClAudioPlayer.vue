@@ -12,8 +12,19 @@ export interface AudioPlayerTrack {
   kind: AudioPlayerKind
 }
 
-const props = defineProps<{ track: AudioPlayerTrack | null }>()
-const emit = defineEmits<{ (e: 'close'): void }>()
+const props = withDefaults(defineProps<{
+  track: AudioPlayerTrack | null
+  playlistPosition?: number
+  playlistLength?: number
+}>(), {
+  playlistPosition: 0,
+  playlistLength: 0,
+})
+const emit = defineEmits<{
+  (e: 'close'): void
+  (e: 'next'): void
+  (e: 'previous'): void
+}>()
 
 const audioElement = ref<HTMLAudioElement | null>(null)
 const current = ref<AudioPlayerTrack | null>(null)
@@ -109,6 +120,10 @@ function onClose() {
   emit('close')
 }
 
+function onEnded() {
+  if (props.playlistLength > 0) emit('next')
+}
+
 function onAudioError() {
   const audio = audioElement.value
   if (!audio?.getAttribute('src') || !current.value) return
@@ -140,14 +155,28 @@ onBeforeUnmount(() => {
         <strong class="player-title">{{ current?.title }}</strong>
         <span class="player-file">{{ current?.fileLabel }}</span>
       </div>
-      <audio
-        ref="audioElement"
-        class="player-audio"
-        controls
-        preload="metadata"
-        aria-label="当前作品的本地音频"
-        @error="onAudioError"
-      ></audio>
+      <div class="player-media">
+        <div v-if="playlistLength" class="playlist-controls" role="group" aria-label="播放列表控制">
+          <button class="player-step" type="button" aria-label="播放列表上一首" @click="emit('previous')">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zm12.5 0v14L9 12z" /></svg>
+            <span>上一首</span>
+          </button>
+          <span class="playlist-status" aria-live="polite">循环列表 · {{ playlistPosition }} / {{ playlistLength }}</span>
+          <button class="player-step" type="button" aria-label="播放列表下一首" @click="emit('next')">
+            <span>下一首</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zM5.5 5v14L15 12z" /></svg>
+          </button>
+        </div>
+        <audio
+          ref="audioElement"
+          class="player-audio"
+          controls
+          preload="metadata"
+          aria-label="当前作品的本地音频"
+          @ended="onEnded"
+          @error="onAudioError"
+        ></audio>
+      </div>
       <button
         class="dialog-close player-close"
         type="button"
@@ -188,6 +217,11 @@ onBeforeUnmount(() => {
 .player-kicker { display: block; margin-bottom: 2px; font-size: 12px; font-weight: 900; }
 .player-title { display: block; font-family: var(--serif); font-size: 20px; font-weight: 900; line-height: 1.35; overflow-wrap: anywhere; }
 .player-file { display: block; font-size: 12px; font-weight: 700; overflow-wrap: anywhere; }
+.player-media { min-width: 0; }
+.playlist-controls { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.player-step { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; padding: 6px 10px; border: 2px solid var(--ink); background: var(--paper-light); font-size: 13px; font-weight: 900; }
+.player-step svg { width: 18px; height: 18px; flex: 0 0 auto; }
+.playlist-status { flex: 1 1 auto; text-align: center; font-size: 13px; font-weight: 900; white-space: nowrap; }
 .player-audio { display: block; width: 100%; min-width: 0; min-height: 48px; }
 .dialog-close {
   min-width: 48px;
@@ -210,7 +244,7 @@ onBeforeUnmount(() => {
   .player-inner { width: calc(100% - 32px); grid-template-columns: minmax(0, 1fr) 48px; gap: 10px 12px; padding-block: 10px; }
   .player-copy { padding-right: 2px; }
   .player-title { font-size: 18px; }
-  .player-audio { grid-column: 1 / -1; grid-row: 2; }
+  .player-media { grid-column: 1 / -1; grid-row: 2; }
   .player-close { grid-column: 2; grid-row: 1; }
   .player-error { grid-row: 3; }
 }

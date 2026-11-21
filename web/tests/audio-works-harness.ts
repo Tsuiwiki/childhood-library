@@ -10,10 +10,17 @@ enableAutoUnmount(afterEach)
 const AudioWorksHarness = defineComponent({
   components: { WorksView, ClAudioPlayer },
   setup() {
-    const { selectedTrack, closePlayer } = useAudioPlayer()
-    return { selectedTrack, closePlayer }
+    const {
+      selectedTrack,
+      playlistPosition,
+      playlistLength,
+      nextTrack,
+      previousTrack,
+      closePlayer,
+    } = useAudioPlayer()
+    return { selectedTrack, playlistPosition, playlistLength, nextTrack, previousTrack, closePlayer }
   },
-  template: '<WorksView /><ClAudioPlayer :track="selectedTrack" @close="closePlayer" />',
+  template: '<WorksView /><ClAudioPlayer :track="selectedTrack" :playlist-position="playlistPosition" :playlist-length="playlistLength" @next="nextTrack" @previous="previousTrack" @close="closePlayer" />',
 })
 
 export function mountAudioWorks(attach = false) {

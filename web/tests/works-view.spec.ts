@@ -134,4 +134,47 @@ describe('WorksView audio integration', () => {
     await next?.trigger('click')
     expect(wrapper.find('.results-status').text()).toContain('第 3 / 7 页')
   })
+
+  it('loops every filtered result, wraps at both ends and keeps the launch snapshot', async () => {
+    const wrapper = mountWorks()
+    const start = wrapper.find('[data-playlist-start]')
+    expect(start.text()).toBe('循环播放当前 58 首')
+
+    await start.trigger('click')
+    await flushPromises()
+    expect(wrapper.find('.player-title').text()).toBe('让我们荡起双桨')
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 1 / 58')
+
+    await wrapper.find('[aria-label="播放列表上一首"]').trigger('click')
+    await flushPromises()
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 58 / 58')
+    await wrapper.find('[aria-label="播放列表下一首"]').trigger('click')
+    await flushPromises()
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 1 / 58')
+
+    await wrapper.find('[aria-label="播放列表下一首"]').trigger('click')
+    await flushPromises()
+    expect(wrapper.find('.player-title').text()).toBe('我们的田野')
+    await wrapper.find('audio').trigger('ended')
+    await flushPromises()
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 3 / 58')
+
+    await wrapper.find('input[type="search"]').setValue('小燕子')
+    expect(wrapper.find('[data-playlist-start]').text()).toBe('循环播放当前 1 首')
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 3 / 58')
+    await wrapper.find('[data-playlist-start]').trigger('click')
+    await flushPromises()
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 1 / 1')
+
+    const play = vi.spyOn(HTMLMediaElement.prototype, 'play')
+    const callsBeforeReplay = play.mock.calls.length
+    await wrapper.find('audio').trigger('ended')
+    await flushPromises()
+    expect(wrapper.find('.playlist-status').text()).toBe('循环列表 · 1 / 1')
+    expect(play).toHaveBeenCalledTimes(callsBeforeReplay + 1)
+
+    await wrapper.find('.player-close').trigger('click')
+    await flushPromises()
+    expect(wrapper.find('.playlist-controls').exists()).toBe(false)
+  })
 })
