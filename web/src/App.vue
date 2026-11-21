@@ -27,13 +27,10 @@ watch(() => route.fullPath, () => { mobileOpen.value = false })
         <a class="brand" href="/" aria-label="返回童年书房原型首页">童年书房 <small>CHILDHOOD<br>LIBRARY</small></a>
         <nav class="desktop-nav" aria-label="主导航">
           <a href="/">书房首页</a>
-          <component
-            :is="item.external ? 'a' : 'RouterLink'"
-            v-for="item in navItems"
-            :key="item.to"
-            :href="item.external ? item.to : undefined"
-            :to="item.external ? undefined : item.to"
-          >{{ item.label }}</component>
+          <template v-for="item in navItems" :key="item.to">
+            <a v-if="item.external" :href="item.to">{{ item.label }}</a>
+            <RouterLink v-else :to="item.to">{{ item.label }}</RouterLink>
+          </template>
         </nav>
         <button
           class="menu-toggle"
@@ -47,13 +44,10 @@ watch(() => route.fullPath, () => { mobileOpen.value = false })
       </div>
       <nav v-if="mobileOpen" id="mobile-nav" class="shell mobile-nav" aria-label="移动端导航" @keydown.esc="mobileOpen = false">
         <a href="/">书房首页</a>
-        <component
-          :is="item.external ? 'a' : 'RouterLink'"
-          v-for="item in navItems"
-          :key="item.to"
-          :href="item.external ? item.to : undefined"
-          :to="item.external ? undefined : item.to"
-        >{{ item.label }}</component>
+        <template v-for="item in navItems" :key="item.to">
+          <a v-if="item.external" :href="item.to">{{ item.label }}</a>
+          <RouterLink v-else :to="item.to">{{ item.label }}</RouterLink>
+        </template>
       </nav>
     </header>
 

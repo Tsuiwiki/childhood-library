@@ -35,7 +35,9 @@ describe('continuous playback across Vue routes', () => {
     expect(originalAudio.getAttribute('src')).toBe('/audio/CN-C01-original.mp3')
     expect(play).toHaveBeenCalledTimes(1)
 
-    await router.push('/story')
+    const storyLink = wrapper.find('.desktop-nav a[href="/story"]')
+    expect(storyLink.exists()).toBe(true)
+    await storyLink.trigger('click')
     await flushPromises()
     expect(router.currentRoute.value.name).toBe('story')
     expect(wrapper.find('h1').text()).toContain('儿童故事馆')
