@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ClLibraryMap from '@/components/ClLibraryMap.vue'
+import { audioSourceLinks } from '@/research/audioLinks'
 import { documentUrl, researchDocuments } from '@/research/documents'
 import { specialtyCount, specialtyDefinitions, specialtyRecordingCount } from '@/research/specialties'
 
@@ -21,6 +22,7 @@ const pillars = [
       <div class="hero-actions">
         <RouterLink class="button button-primary" to="/works">浏览候选目录 <span aria-hidden="true">→</span></RouterLink>
         <RouterLink class="button" to="/library">查找作品与研究档案</RouterLink>
+        <RouterLink class="button" to="/music/sources">已采集音源链接 {{ audioSourceLinks.length }} 条</RouterLink>
         <a class="button" href="#specialties">看八个专题</a>
       </div>
     </section>

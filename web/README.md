@@ -8,6 +8,7 @@ Vue 3 + TypeScript + Vite 实现的内部研究界面。`design-demos/` 保持�
 | --- | --- |
 | `/library` | 跨馆资料总览：检索 105 条音乐目录、100 条故事、60 条诗词及研究文档入口 |
 | `/music` | 音乐馆、三大内容支柱、八个专题与逐曲研究档案；专题可直接进入对应录音筛选 |
+| `/music/sources` | GitHub 批次 05–12 的 71 条儿歌音源/目录入口；搜索、类型筛选、分页，并关联 14 首已有研究录音 |
 | `/music/specialties/:id` | 八个音乐专题子页；保留完整候选档案，并可只看本专题已有录音或进入歌曲详情 |
 | `/story` | 九个目录组、100 条研究记录，支持关键词、专题和深链接筛选 |
 | `/poetry` | 十个专题、60 条研究记录，保留版本线索、资产边界与五维状态 |
@@ -59,6 +60,7 @@ cd /data/childhood-library/web && npm ci && npm run build && npm run test
 | `src/research/library.ts` | 唯一允许读取故事/诗词 `library-content.json` 的数据层 |
 | `src/research/specialties.ts` | 唯一允许读取 105 条音乐目录与专题映射的数据层 |
 | `src/research/documents.ts` | GitHub 研究文档的导航元数据及作品关联；不复制文档正文 |
+| `src/research/audioLinks.ts` | 批次 05–12 的 71 条外部音源/目录元数据；不据此声称已下载或获得授权 |
 | `src/api/` | 统一 API 客户端，解析 envelope 并如实处理 501 |
 | `src/router/` | 内部研究页面、7 个业务域占位页和 404 |
 | `tests/` | API、组件、播放器、录音详情、三馆、跨馆检索和路由测试 |

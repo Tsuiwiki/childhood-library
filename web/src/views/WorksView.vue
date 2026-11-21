@@ -83,7 +83,7 @@ function onVersionChange(version: ResearchVersion): void {
 <template>
   <section class="shell works-page">
     <header class="works-header">
-      <nav class="works-context" aria-label="资料导航"><RouterLink to="/library">← 资料总览</RouterLink><RouterLink to="/music">儿童音乐馆与专题</RouterLink></nav>
+      <nav class="works-context" aria-label="资料导航"><RouterLink to="/library">← 资料总览</RouterLink><RouterLink to="/music">儿童音乐馆与专题</RouterLink><RouterLink to="/music/sources">已采集音源链接</RouterLink></nav>
       <div v-if="activeTopic" class="topic-context" aria-label="当前专题筛选">
         <span>来自音乐专题</span>
         <strong>{{ activeTopic.name }}</strong>

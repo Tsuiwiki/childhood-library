@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { audioLinksForWork } from '@/research/audioLinks'
 import { documentUrl, documentsForWork } from '@/research/documents'
 import { workSpecialties } from '@/research/specialties'
 import {
@@ -30,6 +31,7 @@ const licensePage = computed(() => externalUrl(selectedVersion.value?.licenseUrl
 const downloadedFile = computed(() => externalUrl(selectedVersion.value?.downloadedFile))
 const specialties = computed(() => props.sample ? workSpecialties(props.sample.id) : [])
 const documents = computed(() => props.sample ? documentsForWork(props.sample.id) : [])
+const audioLinks = computed(() => props.sample ? audioLinksForWork(props.sample.id) : [])
 
 function sync(open: boolean): void {
   if (!open) document.body.classList.remove('dialog-open')
@@ -119,7 +121,12 @@ onBeforeUnmount(() => document.body.classList.remove('dialog-open'))
           <div><h4>所属音乐专题</h4><nav v-if="specialties.length" aria-label="当前作品所属专题"><RouterLink v-for="item in specialties" :key="item.id" :to="`/music/specialties/${item.id}`">{{ item.name }} →</RouterLink></nav><p v-else>专题关系待核验。</p></div>
           <div><h4>相关研究档案</h4><nav v-if="documents.length" aria-label="当前作品研究档案"><a v-for="document in documents" :key="document.id" :href="documentUrl(document.path)" target="_blank" rel="noopener noreferrer">{{ document.title }} ↗<small>{{ document.description }}</small></a></nav><p v-else>当前尚无逐曲研究文档；可先查看录音来源与权利记录。</p></div>
         </div>
-        <p class="context-note">专题用于内容策展；研究文档记录史料和线索。它们都不替代下方具体录音版本的来源与权利核验。</p>
+        <div v-if="audioLinks.length" class="work-audio-links">
+          <h4>GitHub 已登记的相关音源与目录</h4>
+          <a v-for="link in audioLinks" :key="link.id" :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.version }} · {{ link.platform }} ↗<small>批次 {{ link.batch }} · {{ link.note }}</small></a>
+          <RouterLink :to="{ path: '/music/sources', query: { q: sample.workTitle } }">在音源链接页查看 →</RouterLink>
+        </div>
+        <p class="context-note">专题用于内容策展；研究文档和外部链接记录史料与线索。它们都不替代下方具体录音版本的来源与权利核验。</p>
       </section>
 
       <section class="sample-audio-panel" :class="`is-${selectedVersion.sampleType || 'open'}`" aria-labelledby="sample-audio-title">
@@ -229,6 +236,10 @@ onBeforeUnmount(() => document.body.classList.remove('dialog-open'))
 .context-grid nav a { font-weight: 900; line-height: 1.5; text-underline-offset: 4px; }
 .context-grid nav small { display: block; color: var(--ink-soft); font-size: 13px; font-weight: 500; }
 .context-grid p { font-size: 14px; }
+.work-audio-links { display: grid; gap: 8px; margin-top: 18px; padding-top: 16px; border-top: 2px dashed var(--ink); }
+.work-audio-links h4 { margin: 0 0 4px; font-size: 15px; }
+.work-audio-links a { font-weight: 900; line-height: 1.5; text-underline-offset: 4px; }
+.work-audio-links small { display: block; color: var(--ink-soft); font-size: 13px; font-weight: 500; }
 .context-note { margin: 16px 0 0; padding-top: 12px; border-top: 2px dashed var(--ink); font-size: 13px; color: var(--ink-soft); }
 .sample-audio-panel { margin-bottom: 22px; padding: 18px; border: var(--line); background: #e2edcf; box-shadow: 5px 5px 0 var(--green); /* taste-skill-ignore: 原型录音面板硬阴影。 */ }
 .sample-audio-panel.is-internal { background: #f9ddd7; box-shadow: 5px 5px 0 var(--red); /* taste-skill-ignore: 原型权利待核验面板。 */ }

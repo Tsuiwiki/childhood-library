@@ -31,6 +31,9 @@ describe('track detail integration', () => {
     expect(dialog.find('.score-scroll img').attributes('src')).toBe('/song-assets/CN-C01-score.svg')
     expect(dialog.find('.score-downloads a[download]').exists()).toBe(true)
     expect(dialog.find('.sample-links a').attributes('href')).toContain('https://hsjd.jxust.edu.cn/')
+    expect(dialog.find('.work-audio-links').text()).toContain('YouTube')
+    expect(dialog.find('.work-audio-links').text()).toContain('贺斌演唱')
+    expect(dialog.find('.work-audio-links a[href="https://www.youtube.com/watch?v=1ThcRM56bjE"]').exists()).toBe(true)
     expect(dialog.find('#dialog-rights').text()).toContain('不得据此公开发布')
     expect(document.body.classList.contains('dialog-open')).toBe(true)
 
