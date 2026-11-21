@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ClLibraryMap from '@/components/ClLibraryMap.vue'
 import { audioSourceLinks } from '@/research/audioLinks'
+import { catalogStats } from '@/research/catalog'
 import { documentUrl, researchDocuments } from '@/research/documents'
 import { specialtyCount, specialtyDefinitions, specialtyRecordingCount } from '@/research/specialties'
 
@@ -18,11 +19,11 @@ const pillars = [
     <section class="shell hero" aria-labelledby="page-title">
       <span class="eyebrow"><!-- taste-skill-ignore: 保留原型旋转眉题。 -->儿童音乐馆 · MUSIC HALL</span>
       <h1 id="page-title">以中国经典为根，<br><span class="accent">以世界经典为窗</span>，以优秀原创为未来。</h1>
-      <p class="hero-desc">一座免费供大众及教育使用的儿童音乐数据库。以清楚的来源、版本与权利记录为基础，让孩子听见自然、优美、安静与想象。</p>
+      <p class="hero-desc">从经典童声合唱到各地童谣，按专题、年代和演唱版本慢慢翻；已有录音直接听，还在找的如实标出来。</p>
       <div class="hero-actions">
-        <RouterLink class="button button-primary" to="/works">浏览候选目录 <span aria-hidden="true">→</span></RouterLink>
-        <RouterLink class="button" to="/library">查找作品与研究档案</RouterLink>
-        <RouterLink class="button" to="/music/sources">已采集音源链接 {{ audioSourceLinks.length }} 条</RouterLink>
+        <RouterLink class="button button-primary" to="/works">听已有录音 <span aria-hidden="true">→</span></RouterLink>
+        <RouterLink class="button" to="/music/catalog">百年儿歌目录 {{ catalogStats.total }} 首</RouterLink>
+        <RouterLink class="button" to="/music/sources">音源链接 {{ audioSourceLinks.length }} 条</RouterLink>
         <a class="button" href="#specialties">看八个专题</a>
       </div>
     </section>
@@ -74,22 +75,24 @@ const pillars = [
       <div class="catalogue-band">
         <div class="copy">
           <h2 id="catalogue-title">发现目录 · 105 条已登记</h2>
-          <p>中国经典 55 张资料卡与世界经典 47 条资料卡构成当前发现目录。已有录音的作品提供真实来源、版本和权利说明；暂未取得可核验真实录音的播放位标为“待采集”，不以程序合成音冒充原曲。当前 Vue 内部曲目页展示其中 58 条有录音的研究记录，完整 105 条正式业务目录尚未导入数据库。</p>
+          <p>中国经典 55 张资料卡与世界经典 47 条资料卡，另有《中国儿童歌曲百年经典》已核对的 {{ catalogStats.total }} 首公开目录。点开目录，按采集进度找能听的版本。</p>
         </div>
-        <RouterLink class="button" to="/works">打开内部曲目 <span aria-hidden="true">→</span></RouterLink>
+        <div class="catalogue-links">
+          <RouterLink class="button" to="/music/catalog">翻百年目录</RouterLink>
+          <RouterLink class="button" to="/works">打开内部曲目 <span aria-hidden="true">→</span></RouterLink>
+        </div>
       </div>
     </section>
 
-    <section class="shell research-shelf" aria-labelledby="research-shelf-title">
-      <div class="research-shelf-heading"><div><h2 id="research-shelf-title">逐曲研究档案</h2><p>从作品身份到音频版本，每条研究都保留来源和待核项。</p></div><RouterLink class="button" to="/library">在资料总览中查找</RouterLink></div>
-      <div class="research-document-list">
-        <a v-for="document in latestDocuments" :key="document.id" :href="documentUrl(document.path)" target="_blank" rel="noopener noreferrer"><span>{{ document.updated }}</span><h3>{{ document.title }}</h3><p>{{ document.description }}</p><b>关联：{{ document.workTitles.join(' · ') }}</b></a>
-      </div>
-    </section>
-
-    <section class="shell footnote" aria-label="馆藏边界">
-      <h2 class="visually-hidden">馆藏边界</h2>
-      <p>本页面为儿童音乐馆馆藏导览层，依据《儿童经典音乐图书馆建设方案》§2.1 八个专题与 §11 信息架构整理。所有曲目均为候选发现层，不构成法律意见，也不授予任何第三方内容的使用权。</p>
+    <section class="shell research-shelf" aria-label="研究与来源档案">
+      <details>
+        <summary>逐曲研究档案与馆藏边界 <span aria-hidden="true">＋</span></summary>
+        <div class="research-shelf-heading"><p>底层资料：逐曲研究批次、八个专题依据与权利边界，需要核对时再展开。</p><RouterLink class="button" to="/library">在资料总览中查找</RouterLink></div>
+        <div class="research-document-list">
+          <a v-for="document in latestDocuments" :key="document.id" :href="documentUrl(document.path)" target="_blank" rel="noopener noreferrer"><span>{{ document.updated }}</span><h3>{{ document.title }}</h3><p>{{ document.description }}</p><b>关联：{{ document.workTitles.join(' · ') }}</b></a>
+        </div>
+        <p class="footnote">音乐馆导览依据《儿童经典音乐图书馆建设方案》§2.1 八个专题与 §11 信息架构整理；内部曲目页展示 58 条有录音的研究记录，完整 105 条正式业务目录尚未导入数据库。候选目录不构成法律意见，也不授予第三方内容使用权。</p>
+      </details>
     </section>
 
     <ClLibraryMap current="music" />
@@ -131,8 +134,12 @@ const pillars = [
 .copy { flex: 1 1 380px; }
 .catalogue-band h2 { font-family: var(--serif); font-size: 26px; font-weight: 900; margin-bottom: 8px; }
 .catalogue-band p { margin: 0; font-size: 15px; }
+.catalogue-links { display: flex; flex-wrap: wrap; gap: 12px; }
 .catalogue-band .button { background: var(--yellow); color: var(--ink); flex-shrink: 0; }
 .research-shelf { padding-block: 8px 42px; }
+.research-shelf > details { border: var(--line); background: var(--paper-light); padding: 16px 20px; }
+.research-shelf summary { font-family: var(--serif); font-size: 20px; font-weight: 900; cursor: pointer; }
+.research-shelf > details[open] summary { margin-bottom: 18px; padding-bottom: 12px; border-bottom: 2px dashed var(--ink); }
 .research-shelf-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px 22px; margin-bottom: 20px; }
 .research-shelf-heading h2 { margin-bottom: 5px; font-family: var(--serif); font-size: 29px; }
 .research-shelf-heading p { margin: 0; color: var(--ink-soft); }

@@ -117,6 +117,14 @@ export const researchDocuments: ResearchDocument[] = [
     workTitles: ['我们的田野', '卖报歌', '红星歌', '我们多么幸福', '嘀哩，嘀哩'],
   },
   {
+    id: 'songs-china-records-13',
+    title: '中国唱片历史发行 · 批次 13',
+    path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_13_CHINA_RECORDS_CLASSICS.md',
+    description: '央广少年广播合唱团 1970/1979 年唱片与电影歌曲合辑的曲目及试听入口。',
+    updated: '2026-11-21',
+    workTitles: ['让我们荡起双桨', '共产儿童团歌'],
+  },
+  {
     id: 'story-plan',
     title: '儿童故事馆建设方案',
     path: 'docs/STORY_LIBRARY_PLAN_V1.md',

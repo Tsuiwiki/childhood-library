@@ -38,7 +38,7 @@ describe('connected library research', () => {
     const router = await routerAt('/library')
     const wrapper = mount(LibraryIndexView, { global: { plugins: [router] } })
     expect(wrapper.findAll('.hall-card')).toHaveLength(3)
-    expect(wrapper.findAll('.document-card')).toHaveLength(12)
+    expect(wrapper.findAll('.document-card')).toHaveLength(13)
     expect(wrapper.find('.result-list').exists()).toBe(false)
 
     await wrapper.find('#library-query').setValue('小燕子')

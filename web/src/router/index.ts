@@ -11,6 +11,7 @@ import WorksView from '@/views/WorksView.vue'
 import LibraryIndexView from '@/views/LibraryIndexView.vue'
 import MusicView from '@/views/MusicView.vue'
 import AudioSourcesView from '@/views/AudioSourcesView.vue'
+import CatalogView from '@/views/CatalogView.vue'
 import ResearchHallView from '@/views/ResearchHallView.vue'
 import SpecialtyView from '@/views/SpecialtyView.vue'
 import DomainPlaceholderView from '@/views/DomainPlaceholderView.vue'
@@ -29,6 +30,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/library', name: 'library', component: LibraryIndexView },
   { path: '/music', name: 'music', component: MusicView },
   { path: '/music/sources', name: 'music-sources', component: AudioSourcesView },
+  { path: '/music/catalog', name: 'music-catalog', component: CatalogView },
   { path: '/music/specialties/:id', name: 'specialty', component: SpecialtyView },
   { path: '/story', name: 'story', component: ResearchHallView, props: { hall: 'story' } },
   { path: '/poetry', name: 'poetry', component: ResearchHallView, props: { hall: 'poetry' } },
@@ -41,6 +43,7 @@ const pageTitles: Record<string, string> = {
   library: '跨馆资料总览',
   music: '儿童音乐馆',
   'music-sources': '儿歌音源链接',
+  'music-catalog': '百年儿歌目录',
   story: '儿童故事馆',
   poetry: '古诗词馆',
   specialty: '音乐专题',

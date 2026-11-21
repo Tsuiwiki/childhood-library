@@ -47,12 +47,16 @@ function clearFilters(): void {
     <section class="shell sources-hero" aria-labelledby="sources-title">
       <nav class="sources-context" aria-label="音乐资料导航">
         <RouterLink to="/music">← 儿童音乐馆</RouterLink>
+        <RouterLink to="/music/catalog">百年儿歌目录</RouterLink>
         <RouterLink to="/works">已有研究录音</RouterLink>
         <RouterLink to="/library">资料总览</RouterLink>
       </nav>
       <h1 id="sources-title">儿歌音源链接</h1>
       <p>把 GitHub 研究档案里已登记的歌曲、专辑、视频和唱片目录入口集中到这里。共 {{ audioSourceLinks.length }} 条，其中 {{ linkedRecordingCount }} 首作品已有本地研究录音。</p>
-      <p class="sources-boundary">外部链接用于人工试听、版本识别和目录核对；可播放不代表已下载或获得本站再发布授权。没有本地录音的条目只跳原站，不提供虚构播放按钮。</p>
+      <details class="sources-boundary">
+        <summary>关于外部链接的使用边界</summary>
+        <p>外部链接用于人工试听、版本识别和目录核对；可播放不代表已下载或获得本站再发布授权。没有本地录音的条目只跳原站，不提供虚构播放按钮。</p>
+      </details>
     </section>
 
     <section class="shell source-filter" aria-labelledby="source-filter-title">
@@ -119,7 +123,9 @@ function clearFilters(): void {
 .sources-context a { text-underline-offset: 4px; }
 .sources-hero h1 { margin-bottom: 14px; font-family: var(--serif); font-size: clamp(40px, 6vw, 62px); line-height: 1.15; }
 .sources-hero > p { font-size: 17px; line-height: 1.8; }
-.sources-boundary { padding: 14px 16px; border-left: 5px solid var(--red); background: var(--paper-light); font-weight: 800; }
+.sources-boundary { margin-top: 6px; font-size: 14px; }
+.sources-boundary summary { padding: 8px 0; font-weight: 900; cursor: pointer; }
+.sources-boundary p { margin: 0; padding: 8px 0 0; color: var(--ink-soft); line-height: 1.8; }
 .source-filter { margin-bottom: 26px; padding: 20px; border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--ink); /* taste-skill-ignore: 沿用录音页筛选卡硬阴影。 */ }
 .source-search { display: grid; gap: 7px; font-weight: 900; }
 .source-search input { width: 100%; min-height: 52px; padding: 10px 14px; border: 2px solid var(--ink); border-radius: 0; background: #fff; color: var(--ink); font: inherit; }

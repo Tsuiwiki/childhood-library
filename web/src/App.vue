@@ -17,11 +17,12 @@ const mobileOpen = ref(false)
 const isResearchHall = computed(() => ['story', 'poetry'].includes(String(route.name)))
 const navItems = [
   { label: '资料总览', to: '/library', external: false },
-  { label: '故事馆', to: '/story', external: false },
+  { label: '百年儿歌目录', to: '/music/catalog', external: false },
   { label: '音乐馆', to: '/music', external: false },
+  { label: '已有录音', to: '/works', external: false },
+  { label: '故事馆', to: '/story', external: false },
   { label: '古诗词馆', to: '/poetry', external: false },
   { label: '研究资源库', to: '/research.html', external: true },
-  { label: '作品目录', to: '/works', external: false },
 ]
 
 watch(() => route.fullPath, () => { mobileOpen.value = false })
@@ -31,9 +32,9 @@ watch(() => route.fullPath, () => { mobileOpen.value = false })
   <div class="app-shell">
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="brand" href="/" aria-label="返回童年书房原型首页">童年书房 <small>CHILDHOOD<br>LIBRARY</small></a>
+        <RouterLink class="brand" to="/" aria-label="返回童年书房首页">童年书房 <small>CHILDHOOD<br>LIBRARY</small></RouterLink>
         <nav class="desktop-nav" aria-label="主导航">
-          <a href="/">书房首页</a>
+          <RouterLink to="/">书房首页</RouterLink>
           <template v-for="item in navItems" :key="item.to">
             <a v-if="item.external" :href="item.to">{{ item.label }}</a>
             <RouterLink v-else :to="item.to">{{ item.label }}</RouterLink>
@@ -50,7 +51,7 @@ watch(() => route.fullPath, () => { mobileOpen.value = false })
         ><span></span><span></span><span></span></button>
       </div>
       <nav v-if="mobileOpen" id="mobile-nav" class="shell mobile-nav" aria-label="移动端导航" @keydown.esc="mobileOpen = false">
-        <a href="/">书房首页</a>
+        <RouterLink to="/">书房首页</RouterLink>
         <template v-for="item in navItems" :key="item.to">
           <a v-if="item.external" :href="item.to">{{ item.label }}</a>
           <RouterLink v-else :to="item.to">{{ item.label }}</RouterLink>

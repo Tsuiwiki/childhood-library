@@ -91,11 +91,11 @@ function onVersionChange(version: ResearchVersion): void {
         <button type="button" @click="topicId = null">查看全部录音</button>
       </div>
       <h1>{{ activeTopic ? `${activeTopic.name} · 已有录音` : '曲目列表' }}</h1>
-      <p>
-        内部研究试听，共 {{ samples.length }} 条主录音记录。查看封面、歌词谱面、录音版本、来源与权利状态；
-        本页不是已发布曲库，也不代表数据库已经导入。
-      </p>
-      <p class="rights-note">权利待核验的录音仅限内部研究试听；开放许可仅对应各条目注明的具体录音。</p>
+      <p>共 {{ samples.length }} 条主录音记录。查看封面、歌词谱面、录音版本与来源。</p>
+      <details class="rights-note">
+        <summary>内部试听与权利边界</summary>
+        <p>权利待核验的录音仅限内部研究试听；开放许可仅对应各条目注明的具体录音。本页不是已发布曲库，也不代表数据库已经导入。</p>
+      </details>
     </header>
 
     <section class="filter-card" aria-labelledby="filter-title">
@@ -211,7 +211,9 @@ function onVersionChange(version: ResearchVersion): void {
 .works-header h1 { margin-bottom: 12px; font-family: var(--serif); font-size: clamp(38px, 5vw, 58px); font-weight: 900; line-height: 1.2; }
 .works-header p { margin-bottom: 12px; font-size: 17px; }
 .works-header code { padding: 1px 5px; background: rgba(25, 25, 23, .08); overflow-wrap: anywhere; }
-.rights-note { padding: 12px 14px; border-left: 5px solid var(--red); background: var(--paper-light); font-weight: 800; }
+.rights-note { margin-top: 4px; font-size: 14px; }
+.rights-note summary { padding: 8px 0; font-weight: 900; cursor: pointer; }
+.rights-note p { margin: 0; padding: 6px 0 0; color: var(--ink-soft); line-height: 1.8; }
 .works-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
 .work-card {
   position: relative;

@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import ClLibraryMap from '@/components/ClLibraryMap.vue'
+import { catalogAvailability, catalogDocumentTitle, catalogEntries, catalogVolumeInfo } from '@/research/catalog'
 import { documentUrl, documentsForWork, governanceDocuments, researchDocuments } from '@/research/documents'
 import { hallContent, hallRecords, recordSearchText, type ResearchHall } from '@/research/library'
 import { researchSamples } from '@/research/samples'
 import { hasResearchAudio, specialtyCatalog, workSpecialties } from '@/research/specialties'
 
-type ResultKind = 'music' | ResearchHall | 'document'
+type ResultKind = 'music' | 'catalog' | ResearchHall | 'document'
 interface LibraryResult {
   id: string
   kind: ResultKind
@@ -24,12 +25,13 @@ const kind = ref<'all' | ResultKind>('all')
 const filters = [
   { value: 'all', label: '全部资料' },
   { value: 'music', label: '音乐作品' },
+  { value: 'catalog', label: '百年儿歌目录' },
   { value: 'story', label: '故事' },
   { value: 'poetry', label: '古诗词' },
   { value: 'document', label: '研究文档' },
 ] as const
 const hallCards = [
-  { id: 'music', title: '儿童音乐馆', to: '/music', count: `${specialtyCatalog.length} 条作品目录`, note: `${researchSamples.length} 条主录音记录 · 8 个专题`, tone: 'music' },
+  { id: 'music', title: '儿童音乐馆', to: '/music', count: `${specialtyCatalog.length} 条作品目录`, note: `${catalogEntries.length} 首公开目录 · ${researchSamples.length} 首可试听 · 8 个专题`, tone: 'music' },
   { id: 'story', title: '儿童故事馆', to: '/story', count: `${hallRecords('story').length} 条研究记录`, note: '9 个目录组 · 来源与五维状态', tone: 'story' },
   { id: 'poetry', title: '古诗词馆', to: '/poetry', count: `${hallRecords('poetry').length} 条研究记录`, note: '10 个专题 · 版本与资产线索', tone: 'poetry' },
 ] as const
@@ -47,6 +49,19 @@ const allResults = computed<LibraryResult[]>(() => [
       to: hasResearchAudio(work.id) ? `/works?work=${work.id}` : `/music/specialties/${specialties[0]?.id ?? 'childhood'}`,
       action: hasResearchAudio(work.id) ? '查看录音与资料' : '进入所属专题',
       search: [work.id, work.title, work.type, work.region, work.note, ...specialties.map((item) => item.name), ...documents.map((item) => item.title)].join(' '),
+    }
+  }),
+  ...catalogEntries.map((entry): LibraryResult => {
+    const availability = catalogAvailability(entry)
+    return {
+      id: entry.id,
+      kind: 'catalog',
+      title: entry.title,
+      meta: `${entry.id} · ${catalogVolumeInfo[entry.volume].label} ${entry.era} · ${catalogDocumentTitle}`,
+      description: availability === 'recording' ? '已有研究录音，可直接试听。' : availability === 'source' ? '已登记外部音源线索。' : '仅公开目录登记，待采集。',
+      to: `/music/catalog?q=${encodeURIComponent(entry.title)}`,
+      action: '在百年目录中查看',
+      search: [entry.id, entry.title, entry.volume, entry.era, '百年儿歌目录', catalogDocumentTitle].join(' '),
     }
   }),
   ...(['story', 'poetry'] as const).flatMap((hall) => hallRecords(hall).map((record): LibraryResult => ({
@@ -78,7 +93,7 @@ const filteredResults = computed(() => allResults.value.filter((result) => {
 }))
 const browsing = computed(() => Boolean(normalizedQuery.value || kind.value !== 'all'))
 const visibleResults = computed(() => filteredResults.value.slice(0, 30))
-const kindNames: Record<ResultKind, string> = { music: '音乐', story: '故事', poetry: '诗词', document: '档案' }
+const kindNames: Record<ResultKind, string> = { music: '音乐', catalog: '百年目录', story: '故事', poetry: '诗词', document: '档案' }
 
 function searchFor(value: string): void {
   kind.value = 'all'
@@ -194,6 +209,7 @@ function reset(): void {
 .result-list { display: grid; gap: 12px; }
 .result-card { display: flex; align-items: center; gap: 20px; padding: 18px 20px; border: var(--line); border-left: 10px solid var(--blue); background: var(--paper-light); }
 .result-card.is-music { border-left-color: var(--red); }
+.result-card.is-catalog { border-left-color: var(--yellow); }
 .result-card.is-story { border-left-color: var(--brown); }
 .result-card.is-poetry { border-left-color: var(--green); }
 .result-copy { flex: 1; min-width: 0; }

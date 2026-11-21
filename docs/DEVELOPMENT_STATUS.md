@@ -214,7 +214,9 @@ Childhood Library 已经拥有可观的内容研究资产和多馆视觉原型�
 | 能力 | 当前实现 | 数据来源 |
 | --- | --- | --- |
 | 音乐馆与专题 | Vue 音乐馆及 8 个专题子页；专题与录音库通过 `?topic=<专题ID>` 双向直达，保留 105 条候选与已有录音的范围差异 | `design-demos/specialties.json` 的 105 条作品目录 |
-| 音源链接与研究档案 | `/music/sources` 汇总 GitHub 批次 05–12 的 71 条单曲、视频、专辑与档案入口；14 首已有录音可回到详情，其余仅跳原站，不伪造本地媒体 | `web/src/research/audioLinks.ts` + 已跟踪研究文档；资料总览接入至批次 12 |
+| 音源链接与研究档案 | `/music/sources` 汇总 GitHub 批次 04–13 的 94 条单曲、视频、专辑与档案入口；已有本地录音可回到详情，其余仅跳原站，不伪造本地媒体 | `web/src/research/audioLinks.ts` + 已跟踪研究文档；资料总览接入至批次 13 |
+| 百年儿歌目录 | `/music/catalog` 结构化 219 条已核对公开目录（第一卷 139 + 第四卷 80），逐条保留 GitHub 原文行号；按卷、年代、采集状态筛选，仅目录的条目明确标注待采集 | `web/src/research/catalog.ts` + `docs/CHINESE_CHILDRENS_SONGS_500_CATALOG.md` |
+| 内容首页 | `/` 由 Vue 内容页提供：八首作品卡直连试听与详情、三馆入口、内容概览；权利/研究说明折叠下沉 | `web/src/views/HomeView.vue`；`design-demos/dir-3.html` 逐字节未改且仍可单独打开 |
 | 故事馆 | 9 个目录组、100 条记录；搜索、专题筛选、备注展开 | `design-demos/library-content.json` |
 | 古诗词馆 | 10 个专题、60 条记录；版本、资产与五维状态 | 同上 |
 | 录音列表与详情 | 58 条主录音；搜索、类型筛选、分页、封面、歌词/谱面状态、版本播放、来源、许可和 SHA-256 | `design-demos/audio/samples.json` |

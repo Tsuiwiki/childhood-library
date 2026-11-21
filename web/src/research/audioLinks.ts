@@ -23,6 +23,8 @@ export const audioLinkKinds: { value: 'all' | AudioLinkKind; label: string }[] =
 ]
 
 export const audioLinkBatches: Record<string, { title: string; path: string }> = {
+  '04': { title: '批次 04 · 音频入口与版本核验', path: 'docs/research/CHINESE_CHILDRENS_SONGS_AUDIO_BATCH_04.md' },
+  '04A': { title: '批次 04 · 音频优先采集', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_04_AUDIO.md' },
   '05': { title: '批次 05 · 音频链接', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_05_AUDIO_LINKS.md' },
   '06': { title: '批次 06 · 新增作品', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_06_AUDIO_LINKS.md' },
   '07': { title: '批次 07 · 节目与专辑', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_07_AUDIO_LINKS.md' },
@@ -30,6 +32,7 @@ export const audioLinkBatches: Record<string, { title: string; path: string }> =
   '10': { title: '批次 10 · 系列专辑', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_10_AUDIO_CATALOG.md' },
   '11': { title: '批次 11 · 广播合唱团', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_11_BROADCAST_CHOIRS.md' },
   '12': { title: '批次 12 · 唱片档案', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_12_CHINA_RECORDS_ARCHIVES.md' },
+  '13': { title: '批次 13 · 中国唱片历史发行', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_13_CHINA_RECORDS_CLASSICS.md' },
 }
 
 // Curated metadata from the tracked GitHub research documents. These are external
@@ -112,6 +115,39 @@ export const audioSourceLinks: AudioLinkRecord[] = [
   { id: '12-08', title: '宝宝听唱学儿歌——幸福的童年', version: '上海音乐出版社', platform: '出版社产品目录', url: 'https://www.smph.cn/NewsDetails.aspx?id=545', note: '18 首，全新编曲制作，可沿官方数字产品继续核验。', kind: 'archive', batch: '12' },
   { id: '12-09', title: '宝宝听唱学儿歌——我爱我的大中国', version: '上海音乐出版社', platform: '出版社产品目录', url: 'https://www.smph.cn/NewsDetails.aspx?id=542', note: '含《大中国》《少年强》《少年，少年，祖国的春天》等配套资源线索。', kind: 'archive', batch: '12' },
   { id: '12-10', title: '最好的未来', version: '上海音乐出版社', platform: '出版社产品目录', url: 'https://www.smph.cn/NewsDetails.aspx?id=543', note: '同系列 14 首产品目录；没有把产品介绍页写成直接音频。', kind: 'archive', batch: '12' },
+
+  // Batch 04 (audio entrance/version verification): later recorded versions only.
+  { id: '04-01', title: '丢手绢', version: '刘玉兰', platform: 'Apple Music', url: 'https://music.apple.com/us/song/1588856638', note: '《汇悦经典儿歌大全（一）》，2020 年后期演唱版本。', kind: 'recording', batch: '04' },
+  { id: '04-02', title: '丢手绢', version: '乔柯', platform: 'Apple Music', url: 'https://music.apple.com/us/album/丢手绢/1874234675?i=1874234676', note: '《宝宝听唱学儿歌——记忆中的童声》，上海音乐出版社相关发行，页面标注 2025 年。', kind: 'recording', batch: '04' },
+  { id: '04-03', title: '听妈妈讲那过去的事情', version: '陈心蕊', platform: 'Apple Music', url: 'https://music.apple.com/us/song/1800154363', note: 'EP，2017 年后期演唱版本。', kind: 'recording', batch: '04' },
+  { id: '04-04', title: '听妈妈讲那过去的事情', version: '国家大剧院合唱团现场版', platform: 'Apple Music Classical', url: 'https://classical.music.apple.com/cn/album/1781199453', note: '《永恒的旋律》国家大剧院合唱团经典作品音乐会，2024 年现场版。', kind: 'recording', batch: '04' },
+  { id: '04-05', title: '听妈妈讲那过去的事情', version: '中国爱乐乐团音乐会版本', platform: 'Apple Music Classical', url: 'https://classical.music.apple.com/cn/album/1544206133', note: '2014 年中国爱乐乐团交响音乐会合辑，平台页面列出该曲。', kind: 'recording', batch: '04' },
+
+  // Batch 04 audio-first: the one traceable release-metadata entrance, not the
+  // unlicensed download aggregator pages explicitly excluded by that document.
+  { id: '04A-01', title: '丢手绢', version: '小蓓蕾组合 Topic', platform: 'YouTube', url: 'https://www.youtube.com/watch?v=bIaUuDm067k', note: '颂今音乐提供的自动生成 Topic，《童歌经典02》标注 2000 年发行；发行元数据入口，不是 1940 年代原始录音。', kind: 'video', batch: '04A' },
+
+  { id: '08-05', title: '童声合唱歌曲精选01（齐唱版）', version: '小蓓蕾组合 · 颂今音乐', platform: 'TIDAL', url: 'https://tidal.com/album/214215436', note: '17 首曲目可与 Qobuz 交叉核对；页面不是下载入口。', kind: 'album', batch: '08' },
+  { id: '08-06', title: '小蓓蕾组合', version: '平台 Top Songs 目录', platform: 'Apple Music', url: 'https://music.apple.com/us/artist/小蓓蕾组合/1029540804', note: '平台推荐曲目总览；页面无公开播放量，不作传播度结论。', kind: 'archive', batch: '08' },
+  { id: '10-06', title: '童歌经典07', version: '小蓓蕾组合', platform: 'Apple Music', url: 'https://music.apple.com/us/album/童歌经典07/1610054690', note: '与 Amazon Music 页面交叉确认专辑身份，含《小燕子》《让我们荡起双桨》等版本线索。', kind: 'album', batch: '10' },
+
+  // Batch 13: China Records historical releases. Four album/artist entrances plus
+  // ten work-level clues, all marked as in-album listening rather than standalone
+  // single pages (batch 13 L104). Doc L88 says the ten clues are not ten new works.
+  { id: '13-01', title: '藏族小朋友歌唱毛主席（Single）', version: '周义瑛、中央人民广播电台少年广播合唱团 · 1970', platform: 'Apple Music', url: 'https://music.apple.com/us/album/藏族小朋友歌唱毛主席-single/6793380087', note: '1970 年 ℗ 中国唱片，3 首曲目与试听入口；发行年份不必然等于录音年份。', kind: 'album', batch: '13' },
+  { id: '13-02', title: '营火熊熊（EP）', version: '中央人民广播电台少年广播合唱团 · 1979', platform: 'Apple Music', url: 'https://music.apple.com/us/album/营火熊熊-ep/6793393064', note: '1979 年 ℗ 中国唱片，5 首少年生活与夏令营题材曲目。', kind: 'album', batch: '13' },
+  { id: '13-03', title: '中国电影百年歌曲精萃（三）· 1971', version: '中央人民广播电台少年儿童合唱团', platform: 'Apple Music', url: 'https://music.apple.com/us/album/中国电影百年歌曲精萃/1888431701', note: '1971 年 ℗ 中国唱片，页面列出《让我们荡起双桨》《共产儿童团歌》。', kind: 'album', batch: '13' },
+  { id: '13-04', title: '中央人民广播电台少年广播合唱团', version: '历史发行艺术家目录', platform: 'Apple Music', url: 'https://music.apple.com/us/artist/中央人民广播电台少年广播合唱团/1778148500', note: '列出《金色年华》《泉水》《祖国颂歌》等发行；目录入口不代表逐曲已核验。', kind: 'archive', batch: '13' },
+  { id: '13-05', title: '荔枝大又多', version: '中央人民广播电台少年广播合唱团 · 1970', platform: 'Apple Music', url: 'https://music.apple.com/us/album/藏族小朋友歌唱毛主席-single/6793380087', note: '专辑内逐曲试听，1:21；非独立单曲页，词曲作者与母带待核。', kind: 'album', batch: '13' },
+  { id: '13-06', title: '藏族小朋友歌唱毛主席', version: '中国唱片 · 1970', platform: 'Apple Music', url: 'https://music.apple.com/us/album/藏族小朋友歌唱毛主席-single/6793380087', note: '专辑内逐曲试听，1:24；音质待试听。', kind: 'album', batch: '13' },
+  { id: '13-07', title: '在一起', version: '中央人民广播电台少年广播合唱团 · 1970', platform: 'Apple Music', url: 'https://music.apple.com/us/album/藏族小朋友歌唱毛主席-single/6793380087', note: '专辑内逐曲试听，1:38；非独立单曲页。', kind: 'album', batch: '13' },
+  { id: '13-08', title: '蓝天向我们召唤', version: '中央人民广播电台少年广播合唱团 · 1979', platform: 'Apple Music', url: 'https://music.apple.com/us/album/营火熊熊-ep/6793393064', note: 'EP 内逐曲试听，1:55；实体唱片编号与词曲作者待核。', kind: 'album', batch: '13' },
+  { id: '13-09', title: '营火熊熊', version: '中央人民广播电台少年广播合唱团 · 1979', platform: 'Apple Music', url: 'https://music.apple.com/us/album/营火熊熊-ep/6793393064', note: 'EP 内逐曲试听，2:21；音质待试听。', kind: 'album', batch: '13' },
+  { id: '13-10', title: '航海夏令营营歌', version: '中央人民广播电台少年广播合唱团 · 1979', platform: 'Apple Music', url: 'https://music.apple.com/us/album/营火熊熊-ep/6793393064', note: 'EP 内逐曲试听，2:50；非独立单曲页。', kind: 'album', batch: '13' },
+  { id: '13-11', title: '走在上学的路上', version: '中央人民广播电台少年广播合唱团 · 1979', platform: 'Apple Music', url: 'https://music.apple.com/us/album/营火熊熊-ep/6793393064', note: 'EP 内逐曲试听，1:29；录音日期待核。', kind: 'album', batch: '13' },
+  { id: '13-12', title: '营火晚会', version: '中央人民广播电台少年广播合唱团 · 1979', platform: 'Apple Music', url: 'https://music.apple.com/us/album/营火熊熊-ep/6793393064', note: 'EP 内逐曲试听，1:07；非独立单曲页。', kind: 'album', batch: '13' },
+  { id: '13-13', title: '让我们荡起双桨', version: '中央人民广播电台少年儿童合唱团 · 1971', platform: 'Apple Music', url: 'https://music.apple.com/us/album/中国电影百年歌曲精萃/1888431701', note: '电影《祖国的花朵》插曲，合辑内逐曲试听 2:22；与电影原声是否同版本待核。', kind: 'album', batch: '13' },
+  { id: '13-14', title: '共产儿童团歌', version: '中央人民广播电台少年儿童合唱团 · 1971', platform: 'Apple Music', url: 'https://music.apple.com/us/album/中国电影百年歌曲精萃/1888431701', note: '合辑内逐曲试听 1:52；发行年不能直接当作首次录音时间。', kind: 'album', batch: '13' },
 ]
 
 export function sampleForAudioLink(link: AudioLinkRecord): ResearchSample | undefined {
