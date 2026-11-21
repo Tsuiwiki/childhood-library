@@ -4,11 +4,9 @@ import ClTrackDetailDialog from '@/components/ClTrackDetailDialog.vue'
 import { useAudioPlayer } from '@/composables/useAudioPlayer'
 import { getSpecialty, isSpecialtyId, workSpecialties, type SpecialtyId } from '@/research/specialties'
 import {
-  actionLabel,
   assetUrl,
   researchSamples,
   sampleCategory,
-  sourceLabel,
   toPlayerTrack,
   type ResearchSample,
   type ResearchVersion,
@@ -24,7 +22,7 @@ const page = ref(1)
 const PAGE_SIZE = 9
 const categoryFilters = [
   { value: 'all', label: '全部录音' },
-  { value: 'internal', label: '经典原声 · 权利待核验' },
+  { value: 'internal', label: '经典原声' },
   { value: 'generated', label: '原创示范 · 非原曲' },
   { value: 'open', label: '开放许可' },
 ]
@@ -91,7 +89,7 @@ function onVersionChange(version: ResearchVersion): void {
         <button type="button" @click="topicId = null">查看全部录音</button>
       </div>
       <h1>{{ activeTopic ? `${activeTopic.name} · 已有录音` : '曲目列表' }}</h1>
-      <p>共 {{ samples.length }} 条主录音记录。查看封面、歌词谱面、录音版本与来源。</p>
+      <p>共 {{ samples.length }} 条主录音记录。挑一首直接听，或点开看版本与详情。</p>
       <details class="rights-note">
         <summary>内部试听与权利边界</summary>
         <p>权利待核验的录音仅限内部研究试听；开放许可仅对应各条目注明的具体录音。本页不是已发布曲库，也不代表数据库已经导入。</p>
@@ -128,43 +126,37 @@ function onVersionChange(version: ResearchVersion): void {
       </p>
     </section>
 
-    <div v-if="pageItems.length" class="works-grid" aria-label="内部研究录音列表">
-      <article v-for="sample in pageItems" :key="sample.id" class="work-card">
-        <div class="card-top">
-          <span class="id-tag">{{ sample.id }}</span>
-          <span class="status-badge">{{ sample.license }}</span>
-        </div>
-        <div class="sample-card-intro">
-          <img
-            class="sample-card-cover"
-            :src="assetUrl(sample.materials.cover)"
-            :alt="sample.materials.coverAlt"
-            width="800"
-            height="600"
-            loading="lazy"
-          >
-          <div class="sample-card-copy">
-            <h2>{{ sample.workTitle }}</h2>
-            <p class="card-group">{{ sample.kind }}</p>
+    <div v-if="pageItems.length" class="works-grid" aria-label="已有录音列表">
+      <article v-for="sample in pageItems" :key="sample.id" class="work-card" :data-work="sample.id">
+        <button
+          class="work-cover"
+          type="button"
+          :aria-label="`查看《${sample.workTitle}》详情`"
+          @click="detailSample = sample"
+        >
+          <img :src="assetUrl(sample.materials.cover)" :alt="sample.materials.coverAlt" loading="lazy">
+        </button>
+        <div class="work-body">
+          <h2>{{ sample.workTitle }}</h2>
+          <p class="work-credit">{{ sample.author || sample.kind }}</p>
+          <p class="work-meta">{{ sample.durationLabel ?? '时长待核' }}</p>
+          <div class="work-actions">
+            <button
+              class="play-button"
+              type="button"
+              data-audio-play="true"
+              :data-work-id="sample.id"
+              :data-play="sample.id"
+              :aria-label="`试听《${sample.workTitle}》`"
+              @click="playSample(sample, sample)"
+            >试听 <span aria-hidden="true">▶</span></button>
+            <button
+              class="detail-link"
+              type="button"
+              :data-work-detail="sample.id"
+              @click="detailSample = sample"
+            >看详情 →</button>
           </div>
-        </div>
-        <dl class="card-meta">
-          <div><dt>录音</dt><dd>{{ sample.attribution }}</dd></div>
-          <div><dt>来源</dt><dd>{{ sourceLabel(sample) }}</dd></div>
-          <div><dt>素材</dt><dd>{{ sample.materials.lyrics?.length ? '歌词与谱面已收录' : '封面已收录 · 歌词待核验' }}</dd></div>
-        </dl>
-        <div class="card-footer">
-          <button class="detail-button" type="button" :data-work-detail="sample.id" @click="detailSample = sample">查看详情</button>
-          <button
-            class="detail-button audio-action"
-            type="button"
-            data-audio-play="true"
-            :data-work-id="sample.id"
-            :aria-label="`${actionLabel(sample)}：${sample.workTitle}`"
-            @click="playSample(sample, sample)"
-          >
-            {{ actionLabel(sample) }}
-          </button>
         </div>
       </article>
     </div>
@@ -215,36 +207,22 @@ function onVersionChange(version: ResearchVersion): void {
 .rights-note summary { padding: 8px 0; font-weight: 900; cursor: pointer; }
 .rights-note p { margin: 0; padding: 6px 0 0; color: var(--ink-soft); line-height: 1.8; }
 .works-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
-.work-card {
-  position: relative;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 18px 18px 16px 29px;
-  border: var(--line);
-  background: var(--paper-light);
-  box-shadow: 5px 5px 0 var(--ink); /* taste-skill-ignore: 保留原型卡片硬阴影。 */
-}
-.work-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 11px;
-  border-right: 3px solid var(--ink);
-  background: var(--red);
-}
-.card-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-bottom: 12px; }
-.id-tag { display: inline-flex; align-items: center; min-height: 30px; padding: 3px 9px; border: 2px solid var(--ink); background: var(--yellow); font-size: 13px; font-weight: 900; font-variant-numeric: tabular-nums; }
-.status-badge { display: inline-flex; align-items: center; min-height: 30px; max-width: 100%; padding: 4px 9px; border: 2px solid currentColor; color: #7a2017; background: #f9ddd7; font-size: 12px; font-weight: 900; line-height: 1.4; overflow-wrap: anywhere; }
-.work-card h2 { margin: 0 0 7px; font-family: var(--serif); font-size: 25px; font-weight: 900; line-height: 1.3; overflow-wrap: anywhere; }
-.card-group { margin-bottom: 13px; font-size: 14px; font-weight: 800; line-height: 1.5; }
-.card-meta { display: grid; gap: 7px; margin: 0 0 13px; }
-.card-meta div { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 8px; }
-.card-meta dt { font-size: 13px; font-weight: 800; }
-.card-meta dd { margin: 0; font-size: 16px; line-height: 1.5; overflow-wrap: anywhere; }
-.card-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 13px; border-top: 2px solid var(--ink); }
+/* Same content-card language as HomeView: cover first, listening first.
+   Version / source / rights detail stays in the detail dialog and the
+   collapsed boundary note instead of being stamped on every card. */
+.work-card { min-width: 0; display: flex; flex-direction: column; border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--ink); /* taste-skill-ignore: 沿用首页作品卡硬阴影。 */ }
+.work-cover { display: block; width: 100%; aspect-ratio: 4 / 3; padding: 0; overflow: hidden; border: 0; border-bottom: var(--line); border-radius: 0; background: var(--paper); cursor: pointer; }
+.work-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.work-body { display: flex; flex: 1; flex-direction: column; padding: 14px 16px 16px; }
+.work-body h2 { margin: 0 0 6px; font-family: var(--serif); font-size: 22px; font-weight: 900; line-height: 1.35; overflow-wrap: anywhere; }
+.work-credit { margin: 0 0 4px; font-size: 13px; font-weight: 800; line-height: 1.55; }
+.work-meta { margin: 0 0 14px; font-size: 12px; color: var(--ink-soft); }
+.work-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: auto; padding-top: 12px; border-top: 2px dashed var(--ink); font-size: 13px; font-weight: 800; }
+.play-button { min-height: 42px; padding: 7px 12px; border: 2px solid var(--ink); border-radius: 0; background: var(--yellow); font-size: 13px; font-weight: 900; cursor: pointer; }
+.detail-link { min-height: 42px; padding: 7px 2px; border: 0; background: transparent; color: var(--ink); font-size: 13px; font-weight: 900; text-underline-offset: 4px; cursor: pointer; }
+.detail-link:hover { text-decoration: underline; }
+/* Still used by the filter, pagination and topic-context controls. */
 .detail-button { min-height: 44px; flex: 0 0 auto; padding: 8px 12px; border: 2px solid var(--ink); border-radius: 0; background: var(--paper-light); box-shadow: 3px 3px 0 var(--ink); /* taste-skill-ignore: 保留原型按钮硬阴影。 */ font-size: 14px; font-weight: 900; }
-.audio-action { background: var(--yellow); }
 .filter-card { margin-bottom: 30px; padding: 20px; border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--ink); /* taste-skill-ignore: 保留原型筛选卡硬阴影。 */ }
 .search-field { display: grid; gap: 7px; font-weight: 900; }
 .search-field input { width: 100%; min-height: 52px; padding: 10px 14px; border: 2px solid var(--ink); border-radius: 0; background: #fff; color: var(--ink); font: inherit; }
@@ -255,10 +233,6 @@ function onVersionChange(version: ResearchVersion): void {
 .playlist-launch p { margin: 0; font-size: 13px; font-weight: 700; }
 .playlist-start { background: var(--yellow); }
 .results-status { margin: 14px 0 0; font-weight: 800; }
-.sample-card-intro { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: start; gap: 14px; margin-bottom: 13px; }
-.sample-card-copy { min-width: 0; }
-.sample-card-cover { width: 104px; height: auto; aspect-ratio: 4 / 3; display: block; object-fit: cover; border: 2px solid var(--ink); background: var(--paper); transform: rotate(-1.5deg); }
-.sample-card-intro .card-group { margin-bottom: 0; }
 .no-results { padding: 30px 22px; border: var(--line); background: var(--yellow); text-align: center; }
 .no-results h2 { font-family: var(--serif); font-size: 28px; }
 .pagination { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin-top: 30px; }
@@ -270,7 +244,6 @@ function onVersionChange(version: ResearchVersion): void {
 }
 @media (max-width: 640px) {
   .works-grid { grid-template-columns: 1fr; gap: 20px; }
-  .work-card { padding-right: 16px; }
   .detail-button { width: 100%; }
 }
 </style>

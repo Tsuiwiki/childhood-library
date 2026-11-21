@@ -32,6 +32,23 @@ describe('WorksView audio integration', () => {
     expect(sampleRecords).toHaveLength(58)
   })
 
+  it('uses the same content-card language as the homepage without stamped rights badges', () => {
+    const wrapper = mountWorks()
+    const card = wrapper.find('.work-card')
+
+    expect(card.find('.work-cover img').exists()).toBe(true)
+    expect(card.find('.work-body h2').text()).toBe('让我们荡起双桨')
+    expect(card.find('.work-credit').text()).toContain('中央人民')
+    expect(card.find('.play-button').text()).toContain('试听')
+    expect(card.find('.detail-link').text()).toContain('看详情')
+    expect(wrapper.findAll('.status-badge')).toHaveLength(0)
+    expect(wrapper.findAll('.id-tag')).toHaveLength(0)
+    expect(wrapper.findAll('.card-meta')).toHaveLength(0)
+    // Rights detail is still reachable, just not stamped on every card.
+    expect(wrapper.find('.rights-note').exists()).toBe(true)
+    expect(wrapper.text()).toContain('不是已发布曲库')
+  })
+
   it('plays the selected card, switches recordings and closes back to the list', async () => {
     const play = vi.spyOn(HTMLMediaElement.prototype, 'play')
     const wrapper = mountWorks(true)
@@ -63,14 +80,14 @@ describe('WorksView audio integration', () => {
   })
 
   it.each([
-    ['CN-C22', '播放原创示范', '原创播放示范 · 非原曲', '/audio/CN-C22.wav'],
-    ['CN-C25', '试听歌曲示例', '开放许可 / 原创示范', '/audio/CN-C25.wav'],
-    ['EN-T01', '试听歌曲示例', 'CC BY-SA 3.0', '/audio/EN-T01.mp3'],
-  ])('keeps the recording-specific action and rights label for %s', async (id, action, label, source) => {
+    ['CN-C22', '原创播放示范 · 非原曲', '/audio/CN-C22.wav'],
+    ['CN-C25', '开放许可 / 原创示范', '/audio/CN-C25.wav'],
+    ['EN-T01', 'CC BY-SA 3.0', '/audio/EN-T01.mp3'],
+  ])('plays the right recording and keeps its rights label in the player for %s', async (id, label, source) => {
     const wrapper = mountWorks()
     await wrapper.find('input[type="search"]').setValue(id)
     const button = wrapper.find(`[data-work-id="${id}"]`)
-    expect(button.text()).toBe(action)
+    expect(button.text()).toContain('试听')
 
     await button.trigger('click')
     await flushPromises()
