@@ -7,6 +7,7 @@ import {
   hasResearchAudio,
   isSpecialtyId,
   specialtyDefinitions,
+  specialtyRecordingCount,
   specialtyWorks,
 } from '@/research/specialties'
 
@@ -16,6 +17,7 @@ const specialty = computed(() => {
   return isSpecialtyId(id) ? getSpecialty(id) : undefined
 })
 const works = computed(() => specialty.value ? specialtyWorks(specialty.value.id) : [])
+const recordingCount = computed(() => specialty.value ? specialtyRecordingCount(specialty.value.id) : 0)
 const currentIndex = computed(() => specialty.value ? specialtyDefinitions.findIndex((item) => item.id === specialty.value?.id) : -1)
 const previous = computed(() => currentIndex.value >= 0 ? specialtyDefinitions[(currentIndex.value + specialtyDefinitions.length - 1) % specialtyDefinitions.length] : undefined)
 const next = computed(() => currentIndex.value >= 0 ? specialtyDefinitions[(currentIndex.value + 1) % specialtyDefinitions.length] : undefined)
@@ -34,6 +36,9 @@ const next = computed(() => currentIndex.value >= 0 ? specialtyDefinitions[(curr
       </div>
       <p class="hero-desc">{{ specialty.description }}</p>
       <div class="hero-scope"><b>内容范围：</b>{{ specialty.scope }}　<b>编辑关注：</b>{{ specialty.focus }}</div>
+      <div v-if="recordingCount" class="hero-actions">
+        <RouterLink class="button button-primary" :to="{ path: '/works', query: { topic: specialty.id } }">只看本专题已有录音 {{ recordingCount }} 首 <span aria-hidden="true">→</span></RouterLink>
+      </div>
     </section>
 
     <section class="shell works" aria-labelledby="works-title">
@@ -98,6 +103,7 @@ h1 { font-family: var(--serif); font-size: clamp(34px, 4vw, 48px); font-weight: 
 .hero-desc { max-width: 760px; margin-top: 18px; font-size: 17px; line-height: 1.9; }
 .hero-scope { margin-top: 16px; padding: 14px 18px; border: 2px solid var(--ink); background: var(--paper-light); box-shadow: 4px 4px 0 var(--ink); /* taste-skill-ignore: 保留原型专题说明硬阴影。 */ font-size: 14px; }
 .hero-scope b { color: var(--accent); }
+.hero-actions { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 12px; }
 .works { padding-block: 12px 48px; }
 .works-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px; }
 .works-head h2 { font-family: var(--serif); font-size: 26px; font-weight: 900; margin: 0; }

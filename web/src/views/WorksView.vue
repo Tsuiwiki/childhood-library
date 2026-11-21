@@ -2,6 +2,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import ClTrackDetailDialog from '@/components/ClTrackDetailDialog.vue'
 import { useAudioPlayer } from '@/composables/useAudioPlayer'
+import { getSpecialty, isSpecialtyId, workSpecialties, type SpecialtyId } from '@/research/specialties'
 import {
   actionLabel,
   assetUrl,
@@ -18,6 +19,7 @@ const { playTrack, stopVersion } = useAudioPlayer()
 const detailSample = ref<ResearchSample | null>(null)
 const query = ref('')
 const category = ref('all')
+const topicId = ref<SpecialtyId | null>(null)
 const page = ref(1)
 const PAGE_SIZE = 9
 const categoryFilters = [
@@ -27,10 +29,12 @@ const categoryFilters = [
   { value: 'open', label: '开放许可' },
 ]
 
+const activeTopic = computed(() => topicId.value ? getSpecialty(topicId.value) : undefined)
 const filteredSamples = computed(() => {
   const needle = query.value.normalize('NFKC').trim().toLocaleLowerCase()
   return samples.filter((sample) => {
     if (category.value !== 'all' && sampleCategory(sample) !== category.value) return false
+    if (topicId.value && !workSpecialties(sample.id).some((item) => item.id === topicId.value)) return false
     if (!needle) return true
     return [sample.id, sample.workTitle, sample.kind, sample.author, sample.attribution, sample.sourceTitle, sample.license]
       .filter(Boolean).join(' ').normalize('NFKC').toLocaleLowerCase().includes(needle)
@@ -39,15 +43,24 @@ const filteredSamples = computed(() => {
 const totalPages = computed(() => Math.max(1, Math.ceil(filteredSamples.value.length / PAGE_SIZE)))
 const pageItems = computed(() => filteredSamples.value.slice((page.value - 1) * PAGE_SIZE, page.value * PAGE_SIZE))
 
-watch([query, category], () => { page.value = 1 })
+watch([query, category, topicId], () => { page.value = 1 })
 watch(totalPages, (total) => { if (page.value > total) page.value = total })
 
 onMounted(() => {
-  const workId = new URLSearchParams(window.location.search).get('work')
+  const params = new URLSearchParams(window.location.search)
+  const requestedTopic = params.get('topic')
+  if (requestedTopic && isSpecialtyId(requestedTopic)) topicId.value = requestedTopic
+  const workId = params.get('work')
   if (!workId) return
   const sample = samples.find((item) => item.id === workId)
   if (sample) detailSample.value = sample
 })
+
+function clearFilters(): void {
+  query.value = ''
+  category.value = 'all'
+  topicId.value = null
+}
 
 function playSample(version: ResearchVersion, work: ResearchSample): void {
   playTrack(toPlayerTrack(version, work))
@@ -67,7 +80,13 @@ function onVersionChange(version: ResearchVersion): void {
   <section class="shell works-page">
     <header class="works-header">
       <nav class="works-context" aria-label="资料导航"><RouterLink to="/library">← 资料总览</RouterLink><RouterLink to="/music">儿童音乐馆与专题</RouterLink></nav>
-      <h1>曲目列表</h1>
+      <div v-if="activeTopic" class="topic-context" aria-label="当前专题筛选">
+        <span>来自音乐专题</span>
+        <strong>{{ activeTopic.name }}</strong>
+        <RouterLink :to="`/music/specialties/${activeTopic.id}`">返回专题档案</RouterLink>
+        <button type="button" @click="topicId = null">查看全部录音</button>
+      </div>
+      <h1>{{ activeTopic ? `${activeTopic.name} · 已有录音` : '曲目列表' }}</h1>
       <p>
         内部研究试听，共 {{ samples.length }} 条主录音记录。查看封面、歌词谱面、录音版本、来源与权利状态；
         本页不是已发布曲库，也不代表数据库已经导入。
@@ -139,7 +158,7 @@ function onVersionChange(version: ResearchVersion): void {
     <div v-else class="no-results" role="status">
       <h2>没有匹配的录音</h2>
       <p>可以缩短关键词，或切换为“全部录音”。</p>
-      <button class="detail-button" type="button" @click="query = ''; category = 'all'">清空搜索与筛选</button>
+      <button class="detail-button" type="button" @click="clearFilters">清空搜索与筛选</button>
     </div>
 
     <nav v-if="filteredSamples.length > PAGE_SIZE" class="pagination" aria-label="录音列表分页">
@@ -171,6 +190,10 @@ function onVersionChange(version: ResearchVersion): void {
 .works-header { max-width: 850px; margin-bottom: 30px; }
 .works-context { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-bottom: 18px; font-size: 14px; font-weight: 900; }
 .works-context a { text-underline-offset: 4px; }
+.topic-context { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-bottom: 18px; padding: 12px 14px; border: var(--line); background: var(--yellow); box-shadow: 4px 4px 0 var(--ink); /* taste-skill-ignore: 保留原型筛选提示硬阴影。 */ }
+.topic-context strong { font-family: var(--serif); font-size: 20px; }
+.topic-context a { font-weight: 900; text-underline-offset: 4px; }
+.topic-context button { min-height: 44px; margin-left: auto; padding: 7px 11px; border: 2px solid var(--ink); background: var(--paper-light); font-size: 13px; font-weight: 900; }
 .works-header h1 { margin-bottom: 12px; font-family: var(--serif); font-size: clamp(38px, 5vw, 58px); font-weight: 900; line-height: 1.2; }
 .works-header p { margin-bottom: 12px; font-size: 17px; }
 .works-header code { padding: 1px 5px; background: rgba(25, 25, 23, .08); overflow-wrap: anywhere; }

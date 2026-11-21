@@ -8,7 +8,7 @@ import SpecialtyView from '../src/views/SpecialtyView.vue'
 import WorksView from '../src/views/WorksView.vue'
 import { createAppRouter } from '../src/router'
 import { hallGroups, hallRecords, hallStats } from '../src/research/library'
-import { specialtyCount, specialtyDefinitions, specialtyWorks } from '../src/research/specialties'
+import { specialtyCount, specialtyDefinitions, specialtyRecordingCount, specialtyWorks } from '../src/research/specialties'
 
 async function routerAt(path: string) {
   const router = createAppRouter(createMemoryHistory())
@@ -45,6 +45,7 @@ describe('museum research data', () => {
   it('derives all eight music specialty counts from the existing work mappings', () => {
     expect(specialtyDefinitions).toHaveLength(8)
     expect(specialtyDefinitions.map((item) => specialtyCount(item.id))).toEqual([35, 24, 32, 13, 3, 51, 18, 0])
+    expect(specialtyDefinitions.map((item) => specialtyRecordingCount(item.id))).toEqual([35, 19, 16, 5, 0, 4, 15, 0])
     expect(specialtyWorks('childhood')[0]?.id).toBe('CN-C01')
   })
 })
@@ -57,6 +58,10 @@ describe('MusicView and specialties', () => {
     expect(wrapper.find('h1').text()).toContain('以中国经典为根')
     expect(wrapper.findAll('.spec-card')).toHaveLength(8)
     expect(wrapper.find('.spec-card').attributes('href')).toBe('/music/specialties/childhood')
+    expect(wrapper.findAll('.spec-audio-link')).toHaveLength(6)
+    expect(wrapper.find('.spec-audio-link').attributes('href')).toBe('/works?topic=childhood')
+    expect(wrapper.find('.spec-audio-link').text()).toContain('已有录音 35 首')
+    expect(wrapper.findAll('.spec-audio-empty')).toHaveLength(2)
     expect(wrapper.findAll('.pillar-card')).toHaveLength(3)
     expect(wrapper.text()).toContain('105 条已登记')
     expect(wrapper.text()).toContain('58 条有录音的研究记录')
@@ -73,6 +78,8 @@ describe('MusicView and specialties', () => {
     expect(first.text()).toContain('让我们荡起双桨')
     expect(first.attributes('href')).toBe('/works?work=CN-C01')
     expect(wrapper.text()).toContain('查看研究录音')
+    expect(wrapper.find('.hero-actions a').text()).toContain('只看本专题已有录音 35 首')
+    expect(wrapper.find('.hero-actions a').attributes('href')).toBe('/works?topic=childhood')
     expect(wrapper.findAll('.lib-peer-list a')).toHaveLength(8)
   })
 

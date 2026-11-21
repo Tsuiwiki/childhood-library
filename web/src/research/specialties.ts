@@ -63,6 +63,10 @@ export function specialtyCount(id: SpecialtyId): number {
   return specialtyWorks(id).length
 }
 
+export function specialtyRecordingCount(id: SpecialtyId): number {
+  return researchSamples.filter((sample) => workSpecialties(sample.id).some((item) => item.id === id)).length
+}
+
 export function hasResearchAudio(workId: string): boolean {
   return audioWorkIds.has(workId)
 }

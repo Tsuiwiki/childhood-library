@@ -55,7 +55,7 @@
 ## Phase 1：统一资源管理 MVP（音乐馆先行）
 
 - [x] 初始化 FastAPI + Pydantic 项目（T-05，2026-11-19：31 个 pytest 全绿、api 容器 healthy）
-- [x] 初始化 Vue 3 + TypeScript 前端（T-08：`web/` 精确版本锁 + 52 个 Vitest + 构建通过 + 原型视觉回归 3/3 PASS）
+- [x] 初始化 Vue 3 + TypeScript 前端（T-08：`web/` 精确版本锁 + 53 个 Vitest + 构建通过 + 原型视觉回归 3/3 PASS）
 - [x] 建立 PostgreSQL 数据库和迁移（T-06：20 张表、Alembic `8d6b729f5152`、upgrade/downgrade 往返通过）
 - [x] 建立统一作品、创作者、分类和标签模型（T-06：`Work` / `Contribution` / `Tag` / `Collection`）
 - [x] 建立作品版本、录音版本和乐谱版本模型（T-06：`WorkVersion` / `RecordingVersion` / `ScoreEdition`）
@@ -66,7 +66,7 @@
 - [ ] 实现 JSON / CSV 导入导出和迁移报告（T-11）
 - [ ] 实现编辑端作品列表、详情和审核入口（T-09）
 - [ ] 实现发布门禁和操作审计（T-06 已提供门禁函数与审计表；T-09 接入发布命令）
-- [ ] 建立完整自动化测试与 Docker Compose 环境（104 个 pytest 与 `cl-dev` Compose 已由 T-04 ～ T-07 建立，T-08 新增 52 个 Vitest；业务回归待 T-09+）
+- [ ] 建立完整自动化测试与 Docker Compose 环境（104 个 pytest 与 `cl-dev` Compose 已由 T-04 ～ T-07 建立，T-08 新增 53 个 Vitest；业务回归待 T-09+）
 
 验收：编辑人员可以从一条候选歌曲开始，完成作品身份、创作者、版本、来源证据、审美评审和使用方式登记；未通过门禁的媒体不能进入公开层。
 

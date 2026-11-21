@@ -5,6 +5,7 @@ import { mountAudioWorks as mountWorks, resetSharedPlayer } from './audio-works-
 
 describe('WorksView audio integration', () => {
   beforeEach(() => {
+    window.history.replaceState({}, '', '/works')
     vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue()
     vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => {})
     vi.spyOn(HTMLMediaElement.prototype, 'load').mockImplementation(() => {})
@@ -99,6 +100,23 @@ describe('WorksView audio integration', () => {
     await wrapper.find('.no-results button').trigger('click')
     expect(wrapper.find('.results-status').text()).toContain('找到 58 条')
     expect(wrapper.findAll('.work-card')).toHaveLength(9)
+  })
+
+  it('filters recordings by a linked music specialty and returns to the full list', async () => {
+    window.history.replaceState({}, '', '/works?topic=nature')
+    const wrapper = mountWorks()
+    await flushPromises()
+
+    expect(wrapper.find('h1').text()).toBe('大自然的歌 · 已有录音')
+    expect(wrapper.find('.topic-context').text()).toContain('来自音乐专题')
+    expect(wrapper.find('.results-status').text()).toContain('找到 19 条')
+    expect(wrapper.findAll('.work-card')).toHaveLength(9)
+    expect(wrapper.find('[data-work-id="CN-C03"]').exists()).toBe(true)
+
+    await wrapper.find('.topic-context button').trigger('click')
+    expect(wrapper.find('h1').text()).toBe('曲目列表')
+    expect(wrapper.find('.topic-context').exists()).toBe(false)
+    expect(wrapper.find('.results-status').text()).toContain('找到 58 条')
   })
 
   it('paginates without losing the selected audio', async () => {

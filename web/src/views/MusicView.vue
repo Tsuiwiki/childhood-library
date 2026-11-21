@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ClLibraryMap from '@/components/ClLibraryMap.vue'
 import { documentUrl, researchDocuments } from '@/research/documents'
-import { specialtyCount, specialtyDefinitions } from '@/research/specialties'
+import { specialtyCount, specialtyDefinitions, specialtyRecordingCount } from '@/research/specialties'
 
 const latestDocuments = researchDocuments.filter((document) => document.id.startsWith('songs-') && document.id !== 'songs-500')
 
@@ -31,19 +31,25 @@ const pillars = [
         <p>音乐馆按八个内容专题策展。专题可以多选，不替代作品类型、地区、语言与年代等基础字段。</p>
       </div>
       <div class="spec-grid">
-        <RouterLink
-          v-for="specialty in specialtyDefinitions"
-          :key="specialty.id"
-          class="spec-card"
-          :class="`s-${specialty.id}`"
-          :to="`/music/specialties/${specialty.id}`"
-        >
-          <span class="count">{{ specialtyCount(specialty.id) || '待授权' }}<template v-if="specialtyCount(specialty.id)"> 首</template></span>
-          <span class="no">{{ specialty.no }} · {{ specialty.name }}</span>
-          <h3>{{ specialty.name }}</h3>
-          <p>{{ specialty.shortDescription }}</p>
-          <span class="go">进入专题 <span aria-hidden="true">→</span></span>
-        </RouterLink>
+        <div v-for="specialty in specialtyDefinitions" :key="specialty.id" class="spec-item">
+          <RouterLink
+            class="spec-card"
+            :class="`s-${specialty.id}`"
+            :to="`/music/specialties/${specialty.id}`"
+          >
+            <span class="count">{{ specialtyCount(specialty.id) || '待授权' }}<template v-if="specialtyCount(specialty.id)"> 首</template></span>
+            <span class="no">{{ specialty.no }} · {{ specialty.name }}</span>
+            <h3>{{ specialty.name }}</h3>
+            <p>{{ specialty.shortDescription }}</p>
+            <span class="go">专题档案 <span aria-hidden="true">→</span></span>
+          </RouterLink>
+          <RouterLink
+            v-if="specialtyRecordingCount(specialty.id)"
+            class="spec-audio-link"
+            :to="{ path: '/works', query: { topic: specialty.id } }"
+          >已有录音 {{ specialtyRecordingCount(specialty.id) }} 首 <span aria-hidden="true">→</span></RouterLink>
+          <span v-else class="spec-audio-empty">暂无已收录录音</span>
+        </div>
       </div>
     </section>
 
@@ -99,12 +105,16 @@ const pillars = [
 .specialties, .pillars { padding-block: 24px 36px; scroll-margin-top: 104px; }
 .section-heading { margin-bottom: 30px; }
 .spec-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-.spec-card { display: flex; flex-direction: column; gap: 8px; text-align: left; border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--ink); /* taste-skill-ignore: 保留原型专题卡硬阴影。 */ padding: 18px 16px; text-decoration: none; transition: translate .15s ease, box-shadow .15s ease; position: relative; }
+.spec-item { min-width: 0; display: flex; flex-direction: column; }
+.spec-card { flex: 1; display: flex; flex-direction: column; gap: 8px; text-align: left; border: var(--line); background: var(--paper-light); box-shadow: 5px 5px 0 var(--ink); /* taste-skill-ignore: 保留原型专题卡硬阴影。 */ padding: 18px 16px; text-decoration: none; transition: translate .15s ease, box-shadow .15s ease; position: relative; }
 .spec-card:hover { translate: -2px -2px; box-shadow: 7px 7px 0 var(--ink); /* taste-skill-ignore: 保留原型专题卡悬停硬阴影。 */ }
 .no { font-size: 12px; font-weight: 900; letter-spacing: .1em; }
 .spec-card h3 { margin: 0; font-family: var(--serif); font-size: 20px; font-weight: 900; }
 .spec-card p { margin: 0; font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
 .go { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; }
+.spec-audio-link, .spec-audio-empty { min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 10px 4px 0 0; padding: 8px 12px; border: 2px solid var(--ink); background: var(--yellow); font-size: 13px; font-weight: 900; text-decoration: none; }
+.spec-audio-link { box-shadow: 3px 3px 0 var(--ink); /* taste-skill-ignore: 保留原型按钮硬阴影。 */ }
+.spec-audio-empty { justify-content: flex-start; background: var(--paper); color: var(--ink-soft); }
 .count { position: absolute; top: -11px; right: 12px; padding: 1px 8px; border: 2px solid var(--ink); background: var(--yellow); font-size: 11px; font-weight: 800; transform: rotate(2deg); }
 .s-childhood .no { color: var(--red); } .s-nature .no { color: var(--green); } .s-play .no { color: #8a640b; } .s-lullaby .no, .s-world .no { color: var(--blue); } .s-classical .no, .s-forgotten .no { color: var(--brown); } .s-original .no { color: var(--green); }
 .pillar-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
