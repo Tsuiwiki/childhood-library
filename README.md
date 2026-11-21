@@ -75,7 +75,7 @@ Childhood Library 首先是一个面向儿童文化的研究、发现、采集�
 ├── alembic.ini              # Alembic 入口；连接串只从环境变量读取
 ├── Dockerfile / .dockerignore / pytest.ini
 ├── requirements.txt / requirements.lock   # 顶层依赖 + 全量精确锁（36 包）
-├── web/                     # Vue 3 + TS + Vite 内部研究前端（61 个 Vitest）
+├── web/                     # Vue 3 + TS + Vite 内部研究前端（70 个 Vitest）
 │   ├── src/                 # 三馆 / 专题 / 录音详情 / 跨馆资料总览 / API 客户端
 │   └── tests/               # 组件、播放器、资料关联、深链接与路由测试
 ├── deploy/                  # Compose / 备份恢复配置（cl-dev 的 db + api 已在 VM 启用）
