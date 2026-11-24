@@ -400,12 +400,8 @@
 
 
 
-## 逐曲音频与曲谱采集新增批次
 
-- [音频与曲谱采集·批次15（2026-11-22）：清华大学图书馆逐曲音频、历史唱片与曲谱入口](research/CHINESE_CHILDRENS_SONGS_BATCH_15_AUDIO_SCORE_SOURCES.md)
-
-- [音频与曲谱采集·批次16（2026-11-24）：清华馆藏童声唱片与正规曲谱目录](research/CHINESE_CHILDRENS_SONGS_BATCH_16_LIBRARY_AUDIO_SCORE_CATALOGS.md)
-
-- [曲谱目录采集·批次17（2026-11-24）：儿童歌曲出版曲集与示范音频线索](research/CHINESE_CHILDRENS_SONGS_BATCH_17_PUBLISHED_SCORE_CATALOGS.md)
+## 逐曲资料补全新增批次
 
 - [音频补全·批次18（2026-11-24）：清华图书馆馆藏目录逐曲核验](research/CHINESE_CHILDRENS_SONGS_BATCH_18_AUDIO_CATALOGS.md)
+- [曲谱与创作资料补全·批次19（2026-11-24）：曲谱目录交叉匹配与作品史料核验](research/CHINESE_CHILDRENS_SONGS_BATCH_19_SCORE_LYRICS_METADATA.md)
