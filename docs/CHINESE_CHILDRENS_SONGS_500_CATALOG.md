@@ -405,3 +405,4 @@
 
 - [音频补全·批次18（2026-11-24）：清华图书馆馆藏目录逐曲核验](research/CHINESE_CHILDRENS_SONGS_BATCH_18_AUDIO_CATALOGS.md)
 - [曲谱与创作资料补全·批次19（2026-11-24）：曲谱目录交叉匹配与作品史料核验](research/CHINESE_CHILDRENS_SONGS_BATCH_19_SCORE_LYRICS_METADATA.md)
+- [音频、曲谱与歌词出处·批次20（2026-11-24）：六首既有经典作品逐曲补全](research/CHINESE_CHILDRENS_SONGS_BATCH_20_AUDIO_SCORE_LYRICS.md)
