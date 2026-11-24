@@ -407,3 +407,8 @@
 - [曲谱与创作资料补全·批次19（2026-11-24）：曲谱目录交叉匹配与作品史料核验](research/CHINESE_CHILDRENS_SONGS_BATCH_19_SCORE_LYRICS_METADATA.md)
 - [音频、曲谱与歌词出处·批次20（2026-11-24）：六首既有经典作品逐曲补全](research/CHINESE_CHILDRENS_SONGS_BATCH_20_AUDIO_SCORE_LYRICS.md)
 - [早期演唱者、历史传播与曲谱线索·批次21（2026-11-24）：五首经典作品及一项机构演出记录](research/CHINESE_CHILDRENS_SONGS_BATCH_21_EARLY_RECORDINGS_HISTORY.md)
+
+
+## 逐曲资料补全新增批次（续）
+
+- [馆藏录音目录与曲谱线索·批次22（2026-11-24）：《小燕子》《我们的田野》《听妈妈讲那过去的事情》《让我们荡起双桨》](research/CHINESE_CHILDRENS_SONGS_BATCH_22_ARCHIVAL_AUDIO_SCORES.md)：新增《小燕子》简谱/正谱线索；《我们的田野》合唱谱及清华馆藏2001年黑鸭子CD元数据；《听妈妈讲那过去的事情》《让我们荡起双桨》的清华馆藏CD曲目入口，并区分现代录音、历史录音与原始版本待核状态。
