@@ -399,6 +399,7 @@
 - 本批区分官方平台发行/试听页、第三方上传和馆藏/作品档案；发行年份不等于录音年份，第三方上传不构成下载或再分发授权。曲目重叠尚未进行全库去重。
 
 
+
 ## 逐曲音频与曲谱采集新增批次
 
 - [音频与曲谱采集·批次15（2026-11-22）：清华大学图书馆逐曲音频、历史唱片与曲谱入口](research/CHINESE_CHILDRENS_SONGS_BATCH_15_AUDIO_SCORE_SOURCES.md)
@@ -406,3 +407,5 @@
 - [音频与曲谱采集·批次16（2026-11-24）：清华馆藏童声唱片与正规曲谱目录](research/CHINESE_CHILDRENS_SONGS_BATCH_16_LIBRARY_AUDIO_SCORE_CATALOGS.md)
 
 - [曲谱目录采集·批次17（2026-11-24）：儿童歌曲出版曲集与示范音频线索](research/CHINESE_CHILDRENS_SONGS_BATCH_17_PUBLISHED_SCORE_CATALOGS.md)
+
+- [音频补全·批次18（2026-11-24）：清华图书馆馆藏目录逐曲核验](research/CHINESE_CHILDRENS_SONGS_BATCH_18_AUDIO_CATALOGS.md)
