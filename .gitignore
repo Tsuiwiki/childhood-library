@@ -39,9 +39,11 @@ var/
 Thumbs.db
 
 # Public repo = docs + source only.
-# Local audio includes 27 third-party recordings collected for internal research
-# (rights pending). Keeping them out of the public repository is required by
-# docs/COPYRIGHT_POLICY.md; the local 8017 preview still uses them.
+# Audio/video media may exist only in the internal environment and are intentionally
+# excluded from GitHub. Do not delete, move, or overwrite local files during cleanup.
+# Inventory actual files and verify backups/checksums before any migration.
+# Rights and public playback status must be assessed per recording; ignored files
+# may include internal research, open-licensed, and generated demonstration media.
 design-demos/audio/*.mp3
 design-demos/audio/*.m4a
 design-demos/audio/*.mp4
