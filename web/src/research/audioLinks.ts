@@ -33,6 +33,16 @@ export const audioLinkBatches: Record<string, { title: string; path: string }> =
   '11': { title: '批次 11 · 广播合唱团', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_11_BROADCAST_CHOIRS.md' },
   '12': { title: '批次 12 · 唱片档案', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_12_CHINA_RECORDS_ARCHIVES.md' },
   '13': { title: '批次 13 · 中国唱片历史发行', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_13_CHINA_RECORDS_CLASSICS.md' },
+  '14': { title: '批次 14 · 1970 年代历史唱片与《金色年', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_14_RADIO_CHOIR_ARCHIVES.md' },
+  '15': { title: '批次 15 · 图书馆逐曲音频与曲谱入口', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_15_AUDIO_SCORE_SOURCES.md' },
+  '16': { title: '批次 16 · 清华馆藏童声唱片与正规曲谱目录', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_16_LIBRARY_AUDIO_SCORE_CATALOGS.md' },
+  '17': { title: '批次 17 · 出版曲集目录扩展与示范音频线索', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_17_PUBLISHED_SCORE_CATALOGS.md' },
+  '18': { title: '批次 18 · 清华图书馆馆藏目录逐曲核验', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_18_AUDIO_CATALOGS.md' },
+  '19': { title: '批次 19 · 曲谱目录交叉匹配与作品史料核验', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_19_SCORE_LYRICS_METADATA.md' },
+  '20': { title: '批次 20 · 音频、曲谱与歌词出处（2026-', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_20_AUDIO_SCORE_LYRICS.md' },
+  '21': { title: '批次 21 · 早期演唱者、历史传播与曲谱线索（', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_21_EARLY_RECORDINGS_HISTORY.md' },
+  '22': { title: '批次 22 · 儿童歌曲音频、曲谱与馆藏线索补充', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_22_ARCHIVAL_AUDIO_SCORES.md' },
+  '23': { title: '批次 23 · 儿童歌曲曲谱版本与创作出处补充·', path: 'docs/research/CHINESE_CHILDRENS_SONGS_BATCH_23_SCORE_HISTORY.md' },
 }
 
 // Curated metadata from the tracked GitHub research documents. These are external
@@ -148,6 +158,59 @@ export const audioSourceLinks: AudioLinkRecord[] = [
   { id: '13-12', title: '营火晚会', version: '中央人民广播电台少年广播合唱团 · 1979', platform: 'Apple Music', url: 'https://music.apple.com/us/album/营火熊熊-ep/6793393064', note: 'EP 内逐曲试听，1:07；非独立单曲页。', kind: 'album', batch: '13' },
   { id: '13-13', title: '让我们荡起双桨', version: '中央人民广播电台少年儿童合唱团 · 1971', platform: 'Apple Music', url: 'https://music.apple.com/us/album/中国电影百年歌曲精萃/1888431701', note: '电影《祖国的花朵》插曲，合辑内逐曲试听 2:22；与电影原声是否同版本待核。', kind: 'album', batch: '13' },
   { id: '13-14', title: '共产儿童团歌', version: '中央人民广播电台少年儿童合唱团 · 1971', platform: 'Apple Music', url: 'https://music.apple.com/us/album/中国电影百年歌曲精萃/1888431701', note: '合辑内逐曲试听 1:52；发行年不能直接当作首次录音时间。', kind: 'album', batch: '13' },
+  // 批次 15：按 docs/research/ 原文登记的外部来源线索；档案/曲谱/史料类不是可播放音频。
+  { id: '15-01', title: '让我们荡起双桨', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/shaoer/qizi/p53613.html', note: '标注词：乔羽；曲：刘炽；格式：简谱；页面说明为合唱版本。（批次 15 · L76）', kind: 'archive', batch: '15' },
+  { id: '15-02', title: '让我们荡起双桨', version: '版本见原档案', platform: '人人钢琴网', url: 'https://www.everyonepiano.cn/Music-65.html', note: '属于平台编配/整理谱页，需核对谱面完整性及版本适配。（批次 15 · L79）', kind: 'archive', batch: '15' },
+  { id: '15-03', title: '让我们荡起双桨', version: '版本见原档案', platform: 'books.google.com', url: 'https://books.google.com/books/about/让我们荡起双桨.html?id=d3OkzQEACAAJ', note: '《让我们荡起双桨：女声合唱五线谱与简谱》，人民音乐出版社，2014，陈一新；可作为正规出版曲谱线索。（批次 15 · L82）', kind: 'archive', batch: '15' },
+  { id: '15-04', title: '让我们荡起双桨', version: '版本见原档案', platform: 'www.cangqiang.com.cn', url: 'https://www.cangqiang.com.cn/bofang/141370.html', note: '页面标注刘炽作曲、乔羽作词、降E调、2/4拍；属于在线制谱/视唱页面。（批次 15 · L85）', kind: 'archive', batch: '15' },
+  { id: '15-05', title: '卖报歌', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/Mobile-view-id-13163.html', note: '页面标注作曲聂耳；版本来源包括其他曲谱站和出版物选编，需按具体版本复核。（批次 15 · L90）另见批次 20 交叉引用。', kind: 'archive', batch: '15' },
+
+  // 批次 19：按 docs/research/ 原文登记的外部来源线索；档案/曲谱/史料类不是可播放音频。
+  { id: '19-01', title: '小燕子', version: '版本见原档案', platform: '政府/机构站', url: 'https://www.hbda.gov.cn/info/1940', note: '见批次 19 原档案登记的来源线索。（批次 19 · L68）另见批次 20、21 交叉引用。', kind: 'archive', batch: '19' },
+  { id: '19-02', title: '快乐的节日', version: '版本见原档案', platform: 'YouTube', url: 'https://www.youtube.com/watch?v=KNra3AseQJw', note: '文化和旅游部少年儿童合唱艺术歌曲名单：<（批次 19 · L85）另见批次 20、21 交叉引用。', kind: 'video', batch: '19' },
+  { id: '19-03', title: '快乐的节日', version: '版本见原档案', platform: '政府/机构站', url: 'https://zwgk.mct.gov.cn/zfxxgkml/wysy/202012/t20201206_917741.html', note: 'CCTV少儿视频页面：<（批次 19 · L86）另见批次 20 交叉引用。', kind: 'archive', batch: '19' },
+
+  // 批次 20：按 docs/research/ 原文登记的外部来源线索；档案/曲谱/史料类不是可播放音频。
+  { id: '20-03', title: '快乐的节日', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/Mobile-view-id-728.html', note: '页面列出管桦词、李群曲，并提供多个谱本版本；其中一个版本注明选自中国人民保卫儿童全国委员会编著《一九五四年得奖儿童歌曲》。（批次 20 · L34）另见批次 21、23 交叉引用。', kind: 'archive', batch: '20' },
+  { id: '20-04', title: '让我们荡起双桨', version: '版本见原档案', platform: 'v.sjs.com.cn', url: 'https://v.sjs.com.cn/ebooks/58E2823C.pdf', note: '搜索结果可见该教材 PDF 中有歌曲简谱、歌词和刘炽（1921—1998）介绍，并说明歌曲为电影《祖国的花朵》插曲。（批次 20 · L41）另见批次 21 交叉引用。', kind: 'archive', batch: '20' },
+  { id: '20-06', title: '听妈妈讲那过去的事情', version: '版本见原档案', platform: '人人钢琴网', url: 'https://www.everyonepiano.cn/Music-558.html', note: '页面提供五线谱、双手简谱及PDF入口，并标注作者瞿希贤。该页面是具体谱本入口，但上传者/版本信息仍需进一步核实，正式收藏优先采用出版社或图书馆版本。（批次 20 · L55）另见批次 23 交叉引用。', kind: 'archive', batch: '20' },
+  { id: '20-07', title: '听妈妈讲那过去的事情', version: '版本见原档案', platform: '豆瓣', url: 'https://music.douban.com/subject/26377102/', note: '该专辑是后期合唱改编版本，可作为合唱编配参考，不是原始首唱版本。（批次 20 · L60）', kind: 'archive', batch: '20' },
+  { id: '20-08', title: '我们的田野', version: '版本见原档案', platform: '中国作家网', url: 'https://www.chinawriter.com.cn/n1/2023/1023/c404018-40100992.html', note: '文章明确称歌曲创作于1953年，管桦作词、张文纲作曲，并从作者个人经历回忆其在小学音乐课中的传播。（批次 20 · L66）', kind: 'archive', batch: '20' },
+  { id: '20-09', title: '我们的田野', version: '版本见原档案', platform: 'www.yuntaigo.com', url: 'https://www.yuntaigo.com/book.action?recordid=ZmZ6a21rZmM5Nzg3ODg4ODA2Nzcx', note: '该专辑目录可用来定位正式发行实体CD（条码9787888806771）；目录信息显示出版者为上海文艺音像电子出版社。实际音质与具体录音年份仍需试听/查看唱片内页。（批次 20 · L75）', kind: 'archive', batch: '20' },
+  { id: '20-10', title: '卖报歌', version: '版本见原档案', platform: 'YouTube', url: 'https://www.youtube.com/watch?v=kPJa8VJMHhM', note: '重要限制：录音日期和人员信息目前来自上传者描述，尚未找到唱片标签、档案目录或机构资料独立确认。暂列“历史录音候选”，不可标为已确证原始录音。（批次 20 · L88）', kind: 'video', batch: '20' },
+
+  // 批次 21：按 docs/research/ 原文登记的外部来源线索；档案/曲谱/史料类不是可播放音频。
+  { id: '21-02', title: '小燕子', version: '版本见原档案', platform: 'www.thepaper.cn', url: 'https://www.thepaper.cn/newsDetail_forward_1869618', note: '王丹凤在访谈中回忆，《护士日记》中哄小孩睡觉的场景原本考虑请女高音演唱，她认为由自己以护士角色的本色嗓音演唱更合适，最终亲自演唱。（批次 21 · L20）', kind: 'archive', batch: '21' },
+  { id: '21-03', title: '小燕子', version: '版本见原档案', platform: '新华网', url: 'https://www.xinhuanet.com/politics/2018-05/07/c_129866298.htm', note: '新华社报道确认《小燕子》是王丹凤在电影《护士日记》中唱红的歌曲，并记载上海电影博物馆追思活动放映影片时重现了该演唱。（批次 21 · L22）', kind: 'archive', batch: '21' },
+  { id: '21-04', title: '小燕子', version: '版本见原档案', platform: 'www.1905.com', url: 'https://www.1905.com/mdb/film/2210520/', note: '1905电影网也明确记载片中插曲《小燕子》由王丹凤亲自演唱。（批次 21 · L24）', kind: 'archive', batch: '21' },
+  { id: '21-05', title: '快乐的节日', version: '版本见原档案', platform: 'www.rmrb.zhouenlai.info', url: 'https://www.rmrb.zhouenlai.info/人民日报（1946-2003）/1954/05/1954-05-31.htm', note: '名单明确将《快乐的节日》列为二等奖，署名管桦词、李群曲；同一名单中还列出《早操歌》（管桦词、瞿希贤曲）等作品。（批次 21 · L35）', kind: 'archive', batch: '21' },
+  { id: '21-06', title: '快乐的节日', version: '版本见原档案', platform: 'www.csmes.org', url: 'https://www.csmes.org/show-9-145968.html', note: '报道称《快乐的节日》创作于1953年春，管桦词、李群曲，专为“六一”儿童节创作，经中央人民广播电台少儿合唱团演唱播放后迅速流传，并在1954年评奖获奖。此来源为音乐教育机构网站报道，适合补充传播史，但原始广播节目单/录音仍需另查。（批次 21 · L38）', kind: 'archive', batch: '21' },
+  { id: '21-09', title: '让我们荡起双桨', version: '版本见原档案', platform: '百度', url: 'https://bkso.baidu.com/item/让我们荡起双桨/3063579', note: '该页面为百科性质，需进一步用电影片头/片尾字幕、电影原声资料或中国电影资料馆目录独立确认领唱者和演唱团体。（批次 21 · L56）', kind: 'archive', batch: '21' },
+  { id: '21-11', title: '我们的田野', version: '版本见原档案', platform: '中国作家网', url: 'https://www.chinawriter.com.cn/n1/2024/1017/c418956-40341356.html', note: '作者回忆，最早听到的童声合唱来自中央人民广播电台“小喇叭”节目；文章还称“据说”最早原唱者为张金利，1953年曾示唱。（批次 21 · L65）', kind: 'archive', batch: '21' },
+  { id: '21-12', title: '卖报歌', version: '版本见原档案', platform: '中国作家网', url: 'https://www.chinawriter.com.cn/n1/2020/0813/c404063-31820380.html', note: '文章记述聂耳邀请安娥写词，聂耳谱曲，并根据卖报女孩“小毛头”的建议修改歌词中的具体句子；文章称“小毛头”成为歌曲首唱者。（批次 21 · L75）另见批次 23 交叉引用。', kind: 'archive', batch: '21' },
+  { id: '21-13', title: '卖报歌', version: '版本见原档案', platform: '中国新闻网', url: 'https://www.chinanews.com/cul/2013/02-22/4586801.shtml', note: '该文补充了1933年秋创作过程的叙述，但属于传记内容的新闻转述，建议后续与《聂耳日记》、安娥传记正式版本及聂耳作品年表交叉核验。（批次 21 · L78）另见批次 23 交叉引用。', kind: 'archive', batch: '21' },
+  { id: '21-14', title: '卖报歌', version: '版本见原档案', platform: '中国知网', url: 'https://yyxy.cbpt.cnki.net/portal/journal/portal/client/paper/583ca80f5d7d0331648e12455b1b05b2', note: '论文摘要将《卖报歌》列为聂耳1934年创作、安娥作词的儿童歌曲之一，可作为学术论文线索。（批次 21 · L81）另见批次 23 交叉引用。', kind: 'archive', batch: '21' },
+  { id: '21-15', title: '听妈妈讲那过去的事情', version: '版本见原档案', platform: '中国交响乐团', url: 'https://www.cnso.com.cn/zgjxyt/ycrc/201906/1e4188f6a5754727b43da79672754195.shtml', note: '页面列明2019年6月22日中国交响乐团合唱团演出《听妈妈讲那过去的事情》，管桦词、瞿希贤曲，并列出女声合唱、领唱人员。（批次 21 · L89）另见批次 22、23 交叉引用。', kind: 'archive', batch: '21' },
+
+  // 批次 22：按 docs/research/ 原文登记的外部来源线索；档案/曲谱/史料类不是可播放音频。
+  { id: '22-01', title: '小燕子', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/shaoer/sanzi/p433.html', note: '页面标注：王路、王云阶词，王云阶曲；电影《护士日记》插曲。（批次 22 · L11）', kind: 'archive', batch: '22' },
+  { id: '22-02', title: '小燕子', version: '版本见原档案', platform: '中国曲谱网', url: 'https://qupu123.com/Mobile-view-id-250309.html', note: '页面标注王路、王云阶词，王云阶曲；属于网友推荐/整理资料，不能视为原版出版谱。（批次 22 · L15）', kind: 'archive', batch: '22' },
+  { id: '22-03', title: '小燕子', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/Mobile-view-id-104733.html', note: '结合批次21湖北档案馆、王丹凤访谈及新华社资料，可以确认王丹凤与电影演唱版本的关联；但当前尚未找到可独立访问、来源可靠的电影原始音轨文件。（批次 22 · L19）', kind: 'archive', batch: '22' },
+  { id: '22-04', title: '我们的田野', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/shaoer/wuzi/p35668.html', note: '标注管桦词、张文纲曲。（批次 22 · L26）', kind: 'archive', batch: '22' },
+  { id: '22-05', title: '我们的田野', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/shaoer/wuzi/p10431.html', note: '线简谱混排版本：（批次 22 · L30）', kind: 'archive', batch: '22' },
+  { id: '22-06', title: '我们的田野', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/Mobile-view-id-222033.html', note: '页面说明选自金声编著《云南民族器乐葫芦丝·巴乌简明演奏法》，属于器乐改编/教学谱线索，不应当作原始合唱谱。（批次 22 · L31）', kind: 'archive', batch: '22' },
+  { id: '22-07', title: '我们的田野', version: '版本见原档案', platform: '清华大学', url: 'https://music.lib.tsinghua.edu.cn/index.php?a=show&c=index&catid=24&id=1419&m=content', note: '目录元数据：中新音像出版社，2001年，1CD；ISRC：CN-A68-01-411-00/A·J6。（批次 22 · L35）', kind: 'archive', batch: '22' },
+  { id: '22-08', title: '我们的田野', version: '版本见原档案', platform: '清华大学', url: 'https://music.lib.tsinghua.edu.cn/index.php?a=show&c=index&catid=24&id=1413&m=content', note: '曲目01《我们的田野》，演唱团体黑鸭子，时长03:52。（批次 22 · L39）', kind: 'archive', batch: '22' },
+  { id: '22-09', title: '听妈妈讲那过去的事情', version: '版本见原档案', platform: '清华大学', url: 'https://music.lib.tsinghua.edu.cn/index.php?a=show&c=index&catid=24&id=2227&m=content', note: '曲目07《听妈妈讲那过去的故事》，时长04:21。（批次 22 · L50）', kind: 'archive', batch: '22' },
+  { id: '22-11', title: '让我们荡起双桨', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/shaoer/qizi/p206089.html', note: '标注乔羽词、刘炽曲、童道锦配伴奏。（批次 22 · L62）', kind: 'archive', batch: '22' },
+  { id: '22-12', title: '让我们荡起双桨', version: '版本见原档案', platform: 'YouTube', url: 'https://www.youtube.com/watch?v=1ThcRM56bjE', note: '两个目录显示时长差异明显，可能是演唱、编配或剪辑版本不同；需试听比对，不能直接判定哪一个更接近1955年电影原声。（批次 22 · L73）', kind: 'video', batch: '22' },
+
+  // 批次 23：按 docs/research/ 原文登记的外部来源线索；档案/曲谱/史料类不是可播放音频。
+  { id: '23-02', title: '快乐的节日', version: '版本见原档案', platform: 'oddownload.nuduseng.com', url: 'https://oddownload.nuduseng.com/16%E8%80%81%E5%85%89%E7%9B%98%E7%BE%A4%28%E7%BE%A4%E5%8F%B7854318908%29%E7%BE%A4%E5%8F%8B%E5%88%86%E4%BA%AB%E6%B1%87%E6%80%BB%202020%E5%B9%B42%E6%9C%88/2020-02-24/%E7%8B%AC%E9%92%93%E5%AF%92%E6%B1%9F/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E9%9F%B3%E4%B9%90%EF%BC%88%E4%B8%80%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89/%E9%9F%B3%E4%B9%904%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf', note: '一份小学音乐教材PDF检索结果展示了《快乐的节日》简谱，调号/速度标记为1=F、2/4；但该PDF来源为非出版社官方镜像，暂作为谱面比对线索，不作为正式出版授权来源：（批次 23 · L18）', kind: 'archive', batch: '23' },
+  { id: '23-03', title: '听妈妈讲那过去的事情', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/shaoer/jiuziyishang/p250218.html', note: '页面标注管桦词、瞿希贤曲，上传日期2016-06-22。（批次 23 · L29）', kind: 'archive', batch: '23' },
+  { id: '23-04', title: '听妈妈讲那过去的事情', version: '版本见原档案', platform: '中国曲谱网', url: 'https://qupu123.com/shaoer/jiuziyishang/p1206.html', note: '页面介绍作品发表于1958年《儿童音乐》创刊号；此项出版史信息需继续寻找原刊实物或图书馆目录核实。（批次 23 · L32）', kind: 'archive', batch: '23' },
+  { id: '23-05', title: '听妈妈讲那过去的事情', version: '版本见原档案', platform: '中国曲谱网', url: 'https://qupu123.com/hechang/jiuziyishang/p50354.html', note: '页面标注管桦词、瞿希贤曲，童声合唱、笛子助奏，上传日期2012-06-21。（批次 23 · L35）', kind: 'archive', batch: '23' },
+  { id: '23-07', title: '听妈妈讲那过去的事情', version: '版本见原档案', platform: '中国曲谱网', url: 'https://www.qupu123.com/jipu/p308777.html', note: '页面标注朱逢博演唱，管桦词、瞿希贤曲，PDF谱面入口。（批次 23 · L44）', kind: 'archive', batch: '23' },
 ]
 
 export function sampleForAudioLink(link: AudioLinkRecord): ResearchSample | undefined {

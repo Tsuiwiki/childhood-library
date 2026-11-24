@@ -267,7 +267,7 @@
 | --- | --- | --- |
 | `_audit_main/*.py` / `*.mjs`（本机）、`/data/cl-web-preview/server.py`（VM） | 仓库外验收与部署脚本，不入库，GitHub 读者无法复核 | 若要复核根路由，在 VM 执行 `curl -sS -o /dev/null -w '%{http_code}' http://127.0.0.1:58090/` 与 `ss -ltn \| grep 58090`，把输出附到交付记录 |
 | `design-demos/audio/*` 音频、`web/dist/` 构建产物、`web/node_modules/` | 明确不入库 | 需要时用 VM 上 `var/media/` 的 SHA-256 清单比对 |
-| `docs/research/` 13 份逐曲研究文档 | 是数据来源而非界面设计；导航元数据已在 `[documents] L14-L135`（覆盖到批次 13） | 查具体版本线索时按 `[documents]` 的 GitHub 原文链接打开；批次 14 见 §8.14 |
+| `docs/research/` 23 份逐曲研究文档 | 是数据来源而非界面设计；导航元数据已在 `web/src/research/documents.ts` 与 `audioLinks.ts`（覆盖到批次 23） | 查具体版本线索时按文档导航的 GitHub 原文链接打开；批次 14–23 的音源/曲谱/史料线索见 `/music/sources` |
 | `web/tests/` 逐条断言 | 本文只引用结论与文件清单 | 需要逐条证据时直接看对应 spec |
 | 后端 `app/`、Compose 配置 | 与界面设计无关 | 见 `docs/ARCHITECTURE.md`、`deploy/README.md` |
 
