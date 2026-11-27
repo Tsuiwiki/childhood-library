@@ -304,5 +304,28 @@
     "note": "教材谱面参考，不能自动视为1930年代初版谱或可再发布资源。",
     "sourceFile": "external_research",
     "verificationStatus": "reference_only"
+  },
+  {
+    "scoreId": "SCR-CN-C05-REF01",
+    "workId": "CN-C05",
+    "workTitle": "采蘑菇的小姑娘",
+    "versionTitle": "公开简谱参考版",
+    "title": "外部曲谱参考 · 中国曲谱网",
+    "format": "简谱网页（多版本）",
+    "references": [
+      {
+        "title": "《采蘑菇的小姑娘》曲谱（5个版本）",
+        "url": "https://www.qupu123.com/shaoer/qizi/p3316.html",
+        "note": "页面标注晓光词、谷建芬曲，并列出多个曲谱版本；需逐一核对调号、节拍、段落和上传来源。"
+      },
+      {
+        "title": "《采蘑菇的小姑娘》（线简谱对照、正谱）",
+        "url": "https://www.qupu123.com/Mobile-view-id-249703.html",
+        "note": "页面标注晓光词、谷建芬曲，伴奏编配另署刘强；属于后续配伴奏版本，不应当作原始总谱。"
+      }
+    ],
+    "note": "仅登记外部检索入口，不代表已获得谱面文件或授权；不同编配版本需分别标识。",
+    "sourceFile": "external_research",
+    "verificationStatus": "reference_only"
   }
 ]
