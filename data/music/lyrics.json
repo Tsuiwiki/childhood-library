@@ -1643,5 +1643,18 @@
     "sourcePage": "https://oss0-cdn.changxianggu.com/book/chapter/5_9787111535362.pdf",
     "note": "教材PDF含安娥词、聂耳曲及简谱/歌词排版。这里只登记来源入口，不复制歌词正文；正式入库前需核验书名、版次、页码及文本版本。",
     "verificationStatus": "source_reference_only"
+  },
+  {
+    "lyricsId": "LYR-CN-C05-REF01",
+    "workId": "CN-C05",
+    "workTitle": "采蘑菇的小姑娘",
+    "versionTitle": "公开曲谱页面歌词参考版",
+    "title": "外部歌词来源线索 · 中国曲谱网",
+    "contentStorage": "external_source_reference",
+    "publicDomainClaim": false,
+    "sourceTitle": "《采蘑菇的小姑娘》曲谱（5个版本）",
+    "sourcePage": "https://www.qupu123.com/shaoer/qizi/p3316.html",
+    "note": "页面包含歌词文本及多个曲谱版本。这里只登记来源入口，不复制歌词正文；需进一步核对文本版本、段落和衬词差异。",
+    "verificationStatus": "source_reference_only"
   }
 ]
