@@ -1603,5 +1603,19 @@
     "note": "Smithsonian Folkways 官方专辑页 https://folkways.si.edu/woody-guthrie/songs-to-grow-on-for-mother-and-child/american-folk-childrens/music/album/smithsonian 记：原版 Folkways FC 7015（1956，10 吋 LP）、1991/1992 年 CD 再版（SFW CD 45035）共 18 轨，**全部歌曲由 Woody Guthrie 创作并演唱**，官方小册子注明版权归 TRO-Ludlow Music, Inc. / TRO-Folkways Music Publishers, Inc. (BMI)。本条既是专辑/曲目专题（不设单曲歌词），其曲目又全部为受版权保护作品，不存在可引用的公版歌词文本，故不录入。",
     "extraNotes": "精确 URL：官方小册子 PDF https://folkways-media.si.edu/docs/folkways/artwork/SFW45035.pdf （含 18 轨目录、TRO 版权声明及部分歌词如 Grassy Grass Grass、Swimmy Swim，均属受版权作品）；https://www.discogs.com/release/2557558-Woody-Guthrie-Songs-To-Grow-On-For-Mother-And-Child ；https://iucat.iu.edu/iupui/50002042 。Beatrice Landeck《Songs to Grow On》(1950) 书目 https://collections.si.edu/search/detail/edanmdm:siris_sil_367733 。",
     "sourceFile": "design-demos/world-lyrics-sources.json"
+  },
+  {
+    "lyricsId": "LYR-CN-C11-REF01",
+    "workId": "CN-C11",
+    "workTitle": "听妈妈讲那过去的事情",
+    "versionTitle": "原作歌词（外部资料引用）",
+    "title": "歌词来源线索 · 未复制正文",
+    "lines": null,
+    "contentStorage": "external_source_reference",
+    "publicDomainClaim": false,
+    "sourceTitle": "《听妈妈讲那过去的事情》简谱资料",
+    "sourcePage": "https://qupu123.com/shaoer/jiuziyishang/p1206.html",
+    "note": "页面标注管桦词、瞿希贤曲，并提供简谱及歌词资料入口。此处只登记来源，不复制歌词正文；正式入库前需核对版本并确认文本使用权限。",
+    "verificationStatus": "source_reference_only"
   }
 ]
