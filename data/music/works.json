@@ -710,7 +710,49 @@
       "lyricsRecords": 0,
       "scoreRecords": 0,
       "externalAudioLinks": 7
-    }
+    },
+    "researchStatus": "partially_verified",
+    "creators": {
+      "lyrics": "管桦",
+      "music": "李群"
+    },
+    "creationYear": 1953,
+    "firstPublication": "《歌曲》1954年第4期（初刊信息待原刊影印件进一步核验）",
+    "creationContext": "1953年春创作，作为献给少年儿童的六一儿童节歌曲；经中央人民广播电台少年儿童合唱团演唱传播。2025年纪念李群诞辰百年的音乐会报道再次确认词曲作者、创作年代和传播背景。",
+    "researchSources": [
+      {
+        "title": "美润心田 经典同行——著名作曲家李群作品音乐会在天津举行",
+        "url": "https://www.csmes.org/show-9-145968.html",
+        "publisher": "中国音乐教育网",
+        "supports": [
+          "管桦词、李群曲",
+          "1953年春创作",
+          "少儿合唱团传播"
+        ]
+      },
+      {
+        "title": "9月28日《午间一小时》：歌唱吧，金色的童年",
+        "url": "https://news.sina.com.cn/c/2001-10-01/369894.html",
+        "publisher": "新浪转载中央电视台节目访谈",
+        "supports": [
+          "管桦与李群本人谈创作缘起"
+        ]
+      },
+      {
+        "title": "《快乐的节日》曲谱",
+        "url": "https://www.qupu123.com/Mobile-view-id-728.html",
+        "publisher": "中国曲谱网",
+        "supports": [
+          "管桦词、李群曲",
+          "早期获奖儿童歌曲集谱本线索"
+        ]
+      }
+    ],
+    "verificationNotes": [
+      "词曲署名与创作年份有音乐教育专业媒体及创作者访谈支持。",
+      "1954年第4期《歌曲》初刊信息仍应补原刊馆藏或影印件。",
+      "曲谱网页面含不同版本，需核对哪一版最接近早期出版谱。"
+    ]
   },
   {
     "id": "CN-C13",
@@ -861,7 +903,49 @@
       "lyricsRecords": 0,
       "scoreRecords": 0,
       "externalAudioLinks": 6
-    }
+    },
+    "researchStatus": "partially_verified",
+    "creators": {
+      "lyrics": "安娥",
+      "music": "聂耳"
+    },
+    "creationYear": 1933,
+    "creationContext": "1933年创作的儿童歌曲，素材来自上海街头卖报儿童的生活。聂耳邀请安娥作词，并将歌曲唱给卖报女孩“小毛头”（杨碧君）听，女孩提出将报纸价格信息写入歌词的建议；此后歌曲广泛传播。1934年《扬子江暴风雨》舞台演出使歌曲进一步传播。",
+    "researchSources": [
+      {
+        "title": "聂耳写《卖报歌》",
+        "url": "https://www.chinawriter.com.cn/n1/2020/0813/c404063-31820380.html",
+        "publisher": "中国作家网（人民政协报）",
+        "supports": [
+          "1933年创作缘起",
+          "安娥词、聂耳曲",
+          "小毛头杨碧君与歌词修改故事"
+        ]
+      },
+      {
+        "title": "聂耳的儿童歌曲创作",
+        "url": "https://yyxy.cbpt.cnki.net/portal/journal/portal/client/paper/583ca80f5d7d0331648e12455b1b05b2",
+        "publisher": "沈阳音乐学院学报《乐府新声》",
+        "supports": [
+          "聂耳儿童歌曲创作研究",
+          "《卖报歌》列入其儿童歌曲作品"
+        ]
+      },
+      {
+        "title": "《卖报歌》曲谱教材PDF",
+        "url": "https://oss0-cdn.changxianggu.com/book/chapter/5_9787111535362.pdf",
+        "publisher": "教材出版PDF",
+        "supports": [
+          "安娥词、聂耳曲",
+          "F调、2/4拍简谱版本线索"
+        ]
+      }
+    ],
+    "verificationNotes": [
+      "词曲署名及创作缘起有中国作家网文章与音乐学术论文支持。",
+      "现有央视音频为后期合唱演出版本，不是1930年代原始录音。",
+      "教材谱仅作为版本参考；正式收藏需记录教材书名、版次和页码。"
+    ]
   },
   {
     "id": "CN-C21",
