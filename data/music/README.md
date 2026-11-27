@@ -6,8 +6,8 @@ This is the normalized, machine-readable music dataset. Existing source files re
 
 - `works.json`: 105 indexed works from `design-demos/specialties.json`.
 - `recordings.json`: 230 references: 62 prototype sample records, 27 public recording collection records, 5 official preview links, and 136 external audio/video/album/archive links.
-- `lyrics.json`: 62 lyric/version records: 14 references into the legacy sample file, 47 source-attributed traditional nursery-rhyme text records, and 1 external lyric-source reference (no lyric text copied).
-- `scores.json`: 16 score/material references, including 2 external score-reference records added during song research (not locally stored score files).
+- `lyrics.json`: 64 lyric/version records: 14 references into the legacy sample file, 47 source-attributed traditional nursery-rhyme text records, and 3 external lyric-source references (no lyric text copied).
+- `scores.json`: 18 score/material references, including 4 external score-reference records added during song research (not locally stored score files).
 
 ## Data rules
 
@@ -31,6 +31,6 @@ Normalized from:
 - `design-demos/world-lyrics-sources.json`
 - `web/src/research/audioLinks.ts`
 
-Selected classic Chinese works now include sourced creator / creation-context notes and explicit research status. External lyric and score references are discovery leads, not proof of rights or version equivalence.
+Selected classic Chinese works now include sourced creator / creation-context notes and explicit research status. The latest research pass added profiles for 《快乐的节日》 and 《卖报歌》, plus external lyric/score reference records. External lyric and score references are discovery leads, not proof of rights or version equivalence.
 
 This is a data consolidation, not a claim that all entries are fully verified or ready for public release.
