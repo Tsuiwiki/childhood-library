@@ -2,12 +2,7 @@
   {
     "recordingId": "SMP-001",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C01"
-    ],
-    "sourceRecordIds": [
-      "CN-C01"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C01",
     "file": "CN-C01-original.mp3",
     "workTitle": "让我们荡起双桨",
@@ -30,18 +25,18 @@
     "bytes": 6965063,
     "sha256": "f362616eb1cca71ab438fbdb739b3dcc2d159f9eef35dce7a8b873fdb48c7f75",
     "changes": "本地仅重命名为 CN-C01-original.mp3；未剪辑、混音或再次转码。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C01"
+    ],
+    "sourceRecordIds": [
+      "CN-C01"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-002",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C02"
-    ],
-    "sourceRecordIds": [
-      "CN-C02"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C02",
     "file": "CN-C02-gxzf.flac",
     "workTitle": "我们的田野",
@@ -64,18 +59,18 @@
     "bytes": 16005871,
     "sha256": "541db2ffc65ddd656d4f2bcbc7bb4e239def32f301dfecad4b4dd03beac91998",
     "changes": "保存来源页公开音频；来源扩展名为 MP3，实际编码按探测结果记录；本地未剪辑或转码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
-  },
-  {
-    "recordingId": "SMP-003",
-    "sourceType": "prototype_sample",
     "workIds": [
       "CN-C02"
     ],
     "sourceRecordIds": [
-      null
+      "CN-C02"
     ],
+    "mappingFlags": []
+  },
+  {
+    "recordingId": "SMP-003",
+    "sourceType": "prototype_sample",
+    "mappingStatus": "linked_from_legacy_id",
     "file": "CN-C02-xuexi-chorus.m4a",
     "workTitle": "我们的田野",
     "sourceTitle": "学习强国《每日一曲｜我们的田野》",
@@ -97,18 +92,19 @@
     "bytes": 2965673,
     "sha256": "8ec9568caba8e243a793974c5c7845d7f955a5bba91dc2ca2c304c19339bebd8",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "parentSampleId": "CN-C02"
+    "workIds": [
+      "CN-C02"
+    ],
+    "sourceRecordIds": [
+      "CN-C02"
+    ],
+    "parentSampleId": "CN-C02",
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-004",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C03"
-    ],
-    "sourceRecordIds": [
-      "CN-C03"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C03",
     "file": "CN-C03-original.mp4",
     "workTitle": "小燕子",
@@ -130,18 +126,18 @@
     "sha256": "8b77aa56b45afc921bd848ea13f4c94e5f2a1d3b2434bb94b1e6ed516522fcad",
     "changes": "下载澎湃新闻公开 SD MP4 并重命名；页面以音频元素播放原声音轨，本地未剪辑或转码。",
     "versionLabel": "1957 电影《护士日记》片段 · 王丹凤",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
-  },
-  {
-    "recordingId": "SMP-005",
-    "sourceType": "prototype_sample",
     "workIds": [
       "CN-C03"
     ],
     "sourceRecordIds": [
-      null
+      "CN-C03"
     ],
+    "mappingFlags": []
+  },
+  {
+    "recordingId": "SMP-005",
+    "sourceType": "prototype_sample",
+    "mappingStatus": "linked_from_legacy_id",
     "file": "CN-C03-xuexi-chorus.mp3",
     "workTitle": "小燕子",
     "sourceTitle": "学习强国《中华儿歌珍藏集（一）》",
@@ -164,20 +160,19 @@
     "sha256": "252c84360cfe10a899bb6e2b045fa724e2f452b3cc591705edccbf7e8a9627f1",
     "changes": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
     "sourceTrackId": "13985296122571089948",
-    "recordingKind": "prototype_sample",
-    "parentSampleId": "CN-C03"
+    "workIds": [
+      "CN-C03"
+    ],
+    "sourceRecordIds": [
+      "CN-C03"
+    ],
+    "parentSampleId": "CN-C03",
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-006",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C04",
-      "CN-C16"
-    ],
-    "sourceRecordIds": [
-      "CN-C04",
-      "CN-C16"
-    ],
+    "mappingStatus": "needs_review",
     "id": "CN-C04",
     "file": "CN-C04-CN-C16-xuexi.mp3",
     "workTitle": "嘀哩，嘀哩",
@@ -201,18 +196,26 @@
     "sha256": "8b5c2f16ea82e199655cd1bd2fdfd6707eacf3c794268dc76950650acf94e6a1",
     "changes": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
     "sourceTrackId": "16142195201844952643",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C04",
+      "CN-C16"
+    ],
+    "sourceRecordIds": [
+      "CN-C04",
+      "CN-C16"
+    ],
+    "mappingFlags": [
+      {
+        "workId": "CN-C04",
+        "canonicalTitle": "春天在哪里",
+        "sourceTitle": "嘀哩，嘀哩"
+      }
+    ]
   },
   {
     "recordingId": "SMP-007",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C05"
-    ],
-    "sourceRecordIds": [
-      "CN-C05"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C05",
     "file": "CN-C05-cctv.m4a",
     "workTitle": "采蘑菇的小姑娘",
@@ -235,18 +238,18 @@
     "bytes": 312337,
     "sha256": "32aaca82a675d51ae5735f8769585167d19937f763fe0e81761c7ce4dfbe64b3",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C05"
+    ],
+    "sourceRecordIds": [
+      "CN-C05"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-008",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C06"
-    ],
-    "sourceRecordIds": [
-      "CN-C06"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C06",
     "file": "CN-C06-xuexi.mp3",
     "workTitle": "一分钱",
@@ -270,18 +273,18 @@
     "sha256": "b71237e91c53854deb9e5acca8a3aede606de6c01c77bbdd0a8f9cf531fb044e",
     "changes": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
     "sourceTrackId": "10869370363327164896",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C06"
+    ],
+    "sourceRecordIds": [
+      "CN-C06"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-009",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C07"
-    ],
-    "sourceRecordIds": [
-      "CN-C07"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C07",
     "file": "CN-C07-xuexi.mp3",
     "workTitle": "读书郎",
@@ -305,18 +308,18 @@
     "sha256": "84cb3bf3b5dfb287d7ea1f910e96776401743e339078aa5142f4b58412ee3f25",
     "changes": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
     "sourceTrackId": "2765254747599334291",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C07"
+    ],
+    "sourceRecordIds": [
+      "CN-C07"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-010",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C08"
-    ],
-    "sourceRecordIds": [
-      "CN-C08"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C08",
     "file": "CN-C08-cctv-hsl.m4a",
     "workTitle": "外婆的澎湖湾",
@@ -339,18 +342,18 @@
     "bytes": 353743,
     "sha256": "e731e5ce906b5cbaff3488efcd0ad6fd89ddf2e981c907112dfb85e5c485c6be",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
-  },
-  {
-    "recordingId": "SMP-011",
-    "sourceType": "prototype_sample",
     "workIds": [
       "CN-C08"
     ],
     "sourceRecordIds": [
-      null
+      "CN-C08"
     ],
+    "mappingFlags": []
+  },
+  {
+    "recordingId": "SMP-011",
+    "sourceType": "prototype_sample",
+    "mappingStatus": "linked_from_legacy_id",
     "file": "CN-C08-cctv-mgzg.m4a",
     "workTitle": "外婆的澎湖湾",
     "sourceTitle": "央视网《民歌·中国》：歌曲《外婆的澎湖湾》",
@@ -372,18 +375,19 @@
     "bytes": 667861,
     "sha256": "1d30a32b909177dfc07d70906db5f73589da60dd9cd88083ede432dfd8b2cfec",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "parentSampleId": "CN-C08"
+    "workIds": [
+      "CN-C08"
+    ],
+    "sourceRecordIds": [
+      "CN-C08"
+    ],
+    "parentSampleId": "CN-C08",
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-012",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C09"
-    ],
-    "sourceRecordIds": [
-      "CN-C09"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C09",
     "file": "CN-C09-cctv.m4a",
     "workTitle": "小螺号",
@@ -406,18 +410,18 @@
     "bytes": 333529,
     "sha256": "a2c27f72bdde5aa80412e673256fa474946c734f4fa42e3f5a16444002cece09",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C09"
+    ],
+    "sourceRecordIds": [
+      "CN-C09"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-013",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C10"
-    ],
-    "sourceRecordIds": [
-      "CN-C10"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C10",
     "file": "CN-C10-original.mp3",
     "workTitle": "歌声与微笑",
@@ -439,18 +443,18 @@
     "bytes": 3255302,
     "sha256": "58c8cfba39e7121f5c71929e34aa699e52aaf9dbf58ed9718376affe48a6e49f",
     "changes": "本地仅重命名为 CN-C10-original.mp3；未剪辑、混音或再次转码。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C10"
+    ],
+    "sourceRecordIds": [
+      "CN-C10"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-014",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C11"
-    ],
-    "sourceRecordIds": [
-      "CN-C11"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C11",
     "file": "CN-C11-xuexi.m4a",
     "workTitle": "听妈妈讲那过去的事情",
@@ -473,18 +477,18 @@
     "bytes": 2882544,
     "sha256": "d07b03e3547ca7f6caf5be67faef655fe697aaa193e4529df9031957c11f0ece",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C11"
+    ],
+    "sourceRecordIds": [
+      "CN-C11"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-015",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C12"
-    ],
-    "sourceRecordIds": [
-      "CN-C12"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C12",
     "file": "CN-C12-xuexi-galaxy.m4a",
     "workTitle": "快乐的节日",
@@ -507,18 +511,18 @@
     "bytes": 1052493,
     "sha256": "e943bfcd8c860804880fbc8ad0183f7d03fa18ec3cb4d4d17269fc118ed4a6f7",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C12"
+    ],
+    "sourceRecordIds": [
+      "CN-C12"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-016",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C13"
-    ],
-    "sourceRecordIds": [
-      "CN-C13"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C13",
     "file": "CN-C13-xuexi.mp3",
     "workTitle": "拔萝卜",
@@ -542,18 +546,18 @@
     "sha256": "578d5399f32249a691c8a22f1442f4b83337bb640c62a6407565998c9e24bd3e",
     "changes": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
     "sourceTrackId": "18345332359034623644",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C13"
+    ],
+    "sourceRecordIds": [
+      "CN-C13"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-017",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C14"
-    ],
-    "sourceRecordIds": [
-      "CN-C14"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C14",
     "file": "CN-C14-xuexi.mp3",
     "workTitle": "丢手绢",
@@ -577,18 +581,18 @@
     "sha256": "e083a891c2d79c472c327d4ed502b8852e28d1e926f574a42706131430651289",
     "changes": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
     "sourceTrackId": "8769228391902820588",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C14"
+    ],
+    "sourceRecordIds": [
+      "CN-C14"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-018",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C15"
-    ],
-    "sourceRecordIds": [
-      "CN-C15"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C15",
     "file": "CN-C15-xuexi.mp3",
     "workTitle": "小鸭子",
@@ -612,18 +616,18 @@
     "sha256": "d7f7ae445780e393b0d879163ea9fc882294a95a58cd97248479226ef39414c3",
     "changes": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
     "sourceTrackId": "18076483931545408717",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C15"
+    ],
+    "sourceRecordIds": [
+      "CN-C15"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-019",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C17"
-    ],
-    "sourceRecordIds": [
-      "CN-C17"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C17",
     "file": "CN-C17-xuexi.mp3",
     "workTitle": "娃哈哈",
@@ -647,18 +651,18 @@
     "sha256": "401b5d2f1a1a7ed6c944eb0213a8be4a1ad8728b724dc16792d07a1c8dfd0db9",
     "changes": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
     "sourceTrackId": "2894234336581355715",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C17"
+    ],
+    "sourceRecordIds": [
+      "CN-C17"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-020",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C18"
-    ],
-    "sourceRecordIds": [
-      "CN-C18"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C18",
     "file": "CN-C18-hbwy.m4a",
     "workTitle": "我爱北京天安门",
@@ -681,18 +685,18 @@
     "bytes": 1440429,
     "sha256": "32e2c86816982f35833bf9d0bcf15326490c99f67b89a6a0a2affa5c46e54d19",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C18"
+    ],
+    "sourceRecordIds": [
+      "CN-C18"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-021",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C19"
-    ],
-    "sourceRecordIds": [
-      "CN-C19"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C19",
     "file": "CN-C19-xuexi.mp3",
     "workTitle": "找朋友",
@@ -716,18 +720,18 @@
     "sha256": "bf679209d9e46767983a769cb553c5d40c3c1eec4c1d438b5c33f07aa54e710e",
     "changes": "带来源页上下文保存公开页面内完整录音；本地未剪辑或转码",
     "sourceTrackId": "13265832467873113825",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C19"
+    ],
+    "sourceRecordIds": [
+      "CN-C19"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-022",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C20"
-    ],
-    "sourceRecordIds": [
-      "CN-C20"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C20",
     "file": "CN-C20-cctv.m4a",
     "workTitle": "卖报歌",
@@ -750,18 +754,18 @@
     "bytes": 284161,
     "sha256": "fbb51fce155822d69dd0fba8bbf4a2f8d79f2ca31be40214490bac862fa19974",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C20"
+    ],
+    "sourceRecordIds": [
+      "CN-C20"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-023",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C21"
-    ],
-    "sourceRecordIds": [
-      "CN-C21"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C21",
     "file": "CN-C21-cctv.m4a",
     "workTitle": "小小螺丝帽",
@@ -784,18 +788,18 @@
     "bytes": 226972,
     "sha256": "45031ca204f73dd53186f1ecf9529fee7f5af7c1e9147640bd12c45e85078e97",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C21"
+    ],
+    "sourceRecordIds": [
+      "CN-C21"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-024",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C22"
-    ],
-    "sourceRecordIds": [
-      "CN-C22"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C22",
     "file": "CN-C22.wav",
     "workTitle": "种瓜 · 原创播放示范（非原曲）",
@@ -815,18 +819,18 @@
     "bytes": 506522,
     "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C22"
+    ],
+    "sourceRecordIds": [
+      "CN-C22"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-025",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C23"
-    ],
-    "sourceRecordIds": [
-      "CN-C23"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C23",
     "file": "CN-C23.wav",
     "workTitle": "在老师身边 · 原创播放示范（非原曲）",
@@ -846,18 +850,18 @@
     "bytes": 431220,
     "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C23"
+    ],
+    "sourceRecordIds": [
+      "CN-C23"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-026",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C24"
-    ],
-    "sourceRecordIds": [
-      "CN-C24"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C24",
     "file": "CN-C24.wav",
     "workTitle": "我们在大地上栽种鲜花 · 原创播放示范（非原曲）",
@@ -877,18 +881,18 @@
     "bytes": 411314,
     "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C24"
+    ],
+    "sourceRecordIds": [
+      "CN-C24"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-027",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C25"
-    ],
-    "sourceRecordIds": [
-      "CN-C25"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C25",
     "file": "CN-C25.wav",
     "workTitle": "小白兔白又白（河南睢县采录本）",
@@ -913,18 +917,18 @@
       "divisions": 4,
       "notes": "A4 C5 A4 G4 E4 D4 C4 D4 G4 E4 D4 C4 D4 E4 G4 A4 C4 D4 E4 G4 A4 C5 A4 G4 G4 A4 C5 A4 G4 E4 D4 C4"
     },
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C25"
+    ],
+    "sourceRecordIds": [
+      "CN-C25"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-028",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C26"
-    ],
-    "sourceRecordIds": [
-      "CN-C26"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C26",
     "file": "CN-C26.wav",
     "workTitle": "小老鼠上灯台（河南旧童谣版本）",
@@ -944,18 +948,18 @@
     "bytes": 802348,
     "sha256": "a1b90c89be2cb878f46fc1b8520bcaa57d9349a7c889b4e77eda856a3dd8607b",
     "changes": "由 build_song_assets.py 从与 MusicXML 相同的音符数据生成，未使用外部录音样本。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C26"
+    ],
+    "sourceRecordIds": [
+      "CN-C26"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-029",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C27"
-    ],
-    "sourceRecordIds": [
-      "CN-C27"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C27",
     "file": "CN-C27.wav",
     "workTitle": "拉大锯，扯大锯（辽宁朝阳童谣版）",
@@ -980,18 +984,18 @@
       "divisions": 4,
       "notes": "A4 G4 E4 D4 C4 D4 E4 G4 D4 C4 D4 E4 G4 A4 C5 A4 E4 G4 A4 C5 A4 G4 E4 D4 C5 A4 G4 E4 D4 C4 D4 E4 E4 D4 C4 D4 E4 G4 A4 C5 D4 E4 G4 A4 C5 A4 G4 E4"
     },
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C27"
+    ],
+    "sourceRecordIds": [
+      "CN-C27"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-030",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C28"
-    ],
-    "sourceRecordIds": [
-      "CN-C28"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C28",
     "file": "CN-C28.wav",
     "workTitle": "排排坐（内江老城版本）",
@@ -1011,18 +1015,18 @@
     "bytes": 1104748,
     "sha256": "5f14b6176f2391dfeb22d632cd8301369d62e5f68c95608357ade418d22f137b",
     "changes": "由 build_song_assets.py 从与 MusicXML 相同的音符数据生成，未使用外部录音样本。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C28"
+    ],
+    "sourceRecordIds": [
+      "CN-C28"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-031",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C29"
-    ],
-    "sourceRecordIds": [
-      "CN-C29"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C29",
     "file": "CN-C29.wav",
     "workTitle": "数蛤蟆（四川经典童谣首段）",
@@ -1047,18 +1051,18 @@
       "divisions": 4,
       "notes": "E4 D4 C4 D4 E4 G4 A4 C5 D4 E4 G4 A4 C5 A4 G4 E4 A4 C5 A4 G4 E4 D4 C4 D4 G4 E4 D4 C4 D4 E4 G4 A4 C4 D4 E4 G4 A4 C5 A4 G4 G4 A4 C5 A4 G4 E4 D4 C4 A4 G4 E4 D4 C4 D4 E4 G4"
     },
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C29"
+    ],
+    "sourceRecordIds": [
+      "CN-C29"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-032",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-C30"
-    ],
-    "sourceRecordIds": [
-      "CN-C30"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C30",
     "file": "CN-C30.wav",
     "workTitle": "摇篮曲（中国地方版本专题） · 原创播放示范（非原曲）",
@@ -1078,18 +1082,18 @@
     "bytes": 411314,
     "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-C30"
+    ],
+    "sourceRecordIds": [
+      "CN-C30"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-033",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-N01"
-    ],
-    "sourceRecordIds": [
-      "CN-N01"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-N01",
     "file": "CN-N01-xuexi.mp3",
     "workTitle": "数鸭子",
@@ -1114,18 +1118,18 @@
     "changes": "带来源页上下文保存公开专辑页内完整音频；本地未剪辑或转码",
     "sourceTrackId": "13891788958395814906",
     "versionNote": "来源专辑为「陪你读童谣」诵读系列，此音频是童谣念读，不是《数鸭子》歌曲演唱版本；不得标作原唱。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-N01"
+    ],
+    "sourceRecordIds": [
+      "CN-N01"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-034",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-N02"
-    ],
-    "sourceRecordIds": [
-      "CN-N02"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-N02",
     "file": "CN-N02-cctv-kldb.m4a",
     "workTitle": "童年",
@@ -1148,18 +1152,18 @@
     "bytes": 273515,
     "sha256": "0b18730c9896a0bda783c3210aa63664d38a455a6e0d7d237d36d40cf4894e57",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
-  },
-  {
-    "recordingId": "SMP-035",
-    "sourceType": "prototype_sample",
     "workIds": [
       "CN-N02"
     ],
     "sourceRecordIds": [
-      null
+      "CN-N02"
     ],
+    "mappingFlags": []
+  },
+  {
+    "recordingId": "SMP-035",
+    "sourceType": "prototype_sample",
+    "mappingStatus": "linked_from_legacy_id",
     "file": "CN-N02-cctv-jcyyh.m4a",
     "workTitle": "童年",
     "sourceTitle": "央视网《精彩音乐汇》：歌曲《童年》",
@@ -1181,18 +1185,19 @@
     "bytes": 860652,
     "sha256": "636f94c7f9c6ae27053c106f0b19b8679742edd0e4376723f96874e6aea5ef37",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "parentSampleId": "CN-N02"
+    "workIds": [
+      "CN-N02"
+    ],
+    "sourceRecordIds": [
+      "CN-N02"
+    ],
+    "parentSampleId": "CN-N02",
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-036",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-N03"
-    ],
-    "sourceRecordIds": [
-      "CN-N03"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-N03",
     "file": "CN-N03-cctv.m4a",
     "workTitle": "小毛驴",
@@ -1216,18 +1221,18 @@
     "sha256": "77f9eae1a3431dc9adfaec08603aaec52281c6547c01a89116aab7d640c0a2c7",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
     "versionNote": "来源页为乐队改编演唱版本，不是传统儿歌的历史原版录音。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-N03"
+    ],
+    "sourceRecordIds": [
+      "CN-N03"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-037",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-N04"
-    ],
-    "sourceRecordIds": [
-      "CN-N04"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-N04",
     "file": "CN-N04.wav",
     "workTitle": "月亮走我也走（潇湘童谣版） · 原创播放示范（非原曲）",
@@ -1247,18 +1252,18 @@
     "bytes": 431220,
     "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-N04"
+    ],
+    "sourceRecordIds": [
+      "CN-N04"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-038",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-N05"
-    ],
-    "sourceRecordIds": [
-      "CN-N05"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-N05",
     "file": "CN-N05-cctv-dqsx.m4a",
     "workTitle": "虫儿飞",
@@ -1281,18 +1286,18 @@
     "bytes": 262516,
     "sha256": "8de0a9547369b684d25d21a360c0bfeb621059293f7f5cf08adf79e69d87e97a",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
-  },
-  {
-    "recordingId": "SMP-039",
-    "sourceType": "prototype_sample",
     "workIds": [
       "CN-N05"
     ],
     "sourceRecordIds": [
-      null
+      "CN-N05"
     ],
+    "mappingFlags": []
+  },
+  {
+    "recordingId": "SMP-039",
+    "sourceType": "prototype_sample",
+    "mappingStatus": "linked_from_legacy_id",
     "file": "CN-N05-cctv-jcyyh.m4a",
     "workTitle": "虫儿飞",
     "sourceTitle": "央视网《精彩音乐汇》：歌曲《虫儿飞》",
@@ -1314,18 +1319,19 @@
     "bytes": 685112,
     "sha256": "eb0a7895115065a405b3e2c56b03dd6c7b205c17d99fb22d928fffe27c71aa75",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
-    "recordingKind": "prototype_sample",
-    "parentSampleId": "CN-N05"
+    "workIds": [
+      "CN-N05"
+    ],
+    "sourceRecordIds": [
+      "CN-N05"
+    ],
+    "parentSampleId": "CN-N05",
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-040",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T01"
-    ],
-    "sourceRecordIds": [
-      "CN-T01"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T01",
     "file": "CN-T01.wav",
     "workTitle": "月光光（广府四句短版）",
@@ -1345,18 +1351,18 @@
     "bytes": 1078934,
     "sha256": "a4273755126d35a934b344d86cb67e077e5034914f7c9729169635d4050aa128",
     "changes": "由 build_song_assets.py 从与 MusicXML 相同的音符数据生成，未使用外部录音样本。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T01"
+    ],
+    "sourceRecordIds": [
+      "CN-T01"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-041",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T02"
-    ],
-    "sourceRecordIds": [
-      "CN-T02"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T02",
     "file": "CN-T02.wav",
     "workTitle": "摇啊摇，摇到外婆桥（上海嘉定短版）",
@@ -1381,18 +1387,18 @@
       "divisions": 4,
       "notes": "C4 D4 E4 G4 A4 C5 A4 G4 G4 A4 C5 A4 G4 E4 D4 C4 A4 G4 E4 D4 C4 D4 E4 G4 D4 C4 D4 E4 G4 A4 C5 A4"
     },
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T02"
+    ],
+    "sourceRecordIds": [
+      "CN-T02"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-042",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T03"
-    ],
-    "sourceRecordIds": [
-      "CN-T03"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T03",
     "file": "CN-T03.wav",
     "workTitle": "白鹭鸶 · 原创播放示范（非原曲）",
@@ -1412,18 +1418,18 @@
     "bytes": 453424,
     "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T03"
+    ],
+    "sourceRecordIds": [
+      "CN-T03"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-043",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T04"
-    ],
-    "sourceRecordIds": [
-      "CN-T04"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T04",
     "file": "CN-T04.wav",
     "workTitle": "草蜢公 · 原创播放示范（非原曲）",
@@ -1443,18 +1449,18 @@
     "bytes": 431220,
     "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T04"
+    ],
+    "sourceRecordIds": [
+      "CN-T04"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-044",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T05"
-    ],
-    "sourceRecordIds": [
-      "CN-T05"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T05",
     "file": "CN-T05.wav",
     "workTitle": "拍手歌（江苏海州方言游戏歌版）",
@@ -1479,18 +1485,18 @@
       "divisions": 4,
       "notes": "E4 G4 A4 C5 A4 G4 E4 D4 C5 A4 G4 E4 D4 C4 D4 E4 E4 D4 C4 D4 E4 G4 A4 C5 D4 E4 G4 A4 C5 A4 G4 E4 A4 C5 A4 G4 E4 D4 C4 D4 G4 E4 D4 C4 D4 E4 G4 A4 C4 D4 E4 G4 A4 C5 A4 G4 G4 A4 C5 A4 G4 E4 D4 C4 A4 G4 E4 D4 C4 D4 E4 G4 D4 C4 D4 E4 G4 A4 C5 A4"
     },
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T05"
+    ],
+    "sourceRecordIds": [
+      "CN-T05"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-045",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T06"
-    ],
-    "sourceRecordIds": [
-      "CN-T06"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T06",
     "file": "CN-T06.wav",
     "workTitle": "小蜜蜂（地方童谣版本） · 原创播放示范（非原曲）",
@@ -1510,18 +1516,18 @@
     "bytes": 478348,
     "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T06"
+    ],
+    "sourceRecordIds": [
+      "CN-T06"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-046",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T07"
-    ],
-    "sourceRecordIds": [
-      "CN-T07"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T07",
     "file": "CN-T07.wav",
     "workTitle": "果子歌 · 原创播放示范（非原曲）",
@@ -1541,18 +1547,18 @@
     "bytes": 506522,
     "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T07"
+    ],
+    "sourceRecordIds": [
+      "CN-T07"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-047",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T08"
-    ],
-    "sourceRecordIds": [
-      "CN-T08"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T08",
     "file": "CN-T08.wav",
     "workTitle": "一二三（地方数数歌） · 原创播放示范（非原曲）",
@@ -1572,18 +1578,18 @@
     "bytes": 478348,
     "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T08"
+    ],
+    "sourceRecordIds": [
+      "CN-T08"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-048",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T09"
-    ],
-    "sourceRecordIds": [
-      "CN-T09"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T09",
     "file": "CN-T09.wav",
     "workTitle": "唔唔嘤 · 原创播放示范（非原曲）",
@@ -1603,18 +1609,18 @@
     "bytes": 453424,
     "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T09"
+    ],
+    "sourceRecordIds": [
+      "CN-T09"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-049",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T10"
-    ],
-    "sourceRecordIds": [
-      "CN-T10"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T10",
     "file": "CN-T10.wav",
     "workTitle": "铜钉钉铜板 · 原创播放示范（非原曲）",
@@ -1634,18 +1640,18 @@
     "bytes": 431220,
     "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T10"
+    ],
+    "sourceRecordIds": [
+      "CN-T10"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-050",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T11"
-    ],
-    "sourceRecordIds": [
-      "CN-T11"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T11",
     "file": "CN-T11.wav",
     "workTitle": "北京童谣（分类与版本专题） · 原创播放示范（非原曲）",
@@ -1665,18 +1671,18 @@
     "bytes": 453424,
     "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T11"
+    ],
+    "sourceRecordIds": [
+      "CN-T11"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-051",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T12"
-    ],
-    "sourceRecordIds": [
-      "CN-T12"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T12",
     "file": "CN-T12-cctv.m4a",
     "workTitle": "一园青菜成了精",
@@ -1700,18 +1706,18 @@
     "sha256": "d075660852d2b54ac5659cd18b7790979446e3d81de6d45fea2b30f66b19ed4f",
     "changes": "从公开视频提取第一路原声音轨；去除视频流，音频直接封装为 M4A，未重新编码",
     "versionNote": "来源页是童谣表演 / 念诵，不是有固定曲谱的歌曲演唱录音；作为该童谣的真实口头演绎版本登记。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T12"
+    ],
+    "sourceRecordIds": [
+      "CN-T12"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-052",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T13"
-    ],
-    "sourceRecordIds": [
-      "CN-T13"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T13",
     "file": "CN-T13.wav",
     "workTitle": "过水面 · 原创播放示范（非原曲）",
@@ -1731,18 +1737,18 @@
     "bytes": 431220,
     "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T13"
+    ],
+    "sourceRecordIds": [
+      "CN-T13"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-053",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T14"
-    ],
-    "sourceRecordIds": [
-      "CN-T14"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T14",
     "file": "CN-T14.wav",
     "workTitle": "大头儿大 · 原创播放示范（非原曲）",
@@ -1762,18 +1768,18 @@
     "bytes": 478348,
     "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T14"
+    ],
+    "sourceRecordIds": [
+      "CN-T14"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-054",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T15"
-    ],
-    "sourceRecordIds": [
-      "CN-T15"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T15",
     "file": "CN-T15.wav",
     "workTitle": "风婆婆 · 原创播放示范（非原曲）",
@@ -1793,18 +1799,18 @@
     "bytes": 453424,
     "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T15"
+    ],
+    "sourceRecordIds": [
+      "CN-T15"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-055",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T16"
-    ],
-    "sourceRecordIds": [
-      "CN-T16"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T16",
     "file": "CN-T16.wav",
     "workTitle": "金箍噜棒 · 原创播放示范（非原曲）",
@@ -1824,18 +1830,18 @@
     "bytes": 411314,
     "sha256": "ebf06965ebfee17abdb388dcec1936502d2a507374c9f0a0e855f5f9f8449d97",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T16"
+    ],
+    "sourceRecordIds": [
+      "CN-T16"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-056",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T17"
-    ],
-    "sourceRecordIds": [
-      "CN-T17"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T17",
     "file": "CN-T17.wav",
     "workTitle": "打麦歌 · 原创播放示范（非原曲）",
@@ -1855,18 +1861,18 @@
     "bytes": 506522,
     "sha256": "29323ee5ba6f8b0cd9b92b65c657b3c543a56af11346a7223300a0c35758ebe3",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T17"
+    ],
+    "sourceRecordIds": [
+      "CN-T17"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-057",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T18"
-    ],
-    "sourceRecordIds": [
-      "CN-T18"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T18",
     "file": "CN-T18.wav",
     "workTitle": "少年去游荡 · 原创播放示范（非原曲）",
@@ -1886,18 +1892,18 @@
     "bytes": 478348,
     "sha256": "d329757f61961482c1123581c5c704439ae7fbe6d9c406df617cf3f500d02fd9",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T18"
+    ],
+    "sourceRecordIds": [
+      "CN-T18"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-058",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T19"
-    ],
-    "sourceRecordIds": [
-      "CN-T19"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T19",
     "file": "CN-T19.wav",
     "workTitle": "绍兴城里十乘桥 · 原创播放示范（非原曲）",
@@ -1917,18 +1923,18 @@
     "bytes": 453424,
     "sha256": "457afb0f8a34d73907ac08f0838070ef5401b154347138ab74c89f3423cde82c",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T19"
+    ],
+    "sourceRecordIds": [
+      "CN-T19"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-059",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "CN-T20"
-    ],
-    "sourceRecordIds": [
-      "CN-T20"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-T20",
     "file": "CN-T20.wav",
     "workTitle": "会稽童谣（历史文献条目） · 原创播放示范（非原曲）",
@@ -1948,18 +1954,18 @@
     "bytes": 431220,
     "sha256": "287e0e992dc0c482f823e1f53f5acd73515e8652da8d2220c025e69fe73646f6",
     "changes": "由 build_china_library.py 生成全新音型，未引用外部录音或目标歌曲旋律。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "CN-T20"
+    ],
+    "sourceRecordIds": [
+      "CN-T20"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-060",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "EN-T01"
-    ],
-    "sourceRecordIds": [
-      "EN-T01"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "EN-T01",
     "file": "EN-T01.mp3",
     "workTitle": "Twinkle, Twinkle, Little Star",
@@ -1983,18 +1989,18 @@
     "bytes": 743756,
     "sha256": "6f18c286021f23de8b86f77f931d04d746e7bca967e5ff6bc1735e457eb13fde",
     "changes": "本地仅重命名为 EN-T01.mp3；音频为 Wikimedia 官方 MP3 转码，本地未剪辑、混音或再次转码。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "EN-T01"
+    ],
+    "sourceRecordIds": [
+      "EN-T01"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-061",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "EN-T02"
-    ],
-    "sourceRecordIds": [
-      "EN-T02"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "EN-T02",
     "file": "EN-T02.mp3",
     "workTitle": "Mary Had a Little Lamb",
@@ -2015,18 +2021,18 @@
     "bytes": 232560,
     "sha256": "462c5c3c4acb1487df0c8f558180f5ecdbb7e5ffb0f045d9ddc09d9db881ec35",
     "changes": "本地仅重命名为 EN-T02.mp3；使用 Freesound 官方高质量 MP3 预览，本地未剪辑、混音或再次转码。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "EN-T02"
+    ],
+    "sourceRecordIds": [
+      "EN-T02"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "SMP-062",
     "sourceType": "prototype_sample",
-    "workIds": [
-      "EN-T03"
-    ],
-    "sourceRecordIds": [
-      "EN-T03"
-    ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "EN-T03",
     "file": "EN-T03.mp3",
     "workTitle": "Row, Row, Row Your Boat",
@@ -2047,8 +2053,13 @@
     "bytes": 998382,
     "sha256": "fb6969a5b4242113ac67b479b0195309535f36d0439b61e8d8f24e5dbe183ec3",
     "changes": "本地仅重命名为 EN-T03.mp3；使用 Freesound 官方高质量 MP3 预览，本地未剪辑、混音或再次转码。",
-    "recordingKind": "prototype_sample",
-    "embeddedMaterialsRef": "lyrics.json / scores.json"
+    "workIds": [
+      "EN-T03"
+    ],
+    "sourceRecordIds": [
+      "EN-T03"
+    ],
+    "mappingFlags": []
   },
   {
     "recordingId": "PUB-001",
@@ -2056,6 +2067,7 @@
     "workIds": [
       "CN-C03"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C03"
     ],
@@ -2082,6 +2094,7 @@
     "workIds": [
       "CN-C14"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C14"
     ],
@@ -2108,6 +2121,7 @@
     "workIds": [
       "CN-C13"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C13"
     ],
@@ -2134,6 +2148,7 @@
     "workIds": [
       "CN-C06"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C06"
     ],
@@ -2160,6 +2175,7 @@
     "workIds": [
       "CN-C07"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C07"
     ],
@@ -2186,6 +2202,7 @@
     "workIds": [
       "CN-C19"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C19"
     ],
@@ -2212,6 +2229,7 @@
     "workIds": [
       "CN-C15"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C15"
     ],
@@ -2238,6 +2256,7 @@
     "workIds": [
       "CN-C17"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C17"
     ],
@@ -2265,6 +2284,7 @@
       "CN-C04",
       "CN-C16"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C04",
       "CN-C16"
@@ -2292,6 +2312,7 @@
     "workIds": [
       "CN-C02"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C02"
     ],
@@ -2317,6 +2338,7 @@
     "workIds": [
       "CN-C02"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C02"
     ],
@@ -2342,6 +2364,7 @@
     "workIds": [
       "CN-C12"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C12"
     ],
@@ -2367,6 +2390,7 @@
     "workIds": [
       "CN-C11"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C11"
     ],
@@ -2392,6 +2416,7 @@
     "workIds": [
       "CN-C18"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C18"
     ],
@@ -2417,6 +2442,7 @@
     "workIds": [
       "CN-C05"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C05"
     ],
@@ -2442,6 +2468,7 @@
     "workIds": [
       "CN-C09"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C09"
     ],
@@ -2467,6 +2494,7 @@
     "workIds": [
       "CN-C20"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C20"
     ],
@@ -2493,6 +2521,7 @@
     "workIds": [
       "CN-N03"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-N03"
     ],
@@ -2520,6 +2549,7 @@
     "workIds": [
       "CN-C21"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C21"
     ],
@@ -2546,6 +2576,7 @@
     "workIds": [
       "CN-C08"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C08"
     ],
@@ -2572,6 +2603,7 @@
     "workIds": [
       "CN-C08"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-C08"
     ],
@@ -2598,6 +2630,7 @@
     "workIds": [
       "CN-N05"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-N05"
     ],
@@ -2624,6 +2657,7 @@
     "workIds": [
       "CN-N05"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-N05"
     ],
@@ -2650,6 +2684,7 @@
     "workIds": [
       "CN-N02"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-N02"
     ],
@@ -2676,6 +2711,7 @@
     "workIds": [
       "CN-N02"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-N02"
     ],
@@ -2702,6 +2738,7 @@
     "workIds": [
       "CN-T12"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-T12"
     ],
@@ -2729,6 +2766,7 @@
     "workIds": [
       "CN-N01"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "ids": [
       "CN-N01"
     ],
@@ -2757,6 +2795,7 @@
     "workIds": [
       "CN-C03"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C03",
     "workTitle": "小燕子",
     "trackTitle": "Little Swallow (Xiao Yan Zi)",
@@ -2783,6 +2822,7 @@
     "workIds": [
       "CN-C04"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C04",
     "workTitle": "春天在哪里",
     "trackTitle": "Where Is Spring? (Chun Tian Zai Na Li?)",
@@ -2809,6 +2849,7 @@
     "workIds": [
       "CN-C07"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C07",
     "workTitle": "读书郎",
     "trackTitle": "The Schoolboy (Du Shu Lang)",
@@ -2835,6 +2876,7 @@
     "workIds": [
       "CN-C19"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C19",
     "workTitle": "找朋友",
     "trackTitle": "Making Friends (Zhao Peng You)",
@@ -2861,6 +2903,7 @@
     "workIds": [
       "CN-C20"
     ],
+    "mappingStatus": "linked_from_legacy_id",
     "id": "CN-C20",
     "workTitle": "卖报歌",
     "trackTitle": "Selling Newspapers (Mai Bao Ge)",
@@ -2880,5 +2923,2053 @@
     "rightsNote": "仅使用 Deezer 官方公开曲目接口返回的约 30 秒预览流和原站链接；本站不下载、不缓存、不镜像该录音，也不宣称取得完整录音或词曲的再发布授权。",
     "reviewStatus": "reviewed_click_to_load",
     "checkedOn": "2026-11-18"
+  },
+  {
+    "recordingId": "LNK-05-01",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C06"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-01",
+    "title": "一分钱",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/潘振声儿童歌曲集锦/1641845621",
+    "note": "《潘振声儿童歌曲集锦》曲目，约 1:31，页面标注 2000 年发行。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-02",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C12"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-02",
+    "title": "快乐的节日",
+    "version": "儿歌点点",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1713057031",
+    "note": "2023 年发行的后期演绎版本。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-03",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C14"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-03",
+    "title": "丢手绢",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1609582246",
+    "note": "《童歌经典02》，页面标注 2000 年发行。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-04",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-04",
+    "title": "听妈妈讲那过去的事情",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1609599826",
+    "note": "《童歌经典08》，页面标注 2000 年发行。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-05",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-05",
+    "title": "听妈妈讲那过去的事情",
+    "version": "中国武警男声合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1790113293",
+    "note": "《辉煌之声II 听妈妈讲那过去的事情》，2008 年发行。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-06",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-06",
+    "title": "我们的田野",
+    "version": "上海人民广播电台少年儿童广播合唱团、叶红",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/我们的田野/6793372676?i=6793372683",
+    "note": "《可爱的小白杨》曲目，3:24；中国唱片发行信息待核录音年代。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-07",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-07",
+    "title": "我们的田野",
+    "version": "北京市少年宫合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1681475279",
+    "note": "《爱国歌曲大家唱》，2009 年发行。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-08",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "05-08",
+    "title": "红星歌",
+    "version": "中央广播少年儿童合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/中国电影百年歌曲精萃-五/1888430784",
+    "note": "《中国电影百年歌曲精萃（五）》曲目，1:33，中国唱片发行线索。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-09",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "05-09",
+    "title": "红星歌",
+    "version": "中央人民广播电台少年广播合唱团",
+    "platform": "文艺作品库",
+    "url": "https://ku.artnchina.com/page/opus/music/music.html?fileName=%E7%BA%A2%E6%98%9F%E6%AD%8C+%E7%AE%80%E8%B0%B1.jpg&id=ccaad27035fa42d0a0b198d0ef6e4642&path=clfac%2Fupload%2F32c478753f65a1230306b27a44071abb.jpg&type=audio",
+    "note": "作品页列出音频文件名和曲谱图，发行信息不完整。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-10",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C09"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-10",
+    "title": "小螺号",
+    "version": "程琳",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1619505686",
+    "note": "《童年的小摇车》，页面标注 1982-05-21，词曲署名付林。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-11",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C05"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-11",
+    "title": "采蘑菇的小姑娘",
+    "version": "青燕子演唱组、广州交响乐团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/采蘑菇的小姑娘/1634086039?i=1634086435",
+    "note": "《草原牧歌（少女与弦乐四重奏）》曲目，3:23，2000 年发行。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-12",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "05-12",
+    "title": "种太阳",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1609599822",
+    "note": "《童歌经典08》，页面标注 2000 年发行。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-13",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "05-13",
+    "title": "种太阳",
+    "version": "会声花儿组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1645485406",
+    "note": "《儿童歌曲1》，2002 年发行。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-14",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C10"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-14",
+    "title": "歌声与微笑",
+    "version": "上海小荧星儿童合唱团",
+    "platform": "江西理工大学",
+    "url": "https://hsjd.jxust.edu.cn/content.jsp?urltype=news.NewsContentUrl&wbnewsid=1448&wbtreeid=1060",
+    "note": "机构页面附 MP3 入口；现有本地研究录音已另行登记。",
+    "kind": "recording",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-15",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C10"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-15",
+    "title": "歌声与微笑",
+    "version": "上海小荧星艺术团合唱团等",
+    "platform": "bilibili",
+    "url": "https://www.bilibili.com/video/BV1LM4m1R7WY/",
+    "note": "标注 1986 年上海电视节片段；上传者声明未经授权禁止转载。",
+    "kind": "video",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-16",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-16",
+    "title": "让我们荡起双桨",
+    "version": "中央人民广播电台少年儿童合唱团",
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/watch?v=0HD7QrrDQkc",
+    "note": "Release-Topic，《中国电影百年歌曲精萃（三）II》，中国唱片集团发行线索。",
+    "kind": "video",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-17",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-17",
+    "title": "让我们荡起双桨",
+    "version": "贺斌演唱",
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/watch?v=1ThcRM56bjE",
+    "note": "CCTV 少儿歌曲专题播放页，介绍电影《祖国的花朵》主题曲。",
+    "kind": "video",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-05-18",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "05-18",
+    "title": "让我们荡起双桨",
+    "version": "机构嵌入视频",
+    "platform": "腾讯视频",
+    "url": "https://v.qq.com/txp/iframe/player.html?vid=e32563ovuaf",
+    "note": "南方医科大学页面嵌入的腾讯视频入口。",
+    "kind": "video",
+    "batch": "05"
+  },
+  {
+    "recordingId": "LNK-06-01",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-01",
+    "title": "小白船",
+    "version": "北京蓝天艺术合唱小组",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1648937746",
+    "note": "《中外儿童金曲（2）》，2015 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-02",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-02",
+    "title": "小白船",
+    "version": "上海·黄浦春天少年合唱团",
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/watch?v=oSV1-zVXVyI",
+    "note": "合唱团公开频道 2021 年演绎，陈明茹编配。",
+    "kind": "video",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-03",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-03",
+    "title": "小兔子乖乖",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1642289570",
+    "note": "《亲子儿童歌曲02》，2000 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-04",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-04",
+    "title": "小兔子乖乖",
+    "version": "儿歌点点",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1713056666",
+    "note": "《点点儿歌》，2023 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-05",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C04"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "06-05",
+    "title": "春天在哪里",
+    "version": "新时代小星星组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1841836890",
+    "note": "《儿童歌谣（第一辑）》，页面标注 1990 年。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-06",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C04"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "06-06",
+    "title": "春天在哪里",
+    "version": "儿歌点点",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1713056788",
+    "note": "《点点儿歌》，2023 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-07",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-07",
+    "title": "两只老虎",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1642289580",
+    "note": "《亲子儿童歌曲02》，2000 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-08",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-08",
+    "title": "两只老虎",
+    "version": "小星星儿童合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1848273408",
+    "note": "《儿歌 爸爸妈妈我好爱你（下）》，页面标注 1991 年。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-09",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-09",
+    "title": "歌唱二小放牛郎",
+    "version": "小海燕少年合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1620329482",
+    "note": "《爱国歌曲大家唱100首发烧童声合唱3》，2010 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-10",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-10",
+    "title": "歌唱二小放牛郎",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1607021497",
+    "note": "《少年广播合唱集锦》，2000 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-11",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C20"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "06-11",
+    "title": "卖报歌",
+    "version": "儿歌多多、小呱呱乐队",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1779248166",
+    "note": "2022 年后期演绎，不标记为历史首录。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-12",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C13"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "06-12",
+    "title": "拔萝卜",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1609599760",
+    "note": "《童歌经典04》，2000 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-13",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C13"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "06-13",
+    "title": "拔萝卜",
+    "version": "小星星儿童合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1848269234",
+    "note": "《儿歌 爸爸妈妈我好爱你（上）》，页面标注 1991 年。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-14",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-14",
+    "title": "劳动最光荣",
+    "version": "中央人民广播电台少年广播合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1842717534",
+    "note": "唱片目录入口；发行年份不能直接当作录音年份。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-15",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-15",
+    "title": "劳动最光荣",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1610055182",
+    "note": "《童歌经典07》，2000 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-16",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-16",
+    "title": "小星星",
+    "version": "新和儿童乐队合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/977656761",
+    "note": "《儿童歌曲第二集 恐龙救生队·我爱中华》，页面标注 1979 年。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-17",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-17",
+    "title": "泥娃娃",
+    "version": "新和儿童乐队合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/978032129",
+    "note": "《儿童歌曲第三集 小甜甜·上学》，页面标注 1979 年。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-18",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "06-18",
+    "title": "泥娃娃",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1650865532",
+    "note": "《快乐学唱歌（03）》，2000 年发行的逐句教学版本。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-19",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C07"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "06-19",
+    "title": "读书郎",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1609599081",
+    "note": "《童歌经典04》，2000 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-20",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C07"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "06-20",
+    "title": "读书郎",
+    "version": "会声花儿组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1645567949",
+    "note": "《儿童歌曲4》，2003 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-06-21",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C08"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "06-21",
+    "title": "外婆的澎湖湾",
+    "version": "Cute Princess、Bei Bei",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/637354755",
+    "note": "《那些年我们一起唱的童谣》，2012 年发行。",
+    "kind": "recording",
+    "batch": "06"
+  },
+  {
+    "recordingId": "LNK-07-01",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "07-01",
+    "title": "共产儿童团歌",
+    "version": "CCTV 少儿 2018 年六一晚会",
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/watch?v=G2vfI926hqo",
+    "note": "官方频道节目片段，属于晚会演出版。",
+    "kind": "video",
+    "batch": "07"
+  },
+  {
+    "recordingId": "LNK-07-02",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C03"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "07-02",
+    "title": "小燕子",
+    "version": "门子轩、何语涵",
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/watch?v=CTuNYWly_WU",
+    "note": "CCTV 少儿《音乐快递》节目约 15:22 处。",
+    "kind": "video",
+    "batch": "07"
+  },
+  {
+    "recordingId": "LNK-07-03",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "07-03",
+    "title": "中国儿童之歌",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/cn/song/1641845868",
+    "note": "《潘振声儿童歌曲集锦》，页面标注 2000 年。",
+    "kind": "recording",
+    "batch": "07"
+  },
+  {
+    "recordingId": "LNK-07-04",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "07-04",
+    "title": "潘振声儿童歌曲集锦",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/潘振声儿童歌曲集锦/1641845621",
+    "note": "专辑级目录；逐曲身份和版本需分别核对。",
+    "kind": "album",
+    "batch": "07"
+  },
+  {
+    "recordingId": "LNK-07-05",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "07-05",
+    "title": "童歌经典01",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/童歌经典01/1609581347",
+    "note": "专辑页显示 17 首；未核对曲目不冒充新增作品。",
+    "kind": "album",
+    "batch": "07"
+  },
+  {
+    "recordingId": "LNK-07-06",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "07-06",
+    "title": "童声合唱歌曲",
+    "version": "小蓓蕾组合、广州小云雀合唱团等",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/童声合唱歌曲/1642775126",
+    "note": "21 首、约 61 分钟，作为合唱版本目录入口。",
+    "kind": "album",
+    "batch": "07"
+  },
+  {
+    "recordingId": "LNK-08-01",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "08-01",
+    "title": "潘振声儿童歌曲集锦",
+    "version": "小蓓蕾组合 · 颂今音乐",
+    "platform": "Qobuz",
+    "url": "https://www.qobuz.com/us-en/album/-/udwl0ezrhkuqb",
+    "note": "标注 16-bit/44.1kHz；规格信息不等于已试听或获得下载授权。",
+    "kind": "album",
+    "batch": "08"
+  },
+  {
+    "recordingId": "LNK-08-02",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "08-02",
+    "title": "童声合唱歌曲精选01（齐唱版）",
+    "version": "小蓓蕾组合 · 颂今音乐",
+    "platform": "Qobuz",
+    "url": "https://www.qobuz.com/dk-en/album/01/u9mio7mp78o8b",
+    "note": "正规专辑与高品质规格线索，录音质量仍需逐曲人工复核。",
+    "kind": "album",
+    "batch": "08"
+  },
+  {
+    "recordingId": "LNK-08-03",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "08-03",
+    "title": "童歌经典01",
+    "version": "小蓓蕾组合 · 颂今音乐",
+    "platform": "Amazon Music",
+    "url": "https://music.amazon.es/albums/B09SDML4D5",
+    "note": "列出 17 首曲目及时长；当前未确认无损规格。",
+    "kind": "album",
+    "batch": "08"
+  },
+  {
+    "recordingId": "LNK-08-04",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "08-04",
+    "title": "童声合唱歌曲",
+    "version": "小蓓蕾组合、广州小云雀合唱团等",
+    "platform": "Amazon Music",
+    "url": "https://music.amazon.com/albums/B0BCM5Q3KJ",
+    "note": "用于多合唱团曲目和版本交叉核对。",
+    "kind": "album",
+    "batch": "08"
+  },
+  {
+    "recordingId": "LNK-10-01",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "10-01",
+    "title": "童歌经典03",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/童歌经典03/1609612603",
+    "note": "平台显示 16 首；辅助目录列出 18 个标题，数量差异待核。",
+    "kind": "album",
+    "batch": "10"
+  },
+  {
+    "recordingId": "LNK-10-02",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "10-02",
+    "title": "童歌经典04",
+    "version": "小蓓蕾组合",
+    "platform": "Amazon Music",
+    "url": "https://music.amazon.ca/albums/B09S9XDJ2X",
+    "note": "15 首、约 39 分钟，含《读书郎》《卖报歌》《采蘑菇的小姑娘》等。",
+    "kind": "album",
+    "batch": "10"
+  },
+  {
+    "recordingId": "LNK-10-03",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "10-03",
+    "title": "童歌经典06",
+    "version": "小蓓蕾组合",
+    "platform": "Amazon Music",
+    "url": "https://music.amazon.com/albums/B09SKMY1KQ",
+    "note": "14 首、约 37 分钟，含《兰花草》《蜗牛与黄鹂鸟》《捉泥鳅》等。",
+    "kind": "album",
+    "batch": "10"
+  },
+  {
+    "recordingId": "LNK-10-04",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "10-04",
+    "title": "童歌经典07",
+    "version": "小蓓蕾组合",
+    "platform": "Amazon Music",
+    "url": "https://music.amazon.es/albums/B09SHWZS5Y",
+    "note": "16 首、约 37 分钟，含《小燕子》《小小少年》《劳动最光荣》等。",
+    "kind": "album",
+    "batch": "10"
+  },
+  {
+    "recordingId": "LNK-10-05",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "10-05",
+    "title": "童声合唱歌曲精选07",
+    "version": "小蓓蕾组合等",
+    "platform": "Amazon Music",
+    "url": "https://music.amazon.com/albums/B09RV9SPK2",
+    "note": "15 首、约 54 分钟；横跨民歌、儿童合唱与英文合唱作品。",
+    "kind": "album",
+    "batch": "10"
+  },
+  {
+    "recordingId": "LNK-11-01",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "11-01",
+    "title": "中国电影百年歌曲精萃（三）",
+    "version": "中央人民广播电台少年儿童合唱团等",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/%E7%BA%A2%E5%86%9B%E6%A1%A5/1888431701?i=1888432145",
+    "note": "含《让我们荡起双桨》《共产儿童团歌》；发行信息不直接证明录音日期。",
+    "kind": "album",
+    "batch": "11"
+  },
+  {
+    "recordingId": "LNK-11-02",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "11-02",
+    "title": "正义之声—100首优秀抗战歌曲集",
+    "version": "中央人民广播电台少年广播合唱团等",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/%E6%AD%A3%E4%B9%89%E4%B9%8B%E5%A3%B0-100%E9%A6%96%E4%BC%98%E7%A7%80%E6%8A%97%E6%88%98%E6%AD%8C%E6%9B%B2%E9%9B%86/1842732073",
+    "note": "含《只怕不抵抗》《酸枣刺》《红缨枪》《歌唱二小放牛郎》等版本线索。",
+    "kind": "album",
+    "batch": "11"
+  },
+  {
+    "recordingId": "LNK-11-03",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "11-03",
+    "title": "歌唱二小放牛郎",
+    "version": "中央人民广播电台少年广播合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/%E6%AD%8C%E5%94%B1%E4%BA%8C%E5%B0%8F%E6%94%BE%E7%89%9B%E9%83%8E/1842732073?i=1842733960",
+    "note": "可定位具体曲目与演唱团体，6:20；录音年代仍待核。",
+    "kind": "recording",
+    "batch": "11"
+  },
+  {
+    "recordingId": "LNK-11-04",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "11-04",
+    "title": "我们是抗战的孩子",
+    "version": "上海人民广播电台少年儿童广播合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/%E6%88%91%E4%BB%AC%E6%98%AF%E6%8A%97%E6%88%98%E7%9A%84%E5%AD%A9%E5%AD%90/1842732073?i=1842733846",
+    "note": "目前核实到该团的一首具体发行曲目，1:10。",
+    "kind": "recording",
+    "batch": "11"
+  },
+  {
+    "recordingId": "LNK-11-05",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "11-05",
+    "title": "云雀之声",
+    "version": "广州小云雀合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/%E4%BA%91%E9%9B%80%E4%B9%8B%E5%A3%B0/1801509613",
+    "note": "2008 年正规厂牌发行目录，15 首、56 分钟。",
+    "kind": "album",
+    "batch": "11"
+  },
+  {
+    "recordingId": "LNK-11-06",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "11-06",
+    "title": "云雀之声4",
+    "version": "广州小云雀合唱团",
+    "platform": "Amazon Music",
+    "url": "https://music.amazon.com/albums/B09Z76RBDY",
+    "note": "13 首、约 61 分钟；偏合唱艺术与儿童文化拓展。",
+    "kind": "album",
+    "batch": "11"
+  },
+  {
+    "recordingId": "LNK-11-07",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "11-07",
+    "title": "中国经典古诗100首歌曲精选2",
+    "version": "广州小云雀合唱团小童星",
+    "platform": "Amazon Music",
+    "url": "https://music.amazon.in/albums/B0C4TVD462",
+    "note": "20 首古诗歌曲目录，可连接诗词馆继续核验词曲和编曲。",
+    "kind": "album",
+    "batch": "11"
+  },
+  {
+    "recordingId": "LNK-12-01",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-01",
+    "title": "我们的歌：杨鸿年和他的孩子们唱响经典童声合唱120首",
+    "version": "杨鸿年、杨力、王天阳等",
+    "platform": "豆瓣音乐",
+    "url": "https://music.douban.com/subject/25733448/",
+    "note": "中国唱片总公司 8CD 目录，条形码 9787799922690；不是逐曲播放页。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-12-02",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-02",
+    "title": "金色年华 HL-152",
+    "version": "中央人民广播电台少年广播合唱团",
+    "platform": "Discogs Fandom",
+    "url": "https://discogs.fandom.com/zh/wiki/中国唱片/HL",
+    "note": "1983 年磁带目录线索，需以实物、封套或权威馆藏复核。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-12-03",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-03",
+    "title": "中央人民广播电台少年儿童合唱团",
+    "version": "团体与《金色年华》资料",
+    "platform": "百度百科",
+    "url": "https://bkso.baidu.com/item/中央人民广播电台少年儿童合唱团/10562223?fromModule=lemma_inlink",
+    "note": "记录团体与专辑曲目线索，不是音频文件入口。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-12-04",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-04",
+    "title": "中华儿歌珍藏集 CCD-2838/2843",
+    "version": "中唱上海 6CD",
+    "platform": "我爱ABC",
+    "url": "https://www.oiabc.net/1497.html",
+    "note": "第三方目录提供逐曲演唱者、指挥、伴奏与时长，需再由唱片资料复核。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-12-05",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-05",
+    "title": "中央人民广播电台少年儿童合唱团歌曲列表",
+    "version": "广播合唱团曲目索引",
+    "platform": "RapZH",
+    "url": "https://rapzh.com/artists/384677/songs",
+    "note": "第三方聚合目录，仅用于发现曲目和专辑关系。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-12-06",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-06",
+    "title": "中国广播少年合唱团歌曲列表",
+    "version": "广播合唱团曲目索引",
+    "platform": "RapZH",
+    "url": "https://rapzh.com/artists/355783/songs",
+    "note": "含《丢手绢》《酸枣刺》《只怕不抵抗》等目录线索。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-12-07",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-07",
+    "title": "宝宝听唱学儿歌（季节篇）",
+    "version": "上海音乐出版社",
+    "platform": "出版社产品目录",
+    "url": "https://www.smph.cn/NewsDetails.aspx?id=538",
+    "note": "30 首，官方说明配示范、伴奏和电子歌谱；页面本身不是逐曲音频。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-12-08",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-08",
+    "title": "宝宝听唱学儿歌——幸福的童年",
+    "version": "上海音乐出版社",
+    "platform": "出版社产品目录",
+    "url": "https://www.smph.cn/NewsDetails.aspx?id=545",
+    "note": "18 首，全新编曲制作，可沿官方数字产品继续核验。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-12-09",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-09",
+    "title": "宝宝听唱学儿歌——我爱我的大中国",
+    "version": "上海音乐出版社",
+    "platform": "出版社产品目录",
+    "url": "https://www.smph.cn/NewsDetails.aspx?id=542",
+    "note": "含《大中国》《少年强》《少年，少年，祖国的春天》等配套资源线索。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-12-10",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "12-10",
+    "title": "最好的未来",
+    "version": "上海音乐出版社",
+    "platform": "出版社产品目录",
+    "url": "https://www.smph.cn/NewsDetails.aspx?id=543",
+    "note": "同系列 14 首产品目录；没有把产品介绍页写成直接音频。",
+    "kind": "archive",
+    "batch": "12"
+  },
+  {
+    "recordingId": "LNK-04-01",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C14"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "04-01",
+    "title": "丢手绢",
+    "version": "刘玉兰",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1588856638",
+    "note": "《汇悦经典儿歌大全（一）》，2020 年后期演唱版本。",
+    "kind": "recording",
+    "batch": "04"
+  },
+  {
+    "recordingId": "LNK-04-02",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C14"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "04-02",
+    "title": "丢手绢",
+    "version": "乔柯",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/丢手绢/1874234675?i=1874234676",
+    "note": "《宝宝听唱学儿歌——记忆中的童声》，上海音乐出版社相关发行，页面标注 2025 年。",
+    "kind": "recording",
+    "batch": "04"
+  },
+  {
+    "recordingId": "LNK-04-03",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "04-03",
+    "title": "听妈妈讲那过去的事情",
+    "version": "陈心蕊",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/song/1800154363",
+    "note": "EP，2017 年后期演唱版本。",
+    "kind": "recording",
+    "batch": "04"
+  },
+  {
+    "recordingId": "LNK-04-04",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "04-04",
+    "title": "听妈妈讲那过去的事情",
+    "version": "国家大剧院合唱团现场版",
+    "platform": "Apple Music Classical",
+    "url": "https://classical.music.apple.com/cn/album/1781199453",
+    "note": "《永恒的旋律》国家大剧院合唱团经典作品音乐会，2024 年现场版。",
+    "kind": "recording",
+    "batch": "04"
+  },
+  {
+    "recordingId": "LNK-04-05",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "04-05",
+    "title": "听妈妈讲那过去的事情",
+    "version": "中国爱乐乐团音乐会版本",
+    "platform": "Apple Music Classical",
+    "url": "https://classical.music.apple.com/cn/album/1544206133",
+    "note": "2014 年中国爱乐乐团交响音乐会合辑，平台页面列出该曲。",
+    "kind": "recording",
+    "batch": "04"
+  },
+  {
+    "recordingId": "LNK-04A-01",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C14"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "04A-01",
+    "title": "丢手绢",
+    "version": "小蓓蕾组合 Topic",
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/watch?v=bIaUuDm067k",
+    "note": "颂今音乐提供的自动生成 Topic，《童歌经典02》标注 2000 年发行；发行元数据入口，不是 1940 年代原始录音。",
+    "kind": "video",
+    "batch": "04A"
+  },
+  {
+    "recordingId": "LNK-08-05",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "08-05",
+    "title": "童声合唱歌曲精选01（齐唱版）",
+    "version": "小蓓蕾组合 · 颂今音乐",
+    "platform": "TIDAL",
+    "url": "https://tidal.com/album/214215436",
+    "note": "17 首曲目可与 Qobuz 交叉核对；页面不是下载入口。",
+    "kind": "album",
+    "batch": "08"
+  },
+  {
+    "recordingId": "LNK-08-06",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "08-06",
+    "title": "小蓓蕾组合",
+    "version": "平台 Top Songs 目录",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/artist/小蓓蕾组合/1029540804",
+    "note": "平台推荐曲目总览；页面无公开播放量，不作传播度结论。",
+    "kind": "archive",
+    "batch": "08"
+  },
+  {
+    "recordingId": "LNK-10-06",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "10-06",
+    "title": "童歌经典07",
+    "version": "小蓓蕾组合",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/童歌经典07/1610054690",
+    "note": "与 Amazon Music 页面交叉确认专辑身份，含《小燕子》《让我们荡起双桨》等版本线索。",
+    "kind": "album",
+    "batch": "10"
+  },
+  {
+    "recordingId": "LNK-13-01",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-01",
+    "title": "藏族小朋友歌唱毛主席（Single）",
+    "version": "周义瑛、中央人民广播电台少年广播合唱团 · 1970",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/藏族小朋友歌唱毛主席-single/6793380087",
+    "note": "1970 年 ℗ 中国唱片，3 首曲目与试听入口；发行年份不必然等于录音年份。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-02",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-02",
+    "title": "营火熊熊（EP）",
+    "version": "中央人民广播电台少年广播合唱团 · 1979",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/营火熊熊-ep/6793393064",
+    "note": "1979 年 ℗ 中国唱片，5 首少年生活与夏令营题材曲目。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-03",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-03",
+    "title": "中国电影百年歌曲精萃（三）· 1971",
+    "version": "中央人民广播电台少年儿童合唱团",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/中国电影百年歌曲精萃/1888431701",
+    "note": "1971 年 ℗ 中国唱片，页面列出《让我们荡起双桨》《共产儿童团歌》。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-04",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-04",
+    "title": "中央人民广播电台少年广播合唱团",
+    "version": "历史发行艺术家目录",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/artist/中央人民广播电台少年广播合唱团/1778148500",
+    "note": "列出《金色年华》《泉水》《祖国颂歌》等发行；目录入口不代表逐曲已核验。",
+    "kind": "archive",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-05",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-05",
+    "title": "荔枝大又多",
+    "version": "中央人民广播电台少年广播合唱团 · 1970",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/藏族小朋友歌唱毛主席-single/6793380087",
+    "note": "专辑内逐曲试听，1:21；非独立单曲页，词曲作者与母带待核。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-06",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-06",
+    "title": "藏族小朋友歌唱毛主席",
+    "version": "中国唱片 · 1970",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/藏族小朋友歌唱毛主席-single/6793380087",
+    "note": "专辑内逐曲试听，1:24；音质待试听。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-07",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-07",
+    "title": "在一起",
+    "version": "中央人民广播电台少年广播合唱团 · 1970",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/藏族小朋友歌唱毛主席-single/6793380087",
+    "note": "专辑内逐曲试听，1:38；非独立单曲页。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-08",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-08",
+    "title": "蓝天向我们召唤",
+    "version": "中央人民广播电台少年广播合唱团 · 1979",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/营火熊熊-ep/6793393064",
+    "note": "EP 内逐曲试听，1:55；实体唱片编号与词曲作者待核。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-09",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-09",
+    "title": "营火熊熊",
+    "version": "中央人民广播电台少年广播合唱团 · 1979",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/营火熊熊-ep/6793393064",
+    "note": "EP 内逐曲试听，2:21；音质待试听。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-10",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-10",
+    "title": "航海夏令营营歌",
+    "version": "中央人民广播电台少年广播合唱团 · 1979",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/营火熊熊-ep/6793393064",
+    "note": "EP 内逐曲试听，2:50；非独立单曲页。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-11",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-11",
+    "title": "走在上学的路上",
+    "version": "中央人民广播电台少年广播合唱团 · 1979",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/营火熊熊-ep/6793393064",
+    "note": "EP 内逐曲试听，1:29；录音日期待核。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-12",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-12",
+    "title": "营火晚会",
+    "version": "中央人民广播电台少年广播合唱团 · 1979",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/营火熊熊-ep/6793393064",
+    "note": "EP 内逐曲试听，1:07；非独立单曲页。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-13",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "13-13",
+    "title": "让我们荡起双桨",
+    "version": "中央人民广播电台少年儿童合唱团 · 1971",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/中国电影百年歌曲精萃/1888431701",
+    "note": "电影《祖国的花朵》插曲，合辑内逐曲试听 2:22；与电影原声是否同版本待核。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-13-14",
+    "sourceType": "external_audio_link",
+    "workIds": [],
+    "mappingStatus": "unmapped_title_or_album",
+    "id": "13-14",
+    "title": "共产儿童团歌",
+    "version": "中央人民广播电台少年儿童合唱团 · 1971",
+    "platform": "Apple Music",
+    "url": "https://music.apple.com/us/album/中国电影百年歌曲精萃/1888431701",
+    "note": "合辑内逐曲试听 1:52；发行年不能直接当作首次录音时间。",
+    "kind": "album",
+    "batch": "13"
+  },
+  {
+    "recordingId": "LNK-15-01",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "15-01",
+    "title": "让我们荡起双桨",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/shaoer/qizi/p53613.html",
+    "note": "标注词：乔羽；曲：刘炽；格式：简谱；页面说明为合唱版本。（批次 15 · L76）",
+    "kind": "archive",
+    "batch": "15"
+  },
+  {
+    "recordingId": "LNK-15-02",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "15-02",
+    "title": "让我们荡起双桨",
+    "version": "版本见原档案",
+    "platform": "人人钢琴网",
+    "url": "https://www.everyonepiano.cn/Music-65.html",
+    "note": "属于平台编配/整理谱页，需核对谱面完整性及版本适配。（批次 15 · L79）",
+    "kind": "archive",
+    "batch": "15"
+  },
+  {
+    "recordingId": "LNK-15-03",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "15-03",
+    "title": "让我们荡起双桨",
+    "version": "版本见原档案",
+    "platform": "books.google.com",
+    "url": "https://books.google.com/books/about/让我们荡起双桨.html?id=d3OkzQEACAAJ",
+    "note": "《让我们荡起双桨：女声合唱五线谱与简谱》，人民音乐出版社，2014，陈一新；可作为正规出版曲谱线索。（批次 15 · L82）",
+    "kind": "archive",
+    "batch": "15"
+  },
+  {
+    "recordingId": "LNK-15-04",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "15-04",
+    "title": "让我们荡起双桨",
+    "version": "版本见原档案",
+    "platform": "www.cangqiang.com.cn",
+    "url": "https://www.cangqiang.com.cn/bofang/141370.html",
+    "note": "页面标注刘炽作曲、乔羽作词、降E调、2/4拍；属于在线制谱/视唱页面。（批次 15 · L85）",
+    "kind": "archive",
+    "batch": "15"
+  },
+  {
+    "recordingId": "LNK-15-05",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C20"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "15-05",
+    "title": "卖报歌",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/Mobile-view-id-13163.html",
+    "note": "页面标注作曲聂耳；版本来源包括其他曲谱站和出版物选编，需按具体版本复核。（批次 15 · L90）另见批次 20 交叉引用。",
+    "kind": "archive",
+    "batch": "15"
+  },
+  {
+    "recordingId": "LNK-19-01",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C03"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "19-01",
+    "title": "小燕子",
+    "version": "版本见原档案",
+    "platform": "政府/机构站",
+    "url": "https://www.hbda.gov.cn/info/1940",
+    "note": "见批次 19 原档案登记的来源线索。（批次 19 · L68）另见批次 20、21 交叉引用。",
+    "kind": "archive",
+    "batch": "19"
+  },
+  {
+    "recordingId": "LNK-19-02",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C12"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "19-02",
+    "title": "快乐的节日",
+    "version": "版本见原档案",
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/watch?v=KNra3AseQJw",
+    "note": "文化和旅游部少年儿童合唱艺术歌曲名单：<（批次 19 · L85）另见批次 20、21 交叉引用。",
+    "kind": "video",
+    "batch": "19"
+  },
+  {
+    "recordingId": "LNK-19-03",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C12"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "19-03",
+    "title": "快乐的节日",
+    "version": "版本见原档案",
+    "platform": "政府/机构站",
+    "url": "https://zwgk.mct.gov.cn/zfxxgkml/wysy/202012/t20201206_917741.html",
+    "note": "CCTV少儿视频页面：<（批次 19 · L86）另见批次 20 交叉引用。",
+    "kind": "archive",
+    "batch": "19"
+  },
+  {
+    "recordingId": "LNK-20-03",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C12"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "20-03",
+    "title": "快乐的节日",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/Mobile-view-id-728.html",
+    "note": "页面列出管桦词、李群曲，并提供多个谱本版本；其中一个版本注明选自中国人民保卫儿童全国委员会编著《一九五四年得奖儿童歌曲》。（批次 20 · L34）另见批次 21、23 交叉引用。",
+    "kind": "archive",
+    "batch": "20"
+  },
+  {
+    "recordingId": "LNK-20-04",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "20-04",
+    "title": "让我们荡起双桨",
+    "version": "版本见原档案",
+    "platform": "v.sjs.com.cn",
+    "url": "https://v.sjs.com.cn/ebooks/58E2823C.pdf",
+    "note": "搜索结果可见该教材 PDF 中有歌曲简谱、歌词和刘炽（1921—1998）介绍，并说明歌曲为电影《祖国的花朵》插曲。（批次 20 · L41）另见批次 21 交叉引用。",
+    "kind": "archive",
+    "batch": "20"
+  },
+  {
+    "recordingId": "LNK-20-06",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "20-06",
+    "title": "听妈妈讲那过去的事情",
+    "version": "版本见原档案",
+    "platform": "人人钢琴网",
+    "url": "https://www.everyonepiano.cn/Music-558.html",
+    "note": "页面提供五线谱、双手简谱及PDF入口，并标注作者瞿希贤。该页面是具体谱本入口，但上传者/版本信息仍需进一步核实，正式收藏优先采用出版社或图书馆版本。（批次 20 · L55）另见批次 23 交叉引用。",
+    "kind": "archive",
+    "batch": "20"
+  },
+  {
+    "recordingId": "LNK-20-07",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "20-07",
+    "title": "听妈妈讲那过去的事情",
+    "version": "版本见原档案",
+    "platform": "豆瓣",
+    "url": "https://music.douban.com/subject/26377102/",
+    "note": "该专辑是后期合唱改编版本，可作为合唱编配参考，不是原始首唱版本。（批次 20 · L60）",
+    "kind": "archive",
+    "batch": "20"
+  },
+  {
+    "recordingId": "LNK-20-08",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "20-08",
+    "title": "我们的田野",
+    "version": "版本见原档案",
+    "platform": "中国作家网",
+    "url": "https://www.chinawriter.com.cn/n1/2023/1023/c404018-40100992.html",
+    "note": "文章明确称歌曲创作于1953年，管桦作词、张文纲作曲，并从作者个人经历回忆其在小学音乐课中的传播。（批次 20 · L66）",
+    "kind": "archive",
+    "batch": "20"
+  },
+  {
+    "recordingId": "LNK-20-09",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "20-09",
+    "title": "我们的田野",
+    "version": "版本见原档案",
+    "platform": "www.yuntaigo.com",
+    "url": "https://www.yuntaigo.com/book.action?recordid=ZmZ6a21rZmM5Nzg3ODg4ODA2Nzcx",
+    "note": "该专辑目录可用来定位正式发行实体CD（条码9787888806771）；目录信息显示出版者为上海文艺音像电子出版社。实际音质与具体录音年份仍需试听/查看唱片内页。（批次 20 · L75）",
+    "kind": "archive",
+    "batch": "20"
+  },
+  {
+    "recordingId": "LNK-20-10",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C20"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "20-10",
+    "title": "卖报歌",
+    "version": "版本见原档案",
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/watch?v=kPJa8VJMHhM",
+    "note": "重要限制：录音日期和人员信息目前来自上传者描述，尚未找到唱片标签、档案目录或机构资料独立确认。暂列“历史录音候选”，不可标为已确证原始录音。（批次 20 · L88）",
+    "kind": "video",
+    "batch": "20"
+  },
+  {
+    "recordingId": "LNK-21-02",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C03"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-02",
+    "title": "小燕子",
+    "version": "版本见原档案",
+    "platform": "www.thepaper.cn",
+    "url": "https://www.thepaper.cn/newsDetail_forward_1869618",
+    "note": "王丹凤在访谈中回忆，《护士日记》中哄小孩睡觉的场景原本考虑请女高音演唱，她认为由自己以护士角色的本色嗓音演唱更合适，最终亲自演唱。（批次 21 · L20）",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-03",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C03"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-03",
+    "title": "小燕子",
+    "version": "版本见原档案",
+    "platform": "新华网",
+    "url": "https://www.xinhuanet.com/politics/2018-05/07/c_129866298.htm",
+    "note": "新华社报道确认《小燕子》是王丹凤在电影《护士日记》中唱红的歌曲，并记载上海电影博物馆追思活动放映影片时重现了该演唱。（批次 21 · L22）",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-04",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C03"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-04",
+    "title": "小燕子",
+    "version": "版本见原档案",
+    "platform": "www.1905.com",
+    "url": "https://www.1905.com/mdb/film/2210520/",
+    "note": "1905电影网也明确记载片中插曲《小燕子》由王丹凤亲自演唱。（批次 21 · L24）",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-05",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C12"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-05",
+    "title": "快乐的节日",
+    "version": "版本见原档案",
+    "platform": "www.rmrb.zhouenlai.info",
+    "url": "https://www.rmrb.zhouenlai.info/人民日报（1946-2003）/1954/05/1954-05-31.htm",
+    "note": "名单明确将《快乐的节日》列为二等奖，署名管桦词、李群曲；同一名单中还列出《早操歌》（管桦词、瞿希贤曲）等作品。（批次 21 · L35）",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-06",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C12"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-06",
+    "title": "快乐的节日",
+    "version": "版本见原档案",
+    "platform": "www.csmes.org",
+    "url": "https://www.csmes.org/show-9-145968.html",
+    "note": "报道称《快乐的节日》创作于1953年春，管桦词、李群曲，专为“六一”儿童节创作，经中央人民广播电台少儿合唱团演唱播放后迅速流传，并在1954年评奖获奖。此来源为音乐教育机构网站报道，适合补充传播史，但原始广播节目单/录音仍需另查。（批次 21 · L38）",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-09",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-09",
+    "title": "让我们荡起双桨",
+    "version": "版本见原档案",
+    "platform": "百度",
+    "url": "https://bkso.baidu.com/item/让我们荡起双桨/3063579",
+    "note": "该页面为百科性质，需进一步用电影片头/片尾字幕、电影原声资料或中国电影资料馆目录独立确认领唱者和演唱团体。（批次 21 · L56）",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-11",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-11",
+    "title": "我们的田野",
+    "version": "版本见原档案",
+    "platform": "中国作家网",
+    "url": "https://www.chinawriter.com.cn/n1/2024/1017/c418956-40341356.html",
+    "note": "作者回忆，最早听到的童声合唱来自中央人民广播电台“小喇叭”节目；文章还称“据说”最早原唱者为张金利，1953年曾示唱。（批次 21 · L65）",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-12",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C20"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-12",
+    "title": "卖报歌",
+    "version": "版本见原档案",
+    "platform": "中国作家网",
+    "url": "https://www.chinawriter.com.cn/n1/2020/0813/c404063-31820380.html",
+    "note": "文章记述聂耳邀请安娥写词，聂耳谱曲，并根据卖报女孩“小毛头”的建议修改歌词中的具体句子；文章称“小毛头”成为歌曲首唱者。（批次 21 · L75）另见批次 23 交叉引用。",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-13",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C20"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-13",
+    "title": "卖报歌",
+    "version": "版本见原档案",
+    "platform": "中国新闻网",
+    "url": "https://www.chinanews.com/cul/2013/02-22/4586801.shtml",
+    "note": "该文补充了1933年秋创作过程的叙述，但属于传记内容的新闻转述，建议后续与《聂耳日记》、安娥传记正式版本及聂耳作品年表交叉核验。（批次 21 · L78）另见批次 23 交叉引用。",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-14",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C20"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-14",
+    "title": "卖报歌",
+    "version": "版本见原档案",
+    "platform": "中国知网",
+    "url": "https://yyxy.cbpt.cnki.net/portal/journal/portal/client/paper/583ca80f5d7d0331648e12455b1b05b2",
+    "note": "论文摘要将《卖报歌》列为聂耳1934年创作、安娥作词的儿童歌曲之一，可作为学术论文线索。（批次 21 · L81）另见批次 23 交叉引用。",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-21-15",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "21-15",
+    "title": "听妈妈讲那过去的事情",
+    "version": "版本见原档案",
+    "platform": "中国交响乐团",
+    "url": "https://www.cnso.com.cn/zgjxyt/ycrc/201906/1e4188f6a5754727b43da79672754195.shtml",
+    "note": "页面列明2019年6月22日中国交响乐团合唱团演出《听妈妈讲那过去的事情》，管桦词、瞿希贤曲，并列出女声合唱、领唱人员。（批次 21 · L89）另见批次 22、23 交叉引用。",
+    "kind": "archive",
+    "batch": "21"
+  },
+  {
+    "recordingId": "LNK-22-01",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C03"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-01",
+    "title": "小燕子",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/shaoer/sanzi/p433.html",
+    "note": "页面标注：王路、王云阶词，王云阶曲；电影《护士日记》插曲。（批次 22 · L11）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-02",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C03"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-02",
+    "title": "小燕子",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://qupu123.com/Mobile-view-id-250309.html",
+    "note": "页面标注王路、王云阶词，王云阶曲；属于网友推荐/整理资料，不能视为原版出版谱。（批次 22 · L15）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-03",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C03"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-03",
+    "title": "小燕子",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/Mobile-view-id-104733.html",
+    "note": "结合批次21湖北档案馆、王丹凤访谈及新华社资料，可以确认王丹凤与电影演唱版本的关联；但当前尚未找到可独立访问、来源可靠的电影原始音轨文件。（批次 22 · L19）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-04",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-04",
+    "title": "我们的田野",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/shaoer/wuzi/p35668.html",
+    "note": "标注管桦词、张文纲曲。（批次 22 · L26）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-05",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-05",
+    "title": "我们的田野",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/shaoer/wuzi/p10431.html",
+    "note": "线简谱混排版本：（批次 22 · L30）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-06",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-06",
+    "title": "我们的田野",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/Mobile-view-id-222033.html",
+    "note": "页面说明选自金声编著《云南民族器乐葫芦丝·巴乌简明演奏法》，属于器乐改编/教学谱线索，不应当作原始合唱谱。（批次 22 · L31）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-07",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-07",
+    "title": "我们的田野",
+    "version": "版本见原档案",
+    "platform": "清华大学",
+    "url": "https://music.lib.tsinghua.edu.cn/index.php?a=show&c=index&catid=24&id=1419&m=content",
+    "note": "目录元数据：中新音像出版社，2001年，1CD；ISRC：CN-A68-01-411-00/A·J6。（批次 22 · L35）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-08",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C02"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-08",
+    "title": "我们的田野",
+    "version": "版本见原档案",
+    "platform": "清华大学",
+    "url": "https://music.lib.tsinghua.edu.cn/index.php?a=show&c=index&catid=24&id=1413&m=content",
+    "note": "曲目01《我们的田野》，演唱团体黑鸭子，时长03:52。（批次 22 · L39）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-09",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-09",
+    "title": "听妈妈讲那过去的事情",
+    "version": "版本见原档案",
+    "platform": "清华大学",
+    "url": "https://music.lib.tsinghua.edu.cn/index.php?a=show&c=index&catid=24&id=2227&m=content",
+    "note": "曲目07《听妈妈讲那过去的故事》，时长04:21。（批次 22 · L50）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-11",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-11",
+    "title": "让我们荡起双桨",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/shaoer/qizi/p206089.html",
+    "note": "标注乔羽词、刘炽曲、童道锦配伴奏。（批次 22 · L62）",
+    "kind": "archive",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-22-12",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C01"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "22-12",
+    "title": "让我们荡起双桨",
+    "version": "版本见原档案",
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/watch?v=1ThcRM56bjE",
+    "note": "两个目录显示时长差异明显，可能是演唱、编配或剪辑版本不同；需试听比对，不能直接判定哪一个更接近1955年电影原声。（批次 22 · L73）",
+    "kind": "video",
+    "batch": "22"
+  },
+  {
+    "recordingId": "LNK-23-02",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C12"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "23-02",
+    "title": "快乐的节日",
+    "version": "版本见原档案",
+    "platform": "oddownload.nuduseng.com",
+    "url": "https://oddownload.nuduseng.com/16%E8%80%81%E5%85%89%E7%9B%98%E7%BE%A4%28%E7%BE%A4%E5%8F%B7854318908%29%E7%BE%A4%E5%8F%8B%E5%88%86%E4%BA%AB%E6%B1%87%E6%80%BB%202020%E5%B9%B42%E6%9C%88/2020-02-24/%E7%8B%AC%E9%92%93%E5%AF%92%E6%B1%9F/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E9%9F%B3%E4%B9%90%EF%BC%88%E4%B8%80%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89/%E9%9F%B3%E4%B9%904%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf",
+    "note": "一份小学音乐教材PDF检索结果展示了《快乐的节日》简谱，调号/速度标记为1=F、2/4；但该PDF来源为非出版社官方镜像，暂作为谱面比对线索，不作为正式出版授权来源：（批次 23 · L18）",
+    "kind": "archive",
+    "batch": "23"
+  },
+  {
+    "recordingId": "LNK-23-03",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "23-03",
+    "title": "听妈妈讲那过去的事情",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/shaoer/jiuziyishang/p250218.html",
+    "note": "页面标注管桦词、瞿希贤曲，上传日期2016-06-22。（批次 23 · L29）",
+    "kind": "archive",
+    "batch": "23"
+  },
+  {
+    "recordingId": "LNK-23-04",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "23-04",
+    "title": "听妈妈讲那过去的事情",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://qupu123.com/shaoer/jiuziyishang/p1206.html",
+    "note": "页面介绍作品发表于1958年《儿童音乐》创刊号；此项出版史信息需继续寻找原刊实物或图书馆目录核实。（批次 23 · L32）",
+    "kind": "archive",
+    "batch": "23"
+  },
+  {
+    "recordingId": "LNK-23-05",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "23-05",
+    "title": "听妈妈讲那过去的事情",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://qupu123.com/hechang/jiuziyishang/p50354.html",
+    "note": "页面标注管桦词、瞿希贤曲，童声合唱、笛子助奏，上传日期2012-06-21。（批次 23 · L35）",
+    "kind": "archive",
+    "batch": "23"
+  },
+  {
+    "recordingId": "LNK-23-07",
+    "sourceType": "external_audio_link",
+    "workIds": [
+      "CN-C11"
+    ],
+    "mappingStatus": "matched_by_exact_title",
+    "id": "23-07",
+    "title": "听妈妈讲那过去的事情",
+    "version": "版本见原档案",
+    "platform": "中国曲谱网",
+    "url": "https://www.qupu123.com/jipu/p308777.html",
+    "note": "页面标注朱逢博演唱，管桦词、瞿希贤曲，PDF谱面入口。（批次 23 · L44）",
+    "kind": "archive",
+    "batch": "23"
   }
 ]
