@@ -1,0 +1,221 @@
+[
+  {
+    "scoreId": "SCR-CN-C01",
+    "workId": "CN-C01",
+    "workTitle": "让我们荡起双桨",
+    "versionTitle": "让我们荡起双桨",
+    "displayAsset": "song-assets/CN-C01-score.svg",
+    "sourceAsset": "song-assets/CN-C01-score.musicxml",
+    "title": "三段完整歌词 · 主旋律教学简化 · C 大调 · 4/4 · 12 小节",
+    "note": "三段歌词已逐字写入谱面；为容纳完整唱词，部分音符作了等值细分。教学简化谱不代表经典合唱录音的原调、速度、完整二部合唱或编曲。",
+    "references": [
+      {
+        "title": "《让我们荡起双桨》公开简谱资料",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzkxNzI2MjA5OQ==&mid=2247484274&idx=1&sn=37f6cbe0940335a8f4043fdf04bdec87",
+        "note": "用于核对主旋律轮廓；本原型省略装饰、衬腔与合唱部分。"
+      }
+    ],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-C03",
+    "workId": "CN-C03",
+    "workTitle": "小燕子",
+    "versionTitle": "小燕子",
+    "displayAsset": "song-assets/CN-C03-score.svg",
+    "sourceAsset": "song-assets/CN-C03-score.musicxml",
+    "title": "两段完整歌词 · 主旋律教学简化 · C 大调 · 4/4 · 12 小节",
+    "note": "两段歌词已逐字写入谱面；为容纳完整唱词，部分音符作了等值细分。教学简化谱不代表王丹凤电影原唱片段的原调、速度或完整配乐。",
+    "references": [
+      {
+        "title": "《小燕子》公开简谱资料",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzkzMzg5NDk5MA==&mid=2247497069&idx=1&sn=8108d631cd58cdd7971921b782d03bba",
+        "note": "用于核对主旋律轮廓；本原型省略装饰与复杂节奏。"
+      }
+    ],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-C10",
+    "workId": "CN-C10",
+    "workTitle": "歌声与微笑",
+    "versionTitle": "歌声与微笑",
+    "displayAsset": "song-assets/CN-C10-score.svg",
+    "sourceAsset": "song-assets/CN-C10-score.musicxml",
+    "title": "中英文完整唱词 · 主旋律教学简化 · C 大调 · 4/4 · 16 小节",
+    "note": "谱面第 1、2 段为录音两遍中文，第 3 段为英文，第 4 段为中文尾声；中文逐字、英文按音节写入。为容纳完整唱词，部分音符作了等值细分；不代表录音原调、速度、完整合唱或编曲。",
+    "references": [
+      {
+        "title": "义务教育教科书《音乐》五年级上册《歌声与微笑》",
+        "url": "https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/26adba99-3d44-48d1-b99e-5892012e2f74.pkg/pdf.pdf",
+        "note": "国家中小学智慧教育平台教材谱，用于核对主旋律、4/4 拍和基本乐句；原型移至 C 大调并作单声部教学简化。"
+      },
+      {
+        "title": "《歌声与微笑》公开简谱资料",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU2NDg0Nzc0NA==&mid=2247584116&idx=6&sn=2cd0985bf61244c71ad1096ed9e68e7b&chksm=fde9c112306460a52115fed77eac47162007504b0ad07a6e44e45eef1952d923ae7e2e11f8d2",
+        "note": "辅助核对旋律轮廓与完整中文段落；本页省略装饰音、合唱声部和复杂节奏。"
+      }
+    ],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-C25",
+    "workId": "CN-C25",
+    "workTitle": "小白兔（传统儿歌多个版本）",
+    "versionTitle": "小白兔白又白（河南睢县采录本）",
+    "displayAsset": "song-assets/CN-C25-score.svg",
+    "sourceAsset": "song-assets/CN-C25-score.musicxml",
+    "title": "原创示范旋律 · C 大调 · 4/4 · 8 小节",
+    "note": "与示范音频使用同一原创音符数据；仅用于展示歌词与谱面联动，不表示该地方童谣的传统旋律或唱腔。",
+    "references": [],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-C26",
+    "workId": "CN-C26",
+    "workTitle": "小老鼠上灯台",
+    "versionTitle": "小老鼠上灯台（河南旧童谣版本）",
+    "displayAsset": "song-assets/CN-C26-score.svg",
+    "sourceAsset": "song-assets/CN-C26-score.musicxml",
+    "title": "原创示范旋律 · C 大调 · 4/4 · 8 小节",
+    "note": "与示范音频使用同一音符数据；旋律为原型原创，不是传统吟诵的记谱。",
+    "references": [],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-C27",
+    "workId": "CN-C27",
+    "workTitle": "拉大锯扯大锯",
+    "versionTitle": "拉大锯，扯大锯（辽宁朝阳童谣版）",
+    "displayAsset": "song-assets/CN-C27-score.svg",
+    "sourceAsset": "song-assets/CN-C27-score.musicxml",
+    "title": "原创示范旋律 · C 大调 · 4/4 · 12 小节",
+    "note": "与示范音频使用同一原创音符数据；仅用于展示歌词与谱面联动，不表示该地方童谣的传统旋律或唱腔。",
+    "references": [],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-C28",
+    "workId": "CN-C28",
+    "workTitle": "排排坐",
+    "versionTitle": "排排坐（内江老城版本）",
+    "displayAsset": "song-assets/CN-C28-score.svg",
+    "sourceAsset": "song-assets/CN-C28-score.musicxml",
+    "title": "原创示范旋律 · C 大调 · 4/4 · 10 小节",
+    "note": "与示范音频使用同一音符数据；旋律为原型原创，不表示内江传统唱腔。",
+    "references": [],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-C29",
+    "workId": "CN-C29",
+    "workTitle": "数蛤蟆",
+    "versionTitle": "数蛤蟆（四川经典童谣首段）",
+    "displayAsset": "song-assets/CN-C29-score.svg",
+    "sourceAsset": "song-assets/CN-C29-score.musicxml",
+    "title": "原创示范旋律 · C 大调 · 4/4 · 14 小节",
+    "note": "与示范音频使用同一原创音符数据；仅用于展示歌词与谱面联动，不表示该地方童谣的传统旋律或唱腔。",
+    "references": [],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-T01",
+    "workId": "CN-T01",
+    "workTitle": "月光光（闽南及南方地区异文）",
+    "versionTitle": "月光光（广府四句短版）",
+    "displayAsset": "song-assets/CN-T01-score.svg",
+    "sourceAsset": "song-assets/CN-T01-score.musicxml",
+    "title": "原创示范旋律 · C 大调 · 4/4 · 8 小节",
+    "note": "与示范音频使用同一音符数据；这是原创器乐旋律，不是对方言传统唱腔的记谱。",
+    "references": [],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-T02",
+    "workId": "CN-T02",
+    "workTitle": "摇啊摇（地方异文）",
+    "versionTitle": "摇啊摇，摇到外婆桥（上海嘉定短版）",
+    "displayAsset": "song-assets/CN-T02-score.svg",
+    "sourceAsset": "song-assets/CN-T02-score.musicxml",
+    "title": "原创示范旋律 · C 大调 · 4/4 · 8 小节",
+    "note": "与示范音频使用同一原创音符数据；仅用于展示歌词与谱面联动，不表示该地方童谣的传统旋律或唱腔。",
+    "references": [],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-T05",
+    "workId": "CN-T05",
+    "workTitle": "拍手歌（地方版本）",
+    "versionTitle": "拍手歌（江苏海州方言游戏歌版）",
+    "displayAsset": "song-assets/CN-T05-score.svg",
+    "sourceAsset": "song-assets/CN-T05-score.musicxml",
+    "title": "原创示范旋律 · C 大调 · 4/4 · 20 小节",
+    "note": "与示范音频使用同一原创音符数据；仅用于展示歌词与谱面联动，不表示该地方童谣的传统旋律或唱腔。",
+    "references": [],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-EN-T01",
+    "workId": "EN-T01",
+    "workTitle": "Twinkle, Twinkle, Little Star",
+    "versionTitle": "Twinkle, Twinkle, Little Star",
+    "displayAsset": "song-assets/EN-T01-score.svg",
+    "sourceAsset": "song-assets/EN-T01-score.musicxml",
+    "title": "传统旋律 · C 大调 · 4/4 · 12 小节",
+    "note": "单声部教学简化谱；不代表录音原调、速度或编曲。",
+    "references": [
+      {
+        "title": "Piano.org：Twinkle, Twinkle, Little Star",
+        "url": "https://piano.org/songs/easy/twinkle-twinkle-little-star/",
+        "note": "核对 C 大调、4/4、12 小节及逐音旋律；页面标注传统旋律公版。"
+      }
+    ],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-EN-T02",
+    "workId": "EN-T02",
+    "workTitle": "Mary Had a Little Lamb",
+    "versionTitle": "Mary Had a Little Lamb",
+    "displayAsset": "song-assets/EN-T02-score.svg",
+    "sourceAsset": "song-assets/EN-T02-score.musicxml",
+    "title": "传统旋律 · C 大调 · 4/4 · 8 小节",
+    "note": "单声部教学简化谱；不代表朗诵录音的语速或音高。",
+    "references": [
+      {
+        "title": "Wikimedia Commons：Mary Had a Little Lamb.png",
+        "url": "https://commons.wikimedia.org/wiki/File:Mary_Had_a_Little_Lamb.png",
+        "note": "公版旋律图档参考。"
+      },
+      {
+        "title": "Music Theory Print：Mary Had a Little Lamb",
+        "url": "https://musictheoryprint.com/charts/mary-had-a-little-lamb-piano-notes",
+        "note": "核对 C 大调、4/4、8 小节、26 个音符及时值。"
+      }
+    ],
+    "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-EN-T03",
+    "workId": "EN-T03",
+    "workTitle": "Row, Row, Row Your Boat",
+    "versionTitle": "Row, Row, Row Your Boat",
+    "displayAsset": "song-assets/EN-T03-score.svg",
+    "sourceAsset": "song-assets/EN-T03-score.musicxml",
+    "title": "传统旋律 · C 大调 · 4/4 · 4 小节",
+    "note": "含附点与三连音的单声部教学简化谱；不代表玩具录音原调、速度或编曲。",
+    "references": [
+      {
+        "title": "Wikimedia Commons：Row your boat.svg",
+        "url": "https://commons.wikimedia.org/wiki/File:Row_your_boat.svg",
+        "note": "Mysid 制作的 CC0 1.0 旋律图档参考。"
+      },
+      {
+        "title": "Zebra Keys：Row, Row, Row Your Boat",
+        "url": "https://www.zebrakeys.com/blog/row-row-row-your-boat",
+        "note": "核对 4/4 与逐音旋律。"
+      }
+    ],
+    "sourceFile": "design-demos/audio/samples.json"
+  }
+]
