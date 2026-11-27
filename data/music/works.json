@@ -9,24 +9,16 @@
       "forgotten",
       "lullaby"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
     },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "月光光（广府四句短版）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
+    "versionTitleVariants": [
+      "月光光（广府四句短版）"
     ]
   },
   {
@@ -38,24 +30,16 @@
     "specialties": [
       "lullaby"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
     },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "摇啊摇，摇到外婆桥（上海嘉定短版）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
+    "versionTitleVariants": [
+      "摇啊摇，摇到外婆桥（上海嘉定短版）"
     ]
   },
   {
@@ -68,25 +52,14 @@
       "forgotten",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "白鹭鸶 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T04",
@@ -98,25 +71,14 @@
       "forgotten",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "草蜢公 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T05",
@@ -127,24 +89,16 @@
     "specialties": [
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
     },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "拍手歌（江苏海州方言游戏歌版）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
+    "versionTitleVariants": [
+      "拍手歌（江苏海州方言游戏歌版）"
     ]
   },
   {
@@ -156,25 +110,14 @@
     "specialties": [
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "小蜜蜂（地方童谣版本） · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T07",
@@ -185,25 +128,14 @@
     "specialties": [
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "果子歌 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T08",
@@ -214,25 +146,14 @@
     "specialties": [
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "一二三（地方数数歌） · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T09",
@@ -244,25 +165,14 @@
       "forgotten",
       "lullaby"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "唔唔嘤 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T10",
@@ -273,25 +183,14 @@
     "specialties": [
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "铜钉钉铜板 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T11",
@@ -302,25 +201,14 @@
     "specialties": [
       "forgotten"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "北京童谣（分类与版本专题） · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T12",
@@ -331,12 +219,13 @@
     "specialties": [
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 2,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -348,25 +237,14 @@
     "specialties": [
       "forgotten"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "过水面 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T14",
@@ -377,25 +255,14 @@
     "specialties": [
       "forgotten"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "大头儿大 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T15",
@@ -407,25 +274,14 @@
       "forgotten",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "风婆婆 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T16",
@@ -437,25 +293,14 @@
       "forgotten",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "金箍噜棒 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T17",
@@ -466,25 +311,14 @@
     "specialties": [
       "forgotten"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "打麦歌 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T18",
@@ -495,25 +329,14 @@
     "specialties": [
       "forgotten"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "少年去游荡 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T19",
@@ -524,25 +347,14 @@
     "specialties": [
       "forgotten"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "绍兴城里十乘桥 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-T20",
@@ -553,25 +365,14 @@
     "specialties": [
       "forgotten"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "会稽童谣（历史文献条目） · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-C01",
@@ -583,12 +384,13 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 13,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 12
     }
   },
   {
@@ -601,12 +403,13 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 4,
+      "recordingReferences": 14,
+      "prototypeSampleRecords": 2,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 10
     }
   },
   {
@@ -619,12 +422,13 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 4,
+      "recordingReferences": 12,
+      "prototypeSampleRecords": 2,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 8
     }
   },
   {
@@ -637,21 +441,22 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 3,
+      "recordingReferences": 5,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 2
     },
     "reviewFlags": [
       {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "type": "work_recording_title_conflict",
+        "detail": "样本作品标题与目录作品标题不一致；该录音同时关联其他作品 ID，不能自动认定归属。",
         "records": [
           {
-            "sampleTitle": "嘀哩，嘀哩",
-            "sourceFile": "design-demos/audio/samples.json"
+            "sourceTitle": "嘀哩，嘀哩",
+            "sourcePath": "design-demos/audio/samples.json"
           }
         ]
       }
@@ -667,12 +472,13 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 3,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 1
     }
   },
   {
@@ -684,12 +490,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 3,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 1
     }
   },
   {
@@ -701,12 +508,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 3,
+      "recordingReferences": 5,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 2
     }
   },
   {
@@ -718,12 +526,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 4,
+      "recordingReferences": 5,
+      "prototypeSampleRecords": 2,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 1
     }
   },
   {
@@ -736,12 +545,13 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 3,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 1
     }
   },
   {
@@ -753,12 +563,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 3,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 2
     }
   },
   {
@@ -770,12 +581,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 15,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 13
     }
   },
   {
@@ -787,12 +599,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 9,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 7
     }
   },
   {
@@ -805,12 +618,13 @@
       "childhood",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 4,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 2
     }
   },
   {
@@ -823,12 +637,13 @@
       "childhood",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 6,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 4
     }
   },
   {
@@ -841,12 +656,13 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 2,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -859,25 +675,14 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 2,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "嘀哩，嘀哩",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-C17",
@@ -889,12 +694,13 @@
       "childhood",
       "world"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 2,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -906,12 +712,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 2,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -925,12 +732,13 @@
       "nature",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 3,
+      "recordingReferences": 3,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -942,12 +750,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 3,
+      "recordingReferences": 9,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 6
     }
   },
   {
@@ -959,12 +768,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 2,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -977,25 +787,14 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "种瓜 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-C23",
@@ -1006,25 +805,14 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "在老师身边 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-C24",
@@ -1036,25 +824,14 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "我们在大地上栽种鲜花 · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-C25",
@@ -1067,24 +844,16 @@
       "nature",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
     },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "小白兔白又白（河南睢县采录本）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
+    "versionTitleVariants": [
+      "小白兔白又白（河南睢县采录本）"
     ]
   },
   {
@@ -1098,25 +867,14 @@
       "nature",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "小老鼠上灯台（河南旧童谣版本）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-C27",
@@ -1129,25 +887,14 @@
       "forgotten",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "拉大锯，扯大锯（辽宁朝阳童谣版）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-C28",
@@ -1159,25 +906,14 @@
       "childhood",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "排排坐（内江老城版本）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-C29",
@@ -1190,25 +926,14 @@
       "nature",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "数蛤蟆（四川经典童谣首段）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-C30",
@@ -1220,25 +945,14 @@
       "childhood",
       "lullaby"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "摇篮曲（中国地方版本专题） · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "EN-T01",
@@ -1250,12 +964,13 @@
       "lullaby",
       "world"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1267,12 +982,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1285,12 +1001,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 1,
-      "scoreRecords": 1
+      "scoreRecords": 1,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1302,12 +1019,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1320,12 +1038,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1337,12 +1056,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1354,12 +1074,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1371,12 +1092,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1389,12 +1111,13 @@
       "nature",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1407,12 +1130,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1425,12 +1149,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1443,12 +1168,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1461,12 +1187,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1478,12 +1205,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1497,12 +1225,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1515,12 +1244,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1533,12 +1263,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1551,12 +1282,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1568,12 +1300,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1585,12 +1318,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1602,12 +1336,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1619,12 +1354,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1637,12 +1373,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1654,12 +1391,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1672,12 +1410,13 @@
       "nature",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1689,12 +1428,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1706,12 +1446,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1723,12 +1464,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1742,12 +1484,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1760,12 +1503,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1778,12 +1522,13 @@
       "lullaby",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1796,12 +1541,13 @@
       "lullaby",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1814,12 +1560,13 @@
       "lullaby",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1833,12 +1580,13 @@
       "lullaby",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1852,12 +1600,13 @@
       "lullaby",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1870,12 +1619,13 @@
       "lullaby",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1887,12 +1637,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1905,12 +1656,13 @@
       "classical",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1922,12 +1674,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1939,12 +1692,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1957,12 +1711,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1974,12 +1729,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -1992,12 +1748,13 @@
       "lullaby",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2010,12 +1767,13 @@
       "lullaby",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2027,12 +1785,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2046,12 +1805,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2065,12 +1825,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2084,12 +1845,13 @@
       "play",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2102,12 +1864,13 @@
       "nature",
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2119,12 +1882,13 @@
     "specialties": [
       "world"
     ],
-    "dataStatus": "catalog_only",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 0,
-      "recordingRecords": 0,
-      "lyricsRecords": 0,
-      "scoreRecords": 0
+      "recordingReferences": 0,
+      "prototypeSampleRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2137,12 +1901,13 @@
       "childhood",
       "play"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 2,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2154,12 +1919,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 4,
+      "recordingReferences": 4,
+      "prototypeSampleRecords": 2,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2172,12 +1938,13 @@
       "childhood",
       "nature"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 2,
+      "recordingReferences": 2,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   },
   {
@@ -2190,25 +1957,14 @@
       "childhood",
       "forgotten"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 1,
+      "recordingReferences": 1,
+      "prototypeSampleRecords": 1,
       "lyricsRecords": 0,
-      "scoreRecords": 0
-    },
-    "reviewFlags": [
-      {
-        "type": "title_mismatch",
-        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
-        "records": [
-          {
-            "sampleTitle": "月亮走我也走（潇湘童谣版） · 原创播放示范（非原曲）",
-            "sourceFile": "design-demos/audio/samples.json"
-          }
-        ]
-      }
-    ]
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
+    }
   },
   {
     "id": "CN-N05",
@@ -2219,12 +1975,13 @@
     "specialties": [
       "childhood"
     ],
-    "dataStatus": "has_prototype_media_record",
+    "dataStatus": "has_material_references",
     "mediaSummary": {
-      "sampleRecords": 1,
-      "recordingRecords": 4,
+      "recordingReferences": 4,
+      "prototypeSampleRecords": 2,
       "lyricsRecords": 0,
-      "scoreRecords": 0
+      "scoreRecords": 0,
+      "externalAudioLinks": 0
     }
   }
 ]
