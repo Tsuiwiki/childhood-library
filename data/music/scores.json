@@ -217,5 +217,51 @@
       }
     ],
     "sourceFile": "design-demos/audio/samples.json"
+  },
+  {
+    "scoreId": "SCR-CN-C11-REF01",
+    "workId": "CN-C11",
+    "workTitle": "听妈妈讲那过去的事情",
+    "versionTitle": "教材简谱参考版",
+    "title": "外部曲谱参考 · 人教版音乐教材PDF",
+    "format": "PDF教材曲谱",
+    "references": [
+      {
+        "title": "音乐五年级下册教材PDF（歌曲曲谱页）",
+        "url": "https://v.sjs.com.cn/ebooks/58E2823C.pdf",
+        "note": "检索结果显示含管桦词、瞿希贤曲、简谱及歌词；应以PDF原页核验调号、拍号和版本。"
+      },
+      {
+        "title": "《听妈妈讲那过去的事情》简谱",
+        "url": "https://qupu123.com/shaoer/jiuziyishang/p1206.html",
+        "note": "第三方曲谱资料页，标注管桦词、瞿希贤曲；仅作检索线索。"
+      }
+    ],
+    "note": "外部参考，不是本项目制作或授权的谱面文件；尚未核验与现有音频版本的调性、编配和完整段落一致性。",
+    "sourceFile": "external_research",
+    "verificationStatus": "reference_only"
+  },
+  {
+    "scoreId": "SCR-CN-C02-REF01",
+    "workId": "CN-C02",
+    "workTitle": "我们的田野",
+    "versionTitle": "公开曲谱检索线索",
+    "title": "外部曲谱参考 · 尚待原谱核验",
+    "format": "简谱/曲谱网页线索",
+    "references": [
+      {
+        "title": "《我们的田野》曲谱资料",
+        "url": "https://www.qupu123.com/shaoer/wuzi/p35668.html",
+        "note": "页面标注管桦词、张文纲曲；需核对具体版本及谱面完整性。"
+      },
+      {
+        "title": "《我们的田野》曲谱资料（线简谱混排）",
+        "url": "https://www.qupu123.com/shaoer/wuzi/p10431.html",
+        "note": "线索页，需核验编配及来源。"
+      }
+    ],
+    "note": "现阶段只登记外部检索入口，不视为已取得或验证原始合唱总谱；器乐改编谱须单独标注。",
+    "sourceFile": "external_research",
+    "verificationStatus": "reference_only"
   }
 ]
