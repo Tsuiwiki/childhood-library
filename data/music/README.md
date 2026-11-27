@@ -1,22 +1,25 @@
 # Music data
 
-This directory is the normalized, machine-readable music dataset for Childhood Library.
+This is the normalized, machine-readable music dataset. Existing source files remain in place during this first consolidation pass.
 
-## Files
+## Files and current counts
 
-- `works.json`: 105 indexed works from the existing specialty catalogue. A catalogue entry is not proof that audio, lyrics, scores, or rights are complete.
-- `recordings.json`: recording/version references consolidated from prototype samples, the public recording collection, and official preview links.
-- `lyrics.json`: 14 lyric/version records extracted from the existing sample materials.
-- `scores.json`: 14 score/material records extracted from the existing sample materials.
+- `works.json`: 105 indexed works from `design-demos/specialties.json`.
+- `recordings.json`: 230 references: 62 prototype sample records, 27 public recording collection records, 5 official preview links, and 136 external audio/video/album/archive links.
+- `lyrics.json`: 61 lyric/version records: 14 references into the legacy sample file plus 47 source-attributed traditional nursery-rhyme text records.
+- `scores.json`: 14 score/material references.
 
 ## Data rules
 
-- `workId` / `workIds` links recordings, lyrics, and scores to a work.
+- `workId` / `workIds` links each material or recording reference to a work.
 - Different recordings and regional/textual variants remain separate records.
-- A generated demo or instrumental rendering is not labelled as an authentic recording of the traditional song.
-- `file`, `displayAsset`, and `sourceAsset` are preserved references from the old dataset; their presence does not guarantee that a file exists at that path or is publicly distributable.
-- Rights statements are copied from source records. Publicly reachable media is not automatically licensed for redistribution.
-- Existing files under `design-demos/` remain untouched during this first normalization pass. Do not delete them until application references and local media inventories have been checked.
+- External links are navigation references, not locally stored audio and not proof of playback availability.
+- Generated demos and instrumental renderings are not authentic recordings of the named traditional song.
+- Legacy lyrics are referenced in place rather than duplicated here; the original source file remains unchanged.
+- The `publicDomainClaim` field records the source dataset's classification only. Verify the specific text/version and applicable jurisdiction before public use; it says nothing about recordings or arrangements.
+- `file`, `displayAsset`, and `sourceAsset` are preserved references. Their presence does not guarantee a file exists at that path or is publicly distributable.
+- Rights statements are retained from source records. Public accessibility is not automatic redistribution permission.
+- Any `reviewFlags` / `mappingStatus` must be resolved before treating a recording as definitively linked to a work.
 
 ## Source snapshot
 
@@ -25,5 +28,7 @@ Normalized from:
 - `design-demos/audio/samples.json`
 - `design-demos/audio/public-recording-collection.json`
 - `design-demos/audio/official-recordings.json`
+- `design-demos/world-lyrics-sources.json`
+- `web/src/research/audioLinks.ts`
 
 This is a data consolidation, not a claim that all entries are fully verified or ready for public release.
