@@ -1,0 +1,2230 @@
+[
+  {
+    "id": "CN-T01",
+    "title": "月光光（闽南及南方地区异文）",
+    "type": "摇篮 / 民间童谣",
+    "note": "优先寻找舒缓、方言吟唱版本",
+    "region": "中国",
+    "specialties": [
+      "forgotten",
+      "lullaby"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "月光光（广府四句短版）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T02",
+    "title": "摇啊摇（地方异文）",
+    "type": "摇篮曲",
+    "note": "适合收集不同地域的摇篮版本",
+    "region": "中国",
+    "specialties": [
+      "lullaby"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "摇啊摇，摇到外婆桥（上海嘉定短版）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T03",
+    "title": "白鹭鸶",
+    "type": "连锁调 / 动物童谣",
+    "note": "方言韵律与自然意象",
+    "region": "中国",
+    "specialties": [
+      "forgotten",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "白鹭鸶 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T04",
+    "title": "草蜢公",
+    "type": "问答歌",
+    "note": "可研究问答结构与方言节奏",
+    "region": "中国",
+    "specialties": [
+      "forgotten",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "草蜢公 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T05",
+    "title": "拍手歌（地方版本）",
+    "type": "游戏歌",
+    "note": "适合亲子互动，需核对具体版本",
+    "region": "中国",
+    "specialties": [
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "拍手歌（江苏海州方言游戏歌版）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T06",
+    "title": "小蜜蜂（地方童谣版本）",
+    "type": "动物童谣",
+    "note": "需区分民间版本与现代同名歌曲",
+    "region": "中国",
+    "specialties": [
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "小蜜蜂（地方童谣版本） · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T07",
+    "title": "果子歌",
+    "type": "植物 / 知识童谣",
+    "note": "适合自然与生活主题",
+    "region": "中国",
+    "specialties": [
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "果子歌 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T08",
+    "title": "一二三（地方数数歌）",
+    "type": "数数歌",
+    "note": "收录前需确定具体地区和文本",
+    "region": "中国",
+    "specialties": [
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "一二三（地方数数歌） · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T09",
+    "title": "唔唔嘤",
+    "type": "摇篮曲",
+    "note": "记录方言发音与吟唱方式",
+    "region": "中国",
+    "specialties": [
+      "forgotten",
+      "lullaby"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "唔唔嘤 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T10",
+    "title": "铜钉钉铜板",
+    "type": "绕口令 / 童谣",
+    "note": "作为语言游戏资料，不预设歌曲旋律",
+    "region": "中国",
+    "specialties": [
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "铜钉钉铜板 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T11",
+    "title": "北京童谣（分类与版本专题）",
+    "type": "地方童谣",
+    "note": "先依据非遗项目整理分类，再逐首建立版本记录",
+    "region": "中国",
+    "specialties": [
+      "forgotten"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "北京童谣（分类与版本专题） · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T12",
+    "title": "一园青菜成了精",
+    "type": "叙事童谣",
+    "note": "画面感强，适合吟诵与节奏化演绎",
+    "region": "中国",
+    "specialties": [
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-T13",
+    "title": "过水面",
+    "type": "北京童谣",
+    "note": "地域生活题材，需寻找具体采录版本",
+    "region": "中国",
+    "specialties": [
+      "forgotten"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "过水面 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T14",
+    "title": "大头儿大",
+    "type": "北京童谣",
+    "note": "需确认具体版本及适龄性",
+    "region": "中国",
+    "specialties": [
+      "forgotten"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "大头儿大 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T15",
+    "title": "风婆婆",
+    "type": "北京童谣",
+    "note": "自然意象，优先寻找舒缓版本",
+    "region": "中国",
+    "specialties": [
+      "forgotten",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "风婆婆 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T16",
+    "title": "金箍噜棒",
+    "type": "北京童谣",
+    "note": "传统语言游戏，版本待核",
+    "region": "中国",
+    "specialties": [
+      "forgotten",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "金箍噜棒 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T17",
+    "title": "打麦歌",
+    "type": "绍兴童谣",
+    "note": "劳作与生活场景，方言版本有价值",
+    "region": "中国",
+    "specialties": [
+      "forgotten"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "打麦歌 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T18",
+    "title": "少年去游荡",
+    "type": "绍兴童谣",
+    "note": "教诲类，需审查文本是否符合当代儿童观",
+    "region": "中国",
+    "specialties": [
+      "forgotten"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "少年去游荡 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T19",
+    "title": "绍兴城里十乘桥",
+    "type": "绍兴童谣",
+    "note": "地方地理与叙事主题",
+    "region": "中国",
+    "specialties": [
+      "forgotten"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "绍兴城里十乘桥 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-T20",
+    "title": "会稽童谣（历史文献条目）",
+    "type": "历史童谣",
+    "note": "先做文献考证，不直接作为儿童歌曲发布",
+    "region": "中国",
+    "specialties": [
+      "forgotten"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "会稽童谣（历史文献条目） · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C01",
+    "title": "让我们荡起双桨",
+    "type": "自然 / 校园 / 合唱",
+    "note": "重点候选；乔羽词、刘炽曲；画面开阔、旋律舒展",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    }
+  },
+  {
+    "id": "CN-C02",
+    "title": "我们的田野",
+    "type": "自然 / 田园",
+    "note": "重点候选；管桦词、张文纲曲；自然意象鲜明",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 4,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C03",
+    "title": "小燕子",
+    "type": "动物 / 自然",
+    "note": "旋律亲切；需核实词曲作者及电影歌曲录音版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 4,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    }
+  },
+  {
+    "id": "CN-C04",
+    "title": "春天在哪里",
+    "type": "自然 / 季节",
+    "note": "适合春季专题；需核实原始词曲与录音版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 3,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "嘀哩，嘀哩",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C05",
+    "title": "采蘑菇的小姑娘",
+    "type": "自然 / 生活",
+    "note": "田野生活主题；需核实词曲及录音版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C06",
+    "title": "一分钱",
+    "type": "生活 / 品格",
+    "note": "有时代背景，需审视当代语境",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C07",
+    "title": "读书郎",
+    "type": "学习 / 生活",
+    "note": "需评估歌词语境和版本",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 3,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C08",
+    "title": "外婆的澎湖湾",
+    "type": "家庭 / 海边",
+    "note": "温暖、抒情；属于现代创作",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 4,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C09",
+    "title": "小螺号",
+    "type": "海洋 / 自然",
+    "note": "海洋意象；需核验原始版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C10",
+    "title": "歌声与微笑",
+    "type": "友谊 / 合唱",
+    "note": "旋律明朗；避免只选大型合唱录音",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    }
+  },
+  {
+    "id": "CN-C11",
+    "title": "听妈妈讲那过去的事情",
+    "type": "家庭 / 叙事",
+    "note": "叙事性强，需审查历史语境",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C12",
+    "title": "快乐的节日",
+    "type": "节日 / 童年",
+    "note": "经典合唱作品，需核验词曲",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C13",
+    "title": "拔萝卜",
+    "type": "劳动 / 游戏",
+    "note": "适合角色轮唱，需核对改编版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C14",
+    "title": "丢手绢",
+    "type": "游戏 / 互动",
+    "note": "传统游戏歌与创作版本需区分",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C15",
+    "title": "小鸭子",
+    "type": "动物 / 自然",
+    "note": "需核实词曲作者与录音版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C16",
+    "title": "嘀哩嘀哩",
+    "type": "春天 / 自然",
+    "note": "轻快但不必采用高密度改编",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "嘀哩，嘀哩",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C17",
+    "title": "娃哈哈",
+    "type": "民族 / 欢庆",
+    "note": "需确认具体地区、词曲与演唱版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "world"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C18",
+    "title": "我爱北京天安门",
+    "type": "城市 / 合唱",
+    "note": "作为历史作品记录，审视内容定位",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C19",
+    "title": "找朋友",
+    "type": "社交 / 游戏",
+    "note": "优先筛选简洁、自然的演唱版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 3,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C20",
+    "title": "卖报歌",
+    "type": "生活 / 历史",
+    "note": "具有时代背景，需审视歌词语境",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 3,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C21",
+    "title": "小小螺丝帽",
+    "type": "劳动 / 生活",
+    "note": "作为历史儿歌候选，需内容复核",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-C22",
+    "title": "种瓜",
+    "type": "自然 / 劳动",
+    "note": "适合种植与成长主题",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "种瓜 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C23",
+    "title": "在老师身边",
+    "type": "校园 / 情感",
+    "note": "先核歌词内容与词曲来源",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "在老师身边 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C24",
+    "title": "我们在大地上栽种鲜花",
+    "type": "自然 / 劳动",
+    "note": "主题适合自然教育，需核实版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "我们在大地上栽种鲜花 · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C25",
+    "title": "小白兔（传统儿歌多个版本）",
+    "type": "动物 / 数数",
+    "note": "必须记录具体版本，避免同名混淆",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "小白兔白又白（河南睢县采录本）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C26",
+    "title": "小老鼠上灯台",
+    "type": "动物 / 游戏童谣",
+    "note": "适合节奏吟诵，版本差异较大",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "小老鼠上灯台（河南旧童谣版本）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C27",
+    "title": "拉大锯扯大锯",
+    "type": "亲子游戏歌",
+    "note": "适合互动吟唱，记录地域异文",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "forgotten",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "拉大锯，扯大锯（辽宁朝阳童谣版）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C28",
+    "title": "排排坐",
+    "type": "游戏童谣",
+    "note": "需核实文本完整性和地域版本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "排排坐（内江老城版本）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C29",
+    "title": "数蛤蟆",
+    "type": "数数 / 动物",
+    "note": "可作为数数歌候选，审查各版本文本",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "数蛤蟆（四川经典童谣首段）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-C30",
+    "title": "摇篮曲（中国地方版本专题）",
+    "type": "摇篮曲",
+    "note": "不锁定单一版本，按地区采集",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "lullaby"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "摇篮曲（中国地方版本专题） · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "EN-T01",
+    "title": "Twinkle, Twinkle, Little Star",
+    "type": "摇篮 / 传统童谣",
+    "note": "旋律舒缓，优先寻找简洁原声版本",
+    "region": "英语地区",
+    "specialties": [
+      "lullaby",
+      "world"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    }
+  },
+  {
+    "id": "EN-T02",
+    "title": "Mary Had a Little Lamb",
+    "type": "叙事童谣",
+    "note": "叙事清楚，适合轻柔演唱",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    }
+  },
+  {
+    "id": "EN-T03",
+    "title": "Row, Row, Row Your Boat",
+    "type": "轮唱 / 游戏歌",
+    "note": "可做亲子轮唱，编曲宜简",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 1,
+      "scoreRecords": 1
+    }
+  },
+  {
+    "id": "EN-T04",
+    "title": "Baa, Baa, Black Sheep",
+    "type": "传统童谣",
+    "note": "适合轻柔吟唱，核对不同歌词版本",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T05",
+    "title": "Hickory Dickory Dock",
+    "type": "数数 / 节奏童谣",
+    "note": "节奏清楚，适合简单伴奏",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T06",
+    "title": "Hey Diddle Diddle",
+    "type": "荒诞诗 / 童谣",
+    "note": "想象力丰富，适合朗诵与吟唱",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T07",
+    "title": "Humpty Dumpty",
+    "type": "叙事童谣",
+    "note": "需选择适合儿童的温和视觉表达",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T08",
+    "title": "Jack and Jill",
+    "type": "叙事童谣",
+    "note": "关注歌词版本与适龄表达",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T09",
+    "title": "Little Bo-Peep",
+    "type": "叙事童谣",
+    "note": "可用于田园主题，版本待核",
+    "region": "英语地区",
+    "specialties": [
+      "nature",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T10",
+    "title": "Pat-a-Cake",
+    "type": "拍手 / 互动童谣",
+    "note": "适合亲子拍手互动",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T11",
+    "title": "The Itsy Bitsy Spider",
+    "type": "手指游戏歌",
+    "note": "适合动作配合，避免过度音效版",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T12",
+    "title": "Here We Go Round the Mulberry Bush",
+    "type": "游戏 / 动作歌",
+    "note": "可配合日常动作，编曲宜简",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T13",
+    "title": "London Bridge Is Falling Down",
+    "type": "游戏歌",
+    "note": "历史悠久，需审查歌词变体",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T14",
+    "title": "Three Blind Mice",
+    "type": "传统童谣",
+    "note": "LOC 收录早期录音；歌词内容需适龄审查",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T15",
+    "title": "Old MacDonald Had a Farm",
+    "type": "动物 / 互动歌",
+    "note": "适合动物声音主题，筛选不过度喧闹版本",
+    "region": "英语地区",
+    "specialties": [
+      "nature",
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T16",
+    "title": "This Old Man",
+    "type": "数数 / 节奏歌",
+    "note": "可做数字启蒙，避免机械化快节奏",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T17",
+    "title": "Miss Mary Mack",
+    "type": "拍手游戏歌",
+    "note": "适合节奏互动",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T18",
+    "title": "Skip to My Lou",
+    "type": "游戏 / 民间舞曲",
+    "note": "LOC 介绍其从成人舞曲转为儿童歌曲",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T19",
+    "title": "Froggie Went a-Courtin'",
+    "type": "民间叙事歌",
+    "note": "Smithsonian 收录 Elizabeth Mitchell 演唱版本；核对不同歌词",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T20",
+    "title": "Go Tell Aunt Rhody",
+    "type": "民间歌曲",
+    "note": "适合民谣风格，筛选温和录音",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T21",
+    "title": "Polly Wolly Doodle",
+    "type": "美国民间歌曲",
+    "note": "轻松合唱，注意历史歌词版本",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T22",
+    "title": "Yankee Doodle",
+    "type": "历史民歌 / 童谣",
+    "note": "需提供历史背景，避免单一化解读",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T23",
+    "title": "She'll Be Coming 'Round the Mountain",
+    "type": "民间合唱歌",
+    "note": "适合家庭合唱，版本节奏差异较大",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T24",
+    "title": "I've Been Working on the Railroad",
+    "type": "民间歌曲",
+    "note": "Smithsonian 专辑列有 Ella Jenkins 演唱版本；需审查历史语境与歌词版本",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T25",
+    "title": "Home on the Range",
+    "type": "美国民谣",
+    "note": "自然与草原意象，适合舒展的原声版本",
+    "region": "英语地区",
+    "specialties": [
+      "nature",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T26",
+    "title": "Shenandoah",
+    "type": "美国民谣",
+    "note": "旋律抒情、舒展；并非专为儿童创作",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T27",
+    "title": "Oh! Susanna",
+    "type": "美国民间歌曲",
+    "note": "需审查历史歌词与现代改编版本",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T28",
+    "title": "On Top of Old Smoky",
+    "type": "美国民谣",
+    "note": "旋律舒展，适合民谣专题",
+    "region": "英语地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T29",
+    "title": "Green Grass Grows All Around",
+    "type": "叠句 / 自然主题",
+    "note": "可用于自然观察主题，节奏不宜过快",
+    "region": "英语地区",
+    "specialties": [
+      "nature",
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-T30",
+    "title": "Crawdad Hole",
+    "type": "游戏 / 民间歌曲",
+    "note": "Smithsonian 专辑列有 Cisco Houston 演唱版本；歌词版本需审查",
+    "region": "英语地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M01",
+    "title": "Hush, Little Baby",
+    "type": "摇篮曲",
+    "note": "适合轻声演唱；注意不同歌词版本",
+    "region": "多地区",
+    "specialties": [
+      "lullaby",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M02",
+    "title": "All the Pretty Little Horses",
+    "type": "美国摇篮曲",
+    "note": "旋律柔和；歌词有历史语境，需审查",
+    "region": "多地区",
+    "specialties": [
+      "lullaby",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M03",
+    "title": "Rock-a-bye Baby",
+    "type": "摇篮曲",
+    "note": "LOC 提醒歌词意象可能不适合所有幼儿，需谨慎筛选",
+    "region": "多地区",
+    "specialties": [
+      "lullaby",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M04",
+    "title": "Brahms' Lullaby",
+    "type": "古典摇篮曲",
+    "note": "作为古典音乐作品单独核验词曲与录音",
+    "region": "多地区",
+    "specialties": [
+      "classical",
+      "lullaby",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M05",
+    "title": "Golden Slumbers",
+    "type": "摇篮 / 古典歌曲",
+    "note": "需核实诗歌、改编曲与录音权利",
+    "region": "多地区",
+    "specialties": [
+      "classical",
+      "lullaby",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M06",
+    "title": "All Through the Night",
+    "type": "威尔士摇篮曲",
+    "note": "多语种版本，核验译词和编曲",
+    "region": "多地区",
+    "specialties": [
+      "lullaby",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M07",
+    "title": "Lavender's Blue",
+    "type": "英国传统歌曲",
+    "note": "适合轻柔民谣编配",
+    "region": "多地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M08",
+    "title": "Simple Gifts",
+    "type": "Shaker 民歌",
+    "note": "旋律简洁，需区分传统旋律与现代编曲",
+    "region": "多地区",
+    "specialties": [
+      "classical",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M09",
+    "title": "Frog Went A-Courting（其他传统版本）",
+    "type": "民间叙事歌",
+    "note": "与 EN-T19 建立版本关系，不重复发布",
+    "region": "多地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M10",
+    "title": "Arroz con leche",
+    "type": "西语儿童歌曲",
+    "note": "多国流传，适合作为多语言拓展候选",
+    "region": "多地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M11",
+    "title": "Brown Girl in the Ring",
+    "type": "加勒比游戏歌",
+    "note": "需记录地域与文化背景，避免泛化为美国童谣",
+    "region": "多地区",
+    "specialties": [
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M12",
+    "title": "La rana (The Frog)",
+    "type": "西语民间歌曲",
+    "note": "多元文化曲目，核对具体演唱版本",
+    "region": "多地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M13",
+    "title": "Niño Querido",
+    "type": "波多黎各摇篮曲",
+    "note": "LOC 收藏介绍中提及，适合跨文化摇篮曲专题",
+    "region": "多地区",
+    "specialties": [
+      "lullaby",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M14",
+    "title": "Come up, Horsey, Hey, Hey",
+    "type": "非裔美国摇篮曲",
+    "note": "LOC 收藏介绍中提及，需文化语境说明",
+    "region": "多地区",
+    "specialties": [
+      "lullaby",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M15",
+    "title": "Chish-hi-you-bung-gay (Bat Song)",
+    "type": "Seminole 儿童歌曲",
+    "note": "LOC 历史录音线索；需尊重原住民文化与使用限制",
+    "region": "多地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M16",
+    "title": "Hijo, hijo, mira esta mujer",
+    "type": "西语游戏歌",
+    "note": "LOC 历史采录线索，需核对录音使用条件",
+    "region": "多地区",
+    "specialties": [
+      "forgotten",
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M17",
+    "title": "Come Through the Saw Mill",
+    "type": "游戏歌",
+    "note": "LOC 1939 年采录线索，需核对文化背景",
+    "region": "多地区",
+    "specialties": [
+      "forgotten",
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M18",
+    "title": "To Mikro Potamaki",
+    "type": "希腊儿童游戏歌",
+    "note": "LOC 1940 年采录线索，适合作为多语种拓展",
+    "region": "多地区",
+    "specialties": [
+      "forgotten",
+      "play",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M19",
+    "title": "Birds, Beasts, Bugs and Fishes（曲目专题）",
+    "type": "自然 / 动物",
+    "note": "以 Pete Seeger 专辑作为发现入口，逐首建条目",
+    "region": "多地区",
+    "specialties": [
+      "nature",
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "EN-M20",
+    "title": "Songs to Grow On for Mother and Child（曲目专题）",
+    "type": "亲子 / 生活",
+    "note": "以 Woody Guthrie 专辑作为发现入口，逐首建条目",
+    "region": "多地区",
+    "specialties": [
+      "world"
+    ],
+    "dataStatus": "catalog_only",
+    "mediaSummary": {
+      "sampleRecords": 0,
+      "recordingRecords": 0,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-N01",
+    "title": "数鸭子",
+    "type": "创作儿歌 / 数数",
+    "note": "1983 年创作；按具体词曲与录音版本核验，不因广泛传唱视为公版。",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "play"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-N02",
+    "title": "童年",
+    "type": "校园与童年 / 成人怀旧",
+    "note": "罗大佑写给成人的怀旧作品；保留其创作定位，不包装成幼儿儿歌。",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 4,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-N03",
+    "title": "小毛驴",
+    "type": "创作儿歌 / 动物",
+    "note": "1960 年创作，念唱结合；词曲与具体录音权利仍需分别核验。",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "nature"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 2,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  },
+  {
+    "id": "CN-N04",
+    "title": "月亮走我也走（潇湘童谣版）",
+    "type": "童谣风格 / 地方",
+    "note": "李少白词、朱青曲的潇湘童谣版本；与同名成人送别歌严格分开建档。",
+    "region": "中国",
+    "specialties": [
+      "childhood",
+      "forgotten"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 1,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    },
+    "reviewFlags": [
+      {
+        "type": "title_mismatch",
+        "detail": "采集样本标题与作品目录标题不同；保留原始标题，需人工核对作品映射。",
+        "records": [
+          {
+            "sampleTitle": "月亮走我也走（潇湘童谣版） · 原创播放示范（非原曲）",
+            "sourceFile": "design-demos/audio/samples.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CN-N05",
+    "title": "虫儿飞",
+    "type": "电影插曲 / 童谣风格",
+    "note": "1998 年电影插曲；标注原作语境与适龄审核，不仅凭童谣风格归为幼儿歌曲。",
+    "region": "中国",
+    "specialties": [
+      "childhood"
+    ],
+    "dataStatus": "has_prototype_media_record",
+    "mediaSummary": {
+      "sampleRecords": 1,
+      "recordingRecords": 4,
+      "lyricsRecords": 0,
+      "scoreRecords": 0
+    }
+  }
+]
