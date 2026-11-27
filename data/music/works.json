@@ -391,7 +391,39 @@
       "lyricsRecords": 1,
       "scoreRecords": 1,
       "externalAudioLinks": 12
-    }
+    },
+    "researchStatus": "partially_verified",
+    "creators": {
+      "lyrics": "乔羽",
+      "music": "刘炽"
+    },
+    "creationContext": "为儿童电影《祖国的花朵》创作的主题歌曲；可靠人物报道记载乔羽于1955年写出此曲。现有目录含一份中央人民广播电台少年广播合唱团音频附件及多个后续演唱/出版线索。具体原始电影录音与当前音频是否同版仍待核。",
+    "creationYear": 1955,
+    "researchSources": [
+      {
+        "title": "乔羽：一个写过几首歌词的人",
+        "url": "https://www.12371.gov.cn/web/article/1438368365882986496/web/content_1438368365882986496.html",
+        "publisher": "七一网 / 南方人物周刊",
+        "supports": [
+          "1955年创作",
+          "乔羽与刘炽合作背景"
+        ]
+      },
+      {
+        "title": "《让我们荡起双桨！这一曲传唱至今，背后有什么故事？》",
+        "url": "https://news.cjn.cn/gnxw/202106/t3831044.htm",
+        "publisher": "长江网（新华社来源）",
+        "supports": [
+          "电影《祖国的花朵》主题曲",
+          "乔羽词、刘炽曲"
+        ]
+      }
+    ],
+    "verificationNotes": [
+      "词曲作者及电影关联有公开人物报道支持。",
+      "目录中的内部音频来源页面与外部平台版本并非自动等同于1955年电影原声。",
+      "现有简化谱为原型教学谱，不应标作电影原版总谱。"
+    ]
   },
   {
     "id": "CN-C02",
@@ -410,7 +442,39 @@
       "lyricsRecords": 0,
       "scoreRecords": 0,
       "externalAudioLinks": 10
-    }
+    },
+    "researchStatus": "partially_verified",
+    "creators": {
+      "lyrics": "管桦",
+      "music": "张文纲"
+    },
+    "creationContext": "创作于1953年，原为组歌《夏天旅行之歌》第三首；后独立广泛传唱。现有两份录音分别来自中央乐团合唱团与上海菁英少年合唱团，属于不同演唱版本，不应合并为同一录音。",
+    "creationYear": 1953,
+    "researchSources": [
+      {
+        "title": "《我们的田野》",
+        "url": "https://www.chinawriter.com.cn/n1/2023/1023/c404018-40100992.html",
+        "publisher": "中国作家网（文汇报 / 刘心武）",
+        "supports": [
+          "1953年创作",
+          "管桦词、张文纲曲",
+          "《夏天旅行之歌》组歌关系"
+        ]
+      },
+      {
+        "title": "上世纪五十年代少儿歌曲创作评述",
+        "url": "https://www.musiceol.com/news/html/2012-7/201272417294959747139.html",
+        "publisher": "中音在线",
+        "supports": [
+          "作品创作背景与旋律特点"
+        ]
+      }
+    ],
+    "verificationNotes": [
+      "作品年代及词曲署名已找到可追溯的公开资料。",
+      "两份现有录音需分别试听、保留演唱团体与来源元数据。",
+      "当前没有规范化歌词条目或曲谱条目；不能把器乐改编谱当作原始合唱谱。"
+    ]
   },
   {
     "id": "CN-C03",
@@ -588,7 +652,47 @@
       "lyricsRecords": 0,
       "scoreRecords": 0,
       "externalAudioLinks": 13
-    }
+    },
+    "researchStatus": "partially_verified",
+    "creators": {
+      "lyrics": "管桦",
+      "music": "瞿希贤"
+    },
+    "creationContext": "1958年发表于《儿童音乐》创刊号；作品以叙事性儿童歌曲形式呈现。中央音乐学院资料确认瞿希贤为作曲者，并记载作品获1980年全国少儿文艺创作评比一等奖；中国交响乐团节目单确认管桦词、瞿希贤曲及女声合唱演出版本。",
+    "creationYear": 1958,
+    "researchSources": [
+      {
+        "title": "纪念｜再听瞿希贤《听妈妈讲那过去的事情》",
+        "url": "https://www.ccom.edu.cn/info/2561/14301.htm",
+        "publisher": "中央音乐学院",
+        "supports": [
+          "瞿希贤作曲",
+          "1980年全国少儿文艺创作评比一等奖"
+        ]
+      },
+      {
+        "title": "《致敬经典》——瞿希贤合唱作品音乐会",
+        "url": "https://www.cnso.com.cn/zgjxyt/ycrc/201906/1e4188f6a5754727b43da79672754195.shtml",
+        "publisher": "中国交响乐团",
+        "supports": [
+          "管桦词、瞿希贤曲",
+          "2019年女声合唱演出及领唱信息"
+        ]
+      },
+      {
+        "title": "1958年5月15日《人民日报》",
+        "url": "https://rmrb.zhouenlai.info/%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%EF%BC%881946-2003%EF%BC%89/1958/05/1958-05-15.htm",
+        "publisher": "人民日报历史资料转录",
+        "supports": [
+          "《儿童音乐》创刊号刊有本曲"
+        ]
+      }
+    ],
+    "verificationNotes": [
+      "作者、作曲者及1980年获奖信息有院校/国家院团资料支持。",
+      "1958年首刊信息有同期报刊资料线索，后续应补原刊影印件或馆藏目录。",
+      "现有音频来自不同演出/出版版本，不应将后期合唱改编版标成首演录音。"
+    ]
   },
   {
     "id": "CN-C12",
