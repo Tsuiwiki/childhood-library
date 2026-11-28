@@ -327,5 +327,59 @@
     "note": "仅登记外部检索入口，不代表已获得谱面文件或授权；不同编配版本需分别标识。",
     "sourceFile": "external_research",
     "verificationStatus": "reference_only"
+  },
+  {
+    "scoreId": "SCR-CN-C06-REF01",
+    "workId": "CN-C06",
+    "workTitle": "一分钱",
+    "versionTitle": "外部网页曲谱参考",
+    "title": "潘振声原曲曲谱参考",
+    "format": "外部网页曲谱",
+    "references": [
+      {
+        "title": "潘振声原曲曲谱参考",
+        "url": "https://www.qupu123.com/shaoer/sanzi/p26058.html",
+        "note": "页面标注潘振声词、曲；属于网络上传的线简混排谱，非原始手稿扫描。"
+      }
+    ],
+    "note": "只登记来源入口；未下载或存储谱面文件，版权及版本对应关系仍需核验。",
+    "sourceFile": "external_research",
+    "verificationStatus": "reference_only"
+  },
+  {
+    "scoreId": "SCR-CN-C07-REF01",
+    "workId": "CN-C07",
+    "workTitle": "读书郎",
+    "versionTitle": "外部网页曲谱参考",
+    "title": "宋扬改编版曲谱参考",
+    "format": "外部网页曲谱",
+    "references": [
+      {
+        "title": "宋扬改编版曲谱参考",
+        "url": "https://www.qupu123.com/shaoer/sanzi/doushulang.html",
+        "note": "页面列出多个简谱版本，署名宋扬词曲；需区分后续版本与苗族芦笙原型。"
+      }
+    ],
+    "note": "只登记来源入口；未下载或存储谱面文件，版权及版本对应关系仍需核验。",
+    "sourceFile": "external_research",
+    "verificationStatus": "reference_only"
+  },
+  {
+    "scoreId": "SCR-CN-C09-REF01",
+    "workId": "CN-C09",
+    "workTitle": "小螺号",
+    "versionTitle": "外部网页曲谱参考",
+    "title": "付林词曲曲谱参考",
+    "format": "外部网页曲谱",
+    "references": [
+      {
+        "title": "付林词曲曲谱参考",
+        "url": "https://www.qupu123.com/Mobile-view-id-339905.html",
+        "note": "谱友上传的简和谱，页面署名付林词曲；属于后续弹唱编配，不代表原始录音总谱。"
+      }
+    ],
+    "note": "只登记来源入口；未下载或存储谱面文件，版权及版本对应关系仍需核验。",
+    "sourceFile": "external_research",
+    "verificationStatus": "reference_only"
   }
 ]
