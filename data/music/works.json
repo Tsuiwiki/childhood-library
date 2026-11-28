@@ -644,10 +644,54 @@
     "mediaSummary": {
       "recordingReferences": 3,
       "prototypeSampleRecords": 1,
-      "lyricsRecords": 0,
-      "scoreRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 1,
       "externalAudioLinks": 1
-    }
+    },
+    "researchStatus": "partially_verified",
+    "creators": {
+      "lyrics": "潘振声",
+      "music": "潘振声"
+    },
+    "creationPeriod": "1963—1965（公开资料记载不一致；1965年3月9日有中央人民广播电台《小喇叭》节目首播记录）",
+    "creationContext": "潘振声在上海任小学少先队辅导员期间，常看到学生把拾到的一分、两分硬币交上来；学校附近的交警护送学生过马路，孩子们过街后回头向警察道别。这两类生活场景成为歌曲的创作素材。上海市民政局资料记载歌曲于1965年创作并于1965年3月9日在中央人民广播电台《小喇叭》首播；另有媒体资料将创作年份记为1963年，故年份暂不作单一确定值。曲调素材与沪剧紫竹调有关。",
+    "researchSources": [
+      {
+        "title": "儿歌里的美好记忆",
+        "url": "https://mzj.sh.gov.cn/lnb-wsws/20240530/ae538c7a04dd443f8f46859c47ced18e.html",
+        "publisher": "上海市民政局",
+        "supports": [
+          "潘振声词曲作者",
+          "1965年创作及1965年3月9日首播",
+          "创作生活素材"
+        ]
+      },
+      {
+        "title": "我在马路边捡到一分钱",
+        "url": "https://ggw.tongji.edu.cn/index.php?classid=1215&newsid=7679&t=show",
+        "publisher": "同济大学关心下一代网（转载《解放日报》）",
+        "supports": [
+          "1965年约稿背景",
+          "拾金不昧和交警护送学生的生活素材",
+          "沪剧紫竹调旋律来源"
+        ]
+      },
+      {
+        "title": "《一分钱》作者潘振声：儿歌作品大多不及格",
+        "url": "https://news.sohu.com/20070327/n248992170.shtml",
+        "publisher": "搜狐新闻",
+        "supports": [
+          "另一资料记载1963年创作",
+          "潘振声关于儿童语言与歌词修改的回忆"
+        ]
+      }
+    ],
+    "verificationNotes": [
+      "词曲作者潘振声及生活素材有上海市民政局、同济大学转载《解放日报》等资料支持。",
+      "创作年份存在1963与1965两种记载；1965年3月9日首播信息由上海市民政局资料明确记载，数据库保留分歧，不强行统一。",
+      "部分版本的末句存在“快乐/高兴”等文本差异；不同歌词版本应分别登记，不将演唱版本差异视为错误。",
+      "公开曲谱页面仅作检索线索，尚未确认其是否对应首播原谱。"
+    ]
   },
   {
     "id": "CN-C07",
@@ -662,10 +706,54 @@
     "mediaSummary": {
       "recordingReferences": 5,
       "prototypeSampleRecords": 1,
-      "lyricsRecords": 0,
-      "scoreRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 1,
       "externalAudioLinks": 2
-    }
+    },
+    "researchStatus": "partially_verified",
+    "creators": {
+      "lyrics": "宋扬（宋子秋）",
+      "music": "宋扬（据苗族民歌改编创作）"
+    },
+    "creationYear": 1944,
+    "creationContext": "1944年秋，抗日演剧宣传第四队抵达贵州安顺。宋扬在当地养伤期间到汪家山苗寨小学教唱歌曲，并向当地苗族群众学习芦笙曲调和民歌。他受到苗族芦笙调《小嘛小儿郎》（亦有资料称相关旋律为《走路曲》）启发，在原有苗歌基础上改编、重新填词，形成后来广为流传的《读书郎》。早期苗歌唱词与后来的通行儿童歌曲版本并不相同；后者增加了鼓励儿童读书、求学的表达。不同出版、演唱版本的歌词应分别登记。",
+    "researchSources": [
+      {
+        "title": "宋扬和他的《读书郎歌》",
+        "url": "https://www.hbzx.gov.cn/49/2014-09-15/5763.html",
+        "publisher": "湖北省政协",
+        "supports": [
+          "宋扬原名宋子秋",
+          "1944年在安顺养伤期间创作",
+          "歌曲创作经历"
+        ]
+      },
+      {
+        "title": "《读书郎》｜一首穿越时光的儿歌，精彩故事在西秀不断上演",
+        "url": "https://www.thepaper.cn/newsDetail_forward_29026710",
+        "publisher": "澎湃新闻·政务",
+        "supports": [
+          "汪家山苗族芦笙调的来源",
+          "1944年创作背景",
+          "原苗歌与后来儿童歌曲的歌词意义变化"
+        ]
+      },
+      {
+        "title": "穿越时光演绎新风采——经典儿歌《读书郎》发源于安顺汪家山",
+        "url": "https://www.gznw.com/gznjw/lxc/mzgb/935313/index.html",
+        "publisher": "贵州农网",
+        "supports": [
+          "苗族芦笙《走路曲》与歌曲旋律渊源",
+          "宋扬改编过程"
+        ]
+      }
+    ],
+    "verificationNotes": [
+      "宋扬身份、1944年创作背景由湖北省政协文史资料支持。",
+      "当地苗歌原型的具体曲名在资料中有《小嘛小儿郎》《走路曲》等不同说法，保留来源差异。",
+      "《读书郎》通行版与原始苗歌的歌词并不完全相同；应区分地方原型、宋扬改编版和后续教材/演唱版本。",
+      "曲谱网页为用户上传资料，不等同于1944年原始手稿或权威初版谱。"
+    ]
   },
   {
     "id": "CN-C08",
@@ -699,10 +787,54 @@
     "mediaSummary": {
       "recordingReferences": 3,
       "prototypeSampleRecords": 1,
-      "lyricsRecords": 0,
-      "scoreRecords": 0,
+      "lyricsRecords": 1,
+      "scoreRecords": 1,
       "externalAudioLinks": 1
-    }
+    },
+    "researchStatus": "partially_verified",
+    "creators": {
+      "lyrics": "付林",
+      "music": "付林"
+    },
+    "creationYear": 1980,
+    "creationContext": "付林在1980年前后为当时年仅13岁的程琳创作一组歌曲，《小螺号》是其中传播最广的一首。付林在《人民日报》采访中回忆，歌曲的词、曲和编配由他一人承担；创作时考虑到程琳的年龄及海军文工团的海洋主题，选择“小螺号”作为海洋意象，借孩子吹号盼望父亲归来的情景表达亲情。程琳在首都钢铁公司礼堂演唱后受到观众欢迎。1982年发行专辑《童年的小摇车》是常见唱片资料标注的发行年份，不应误当作唯一创作年份。",
+    "researchSources": [
+      {
+        "title": "《小螺号》的词曲作者付林：与流行音乐一同走来",
+        "url": "https://culture.people.com.cn/n/2015/0129/c87423-26470904.html",
+        "publisher": "人民网（人民日报）",
+        "supports": [
+          "付林词曲及编配",
+          "1980年前后为程琳创作",
+          "作品创作背景"
+        ]
+      },
+      {
+        "title": "付林：好音乐要经得住岁月淘洗",
+        "url": "https://epaper.neamco.com/gmrb/html/2016-05/18/nw.D110000gmrb_20160518_1-05.htm?div=-1",
+        "publisher": "光明日报",
+        "supports": [
+          "付林本人回忆创作和程琳演唱",
+          "歌曲首演场景",
+          "词曲编配均由付林承担"
+        ]
+      },
+      {
+        "title": "30年民间记忆：坎坷“流行”路",
+        "url": "https://news.sina.com.cn/c/2008-12-08/154016805977.shtml",
+        "publisher": "新浪新闻（电视采访整理）",
+        "supports": [
+          "付林解释海洋意象和创作构思",
+          "程琳首次演唱的现场回忆"
+        ]
+      }
+    ],
+    "verificationNotes": [
+      "词曲作者、创作时期及创作缘由由人民日报、光明日报对付林的采访支持。",
+      "程琳演唱版与后续翻唱、重新编曲版本应分别登记。",
+      "曲谱网站提供的钢琴谱、简和谱属于后续编配/用户上传版本，不代表原始录音的总谱。",
+      "专辑《童年的小摇车》的发行年份在资料中常标为1982；歌曲创作和首次演唱则在1980年前后，两个时间点需分开记录。"
+    ]
   },
   {
     "id": "CN-C10",
