@@ -1656,5 +1656,44 @@
     "sourcePage": "https://www.qupu123.com/shaoer/qizi/p3316.html",
     "note": "页面包含歌词文本及多个曲谱版本。这里只登记来源入口，不复制歌词正文；需进一步核对文本版本、段落和衬词差异。",
     "verificationStatus": "source_reference_only"
+  },
+  {
+    "lyricsId": "LYR-CN-C06-REF01",
+    "workId": "CN-C06",
+    "workTitle": "一分钱",
+    "versionTitle": "公开网页参考版本",
+    "title": "《一分钱》歌词版本参考",
+    "contentStorage": "external_source_reference",
+    "publicDomainClaim": false,
+    "sourceTitle": "《一分钱（线、简谱混排版）》",
+    "sourcePage": "https://www.qupu123.com/shaoer/sanzi/p26058.html",
+    "note": "仅登记外部来源入口，不复制歌词正文。页面可能含用户上传或整理内容，需逐句核对版本来源、段落和文本差异。",
+    "verificationStatus": "source_reference_only"
+  },
+  {
+    "lyricsId": "LYR-CN-C07-REF01",
+    "workId": "CN-C07",
+    "workTitle": "读书郎",
+    "versionTitle": "公开网页参考版本",
+    "title": "《读书郎》多版本歌词参考",
+    "contentStorage": "external_source_reference",
+    "publicDomainClaim": false,
+    "sourceTitle": "《读书郎简谱（5个版本）》",
+    "sourcePage": "https://www.qupu123.com/shaoer/sanzi/doushulang.html",
+    "note": "仅登记外部来源入口，不复制歌词正文。页面可能含用户上传或整理内容，需逐句核对版本来源、段落和文本差异。",
+    "verificationStatus": "source_reference_only"
+  },
+  {
+    "lyricsId": "LYR-CN-C09-REF01",
+    "workId": "CN-C09",
+    "workTitle": "小螺号",
+    "versionTitle": "公开网页参考版本",
+    "title": "《小螺号》歌词/曲谱来源线索",
+    "contentStorage": "external_source_reference",
+    "publicDomainClaim": false,
+    "sourceTitle": "《小螺号（简和谱）》",
+    "sourcePage": "https://www.qupu123.com/Mobile-view-id-339905.html",
+    "note": "仅登记外部来源入口，不复制歌词正文。页面可能含用户上传或整理内容，需逐句核对版本来源、段落和文本差异。",
+    "verificationStatus": "source_reference_only"
   }
 ]
